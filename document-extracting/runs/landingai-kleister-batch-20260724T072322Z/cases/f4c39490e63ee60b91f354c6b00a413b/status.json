@@ -1,0 +1,53 @@
+{
+  "case_id": "f4c39490e63ee60b91f354c6b00a413b",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/f4c39490e63ee60b91f354c6b00a413b.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "cec805896dddaac42bd76eb489f326495f9c645e8270e9b1c35745e61fdf8f07",
+  "status": "completed",
+  "parse_job_id": "cmrymrbtg042mcx0133hwwztq",
+  "extract_job_id": "cmrymrqih040xe401yzyz4zx8",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.435386+00:00",
+  "updated_at": "2026-07-24T07:41:02.274483+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:40:10.391892+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:40:26.572624+00:00",
+  "parse_metadata": {
+    "filename": "f4c39490e63ee60b91f354c6b00a413b.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 5,
+    "duration_ms": 8497,
+    "credit_usage": 15.0,
+    "job_id": "cmrymrbtg042mcx0133hwwztq",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:40:29.185014+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:41:02.274473+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 24247,
+    "credit_usage": 4.3,
+    "job_id": "cmrymrqih040xe401yzyz4zx8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of Washington",
+    "party": [
+      "Alder BioPharmaceuticals, Inc.",
+      "H. Lundbeck A/S"
+    ],
+    "term": "5_years"
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "job_id": "cmryknkvy028nd501cc0jzp94",
+  "status": "completed",
+  "received_at": 1784875275,
+  "created_at": 1784875275,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='a2f65b4e-5052-4e54-a2f9-580b0719c0cf'></a>\n\n99 SPEED MART S/B (519537-X)\nLOT P.T. 2811, JALAN ANGSA,\nTAMAN BERKELEY\n41150 KLANG, SELANGOR\n1558-TMN PUSAT KEPONG\nGST ID. NO: 000181747712\n\n<a id='efeafdc7-1237-4e77-963f-35958595bc30'></a>\n\nINVOICE NO : 17872/102/T0476\n\n<a id='bca93c9e-852b-4193-acc6-3140df6e0fc0'></a>\n\n08:53PM   561781   05-12-16\n\n<a id='9a3ec5b0-e764-433d-9f31-d9e2ece91cbc'></a>\n\n5386 STAR BRAND GARBAGE BAG RM15.90 s\n@3 X RM 5.30\n\n<a id='3260bcfb-e1d8-411a-a141-dc024cdb5bf9'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Total Sales (Inclusive GST) RM</td><td id=\"0-3\">15.90</td></tr>\n<tr><td id=\"0-4\">CASH RM</td><td id=\"0-5\">51.00</td></tr>\n<tr><td id=\"0-6\">CHANGE RM</td><td id=\"0-7\">35.10</td></tr>\n</table>\n\n<a id='cf6a2954-88b0-4f18-bc51-6d76da520aab'></a>\n\n<table id=\"0-8\">\n<tr><td id=\"0-9\">GST Summary</td><td id=\"0-a\">Amount(RM)</td><td id=\"0-b\">Tax(RM)</td></tr>\n<tr><td id=\"0-c\">s = 6%</td><td id=\"0-d\">15.00</td><td id=\"0-e\">.90</td></tr>\n</table>\n\n<a id='8e472072-174c-42de-977a-9963b4a3eb1a'></a>\n\nThank You. Please come again\nKeep the invoice for applicable returns",
+    "chunks": [
+      {
+        "markdown": "<a id='a2f65b4e-5052-4e54-a2f9-580b0719c0cf'></a>\n\n99 SPEED MART S/B (519537-X)\nLOT P.T. 2811, JALAN ANGSA,\nTAMAN BERKELEY\n41150 KLANG, SELANGOR\n1558-TMN PUSAT KEPONG\nGST ID. NO: 000181747712",
+        "type": "text",
+        "id": "a2f65b4e-5052-4e54-a2f9-580b0719c0cf",
+        "grounding": {
+          "box": {
+            "left": 0.1874130368232727,
+            "top": 0.1991088092327118,
+            "right": 0.7702105045318604,
+            "bottom": 0.38250532746315
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='efeafdc7-1237-4e77-963f-35958595bc30'></a>\n\nINVOICE NO : 17872/102/T0476",
+        "type": "text",
+        "id": "efeafdc7-1237-4e77-963f-35958595bc30",
+        "grounding": {
+          "box": {
+            "left": 0.21104833483695984,
+            "top": 0.4086955189704895,
+            "right": 0.7951953411102295,
+            "bottom": 0.4413624405860901
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='bca93c9e-852b-4193-acc6-3140df6e0fc0'></a>\n\n08:53PM   561781   05-12-16",
+        "type": "text",
+        "id": "bca93c9e-852b-4193-acc6-3140df6e0fc0",
+        "grounding": {
+          "box": {
+            "left": 0.09184682369232178,
+            "top": 0.46753475069999695,
+            "right": 0.9185894727706909,
+            "bottom": 0.5046208500862122
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='9a3ec5b0-e764-433d-9f31-d9e2ece91cbc'></a>\n\n5386 STAR BRAND GARBAGE BAG RM15.90 s\n@3 X RM 5.30",
+        "type": "text",
+        "id": "9a3ec5b0-e764-433d-9f31-d9e2ece91cbc",
+        "grounding": {
+          "box": {
+            "left": 0.0926554799079895,
+            "top": 0.5245876908302307,
+            "right": 0.9166936278343201,
+            "bottom": 0.5916242003440857
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='3260bcfb-e1d8-411a-a141-dc024cdb5bf9'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Total Sales (Inclusive GST) RM</td><td id=\"0-3\">15.90</td></tr>\n<tr><td id=\"0-4\">CASH RM</td><td id=\"0-5\">51.00</td></tr>\n<tr><td id=\"0-6\">CHANGE RM</td><td id=\"0-7\">35.10</td></tr>\n</table>",
+        "type": "table",
+        "id": "3260bcfb-e1d8-411a-a141-dc024cdb5bf9",
+        "grounding": {
+          "box": {
+            "left": 0.09492111206054688,
+            "top": 0.6161618828773499,
+            "right": 0.8823426365852356,
+            "bottom": 0.7132685780525208
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='cf6a2954-88b0-4f18-bc51-6d76da520aab'></a>\n\n<table id=\"0-8\">\n<tr><td id=\"0-9\">GST Summary</td><td id=\"0-a\">Amount(RM)</td><td id=\"0-b\">Tax(RM)</td></tr>\n<tr><td id=\"0-c\">s = 6%</td><td id=\"0-d\">15.00</td><td id=\"0-e\">.90</td></tr>\n</table>",
+        "type": "table",
+        "id": "cf6a2954-88b0-4f18-bc51-6d76da520aab",
+        "grounding": {
+          "box": {
+            "left": 0.08980992436408997,
+            "top": 0.734961211681366,
+            "right": 0.898226261138916,
+            "bottom": 0.8010722994804382
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='8e472072-174c-42de-977a-9963b4a3eb1a'></a>\n\nThank You. Please come again\nKeep the invoice for applicable returns",
+        "type": "text",
+        "id": "8e472072-174c-42de-977a-9963b4a3eb1a",
+        "grounding": {
+          "box": {
+            "left": 0.09019747376441956,
+            "top": 0.8553896546363831,
+            "right": 0.8937808275222778,
+            "bottom": 0.9209781289100647
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='a2f65b4e-5052-4e54-a2f9-580b0719c0cf'></a>\n\n99 SPEED MART S/B (519537-X)\nLOT P.T. 2811, JALAN ANGSA,\nTAMAN BERKELEY\n41150 KLANG, SELANGOR\n1558-TMN PUSAT KEPONG\nGST ID. NO: 000181747712\n\n<a id='efeafdc7-1237-4e77-963f-35958595bc30'></a>\n\nINVOICE NO : 17872/102/T0476\n\n<a id='bca93c9e-852b-4193-acc6-3140df6e0fc0'></a>\n\n08:53PM   561781   05-12-16\n\n<a id='9a3ec5b0-e764-433d-9f31-d9e2ece91cbc'></a>\n\n5386 STAR BRAND GARBAGE BAG RM15.90 s\n@3 X RM 5.30\n\n<a id='3260bcfb-e1d8-411a-a141-dc024cdb5bf9'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Total Sales (Inclusive GST) RM</td><td id=\"0-3\">15.90</td></tr>\n<tr><td id=\"0-4\">CASH RM</td><td id=\"0-5\">51.00</td></tr>\n<tr><td id=\"0-6\">CHANGE RM</td><td id=\"0-7\">35.10</td></tr>\n</table>\n\n<a id='cf6a2954-88b0-4f18-bc51-6d76da520aab'></a>\n\n<table id=\"0-8\">\n<tr><td id=\"0-9\">GST Summary</td><td id=\"0-a\">Amount(RM)</td><td id=\"0-b\">Tax(RM)</td></tr>\n<tr><td id=\"0-c\">s = 6%</td><td id=\"0-d\">15.00</td><td id=\"0-e\">.90</td></tr>\n</table>\n\n<a id='8e472072-174c-42de-977a-9963b4a3eb1a'></a>\n\nThank You. Please come again\nKeep the invoice for applicable returns",
+        "chunks": [
+          "a2f65b4e-5052-4e54-a2f9-580b0719c0cf",
+          "efeafdc7-1237-4e77-963f-35958595bc30",
+          "bca93c9e-852b-4193-acc6-3140df6e0fc0",
+          "9a3ec5b0-e764-433d-9f31-d9e2ece91cbc",
+          "3260bcfb-e1d8-411a-a141-dc024cdb5bf9",
+          "cf6a2954-88b0-4f18-bc51-6d76da520aab",
+          "8e472072-174c-42de-977a-9963b4a3eb1a"
+        ]
+      }
+    ],
+    "grounding": {
+      "a2f65b4e-5052-4e54-a2f9-580b0719c0cf": {
+        "box": {
+          "left": 0.1874130368232727,
+          "top": 0.1991088092327118,
+          "right": 0.7702105045318604,
+          "bottom": 0.38250532746315
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      },
+      "efeafdc7-1237-4e77-963f-35958595bc30": {
+        "box": {
+          "left": 0.21104833483695984,
+          "top": 0.4086955189704895,
+          "right": 0.7951953411102295,
+          "bottom": 0.4413624405860901
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      },
+      "bca93c9e-852b-4193-acc6-3140df6e0fc0": {
+        "box": {
+          "left": 0.09184682369232178,
+          "top": 0.46753475069999695,
+          "right": 0.9185894727706909,
+          "bottom": 0.5046208500862122
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      },
+      "9a3ec5b0-e764-433d-9f31-d9e2ece91cbc": {
+        "box": {
+          "left": 0.0926554799079895,
+          "top": 0.5245876908302307,
+          "right": 0.9166936278343201,
+          "bottom": 0.5916242003440857
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.952,
+        "low_confidence_spans": []
+      },
+      "3260bcfb-e1d8-411a-a141-dc024cdb5bf9": {
+        "box": {
+          "left": 0.09492111206054688,
+          "top": 0.6161618828773499,
+          "right": 0.8823426365852356,
+          "bottom": 0.7132685780525208
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.10156714920094073,
+          "top": 0.6190031330951697,
+          "right": 0.8752667758536106,
+          "bottom": 0.7109027173598861
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.10160598894063778,
+          "top": 0.6190181903749683,
+          "right": 0.7092982716577473,
+          "bottom": 0.6485730173433436
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "3260bcfb-e1d8-411a-a141-dc024cdb5bf9"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.7091879944314423,
+          "top": 0.6190031330951697,
+          "right": 0.8751484662625003,
+          "bottom": 0.6483660645202963
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "3260bcfb-e1d8-411a-a141-dc024cdb5bf9"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.10158701852558727,
+          "top": 0.6483660645202963,
+          "right": 0.7091879944314423,
+          "bottom": 0.6787944501733786
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "3260bcfb-e1d8-411a-a141-dc024cdb5bf9"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.7090736570878193,
+          "top": 0.6483095355450315,
+          "right": 0.8752061096663946,
+          "bottom": 0.6788065056259804
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "3260bcfb-e1d8-411a-a141-dc024cdb5bf9"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.10156714920094073,
+          "top": 0.6787503677183025,
+          "right": 0.7090736570878193,
+          "bottom": 0.7107855539766708
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.995,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "3260bcfb-e1d8-411a-a141-dc024cdb5bf9"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.7089534476928767,
+          "top": 0.6787944501733786,
+          "right": 0.8752667758536106,
+          "bottom": 0.7109027173598861
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "3260bcfb-e1d8-411a-a141-dc024cdb5bf9"
+        }
+      },
+      "cf6a2954-88b0-4f18-bc51-6d76da520aab": {
+        "box": {
+          "left": 0.08980992436408997,
+          "top": 0.734961211681366,
+          "right": 0.898226261138916,
+          "bottom": 0.8010722994804382
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      },
+      "0-8": {
+        "box": {
+          "left": 0.09332562597961844,
+          "top": 0.7384665257644425,
+          "right": 0.8939351131396602,
+          "bottom": 0.8010716453528062
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-9": {
+        "box": {
+          "left": 0.09354086888065873,
+          "top": 0.7385534356311684,
+          "right": 0.3374096260091698,
+          "bottom": 0.7693666543438457
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.976,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "cf6a2954-88b0-4f18-bc51-6d76da520aab"
+        }
+      },
+      "0-a": {
+        "box": {
+          "left": 0.3373010359542087,
+          "top": 0.7385071889143177,
+          "right": 0.6334986890731316,
+          "bottom": 0.7693222458169213
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.961,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "cf6a2954-88b0-4f18-bc51-6d76da520aab"
+        }
+      },
+      "0-b": {
+        "box": {
+          "left": 0.6330348347078241,
+          "top": 0.7384665257644425,
+          "right": 0.89393511313966,
+          "bottom": 0.7692684124345949
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.966,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "cf6a2954-88b0-4f18-bc51-6d76da520aab"
+        }
+      },
+      "0-c": {
+        "box": {
+          "left": 0.09332562597961844,
+          "top": 0.7693222458169213,
+          "right": 0.3375216767556187,
+          "bottom": 0.8010716371391204
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.965,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "cf6a2954-88b0-4f18-bc51-6d76da520aab"
+        }
+      },
+      "0-d": {
+        "box": {
+          "left": 0.3374096260091698,
+          "top": 0.7692684124345949,
+          "right": 0.6330348347078241,
+          "bottom": 0.8010716414981225
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "cf6a2954-88b0-4f18-bc51-6d76da520aab"
+        }
+      },
+      "0-e": {
+        "box": {
+          "left": 0.6325552677418915,
+          "top": 0.7692209454410402,
+          "right": 0.8936991152982251,
+          "bottom": 0.8010716453528062
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "cf6a2954-88b0-4f18-bc51-6d76da520aab"
+        }
+      },
+      "8e472072-174c-42de-977a-9963b4a3eb1a": {
+        "box": {
+          "left": 0.09019747376441956,
+          "top": 0.8553896546363831,
+          "right": 0.8937808275222778,
+          "bottom": 0.9209781289100647
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51006619566.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 8350,
+      "credit_usage": 3.0,
+      "job_id": "cmryknkvy028nd501cc0jzp94",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51006619566.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 9000,
+    "credit_usage": 3.0,
+    "job_id": "cmryknkvy028nd501cc0jzp94",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

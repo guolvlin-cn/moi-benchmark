@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryjnvj0026id501wdovl3k7",
+  "status": "completed",
+  "received_at": 1784873609,
+  "created_at": 1784873609,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "12/14/2012",
+      "foreign_principle_name": "Russian Federation",
+      "registrant_name": "Ketchum, Inc",
+      "registration_num": "5758",
+      "signer_name": "Robert Keenan Conrad",
+      "signer_title": "Vice President/Group Manager"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "af3f4509-f1cb-442b-9aa2-8d5803295a31"
+        ],
+        "value": "12/14/2012"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "4564514e-cb0d-433c-aeb0-9d946a26e902"
+        ],
+        "value": "Russian Federation"
+      },
+      "registrant_name": {
+        "references": [
+          "0-a"
+        ],
+        "value": "Ketchum, Inc"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "5758"
+      },
+      "signer_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Robert Keenan Conrad"
+      },
+      "signer_title": {
+        "references": [
+          "0-8"
+        ],
+        "value": "Vice President/Group Manager"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12929,
+      "credit_usage": 2.0,
+      "job_id": "cmryjnvj0026id501wdovl3k7",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 2.0,
+    "job_id": "cmryjnvj0026id501wdovl3k7",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

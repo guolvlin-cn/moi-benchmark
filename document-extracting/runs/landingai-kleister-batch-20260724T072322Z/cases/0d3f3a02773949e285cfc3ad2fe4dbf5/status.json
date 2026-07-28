@@ -1,0 +1,53 @@
+{
+  "case_id": "0d3f3a02773949e285cfc3ad2fe4dbf5",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/0d3f3a02773949e285cfc3ad2fe4dbf5.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "686ea094a691d1f534c724f9ba3208400d6a593e3f3336589ab2e72e1f1d6dca",
+  "status": "completed",
+  "parse_job_id": "cmrym69aq03t2e401sqlpvcyj",
+  "extract_job_id": "cmrym9e9o03xocx01wejtttgp",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.398950+00:00",
+  "updated_at": "2026-07-24T07:26:32.171507+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:23:47.411940+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:26:08.883798+00:00",
+  "parse_metadata": {
+    "filename": "0d3f3a02773949e285cfc3ad2fe4dbf5.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 10,
+    "duration_ms": 22034,
+    "credit_usage": 30.0,
+    "job_id": "cmrym69aq03t2e401sqlpvcyj",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:26:13.600061+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:26:32.171503+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17335,
+    "credit_usage": 5.7,
+    "job_id": "cmrym9e9o03xocx01wejtttgp",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of New York",
+    "party": [
+      "Recipient",
+      "Oglethorpe Power Corporation (An Electric Membership Corporation)"
+    ],
+    "term": ""
+  }
+}

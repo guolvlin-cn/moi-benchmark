@@ -1,0 +1,51 @@
+{
+  "case_id": "X51008114266",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51008114266.jpg",
+  "source_type": "image",
+  "image_sha256": "3adfcdf65d2b0188dc8577f52ba6ea734b3fb146c005bf413a718f69119debd9",
+  "gold_entities": "train/entities/X51008114266.txt",
+  "gold_box": "train/box/X51008114266.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykrvmp037le4016elzv73l",
+  "extract_job_id": "cmryksark038scx01sjfhhj3i",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.272470+00:00",
+  "updated_at": "2026-07-24T06:45:10.391424+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:44:36.554483+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:44:53.427758+00:00",
+  "parse_metadata": {
+    "filename": "X51008114266.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 8007,
+    "credit_usage": 3.0,
+    "job_id": "cmrykrvmp037le4016elzv73l",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:44:56.181191+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:45:10.391421+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11625,
+    "credit_usage": 0.4,
+    "job_id": "cmryksark038scx01sjfhhj3i",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "99 SPEED MART S/B",
+    "date": "13-05-18",
+    "address": "LOT P.T. 2811, JALAN ANGSA, JAMAN BERKELEY 41150 KLANG, SELANGOR",
+    "total": "RM 22.90"
+  }
+}

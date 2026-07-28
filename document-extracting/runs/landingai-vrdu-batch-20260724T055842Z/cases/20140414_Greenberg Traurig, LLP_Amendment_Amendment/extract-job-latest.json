@@ -1,0 +1,87 @@
+{
+  "job_id": "cmryj83q6034lcx015ppzbpeg",
+  "status": "completed",
+  "received_at": 1784872873,
+  "created_at": 1784872873,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "04/14/2014",
+      "foreign_principle_name": "Kurdistan Regional Government",
+      "registrant_name": "Greenberg Traurig, LLP",
+      "registration_num": "5712",
+      "signer_name": "Joe R. Reeder",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "aa5024be-8b0c-43c6-b72d-8e3150ae3fa0",
+          "a3e02c37-8e3c-4c0b-a2ed-56a8c9ba2a54"
+        ],
+        "value": "04/14/2014"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "fa54ab40-464a-4ca1-a6c9-5bc44e7a1b30",
+          "119ce5c0-8301-4941-bc7c-6bd486a272cd"
+        ],
+        "value": "Kurdistan Regional Government"
+      },
+      "registrant_name": {
+        "references": [
+          "0-4"
+        ],
+        "value": "Greenberg Traurig, LLP"
+      },
+      "registration_num": {
+        "references": [
+          "0-5"
+        ],
+        "value": "5712"
+      },
+      "signer_name": {
+        "references": [
+          "fa54ab40-464a-4ca1-a6c9-5bc44e7a1b30",
+          "c8a1a3f1-3f13-48a1-b60b-8f094e99d4c3"
+        ],
+        "value": "Joe R. Reeder"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 23471,
+      "credit_usage": 1.7,
+      "job_id": "cmryj83q6034lcx015ppzbpeg",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 25000,
+    "credit_usage": 1.7,
+    "job_id": "cmryj83q6034lcx015ppzbpeg",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymra20033fd501h9h9i7gr",
+  "status": "completed",
+  "received_at": 1784878807,
+  "created_at": 1784878807,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "State of Washington",
+      "party": [
+        "Adaptive Biotechnologies",
+        "MICROSOFT CORPORATION"
+      ],
+      "term": "5_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "abbd0d23-deea-496b-b045-06e7ed146c07",
+          "e0a476d3-d44b-4768-a4a9-4e077920f4ad"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "5e02eac8-116b-4498-bae2-2ce50876316a"
+        ],
+        "value": "State of Washington"
+      },
+      "party": [
+        {
+          "references": [
+            "95fbaf13-ad6f-42c9-9542-b9b68109c122"
+          ],
+          "value": "Adaptive Biotechnologies"
+        },
+        {
+          "references": [
+            "abbd0d23-deea-496b-b045-06e7ed146c07"
+          ],
+          "value": "MICROSOFT CORPORATION"
+        }
+      ],
+      "term": {
+        "references": [
+          "863541ae-48a7-4d00-9389-c6bdcec8cd93"
+        ],
+        "value": "5_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12167,
+      "credit_usage": 1.9,
+      "job_id": "cmrymra20033fd501h9h9i7gr",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 1.9,
+    "job_id": "cmrymra20033fd501h9h9i7gr",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

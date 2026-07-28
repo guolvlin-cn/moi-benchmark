@@ -1,0 +1,55 @@
+{
+  "case_id": "20120503_Hecht, Latham, Spencer _ Associates, Inc._Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20120503_Hecht, Latham, Spencer _ Associates, Inc._Amendment_Amendment.pdf",
+  "pdf_sha256": "24356cbd1374005a90e4a8ad45205669cf2a96406648b813149d041738a2b52c",
+  "status": "completed",
+  "parse_job_id": "cmryji5ok0347e401lx6ydgbq",
+  "extract_job_id": "cmryjiifw0349e401ezxj8nof",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.428788+00:00",
+  "updated_at": "2026-07-24T06:09:34.643036+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:09:03.415865+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:09:17.524274+00:00",
+  "parse_metadata": {
+    "filename": "20120503_Hecht, Latham, Spencer _ Associates, Inc._Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 8619,
+    "credit_usage": 6.0,
+    "job_id": "cmryji5ok0347e401lx6ydgbq",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:09:19.941848+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:09:34.643031+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12837,
+    "credit_usage": 1.6,
+    "job_id": "cmryjiifw0349e401ezxj8nof",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "05/03/2012",
+    "foreign_principle_name": null,
+    "registrant_name": "Hecht, Spencer & Associates, Inc.",
+    "registration_num": "5451",
+    "signer_name": "Timothy P. Hecht",
+    "signer_title": null
+  }
+}

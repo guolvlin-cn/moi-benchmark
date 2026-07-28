@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryktlku038zcx015636myn8",
+  "status": "completed",
+  "received_at": 1784875556,
+  "created_at": 1784875556,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "PASAR RAYA MEGA MAJU (SEMENYIH) SDN BHD",
+      "date": "03/07/2018",
+      "address": "NO 24, 25 & 26, JALAN PUSAT PERNIAGAAN BUNGA RAYA 4, PUSAT PERNIAGAAN BUNGA RAYA,",
+      "total": "30.45"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "897552fb-7c18-4bd3-8df4-90d118dc420e"
+        ],
+        "value": "PASAR RAYA MEGA MAJU (SEMENYIH) SDN BHD"
+      },
+      "date": {
+        "references": [
+          "1817220d-699d-4483-ba1a-2b1e520fbe34"
+        ],
+        "value": "03/07/2018"
+      },
+      "address": {
+        "references": [
+          "897552fb-7c18-4bd3-8df4-90d118dc420e"
+        ],
+        "value": "NO 24, 25 & 26, JALAN PUSAT PERNIAGAAN BUNGA RAYA 4, PUSAT PERNIAGAAN BUNGA RAYA,"
+      },
+      "total": {
+        "references": [
+          "0-z"
+        ],
+        "value": "30.45"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11100,
+      "credit_usage": 0.7,
+      "job_id": "cmryktlku038zcx015636myn8",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.7,
+    "job_id": "cmryktlku038zcx015636myn8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

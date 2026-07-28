@@ -1,0 +1,53 @@
+{
+  "case_id": "e90afd0c36ad8ce86d62ef0cbe75cde3",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/e90afd0c36ad8ce86d62ef0cbe75cde3.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "ace262203478fa6f2881e46002e679b1b4428bec7ce4e7bffe08912bf60e87bc",
+  "status": "completed",
+  "parse_job_id": "cmrymqwa5040te401fifmpqc8",
+  "extract_job_id": "cmrymr96g042lcx01sh6euy1r",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.433870+00:00",
+  "updated_at": "2026-07-24T07:40:34.583131+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:39:49.995531+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:40:04.843612+00:00",
+  "parse_metadata": {
+    "filename": "e90afd0c36ad8ce86d62ef0cbe75cde3.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 7,
+    "duration_ms": 7401,
+    "credit_usage": 21.0,
+    "job_id": "cmrymqwa5040te401fifmpqc8",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:40:06.733632+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:40:34.583127+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20386,
+    "credit_usage": 6.4,
+    "job_id": "cmrymr96g042lcx01sh6euy1r",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2015-04-02",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "Magnetek, Inc.",
+      "Columbus McKinnon Corporation"
+    ],
+    "term": "3_years"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryko7hx028ud5018bfihvjt",
+  "status": "completed",
+  "received_at": 1784875304,
+  "created_at": 1784875304,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "99 SPEED MART S/B",
+      "date": "11-05-16",
+      "address": "LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR",
+      "total": "177.20"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "b4901f4e-8ba2-4112-a274-d50d849b269c"
+        ],
+        "value": "99 SPEED MART S/B"
+      },
+      "date": {
+        "references": [
+          "a727ac3e-94b3-49bf-84e9-4964ae32b924"
+        ],
+        "value": "11-05-16"
+      },
+      "address": {
+        "references": [
+          "b4901f4e-8ba2-4112-a274-d50d849b269c"
+        ],
+        "value": "LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR"
+      },
+      "total": {
+        "references": [
+          "0357a6e2-69ef-4f14-b99b-3bea275937c2"
+        ],
+        "value": "177.20"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12904,
+      "credit_usage": 0.5,
+      "job_id": "cmryko7hx028ud5018bfihvjt",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 0.5,
+    "job_id": "cmryko7hx028ud5018bfihvjt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

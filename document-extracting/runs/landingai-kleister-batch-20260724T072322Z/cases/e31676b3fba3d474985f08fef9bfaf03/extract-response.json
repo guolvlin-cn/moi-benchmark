@@ -1,0 +1,58 @@
+{
+  "extraction": {
+    "effective_date": "2006-09-01",
+    "jurisdiction": "State of Washington",
+    "party": [
+      "MICROSOFT CORPORATION",
+      "Digital River, Inc."
+    ],
+    "term": "5_years"
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [
+        "98b8f7b0-c17a-4a9d-b23a-360cda5375b7"
+      ],
+      "value": "2006-09-01"
+    },
+    "jurisdiction": {
+      "references": [
+        "8a4ea3e6-9be0-4d8d-b825-c5fac1b0f30e"
+      ],
+      "value": "State of Washington"
+    },
+    "party": [
+      {
+        "references": [
+          "98b8f7b0-c17a-4a9d-b23a-360cda5375b7",
+          "03e46b8a-6153-4a17-9e92-e162ee7c308a"
+        ],
+        "value": "MICROSOFT CORPORATION"
+      },
+      {
+        "references": [
+          "98b8f7b0-c17a-4a9d-b23a-360cda5375b7",
+          "03e46b8a-6153-4a17-9e92-e162ee7c308a"
+        ],
+        "value": "Digital River, Inc."
+      }
+    ],
+    "term": {
+      "references": [
+        "985cc223-9c89-4fcb-bd7a-a1f2c1df0117"
+      ],
+      "value": "5_years"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13016,
+    "credit_usage": 2.7,
+    "job_id": "cmrymqvfm042jcx01go5rltf8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

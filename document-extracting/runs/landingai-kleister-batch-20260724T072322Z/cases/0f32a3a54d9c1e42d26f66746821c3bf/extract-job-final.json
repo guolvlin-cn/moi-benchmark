@@ -1,0 +1,93 @@
+{
+  "job_id": "cmrym9nld03yacx01oilv8cmt",
+  "status": "completed",
+  "received_at": 1784877985,
+  "created_at": 1784877985,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2012-09-04",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "JDA Software Group, Inc.",
+        "RedPrairie Holding, Inc.",
+        "New Mountain Capital, LLC"
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "5a09771e-a560-4fb7-ae55-f0982d13ed16"
+        ],
+        "value": "2012-09-04"
+      },
+      "jurisdiction": {
+        "references": [
+          "8b84b3a5-aa44-4b15-8a38-bb973779b731",
+          "1c151361-29e3-4bc9-83f0-0e87746d1e52"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "76202417-d01d-4f1f-8604-b8e22c8a3f6e",
+            "11c7f220-effe-4c98-b3f4-1527d1e81652",
+            "a3bbee92-7656-47e3-a68e-95fc0244bb3b"
+          ],
+          "value": "JDA Software Group, Inc."
+        },
+        {
+          "references": [
+            "76202417-d01d-4f1f-8604-b8e22c8a3f6e",
+            "11c7f220-effe-4c98-b3f4-1527d1e81652",
+            "14ae52c3-a439-4482-9d68-5ed099302ee8"
+          ],
+          "value": "RedPrairie Holding, Inc."
+        },
+        {
+          "references": [
+            "76202417-d01d-4f1f-8604-b8e22c8a3f6e",
+            "0da12e4c-87fc-4951-b68c-e939bb829fd3",
+            "97ad82e7-9cd3-4427-9c87-95bba3bb63f7",
+            "56dd79bd-cd78-49c0-a749-282a8188663b"
+          ],
+          "value": "New Mountain Capital, LLC"
+        }
+      ],
+      "term": {
+        "references": [
+          "a9fe5fad-9674-442f-81b1-b472d7a93cbd"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 19254,
+      "credit_usage": 5.9,
+      "job_id": "cmrym9nld03yacx01oilv8cmt",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20000,
+    "credit_usage": 5.9,
+    "job_id": "cmrym9nld03yacx01oilv8cmt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

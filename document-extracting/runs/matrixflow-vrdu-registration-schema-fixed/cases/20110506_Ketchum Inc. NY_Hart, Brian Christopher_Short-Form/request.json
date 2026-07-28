@@ -1,0 +1,67 @@
+{
+  "note": "workflow default_values are merged by the backend",
+  "uploaded_file": {
+    "file_id": "36eb3845-b42f-4531-bd4f-baf473f8b35d",
+    "md5": "f6ad71a630dce96884b0f902247fba1a",
+    "original_name": "20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form.pdf",
+    "size": 119672
+  },
+  "values": {
+    "extract_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "file_date": {
+          "description": "The filing or registration date shown on the document. Return an empty string when the field is absent or uncertain; do not guess.",
+          "type": "string"
+        },
+        "foreign_principle_name": {
+          "description": "The foreign principal represented by the registrant. Keep this exact field-name spelling. Return an empty string when absent or uncertain; do not confuse it with the registrant.",
+          "type": "string"
+        },
+        "registrant_name": {
+          "description": "The official name of the registrant individual or organization. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "registration_num": {
+          "description": "The registration number as text, preserving leading zeros. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "signer_name": {
+          "description": "The name of the person who signed or executed the document. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "signer_title": {
+          "description": "The signer's title, position, capacity, or role. Return an empty string when absent or uncertain; do not return the signer name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file_date",
+        "foreign_principle_name",
+        "registrant_name",
+        "registration_num",
+        "signer_name",
+        "signer_title"
+      ],
+      "type": "object"
+    },
+    "source_ref": {
+      "display_location": "20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form.pdf",
+      "file_id": "36eb3845-b42f-4531-bd4f-baf473f8b35d",
+      "file_name": "20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form.pdf",
+      "id_parents": [
+        "catalog-1",
+        "database-10001",
+        "volume-20001"
+      ],
+      "ids": [
+        "36eb3845-b42f-4531-bd4f-baf473f8b35d"
+      ],
+      "kind": "file",
+      "location": "20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form.pdf",
+      "resource_type": "file",
+      "volume_id": 20001
+    }
+  },
+  "workflow_id": "2b084712-3ed2-4034-965b-8e2657693359"
+}

@@ -1,0 +1,55 @@
+{
+  "case_id": "19801001_Arnold _ Porter Kaye Scholer, LLP_Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19801001_Arnold _ Porter Kaye Scholer, LLP_Amendment_Amendment.pdf",
+  "pdf_sha256": "4cb0ad234a5eaa1e49c0a18ff342a85233db88013f90412ac6d6cda782e24006",
+  "status": "completed",
+  "parse_job_id": "cmryjkwsy034ee401a7hx1j5v",
+  "extract_job_id": "cmryjlb4a035zcx01eg4820y9",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.430722+00:00",
+  "updated_at": "2026-07-24T06:11:53.996896+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:11:11.854043+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:11:27.046313+00:00",
+  "parse_metadata": {
+    "filename": "19801001_Arnold _ Porter Kaye Scholer, LLP_Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 10527,
+    "credit_usage": 6.0,
+    "job_id": "cmryjkwsy034ee401a7hx1j5v",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:11:30.433963+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:11:53.996889+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19659,
+    "credit_usage": 1.3,
+    "job_id": "cmryjlb4a035zcx01eg4820y9",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "October 12, 1980",
+    "foreign_principle_name": null,
+    "registrant_name": "ARNOLD & PORTER",
+    "registration_num": "1750",
+    "signer_name": "Brooksley Landau",
+    "signer_title": null
+  }
+}

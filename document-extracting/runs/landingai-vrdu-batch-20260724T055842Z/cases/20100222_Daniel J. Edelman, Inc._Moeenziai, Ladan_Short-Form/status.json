@@ -1,0 +1,50 @@
+{
+  "case_id": "20100222_Daniel J. Edelman, Inc._Moeenziai, Ladan_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20100222_Daniel J. Edelman, Inc._Moeenziai, Ladan_Short-Form.pdf",
+  "pdf_sha256": "c952e23fa0e3e76e53ad823f048fa9978bfe8a8a35e71a0245635a4e1ac38501",
+  "status": "completed",
+  "parse_job_id": "cmryjc157025id501orsbe0if",
+  "extract_job_id": "cmryjcff9033le401ocb62seh",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.421410+00:00",
+  "updated_at": "2026-07-24T06:04:57.149624+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:04:17.555871+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:04:32.410628+00:00",
+  "parse_metadata": {
+    "filename": "20100222_Daniel J. Edelman, Inc._Moeenziai, Ladan_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 7538,
+    "credit_usage": 6.0,
+    "job_id": "cmryjc157025id501orsbe0if",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:04:36.124958+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:04:57.149618+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15401,
+    "credit_usage": 2.0,
+    "job_id": "cmryjcff9033le401ocb62seh",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "2010-02-22",
+    "foreign_principle_name": "Critical National Infrastructure Authority",
+    "registrant_name": "Edelman Public Relations",
+    "registration_num": "3634",
+    "signer_name": "Ladan Moeenzial",
+    "signer_title": "Public Relations Consultant"
+  }
+}

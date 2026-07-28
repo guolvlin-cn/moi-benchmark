@@ -1,0 +1,133 @@
+{
+  "job_id": "cmrympn5v032yd501fjpp61wq",
+  "status": "completed",
+  "received_at": 1784878731,
+  "created_at": 1784878731,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2010-07-13",
+      "jurisdiction": "State of New York",
+      "party": [
+        "EURAND N.V.",
+        "TPG Capital, L.P.",
+        "Axcan Pharma Inc.",
+        "TPG Capital, L.P.",
+        "Axcan Pharma Inc.",
+        "Eurand N.V.",
+        "TPG Capital, L.P.",
+        "Axcan Pharma Inc.",
+        "Eurand N.V."
+      ],
+      "term": "24_months"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "dda7d61a-155b-4dcf-a7d3-87e509429428",
+          "fe71f8da-7d9d-4d32-895c-7f6d18f8cfb8"
+        ],
+        "value": "2010-07-13"
+      },
+      "jurisdiction": {
+        "references": [
+          "47afd17a-d91a-4e77-a83d-fd7fa4e35489"
+        ],
+        "value": "State of New York"
+      },
+      "party": [
+        {
+          "references": [
+            "c83d3739-07ce-4003-aed9-b6038ee7659f",
+            "653b4372-1747-4038-91d4-2321b26da91b"
+          ],
+          "value": "EURAND N.V."
+        },
+        {
+          "references": [
+            "653b4372-1747-4038-91d4-2321b26da91b"
+          ],
+          "value": "TPG Capital, L.P."
+        },
+        {
+          "references": [
+            "653b4372-1747-4038-91d4-2321b26da91b"
+          ],
+          "value": "Axcan Pharma Inc."
+        },
+        {
+          "references": [
+            "653b4372-1747-4038-91d4-2321b26da91b",
+            "fe71f8da-7d9d-4d32-895c-7f6d18f8cfb8"
+          ],
+          "value": "TPG Capital, L.P."
+        },
+        {
+          "references": [
+            "653b4372-1747-4038-91d4-2321b26da91b"
+          ],
+          "value": "Axcan Pharma Inc."
+        },
+        {
+          "references": [
+            "653b4372-1747-4038-91d4-2321b26da91b",
+            "424dc8b5-71ad-4ef0-9f01-1c9652a8dc3d"
+          ],
+          "value": "Eurand N.V."
+        },
+        {
+          "references": [
+            "653b4372-1747-4038-91d4-2321b26da91b"
+          ],
+          "value": "TPG Capital, L.P."
+        },
+        {
+          "references": [
+            "1daccea8-b773-4888-b60b-10dae2b77816",
+            "653b4372-1747-4038-91d4-2321b26da91b",
+            "9abc6c85-2b2c-474b-b01c-8328b87d20ec"
+          ],
+          "value": "Axcan Pharma Inc."
+        },
+        {
+          "references": [
+            "653b4372-1747-4038-91d4-2321b26da91b"
+          ],
+          "value": "Eurand N.V."
+        }
+      ],
+      "term": {
+        "references": [
+          "a0ee0f2f-414f-4623-90d6-d63d87f593f3"
+        ],
+        "value": "24_months"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 22518,
+      "credit_usage": 6.4,
+      "job_id": "cmrympn5v032yd501fjpp61wq",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 23000,
+    "credit_usage": 6.4,
+    "job_id": "cmrympn5v032yd501fjpp61wq",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

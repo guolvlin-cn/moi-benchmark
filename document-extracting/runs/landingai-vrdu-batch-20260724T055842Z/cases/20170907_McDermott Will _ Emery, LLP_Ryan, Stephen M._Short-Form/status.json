@@ -1,0 +1,50 @@
+{
+  "case_id": "20170907_McDermott Will _ Emery, LLP_Ryan, Stephen M._Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20170907_McDermott Will _ Emery, LLP_Ryan, Stephen M._Short-Form.pdf",
+  "pdf_sha256": "552411b3d5d71de8fb58b8ca2be82bc4d7dba4fb28ab6aac5805c77304087c04",
+  "status": "completed",
+  "parse_job_id": "cmryj67120251d501r3ewuuvk",
+  "extract_job_id": "cmryj6k030349cx01tm7e136x",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.415107+00:00",
+  "updated_at": "2026-07-24T06:00:18.541788+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T05:59:45.267529+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:00:00.852713+00:00",
+  "parse_metadata": {
+    "filename": "20170907_McDermott Will _ Emery, LLP_Ryan, Stephen M._Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 6815,
+    "credit_usage": 6.0,
+    "job_id": "cmryj67120251d501r3ewuuvk",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:00:02.097972+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:00:18.541784+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12262,
+    "credit_usage": 2.1,
+    "job_id": "cmryj6k030349cx01tm7e136x",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "09/07/2017",
+    "foreign_principle_name": "VTA Telecom Corp. and Viettel Group",
+    "registrant_name": "McDermott Will & Emery LLP",
+    "registration_num": "6447",
+    "signer_name": "Stephen M. Ryan",
+    "signer_title": "partner"
+  }
+}

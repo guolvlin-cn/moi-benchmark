@@ -1,0 +1,53 @@
+{
+  "case_id": "f5767a1bcfba57c7f5d07b9404a9ac3a",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/f5767a1bcfba57c7f5d07b9404a9ac3a.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "0151c38f843d6a37389338aac414320422bd93cc1a29679f5c73f3c5a3047b4f",
+  "status": "completed",
+  "parse_job_id": "cmrymriqz040we401tkkxora8",
+  "extract_job_id": "cmrymrxy8042pcx01sb4165gm",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.436413+00:00",
+  "updated_at": "2026-07-24T07:41:03.127610+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:40:19.181424+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:40:37.075182+00:00",
+  "parse_metadata": {
+    "filename": "f5767a1bcfba57c7f5d07b9404a9ac3a.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 8,
+    "duration_ms": 11835,
+    "credit_usage": 24.0,
+    "job_id": "cmrymriqz040we401tkkxora8",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:40:38.807461+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:41:03.127606+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15162,
+    "credit_usage": 5.8,
+    "job_id": "cmrymrxy8042pcx01sb4165gm",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2015-07-21",
+    "jurisdiction": "Illinois",
+    "party": [
+      "US Foods, Inc.",
+      "Pietro Satriano"
+    ],
+    "term": "2_years"
+  }
+}

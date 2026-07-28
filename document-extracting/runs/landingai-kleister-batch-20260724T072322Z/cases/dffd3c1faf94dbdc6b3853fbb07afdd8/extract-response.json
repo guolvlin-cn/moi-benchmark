@@ -1,0 +1,61 @@
+{
+  "extraction": {
+    "effective_date": "2011-03-29",
+    "jurisdiction": "State of Texas",
+    "party": [
+      "Stephen M. Mattessich",
+      "Newgistics, Inc."
+    ],
+    "term": null
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [
+        "f58dbceb-0b31-42dd-9158-525aeba5affa",
+        "0e613eee-017e-4075-afb9-ab8f3aa793c5"
+      ],
+      "value": "2011-03-29"
+    },
+    "jurisdiction": {
+      "references": [
+        "a308ebf7-ae64-403a-b648-cd348a3fdeca"
+      ],
+      "value": "State of Texas"
+    },
+    "party": [
+      {
+        "references": [
+          "f58dbceb-0b31-42dd-9158-525aeba5affa",
+          "fc1bc74c-e932-41f2-a148-391b90078344"
+        ],
+        "value": "Stephen M. Mattessich"
+      },
+      {
+        "references": [
+          "f58dbceb-0b31-42dd-9158-525aeba5affa"
+        ],
+        "value": "Newgistics, Inc."
+      }
+    ],
+    "term": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15778,
+    "credit_usage": 2.5,
+    "job_id": "cmrymqnsm042gcx01i8j0db4k",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

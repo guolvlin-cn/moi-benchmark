@@ -1,0 +1,53 @@
+{
+  "case_id": "5a67c4370c9b6da69651a2f80c7b7f8d",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/5a67c4370c9b6da69651a2f80c7b7f8d.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "94e92af8a572b6f849234cb7e3d608652783c9352b2de8ea1b9d101b313102be",
+  "status": "completed",
+  "parse_job_id": "cmrymfo38030cd5013veaa7yn",
+  "extract_job_id": "cmrymgd4u0400cx017gq4xpz6",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.407482+00:00",
+  "updated_at": "2026-07-24T07:31:56.090980+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:31:06.155958+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:31:32.961923+00:00",
+  "parse_metadata": {
+    "filename": "5a67c4370c9b6da69651a2f80c7b7f8d.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 4,
+    "duration_ms": 16815,
+    "credit_usage": 12.0,
+    "job_id": "cmrymfo38030cd5013veaa7yn",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:31:38.630998+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:31:56.090973+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10306,
+    "credit_usage": 2.5,
+    "job_id": "cmrymgd4u0400cx017gq4xpz6",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2005-07-03",
+    "jurisdiction": "State of New York",
+    "party": [
+      "Common Sense Ltd.",
+      "Synova Healthcare, Inc."
+    ],
+    "term": "5_years"
+  }
+}

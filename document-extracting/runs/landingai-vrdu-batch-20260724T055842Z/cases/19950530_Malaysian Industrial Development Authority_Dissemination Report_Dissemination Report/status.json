@@ -1,0 +1,50 @@
+{
+  "case_id": "19950530_Malaysian Industrial Development Authority_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19950530_Malaysian Industrial Development Authority_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "5703bab119ad9c91bd6b8589f6b9a213a195baad49b7c7ea1b13c6344127f1a3",
+  "status": "completed",
+  "parse_job_id": "cmryjmxti034me401mggd8sav",
+  "extract_job_id": "cmryjnbvw0366cx014twr4yem",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.432728+00:00",
+  "updated_at": "2026-07-24T06:13:25.911907+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:12:46.692510+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:13:01.122765+00:00",
+  "parse_metadata": {
+    "filename": "19950530_Malaysian Industrial Development Authority_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 11974,
+    "credit_usage": 6.0,
+    "job_id": "cmryjmxti034me401mggd8sav",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:13:04.845760+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:13:25.911903+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15994,
+    "credit_usage": 1.5,
+    "job_id": "cmryjnbvw0366cx014twr4yem",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "May 30",
+    "foreign_principle_name": "Malaysian Industrial Development Authority",
+    "registrant_name": "Malaysian Industrial Development Authority",
+    "registration_num": "2331",
+    "signer_name": "Hock-Guan Lim",
+    "signer_title": "Director"
+  }
+}

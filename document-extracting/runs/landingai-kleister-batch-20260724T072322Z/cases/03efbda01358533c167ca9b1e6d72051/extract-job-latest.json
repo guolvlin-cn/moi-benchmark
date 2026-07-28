@@ -1,0 +1,78 @@
+{
+  "job_id": "cmryms5m9042qcx01n5agi3c2",
+  "status": "completed",
+  "received_at": 1784878848,
+  "created_at": 1784878848,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "1999-02-06",
+      "jurisdiction": "Pennsylvania",
+      "party": [
+        "High Speed Net Solutions",
+        "R. J. Seifert Enterprises"
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "7829903c-9377-4262-818a-af25f813fa6b"
+        ],
+        "value": "1999-02-06"
+      },
+      "jurisdiction": {
+        "references": [
+          "7829903c-9377-4262-818a-af25f813fa6b"
+        ],
+        "value": "Pennsylvania"
+      },
+      "party": [
+        {
+          "references": [
+            "7829903c-9377-4262-818a-af25f813fa6b"
+          ],
+          "value": "High Speed Net Solutions"
+        },
+        {
+          "references": [
+            "7829903c-9377-4262-818a-af25f813fa6b"
+          ],
+          "value": "R. J. Seifert Enterprises"
+        }
+      ],
+      "term": {
+        "references": [
+          "7829903c-9377-4262-818a-af25f813fa6b"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12718,
+      "credit_usage": 1.7,
+      "job_id": "cmryms5m9042qcx01n5agi3c2",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 1.7,
+    "job_id": "cmryms5m9042qcx01n5agi3c2",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

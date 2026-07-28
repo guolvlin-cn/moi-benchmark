@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymuwjo033pd501ckne8ll8",
+  "status": "completed",
+  "received_at": 1784878976,
+  "created_at": 1784878976,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "Illinois",
+      "party": [
+        "Sears Holdings Corporation and its controlled affiliates and subsidiaries",
+        "Executive"
+      ],
+      "term": "1_year"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "0ea6cd07-9b35-4a9d-b2d2-ac52001a9713",
+          "addfa2a1-a179-4130-9cdf-28a59920b65f"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "39cd124f-b984-448c-98b7-805b8dd26850"
+        ],
+        "value": "Illinois"
+      },
+      "party": [
+        {
+          "references": [
+            "0ea6cd07-9b35-4a9d-b2d2-ac52001a9713"
+          ],
+          "value": "Sears Holdings Corporation and its controlled affiliates and subsidiaries"
+        },
+        {
+          "references": [
+            "0ea6cd07-9b35-4a9d-b2d2-ac52001a9713"
+          ],
+          "value": "Executive"
+        }
+      ],
+      "term": {
+        "references": [
+          "8f891897-438e-4522-9d60-1614d8e545d9"
+        ],
+        "value": "1_year"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 17120,
+      "credit_usage": 5.7,
+      "job_id": "cmrymuwjo033pd501ckne8ll8",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18000,
+    "credit_usage": 5.7,
+    "job_id": "cmrymuwjo033pd501ckne8ll8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

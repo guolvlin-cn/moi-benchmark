@@ -1,0 +1,50 @@
+{
+  "case_id": "20170920_DCI Group AZ, LLC_McCabe, Brian_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20170920_DCI Group AZ, LLC_McCabe, Brian_Short-Form.pdf",
+  "pdf_sha256": "4e90167949deb8d2a800b83b7ea106bd4aef908b64679e5e35c40174183f48be",
+  "status": "completed",
+  "parse_job_id": "cmryjh0zf035lcx01nq6r2zq8",
+  "extract_job_id": "cmryjhkjl025yd5010bxwxg6s",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.427488+00:00",
+  "updated_at": "2026-07-24T06:08:58.172463+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:08:10.654899+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:08:31.958059+00:00",
+  "parse_metadata": {
+    "filename": "20170920_DCI Group AZ, LLC_McCabe, Brian_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 16178,
+    "credit_usage": 6.0,
+    "job_id": "cmryjh0zf035lcx01nq6r2zq8",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:08:35.981389+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:08:58.172458+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13975,
+    "credit_usage": 2.0,
+    "job_id": "cmryjhkjl025yd5010bxwxg6s",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "09/20/2017",
+    "foreign_principle_name": "Moise Katumbi",
+    "registrant_name": "DCI Group AZ, L.L.C.",
+    "registration_num": "6278",
+    "signer_name": "Brian McCabe",
+    "signer_title": "Managing Member"
+  }
+}

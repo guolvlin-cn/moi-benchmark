@@ -1,0 +1,61 @@
+{
+  "extraction": {
+    "file_date": "11/19/2012",
+    "foreign_principle_name": "Commonwealth of Dominica",
+    "registrant_name": "Sui Yan Hang",
+    "registration_num": "S334",
+    "signer_name": null,
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "b279e2a3-4fa5-4f5a-b046-958e7703397d",
+        "5d6d2be8-0950-47c7-851e-6ba29efb11c4"
+      ],
+      "value": "11/19/2012"
+    },
+    "foreign_principle_name": {
+      "references": [
+        "484c93ac-8178-47fe-aa5b-3ba63fa6c20d"
+      ],
+      "value": "Commonwealth of Dominica"
+    },
+    "registrant_name": {
+      "references": [
+        "7ee6b5fe-a769-443a-970d-a90e05af5515"
+      ],
+      "value": "Sui Yan Hang"
+    },
+    "registration_num": {
+      "references": [
+        "7ee6b5fe-a769-443a-970d-a90e05af5515"
+      ],
+      "value": "S334"
+    },
+    "signer_name": {
+      "references": [],
+      "value": null
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20835,
+    "credit_usage": 1.9,
+    "job_id": "cmryj9so50335e401sq6hycx9",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

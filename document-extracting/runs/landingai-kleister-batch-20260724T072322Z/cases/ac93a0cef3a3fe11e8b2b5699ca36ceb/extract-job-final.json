@@ -1,0 +1,88 @@
+{
+  "job_id": "cmrymm8l903yue401ijae7yti",
+  "status": "completed",
+  "received_at": 1784878572,
+  "created_at": 1784878572,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2007-04-30",
+      "jurisdiction": "State of Massachusetts",
+      "party": [
+        "Accurel Systems International Corporation",
+        "Implant Sciences Corporation",
+        "Evans Analytical Group LLC"
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "243e2ddb-28ba-438e-a97b-6c0bc62101b7"
+        ],
+        "value": "2007-04-30"
+      },
+      "jurisdiction": {
+        "references": [
+          "8f7d22a0-15c7-4ea2-8fb8-cc9a9878f240"
+        ],
+        "value": "State of Massachusetts"
+      },
+      "party": [
+        {
+          "references": [
+            "243e2ddb-28ba-438e-a97b-6c0bc62101b7",
+            "667ef59d-bb22-4970-bc67-55943751c859"
+          ],
+          "value": "Accurel Systems International Corporation"
+        },
+        {
+          "references": [
+            "243e2ddb-28ba-438e-a97b-6c0bc62101b7",
+            "fdcb3fb6-511f-4cb8-9914-8fc92b6e803a"
+          ],
+          "value": "Implant Sciences Corporation"
+        },
+        {
+          "references": [
+            "243e2ddb-28ba-438e-a97b-6c0bc62101b7",
+            "667ef59d-bb22-4970-bc67-55943751c859"
+          ],
+          "value": "Evans Analytical Group LLC"
+        }
+      ],
+      "term": {
+        "references": [
+          "16c15b14-c3e2-4de7-b38b-cc1d91da2db8"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 18326,
+      "credit_usage": 3.6,
+      "job_id": "cmrymm8l903yue401ijae7yti",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19000,
+    "credit_usage": 3.6,
+    "job_id": "cmrymm8l903yue401ijae7yti",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

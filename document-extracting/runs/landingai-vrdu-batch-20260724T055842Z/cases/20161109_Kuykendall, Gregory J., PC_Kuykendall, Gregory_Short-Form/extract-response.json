@@ -1,0 +1,60 @@
+{
+  "extraction": {
+    "file_date": "2006 JAN -6",
+    "foreign_principle_name": "The Government of the United Mexican States",
+    "registrant_name": "Gregory J. Kuykendall, P.C.",
+    "registration_num": "5917",
+    "signer_name": null,
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "593601fa-6f2b-431c-b965-448c65ad349a"
+      ],
+      "value": "2006 JAN -6"
+    },
+    "foreign_principle_name": {
+      "references": [
+        "50a0aafe-6e94-47a5-ae4a-195a6aeb0772"
+      ],
+      "value": "The Government of the United Mexican States"
+    },
+    "registrant_name": {
+      "references": [
+        "89f5c78a-8f9a-47cd-b70b-f768d94077a3"
+      ],
+      "value": "Gregory J. Kuykendall, P.C."
+    },
+    "registration_num": {
+      "references": [
+        "0-3"
+      ],
+      "value": "5917"
+    },
+    "signer_name": {
+      "references": [],
+      "value": null
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16763,
+    "credit_usage": 2.0,
+    "job_id": "cmryjddcl0357cx0119sqxmuo",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

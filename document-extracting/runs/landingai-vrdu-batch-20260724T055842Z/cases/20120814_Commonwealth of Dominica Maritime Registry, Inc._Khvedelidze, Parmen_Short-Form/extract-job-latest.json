@@ -1,0 +1,82 @@
+{
+  "job_id": "cmryj5jjw0345cx015whcf92f",
+  "status": "completed",
+  "received_at": 1784872754,
+  "created_at": 1784872754,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "08/14/2012",
+      "foreign_principle_name": "Commonwealth of Dominica",
+      "registrant_name": "Parmen Khverdelidze",
+      "registration_num": "9934",
+      "signer_name": null,
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "7dad5a91-d713-44d5-b8a3-8a3e750fa884"
+        ],
+        "value": "08/14/2012"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "145bae94-0522-41f8-9af4-fecbcd4352fd"
+        ],
+        "value": "Commonwealth of Dominica"
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Parmen Khverdelidze"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "9934"
+      },
+      "signer_name": {
+        "references": [],
+        "value": null
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15404,
+      "credit_usage": 1.9,
+      "job_id": "cmryj5jjw0345cx015whcf92f",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 1.9,
+    "job_id": "cmryj5jjw0345cx015whcf92f",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

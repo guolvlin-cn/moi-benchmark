@@ -1,0 +1,51 @@
+{
+  "case_id": "X51006414733",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51006414733.jpg",
+  "source_type": "image",
+  "image_sha256": "110bf9b2b37418a2d79e8cd7447bf81ee55a307062c32c6c8d5e04433ff9b833",
+  "gold_entities": "train/entities/X51006414733.txt",
+  "gold_box": "train/box/X51006414733.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykkyfh028bd501mn3uix44",
+  "extract_job_id": "cmryklbvl036te4018vqc7glu",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.254948+00:00",
+  "updated_at": "2026-07-24T06:39:44.645975+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:39:13.634514+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:39:28.588234+00:00",
+  "parse_metadata": {
+    "filename": "X51006414733.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 10715,
+    "credit_usage": 3.0,
+    "job_id": "cmrykkyfh028bd501mn3uix44",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:39:31.021073+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:39:44.645970+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12569,
+    "credit_usage": 1.0,
+    "job_id": "cmryklbvl036te4018vqc7glu",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "AEON CO. (M) BHD",
+    "date": "01/04/2018",
+    "address": "3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",
+    "total": "122.80"
+  }
+}

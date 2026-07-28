@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykemnd035te40176rnm3dw",
+  "status": "completed",
+  "received_at": 1784874858,
+  "created_at": 1784874858,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "99 SPEED MART S/D",
+      "date": "05 02-18",
+      "address": "LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1317 TRILLIUM SG BESI",
+      "total": "RM 141.50"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "6d29044d-e13a-424d-bf3e-a9cee0681bf9"
+        ],
+        "value": "99 SPEED MART S/D"
+      },
+      "date": {
+        "references": [
+          "905877a5-c94c-48b4-a5c0-8d835bed3c64"
+        ],
+        "value": "05 02-18"
+      },
+      "address": {
+        "references": [
+          "6d29044d-e13a-424d-bf3e-a9cee0681bf9"
+        ],
+        "value": "LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1317 TRILLIUM SG BESI"
+      },
+      "total": {
+        "references": [
+          "4bb3e9fe-b158-49ff-b67b-d7061726d358"
+        ],
+        "value": "RM 141.50"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10946,
+      "credit_usage": 0.4,
+      "job_id": "cmrykemnd035te40176rnm3dw",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11000,
+    "credit_usage": 0.4,
+    "job_id": "cmrykemnd035te40176rnm3dw",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

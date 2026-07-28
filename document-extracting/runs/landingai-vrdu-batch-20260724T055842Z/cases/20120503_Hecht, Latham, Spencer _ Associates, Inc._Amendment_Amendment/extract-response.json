@@ -1,0 +1,64 @@
+{
+  "extraction": {
+    "file_date": "05/03/2012",
+    "foreign_principle_name": null,
+    "registrant_name": "Hecht, Spencer & Associates, Inc.",
+    "registration_num": "5451",
+    "signer_name": "Timothy P. Hecht",
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "2734b3e2-21e4-45d2-bdb6-5cce5b9ef8d9",
+        "6e514a06-e706-4c5f-ab14-76fa42a33c91",
+        "65d112b1-973c-46ec-ae65-15e334b15f10",
+        "daa54f74-f5b8-4718-b421-13993c00b34c",
+        "dc09f937-97bc-4a2d-9c2d-ece7a5f1931c"
+      ],
+      "value": "05/03/2012"
+    },
+    "foreign_principle_name": {
+      "references": [],
+      "value": null
+    },
+    "registrant_name": {
+      "references": [
+        "0-6"
+      ],
+      "value": "Hecht, Spencer & Associates, Inc."
+    },
+    "registration_num": {
+      "references": [
+        "0-7"
+      ],
+      "value": "5451"
+    },
+    "signer_name": {
+      "references": [
+        "1f58b2a7-2553-4a64-a53c-740e760e440b"
+      ],
+      "value": "Timothy P. Hecht"
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12837,
+    "credit_usage": 1.6,
+    "job_id": "cmryjiifw0349e401ezxj8nof",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymrqih040xe401yzyz4zx8",
+  "status": "completed",
+  "received_at": 1784878828,
+  "created_at": 1784878828,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "State of Washington",
+      "party": [
+        "Alder BioPharmaceuticals, Inc.",
+        "H. Lundbeck A/S"
+      ],
+      "term": "5_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "53abc574-1bea-4655-b473-bf83d5c81dc0",
+          "5491e237-f244-4f16-aae7-9f36546c7d7a"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "4b0625fd-34c8-49b2-bbdc-705a5e569720"
+        ],
+        "value": "State of Washington"
+      },
+      "party": [
+        {
+          "references": [
+            "53abc574-1bea-4655-b473-bf83d5c81dc0"
+          ],
+          "value": "Alder BioPharmaceuticals, Inc."
+        },
+        {
+          "references": [
+            "a7124fbe-7bab-4364-926a-23207cce3aed"
+          ],
+          "value": "H. Lundbeck A/S"
+        }
+      ],
+      "term": {
+        "references": [
+          "9ef6be14-adf5-40ac-b14e-7360b38d2305"
+        ],
+        "value": "5_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 24247,
+      "credit_usage": 4.3,
+      "job_id": "cmrymrqih040xe401yzyz4zx8",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 25000,
+    "credit_usage": 4.3,
+    "job_id": "cmrymrqih040xe401yzyz4zx8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

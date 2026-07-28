@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymkkmx040jcx01piu9e999",
+  "status": "completed",
+  "received_at": 1784878494,
+  "created_at": 1784878494,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "State of New Jersey",
+      "party": [
+        "AlgoRx Pharmaceuticals, Inc.",
+        ", a _________________________ [CORPORATION]"
+      ],
+      "term": "10_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "8af0bbe9-a78e-488d-86bd-5dd39ac3216f"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "f8ac2c08-1fe2-489e-b197-3241db4eb8f3"
+        ],
+        "value": "State of New Jersey"
+      },
+      "party": [
+        {
+          "references": [
+            "8af0bbe9-a78e-488d-86bd-5dd39ac3216f"
+          ],
+          "value": "AlgoRx Pharmaceuticals, Inc."
+        },
+        {
+          "references": [
+            "8af0bbe9-a78e-488d-86bd-5dd39ac3216f",
+            "d6bff1a7-8ff7-44b6-9d76-141ff10257a2"
+          ],
+          "value": ", a _________________________ [CORPORATION]"
+        }
+      ],
+      "term": {
+        "references": [
+          "f8ac2c08-1fe2-489e-b197-3241db4eb8f3"
+        ],
+        "value": "10_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10186,
+      "credit_usage": 1.8,
+      "job_id": "cmrymkkmx040jcx01piu9e999",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11000,
+    "credit_usage": 1.8,
+    "job_id": "cmrymkkmx040jcx01piu9e999",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

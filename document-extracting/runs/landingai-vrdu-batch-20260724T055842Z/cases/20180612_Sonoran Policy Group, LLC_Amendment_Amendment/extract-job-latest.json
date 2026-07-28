@@ -1,0 +1,87 @@
+{
+  "job_id": "cmryjbnzx033ge401g9t8vxn1",
+  "status": "completed",
+  "received_at": 1784873040,
+  "created_at": 1784873040,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "06/12/2018",
+      "foreign_principle_name": "Democratic Republic of Congo Through Mer Security & Communications Systems, Ltd",
+      "registrant_name": "Sonoran Policy Group, LLC",
+      "registration_num": "6399",
+      "signer_name": "Christian Bourge",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "9595977f-2176-490b-b812-ad8b3cc71b24",
+          "87cd6fc6-3731-42cf-a46e-b9c2d7130192",
+          "83965136-833a-43a3-b7c7-33d2d164ff91",
+          "c4ca6b41-9011-49da-ad61-688d75034b3d"
+        ],
+        "value": "06/12/2018"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "77b2d84d-99c5-4a59-8f29-388827b9ddbd"
+        ],
+        "value": "Democratic Republic of Congo Through Mer Security & Communications Systems, Ltd"
+      },
+      "registrant_name": {
+        "references": [
+          "635e0de4-5b0b-43f8-83c0-6775e016ab13"
+        ],
+        "value": "Sonoran Policy Group, LLC"
+      },
+      "registration_num": {
+        "references": [
+          "635e0de4-5b0b-43f8-83c0-6775e016ab13"
+        ],
+        "value": "6399"
+      },
+      "signer_name": {
+        "references": [
+          "7baf9d29-804c-494d-b897-14b48892fd04"
+        ],
+        "value": "Christian Bourge"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 18871,
+      "credit_usage": 1.6,
+      "job_id": "cmryjbnzx033ge401g9t8vxn1",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19000,
+    "credit_usage": 1.6,
+    "job_id": "cmryjbnzx033ge401g9t8vxn1",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

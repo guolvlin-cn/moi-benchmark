@@ -1,0 +1,51 @@
+{
+  "case_id": "X51007225417",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51007225417.jpg",
+  "source_type": "image",
+  "image_sha256": "4bd1c5ca000b37dbda972053b6449b7ad9d0f82fe67b0b2af544773e2c5636ee",
+  "gold_entities": "train/entities/X51007225417.txt",
+  "gold_box": "train/box/X51007225417.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykp2nw028yd501dtxswwg9",
+  "extract_job_id": "cmrykpirq038lcx01uk2m5fk9",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.265942+00:00",
+  "updated_at": "2026-07-24T06:43:02.472232+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:42:25.747093+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:42:40.880497+00:00",
+  "parse_metadata": {
+    "filename": "X51007225417.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 10361,
+    "credit_usage": 3.0,
+    "job_id": "cmrykp2nw028yd501dtxswwg9",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:42:46.576685+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:43:02.472224+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11028,
+    "credit_usage": 0.7,
+    "job_id": "cmrykpirq038lcx01uk2m5fk9",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "ENW Hardware Centre (M) Sdn. Bhd.",
+    "date": "09/04/2018",
+    "address": "No: G3, Blk G, Jln PJU 1A/3, Ara Damansara, 47301 Petaling Jaya, Selangor Darul Ehsan.",
+    "total": "51.00"
+  }
+}

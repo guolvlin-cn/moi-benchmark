@@ -1,0 +1,80 @@
+{
+  "job_id": "cmrymlckk03yoe4017xbiit5t",
+  "status": "completed",
+  "received_at": 1784878530,
+  "created_at": 1784878530,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2005-02-16",
+      "jurisdiction": "",
+      "party": [
+        "Omni National Bank",
+        "Jeffrey L. Levine"
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "35763828-0478-4327-b162-b9d87cff3573"
+        ],
+        "value": "2005-02-16"
+      },
+      "jurisdiction": {
+        "references": [
+          "5fe4e3ab-7a5c-4cf6-8a4e-b90ca198c014"
+        ],
+        "value": ""
+      },
+      "party": [
+        {
+          "references": [
+            "293ccada-5f6d-49f0-a00e-7c131e5415b3",
+            "0e711371-2f69-4f9f-a8f1-ac3a474e9aaa"
+          ],
+          "value": "Omni National Bank"
+        },
+        {
+          "references": [
+            "293ccada-5f6d-49f0-a00e-7c131e5415b3",
+            "20d6eed3-bc72-47ab-90a6-aaba6c0617c9"
+          ],
+          "value": "Jeffrey L. Levine"
+        }
+      ],
+      "term": {
+        "references": [
+          "e74b6096-d05b-46d4-acc3-cc86e64f20ce"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13537,
+      "credit_usage": 3.7,
+      "job_id": "cmrymlckk03yoe4017xbiit5t",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 3.7,
+    "job_id": "cmrymlckk03yoe4017xbiit5t",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

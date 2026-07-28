@@ -1,0 +1,78 @@
+{
+  "job_id": "cmrymjbdx030sd501hx9xamtd",
+  "status": "completed",
+  "received_at": 1784878435,
+  "created_at": 1784878435,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "State of California",
+      "party": [
+        "GigPeak, Inc.",
+        "Integrated Device Technology, Inc."
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "98202875-651f-409d-aaca-6635b099bf4c"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "36a2df4a-bbf2-48e4-85e4-2b225bf6e56e"
+        ],
+        "value": "State of California"
+      },
+      "party": [
+        {
+          "references": [
+            "98202875-651f-409d-aaca-6635b099bf4c"
+          ],
+          "value": "GigPeak, Inc."
+        },
+        {
+          "references": [
+            "98202875-651f-409d-aaca-6635b099bf4c"
+          ],
+          "value": "Integrated Device Technology, Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "d0c5d662-3dae-4f3e-bea7-f83757f38354"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12770,
+      "credit_usage": 3.0,
+      "job_id": "cmrymjbdx030sd501hx9xamtd",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 3.0,
+    "job_id": "cmrymjbdx030sd501hx9xamtd",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

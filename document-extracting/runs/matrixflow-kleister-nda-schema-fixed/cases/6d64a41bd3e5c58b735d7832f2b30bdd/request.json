@@ -1,0 +1,60 @@
+{
+  "note": "workflow default_values are merged by the backend",
+  "uploaded_file": {
+    "file_id": "c9cd0eb4-607f-48fa-bb30-e2ee3a3288e7",
+    "md5": "6d64a41bd3e5c58b735d7832f2b30bdd",
+    "original_name": "6d64a41bd3e5c58b735d7832f2b30bdd.pdf",
+    "size": 80114
+  },
+  "values": {
+    "extract_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "effective_date": {
+          "description": "The date on which the NDA or confidentiality agreement becomes effective, normalized to YYYY-MM-DD. Return an empty string when absent or uncertain; do not substitute a signature or filing date.",
+          "type": "string"
+        },
+        "jurisdiction": {
+          "description": "The country, state, or legal jurisdiction whose laws govern the agreement. Return an empty string when absent or uncertain; do not guess from an address, venue, or incorporation location.",
+          "type": "string"
+        },
+        "party": {
+          "description": "All contracting parties to the agreement, each listed once. Return an empty array when no party can be identified; do not include signers, representatives, advisers, or other non-parties.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "term": {
+          "description": "The confidentiality-obligation duration normalized as number_unit, for example 1_year or 18_months. Return an empty string when absent or uncertain; do not guess.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "effective_date",
+        "jurisdiction",
+        "party",
+        "term"
+      ],
+      "type": "object"
+    },
+    "source_ref": {
+      "display_location": "6d64a41bd3e5c58b735d7832f2b30bdd.pdf",
+      "file_id": "c9cd0eb4-607f-48fa-bb30-e2ee3a3288e7",
+      "file_name": "6d64a41bd3e5c58b735d7832f2b30bdd.pdf",
+      "id_parents": [
+        "catalog-1",
+        "database-10001",
+        "volume-20001"
+      ],
+      "ids": [
+        "c9cd0eb4-607f-48fa-bb30-e2ee3a3288e7"
+      ],
+      "kind": "file",
+      "location": "6d64a41bd3e5c58b735d7832f2b30bdd.pdf",
+      "resource_type": "file",
+      "volume_id": 20001
+    }
+  },
+  "workflow_id": "2b084712-3ed2-4034-965b-8e2657693359"
+}

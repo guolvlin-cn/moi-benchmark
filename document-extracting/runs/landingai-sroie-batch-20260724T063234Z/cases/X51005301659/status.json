@@ -1,0 +1,51 @@
+{
+  "case_id": "X51005301659",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51005301659.jpg",
+  "source_type": "image",
+  "image_sha256": "c07bb1228ae7cc72d6510ae76dd1b6f542321d65ba38f99ad151ef64a68cafea",
+  "gold_entities": "train/entities/X51005301659.txt",
+  "gold_box": "train/box/X51005301659.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykcqu30373cx014t75h1kw",
+  "extract_job_id": "cmrykd7n40279d501y4pz1i9e",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.229725+00:00",
+  "updated_at": "2026-07-24T06:33:37.109834+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:32:50.591676+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:33:07.524952+00:00",
+  "parse_metadata": {
+    "filename": "X51005301659.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 11125,
+    "credit_usage": 3.0,
+    "job_id": "cmrykcqu30373cx014t75h1kw",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:33:12.306404+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:33:37.109827+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14012,
+    "credit_usage": 0.6,
+    "job_id": "cmrykd7n40279d501y4pz1i9e",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "HOME MASTER HARDWARE & ELECTRICAL",
+    "date": "22/12/2017",
+    "address": "NO.113G & 115G, JALAN SETIA GEMBILANG U13/BG BANDAR SETIA ALAM, 40170 BANDAR SETIA ALAM, SELANGOR.",
+    "total": "15.90"
+  }
+}

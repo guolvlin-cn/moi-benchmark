@@ -1,0 +1,63 @@
+{
+  "extraction": {
+    "file_date": "2006 JAN 27",
+    "foreign_principle_name": "Government of Japan",
+    "registrant_name": "Hogan & Hartson L.L.P.",
+    "registration_num": "2244",
+    "signer_name": "Raymond S. Calamaro",
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "482941a8-9f1b-4568-9be3-e121db4553bb"
+      ],
+      "value": "2006 JAN 27"
+    },
+    "foreign_principle_name": {
+      "references": [
+        "f0663e02-5694-4afb-b7de-07b00efe9a26",
+        "4df5dc1d-94fd-4ba3-bd28-c61cdcd5db91"
+      ],
+      "value": "Government of Japan"
+    },
+    "registrant_name": {
+      "references": [
+        "301774b6-db45-4c29-a961-952f00cc24b8"
+      ],
+      "value": "Hogan & Hartson L.L.P."
+    },
+    "registration_num": {
+      "references": [
+        "301774b6-db45-4c29-a961-952f00cc24b8"
+      ],
+      "value": "2244"
+    },
+    "signer_name": {
+      "references": [
+        "d2fcd8cb-b351-4527-8418-c49c50a66423"
+      ],
+      "value": "Raymond S. Calamaro"
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19877,
+    "credit_usage": 1.4,
+    "job_id": "cmryjlped026cd501dru88rkf",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

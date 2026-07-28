@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrympman041ycx01eqtw7x6n",
+  "status": "completed",
+  "received_at": 1784878730,
+  "created_at": 1784878730,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2006-12-19",
+      "jurisdiction": "State of New York",
+      "party": [
+        "MapInfo Corporation",
+        "Pitney Bowes Inc."
+      ],
+      "term": "3_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "232d03a8-3b87-4ede-9a6b-959d6259011a",
+          "1564e1b1-dddf-47db-8357-cce735b90215"
+        ],
+        "value": "2006-12-19"
+      },
+      "jurisdiction": {
+        "references": [
+          "d8cf0435-7537-4c4c-8109-9cc7c777fdb6"
+        ],
+        "value": "State of New York"
+      },
+      "party": [
+        {
+          "references": [
+            "1564e1b1-dddf-47db-8357-cce735b90215"
+          ],
+          "value": "MapInfo Corporation"
+        },
+        {
+          "references": [
+            "1564e1b1-dddf-47db-8357-cce735b90215"
+          ],
+          "value": "Pitney Bowes Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "1b5ec363-3024-4a89-903b-e643ff4dd0de"
+        ],
+        "value": "3_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 16676,
+      "credit_usage": 6.2,
+      "job_id": "cmrympman041ycx01eqtw7x6n",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17000,
+    "credit_usage": 6.2,
+    "job_id": "cmrympman041ycx01eqtw7x6n",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

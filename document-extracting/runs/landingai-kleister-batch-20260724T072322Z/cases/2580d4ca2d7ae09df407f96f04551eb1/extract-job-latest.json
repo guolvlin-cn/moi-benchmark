@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymbyad03x8e4013yvbh92s",
+  "status": "completed",
+  "received_at": 1784878092,
+  "created_at": 1784878092,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": null,
+      "party": [
+        "the State Commission",
+        "PJM Interconnection, L.L.C."
+      ],
+      "term": null
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "82a9771f-f883-45e2-b19d-1ea7b94528b0"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [],
+        "value": null
+      },
+      "party": [
+        {
+          "references": [
+            "82a9771f-f883-45e2-b19d-1ea7b94528b0"
+          ],
+          "value": "the State Commission"
+        },
+        {
+          "references": [
+            "82a9771f-f883-45e2-b19d-1ea7b94528b0"
+          ],
+          "value": "PJM Interconnection, L.L.C."
+        }
+      ],
+      "term": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 17938,
+      "credit_usage": 5.8,
+      "job_id": "cmrymbyad03x8e4013yvbh92s",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'jurisdiction' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'jurisdiction' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18000,
+    "credit_usage": 5.8,
+    "job_id": "cmrymbyad03x8e4013yvbh92s",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

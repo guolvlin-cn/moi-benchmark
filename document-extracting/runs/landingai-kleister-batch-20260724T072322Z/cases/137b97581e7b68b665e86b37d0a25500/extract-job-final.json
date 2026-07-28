@@ -1,0 +1,76 @@
+{
+  "job_id": "cmrymb57o02zfd501ltlanck8",
+  "status": "completed",
+  "received_at": 1784878054,
+  "created_at": 1784878054,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2009-04-30",
+      "jurisdiction": "Delaware",
+      "party": [
+        "California Micro Devices Corporation",
+        "ON Semiconductor Corporation"
+      ],
+      "term": "3_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "77987435-df75-42f7-8eeb-ebf3247ed32c"
+        ],
+        "value": "2009-04-30"
+      },
+      "jurisdiction": {
+        "references": [
+          "eb00fea5-aeb6-4dd0-ab0f-257ca22e4a5b"
+        ],
+        "value": "Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "77987435-df75-42f7-8eeb-ebf3247ed32c"
+          ],
+          "value": "California Micro Devices Corporation"
+        },
+        {
+          "references": [],
+          "value": "ON Semiconductor Corporation"
+        }
+      ],
+      "term": {
+        "references": [
+          "4aa6c818-4fbf-4e4c-bd60-0841a48631d0"
+        ],
+        "value": "3_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10236,
+      "credit_usage": 4.8,
+      "job_id": "cmrymb57o02zfd501ltlanck8",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11000,
+    "credit_usage": 4.8,
+    "job_id": "cmrymb57o02zfd501ltlanck8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

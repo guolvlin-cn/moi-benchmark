@@ -1,0 +1,55 @@
+{
+  "case_id": "20161109_Kuykendall, Gregory J., PC_Kuykendall, Gregory_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20161109_Kuykendall, Gregory J., PC_Kuykendall, Gregory_Short-Form.pdf",
+  "pdf_sha256": "d782bcb0deff218a578939e7edebc5c130b3557fddfd0c7e2d0a65eedc3a94af",
+  "status": "completed",
+  "parse_job_id": "cmryjcz9y0355cx01zblnda2y",
+  "extract_job_id": "cmryjddcl0357cx0119sqxmuo",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.422451+00:00",
+  "updated_at": "2026-07-24T06:05:41.208609+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:05:01.885880+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:05:16.701416+00:00",
+  "parse_metadata": {
+    "filename": "20161109_Kuykendall, Gregory J., PC_Kuykendall, Gregory_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 8381,
+    "credit_usage": 6.0,
+    "job_id": "cmryjcz9y0355cx01zblnda2y",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:05:20.116922+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:05:41.208605+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16763,
+    "credit_usage": 2.0,
+    "job_id": "cmryjddcl0357cx0119sqxmuo",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "2006 JAN -6",
+    "foreign_principle_name": "The Government of the United Mexican States",
+    "registrant_name": "Gregory J. Kuykendall, P.C.",
+    "registration_num": "5917",
+    "signer_name": null,
+    "signer_title": null
+  }
+}

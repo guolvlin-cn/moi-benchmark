@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "TF Value-Mart Sdn Bhd",
+    "date": "19/05/18",
+    "address": "Jalan Tras Batu 1 28700 Bentong Pahang Darul Makmur.",
+    "total": "52.80"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "cef015e0-c20d-414d-98d5-3c8a4e2e1625"
+      ],
+      "value": "TF Value-Mart Sdn Bhd"
+    },
+    "date": {
+      "references": [
+        "0-3"
+      ],
+      "value": "19/05/18"
+    },
+    "address": {
+      "references": [
+        "cef015e0-c20d-414d-98d5-3c8a4e2e1625"
+      ],
+      "value": "Jalan Tras Batu 1 28700 Bentong Pahang Darul Makmur."
+    },
+    "total": {
+      "references": [
+        "0-l"
+      ],
+      "value": "52.80"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10550,
+    "credit_usage": 0.6,
+    "job_id": "cmryklcjv036ue401ycemheli",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

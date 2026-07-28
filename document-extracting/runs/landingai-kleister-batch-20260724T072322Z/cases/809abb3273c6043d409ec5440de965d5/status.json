@@ -1,0 +1,53 @@
+{
+  "case_id": "809abb3273c6043d409ec5440de965d5",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/809abb3273c6043d409ec5440de965d5.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "c90ebd73f5c089b33cc0c4d76760a5c5b2f2a8d985b7b6f62ee180fdbd1de642",
+  "status": "completed",
+  "parse_job_id": "cmrymkn5j03yle40170hoixs4",
+  "extract_job_id": "cmryml36q040kcx01ofb7d9op",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.414731+00:00",
+  "updated_at": "2026-07-24T07:35:35.009289+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:34:58.235418+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:35:16.154888+00:00",
+  "parse_metadata": {
+    "filename": "809abb3273c6043d409ec5440de965d5.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 7,
+    "duration_ms": 9544,
+    "credit_usage": 21.0,
+    "job_id": "cmrymkn5j03yle40170hoixs4",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:35:19.340248+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:35:35.009285+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13506,
+    "credit_usage": 5.8,
+    "job_id": "cmryml36q040kcx01ofb7d9op",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2009-11-06",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "HID Global Corporation",
+      "LaserCard Corporation"
+    ],
+    "term": "3_years"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "19931101_Scottish Enterprise_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19931101_Scottish Enterprise_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "7e59bb2a4f6ee7448ecd87e7b3359fa428a8c1568702a5612fa737a23c6f00f7",
+  "status": "completed",
+  "parse_job_id": "cmryjjixk035wcx01xxyh4rgv",
+  "extract_job_id": "cmryjjuuo0263d501mpu3o2ks",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.430307+00:00",
+  "updated_at": "2026-07-24T06:10:37.127722+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:10:07.252265+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:10:21.779494+00:00",
+  "parse_metadata": {
+    "filename": "19931101_Scottish Enterprise_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 12726,
+    "credit_usage": 6.0,
+    "job_id": "cmryjjixk035wcx01xxyh4rgv",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:10:22.714958+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:10:37.127719+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13257,
+    "credit_usage": 1.4,
+    "job_id": "cmryjjuuo0263d501mpu3o2ks",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "1993-11-15",
+    "foreign_principle_name": "Scottish Enterprise",
+    "registrant_name": "Locate in Scotland",
+    "registration_num": "3013",
+    "signer_name": "James A. Coppola, CPA",
+    "signer_title": "CPA"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "case_id": "d359b7e3900a7bb1d54a3710449422fc",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/d359b7e3900a7bb1d54a3710449422fc.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "fe752dfcac32e091fa4af77b5a01d7ea19e57b523b3d739ecd0a956d924fc123",
+  "status": "completed",
+  "parse_job_id": "cmrymoglw0329d501y7s6k09u",
+  "extract_job_id": "cmrymou5a032ud501o3m7ebbn",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.424552+00:00",
+  "updated_at": "2026-07-24T07:38:33.287900+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:37:56.364792+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:38:12.136627+00:00",
+  "parse_metadata": {
+    "filename": "d359b7e3900a7bb1d54a3710449422fc.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 5,
+    "duration_ms": 13902,
+    "credit_usage": 15.0,
+    "job_id": "cmrymoglw0329d501y7s6k09u",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:38:14.035844+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:38:33.287897+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12804,
+    "credit_usage": 4.0,
+    "job_id": "cmrymou5a032ud501o3m7ebbn",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2015-12-08",
+    "jurisdiction": "STATE OF WASHINGTON",
+    "party": [
+      "Anchor Bancorp",
+      "Varonica S. Ragan",
+      "Joel S. Lawson IV"
+    ],
+    "term": "1_year"
+  }
+}

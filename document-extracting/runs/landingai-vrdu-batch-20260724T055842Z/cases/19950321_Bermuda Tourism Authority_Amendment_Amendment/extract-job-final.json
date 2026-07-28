@@ -1,0 +1,84 @@
+{
+  "job_id": "cmryjg14e033xe401o1sj0o3b",
+  "status": "completed",
+  "received_at": 1784873243,
+  "created_at": 1784873243,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "March 20, 1995",
+      "foreign_principle_name": null,
+      "registrant_name": "Bermuda Department of Tourism",
+      "registration_num": "# 430",
+      "signer_name": "Paul Zar",
+      "signer_title": "Director of Sales, NA"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "c2464b5e-73b7-46fe-b13c-9c5ad71a810e"
+        ],
+        "value": "March 20, 1995"
+      },
+      "foreign_principle_name": {
+        "references": [],
+        "value": null
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Bermuda Department of Tourism"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "# 430"
+      },
+      "signer_name": {
+        "references": [
+          "b973e683-06bc-4a49-93a6-e94e54cc6f7b"
+        ],
+        "value": "Paul Zar"
+      },
+      "signer_title": {
+        "references": [
+          "b973e683-06bc-4a49-93a6-e94e54cc6f7b"
+        ],
+        "value": "Director of Sales, NA"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 14756,
+      "credit_usage": 1.5,
+      "job_id": "cmryjg14e033xe401o1sj0o3b",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 1.5,
+    "job_id": "cmryjg14e033xe401o1sj0o3b",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

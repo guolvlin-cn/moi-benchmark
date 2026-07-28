@@ -1,0 +1,348 @@
+{
+  "datasets": [
+    {
+      "case_count": 100,
+      "credits": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "p95": null,
+        "sum": null
+      },
+      "dataset": "sroie",
+      "duration_ms": {
+        "count": 100,
+        "mean": 16140.0,
+        "median": 15000.0,
+        "p95": 26000.0,
+        "sum": 1614000.0
+      },
+      "excluded_case_count": 0,
+      "normalized_document_exact_count": 43,
+      "normalized_document_exact_match": 0.43,
+      "normalized_macro_f1": 0.7946424039388864,
+      "normalized_micro": {
+        "f1": 0.7944514501891551,
+        "fn": 85,
+        "fp": 78,
+        "precision": 0.8015267175572519,
+        "recall": 0.7875,
+        "tp": 315
+      },
+      "original_case_count": 100,
+      "run_dir": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/runs/matrixflow-sroie2019-workflow-2b084712",
+      "schema_compliance_rate": 1.0,
+      "schema_compliant_count": 100,
+      "status_counts": {
+        "completed": 100
+      },
+      "strict_document_exact_count": 3,
+      "strict_document_exact_match": 0.03,
+      "strict_macro_f1": 0.5351758793969849,
+      "strict_micro": {
+        "f1": 0.5346784363177807,
+        "fn": 188,
+        "fp": 181,
+        "precision": 0.539440203562341,
+        "recall": 0.53,
+        "tp": 212
+      },
+      "success_rate": 1.0,
+      "system": "moi"
+    },
+    {
+      "case_count": 100,
+      "credits": {
+        "count": 100,
+        "mean": 3.5980000000000003,
+        "median": 3.6,
+        "p95": 3.8,
+        "sum": 359.8000000000001
+      },
+      "dataset": "sroie",
+      "duration_ms": {
+        "count": 100,
+        "mean": 21942.78,
+        "median": 19880.0,
+        "p95": 28245.0,
+        "sum": 2194278.0
+      },
+      "excluded_case_count": 0,
+      "normalized_document_exact_count": 69,
+      "normalized_document_exact_match": 0.69,
+      "normalized_macro_f1": 0.901180904522613,
+      "normalized_micro": {
+        "f1": 0.9011264080100125,
+        "fn": 40,
+        "fp": 39,
+        "precision": 0.9022556390977443,
+        "recall": 0.9,
+        "tp": 360
+      },
+      "original_case_count": 100,
+      "run_dir": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/runs/landingai-sroie-batch-20260724T063234Z",
+      "schema_compliance_rate": 1.0,
+      "schema_compliant_count": 100,
+      "status_counts": {
+        "completed": 100
+      },
+      "strict_document_exact_count": 24,
+      "strict_document_exact_match": 0.24,
+      "strict_macro_f1": 0.6935678391959799,
+      "strict_micro": {
+        "f1": 0.6933667083854819,
+        "fn": 123,
+        "fp": 122,
+        "precision": 0.6942355889724311,
+        "recall": 0.6925,
+        "tp": 277
+      },
+      "success_rate": 1.0,
+      "system": "landingai"
+    },
+    {
+      "case_count": 97,
+      "credits": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "p95": null,
+        "sum": null
+      },
+      "dataset": "vrdu",
+      "duration_ms": {
+        "count": 97,
+        "mean": 17175.25773195876,
+        "median": 16000.0,
+        "p95": 30000.0,
+        "sum": 1666000.0
+      },
+      "excluded_case_count": 3,
+      "normalized_document_exact_count": 14,
+      "normalized_document_exact_match": 0.14432989690721648,
+      "normalized_macro_f1": 0.6839869805436275,
+      "normalized_micro": {
+        "f1": 0.6853801169590643,
+        "fn": 145,
+        "fp": 124,
+        "precision": 0.7026378896882494,
+        "recall": 0.6689497716894978,
+        "tp": 293
+      },
+      "original_case_count": 100,
+      "run_dir": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/runs/matrixflow-vrdu-registration-schema-fixed",
+      "schema_compliance_rate": 1.0,
+      "schema_compliant_count": 97,
+      "status_counts": {
+        "completed": 97
+      },
+      "strict_document_exact_count": 9,
+      "strict_document_exact_match": 0.09278350515463918,
+      "strict_macro_f1": 0.6456926246073992,
+      "strict_micro": {
+        "f1": 0.6409356725146199,
+        "fn": 164,
+        "fp": 143,
+        "precision": 0.657074340527578,
+        "recall": 0.6255707762557078,
+        "tp": 274
+      },
+      "success_rate": 1.0,
+      "system": "moi"
+    },
+    {
+      "case_count": 97,
+      "credits": {
+        "count": 97,
+        "mean": 7.824742268041237,
+        "median": 7.6,
+        "p95": 10.9,
+        "sum": 759.0000000000005
+      },
+      "dataset": "vrdu",
+      "duration_ms": {
+        "count": 97,
+        "mean": 30965.82474226804,
+        "median": 25486.0,
+        "p95": 70435.0,
+        "sum": 3003685.0
+      },
+      "excluded_case_count": 3,
+      "normalized_document_exact_count": 10,
+      "normalized_document_exact_match": 0.10309278350515463,
+      "normalized_macro_f1": 0.6832465485434623,
+      "normalized_micro": {
+        "f1": 0.7076271186440677,
+        "fn": 104,
+        "fp": 172,
+        "precision": 0.6600790513833992,
+        "recall": 0.7625570776255708,
+        "tp": 334
+      },
+      "original_case_count": 100,
+      "run_dir": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/runs/landingai-vrdu-batch-20260724T055842Z",
+      "schema_compliance_rate": 1.0,
+      "schema_compliant_count": 97,
+      "status_counts": {
+        "completed": 97
+      },
+      "strict_document_exact_count": 6,
+      "strict_document_exact_match": 0.061855670103092786,
+      "strict_macro_f1": 0.6206423941784923,
+      "strict_micro": {
+        "f1": 0.6334745762711865,
+        "fn": 139,
+        "fp": 207,
+        "precision": 0.5909090909090909,
+        "recall": 0.682648401826484,
+        "tp": 299
+      },
+      "success_rate": 1.0,
+      "system": "landingai"
+    },
+    {
+      "case_count": 100,
+      "credits": {
+        "count": 0,
+        "mean": null,
+        "median": null,
+        "p95": null,
+        "sum": null
+      },
+      "dataset": "kleister",
+      "duration_ms": {
+        "count": 100,
+        "mean": 26640.0,
+        "median": 25000.0,
+        "p95": 46000.0,
+        "sum": 2664000.0
+      },
+      "excluded_case_count": 0,
+      "normalized_document_exact_count": 5,
+      "normalized_document_exact_match": 0.05,
+      "normalized_macro_f1": 0.5248399865533631,
+      "normalized_micro": {
+        "f1": 0.45714285714285713,
+        "fn": 198,
+        "fp": 277,
+        "precision": 0.4192872117400419,
+        "recall": 0.5025125628140703,
+        "tp": 200
+      },
+      "original_case_count": 100,
+      "run_dir": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/runs/matrixflow-kleister-nda-schema-fixed",
+      "schema_compliance_rate": 1.0,
+      "schema_compliant_count": 100,
+      "status_counts": {
+        "completed": 100
+      },
+      "strict_document_exact_count": 0,
+      "strict_document_exact_match": 0.0,
+      "strict_macro_f1": 0.4132307643828926,
+      "strict_micro": {
+        "f1": 0.24228571428571427,
+        "fn": 292,
+        "fp": 371,
+        "precision": 0.2222222222222222,
+        "recall": 0.2663316582914573,
+        "tp": 106
+      },
+      "success_rate": 1.0,
+      "system": "moi"
+    },
+    {
+      "case_count": 100,
+      "credits": {
+        "count": 100,
+        "mean": 21.476999999999997,
+        "median": 19.0,
+        "p95": 40.1,
+        "sum": 2147.7000000000003
+      },
+      "dataset": "kleister",
+      "duration_ms": {
+        "count": 100,
+        "mean": 31965.32,
+        "median": 29012.5,
+        "p95": 47586.0,
+        "sum": 3196532.0
+      },
+      "excluded_case_count": 0,
+      "normalized_document_exact_count": 2,
+      "normalized_document_exact_match": 0.02,
+      "normalized_macro_f1": 0.5419253327636713,
+      "normalized_micro": {
+        "f1": 0.4842105263157895,
+        "fn": 191,
+        "fp": 250,
+        "precision": 0.45295404814004375,
+        "recall": 0.5201005025125628,
+        "tp": 207
+      },
+      "original_case_count": 100,
+      "run_dir": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/runs/landingai-kleister-batch-20260724T072322Z",
+      "schema_compliance_rate": 1.0,
+      "schema_compliant_count": 100,
+      "status_counts": {
+        "completed": 100
+      },
+      "strict_document_exact_count": 0,
+      "strict_document_exact_match": 0.0,
+      "strict_macro_f1": 0.4269064147743833,
+      "strict_micro": {
+        "f1": 0.2573099415204678,
+        "fn": 288,
+        "fp": 347,
+        "precision": 0.24070021881838075,
+        "recall": 0.27638190954773867,
+        "tp": 110
+      },
+      "success_rate": 1.0,
+      "system": "landingai"
+    }
+  ],
+  "exclusions": {
+    "vrdu": [
+      {
+        "case_id": "19920101_Office of Tibet_Dissemination Report_Dissemination Report",
+        "reason": "Excluded from both systems because the MOI run was blocked by the configured model provider's content-safety inspection, which is outside the intended information-extraction quality scope."
+      },
+      {
+        "case_id": "19930501_Office of Tibet_Dissemination Report_Dissemination Report",
+        "reason": "Excluded from both systems because the MOI run was blocked by the configured model provider's content-safety inspection, which is outside the intended information-extraction quality scope."
+      },
+      {
+        "case_id": "19950710_Far East Trade Services, Inc._Dissemination Report_Dissemination Report",
+        "reason": "Excluded from both systems because the MOI run was blocked by the configured model provider's content-safety inspection, which is outside the intended information-extraction quality scope."
+      }
+    ]
+  },
+  "notes": [
+    "System failures are scored as missing predictions and remain in the denominator.",
+    "The three documented VRDU provider-safety failures are excluded from both systems, so VRDU accuracy is compared on the same 97-case subset.",
+    "Gold-null/prediction-null fields are correct for field/document accuracy but are not true positives in F1.",
+    "JSON null, an empty string, and a whitespace-only string are treated as the same absent scalar value in both gold and predictions.",
+    "VRDU normalized matching reproduces the dataset's type-specific match functions.",
+    "Kleister normalized matching follows its uppercase MultiLabel-F1 convention.",
+    "For Kleister party, both string items and single-key {'value': string} items are treated as compliant equivalent representations.",
+    "Unexpected fields never repair or substitute an expected field."
+  ],
+  "overall": {
+    "landingai": {
+      "dataset_mean_normalized_document_exact_match": 0.2710309278350515,
+      "dataset_mean_normalized_micro_f1": 0.6976546843232899,
+      "overall_success_rate": 1.0,
+      "total_cases": 297,
+      "total_completed": 297
+    },
+    "moi": {
+      "dataset_mean_normalized_document_exact_match": 0.20810996563573883,
+      "dataset_mean_normalized_micro_f1": 0.6456581414303588,
+      "overall_success_rate": 1.0,
+      "total_cases": 297,
+      "total_completed": 297
+    }
+  },
+  "primary_metric": "dataset_mean_normalized_micro_f1",
+  "scoring_version": "1.3"
+}

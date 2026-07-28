@@ -1,0 +1,51 @@
+{
+  "case_id": "X51006441474",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51006441474.jpg",
+  "source_type": "image",
+  "image_sha256": "7c8e3bd007bebbf37ac99191a997fb49d5da55161f4902b9f2df0856b9d7d877",
+  "gold_entities": "train/entities/X51006441474.txt",
+  "gold_box": "train/box/X51006441474.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykl4sg0385cx014h1bmdei",
+  "extract_job_id": "cmryklcjv036ue401ycemheli",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.255137+00:00",
+  "updated_at": "2026-07-24T06:39:45.512882+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:39:21.825517+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:39:29.433078+00:00",
+  "parse_metadata": {
+    "filename": "X51006441474.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 5797,
+    "credit_usage": 3.0,
+    "job_id": "cmrykl4sg0385cx014h1bmdei",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:39:31.891519+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:39:45.512879+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10550,
+    "credit_usage": 0.6,
+    "job_id": "cmryklcjv036ue401ycemheli",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "TF Value-Mart Sdn Bhd",
+    "date": "19/05/18",
+    "address": "Jalan Tras Batu 1 28700 Bentong Pahang Darul Makmur.",
+    "total": "52.80"
+  }
+}

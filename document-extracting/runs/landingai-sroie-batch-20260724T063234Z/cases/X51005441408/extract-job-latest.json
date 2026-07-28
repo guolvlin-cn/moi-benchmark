@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykd9li0377cx01errlezjz",
+  "status": "completed",
+  "received_at": 1784874794,
+  "created_at": 1784874794,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "32 PUB & BISTRO",
+      "date": "10-03-2018",
+      "address": "78G, JALAN SS21/62, DAMANSARA UTAMA, 47400 PETALING JAYA.",
+      "total": "190.00"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "eb0d8813-6c71-4477-9307-aefe6f7bd5fe"
+        ],
+        "value": "32 PUB & BISTRO"
+      },
+      "date": {
+        "references": [
+          "a55ff4ed-d67c-420a-a6e6-b7606fbb5a0d"
+        ],
+        "value": "10-03-2018"
+      },
+      "address": {
+        "references": [
+          "eb0d8813-6c71-4477-9307-aefe6f7bd5fe"
+        ],
+        "value": "78G, JALAN SS21/62, DAMANSARA UTAMA, 47400 PETALING JAYA."
+      },
+      "total": {
+        "references": [
+          "0-l"
+        ],
+        "value": "190.00"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12874,
+      "credit_usage": 0.6,
+      "job_id": "cmrykd9li0377cx01errlezjz",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykd9li0377cx01errlezjz",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

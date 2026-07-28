@@ -1,0 +1,51 @@
+{
+  "case_id": "X51005705804",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51005705804.jpg",
+  "source_type": "image",
+  "image_sha256": "1c3d08bc0d98f0dbfd2cfb4c5b7a44c941f38bda87025064e639a2f02322fa60",
+  "gold_entities": "train/entities/X51005705804.txt",
+  "gold_box": "train/box/X51005705804.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykg1ax037hcx0148d0n07s",
+  "extract_job_id": "cmrykghdy0364e401xjjnrzio",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.244167+00:00",
+  "updated_at": "2026-07-24T06:36:02.067429+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:35:24.037548+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:35:40.427494+00:00",
+  "parse_metadata": {
+    "filename": "X51005705804.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7882,
+    "credit_usage": 3.0,
+    "job_id": "cmrykg1ax037hcx0148d0n07s",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:35:44.913187+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:36:02.067425+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11840,
+    "credit_usage": 0.8,
+    "job_id": "cmrykghdy0364e401xjjnrzio",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "ASO ELECTRICAL TRADING SDN BHD",
+    "date": "04/12/2017",
+    "address": "NO 31G, JALAN SEPADU C 25/C, SECTION 25, TAMAN INDUSTRIES, AXIS 40400 SHAH ALAM, SELANGOR.",
+    "total": "99.00"
+  }
+}

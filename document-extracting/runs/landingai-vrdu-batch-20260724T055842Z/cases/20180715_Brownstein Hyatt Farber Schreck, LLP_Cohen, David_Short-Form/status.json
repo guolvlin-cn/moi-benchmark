@@ -1,0 +1,50 @@
+{
+  "case_id": "20180715_Brownstein Hyatt Farber Schreck, LLP_Cohen, David_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20180715_Brownstein Hyatt Farber Schreck, LLP_Cohen, David_Short-Form.pdf",
+  "pdf_sha256": "4a30942909b1d8ba9d066968a5960044debfd34e098805026f20da8a562a06cf",
+  "status": "completed",
+  "parse_job_id": "cmryjo3b6036bcx01omyu3pe5",
+  "extract_job_id": "cmryjpehg026md501dfudx2kj",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.434484+00:00",
+  "updated_at": "2026-07-24T06:14:56.906447+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:13:40.277931+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:14:38.378372+00:00",
+  "parse_metadata": {
+    "filename": "20180715_Brownstein Hyatt Farber Schreck, LLP_Cohen, David_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 51168,
+    "credit_usage": 6.0,
+    "job_id": "cmryjo3b6036bcx01omyu3pe5",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:14:41.391660+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:14:56.906441+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14830,
+    "credit_usage": 2.1,
+    "job_id": "cmryjpehg026md501dfudx2kj",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "07/15/2018",
+    "foreign_principle_name": "Ministry of Foreign Affairs for the Kingdom of Saudi Arabia",
+    "registrant_name": "Brownstein Hyatt Farber Schreck, LLP",
+    "registration_num": "5870",
+    "signer_name": "David Cohen",
+    "signer_title": "Shareholder"
+  }
+}

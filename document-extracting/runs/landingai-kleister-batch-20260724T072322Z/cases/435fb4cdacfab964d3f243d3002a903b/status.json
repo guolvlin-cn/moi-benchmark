@@ -1,0 +1,55 @@
+{
+  "case_id": "435fb4cdacfab964d3f243d3002a903b",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/435fb4cdacfab964d3f243d3002a903b.pdf",
+  "source_type": "pdf",
+  "source_split": "train",
+  "pdf_sha256": "4a17d533bea29fe31c118fcd4f50416ce8f6b34e45751177f2154cb6ed6665c0",
+  "status": "completed",
+  "parse_job_id": "cmrymsycz033jd501f1p1jx40",
+  "extract_job_id": "cmrymtdd10414e401dujxyp36",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.442417+00:00",
+  "updated_at": "2026-07-24T07:42:09.194291+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:41:26.074843+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:41:42.419728+00:00",
+  "parse_metadata": {
+    "filename": "435fb4cdacfab964d3f243d3002a903b.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 6,
+    "duration_ms": 11874,
+    "credit_usage": 18.0,
+    "job_id": "cmrymsycz033jd501f1p1jx40",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:41:45.451531+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:42:09.194286+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20616,
+    "credit_usage": 6.9,
+    "job_id": "cmrymtdd10414e401dujxyp36",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2012-10-15",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "JLL Partners, Inc.",
+      "BioClinica, Inc.",
+      "JLL Partners, Inc.",
+      "BioClinica, Inc."
+    ],
+    "term": "18_months"
+  }
+}

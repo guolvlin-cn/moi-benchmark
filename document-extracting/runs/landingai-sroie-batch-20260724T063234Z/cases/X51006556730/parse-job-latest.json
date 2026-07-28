@@ -1,0 +1,611 @@
+{
+  "job_id": "cmryklrmz028ed501c64xfgkl",
+  "status": "completed",
+  "received_at": 1784875191,
+  "created_at": 1784875191,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='28a59a09-a16d-4382-8dc9-f5014fc68a1e'></a>\n\n<::attestation: Signature\nSignature: legible\nReadable Text: Jogaya\nA handwritten signature centrally located.\n::>\n\n<a id='28b2a1f9-4ea0-469e-8bfe-1a46c94254da'></a>\n\nMAKASSAR FRESH MARKET S/B.\n(CO.NO. 1208604-T)\nGROUND FLOOR, NO.4 & 6,\nJALAN SS15/4B,\n47500 SUBANG JAYA, SELANGOR.\nTEL:03-56131328\n\n<a id='781ee4c6-db9f-4852-bf98-fac6b526dcef'></a>\n\nOutlet : PLU\nReceipt NO : 16741\n[TERMINAL :002]\n05-Aug-2017\n---\n\n[CASHIER : SV2]\n02:11:23 PM\n\n<a id='85798a72-6db7-4cc2-82d1-ac5d96511b2a'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">FRUITS</td><td id=\"0-3\">@24.00</td><td id=\"0-4\"></td><td id=\"0-5\"></td></tr>\n<tr><td id=\"0-6\">40158</td><td id=\"0-7\"></td><td id=\"0-8\">*1</td><td id=\"0-9\">24.00</td></tr>\n<tr><td id=\"0-a\">FRUITS</td><td id=\"0-b\">@16.00</td><td id=\"0-c\"></td><td id=\"0-d\"></td></tr>\n<tr><td id=\"0-e\">40158</td><td id=\"0-f\"></td><td id=\"0-g\">*1</td><td id=\"0-h\">16.00</td></tr>\n<tr><td id=\"0-i\">VOLUME</td><td id=\"0-j\">2 Items</td><td id=\"0-k\"></td><td id=\"0-l\"></td></tr>\n</table>\n\n<a id='586fb75b-bdc2-4ff0-9a4b-5fe6083c7326'></a>\n\nSub Total RM40.00\nRounding Adj. RM0.00\nTotal RM40.00\nPayment Type CASH\nReceived Cash RM50.00\nChange RM10.00\n\n<a id='2ea86997-1ec7-4930-8ebf-4e5ccc29c177'></a>\n\nThank You! Pls Come Again.\nGoods Sold Are Not Returnable !\n'LS VERIFY YOUR BILL BEFORE LEAVING THE\n\n<a id='9ea5a301-e861-4686-b776-e3e8c5f9378b'></a>\n\n<::attestation: Signature\nSigned\nSignature: legible (appears to be \"Godasta\" or similar)\nReadable Text: UR RILL BEFO INTER\nA dark, handwritten signature is centrally located, with faint, partially visible text above and below it.\n::>",
+    "chunks": [
+      {
+        "markdown": "<a id='28a59a09-a16d-4382-8dc9-f5014fc68a1e'></a>\n\n<::attestation: Signature\nSignature: legible\nReadable Text: Jogaya\nA handwritten signature centrally located.\n::>",
+        "type": "attestation",
+        "id": "28a59a09-a16d-4382-8dc9-f5014fc68a1e",
+        "grounding": {
+          "box": {
+            "left": 0.32624438405036926,
+            "top": 0.013929568231105804,
+            "right": 0.5868961811065674,
+            "bottom": 0.08133531361818314
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='28b2a1f9-4ea0-469e-8bfe-1a46c94254da'></a>\n\nMAKASSAR FRESH MARKET S/B.\n(CO.NO. 1208604-T)\nGROUND FLOOR, NO.4 & 6,\nJALAN SS15/4B,\n47500 SUBANG JAYA, SELANGOR.\nTEL:03-56131328",
+        "type": "text",
+        "id": "28b2a1f9-4ea0-469e-8bfe-1a46c94254da",
+        "grounding": {
+          "box": {
+            "left": 0.02238282561302185,
+            "top": 0.07974927872419357,
+            "right": 0.8707631826400757,
+            "bottom": 0.26079806685447693
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='781ee4c6-db9f-4852-bf98-fac6b526dcef'></a>\n\nOutlet : PLU\nReceipt NO : 16741\n[TERMINAL :002]\n05-Aug-2017\n---\n\n[CASHIER : SV2]\n02:11:23 PM",
+        "type": "text",
+        "id": "781ee4c6-db9f-4852-bf98-fac6b526dcef",
+        "grounding": {
+          "box": {
+            "left": 0.014617472887039185,
+            "top": 0.28599950671195984,
+            "right": 0.9382301568984985,
+            "bottom": 0.418245404958725
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='85798a72-6db7-4cc2-82d1-ac5d96511b2a'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">FRUITS</td><td id=\"0-3\">@24.00</td><td id=\"0-4\"></td><td id=\"0-5\"></td></tr>\n<tr><td id=\"0-6\">40158</td><td id=\"0-7\"></td><td id=\"0-8\">*1</td><td id=\"0-9\">24.00</td></tr>\n<tr><td id=\"0-a\">FRUITS</td><td id=\"0-b\">@16.00</td><td id=\"0-c\"></td><td id=\"0-d\"></td></tr>\n<tr><td id=\"0-e\">40158</td><td id=\"0-f\"></td><td id=\"0-g\">*1</td><td id=\"0-h\">16.00</td></tr>\n<tr><td id=\"0-i\">VOLUME</td><td id=\"0-j\">2 Items</td><td id=\"0-k\"></td><td id=\"0-l\"></td></tr>\n</table>",
+        "type": "table",
+        "id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a",
+        "grounding": {
+          "box": {
+            "left": 0.008092939853668213,
+            "top": 0.42539823055267334,
+            "right": 0.9279173016548157,
+            "bottom": 0.6125245094299316
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='586fb75b-bdc2-4ff0-9a4b-5fe6083c7326'></a>\n\nSub Total RM40.00\nRounding Adj. RM0.00\nTotal RM40.00\nPayment Type CASH\nReceived Cash RM50.00\nChange RM10.00",
+        "type": "text",
+        "id": "586fb75b-bdc2-4ff0-9a4b-5fe6083c7326",
+        "grounding": {
+          "box": {
+            "left": 0.0004977881908416748,
+            "top": 0.6259018182754517,
+            "right": 0.9295686483383179,
+            "bottom": 0.8261139392852783
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='2ea86997-1ec7-4930-8ebf-4e5ccc29c177'></a>\n\nThank You! Pls Come Again.\nGoods Sold Are Not Returnable !\n'LS VERIFY YOUR BILL BEFORE LEAVING THE",
+        "type": "text",
+        "id": "2ea86997-1ec7-4930-8ebf-4e5ccc29c177",
+        "grounding": {
+          "box": {
+            "left": 0.019167304039001465,
+            "top": 0.835394561290741,
+            "right": 0.8988010883331299,
+            "bottom": 0.936283528804779
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='9ea5a301-e861-4686-b776-e3e8c5f9378b'></a>\n\n<::attestation: Signature\nSigned\nSignature: legible (appears to be \"Godasta\" or similar)\nReadable Text: UR RILL BEFO INTER\nA dark, handwritten signature is centrally located, with faint, partially visible text above and below it.\n::>",
+        "type": "attestation",
+        "id": "9ea5a301-e861-4686-b776-e3e8c5f9378b",
+        "grounding": {
+          "box": {
+            "left": 0.29623597860336304,
+            "top": 0.9143151044845581,
+            "right": 0.5616154074668884,
+            "bottom": 0.9836688041687012
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='28a59a09-a16d-4382-8dc9-f5014fc68a1e'></a>\n\n<::attestation: Signature\nSignature: legible\nReadable Text: Jogaya\nA handwritten signature centrally located.\n::>\n\n<a id='28b2a1f9-4ea0-469e-8bfe-1a46c94254da'></a>\n\nMAKASSAR FRESH MARKET S/B.\n(CO.NO. 1208604-T)\nGROUND FLOOR, NO.4 & 6,\nJALAN SS15/4B,\n47500 SUBANG JAYA, SELANGOR.\nTEL:03-56131328\n\n<a id='781ee4c6-db9f-4852-bf98-fac6b526dcef'></a>\n\nOutlet : PLU\nReceipt NO : 16741\n[TERMINAL :002]\n05-Aug-2017\n---\n\n[CASHIER : SV2]\n02:11:23 PM\n\n<a id='85798a72-6db7-4cc2-82d1-ac5d96511b2a'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">FRUITS</td><td id=\"0-3\">@24.00</td><td id=\"0-4\"></td><td id=\"0-5\"></td></tr>\n<tr><td id=\"0-6\">40158</td><td id=\"0-7\"></td><td id=\"0-8\">*1</td><td id=\"0-9\">24.00</td></tr>\n<tr><td id=\"0-a\">FRUITS</td><td id=\"0-b\">@16.00</td><td id=\"0-c\"></td><td id=\"0-d\"></td></tr>\n<tr><td id=\"0-e\">40158</td><td id=\"0-f\"></td><td id=\"0-g\">*1</td><td id=\"0-h\">16.00</td></tr>\n<tr><td id=\"0-i\">VOLUME</td><td id=\"0-j\">2 Items</td><td id=\"0-k\"></td><td id=\"0-l\"></td></tr>\n</table>\n\n<a id='586fb75b-bdc2-4ff0-9a4b-5fe6083c7326'></a>\n\nSub Total RM40.00\nRounding Adj. RM0.00\nTotal RM40.00\nPayment Type CASH\nReceived Cash RM50.00\nChange RM10.00\n\n<a id='2ea86997-1ec7-4930-8ebf-4e5ccc29c177'></a>\n\nThank You! Pls Come Again.\nGoods Sold Are Not Returnable !\n'LS VERIFY YOUR BILL BEFORE LEAVING THE\n\n<a id='9ea5a301-e861-4686-b776-e3e8c5f9378b'></a>\n\n<::attestation: Signature\nSigned\nSignature: legible (appears to be \"Godasta\" or similar)\nReadable Text: UR RILL BEFO INTER\nA dark, handwritten signature is centrally located, with faint, partially visible text above and below it.\n::>",
+        "chunks": [
+          "28a59a09-a16d-4382-8dc9-f5014fc68a1e",
+          "28b2a1f9-4ea0-469e-8bfe-1a46c94254da",
+          "781ee4c6-db9f-4852-bf98-fac6b526dcef",
+          "85798a72-6db7-4cc2-82d1-ac5d96511b2a",
+          "586fb75b-bdc2-4ff0-9a4b-5fe6083c7326",
+          "2ea86997-1ec7-4930-8ebf-4e5ccc29c177",
+          "9ea5a301-e861-4686-b776-e3e8c5f9378b"
+        ]
+      }
+    ],
+    "grounding": {
+      "28a59a09-a16d-4382-8dc9-f5014fc68a1e": {
+        "box": {
+          "left": 0.32624438405036926,
+          "top": 0.013929568231105804,
+          "right": 0.5868961811065674,
+          "bottom": 0.08133531361818314
+        },
+        "page": 0,
+        "type": "chunkAttestation",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "28b2a1f9-4ea0-469e-8bfe-1a46c94254da": {
+        "box": {
+          "left": 0.02238282561302185,
+          "top": 0.07974927872419357,
+          "right": 0.8707631826400757,
+          "bottom": 0.26079806685447693
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.997,
+        "low_confidence_spans": []
+      },
+      "781ee4c6-db9f-4852-bf98-fac6b526dcef": {
+        "box": {
+          "left": 0.014617472887039185,
+          "top": 0.28599950671195984,
+          "right": 0.9382301568984985,
+          "bottom": 0.418245404958725
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.975,
+        "low_confidence_spans": []
+      },
+      "85798a72-6db7-4cc2-82d1-ac5d96511b2a": {
+        "box": {
+          "left": 0.008092939853668213,
+          "top": 0.42539823055267334,
+          "right": 0.9279173016548157,
+          "bottom": 0.6125245094299316
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.972,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.012121052949297995,
+          "top": 0.4257158064382584,
+          "right": 0.9234675845487033,
+          "bottom": 0.6125245094299316
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.026436563768701026,
+          "top": 0.4257158064382584,
+          "right": 0.20012148460924348,
+          "bottom": 0.45923796281739154
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.19723590911172806,
+          "top": 0.4272378198416119,
+          "right": 0.3973318354667711,
+          "bottom": 0.4613208640078709
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.3944683208804782,
+          "top": 0.42899756507563724,
+          "right": 0.5107674389133355,
+          "bottom": 0.46252416088825005
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.979,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.5084099456084179,
+          "top": 0.43000977240484634,
+          "right": 0.923467584548703,
+          "bottom": 0.4668878030885001
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.987,
+        "position": {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.023658961589393,
+          "top": 0.45743421181846744,
+          "right": 0.19723590911172806,
+          "bottom": 0.488261595838975
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.1946187369209866,
+          "top": 0.45923796281739154,
+          "right": 0.3944683208804782,
+          "bottom": 0.4912133962539611
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.977,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-8": {
+        "box": {
+          "left": 0.39182014742864796,
+          "top": 0.4613208640078709,
+          "right": 0.5084099456084179,
+          "bottom": 0.4929255705817367
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-9": {
+        "box": {
+          "left": 0.5062056562720513,
+          "top": 0.46252416088825005,
+          "right": 0.9216084589056966,
+          "bottom": 0.49911649088493293
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.972,
+        "position": {
+          "row": 1,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-a": {
+        "box": {
+          "left": 0.020865810304369625,
+          "top": 0.48570259215603667,
+          "right": 0.1946187369209866,
+          "bottom": 0.516730513541058
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-b": {
+        "box": {
+          "left": 0.19205158553594148,
+          "top": 0.488261595838975,
+          "right": 0.39182014742864796,
+          "bottom": 0.5197277580888714
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-c": {
+        "box": {
+          "left": 0.38929406581784815,
+          "top": 0.4912133962539611,
+          "right": 0.5062056562720513,
+          "bottom": 0.5214728627273556
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.969,
+        "position": {
+          "row": 2,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-d": {
+        "box": {
+          "left": 0.504135801870786,
+          "top": 0.4929255705817367,
+          "right": 0.9198034760746977,
+          "bottom": 0.5277648577055942
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.991,
+        "position": {
+          "row": 2,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-e": {
+        "box": {
+          "left": 0.01771799482781347,
+          "top": 0.5141292197896172,
+          "right": 0.19205158553594148,
+          "bottom": 0.5488871284218562
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-f": {
+        "box": {
+          "left": 0.18915190036724386,
+          "top": 0.516730513541058,
+          "right": 0.38929406581784815,
+          "bottom": 0.5520192685619698
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.998,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-g": {
+        "box": {
+          "left": 0.38643336736479084,
+          "top": 0.5197277580888714,
+          "right": 0.504135801870786,
+          "bottom": 0.553850700254158
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-h": {
+        "box": {
+          "left": 0.5017882093507511,
+          "top": 0.5214728627273556,
+          "right": 0.9181990108053057,
+          "bottom": 0.5604328009133783
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-i": {
+        "box": {
+          "left": 0.012121052949297988,
+          "top": 0.5461653572129916,
+          "right": 0.18915190036724386,
+          "bottom": 0.6049200008129205
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-j": {
+        "box": {
+          "left": 0.18409920157932153,
+          "top": 0.5488871284218562,
+          "right": 0.38643336736479084,
+          "bottom": 0.6069788489074468
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.972,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-k": {
+        "box": {
+          "left": 0.3815645091363731,
+          "top": 0.5520192685619698,
+          "right": 0.5017882093507511,
+          "bottom": 0.608191266546669
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.988,
+        "position": {
+          "row": 4,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "0-l": {
+        "box": {
+          "left": 0.49784818380527884,
+          "top": 0.553850700254158,
+          "right": 0.9163694272682242,
+          "bottom": 0.6125245094299316
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 4,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "85798a72-6db7-4cc2-82d1-ac5d96511b2a"
+        }
+      },
+      "586fb75b-bdc2-4ff0-9a4b-5fe6083c7326": {
+        "box": {
+          "left": 0.0004977881908416748,
+          "top": 0.6259018182754517,
+          "right": 0.9295686483383179,
+          "bottom": 0.8261139392852783
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.985,
+        "low_confidence_spans": []
+      },
+      "2ea86997-1ec7-4930-8ebf-4e5ccc29c177": {
+        "box": {
+          "left": 0.019167304039001465,
+          "top": 0.835394561290741,
+          "right": 0.8988010883331299,
+          "bottom": 0.936283528804779
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.987,
+        "low_confidence_spans": []
+      },
+      "9ea5a301-e861-4686-b776-e3e8c5f9378b": {
+        "box": {
+          "left": 0.29623597860336304,
+          "top": 0.9143151044845581,
+          "right": 0.5616154074668884,
+          "bottom": 0.9836688041687012
+        },
+        "page": 0,
+        "type": "chunkAttestation",
+        "confidence": null,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51006556730.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 99243,
+      "credit_usage": 3.0,
+      "job_id": "cmryklrmz028ed501c64xfgkl",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51006556730.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 99000,
+    "credit_usage": 3.0,
+    "job_id": "cmryklrmz028ed501c64xfgkl",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

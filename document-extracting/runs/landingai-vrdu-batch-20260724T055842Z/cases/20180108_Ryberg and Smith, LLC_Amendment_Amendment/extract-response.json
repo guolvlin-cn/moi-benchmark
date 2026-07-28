@@ -1,0 +1,63 @@
+{
+  "extraction": {
+    "file_date": "01/08/2018",
+    "foreign_principle_name": "Mauritius Ministry of Foreign Affairs, Regional Integration and International Trade",
+    "registrant_name": "Ryberg and Smith, L.L.C",
+    "registration_num": "5570",
+    "signer_name": "Paul Ryberg",
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "00cdcec0-8a9d-4073-9175-5db3b487f5d6",
+        "a3296033-e0f8-4fed-ad00-24ea470383d0"
+      ],
+      "value": "01/08/2018"
+    },
+    "foreign_principle_name": {
+      "references": [
+        "a9cfd312-4263-421b-896f-5ac84a427ddd"
+      ],
+      "value": "Mauritius Ministry of Foreign Affairs, Regional Integration and International Trade"
+    },
+    "registrant_name": {
+      "references": [
+        "0-4"
+      ],
+      "value": "Ryberg and Smith, L.L.C"
+    },
+    "registration_num": {
+      "references": [
+        "0-5"
+      ],
+      "value": "5570"
+    },
+    "signer_name": {
+      "references": [
+        "3e8b218a-81d3-4864-bfb7-fda448c6ed95"
+      ],
+      "value": "Paul Ryberg"
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13503,
+    "credit_usage": 1.7,
+    "job_id": "cmryj5b2s024vd501uh960i9b",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "case_id": "d8b971e17298b4426e0e8ed07bcaf50f",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/d8b971e17298b4426e0e8ed07bcaf50f.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "699e6593afc7aae3b372699902bce9bb35df060fbd47060c1ebfd21377d0b375",
+  "status": "completed",
+  "parse_job_id": "cmrymp5vz032vd501h0oancix",
+  "extract_job_id": "cmrympnti040de4016lshiody",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.428029+00:00",
+  "updated_at": "2026-07-24T07:39:07.490642+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:38:29.143943+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:38:47.995338+00:00",
+  "parse_metadata": {
+    "filename": "d8b971e17298b4426e0e8ed07bcaf50f.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 3,
+    "duration_ms": 7917,
+    "credit_usage": 9.0,
+    "job_id": "cmrymp5vz032vd501h0oancix",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:38:52.369947+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:39:07.490637+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11749,
+    "credit_usage": 2.4,
+    "job_id": "cmrympnti040de4016lshiody",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of Illinois, U.S.A.",
+    "party": [
+      "Motorola, Inc.",
+      "Iridium Satellite LLC"
+    ],
+    "term": "10_years"
+  }
+}

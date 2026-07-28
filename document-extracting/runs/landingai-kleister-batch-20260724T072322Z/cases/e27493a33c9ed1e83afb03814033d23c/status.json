@@ -1,0 +1,58 @@
+{
+  "case_id": "e27493a33c9ed1e83afb03814033d23c",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/e27493a33c9ed1e83afb03814033d23c.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "12134536f8f3d03933acd8162c7451cd02fc25d3ba1581e5e3aca9101fd5c0dd",
+  "status": "completed",
+  "parse_job_id": "cmrymqb7x040me40104gbwxp5",
+  "extract_job_id": "cmrymquik040se401wfliur0g",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.431515+00:00",
+  "updated_at": "2026-07-24T07:40:14.473514+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:39:22.747920+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:39:45.608626+00:00",
+  "parse_metadata": {
+    "filename": "e27493a33c9ed1e83afb03814033d23c.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 9,
+    "duration_ms": 14256,
+    "credit_usage": 27.0,
+    "job_id": "cmrymqb7x040me40104gbwxp5",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:39:47.696843+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:40:14.473504+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17769,
+    "credit_usage": 5.5,
+    "job_id": "cmrymquik040se401wfliur0g",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "effective_date": "2011-05-26",
+    "jurisdiction": "State of California",
+    "party": [
+      "Skyworks Solutions, Inc.",
+      "Richard K. Williams"
+    ],
+    "term": null
+  }
+}

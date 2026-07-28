@@ -1,0 +1,90 @@
+{
+  "job_id": "cmrymvjul041de401j0zzthk4",
+  "status": "completed",
+  "received_at": 1784879006,
+  "created_at": 1784879006,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "State of Missouri",
+      "party": [
+        "Employee",
+        "Emerson"
+      ],
+      "term": "perpetual"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "0cb75604-1bf2-46bf-82b1-efb57c91ecde",
+          "4204690d-da90-4982-828e-62a1183e8415",
+          "30619584-d319-429b-b908-989100e0204d",
+          "92bcb80f-00d9-4428-8b62-726707d4cfa0"
+        ],
+        "value": "2018-10-01"
+      },
+      "jurisdiction": {
+        "references": [
+          "232bc3f8-38b4-47fb-b7ee-3b1828a15425"
+        ],
+        "value": "State of Missouri"
+      },
+      "party": [
+        {
+          "references": [
+            "30619584-d319-429b-b908-989100e0204d",
+            "571fa93a-4857-4ce8-8879-faeda5aa3f28",
+            "ca8540fb-479b-4c1f-92ee-7e9a1203cf6e",
+            "167af136-7c92-494b-b872-cfeb768f214d",
+            "8a2ac2ab-4e35-43c2-a955-62024340ad72",
+            "ce2e9889-27bc-4f47-b56f-f5a76747a748",
+            "9183b0ab-0ff1-4e90-b40f-88cfb33ae13a"
+          ],
+          "value": "Employee"
+        },
+        {
+          "references": [
+            "ccfb5e4d-dee0-4971-a606-291757f8ef9b",
+            "571fa93a-4857-4ce8-8879-faeda5aa3f28",
+            "167af136-7c92-494b-b872-cfeb768f214d",
+            "8a2ac2ab-4e35-43c2-a955-62024340ad72"
+          ],
+          "value": "Emerson"
+        }
+      ],
+      "term": {
+        "references": [
+          "d06856f1-e7e2-4eba-8494-5b5713a0a0ec"
+        ],
+        "value": "perpetual"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 24699,
+      "credit_usage": 6.6,
+      "job_id": "cmrymvjul041de401j0zzthk4",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 26000,
+    "credit_usage": 6.6,
+    "job_id": "cmrymvjul041de401j0zzthk4",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

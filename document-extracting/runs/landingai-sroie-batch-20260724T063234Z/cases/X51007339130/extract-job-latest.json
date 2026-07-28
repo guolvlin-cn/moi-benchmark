@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykqem30294d501p4xg34wd",
+  "status": "completed",
+  "received_at": 1784875407,
+  "created_at": 1784875407,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "SANYU STATIONERY SHOP",
+      "date": "20/10/2017",
+      "address": "NO. 31G&33G, JALAN SETIA INDAH X, U13/X 40170 SETIA ALAM",
+      "total": "8.70"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "f1b65f20-3253-42c5-9dd8-10368e17554a"
+        ],
+        "value": "SANYU STATIONERY SHOP"
+      },
+      "date": {
+        "references": [
+          "7133dc3f-a742-4958-a724-3b640254dc1a"
+        ],
+        "value": "20/10/2017"
+      },
+      "address": {
+        "references": [
+          "f1b65f20-3253-42c5-9dd8-10368e17554a"
+        ],
+        "value": "NO. 31G&33G, JALAN SETIA INDAH X, U13/X 40170 SETIA ALAM"
+      },
+      "total": {
+        "references": [
+          "0-m"
+        ],
+        "value": "8.70"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 17732,
+      "credit_usage": 0.6,
+      "job_id": "cmrykqem30294d501p4xg34wd",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykqem30294d501p4xg34wd",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

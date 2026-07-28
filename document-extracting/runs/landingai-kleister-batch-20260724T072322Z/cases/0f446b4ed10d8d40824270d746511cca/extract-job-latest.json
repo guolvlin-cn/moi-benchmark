@@ -1,0 +1,80 @@
+{
+  "job_id": "cmrymtcm20413e401fsj69dp5",
+  "status": "completed",
+  "received_at": 1784878904,
+  "created_at": 1784878904,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "State of Georgia",
+      "party": [
+        "Ameris Bancorp",
+        "Shirley P. Fiano"
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "bffb5b97-aa98-4f18-a0f9-1ed8fe764b05"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "ad37ac46-a228-4566-b247-ff9d320ebb5a"
+        ],
+        "value": "State of Georgia"
+      },
+      "party": [
+        {
+          "references": [
+            "bffb5b97-aa98-4f18-a0f9-1ed8fe764b05",
+            "ecddc0cb-0e39-4452-b6d2-4b886ec332e6"
+          ],
+          "value": "Ameris Bancorp"
+        },
+        {
+          "references": [
+            "bffb5b97-aa98-4f18-a0f9-1ed8fe764b05",
+            "821c2e3d-be89-4460-bc70-92538924a02d"
+          ],
+          "value": "Shirley P. Fiano"
+        }
+      ],
+      "term": {
+        "references": [
+          "9c810b86-7a35-427b-9d72-5810b1fffdbe"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 21184,
+      "credit_usage": 3.4,
+      "job_id": "cmrymtcm20413e401fsj69dp5",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 21000,
+    "credit_usage": 3.4,
+    "job_id": "cmrymtcm20413e401fsj69dp5",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

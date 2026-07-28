@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykjwig036ne401x5wwg3n4",
+  "status": "completed",
+  "received_at": 1784875104,
+  "created_at": 1784875104,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+      "date": "02 Apr 2018",
+      "address": "12, Jalan Tampoi 7/4, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor",
+      "total": "$8.20"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "b5379221-1195-40ce-b62f-29def3d2b70e"
+        ],
+        "value": "UNIHAKKA INTERNATIONAL SDN BHD"
+      },
+      "date": {
+        "references": [
+          "b5379221-1195-40ce-b62f-29def3d2b70e"
+        ],
+        "value": "02 Apr 2018"
+      },
+      "address": {
+        "references": [
+          "b5379221-1195-40ce-b62f-29def3d2b70e"
+        ],
+        "value": "12, Jalan Tampoi 7/4, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor"
+      },
+      "total": {
+        "references": [
+          "0-g"
+        ],
+        "value": "$8.20"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15597,
+      "credit_usage": 0.6,
+      "job_id": "cmrykjwig036ne401x5wwg3n4",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykjwig036ne401x5wwg3n4",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

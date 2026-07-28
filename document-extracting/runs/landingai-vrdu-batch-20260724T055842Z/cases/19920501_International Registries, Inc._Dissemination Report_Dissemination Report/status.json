@@ -1,0 +1,50 @@
+{
+  "case_id": "19920501_International Registries, Inc._Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19920501_International Registries, Inc._Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "212cabbd1a2297ae6808ff9c6548be56ba313642c9a1d218f69891d903049065",
+  "status": "completed",
+  "parse_job_id": "cmryjlvzf026dd501ds0upth3",
+  "extract_job_id": "cmryjmhwn026ed501cg4v1hol",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.431533+00:00",
+  "updated_at": "2026-07-24T06:12:39.867062+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:11:57.540701+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:12:22.497952+00:00",
+  "parse_metadata": {
+    "filename": "19920501_International Registries, Inc._Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 18241,
+    "credit_usage": 6.0,
+    "job_id": "cmryjlvzf026dd501ds0upth3",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:12:26.001951+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:12:39.867056+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12375,
+    "credit_usage": 1.4,
+    "job_id": "cmryjmhwn026ed501cg4v1hol",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "May 11, 1992",
+    "foreign_principle_name": "NONE",
+    "registrant_name": "International Registries, Inc.",
+    "registration_num": "4533",
+    "signer_name": "Archibald N. Stewart",
+    "signer_title": "President"
+  }
+}

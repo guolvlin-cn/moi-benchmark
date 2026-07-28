@@ -1,0 +1,55 @@
+{
+  "case_id": "20180601_Parvin, C. Landon_Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20180601_Parvin, C. Landon_Amendment_Amendment.pdf",
+  "pdf_sha256": "456444e682110cb8fff666d93a2eb60caa3ac38e190b15c5648eac779ddafa47",
+  "status": "completed",
+  "parse_job_id": "cmryjnx4n026jd5015esw3vy3",
+  "extract_job_id": "cmryjpdko036ecx0111t6f6xv",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.434310+00:00",
+  "updated_at": "2026-07-24T06:15:00.816052+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:13:32.263382+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:14:37.523826+00:00",
+  "parse_metadata": {
+    "filename": "20180601_Parvin, C. Landon_Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 62267,
+    "credit_usage": 6.0,
+    "job_id": "cmryjnx4n026jd5015esw3vy3",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:14:40.241263+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:15:00.816047+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18718,
+    "credit_usage": 1.4,
+    "job_id": "cmryjpdko036ecx0111t6f6xv",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "06/01/2018",
+    "foreign_principle_name": null,
+    "registrant_name": "C. Landon Parvin",
+    "registration_num": "6194",
+    "signer_name": "C. Jalm Pan",
+    "signer_title": null
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykfhbk027md501owk4b27u",
+  "status": "completed",
+  "received_at": 1784874897,
+  "created_at": 1784874897,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "HON HWA HARDWARE TRADING",
+      "date": "21/09/2017",
+      "address": "NO 37, JALAN MANIS 7, TAMAN SEGAR, 56100 CHERAS, KUALA LUMPUR.",
+      "total": "10.40"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "4909f19b-6765-497a-885a-25f618105230"
+        ],
+        "value": "HON HWA HARDWARE TRADING"
+      },
+      "date": {
+        "references": [
+          "2e5fda3c-05bd-4b35-a07d-d2b66b05611c"
+        ],
+        "value": "21/09/2017"
+      },
+      "address": {
+        "references": [
+          "4909f19b-6765-497a-885a-25f618105230"
+        ],
+        "value": "NO 37, JALAN MANIS 7, TAMAN SEGAR, 56100 CHERAS, KUALA LUMPUR."
+      },
+      "total": {
+        "references": [
+          "0-m"
+        ],
+        "value": "10.40"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10665,
+      "credit_usage": 0.6,
+      "job_id": "cmrykfhbk027md501owk4b27u",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykfhbk027md501owk4b27u",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

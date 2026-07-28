@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymeeay03xqe40128baradt",
+  "status": "completed",
+  "received_at": 1784878206,
+  "created_at": 1784878206,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2018-04-01",
+      "jurisdiction": "Commonwealth of Virginia",
+      "party": [
+        "Bruce L. Caswell",
+        "MAXIMUS, Inc."
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "9c13dac0-161e-45a8-8a17-9c7dc8b09fa8",
+          "769dba5f-5c52-4ef2-8ebb-52019346c9a6"
+        ],
+        "value": "2018-04-01"
+      },
+      "jurisdiction": {
+        "references": [
+          "d807cfcc-4287-45b6-8dbe-2202462fdf26"
+        ],
+        "value": "Commonwealth of Virginia"
+      },
+      "party": [
+        {
+          "references": [
+            "31025bff-885f-4d44-849a-1a8122f76d8a"
+          ],
+          "value": "Bruce L. Caswell"
+        },
+        {
+          "references": [
+            "31025bff-885f-4d44-849a-1a8122f76d8a"
+          ],
+          "value": "MAXIMUS, Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "6968b9a8-75c8-4a5d-a26d-54892cd394ac"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 24411,
+      "credit_usage": 7.2,
+      "job_id": "cmrymeeay03xqe40128baradt",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 25000,
+    "credit_usage": 7.2,
+    "job_id": "cmrymeeay03xqe40128baradt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

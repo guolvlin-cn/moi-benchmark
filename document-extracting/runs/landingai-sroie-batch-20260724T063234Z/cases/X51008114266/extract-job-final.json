@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryksark038scx01sjfhhj3i",
+  "status": "completed",
+  "received_at": 1784875495,
+  "created_at": 1784875495,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "99 SPEED MART S/B",
+      "date": "13-05-18",
+      "address": "LOT P.T. 2811, JALAN ANGSA, JAMAN BERKELEY 41150 KLANG, SELANGOR",
+      "total": "RM 22.90"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "b8f33ad2-96f6-4ed3-9376-c0d8a5f54e3d"
+        ],
+        "value": "99 SPEED MART S/B"
+      },
+      "date": {
+        "references": [
+          "776c0d6f-a6c1-4e88-929d-aaec49092c24"
+        ],
+        "value": "13-05-18"
+      },
+      "address": {
+        "references": [
+          "b8f33ad2-96f6-4ed3-9376-c0d8a5f54e3d"
+        ],
+        "value": "LOT P.T. 2811, JALAN ANGSA, JAMAN BERKELEY 41150 KLANG, SELANGOR"
+      },
+      "total": {
+        "references": [
+          "1af4a6e6-1400-43d2-b956-251e7a798227"
+        ],
+        "value": "RM 22.90"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11625,
+      "credit_usage": 0.4,
+      "job_id": "cmryksark038scx01sjfhhj3i",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.4,
+    "job_id": "cmryksark038scx01sjfhhj3i",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

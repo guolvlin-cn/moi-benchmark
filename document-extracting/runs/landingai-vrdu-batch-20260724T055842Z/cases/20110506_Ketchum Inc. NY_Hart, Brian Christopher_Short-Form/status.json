@@ -1,0 +1,50 @@
+{
+  "case_id": "20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form.pdf",
+  "pdf_sha256": "2277f7a3ac5dd584079f1b7757b489d64ee89bf9b4da29e4ef36e2352d44dce7",
+  "status": "completed",
+  "parse_job_id": "cmryj9mcg034ucx01n2vr2n8x",
+  "extract_job_id": "cmryja05w0337e40133xb2zf5",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.418862+00:00",
+  "updated_at": "2026-07-24T06:02:58.371180+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:02:25.112635+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:02:41.049463+00:00",
+  "parse_metadata": {
+    "filename": "20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 6956,
+    "credit_usage": 6.0,
+    "job_id": "cmryj9mcg034ucx01n2vr2n8x",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:02:43.004837+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:02:58.371176+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14409,
+    "credit_usage": 2.1,
+    "job_id": "cmryja05w0337e40133xb2zf5",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "2011-05-06",
+    "foreign_principle_name": "Russian Federation",
+    "registrant_name": "Ketchum, Inc.",
+    "registration_num": "5758",
+    "signer_name": "Brian Christopher Hart",
+    "signer_title": "Vice President"
+  }
+}

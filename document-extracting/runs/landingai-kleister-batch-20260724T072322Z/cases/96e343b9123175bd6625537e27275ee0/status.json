@@ -1,0 +1,53 @@
+{
+  "case_id": "96e343b9123175bd6625537e27275ee0",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/96e343b9123175bd6625537e27275ee0.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "520e1fbb131101c59c4efc6fc86e38f67f8a7654b51a47bcc3a0deadf043417a",
+  "status": "completed",
+  "parse_job_id": "cmryml5iw03yne401ho75e3np",
+  "extract_job_id": "cmrymljaw03ype4019n1bhcn0",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.416255+00:00",
+  "updated_at": "2026-07-24T07:36:07.032001+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:35:22.053001+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:35:37.847096+00:00",
+  "parse_metadata": {
+    "filename": "96e343b9123175bd6625537e27275ee0.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 9,
+    "duration_ms": 7620,
+    "credit_usage": 27.0,
+    "job_id": "cmryml5iw03yne401ho75e3np",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:35:39.877183+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:36:07.031997+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16208,
+    "credit_usage": 7.2,
+    "job_id": "cmrymljaw03ype4019n1bhcn0",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2014-11-26",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "E2open, Inc., a Delaware corporation",
+      "Insight Venture Partners, LLC"
+    ],
+    "term": "2_years"
+  }
+}

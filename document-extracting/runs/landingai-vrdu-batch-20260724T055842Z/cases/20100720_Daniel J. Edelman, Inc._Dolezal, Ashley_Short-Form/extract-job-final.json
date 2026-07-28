@@ -1,0 +1,82 @@
+{
+  "job_id": "cmryje4to033pe40127t5e3ln",
+  "status": "completed",
+  "received_at": 1784873155,
+  "created_at": 1784873155,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "2010-07-20",
+      "foreign_principle_name": "Oerlikon Solar",
+      "registrant_name": "Edelman",
+      "registration_num": "3634",
+      "signer_name": "Ashley Dolezal",
+      "signer_title": "Public Relations"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "b8820065-28a4-421d-8ef7-5176b7e4cad0",
+          "209da944-bd33-4a07-a5fa-b28565ce39dc"
+        ],
+        "value": "2010-07-20"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "7d5bbe63-dd06-41e1-976d-6e541f759446"
+        ],
+        "value": "Oerlikon Solar"
+      },
+      "registrant_name": {
+        "references": [
+          "6192014c-b9cc-47bd-a715-2da1616b4e6c"
+        ],
+        "value": "Edelman"
+      },
+      "registration_num": {
+        "references": [
+          "6f55d86b-b9e4-453e-b225-8b1a74dbca07"
+        ],
+        "value": "3634"
+      },
+      "signer_name": {
+        "references": [
+          "6f55d86b-b9e4-453e-b225-8b1a74dbca07"
+        ],
+        "value": "Ashley Dolezal"
+      },
+      "signer_title": {
+        "references": [
+          "6192014c-b9cc-47bd-a715-2da1616b4e6c"
+        ],
+        "value": "Public Relations"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15015,
+      "credit_usage": 2.0,
+      "job_id": "cmryje4to033pe40127t5e3ln",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 2.0,
+    "job_id": "cmryje4to033pe40127t5e3ln",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

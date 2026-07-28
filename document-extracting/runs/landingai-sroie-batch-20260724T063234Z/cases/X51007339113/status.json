@@ -1,0 +1,51 @@
+{
+  "case_id": "X51007339113",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51007339113.jpg",
+  "source_type": "image",
+  "image_sha256": "5615b55a56e6711982acf684fa9297ddaa5b0ecc5e95ac06215024be4971155e",
+  "gold_entities": "train/entities/X51007339113.txt",
+  "gold_box": "train/box/X51007339113.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykpyio038ocx01amenft3t",
+  "extract_job_id": "cmrykqdz50293d501az0iig26",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.267657+00:00",
+  "updated_at": "2026-07-24T06:43:41.912548+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:43:06.992447+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:43:23.088034+00:00",
+  "parse_metadata": {
+    "filename": "X51007339113.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 8790,
+    "credit_usage": 3.0,
+    "job_id": "cmrykpyio038ocx01amenft3t",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:43:27.006659+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:43:41.912545+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11097,
+    "credit_usage": 0.6,
+    "job_id": "cmrykqdz50293d501az0iig26",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "SANYU STATIONERY SHOP",
+    "date": "24/07/2017",
+    "address": "NO. 31G&33G, JALAN SETIA INDAH X, U13/X 40170 SETIA ALAM",
+    "total": "5.80"
+  }
+}

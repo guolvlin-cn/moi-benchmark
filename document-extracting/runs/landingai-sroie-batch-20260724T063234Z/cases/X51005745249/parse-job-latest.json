@@ -1,0 +1,629 @@
+{
+  "job_id": "cmrykhvck037qcx01jk3e4m7b",
+  "status": "completed",
+  "received_at": 1784875009,
+  "created_at": 1784875009,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='1956b8ba-5b07-43d5-bd19-8688ef69b705'></a>\n\n<::attestation: Signature\nStatus indicators: signed\nSignature: illegible\nShort description of visual elements and positioning: A dark, handwritten signature centered on a white background.::>\n\n<a id='66cd5dee-fbbc-484a-904f-212fbd353afb'></a>\n\nSubway#42210-0 Phone 03-78870693\nURBAN IDEA SDN BHD (417940-M),\nA-G-06, DATARAN GLOMAC,\nJALAN SS6/5A, PUSAT BANDAR KELANA JAYA,\n47301 PETALING JAYA, SELANGOR, Malaysia\nServed by: rojan 27/02/2018 15:32:47\nTax Invoice# 1/A-42210-140220\n\n<a id='9f3b500d-7caa-40ce-8d93-f0d3090a3aee'></a>\n\nGST ID: 000220499968\n\n<a id='fd2c5c83-8207-41ad-b828-621aecfd80bb'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Qty</td><td id=\"0-3\">Size Item</td><td id=\"0-4\">Price</td></tr>\n<tr><td id=\"0-5\">1</td><td id=\"0-6\">Bag Fee</td><td id=\"0-7\">RM0.20</td></tr>\n<tr><td id=\"0-8\">1</td><td id=\"0-9\">(MY) EDV Meal\n6&quot; -Meatball Sub</td><td id=\"0-a\">RM11.90</td></tr>\n<tr><td id=\"0-b\"></td><td id=\"0-c\">-16oz Fountain Drink\n-1 Cookies</td><td id=\"0-d\"></td></tr>\n<tr><td id=\"0-e\">1</td><td id=\"0-f\">(MY) EDV Meal</td><td id=\"0-g\">RM11.90</td></tr>\n<tr><td id=\"0-h\"></td><td id=\"0-i\">6&quot; -BBQ Chicken Strips Sub\n-16oz Fountain Drink</td><td id=\"0-j\"></td></tr>\n<tr><td id=\"0-k\"></td><td id=\"0-l\">-1 Cookies</td><td id=\"0-m\"></td></tr>\n</table>\n\n<a id='359df83a-590b-40e3-8ebd-dc987901ae4d'></a>\n\nCash Rounding -RM0.01\nTotal (Eat In) RM24.00\nCash RM30.00\nChange RM6.00\n\n<a id='d5a236be-84d8-427b-bcdd-00f000ad0a43'></a>\n\nTax Info:\n\nGST 6% (6%)               [illegible scribble] RM1.36 ✓\nTotal-Excl-GST                      RM22.65\n\n<a id='bbc30b03-44b7-41d0-9b44-b74c05371b33'></a>\n\nTake our 1 Minute Survey at\nwww.tellsubway.my and get a FREE COOKIE\nwith next purchase. Redemption of 1\ncookie per transaction",
+    "chunks": [
+      {
+        "markdown": "<a id='1956b8ba-5b07-43d5-bd19-8688ef69b705'></a>\n\n<::attestation: Signature\nStatus indicators: signed\nSignature: illegible\nShort description of visual elements and positioning: A dark, handwritten signature centered on a white background.::>",
+        "type": "attestation",
+        "id": "1956b8ba-5b07-43d5-bd19-8688ef69b705",
+        "grounding": {
+          "box": {
+            "left": 0.43406611680984497,
+            "top": 0.05246264114975929,
+            "right": 0.7086675763130188,
+            "bottom": 0.12713924050331116
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='66cd5dee-fbbc-484a-904f-212fbd353afb'></a>\n\nSubway#42210-0 Phone 03-78870693\nURBAN IDEA SDN BHD (417940-M),\nA-G-06, DATARAN GLOMAC,\nJALAN SS6/5A, PUSAT BANDAR KELANA JAYA,\n47301 PETALING JAYA, SELANGOR, Malaysia\nServed by: rojan 27/02/2018 15:32:47\nTax Invoice# 1/A-42210-140220",
+        "type": "text",
+        "id": "66cd5dee-fbbc-484a-904f-212fbd353afb",
+        "grounding": {
+          "box": {
+            "left": 0.04985365271568298,
+            "top": 0.1280478835105896,
+            "right": 0.9146716594696045,
+            "bottom": 0.28108951449394226
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='9f3b500d-7caa-40ce-8d93-f0d3090a3aee'></a>\n\nGST ID: 000220499968",
+        "type": "text",
+        "id": "9f3b500d-7caa-40ce-8d93-f0d3090a3aee",
+        "grounding": {
+          "box": {
+            "left": 0.25337809324264526,
+            "top": 0.29612094163894653,
+            "right": 0.7106843590736389,
+            "bottom": 0.32239454984664917
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='fd2c5c83-8207-41ad-b828-621aecfd80bb'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Qty</td><td id=\"0-3\">Size Item</td><td id=\"0-4\">Price</td></tr>\n<tr><td id=\"0-5\">1</td><td id=\"0-6\">Bag Fee</td><td id=\"0-7\">RM0.20</td></tr>\n<tr><td id=\"0-8\">1</td><td id=\"0-9\">(MY) EDV Meal\n6&quot; -Meatball Sub</td><td id=\"0-a\">RM11.90</td></tr>\n<tr><td id=\"0-b\"></td><td id=\"0-c\">-16oz Fountain Drink\n-1 Cookies</td><td id=\"0-d\"></td></tr>\n<tr><td id=\"0-e\">1</td><td id=\"0-f\">(MY) EDV Meal</td><td id=\"0-g\">RM11.90</td></tr>\n<tr><td id=\"0-h\"></td><td id=\"0-i\">6&quot; -BBQ Chicken Strips Sub\n-16oz Fountain Drink</td><td id=\"0-j\"></td></tr>\n<tr><td id=\"0-k\"></td><td id=\"0-l\">-1 Cookies</td><td id=\"0-m\"></td></tr>\n</table>",
+        "type": "table",
+        "id": "fd2c5c83-8207-41ad-b828-621aecfd80bb",
+        "grounding": {
+          "box": {
+            "left": 0.009050160646438599,
+            "top": 0.336245059967041,
+            "right": 0.9031504392623901,
+            "bottom": 0.5777918100357056
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='359df83a-590b-40e3-8ebd-dc987901ae4d'></a>\n\nCash Rounding -RM0.01\nTotal (Eat In) RM24.00\nCash RM30.00\nChange RM6.00",
+        "type": "text",
+        "id": "359df83a-590b-40e3-8ebd-dc987901ae4d",
+        "grounding": {
+          "box": {
+            "left": 0.005781710147857666,
+            "top": 0.589530348777771,
+            "right": 0.9674559831619263,
+            "bottom": 0.6841243505477905
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='d5a236be-84d8-427b-bcdd-00f000ad0a43'></a>\n\nTax Info:\n\nGST 6% (6%)               [illegible scribble] RM1.36 ✓\nTotal-Excl-GST                      RM22.65",
+        "type": "text",
+        "id": "d5a236be-84d8-427b-bcdd-00f000ad0a43",
+        "grounding": {
+          "box": {
+            "left": 0.008993774652481079,
+            "top": 0.7144769430160522,
+            "right": 0.9802055358886719,
+            "bottom": 0.8144404888153076
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='bbc30b03-44b7-41d0-9b44-b74c05371b33'></a>\n\nTake our 1 Minute Survey at\nwww.tellsubway.my and get a FREE COOKIE\nwith next purchase. Redemption of 1\ncookie per transaction",
+        "type": "text",
+        "id": "bbc30b03-44b7-41d0-9b44-b74c05371b33",
+        "grounding": {
+          "box": {
+            "left": 0.01000717282295227,
+            "top": 0.8223392963409424,
+            "right": 0.8812028169631958,
+            "bottom": 0.9147211313247681
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='1956b8ba-5b07-43d5-bd19-8688ef69b705'></a>\n\n<::attestation: Signature\nStatus indicators: signed\nSignature: illegible\nShort description of visual elements and positioning: A dark, handwritten signature centered on a white background.::>\n\n<a id='66cd5dee-fbbc-484a-904f-212fbd353afb'></a>\n\nSubway#42210-0 Phone 03-78870693\nURBAN IDEA SDN BHD (417940-M),\nA-G-06, DATARAN GLOMAC,\nJALAN SS6/5A, PUSAT BANDAR KELANA JAYA,\n47301 PETALING JAYA, SELANGOR, Malaysia\nServed by: rojan 27/02/2018 15:32:47\nTax Invoice# 1/A-42210-140220\n\n<a id='9f3b500d-7caa-40ce-8d93-f0d3090a3aee'></a>\n\nGST ID: 000220499968\n\n<a id='fd2c5c83-8207-41ad-b828-621aecfd80bb'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Qty</td><td id=\"0-3\">Size Item</td><td id=\"0-4\">Price</td></tr>\n<tr><td id=\"0-5\">1</td><td id=\"0-6\">Bag Fee</td><td id=\"0-7\">RM0.20</td></tr>\n<tr><td id=\"0-8\">1</td><td id=\"0-9\">(MY) EDV Meal\n6&quot; -Meatball Sub</td><td id=\"0-a\">RM11.90</td></tr>\n<tr><td id=\"0-b\"></td><td id=\"0-c\">-16oz Fountain Drink\n-1 Cookies</td><td id=\"0-d\"></td></tr>\n<tr><td id=\"0-e\">1</td><td id=\"0-f\">(MY) EDV Meal</td><td id=\"0-g\">RM11.90</td></tr>\n<tr><td id=\"0-h\"></td><td id=\"0-i\">6&quot; -BBQ Chicken Strips Sub\n-16oz Fountain Drink</td><td id=\"0-j\"></td></tr>\n<tr><td id=\"0-k\"></td><td id=\"0-l\">-1 Cookies</td><td id=\"0-m\"></td></tr>\n</table>\n\n<a id='359df83a-590b-40e3-8ebd-dc987901ae4d'></a>\n\nCash Rounding -RM0.01\nTotal (Eat In) RM24.00\nCash RM30.00\nChange RM6.00\n\n<a id='d5a236be-84d8-427b-bcdd-00f000ad0a43'></a>\n\nTax Info:\n\nGST 6% (6%)               [illegible scribble] RM1.36 ✓\nTotal-Excl-GST                      RM22.65\n\n<a id='bbc30b03-44b7-41d0-9b44-b74c05371b33'></a>\n\nTake our 1 Minute Survey at\nwww.tellsubway.my and get a FREE COOKIE\nwith next purchase. Redemption of 1\ncookie per transaction",
+        "chunks": [
+          "1956b8ba-5b07-43d5-bd19-8688ef69b705",
+          "66cd5dee-fbbc-484a-904f-212fbd353afb",
+          "9f3b500d-7caa-40ce-8d93-f0d3090a3aee",
+          "fd2c5c83-8207-41ad-b828-621aecfd80bb",
+          "359df83a-590b-40e3-8ebd-dc987901ae4d",
+          "d5a236be-84d8-427b-bcdd-00f000ad0a43",
+          "bbc30b03-44b7-41d0-9b44-b74c05371b33"
+        ]
+      }
+    ],
+    "grounding": {
+      "1956b8ba-5b07-43d5-bd19-8688ef69b705": {
+        "box": {
+          "left": 0.43406611680984497,
+          "top": 0.05246264114975929,
+          "right": 0.7086675763130188,
+          "bottom": 0.12713924050331116
+        },
+        "page": 0,
+        "type": "chunkAttestation",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "66cd5dee-fbbc-484a-904f-212fbd353afb": {
+        "box": {
+          "left": 0.04985365271568298,
+          "top": 0.1280478835105896,
+          "right": 0.9146716594696045,
+          "bottom": 0.28108951449394226
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      },
+      "9f3b500d-7caa-40ce-8d93-f0d3090a3aee": {
+        "box": {
+          "left": 0.25337809324264526,
+          "top": 0.29612094163894653,
+          "right": 0.7106843590736389,
+          "bottom": 0.32239454984664917
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "fd2c5c83-8207-41ad-b828-621aecfd80bb": {
+        "box": {
+          "left": 0.009050160646438599,
+          "top": 0.336245059967041,
+          "right": 0.9031504392623901,
+          "bottom": 0.5777918100357056
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.313,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.01683125465895624,
+          "top": 0.3390763434964702,
+          "right": 0.8934610580112601,
+          "bottom": 0.5760683226642627
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.01685355624567645,
+          "top": 0.3390763434964702,
+          "right": 0.10013891117856273,
+          "bottom": 0.373953726637485
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.994,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.09981385178266466,
+          "top": 0.3390884663105402,
+          "right": 0.7200264635336944,
+          "bottom": 0.37395293041239297
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.992,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.7200113011442616,
+          "top": 0.33917869760640273,
+          "right": 0.8932778351984164,
+          "bottom": 0.37394697781976227
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.016850112840846566,
+          "top": 0.37395293041239297,
+          "right": 0.09981385178266466,
+          "bottom": 0.4051135832940671
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.09952359774932375,
+          "top": 0.37394697781976227,
+          "right": 0.7200399466999192,
+          "bottom": 0.40508432194738536
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.986,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.7200264635336944,
+          "top": 0.3739453150112048,
+          "right": 0.8933058077682402,
+          "bottom": 0.40486469719068846
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.976,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-8": {
+        "box": {
+          "left": 0.01684542280513985,
+          "top": 0.40508432194738536,
+          "right": 0.09952359774932375,
+          "bottom": 0.4475543788308143
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-9": {
+        "box": {
+          "left": 0.09912796847242773,
+          "top": 0.40486469719068846,
+          "right": 0.7200584272914774,
+          "bottom": 0.4475178060922591
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.965,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-a": {
+        "box": {
+          "left": 0.7200399466999192,
+          "top": 0.40480337169516306,
+          "right": 0.893344208043391,
+          "bottom": 0.4472418164866001
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.967,
+        "position": {
+          "row": 2,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-b": {
+        "box": {
+          "left": 0.016841006672793583,
+          "top": 0.4475178060922591,
+          "right": 0.09912796847242773,
+          "bottom": 0.4875165841724116
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.978,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-c": {
+        "box": {
+          "left": 0.09875515724682653,
+          "top": 0.4472418164866001,
+          "right": 0.7200759436553726,
+          "bottom": 0.48750392480090193
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.636,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-d": {
+        "box": {
+          "left": 0.7200584272914774,
+          "top": 0.4471647948594327,
+          "right": 0.8933806638050628,
+          "bottom": 0.48740790316597393
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.989,
+        "position": {
+          "row": 3,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-e": {
+        "box": {
+          "left": 0.016838520828346,
+          "top": 0.48750392480090193,
+          "right": 0.09875515724682653,
+          "bottom": 0.5100113416824927
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.966,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-f": {
+        "box": {
+          "left": 0.0985455617796796,
+          "top": 0.48740790316597393,
+          "right": 0.7200856992055038,
+          "bottom": 0.509984227577772
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.988,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-g": {
+        "box": {
+          "left": 0.7200759436553726,
+          "top": 0.48738111989566724,
+          "right": 0.8934009142283211,
+          "bottom": 0.5097779723496036
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.983,
+        "position": {
+          "row": 4,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-h": {
+        "box": {
+          "left": 0.01683384211667967,
+          "top": 0.509984227577772,
+          "right": 0.0985455617796796,
+          "bottom": 0.5523566452394864
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.994,
+        "position": {
+          "row": 5,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-i": {
+        "box": {
+          "left": 0.09815050185712865,
+          "top": 0.5097779723496036,
+          "right": 0.7201042909790243,
+          "bottom": 0.55241003864044
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.313,
+        "position": {
+          "row": 5,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-j": {
+        "box": {
+          "left": 0.7200856992055038,
+          "top": 0.5097204584947983,
+          "right": 0.8934396254640447,
+          "bottom": 0.5524249191077278
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.998,
+        "position": {
+          "row": 5,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-k": {
+        "box": {
+          "left": 0.01683125465895624,
+          "top": 0.5523496643783778,
+          "right": 0.09815050185712865,
+          "bottom": 0.5757920949901585
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.986,
+        "position": {
+          "row": 6,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-l": {
+        "box": {
+          "left": 0.09793200106169699,
+          "top": 0.5523566452394864,
+          "right": 0.7201145820686455,
+          "bottom": 0.5760081324129507
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.961,
+        "position": {
+          "row": 6,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "0-m": {
+        "box": {
+          "left": 0.7201042909790243,
+          "top": 0.55241003864044,
+          "right": 0.8934610580112602,
+          "bottom": 0.5760683226642627
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.994,
+        "position": {
+          "row": 6,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fd2c5c83-8207-41ad-b828-621aecfd80bb"
+        }
+      },
+      "359df83a-590b-40e3-8ebd-dc987901ae4d": {
+        "box": {
+          "left": 0.005781710147857666,
+          "top": 0.589530348777771,
+          "right": 0.9674559831619263,
+          "bottom": 0.6841243505477905
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.992,
+        "low_confidence_spans": []
+      },
+      "d5a236be-84d8-427b-bcdd-00f000ad0a43": {
+        "box": {
+          "left": 0.008993774652481079,
+          "top": 0.7144769430160522,
+          "right": 0.9802055358886719,
+          "bottom": 0.8144404888153076
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.984,
+        "low_confidence_spans": []
+      },
+      "bbc30b03-44b7-41d0-9b44-b74c05371b33": {
+        "box": {
+          "left": 0.01000717282295227,
+          "top": 0.8223392963409424,
+          "right": 0.8812028169631958,
+          "bottom": 0.9147211313247681
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.963,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51005745249.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 6316,
+      "credit_usage": 3.0,
+      "job_id": "cmrykhvck037qcx01jk3e4m7b",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51005745249.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7000,
+    "credit_usage": 3.0,
+    "job_id": "cmrykhvck037qcx01jk3e4m7b",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

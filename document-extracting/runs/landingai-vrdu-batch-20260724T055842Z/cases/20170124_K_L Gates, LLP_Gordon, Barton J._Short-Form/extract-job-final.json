@@ -1,0 +1,84 @@
+{
+  "job_id": "cmryj8pqb0256d501i7v2oqjk",
+  "status": "completed",
+  "received_at": 1784872902,
+  "created_at": 1784872902,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "01/24/2017",
+      "foreign_principle_name": "Korea International Trade Association, Inc.",
+      "registrant_name": "K&L Gates, LLP",
+      "registration_num": "6331",
+      "signer_name": "Barton J. Gordon",
+      "signer_title": "Partner"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "81d5dc86-9b39-468c-9c8d-bd8387fb3e26",
+          "593e3b70-2e4b-440b-8fc0-d1cb0a7e48aa",
+          "8d5aa8e3-416d-4541-9789-e1ee6c0dbc34"
+        ],
+        "value": "01/24/2017"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "d5b71beb-1eb5-441f-b8f4-4a001c8b269a"
+        ],
+        "value": "Korea International Trade Association, Inc."
+      },
+      "registrant_name": {
+        "references": [
+          "0-a"
+        ],
+        "value": "K&L Gates, LLP"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "6331"
+      },
+      "signer_name": {
+        "references": [
+          "0-2",
+          "ce76763d-386d-452a-93ad-23b460313ac8"
+        ],
+        "value": "Barton J. Gordon"
+      },
+      "signer_title": {
+        "references": [
+          "0-8"
+        ],
+        "value": "Partner"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12647,
+      "credit_usage": 2.0,
+      "job_id": "cmryj8pqb0256d501i7v2oqjk",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 2.0,
+    "job_id": "cmryj8pqb0256d501i7v2oqjk",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

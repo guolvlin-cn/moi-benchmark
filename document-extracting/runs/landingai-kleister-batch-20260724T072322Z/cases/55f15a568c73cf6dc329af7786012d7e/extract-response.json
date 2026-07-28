@@ -1,0 +1,57 @@
+{
+  "extraction": {
+    "effective_date": null,
+    "jurisdiction": "State of New York",
+    "party": [
+      "Delcath Systems, Inc.",
+      "Employee"
+    ],
+    "term": null
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [],
+      "value": null
+    },
+    "jurisdiction": {
+      "references": [
+        "7defcc7f-834b-45d9-af70-a59e1a46e7b1"
+      ],
+      "value": "State of New York"
+    },
+    "party": [
+      {
+        "references": [
+          "14b2d263-28ac-482b-a54f-a2d64680d842"
+        ],
+        "value": "Delcath Systems, Inc."
+      },
+      {
+        "references": [
+          "14b2d263-28ac-482b-a54f-a2d64680d842"
+        ],
+        "value": "Employee"
+      }
+    ],
+    "term": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16354,
+    "credit_usage": 4.1,
+    "job_id": "cmrymui3i041be401u2tsaij7",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'effective_date' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'effective_date' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

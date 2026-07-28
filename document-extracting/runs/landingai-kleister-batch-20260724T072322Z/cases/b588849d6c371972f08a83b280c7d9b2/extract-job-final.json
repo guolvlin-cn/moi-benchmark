@@ -1,0 +1,81 @@
+{
+  "job_id": "cmrymn6av03zme401rs0whv9z",
+  "status": "completed",
+  "received_at": 1784878615,
+  "created_at": 1784878615,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2005-10-07",
+      "jurisdiction": "Illinois",
+      "party": [
+        "Paul B. Mulhollem",
+        "Archer-Daniels-Midland Company"
+      ],
+      "term": null
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "b71bc2bb-910c-41f6-97e5-e267c8290118"
+        ],
+        "value": "2005-10-07"
+      },
+      "jurisdiction": {
+        "references": [
+          "f8995a0c-df8b-4452-9c83-bc12062b2e77"
+        ],
+        "value": "Illinois"
+      },
+      "party": [
+        {
+          "references": [
+            "c9e8a78a-1f1c-41fa-9661-222f69ade35a"
+          ],
+          "value": "Paul B. Mulhollem"
+        },
+        {
+          "references": [
+            "c9e8a78a-1f1c-41fa-9661-222f69ade35a"
+          ],
+          "value": "Archer-Daniels-Midland Company"
+        }
+      ],
+      "term": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 20438,
+      "credit_usage": 4.1,
+      "job_id": "cmrymn6av03zme401rs0whv9z",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 22000,
+    "credit_usage": 4.1,
+    "job_id": "cmrymn6av03zme401rs0whv9z",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

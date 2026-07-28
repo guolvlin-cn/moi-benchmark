@@ -1,0 +1,60 @@
+{
+  "extraction": {
+    "effective_date": "2007-05-09",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "Opsware Inc.",
+      "Hewlett-Packard Company"
+    ],
+    "term": "12_months"
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [
+        "99b2a22c-5f41-4ae1-8035-26bef4e6f442"
+      ],
+      "value": "2007-05-09"
+    },
+    "jurisdiction": {
+      "references": [
+        "4ab7b150-ab11-45a0-b61b-c702d36b9837"
+      ],
+      "value": "State of Delaware"
+    },
+    "party": [
+      {
+        "references": [
+          "99b2a22c-5f41-4ae1-8035-26bef4e6f442",
+          "6877c4c1-1176-4b12-85d2-165c9d482a1b",
+          "87444167-dc01-45a0-81ae-f4c44c561e73"
+        ],
+        "value": "Opsware Inc."
+      },
+      {
+        "references": [
+          "99b2a22c-5f41-4ae1-8035-26bef4e6f442",
+          "011edcc4-a655-4084-a172-87e0aa61b292",
+          "87444167-dc01-45a0-81ae-f4c44c561e73"
+        ],
+        "value": "Hewlett-Packard Company"
+      }
+    ],
+    "term": {
+      "references": [
+        "21a4a752-1db8-4d79-8855-9b064e81d0ce"
+      ],
+      "value": "12_months"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15868,
+    "credit_usage": 4.9,
+    "job_id": "cmrymjx2f030ud5016ewyv4qk",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

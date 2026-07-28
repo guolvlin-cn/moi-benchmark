@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryktmac029md501wpndm5ok",
+  "status": "completed",
+  "received_at": 1784875557,
+  "created_at": 1784875557,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "GL HANDICRAFT & TAILORING",
+      "date": "20/03/2018",
+      "address": "19, JALAN KANCIL, OFF JALAN PUDU, 55100 KUALA LUMPUR MALAYSIA",
+      "total": "102.00"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "df5e998f-6ad6-465f-a80a-ee07c9ea8002"
+        ],
+        "value": "GL HANDICRAFT & TAILORING"
+      },
+      "date": {
+        "references": [
+          "1fab16e3-54bd-44c0-8fc4-1a7a77954341"
+        ],
+        "value": "20/03/2018"
+      },
+      "address": {
+        "references": [
+          "df5e998f-6ad6-465f-a80a-ee07c9ea8002"
+        ],
+        "value": "19, JALAN KANCIL, OFF JALAN PUDU, 55100 KUALA LUMPUR MALAYSIA"
+      },
+      "total": {
+        "references": [
+          "0-h"
+        ],
+        "value": "102.00"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10714,
+      "credit_usage": 0.6,
+      "job_id": "cmryktmac029md501wpndm5ok",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11000,
+    "credit_usage": 0.6,
+    "job_id": "cmryktmac029md501wpndm5ok",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

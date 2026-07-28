@@ -1,0 +1,68 @@
+{
+  "job_id": "cmrykh5n40368e401xhktkjk8",
+  "status": "completed",
+  "received_at": 1784874975,
+  "created_at": 1784874975,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "NYONYA COLORS @ 1 UTAMA",
+      "date": "18-03-2018",
+      "address": "7, Jln SS21/34, 47400 PJ",
+      "total": "56.63"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "c7c0e48f-b5a2-4c59-8ac1-d0c4442da891"
+        ],
+        "value": "NYONYA COLORS @ 1 UTAMA"
+      },
+      "date": {
+        "references": [
+          "ae623f39-fc62-40d1-85c6-3aad9dceb262"
+        ],
+        "value": "18-03-2018"
+      },
+      "address": {
+        "references": [
+          "c7c0e48f-b5a2-4c59-8ac1-d0c4442da891"
+        ],
+        "value": "7, Jln SS21/34, 47400 PJ"
+      },
+      "total": {
+        "references": [
+          "a4682077-103d-4bb6-86fb-ee5da77bfa41",
+          "28729884-7a3e-4448-848c-3d0a75eb634f"
+        ],
+        "value": "56.63"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15712,
+      "credit_usage": 0.3,
+      "job_id": "cmrykh5n40368e401xhktkjk8",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17000,
+    "credit_usage": 0.3,
+    "job_id": "cmrykh5n40368e401xhktkjk8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

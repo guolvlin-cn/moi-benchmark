@@ -1,0 +1,50 @@
+{
+  "case_id": "20180418_BGR Government Affairs, LLC_Rubino, Mike_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20180418_BGR Government Affairs, LLC_Rubino, Mike_Short-Form.pdf",
+  "pdf_sha256": "a370a25d5df2c3eeea9dd802a5e9b588a6d816fe927e07d25d3d5b4e8d6dd5c4",
+  "status": "completed",
+  "parse_job_id": "cmryj8hzy034pcx0171f6vbnw",
+  "extract_job_id": "cmryj8wid0332e401bdwdlm95",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.417498+00:00",
+  "updated_at": "2026-07-24T06:02:08.521566+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:01:32.787884+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:01:50.391330+00:00",
+  "parse_metadata": {
+    "filename": "20180418_BGR Government Affairs, LLC_Rubino, Mike_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 13843,
+    "credit_usage": 6.0,
+    "job_id": "cmryj8hzy034pcx0171f6vbnw",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:01:51.612802+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:02:08.521560+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13803,
+    "credit_usage": 2.0,
+    "job_id": "cmryj8wid0332e401bdwdlm95",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "04/18/2018",
+    "foreign_principle_name": "Polska Grupa Zbrojeniowa; Embassy of the Republic of Azerbaijan",
+    "registrant_name": "BGR Government Affairs, LLC",
+    "registration_num": "5430",
+    "signer_name": "Mike Rubino",
+    "signer_title": "Consultant"
+  }
+}

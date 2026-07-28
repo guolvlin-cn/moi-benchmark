@@ -1,0 +1,64 @@
+{
+  "extraction": {
+    "file_date": "03/23/2018",
+    "foreign_principle_name": "Embassy of Saudi Arabia",
+    "registrant_name": "Qorvis MSLGroup",
+    "registration_num": "5483",
+    "signer_name": "Jared Shapiro",
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "d845ea50-740e-4df1-bb0f-f2e8f39aa6b0",
+        "e0373746-03b5-4e3c-8b7d-c0bf8956eee2"
+      ],
+      "value": "03/23/2018"
+    },
+    "foreign_principle_name": {
+      "references": [
+        "ea17b3ee-5e43-40d5-87da-7790578a63c6"
+      ],
+      "value": "Embassy of Saudi Arabia"
+    },
+    "registrant_name": {
+      "references": [
+        "c8e5faf8-45d8-45b3-bd0f-0713106b43a6"
+      ],
+      "value": "Qorvis MSLGroup"
+    },
+    "registration_num": {
+      "references": [
+        "0-3"
+      ],
+      "value": "5483"
+    },
+    "signer_name": {
+      "references": [
+        "0-2",
+        "01fb2697-7fa4-4301-b457-76fcbdd021d2"
+      ],
+      "value": "Jared Shapiro"
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17580,
+    "credit_usage": 1.9,
+    "job_id": "cmryjkdci0265d501y2cmy715",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "case_id": "8bd2be4b4638f0d148dd4fa541fb71ef",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/8bd2be4b4638f0d148dd4fa541fb71ef.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "a6bb40b0af8e19670dd9332c35ec04c5b6f053a02a4892741a01ac63498a730c",
+  "status": "completed",
+  "parse_job_id": "cmrymkuvv03yme401e5fbgacr",
+  "extract_job_id": "cmryml47a0313d501sai223h8",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.415465+00:00",
+  "updated_at": "2026-07-24T07:35:45.965578+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:35:08.244161+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:35:17.247805+00:00",
+  "parse_metadata": {
+    "filename": "8bd2be4b4638f0d148dd4fa541fb71ef.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 7,
+    "duration_ms": 7115,
+    "credit_usage": 21.0,
+    "job_id": "cmrymkuvv03yme401e5fbgacr",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:35:20.357388+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:35:45.965574+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19417,
+    "credit_usage": 4.5,
+    "job_id": "cmryml47a0313d501sai223h8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of Washington",
+    "party": [
+      "Corus Pharma, Inc.",
+      "A. Bruce Montgomery, M.D."
+    ],
+    "term": ""
+  }
+}

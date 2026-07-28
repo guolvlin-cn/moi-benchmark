@@ -1,0 +1,55 @@
+<a id='b4901f4e-8ba2-4112-a274-d50d849b269c'></a>
+
+99 SPEED MART S/B (519537-X)
+LOT P.T. 33198, BATU 4
+JALAN KAPAR, MUKIM KAPAR
+42100 KLANG, SELANGOR
+1605-TMN SRI BINTANG
+GST ID. NO: 000181747712
+
+<a id='22213661-f123-4a4a-a898-226ff1cad8c6'></a>
+
+INVOICE NO : 17664/103/T0027
+
+<a id='a727ac3e-94b3-49bf-84e9-4964ae32b924'></a>
+
+10:12AM 560272 11-05-16
+
+<a id='0357a6e2-69ef-4f14-b99b-3bea275937c2'></a>
+
+967 ANCHOR SERBUK CUCI 4KG RM18.80 s
+@2 X RM 9.40
+886 DOVE CREAM BAR SOAP 100 RM26.50 s
+@10 X RM 2.65
+5551 FERNLEAF FULL CRM MILK RM40.95 s
+2267 COLGATE GREAT REGULAR RM15.98 s
+@2 X RM 7.99
+265 LEE KUM KEE SOS TIRAM C RM22.80 s
+@3 X RM 7.60
+193 CHEONG CHAN SOS KARAMEL RM5.09 s
+2394 MISTER POTATO CHIPS BB RM7.90 s
+@2 X RM 3.95
+8019 MARIGOLD HL MILK 1L RM12.70 s
+@2 X RM 6.35
+706 BINTANG TEPUNG JAGUNG 4 RM1.35 s
+2216 NUTELLA FERRERO HAZELN RM14.65 s
+9547 NUTRIPLUS CHEESE CHICK RM10.50 s
+@2 X RM 5.25
+
+Total Sales (Inclusive GST) RM 177.22
+Rounding Adjustment RM -.02
+Rounding RM 177.20
+CREDIT RM 177.20
+CHANGE RM .00
+
+<a id='3a117174-3644-4946-8f2e-b05c49a128f8'></a>
+
+<table id="0-1">
+<tr><td id="0-2">GST Summary</td><td id="0-3">Amount(RM)</td><td id="0-4">Tax(RM)</td></tr>
+<tr><td id="0-5">s = 6%</td><td id="0-6">167.19</td><td id="0-7">10.03</td></tr>
+</table>
+
+<a id='d5c772f8-6ec6-4c6f-ac56-cfdcae29574e'></a>
+
+Thank You. Please come again
+Keep the invoice for applicable returns

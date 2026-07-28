@@ -1,0 +1,80 @@
+{
+  "job_id": "cmrymdhn303xge401cxise1bx",
+  "status": "completed",
+  "received_at": 1784878164,
+  "created_at": 1784878164,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2014-11-25",
+      "jurisdiction": "State of New York",
+      "party": [
+        "AOL Inc.",
+        "Verizon Corporate Services Group Inc."
+      ],
+      "term": "3_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "d2074173-1484-4001-b18c-630fb1a6c39a",
+          "d4f939d0-478b-47d4-b658-c88e5f5c650a",
+          "117b1cdb-f3a3-4c6a-99ef-5fa45d6db2ad"
+        ],
+        "value": "2014-11-25"
+      },
+      "jurisdiction": {
+        "references": [
+          "bc243d05-3e4b-49f4-8c56-cfbdfd62fc46"
+        ],
+        "value": "State of New York"
+      },
+      "party": [
+        {
+          "references": [
+            "d2074173-1484-4001-b18c-630fb1a6c39a"
+          ],
+          "value": "AOL Inc."
+        },
+        {
+          "references": [
+            "d2074173-1484-4001-b18c-630fb1a6c39a"
+          ],
+          "value": "Verizon Corporate Services Group Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "e61bdc3a-9917-47da-a04f-ec896d59e2e0"
+        ],
+        "value": "3_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 14611,
+      "credit_usage": 3.0,
+      "job_id": "cmrymdhn303xge401cxise1bx",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 3.0,
+    "job_id": "cmrymdhn303xge401cxise1bx",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

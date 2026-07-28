@@ -1,0 +1,79 @@
+{
+  "job_id": "cmryme42m03zkcx01vvnrtgyi",
+  "status": "completed",
+  "received_at": 1784878193,
+  "created_at": 1784878193,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2018-12-28",
+      "jurisdiction": "Iowa",
+      "party": [
+        "Flexsteel Industries, Inc.",
+        "Jerald K. Dittmer"
+      ],
+      "term": "perpetual"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "12f0d517-a849-4674-a6da-0e6f3128aa18"
+        ],
+        "value": "2018-12-28"
+      },
+      "jurisdiction": {
+        "references": [
+          "1bc9eda8-882c-45c9-9e35-c50843dcd93a"
+        ],
+        "value": "Iowa"
+      },
+      "party": [
+        {
+          "references": [
+            "12f0d517-a849-4674-a6da-0e6f3128aa18"
+          ],
+          "value": "Flexsteel Industries, Inc."
+        },
+        {
+          "references": [
+            "12f0d517-a849-4674-a6da-0e6f3128aa18"
+          ],
+          "value": "Jerald K. Dittmer"
+        }
+      ],
+      "term": {
+        "references": [
+          "d492cce7-67ca-435a-a7cd-e98a00993fba",
+          "1bc9eda8-882c-45c9-9e35-c50843dcd93a"
+        ],
+        "value": "perpetual"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15155,
+      "credit_usage": 2.3,
+      "job_id": "cmryme42m03zkcx01vvnrtgyi",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 2.3,
+    "job_id": "cmryme42m03zkcx01vvnrtgyi",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

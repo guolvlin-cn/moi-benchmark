@@ -1,0 +1,55 @@
+{
+  "case_id": "20151217_Squire Patton Boggs, LLP_Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20151217_Squire Patton Boggs, LLP_Amendment_Amendment.pdf",
+  "pdf_sha256": "5e3513caff5df3d9c587cd781d972af0a6a4956878cc1f10f9ae1fb70757a720",
+  "status": "completed",
+  "parse_job_id": "cmryj8xa3034qcx01ooefxry0",
+  "extract_job_id": "cmryj94bj0257d501o4lczhw5",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.417672+00:00",
+  "updated_at": "2026-07-24T06:02:17.910443+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:01:52.623184+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:02:00.794771+00:00",
+  "parse_metadata": {
+    "filename": "20151217_Squire Patton Boggs, LLP_Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 6559,
+    "credit_usage": 6.0,
+    "job_id": "cmryj8xa3034qcx01ooefxry0",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:02:01.728309+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:02:17.910440+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12353,
+    "credit_usage": 1.5,
+    "job_id": "cmryj94bj0257d501o4lczhw5",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "December 17, 2015",
+    "foreign_principle_name": null,
+    "registrant_name": "Squire Patton Boggs (US) LLP",
+    "registration_num": "2165",
+    "signer_name": "Edward J. Newberry",
+    "signer_title": null
+  }
+}

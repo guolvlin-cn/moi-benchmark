@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykon4i0379e401f44rt6pi",
+  "status": "completed",
+  "received_at": 1784875325,
+  "created_at": 1784875325,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "McDonald's Permas Java",
+      "date": "25/05/2018",
+      "address": "Level 6, Bangunan TH, Damansara Uptown3 No.3, Jalan SS21/39,47400 Peta`ing Jaya Selangor",
+      "total": "11.10"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "a9691364-74c5-4039-913a-58622c93d081"
+        ],
+        "value": "McDonald's Permas Java"
+      },
+      "date": {
+        "references": [
+          "ebe72270-bf61-41b9-a195-b7e9277488ff"
+        ],
+        "value": "25/05/2018"
+      },
+      "address": {
+        "references": [
+          "a9691364-74c5-4039-913a-58622c93d081"
+        ],
+        "value": "Level 6, Bangunan TH, Damansara Uptown3 No.3, Jalan SS21/39,47400 Peta`ing Jaya Selangor"
+      },
+      "total": {
+        "references": [
+          "9b0a0e60-2bdc-4892-b329-ab348b84137a"
+        ],
+        "value": "11.10"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 8487,
+      "credit_usage": 0.4,
+      "job_id": "cmrykon4i0379e401f44rt6pi",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 9000,
+    "credit_usage": 0.4,
+    "job_id": "cmrykon4i0379e401f44rt6pi",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

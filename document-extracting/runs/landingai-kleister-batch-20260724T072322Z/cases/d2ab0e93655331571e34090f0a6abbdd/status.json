@@ -1,0 +1,53 @@
+{
+  "case_id": "d2ab0e93655331571e34090f0a6abbdd",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/d2ab0e93655331571e34090f0a6abbdd.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "9aac3c30bbdaf6108fd181a901f9f0786141027ce8960ef307e7acdac5965257",
+  "status": "completed",
+  "parse_job_id": "cmrymo09j03zoe4016s6nvzn8",
+  "extract_job_id": "cmrymofjv0328d50161fy6kqt",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.423529+00:00",
+  "updated_at": "2026-07-24T07:38:23.561768+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:37:35.185376+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:37:51.761974+00:00",
+  "parse_metadata": {
+    "filename": "d2ab0e93655331571e34090f0a6abbdd.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 11,
+    "duration_ms": 13106,
+    "credit_usage": 33.0,
+    "job_id": "cmrymo09j03zoe4016s6nvzn8",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:37:54.990432+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:38:23.561759+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 26234,
+    "credit_usage": 7.4,
+    "job_id": "cmrymofjv0328d50161fy6kqt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2012-07-05",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "Curtiss-Wright Controls, Inc.",
+      "Williams Controls, Inc."
+    ],
+    "term": "3_years"
+  }
+}

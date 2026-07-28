@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymmxm403zke4013xf2a7tl",
+  "status": "completed",
+  "received_at": 1784878604,
+  "created_at": 1784878604,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2016-03-15",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "Orchestra-Prémaman, S.A.",
+        "Destination Maternity Corporation"
+      ],
+      "term": "9_months"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "d44c9e64-170d-4059-a718-abe985e6b205"
+        ],
+        "value": "2016-03-15"
+      },
+      "jurisdiction": {
+        "references": [
+          "abe303a4-fa22-4c3f-ae6c-058c11e622ae"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "0e799367-1377-4315-b198-4e5dfe2871a2"
+          ],
+          "value": "Orchestra-Prémaman, S.A."
+        },
+        {
+          "references": [
+            "0e799367-1377-4315-b198-4e5dfe2871a2",
+            "f86a0483-48c6-4ca2-b265-59c05d10691d"
+          ],
+          "value": "Destination Maternity Corporation"
+        }
+      ],
+      "term": {
+        "references": [
+          "188079bb-2965-4dcb-bfdc-41d02994bd58"
+        ],
+        "value": "9_months"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 16806,
+      "credit_usage": 4.7,
+      "job_id": "cmrymmxm403zke4013xf2a7tl",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18000,
+    "credit_usage": 4.7,
+    "job_id": "cmrymmxm403zke4013xf2a7tl",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykj4b60281d5018kqmwg72",
+  "status": "completed",
+  "received_at": 1784875067,
+  "created_at": 1784875067,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "First City Parking Sdn Bhd",
+      "date": "16/04/2018",
+      "address": "A-09-10 Prima Avenue The Tube, 1/39, Dataran Prima 47301 Petaling Jaya Selangor DE",
+      "total": "RM7.00"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "b7a33e86-168d-4e24-a7c1-229b9c1f5497"
+        ],
+        "value": "First City Parking Sdn Bhd"
+      },
+      "date": {
+        "references": [
+          "b7aa980e-6390-48f0-bc87-65943a3722bf"
+        ],
+        "value": "16/04/2018"
+      },
+      "address": {
+        "references": [
+          "50e225f8-2342-427f-bfec-92ed031ec198"
+        ],
+        "value": "A-09-10 Prima Avenue The Tube, 1/39, Dataran Prima 47301 Petaling Jaya Selangor DE"
+      },
+      "total": {
+        "references": [
+          "3460685e-893b-42f9-9bd8-6daa0386a7ef"
+        ],
+        "value": "RM7.00"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 9784,
+      "credit_usage": 0.4,
+      "job_id": "cmrykj4b60281d5018kqmwg72",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10000,
+    "credit_usage": 0.4,
+    "job_id": "cmrykj4b60281d5018kqmwg72",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

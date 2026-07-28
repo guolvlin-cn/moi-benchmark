@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryjb0mu033be401w0losj04",
+  "status": "completed",
+  "received_at": 1784873009,
+  "created_at": 1784873009,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "09/25/09",
+      "foreign_principle_name": "The Swiss Confederation",
+      "registrant_name": "Podesta Group, Inc.",
+      "registration_num": "5926",
+      "signer_name": "Nicole Young",
+      "signer_title": "employee"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "46b91bc6-1b03-4133-a13b-402789598119"
+        ],
+        "value": "09/25/09"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "cdc52d4d-24c7-45fb-b41b-e45dcd92f6e4"
+        ],
+        "value": "The Swiss Confederation"
+      },
+      "registrant_name": {
+        "references": [
+          "48e14072-0240-4774-bab6-d42a355c6133"
+        ],
+        "value": "Podesta Group, Inc."
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "5926"
+      },
+      "signer_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Nicole Young"
+      },
+      "signer_title": {
+        "references": [
+          "63cba1f4-cd54-4e31-9af6-91eaee5e8c2f"
+        ],
+        "value": "employee"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13308,
+      "credit_usage": 2.6,
+      "job_id": "cmryjb0mu033be401w0losj04",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 2.6,
+    "job_id": "cmryjb0mu033be401w0losj04",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

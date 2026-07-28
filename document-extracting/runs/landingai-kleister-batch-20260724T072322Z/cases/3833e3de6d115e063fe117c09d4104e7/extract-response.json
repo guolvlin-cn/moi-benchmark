@@ -1,0 +1,57 @@
+{
+  "extraction": {
+    "effective_date": null,
+    "jurisdiction": "Commonwealth of Massachusetts",
+    "party": [
+      "VistaPrint USA, Incorporated",
+      "Anne Drapeau"
+    ],
+    "term": null
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [],
+      "value": null
+    },
+    "jurisdiction": {
+      "references": [
+        "4c55e785-d2de-4abc-9cb2-e2ac7e3ae975"
+      ],
+      "value": "Commonwealth of Massachusetts"
+    },
+    "party": [
+      {
+        "references": [
+          "ebcfc96e-6b62-43a8-b3ab-702a649899f9"
+        ],
+        "value": "VistaPrint USA, Incorporated"
+      },
+      {
+        "references": [
+          "ebcfc96e-6b62-43a8-b3ab-702a649899f9"
+        ],
+        "value": "Anne Drapeau"
+      }
+    ],
+    "term": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14333,
+    "credit_usage": 2.6,
+    "job_id": "cmrymupbb042wcx016f9z7a8p",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'effective_date' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'effective_date' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

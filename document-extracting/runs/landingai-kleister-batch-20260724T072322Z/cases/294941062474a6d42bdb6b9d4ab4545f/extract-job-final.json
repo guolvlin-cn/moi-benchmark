@@ -1,0 +1,85 @@
+{
+  "job_id": "cmrymbz5402zmd50192e4jaei",
+  "status": "completed",
+  "received_at": 1784878093,
+  "created_at": 1784878093,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2018-11-15",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "TESARO, Inc.",
+        "GlaxoSmithKline LLC",
+        "Ajinomoto Althea, Inc.DBA Ajinomoto Bio-Pharma Services"
+      ],
+      "term": "5_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "6f91125f-fbbb-474d-b87a-aa8e8b5bff42"
+        ],
+        "value": "2018-11-15"
+      },
+      "jurisdiction": {
+        "references": [
+          "b65dfd06-0ae9-4dff-a3ec-7061a9dd48ff"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "6f91125f-fbbb-474d-b87a-aa8e8b5bff42"
+          ],
+          "value": "TESARO, Inc."
+        },
+        {
+          "references": [
+            "6f91125f-fbbb-474d-b87a-aa8e8b5bff42"
+          ],
+          "value": "GlaxoSmithKline LLC"
+        },
+        {
+          "references": [
+            "6f91125f-fbbb-474d-b87a-aa8e8b5bff42"
+          ],
+          "value": "Ajinomoto Althea, Inc.DBA Ajinomoto Bio-Pharma Services"
+        }
+      ],
+      "term": {
+        "references": [
+          "b65dfd06-0ae9-4dff-a3ec-7061a9dd48ff"
+        ],
+        "value": "5_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12691,
+      "credit_usage": 3.1,
+      "job_id": "cmrymbz5402zmd50192e4jaei",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 3.1,
+    "job_id": "cmrymbz5402zmd50192e4jaei",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

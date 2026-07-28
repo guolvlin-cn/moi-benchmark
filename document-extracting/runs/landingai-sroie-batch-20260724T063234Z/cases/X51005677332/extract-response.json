@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "SYARIKAT PERNIAGAAN GIN KEE",
+    "date": "12/01/2018",
+    "address": "NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",
+    "total": "7.95"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "d1e1d271-5903-457b-931d-6de2833aa0ed"
+      ],
+      "value": "SYARIKAT PERNIAGAAN GIN KEE"
+    },
+    "date": {
+      "references": [
+        "79857ef7-1a25-46d3-b38c-64397709c341"
+      ],
+      "value": "12/01/2018"
+    },
+    "address": {
+      "references": [
+        "d1e1d271-5903-457b-931d-6de2833aa0ed"
+      ],
+      "value": "NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR."
+    },
+    "total": {
+      "references": [
+        "2e2e5cca-62fa-4d3b-ae42-5f09b62284a5"
+      ],
+      "value": "7.95"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10888,
+    "credit_usage": 0.4,
+    "job_id": "cmrykfzgp0361e4017pqhsx3q",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykpjeq037ce401a43hhnc9",
+  "status": "completed",
+  "received_at": 1784875367,
+  "created_at": 1784875367,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "McDonald's",
+      "date": "21/05/2018",
+      "address": "Level 6, Bangunan TH, Damansara Uptown3 No.3, Jalan SS21/39,47400 Petaling Jaya Selangor",
+      "total": "70.30"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "79338d93-ec39-4564-8544-aa8113c55441"
+        ],
+        "value": "McDonald's"
+      },
+      "date": {
+        "references": [
+          "0-3"
+        ],
+        "value": "21/05/2018"
+      },
+      "address": {
+        "references": [
+          "79338d93-ec39-4564-8544-aa8113c55441"
+        ],
+        "value": "Level 6, Bangunan TH, Damansara Uptown3 No.3, Jalan SS21/39,47400 Petaling Jaya Selangor"
+      },
+      "total": {
+        "references": [
+          "0-C"
+        ],
+        "value": "70.30"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12220,
+      "credit_usage": 0.7,
+      "job_id": "cmrykpjeq037ce401a43hhnc9",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.7,
+    "job_id": "cmrykpjeq037ce401a43hhnc9",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

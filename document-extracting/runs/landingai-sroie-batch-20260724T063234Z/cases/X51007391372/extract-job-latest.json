@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykqmht037ge401ojnhbt9d",
+  "status": "completed",
+  "received_at": 1784875417,
+  "created_at": 1784875417,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "FY EAGLE ENTERPRISE",
+      "date": "24/05/2018",
+      "address": "NO. 42, JALAN PBS 14/11, TAMAN PERINDUSTRIAN BUKIT SERDANG, 43300 SERI KEMBANGAN, SELANGOR",
+      "total": "52.00"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "42ff69f1-d504-422a-8c58-babf69a402fb"
+        ],
+        "value": "FY EAGLE ENTERPRISE"
+      },
+      "date": {
+        "references": [
+          "28a92eaf-be6a-4efa-b265-190afcbbd314"
+        ],
+        "value": "24/05/2018"
+      },
+      "address": {
+        "references": [
+          "42ff69f1-d504-422a-8c58-babf69a402fb"
+        ],
+        "value": "NO. 42, JALAN PBS 14/11, TAMAN PERINDUSTRIAN BUKIT SERDANG, 43300 SERI KEMBANGAN, SELANGOR"
+      },
+      "total": {
+        "references": [
+          "d98e88b3-8de9-431a-ba63-8da101e44418"
+        ],
+        "value": "52.00"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12225,
+      "credit_usage": 0.6,
+      "job_id": "cmrykqmht037ge401ojnhbt9d",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykqmht037ge401ojnhbt9d",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

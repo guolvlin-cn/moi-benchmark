@@ -1,0 +1,85 @@
+{
+  "job_id": "cmryjgugr0341e401lvb55d9r",
+  "status": "completed",
+  "received_at": 1784873281,
+  "created_at": 1784873281,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "2012 MAR 13",
+      "foreign_principle_name": "National Security Council of Georgia",
+      "registrant_name": "Podesta Group, Inc.",
+      "registration_num": "5926",
+      "signer_name": "ANTHONY T. PODESTA",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "aeec78ca-4286-4d00-8cfa-e9c83156820f"
+        ],
+        "value": "2012 MAR 13"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "caa1f435-2384-44b5-9a95-2b56283ddef5",
+          "3fef29cb-4119-41a5-9544-c9a8a4783ea8"
+        ],
+        "value": "National Security Council of Georgia"
+      },
+      "registrant_name": {
+        "references": [
+          "0-4"
+        ],
+        "value": "Podesta Group, Inc."
+      },
+      "registration_num": {
+        "references": [
+          "0-5"
+        ],
+        "value": "5926"
+      },
+      "signer_name": {
+        "references": [
+          "1c4ad9e0-14d4-4577-b056-5dbf9036c083"
+        ],
+        "value": "ANTHONY T. PODESTA"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13255,
+      "credit_usage": 1.6,
+      "job_id": "cmryjgugr0341e401lvb55d9r",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 1.6,
+    "job_id": "cmryjgugr0341e401lvb55d9r",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

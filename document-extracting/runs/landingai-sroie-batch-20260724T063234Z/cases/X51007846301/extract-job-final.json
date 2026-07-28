@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykr7nc0299d501vbwhv8xw",
+  "status": "completed",
+  "received_at": 1784875445,
+  "created_at": 1784875445,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "BAR WANG RICE@PERMAS JAYA",
+      "date": "10 Jun 2018",
+      "address": "12, Jalan Tampoi 7/4, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor",
+      "total": "RM8.50"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "4f505f75-0a83-4cee-b017-674f22586f8c"
+        ],
+        "value": "BAR WANG RICE@PERMAS JAYA"
+      },
+      "date": {
+        "references": [
+          "484719e7-2578-49b9-9c7a-940902673306"
+        ],
+        "value": "10 Jun 2018"
+      },
+      "address": {
+        "references": [
+          "484719e7-2578-49b9-9c7a-940902673306"
+        ],
+        "value": "12, Jalan Tampoi 7/4, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor"
+      },
+      "total": {
+        "references": [
+          "0-u"
+        ],
+        "value": "RM8.50"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12354,
+      "credit_usage": 0.6,
+      "job_id": "cmrykr7nc0299d501vbwhv8xw",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykr7nc0299d501vbwhv8xw",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryj9cxj0334e40161esrtjk",
+  "status": "completed",
+  "received_at": 1784872932,
+  "created_at": 1784872932,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "SEP 15 PM 3:32",
+      "foreign_principle_name": "Japan External Trade Organization",
+      "registrant_name": "JETRO, Los Angeles",
+      "registration_num": "1833",
+      "signer_name": "Eiichi Nagata",
+      "signer_title": "Executive Director"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "bc69eff7-c4e4-451b-b351-8494e248cb6b"
+        ],
+        "value": "SEP 15 PM 3:32"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0-6"
+        ],
+        "value": "Japan External Trade Organization"
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "JETRO, Los Angeles"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "1833"
+      },
+      "signer_name": {
+        "references": [
+          "1-6"
+        ],
+        "value": "Eiichi Nagata"
+      },
+      "signer_title": {
+        "references": [
+          "1-6"
+        ],
+        "value": "Executive Director"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12344,
+      "credit_usage": 1.5,
+      "job_id": "cmryj9cxj0334e40161esrtjk",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 1.5,
+    "job_id": "cmryj9cxj0334e40161esrtjk",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

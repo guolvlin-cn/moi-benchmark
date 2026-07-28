@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryks9gv029hd501kjxj6vvh",
+  "status": "completed",
+  "received_at": 1784875494,
+  "created_at": 1784875494,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "SUSHI MENTAI - MAHKOTA CHERAS",
+      "date": "04-06-2018",
+      "address": "NO: 1-1&2 GROUND FLOOR, JLN TEMENGGUNG 13/9, 43200 CHERAS SELANGOR.",
+      "total": "68.00"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "059e897f-1605-4560-a46f-7b575b9f26c8"
+        ],
+        "value": "SUSHI MENTAI - MAHKOTA CHERAS"
+      },
+      "date": {
+        "references": [
+          "94732b66-6c3e-47ac-9254-f32f9071eb81"
+        ],
+        "value": "04-06-2018"
+      },
+      "address": {
+        "references": [
+          "059e897f-1605-4560-a46f-7b575b9f26c8"
+        ],
+        "value": "NO: 1-1&2 GROUND FLOOR, JLN TEMENGGUNG 13/9, 43200 CHERAS SELANGOR."
+      },
+      "total": {
+        "references": [
+          "0-I"
+        ],
+        "value": "68.00"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 9106,
+      "credit_usage": 0.7,
+      "job_id": "cmryks9gv029hd501kjxj6vvh",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 9000,
+    "credit_usage": 0.7,
+    "job_id": "cmryks9gv029hd501kjxj6vvh",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,84 @@
+{
+  "job_id": "cmryjmw5z034ke401q1qj1zgk",
+  "status": "completed",
+  "received_at": 1784873563,
+  "created_at": 1784873563,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "October 11, 1967",
+      "foreign_principle_name": "Oesterr. Fremdenverkehrswerbung Vienna I., (Austrian State Tourist Department)",
+      "registrant_name": "Austrian State Tourist Dept.",
+      "registration_num": "495",
+      "signer_name": "Rudolf F. Mattesich",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "19322f81-fb65-4cc8-b361-d02865581cac"
+        ],
+        "value": "October 11, 1967"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "b5022540-8c10-4652-91b7-0cb8c2786159"
+        ],
+        "value": "Oesterr. Fremdenverkehrswerbung Vienna I., (Austrian State Tourist Department)"
+      },
+      "registrant_name": {
+        "references": [
+          "6bebd265-cf57-4d46-8c47-232fabc9de0b"
+        ],
+        "value": "Austrian State Tourist Dept."
+      },
+      "registration_num": {
+        "references": [
+          "6bebd265-cf57-4d46-8c47-232fabc9de0b"
+        ],
+        "value": "495"
+      },
+      "signer_name": {
+        "references": [
+          "2061372e-fb64-4d69-b98a-2a3661b52bed"
+        ],
+        "value": "Rudolf F. Mattesich"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15189,
+      "credit_usage": 1.1,
+      "job_id": "cmryjmw5z034ke401q1qj1zgk",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 1.1,
+    "job_id": "cmryjmw5z034ke401q1qj1zgk",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

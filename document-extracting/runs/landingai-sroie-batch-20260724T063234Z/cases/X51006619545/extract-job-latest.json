@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykndv3038fcx0112ha9tgm",
+  "status": "completed",
+  "received_at": 1784875266,
+  "created_at": 1784875266,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "COSWAY (M) SDN BHD",
+      "date": "06/12/2016",
+      "address": "2nd Floor, Wisma Cosway, Jalan Raja Chulan, 50200 Kuala Lumpur, Malaysia.",
+      "total": "RM111.90"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "37a84779-c144-4881-96bf-f5f61c580a88"
+        ],
+        "value": "COSWAY (M) SDN BHD"
+      },
+      "date": {
+        "references": [
+          "f0c65928-d4cd-4031-8a2f-0da24df3cf1a"
+        ],
+        "value": "06/12/2016"
+      },
+      "address": {
+        "references": [
+          "37a84779-c144-4881-96bf-f5f61c580a88"
+        ],
+        "value": "2nd Floor, Wisma Cosway, Jalan Raja Chulan, 50200 Kuala Lumpur, Malaysia."
+      },
+      "total": {
+        "references": [
+          "0-15"
+        ],
+        "value": "RM111.90"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13971,
+      "credit_usage": 1.0,
+      "job_id": "cmrykndv3038fcx0112ha9tgm",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 1.0,
+    "job_id": "cmrykndv3038fcx0112ha9tgm",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

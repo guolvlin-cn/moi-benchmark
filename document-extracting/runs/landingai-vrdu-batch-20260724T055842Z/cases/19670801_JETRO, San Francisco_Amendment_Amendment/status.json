@@ -1,0 +1,50 @@
+{
+  "case_id": "19670801_JETRO, San Francisco_Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19670801_JETRO, San Francisco_Amendment_Amendment.pdf",
+  "pdf_sha256": "5bd83796f4fe14ed0f983a6e4dc58fe91612e28f846ae7d38d6d7e578b6060cb",
+  "status": "completed",
+  "parse_job_id": "cmryji6eh035pcx015xygnj84",
+  "extract_job_id": "cmryjij3s035qcx01c81dsmgn",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.429003+00:00",
+  "updated_at": "2026-07-24T06:09:35.499270+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:09:04.377916+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:09:18.395052+00:00",
+  "parse_metadata": {
+    "filename": "19670801_JETRO, San Francisco_Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 8104,
+    "credit_usage": 6.0,
+    "job_id": "cmryji6eh035pcx015xygnj84",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:09:20.796671+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:09:35.499265+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12687,
+    "credit_usage": 1.2,
+    "job_id": "cmryjij3s035qcx01c81dsmgn",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "August 4, 1967",
+    "foreign_principle_name": "Japan External Trade Organization, Tokyo",
+    "registrant_name": "JAPAN TRADE CENTER San Francisco",
+    "registration_num": "1813",
+    "signer_name": "Hiromichi Eguchi",
+    "signer_title": "Executive Director"
+  }
+}

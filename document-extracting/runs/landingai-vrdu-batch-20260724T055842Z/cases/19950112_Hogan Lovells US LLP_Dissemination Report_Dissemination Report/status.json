@@ -1,0 +1,50 @@
+{
+  "case_id": "19950112_Hogan Lovells US LLP_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19950112_Hogan Lovells US LLP_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "50f6936b748348138bc30fc135c04b95162fc6ad8ca92bb70485be5126cbb529",
+  "status": "completed",
+  "parse_job_id": "cmryjfn4h035ecx0116db5pel",
+  "extract_job_id": "cmryjfuda025rd501gbyviuok",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.426081+00:00",
+  "updated_at": "2026-07-24T06:07:32.837729+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:07:06.036923+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:07:13.204873+00:00",
+  "parse_metadata": {
+    "filename": "19950112_Hogan Lovells US LLP_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 6403,
+    "credit_usage": 6.0,
+    "job_id": "cmryjfn4h035ecx0116db5pel",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:07:15.525255+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:07:32.837701+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14502,
+    "credit_usage": 1.6,
+    "job_id": "cmryjfuda025rd501gbyviuok",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "93 JAN 12",
+    "foreign_principle_name": "Avions de Transport Regional Groupement d'Interet Economique",
+    "registrant_name": "Hogan & Hartson L.L.P.",
+    "registration_num": "2244",
+    "signer_name": "T. Clark Weymouth",
+    "signer_title": "Partner"
+  }
+}

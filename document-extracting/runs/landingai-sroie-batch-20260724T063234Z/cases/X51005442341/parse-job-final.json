@@ -1,0 +1,158 @@
+{
+  "job_id": "cmrykdlwt027cd501i23yfsoo",
+  "status": "completed",
+  "received_at": 1784874810,
+  "created_at": 1784874810,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='677d54d1-34b9-41b3-b470-cd97f7f7618b'></a>\n\n403075\nRESTAURANT SIN DU\nK3-113, JL IBRAHIM SULTAN\n80300 JOHOR BAHRU\nJOHOR\nH/P: 019-7521215\n016-7867868\n\n<a id='108d6031-b776-43da-929a-6a9901b94a34'></a>\n\n09/03/2018 21:28 0001\n000000#7259 CASHIER01\n\n<a id='0e3c68b9-e49d-446e-80b9-be643a3dcb9a'></a>\n\nDPT.05 RM 149.00\nDPT.04 RM 21.00\n\n<a id='536d1237-fbf2-460b-bda5-9fe8f960fa41'></a>\n\nCASH\nRM 170. 00",
+    "chunks": [
+      {
+        "markdown": "<a id='677d54d1-34b9-41b3-b470-cd97f7f7618b'></a>\n\n403075\nRESTAURANT SIN DU\nK3-113, JL IBRAHIM SULTAN\n80300 JOHOR BAHRU\nJOHOR\nH/P: 019-7521215\n016-7867868",
+        "type": "text",
+        "id": "677d54d1-34b9-41b3-b470-cd97f7f7618b",
+        "grounding": {
+          "box": {
+            "left": 0.30741792917251587,
+            "top": 0.24139094352722168,
+            "right": 0.48825281858444214,
+            "bottom": 0.3320580720901489
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='108d6031-b776-43da-929a-6a9901b94a34'></a>\n\n09/03/2018 21:28 0001\n000000#7259 CASHIER01",
+        "type": "text",
+        "id": "108d6031-b776-43da-929a-6a9901b94a34",
+        "grounding": {
+          "box": {
+            "left": 0.30376914143562317,
+            "top": 0.33843010663986206,
+            "right": 0.4850256145000458,
+            "bottom": 0.3703988790512085
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='0e3c68b9-e49d-446e-80b9-be643a3dcb9a'></a>\n\nDPT.05 RM 149.00\nDPT.04 RM 21.00",
+        "type": "text",
+        "id": "0e3c68b9-e49d-446e-80b9-be643a3dcb9a",
+        "grounding": {
+          "box": {
+            "left": 0.3023827373981476,
+            "top": 0.3755795359611511,
+            "right": 0.47243037819862366,
+            "bottom": 0.40943431854248047
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='536d1237-fbf2-460b-bda5-9fe8f960fa41'></a>\n\nCASH\nRM 170. 00",
+        "type": "text",
+        "id": "536d1237-fbf2-460b-bda5-9fe8f960fa41",
+        "grounding": {
+          "box": {
+            "left": 0.30171748995780945,
+            "top": 0.41407692432403564,
+            "right": 0.47135719656944275,
+            "bottom": 0.446932315826416
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='677d54d1-34b9-41b3-b470-cd97f7f7618b'></a>\n\n403075\nRESTAURANT SIN DU\nK3-113, JL IBRAHIM SULTAN\n80300 JOHOR BAHRU\nJOHOR\nH/P: 019-7521215\n016-7867868\n\n<a id='108d6031-b776-43da-929a-6a9901b94a34'></a>\n\n09/03/2018 21:28 0001\n000000#7259 CASHIER01\n\n<a id='0e3c68b9-e49d-446e-80b9-be643a3dcb9a'></a>\n\nDPT.05 RM 149.00\nDPT.04 RM 21.00\n\n<a id='536d1237-fbf2-460b-bda5-9fe8f960fa41'></a>\n\nCASH\nRM 170. 00",
+        "chunks": [
+          "677d54d1-34b9-41b3-b470-cd97f7f7618b",
+          "108d6031-b776-43da-929a-6a9901b94a34",
+          "0e3c68b9-e49d-446e-80b9-be643a3dcb9a",
+          "536d1237-fbf2-460b-bda5-9fe8f960fa41"
+        ]
+      }
+    ],
+    "grounding": {
+      "677d54d1-34b9-41b3-b470-cd97f7f7618b": {
+        "box": {
+          "left": 0.30741792917251587,
+          "top": 0.24139094352722168,
+          "right": 0.48825281858444214,
+          "bottom": 0.3320580720901489
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.964,
+        "low_confidence_spans": []
+      },
+      "108d6031-b776-43da-929a-6a9901b94a34": {
+        "box": {
+          "left": 0.30376914143562317,
+          "top": 0.33843010663986206,
+          "right": 0.4850256145000458,
+          "bottom": 0.3703988790512085
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      },
+      "0e3c68b9-e49d-446e-80b9-be643a3dcb9a": {
+        "box": {
+          "left": 0.3023827373981476,
+          "top": 0.3755795359611511,
+          "right": 0.47243037819862366,
+          "bottom": 0.40943431854248047
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.968,
+        "low_confidence_spans": []
+      },
+      "536d1237-fbf2-460b-bda5-9fe8f960fa41": {
+        "box": {
+          "left": 0.30171748995780945,
+          "top": 0.41407692432403564,
+          "right": 0.47135719656944275,
+          "bottom": 0.446932315826416
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.994,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51005442341.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 6267,
+      "credit_usage": 3.0,
+      "job_id": "cmrykdlwt027cd501i23yfsoo",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51005442341.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7000,
+    "credit_usage": 3.0,
+    "job_id": "cmrykdlwt027cd501i23yfsoo",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

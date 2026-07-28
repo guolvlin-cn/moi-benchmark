@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "MOONLIGHT CAKE HOUSE SDN BHD",
+    "date": "20/06/2018",
+    "address": "No.1, Jalan Permas 10/5, Bandar Baru Permas Jaya 81750 Johor Bahru, Johor.",
+    "total": "RM14.20"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "70df24cd-adaa-4100-8f75-030fbf2c8915"
+      ],
+      "value": "MOONLIGHT CAKE HOUSE SDN BHD"
+    },
+    "date": {
+      "references": [
+        "acbe397e-f2a5-43cc-867d-07b7734b27c7"
+      ],
+      "value": "20/06/2018"
+    },
+    "address": {
+      "references": [
+        "70df24cd-adaa-4100-8f75-030fbf2c8915"
+      ],
+      "value": "No.1, Jalan Permas 10/5, Bandar Baru Permas Jaya 81750 Johor Bahru, Johor."
+    },
+    "total": {
+      "references": [
+        "9959a041-5102-4448-806d-f4903c593d74"
+      ],
+      "value": "RM14.20"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12603,
+    "credit_usage": 0.6,
+    "job_id": "cmrykrg1c038rcx01lbot0ynh",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

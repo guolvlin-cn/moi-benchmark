@@ -1,0 +1,51 @@
+{
+  "case_id": "X51005745249",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51005745249.jpg",
+  "source_type": "image",
+  "image_sha256": "e90cec23cf07dda16d9b7b5a90d45dc32115701a437480d67e49d12b974790d6",
+  "gold_entities": "train/entities/X51005745249.txt",
+  "gold_box": "train/box/X51005745249.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykhvck037qcx01jk3e4m7b",
+  "extract_job_id": "cmryki2g8037rcx01gantzztb",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.248753+00:00",
+  "updated_at": "2026-07-24T06:37:14.208967+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:36:49.734196+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:36:57.225852+00:00",
+  "parse_metadata": {
+    "filename": "X51005745249.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 6316,
+    "credit_usage": 3.0,
+    "job_id": "cmrykhvck037qcx01jk3e4m7b",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:36:58.847910+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:37:14.208964+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11031,
+    "credit_usage": 0.6,
+    "job_id": "cmryki2g8037rcx01gantzztb",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "Subway",
+    "date": "27/02/2018",
+    "address": "A-G-06, DATARAN GLOMAC, JALAN SS6/5A, PUSAT BANDAR KELANA JAYA, 47301 PETALING JAYA, SELANGOR, Malaysia",
+    "total": "RM24.00"
+  }
+}

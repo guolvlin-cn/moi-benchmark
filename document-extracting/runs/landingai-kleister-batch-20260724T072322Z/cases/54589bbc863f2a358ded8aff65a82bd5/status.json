@@ -1,0 +1,53 @@
+{
+  "case_id": "54589bbc863f2a358ded8aff65a82bd5",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/54589bbc863f2a358ded8aff65a82bd5.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "bea985fcf8f32b0333345d4bc99bb915ccadcffc318f05672e511b3cb25a8093",
+  "status": "completed",
+  "parse_job_id": "cmrymem3q03xse401f0duq1ri",
+  "extract_job_id": "cmrymf65703zvcx01ukalh80q",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.406605+00:00",
+  "updated_at": "2026-07-24T07:31:02.502949+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:30:16.948183+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:30:39.125498+00:00",
+  "parse_metadata": {
+    "filename": "54589bbc863f2a358ded8aff65a82bd5.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 5,
+    "duration_ms": 15302,
+    "credit_usage": 15.0,
+    "job_id": "cmrymem3q03xse401f0duq1ri",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:30:42.896851+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:31:02.502946+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18337,
+    "credit_usage": 2.6,
+    "job_id": "cmrymf65703zvcx01ukalh80q",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of New Jersey",
+    "party": [
+      "OceanFirst Financial Corp.",
+      "[•]"
+    ],
+    "term": ""
+  }
+}

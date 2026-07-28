@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryki2g8037rcx01gantzztb",
+  "status": "completed",
+  "received_at": 1784875018,
+  "created_at": 1784875018,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "Subway",
+      "date": "27/02/2018",
+      "address": "A-G-06, DATARAN GLOMAC, JALAN SS6/5A, PUSAT BANDAR KELANA JAYA, 47301 PETALING JAYA, SELANGOR, Malaysia",
+      "total": "RM24.00"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "66cd5dee-fbbc-484a-904f-212fbd353afb"
+        ],
+        "value": "Subway"
+      },
+      "date": {
+        "references": [
+          "66cd5dee-fbbc-484a-904f-212fbd353afb"
+        ],
+        "value": "27/02/2018"
+      },
+      "address": {
+        "references": [
+          "66cd5dee-fbbc-484a-904f-212fbd353afb"
+        ],
+        "value": "A-G-06, DATARAN GLOMAC, JALAN SS6/5A, PUSAT BANDAR KELANA JAYA, 47301 PETALING JAYA, SELANGOR, Malaysia"
+      },
+      "total": {
+        "references": [
+          "359df83a-590b-40e3-8ebd-dc987901ae4d"
+        ],
+        "value": "RM24.00"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11031,
+      "credit_usage": 0.6,
+      "job_id": "cmryki2g8037rcx01gantzztb",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.6,
+    "job_id": "cmryki2g8037rcx01gantzztb",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

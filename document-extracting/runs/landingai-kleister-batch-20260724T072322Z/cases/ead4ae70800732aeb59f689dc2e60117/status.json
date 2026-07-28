@@ -1,0 +1,53 @@
+{
+  "case_id": "ead4ae70800732aeb59f689dc2e60117",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/ead4ae70800732aeb59f689dc2e60117.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "59eaae3ad7f4d36893cf346dccc738ffc7a77453ae6abad61e00e93b4ceb1874",
+  "status": "completed",
+  "parse_job_id": "cmrymqx8y042kcx01zgdq6zxq",
+  "extract_job_id": "cmrymra20033fd501h9h9i7gr",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.434166+00:00",
+  "updated_at": "2026-07-24T07:40:24.190162+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:39:51.244687+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:40:05.805477+00:00",
+  "parse_metadata": {
+    "filename": "ead4ae70800732aeb59f689dc2e60117.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 3,
+    "duration_ms": 8371,
+    "credit_usage": 9.0,
+    "job_id": "cmrymqx8y042kcx01zgdq6zxq",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:40:07.860544+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:40:24.190155+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12167,
+    "credit_usage": 1.9,
+    "job_id": "cmrymra20033fd501h9h9i7gr",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of Washington",
+    "party": [
+      "Adaptive Biotechnologies",
+      "MICROSOFT CORPORATION"
+    ],
+    "term": "5_years"
+  }
+}

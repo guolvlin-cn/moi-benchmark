@@ -1,0 +1,91 @@
+{
+  "job_id": "cmrymay3b03wwe4012vfxnune",
+  "status": "completed",
+  "received_at": 1784878045,
+  "created_at": 1784878045,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2012-01-11",
+      "jurisdiction": "State of Washington",
+      "party": [
+        "First Financial Northwest, Inc.",
+        "The Stilwell Group",
+        "Spencer L. Schneider"
+      ],
+      "term": null
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "c859bb3f-4956-461b-b6db-ca30f6663540"
+        ],
+        "value": "2012-01-11"
+      },
+      "jurisdiction": {
+        "references": [
+          "e28dd9cb-5042-4c01-93a9-7e80cee6a512"
+        ],
+        "value": "State of Washington"
+      },
+      "party": [
+        {
+          "references": [
+            "c859bb3f-4956-461b-b6db-ca30f6663540",
+            "ed6aa094-2482-4048-8344-81b5c0949074"
+          ],
+          "value": "First Financial Northwest, Inc."
+        },
+        {
+          "references": [
+            "c859bb3f-4956-461b-b6db-ca30f6663540",
+            "f91214f8-367c-4a2c-b15c-8cd2f759da66"
+          ],
+          "value": "The Stilwell Group"
+        },
+        {
+          "references": [
+            "c859bb3f-4956-461b-b6db-ca30f6663540",
+            "2a121a46-3abd-4755-b242-968c1a1858cd"
+          ],
+          "value": "Spencer L. Schneider"
+        }
+      ],
+      "term": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 19779,
+      "credit_usage": 1.9,
+      "job_id": "cmrymay3b03wwe4012vfxnune",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20000,
+    "credit_usage": 1.9,
+    "job_id": "cmrymay3b03wwe4012vfxnune",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

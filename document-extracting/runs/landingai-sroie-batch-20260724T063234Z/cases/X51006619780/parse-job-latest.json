@@ -1,0 +1,449 @@
+{
+  "job_id": "cmryknrth028pd50106qbr58t",
+  "status": "completed",
+  "received_at": 1784875284,
+  "created_at": 1784875284,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='63164f4c-ae81-4390-a557-181d46f70f33'></a>\n\nYam Fresh\nNo.145G, Jalan Rimbunan Raya 1,\nLaman Rimbunan Kepong,\n52100 Kuala Lumpur\nTel: (603) 6243 5520\nGST ID=001817907200\n\n<a id='789080ee-7eb7-49c9-bea3-aedf263cc6ec'></a>\n\nInvoice: 001-9822\nDate: 2016-07-31 13:48:37\n\n<a id='c4b0dcbb-f2e1-496f-9cd3-5d0201bd5e10'></a>\n\nDine In\n\n<a id='df1b4ee0-1e12-44e8-b227-95a73f0b14d7'></a>\n\n206 Yam Fresh Signature-C   1   RM7.90\n:1\n:Milk\n\n<a id='fde477b8-acac-4fe5-b039-0f402346bbfb'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Sub-Total</td><td id=\"0-3\">RM7.90</td></tr>\n<tr><td id=\"0-4\">6% GST</td><td id=\"0-5\">RM0.47</td></tr>\n<tr><td id=\"0-6\">Rounding</td><td id=\"0-7\">-RM0.02</td></tr>\n<tr><td id=\"0-8\"></td><td id=\"0-9\"></td></tr>\n</table>\nGrand Total RM8.35\n\n<a id='7ae93651-38c1-4068-9e8b-4fee9983d39a'></a>\n\nCash RM10.50\nChange RM2.15\n\n<a id='9697ac45-a69e-40f6-8e4c-2f650c9c718b'></a>\n\nThank You.\nPlease visit us at:-\nFacebook:-Yam Fresh\n\n<a id='ce415f43-4e2d-4129-8224-c50df394839a'></a>\n\n001-2016-07-31 13:48:51 LiJie\n\n<a id='11c2b7da-79ef-418a-8722-9713b7581309'></a>\n\n001-9822 [1]",
+    "chunks": [
+      {
+        "markdown": "<a id='63164f4c-ae81-4390-a557-181d46f70f33'></a>\n\nYam Fresh\nNo.145G, Jalan Rimbunan Raya 1,\nLaman Rimbunan Kepong,\n52100 Kuala Lumpur\nTel: (603) 6243 5520\nGST ID=001817907200",
+        "type": "text",
+        "id": "63164f4c-ae81-4390-a557-181d46f70f33",
+        "grounding": {
+          "box": {
+            "left": 0.15851005911827087,
+            "top": 0.07147566974163055,
+            "right": 0.7646008729934692,
+            "bottom": 0.23917873203754425
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='789080ee-7eb7-49c9-bea3-aedf263cc6ec'></a>\n\nInvoice: 001-9822\nDate: 2016-07-31 13:48:37",
+        "type": "text",
+        "id": "789080ee-7eb7-49c9-bea3-aedf263cc6ec",
+        "grounding": {
+          "box": {
+            "left": 0.011273831129074097,
+            "top": 0.3145647346973419,
+            "right": 0.5073635578155518,
+            "bottom": 0.39081671833992004
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='c4b0dcbb-f2e1-496f-9cd3-5d0201bd5e10'></a>\n\nDine In",
+        "type": "text",
+        "id": "c4b0dcbb-f2e1-496f-9cd3-5d0201bd5e10",
+        "grounding": {
+          "box": {
+            "left": 0.766488254070282,
+            "top": 0.3334639370441437,
+            "right": 0.9209317564964294,
+            "bottom": 0.3654668629169464
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='df1b4ee0-1e12-44e8-b227-95a73f0b14d7'></a>\n\n206 Yam Fresh Signature-C   1   RM7.90\n:1\n:Milk",
+        "type": "text",
+        "id": "df1b4ee0-1e12-44e8-b227-95a73f0b14d7",
+        "grounding": {
+          "box": {
+            "left": 0.011452347040176392,
+            "top": 0.4042115807533264,
+            "right": 0.9239139556884766,
+            "bottom": 0.49649322032928467
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='fde477b8-acac-4fe5-b039-0f402346bbfb'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Sub-Total</td><td id=\"0-3\">RM7.90</td></tr>\n<tr><td id=\"0-4\">6% GST</td><td id=\"0-5\">RM0.47</td></tr>\n<tr><td id=\"0-6\">Rounding</td><td id=\"0-7\">-RM0.02</td></tr>\n<tr><td id=\"0-8\"></td><td id=\"0-9\"></td></tr>\n</table>\nGrand Total RM8.35",
+        "type": "table",
+        "id": "fde477b8-acac-4fe5-b039-0f402346bbfb",
+        "grounding": {
+          "box": {
+            "left": 0.4437099099159241,
+            "top": 0.5130855441093445,
+            "right": 0.9258210062980652,
+            "bottom": 0.6901515126228333
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='7ae93651-38c1-4068-9e8b-4fee9983d39a'></a>\n\nCash RM10.50\nChange RM2.15",
+        "type": "text",
+        "id": "7ae93651-38c1-4068-9e8b-4fee9983d39a",
+        "grounding": {
+          "box": {
+            "left": 0.5393017530441284,
+            "top": 0.7169322371482849,
+            "right": 0.9260647296905518,
+            "bottom": 0.782084047794342
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='9697ac45-a69e-40f6-8e4c-2f650c9c718b'></a>\n\nThank You.\nPlease visit us at:-\nFacebook:-Yam Fresh",
+        "type": "text",
+        "id": "9697ac45-a69e-40f6-8e4c-2f650c9c718b",
+        "grounding": {
+          "box": {
+            "left": 0.2521740794181824,
+            "top": 0.7989369034767151,
+            "right": 0.6649004220962524,
+            "bottom": 0.8866941332817078
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='ce415f43-4e2d-4129-8224-c50df394839a'></a>\n\n001-2016-07-31 13:48:51 LiJie",
+        "type": "text",
+        "id": "ce415f43-4e2d-4129-8224-c50df394839a",
+        "grounding": {
+          "box": {
+            "left": 0.011717796325683594,
+            "top": 0.9022773504257202,
+            "right": 0.4603597819805145,
+            "bottom": 0.9344426393508911
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='11c2b7da-79ef-418a-8722-9713b7581309'></a>\n\n001-9822 [1]",
+        "type": "text",
+        "id": "11c2b7da-79ef-418a-8722-9713b7581309",
+        "grounding": {
+          "box": {
+            "left": 0.5378531217575073,
+            "top": 0.9040173292160034,
+            "right": 0.7262877225875854,
+            "bottom": 0.9333393573760986
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='63164f4c-ae81-4390-a557-181d46f70f33'></a>\n\nYam Fresh\nNo.145G, Jalan Rimbunan Raya 1,\nLaman Rimbunan Kepong,\n52100 Kuala Lumpur\nTel: (603) 6243 5520\nGST ID=001817907200\n\n<a id='789080ee-7eb7-49c9-bea3-aedf263cc6ec'></a>\n\nInvoice: 001-9822\nDate: 2016-07-31 13:48:37\n\n<a id='c4b0dcbb-f2e1-496f-9cd3-5d0201bd5e10'></a>\n\nDine In\n\n<a id='df1b4ee0-1e12-44e8-b227-95a73f0b14d7'></a>\n\n206 Yam Fresh Signature-C   1   RM7.90\n:1\n:Milk\n\n<a id='fde477b8-acac-4fe5-b039-0f402346bbfb'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Sub-Total</td><td id=\"0-3\">RM7.90</td></tr>\n<tr><td id=\"0-4\">6% GST</td><td id=\"0-5\">RM0.47</td></tr>\n<tr><td id=\"0-6\">Rounding</td><td id=\"0-7\">-RM0.02</td></tr>\n<tr><td id=\"0-8\"></td><td id=\"0-9\"></td></tr>\n</table>\nGrand Total RM8.35\n\n<a id='7ae93651-38c1-4068-9e8b-4fee9983d39a'></a>\n\nCash RM10.50\nChange RM2.15\n\n<a id='9697ac45-a69e-40f6-8e4c-2f650c9c718b'></a>\n\nThank You.\nPlease visit us at:-\nFacebook:-Yam Fresh\n\n<a id='ce415f43-4e2d-4129-8224-c50df394839a'></a>\n\n001-2016-07-31 13:48:51 LiJie\n\n<a id='11c2b7da-79ef-418a-8722-9713b7581309'></a>\n\n001-9822 [1]",
+        "chunks": [
+          "63164f4c-ae81-4390-a557-181d46f70f33",
+          "789080ee-7eb7-49c9-bea3-aedf263cc6ec",
+          "c4b0dcbb-f2e1-496f-9cd3-5d0201bd5e10",
+          "df1b4ee0-1e12-44e8-b227-95a73f0b14d7",
+          "fde477b8-acac-4fe5-b039-0f402346bbfb",
+          "7ae93651-38c1-4068-9e8b-4fee9983d39a",
+          "9697ac45-a69e-40f6-8e4c-2f650c9c718b",
+          "ce415f43-4e2d-4129-8224-c50df394839a",
+          "11c2b7da-79ef-418a-8722-9713b7581309"
+        ]
+      }
+    ],
+    "grounding": {
+      "63164f4c-ae81-4390-a557-181d46f70f33": {
+        "box": {
+          "left": 0.15851005911827087,
+          "top": 0.07147566974163055,
+          "right": 0.7646008729934692,
+          "bottom": 0.23917873203754425
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.986,
+        "low_confidence_spans": []
+      },
+      "789080ee-7eb7-49c9-bea3-aedf263cc6ec": {
+        "box": {
+          "left": 0.011273831129074097,
+          "top": 0.3145647346973419,
+          "right": 0.5073635578155518,
+          "bottom": 0.39081671833992004
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.995,
+        "low_confidence_spans": []
+      },
+      "c4b0dcbb-f2e1-496f-9cd3-5d0201bd5e10": {
+        "box": {
+          "left": 0.766488254070282,
+          "top": 0.3334639370441437,
+          "right": 0.9209317564964294,
+          "bottom": 0.3654668629169464
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "df1b4ee0-1e12-44e8-b227-95a73f0b14d7": {
+        "box": {
+          "left": 0.011452347040176392,
+          "top": 0.4042115807533264,
+          "right": 0.9239139556884766,
+          "bottom": 0.49649322032928467
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.967,
+        "low_confidence_spans": []
+      },
+      "fde477b8-acac-4fe5-b039-0f402346bbfb": {
+        "box": {
+          "left": 0.4437099099159241,
+          "top": 0.5130855441093445,
+          "right": 0.9258210062980652,
+          "bottom": 0.6901515126228333
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.992,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.4863437029186448,
+          "top": 0.5218496789045086,
+          "right": 0.9195872064547856,
+          "bottom": 0.6168118952281674
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.48646690354045385,
+          "top": 0.5218496789045086,
+          "right": 0.67172323777577,
+          "bottom": 0.5472164777642957
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.97,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.6714564163555222,
+          "top": 0.5218698271659823,
+          "right": 0.9195872064547856,
+          "bottom": 0.5472063621807552
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.4864200853273143,
+          "top": 0.5472063621807552,
+          "right": 0.6714564163555222,
+          "bottom": 0.5736738765232965
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.986,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.6711776844861805,
+          "top": 0.5471927973274204,
+          "right": 0.9195247161020257,
+          "bottom": 0.5736873462143238
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.99,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.48636700290694224,
+          "top": 0.5736638531145066,
+          "right": 0.6711776844861805,
+          "bottom": 0.6037619410351337
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.6708608242643358,
+          "top": 0.5736738765232965,
+          "right": 0.9194592649121807,
+          "bottom": 0.6039129368964711
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.971,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "0-8": {
+        "box": {
+          "left": 0.4863437029186448,
+          "top": 0.6036498479214835,
+          "right": 0.6708608242643358,
+          "bottom": 0.6168118952281674
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.997,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "0-9": {
+        "box": {
+          "left": 0.670725981488035,
+          "top": 0.6037619410351337,
+          "right": 0.9193845966895827,
+          "bottom": 0.6165661931077883
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.984,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "fde477b8-acac-4fe5-b039-0f402346bbfb"
+        }
+      },
+      "7ae93651-38c1-4068-9e8b-4fee9983d39a": {
+        "box": {
+          "left": 0.5393017530441284,
+          "top": 0.7169322371482849,
+          "right": 0.9260647296905518,
+          "bottom": 0.782084047794342
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.98,
+        "low_confidence_spans": []
+      },
+      "9697ac45-a69e-40f6-8e4c-2f650c9c718b": {
+        "box": {
+          "left": 0.2521740794181824,
+          "top": 0.7989369034767151,
+          "right": 0.6649004220962524,
+          "bottom": 0.8866941332817078
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.976,
+        "low_confidence_spans": []
+      },
+      "ce415f43-4e2d-4129-8224-c50df394839a": {
+        "box": {
+          "left": 0.011717796325683594,
+          "top": 0.9022773504257202,
+          "right": 0.4603597819805145,
+          "bottom": 0.9344426393508911
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "11c2b7da-79ef-418a-8722-9713b7581309": {
+        "box": {
+          "left": 0.5378531217575073,
+          "top": 0.9040173292160034,
+          "right": 0.7262877225875854,
+          "bottom": 0.9333393573760986
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51006619780.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 6240,
+      "credit_usage": 3.0,
+      "job_id": "cmryknrth028pd50106qbr58t",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51006619780.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7000,
+    "credit_usage": 3.0,
+    "job_id": "cmryknrth028pd50106qbr58t",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

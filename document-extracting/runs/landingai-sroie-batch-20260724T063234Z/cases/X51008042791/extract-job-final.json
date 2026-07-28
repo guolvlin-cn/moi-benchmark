@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryks1wc029fd501czv1ro9p",
+  "status": "completed",
+  "received_at": 1784875484,
+  "created_at": 1784875484,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "RESTORAN WAN SHENG",
+      "date": "06-05-2018",
+      "address": "No.2, Jalan Temenggung 19/9, Seksyen 9, Bandar Mahkota Cheras, 43200 Cheras, Selangor",
+      "total": "2.40"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "529c3e1b-ef4d-4e7e-a4cd-b999686c50d6"
+        ],
+        "value": "RESTORAN WAN SHENG"
+      },
+      "date": {
+        "references": [
+          "a154f9ee-6a4c-4f05-8987-a57c81c0ad99"
+        ],
+        "value": "06-05-2018"
+      },
+      "address": {
+        "references": [
+          "529c3e1b-ef4d-4e7e-a4cd-b999686c50d6"
+        ],
+        "value": "No.2, Jalan Temenggung 19/9, Seksyen 9, Bandar Mahkota Cheras, 43200 Cheras, Selangor"
+      },
+      "total": {
+        "references": [
+          "0-r"
+        ],
+        "value": "2.40"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10464,
+      "credit_usage": 0.5,
+      "job_id": "cmryks1wc029fd501czv1ro9p",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11000,
+    "credit_usage": 0.5,
+    "job_id": "cmryks1wc029fd501czv1ro9p",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

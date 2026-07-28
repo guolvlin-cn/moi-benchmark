@@ -1,0 +1,223 @@
+{
+  "available_actions": [
+    "refresh",
+    "result",
+    "delete",
+    "retry"
+  ],
+  "case_error": "FAILED: work item: [root.extract_fields] [moi:llm.extract.structured.advanced] flat mode extract: llm call: chat completion stream error: message=Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content type=data_inspection_failed code=data_inspection_failed",
+  "execution_id": "c1341727-4048-4c94-8539-6caaab7a4ce0",
+  "job_summary": {
+    "input": {
+      "file_id": "4ee5602c-aaa2-403a-8002-afce30e906b2",
+      "file_name": "19920101_Office of Tibet_Dissemination Report_Dissemination Report.pdf",
+      "kind": "file",
+      "label": "19920101_Office of Tibet_Dissemination Report_Dissemination Report.pdf",
+      "volume_id": 20001
+    },
+    "output": {
+      "file_path": "输出数据/提取输出/sroie",
+      "kind": "file",
+      "label": "输出数据/提取输出/sroie",
+      "volume_id": 20002
+    },
+    "steps": [
+      {
+        "display_name": "read_source",
+        "duration_ms": 80,
+        "flow_id": "root",
+        "name": "read_source",
+        "node_key": "root.read_source",
+        "node_type": "catalog.source.read.v2",
+        "status": "completed"
+      },
+      {
+        "display_name": "parse_documents",
+        "duration_ms": 11571,
+        "flow_id": "root",
+        "name": "parse_documents",
+        "node_key": "root.parse_documents",
+        "node_type": "parse",
+        "status": "completed"
+      },
+      {
+        "display_name": "LLM Advanced Structured Extraction",
+        "duration_ms": 2307,
+        "error": "FAILED: work item: [root.extract_fields] [moi:llm.extract.structured.advanced] flat mode extract: llm call: chat completion stream error: message=Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content type=data_inspection_failed code=data_inspection_failed",
+        "flow_id": "root",
+        "name": "extract_fields",
+        "node_key": "root.extract_fields",
+        "node_type": "llm.extract.structured.advanced",
+        "status": "failed"
+      }
+    ]
+  },
+  "moi_case_id": "019fa6e4-7d2b-7259-a701-d1f73c2f2724",
+  "moi_task_id": "f71037b4-560a-468c-bbab-a07edcef8f49",
+  "node_states": [
+    {
+      "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.read_source\"}",
+      "duration_ms": 80,
+      "ended_at": "2026-07-27T20:03:40Z",
+      "kind": "node",
+      "node_id": "moi:catalog.source.read.v2",
+      "node_name": "node:root.read_source",
+      "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+      "span_id": "3959cee0-ac5d-4aae-8e45-8e1bc6b599ff",
+      "started_at": "2026-07-27T20:03:40Z",
+      "status": "completed",
+      "workitem_id": "019fa6e4-7de7-78d9-9e83-ee47282529d9"
+    },
+    {
+      "attrs_json": "{\"root\":\"root\",\"workflow_name\":\"info-extraction\"}",
+      "duration_ms": 14142,
+      "ended_at": "2026-07-27T20:03:54Z",
+      "error": "FAILED: work item: [root.extract_fields] [moi:llm.extract.structured.advanced] flat mode extract: llm call: chat completion stream error: message=Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content type=data_inspection_failed code=data_inspection_failed",
+      "kind": "workflow",
+      "node_name": "workflow:info-extraction",
+      "span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+      "started_at": "2026-07-27T20:03:40Z",
+      "status": "failed"
+    },
+    {
+      "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.parse_documents\"}",
+      "duration_ms": 11571,
+      "ended_at": "2026-07-27T20:03:52Z",
+      "kind": "node",
+      "node_id": "moi:parse",
+      "node_name": "node:root.parse_documents",
+      "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+      "span_id": "791f5bb7-900f-4c00-9111-d7cbb47c709c",
+      "started_at": "2026-07-27T20:03:40Z",
+      "status": "completed",
+      "workitem_id": "019fa6e4-7e39-7065-b4d9-ba8c4a3b35e7"
+    },
+    {
+      "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.__start\"}",
+      "duration_ms": 121,
+      "ended_at": "2026-07-27T20:03:40Z",
+      "kind": "node",
+      "node_id": "mowl:start",
+      "node_name": "node:root.__start",
+      "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+      "span_id": "d3c22144-7830-4386-a9a3-9b882683d21d",
+      "started_at": "2026-07-27T20:03:40Z",
+      "status": "completed",
+      "workitem_id": "019fa6e4-7d6c-7130-95d4-500fbcb47c59"
+    },
+    {
+      "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.extract_fields\"}",
+      "duration_ms": 2307,
+      "ended_at": "2026-07-27T20:03:54Z",
+      "error": "FAILED: work item: [root.extract_fields] [moi:llm.extract.structured.advanced] flat mode extract: llm call: chat completion stream error: message=Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content type=data_inspection_failed code=data_inspection_failed",
+      "kind": "node",
+      "node_id": "moi:llm.extract.structured.advanced",
+      "node_name": "node:root.extract_fields",
+      "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+      "span_id": "910fcdf8-c983-4095-9052-2ba6d44118dd",
+      "started_at": "2026-07-27T20:03:52Z",
+      "status": "failed",
+      "workitem_id": "019fa6e4-ab6e-71a9-a1d5-6a426bb7cf3a"
+    }
+  ],
+  "status": "failed",
+  "trace": {
+    "metrics": {
+      "node_span_count": 4,
+      "p95_node_duration_ms": 2307,
+      "span_count": 5
+    },
+    "spans": [
+      {
+        "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.read_source\"}",
+        "case_id": "019fa6e4-7d2b-7259-a701-d1f73c2f2724",
+        "duration_ms": 80,
+        "ended_at": "2026-07-27T20:03:40Z",
+        "kind": "node",
+        "name": "node:root.read_source",
+        "node_id": "moi:catalog.source.read.v2",
+        "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+        "span_id": "3959cee0-ac5d-4aae-8e45-8e1bc6b599ff",
+        "started_at": "2026-07-27T20:03:40Z",
+        "status": "completed",
+        "trace_id": "4389bc47-4423-4984-8d94-b46018ce4380",
+        "workitem_id": "019fa6e4-7de7-78d9-9e83-ee47282529d9"
+      },
+      {
+        "attrs_json": "{\"root\":\"root\",\"workflow_name\":\"info-extraction\"}",
+        "case_id": "019fa6e4-7d2b-7259-a701-d1f73c2f2724",
+        "duration_ms": 14142,
+        "ended_at": "2026-07-27T20:03:54Z",
+        "error": "FAILED: work item: [root.extract_fields] [moi:llm.extract.structured.advanced] flat mode extract: llm call: chat completion stream error: message=Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content type=data_inspection_failed code=data_inspection_failed",
+        "kind": "workflow",
+        "name": "workflow:info-extraction",
+        "span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+        "started_at": "2026-07-27T20:03:40Z",
+        "status": "failed",
+        "trace_id": "4389bc47-4423-4984-8d94-b46018ce4380"
+      },
+      {
+        "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.parse_documents\"}",
+        "case_id": "019fa6e4-7d2b-7259-a701-d1f73c2f2724",
+        "duration_ms": 11571,
+        "ended_at": "2026-07-27T20:03:52Z",
+        "kind": "node",
+        "name": "node:root.parse_documents",
+        "node_id": "moi:parse",
+        "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+        "span_id": "791f5bb7-900f-4c00-9111-d7cbb47c709c",
+        "started_at": "2026-07-27T20:03:40Z",
+        "status": "completed",
+        "trace_id": "4389bc47-4423-4984-8d94-b46018ce4380",
+        "workitem_id": "019fa6e4-7e39-7065-b4d9-ba8c4a3b35e7"
+      },
+      {
+        "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.__start\"}",
+        "case_id": "019fa6e4-7d2b-7259-a701-d1f73c2f2724",
+        "duration_ms": 121,
+        "ended_at": "2026-07-27T20:03:40Z",
+        "kind": "node",
+        "name": "node:root.__start",
+        "node_id": "mowl:start",
+        "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+        "span_id": "d3c22144-7830-4386-a9a3-9b882683d21d",
+        "started_at": "2026-07-27T20:03:40Z",
+        "status": "completed",
+        "trace_id": "4389bc47-4423-4984-8d94-b46018ce4380",
+        "workitem_id": "019fa6e4-7d6c-7130-95d4-500fbcb47c59"
+      },
+      {
+        "attrs_json": "{\"net_name\":\"root\",\"node_name\":\"root.extract_fields\"}",
+        "case_id": "019fa6e4-7d2b-7259-a701-d1f73c2f2724",
+        "duration_ms": 2307,
+        "ended_at": "2026-07-27T20:03:54Z",
+        "error": "FAILED: work item: [root.extract_fields] [moi:llm.extract.structured.advanced] flat mode extract: llm call: chat completion stream error: message=Output data may contain inappropriate content. For details, see: https://help.aliyun.com/zh/model-studio/error-code#inappropriate-content type=data_inspection_failed code=data_inspection_failed",
+        "kind": "node",
+        "name": "node:root.extract_fields",
+        "node_id": "moi:llm.extract.structured.advanced",
+        "parent_span_id": "7371cd6a-a20f-41bc-b484-1ff796ac469d",
+        "span_id": "910fcdf8-c983-4095-9052-2ba6d44118dd",
+        "started_at": "2026-07-27T20:03:52Z",
+        "status": "failed",
+        "trace_id": "4389bc47-4423-4984-8d94-b46018ce4380",
+        "workitem_id": "019fa6e4-ab6e-71a9-a1d5-6a426bb7cf3a"
+      }
+    ],
+    "trace": {
+      "case_id": "019fa6e4-7d2b-7259-a701-d1f73c2f2724",
+      "duration_ms": 14179,
+      "ended_at": "2026-07-27T20:03:54Z",
+      "options_json": "{\"enabled\":true,\"level\":\"TRACE_LEVEL_NODE\"}",
+      "started_at": "2026-07-27T20:03:40Z",
+      "status": "failed",
+      "task_id": "f71037b4-560a-468c-bbab-a07edcef8f49",
+      "trace_id": "4389bc47-4423-4984-8d94-b46018ce4380",
+      "trace_level": 2,
+      "user_id": "3871589c-f048-4ac2-b246-17a414a87cbc",
+      "workflow_id": "a42507ef-aedb-408b-9d91-f098d768cb76",
+      "workflow_version_id": "9d756d96-5c9f-4b98-965a-66f068d9cadf",
+      "workspace_id": "abe9f340-ab88-0d9c-5773-837e70c25c48"
+    }
+  },
+  "workflow_id": "2b084712-3ed2-4034-965b-8e2657693359"
+}

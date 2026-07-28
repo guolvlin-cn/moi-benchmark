@@ -1,0 +1,99 @@
+{
+  "job_id": "cmrymn7ce0418cx01qw0h9pxa",
+  "status": "completed",
+  "received_at": 1784878617,
+  "created_at": 1784878617,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2005-05-04",
+      "jurisdiction": "Idaho",
+      "party": [
+        "Silver Valley Capital",
+        "Sterling Mining Company",
+        "Kimberly Gold Mines, Inc.",
+        "Shoshone Silver Mining Company",
+        "Michael L. Mooney"
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "3946b7b2-8a21-4c85-8386-607dd435904c"
+        ],
+        "value": "2005-05-04"
+      },
+      "jurisdiction": {
+        "references": [
+          "079e9557-7820-45e3-93a7-a7953a80914f"
+        ],
+        "value": "Idaho"
+      },
+      "party": [
+        {
+          "references": [
+            "3946b7b2-8a21-4c85-8386-607dd435904c"
+          ],
+          "value": "Silver Valley Capital"
+        },
+        {
+          "references": [
+            "3946b7b2-8a21-4c85-8386-607dd435904c"
+          ],
+          "value": "Sterling Mining Company"
+        },
+        {
+          "references": [
+            "3946b7b2-8a21-4c85-8386-607dd435904c"
+          ],
+          "value": "Kimberly Gold Mines, Inc."
+        },
+        {
+          "references": [
+            "3946b7b2-8a21-4c85-8386-607dd435904c"
+          ],
+          "value": "Shoshone Silver Mining Company"
+        },
+        {
+          "references": [
+            "3946b7b2-8a21-4c85-8386-607dd435904c"
+          ],
+          "value": "Michael L. Mooney"
+        }
+      ],
+      "term": {
+        "references": [
+          "e1fcd6e7-78a5-4eda-bfca-3b0d4f17bf62"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 16183,
+      "credit_usage": 1.5,
+      "job_id": "cmrymn7ce0418cx01qw0h9pxa",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17000,
+    "credit_usage": 1.5,
+    "job_id": "cmrymn7ce0418cx01qw0h9pxa",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

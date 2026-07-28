@@ -1,0 +1,449 @@
+{
+  "job_id": "cmrykkaqc036qe4011qojfuh5",
+  "status": "completed",
+  "received_at": 1784875122,
+  "created_at": 1784875122,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='b121844a-749e-4ece-abe2-0c01533f2ca9'></a>\n\n<::attestation: Signature or handwritten mark\n[Signature: legible]\nA04086\nHandwritten, scribbled alphanumeric string positioned centrally.::>\n\n<a id='a5e53c15-7fc3-4229-bdce-ae7d705474ed'></a>\n\nAEON CO. (M) BHD (126926-H)\n3RD FLR, AEON TAMAN MALURI SC\nJLN JEJAKA, TAMAN MALURI\nCHERAS, 55100 KUALA LUMPUR\nGST ID: 002017394688\nSHOPPING HOURS\nSUN-THU:1000 HRS - 2200 HRS\nFRI-SAT:1000 HRS - 2300 HRS\n\n<a id='968f3a4d-a619-4238-9639-66c413e30e03'></a>\n\nVALUED CUSTOMER: 1170086176\n\n<a id='165a2840-a5a1-46ff-8e42-f4a6a292e8bd'></a>\n\n1x 000000811101             2.50SR\nTAMAGO (S)\nDISC 30% @1.75             -0.75\n\nSub-total                  1.75\nTotal Sales Incl GST       1.75\nTotal After Adj Incl GST   1.75\nCASH                       1.80\nItem Count 1 Change Amt    0.05\n\n<a id='e44e5018-a709-4946-80e0-d58427b2db2b'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\" colspan=\"2\">Invoice No: 2018041810090010447</td></tr>\n<tr><td id=\"0-3\">GST Summary</td><td id=\"0-4\">Amount Tax</td></tr>\n<tr><td id=\"0-5\">SR @ 6%</td><td id=\"0-6\">1.65 0.10</td></tr>\n<tr><td id=\"0-7\">Total</td><td id=\"0-8\">1.65 0.10</td></tr>\n<tr><td id=\"0-9\">18/04/2018 20:27</td><td id=\"0-a\">1009 001 0010447</td></tr>\n<tr><td id=\"0-b\">0306654 PAVITHRA</td><td id=\"0-c\"></td></tr>\n</table>\n\n<a id='d7c760ce-800a-47f0-931a-a53fae3e5101'></a>\n\nAEON TAMAN UNIVERSITI\nTEL 1-300-80-AEON (2366)\nTHANK YOU FOR YOUR PATRONAGE\nPLEASE COME AGAIN\n\n<a id='464b42ee-04a5-4e4f-b74f-f696a8efb14d'></a>\n\n<::scan_code: Barcode\nNo readable text present.\nThe barcode is composed of black vertical lines of varying widths on a white background, appearing somewhat grainy and faded.:>",
+    "chunks": [
+      {
+        "markdown": "<a id='b121844a-749e-4ece-abe2-0c01533f2ca9'></a>\n\n<::attestation: Signature or handwritten mark\n[Signature: legible]\nA04086\nHandwritten, scribbled alphanumeric string positioned centrally.::>",
+        "type": "attestation",
+        "id": "b121844a-749e-4ece-abe2-0c01533f2ca9",
+        "grounding": {
+          "box": {
+            "left": 0.5492643117904663,
+            "top": 0.11908692121505737,
+            "right": 0.6494717597961426,
+            "bottom": 0.14860054850578308
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='a5e53c15-7fc3-4229-bdce-ae7d705474ed'></a>\n\nAEON CO. (M) BHD (126926-H)\n3RD FLR, AEON TAMAN MALURI SC\nJLN JEJAKA, TAMAN MALURI\nCHERAS, 55100 KUALA LUMPUR\nGST ID: 002017394688\nSHOPPING HOURS\nSUN-THU:1000 HRS - 2200 HRS\nFRI-SAT:1000 HRS - 2300 HRS",
+        "type": "text",
+        "id": "a5e53c15-7fc3-4229-bdce-ae7d705474ed",
+        "grounding": {
+          "box": {
+            "left": 0.40884140133857727,
+            "top": 0.1511097103357315,
+            "right": 0.6191757321357727,
+            "bottom": 0.2652055025100708
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='968f3a4d-a619-4238-9639-66c413e30e03'></a>\n\nVALUED CUSTOMER: 1170086176",
+        "type": "text",
+        "id": "968f3a4d-a619-4238-9639-66c413e30e03",
+        "grounding": {
+          "box": {
+            "left": 0.3493477702140808,
+            "top": 0.26600366830825806,
+            "right": 0.5487105846405029,
+            "bottom": 0.2798919081687927
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='165a2840-a5a1-46ff-8e42-f4a6a292e8bd'></a>\n\n1x 000000811101             2.50SR\nTAMAGO (S)\nDISC 30% @1.75             -0.75\n\nSub-total                  1.75\nTotal Sales Incl GST       1.75\nTotal After Adj Incl GST   1.75\nCASH                       1.80\nItem Count 1 Change Amt    0.05",
+        "type": "text",
+        "id": "165a2840-a5a1-46ff-8e42-f4a6a292e8bd",
+        "grounding": {
+          "box": {
+            "left": 0.34861302375793457,
+            "top": 0.2876245975494385,
+            "right": 0.6413018703460693,
+            "bottom": 0.4205704927444458
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='e44e5018-a709-4946-80e0-d58427b2db2b'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\" colspan=\"2\">Invoice No: 2018041810090010447</td></tr>\n<tr><td id=\"0-3\">GST Summary</td><td id=\"0-4\">Amount Tax</td></tr>\n<tr><td id=\"0-5\">SR @ 6%</td><td id=\"0-6\">1.65 0.10</td></tr>\n<tr><td id=\"0-7\">Total</td><td id=\"0-8\">1.65 0.10</td></tr>\n<tr><td id=\"0-9\">18/04/2018 20:27</td><td id=\"0-a\">1009 001 0010447</td></tr>\n<tr><td id=\"0-b\">0306654 PAVITHRA</td><td id=\"0-c\"></td></tr>\n</table>",
+        "type": "table",
+        "id": "e44e5018-a709-4946-80e0-d58427b2db2b",
+        "grounding": {
+          "box": {
+            "left": 0.346710205078125,
+            "top": 0.42065078020095825,
+            "right": 0.6406741142272949,
+            "bottom": 0.5057687163352966
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='d7c760ce-800a-47f0-931a-a53fae3e5101'></a>\n\nAEON TAMAN UNIVERSITI\nTEL 1-300-80-AEON (2366)\nTHANK YOU FOR YOUR PATRONAGE\nPLEASE COME AGAIN",
+        "type": "text",
+        "id": "d7c760ce-800a-47f0-931a-a53fae3e5101",
+        "grounding": {
+          "box": {
+            "left": 0.40415260195732117,
+            "top": 0.5167110562324524,
+            "right": 0.6093355417251587,
+            "bottom": 0.5772727131843567
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='464b42ee-04a5-4e4f-b74f-f696a8efb14d'></a>\n\n<::scan_code: Barcode\nNo readable text present.\nThe barcode is composed of black vertical lines of varying widths on a white background, appearing somewhat grainy and faded.:>",
+        "type": "scan_code",
+        "id": "464b42ee-04a5-4e4f-b74f-f696a8efb14d",
+        "grounding": {
+          "box": {
+            "left": 0.35316336154937744,
+            "top": 0.6014286875724792,
+            "right": 0.6494147777557373,
+            "bottom": 0.6406046748161316
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='b121844a-749e-4ece-abe2-0c01533f2ca9'></a>\n\n<::attestation: Signature or handwritten mark\n[Signature: legible]\nA04086\nHandwritten, scribbled alphanumeric string positioned centrally.::>\n\n<a id='a5e53c15-7fc3-4229-bdce-ae7d705474ed'></a>\n\nAEON CO. (M) BHD (126926-H)\n3RD FLR, AEON TAMAN MALURI SC\nJLN JEJAKA, TAMAN MALURI\nCHERAS, 55100 KUALA LUMPUR\nGST ID: 002017394688\nSHOPPING HOURS\nSUN-THU:1000 HRS - 2200 HRS\nFRI-SAT:1000 HRS - 2300 HRS\n\n<a id='968f3a4d-a619-4238-9639-66c413e30e03'></a>\n\nVALUED CUSTOMER: 1170086176\n\n<a id='165a2840-a5a1-46ff-8e42-f4a6a292e8bd'></a>\n\n1x 000000811101             2.50SR\nTAMAGO (S)\nDISC 30% @1.75             -0.75\n\nSub-total                  1.75\nTotal Sales Incl GST       1.75\nTotal After Adj Incl GST   1.75\nCASH                       1.80\nItem Count 1 Change Amt    0.05\n\n<a id='e44e5018-a709-4946-80e0-d58427b2db2b'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\" colspan=\"2\">Invoice No: 2018041810090010447</td></tr>\n<tr><td id=\"0-3\">GST Summary</td><td id=\"0-4\">Amount Tax</td></tr>\n<tr><td id=\"0-5\">SR @ 6%</td><td id=\"0-6\">1.65 0.10</td></tr>\n<tr><td id=\"0-7\">Total</td><td id=\"0-8\">1.65 0.10</td></tr>\n<tr><td id=\"0-9\">18/04/2018 20:27</td><td id=\"0-a\">1009 001 0010447</td></tr>\n<tr><td id=\"0-b\">0306654 PAVITHRA</td><td id=\"0-c\"></td></tr>\n</table>\n\n<a id='d7c760ce-800a-47f0-931a-a53fae3e5101'></a>\n\nAEON TAMAN UNIVERSITI\nTEL 1-300-80-AEON (2366)\nTHANK YOU FOR YOUR PATRONAGE\nPLEASE COME AGAIN\n\n<a id='464b42ee-04a5-4e4f-b74f-f696a8efb14d'></a>\n\n<::scan_code: Barcode\nNo readable text present.\nThe barcode is composed of black vertical lines of varying widths on a white background, appearing somewhat grainy and faded.:>",
+        "chunks": [
+          "b121844a-749e-4ece-abe2-0c01533f2ca9",
+          "a5e53c15-7fc3-4229-bdce-ae7d705474ed",
+          "968f3a4d-a619-4238-9639-66c413e30e03",
+          "165a2840-a5a1-46ff-8e42-f4a6a292e8bd",
+          "e44e5018-a709-4946-80e0-d58427b2db2b",
+          "d7c760ce-800a-47f0-931a-a53fae3e5101",
+          "464b42ee-04a5-4e4f-b74f-f696a8efb14d"
+        ]
+      }
+    ],
+    "grounding": {
+      "b121844a-749e-4ece-abe2-0c01533f2ca9": {
+        "box": {
+          "left": 0.5492643117904663,
+          "top": 0.11908692121505737,
+          "right": 0.6494717597961426,
+          "bottom": 0.14860054850578308
+        },
+        "page": 0,
+        "type": "chunkAttestation",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "a5e53c15-7fc3-4229-bdce-ae7d705474ed": {
+        "box": {
+          "left": 0.40884140133857727,
+          "top": 0.1511097103357315,
+          "right": 0.6191757321357727,
+          "bottom": 0.2652055025100708
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.97,
+        "low_confidence_spans": []
+      },
+      "968f3a4d-a619-4238-9639-66c413e30e03": {
+        "box": {
+          "left": 0.3493477702140808,
+          "top": 0.26600366830825806,
+          "right": 0.5487105846405029,
+          "bottom": 0.2798919081687927
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "165a2840-a5a1-46ff-8e42-f4a6a292e8bd": {
+        "box": {
+          "left": 0.34861302375793457,
+          "top": 0.2876245975494385,
+          "right": 0.6413018703460693,
+          "bottom": 0.4205704927444458
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.988,
+        "low_confidence_spans": []
+      },
+      "e44e5018-a709-4946-80e0-d58427b2db2b": {
+        "box": {
+          "left": 0.346710205078125,
+          "top": 0.42065078020095825,
+          "right": 0.6406741142272949,
+          "bottom": 0.5057687163352966
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.985,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.348844943848154,
+          "top": 0.42076039717222086,
+          "right": 0.6392423530297151,
+          "bottom": 0.5057678944405524
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.348844943848154,
+          "top": 0.42076039717222086,
+          "right": 0.6392423530297151,
+          "bottom": 0.43381739194816693
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.991,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 2,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.3488487152476048,
+          "top": 0.4338168720900839,
+          "right": 0.4669199116406678,
+          "bottom": 0.44809706733630095
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.4668469366502458,
+          "top": 0.43381611344532117,
+          "right": 0.6392248111853327,
+          "bottom": 0.44807413555155395
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.967,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.348852839807723,
+          "top": 0.44807413555155395,
+          "right": 0.4668469366502458,
+          "bottom": 0.4619922405767989
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.986,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.46677584171139563,
+          "top": 0.44804063817328366,
+          "right": 0.6392056492058577,
+          "bottom": 0.4619640897413734
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.976,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.34885685330773797,
+          "top": 0.4619640897413734,
+          "right": 0.46677584171139563,
+          "bottom": 0.47610567760609335
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-8": {
+        "box": {
+          "left": 0.4667036515537305,
+          "top": 0.46192292998626155,
+          "right": 0.6391869482512826,
+          "bottom": 0.4760680189259481
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.968,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-9": {
+        "box": {
+          "left": 0.34886092985135114,
+          "top": 0.4760680189259481,
+          "right": 0.4667036515537305,
+          "bottom": 0.4907254499954019
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-a": {
+        "box": {
+          "left": 0.46662895458243425,
+          "top": 0.4760129049705183,
+          "right": 0.6391679675249234,
+          "bottom": 0.49066170908454104
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.977,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-b": {
+        "box": {
+          "left": 0.3488651526455321,
+          "top": 0.49066170908454104,
+          "right": 0.46662895458243425,
+          "bottom": 0.5057678763417979
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.987,
+        "position": {
+          "row": 5,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "0-c": {
+        "box": {
+          "left": 0.46655163452631754,
+          "top": 0.490568331120787,
+          "right": 0.6391483597852994,
+          "bottom": 0.5057678944405524
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.971,
+        "position": {
+          "row": 5,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "e44e5018-a709-4946-80e0-d58427b2db2b"
+        }
+      },
+      "d7c760ce-800a-47f0-931a-a53fae3e5101": {
+        "box": {
+          "left": 0.40415260195732117,
+          "top": 0.5167110562324524,
+          "right": 0.6093355417251587,
+          "bottom": 0.5772727131843567
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.998,
+        "low_confidence_spans": []
+      },
+      "464b42ee-04a5-4e4f-b74f-f696a8efb14d": {
+        "box": {
+          "left": 0.35316336154937744,
+          "top": 0.6014286875724792,
+          "right": 0.6494147777557373,
+          "bottom": 0.6406046748161316
+        },
+        "page": 0,
+        "type": "chunkScanCode",
+        "confidence": null,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51006414680.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 7720,
+      "credit_usage": 3.0,
+      "job_id": "cmrykkaqc036qe4011qojfuh5",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51006414680.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 8000,
+    "credit_usage": 3.0,
+    "job_id": "cmrykkaqc036qe4011qojfuh5",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

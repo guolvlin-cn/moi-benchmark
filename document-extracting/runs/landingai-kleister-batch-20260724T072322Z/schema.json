@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "effective_date": {
+      "type": "string",
+      "format": "YYYY-MM-DD",
+      "description": "The date on which the nondisclosure or confidentiality agreement becomes legally effective. Distinguish it from signature dates, filing dates, document creation dates, and dates mentioned in referenced agreements.",
+      "x-alternativeNames": [
+        "Effective Date",
+        "Date of Agreement",
+        "Agreement Date",
+        "Dated as of"
+      ]
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "The state, country, or legal jurisdiction whose laws govern the agreement. Extract the governing-law jurisdiction, not a venue, company address, incorporation state, or court location unless it is explicitly the governing law.",
+      "x-alternativeNames": [
+        "Governing Law",
+        "Applicable Law",
+        "Choice of Law",
+        "Jurisdiction"
+      ]
+    },
+    "party": {
+      "type": "array",
+      "description": "All legal entities or individuals that are parties to the agreement. Return each contracting party once. Do not include signers, representatives, affiliates, advisers, addresses, or defined third parties unless they are explicitly a contracting party.",
+      "x-alternativeNames": [
+        "Parties",
+        "Party",
+        "Disclosing Party",
+        "Receiving Party"
+      ],
+      "items": {
+        "type": "string",
+        "description": "The complete legal name of one contracting party."
+      }
+    },
+    "term": {
+      "type": "string",
+      "format": "Normalize the confidentiality obligation duration as {number}_{unit}, using lowercase singular or plural units, for example 18_months, 1_year, or 5_years.",
+      "description": "The duration of the confidentiality or nondisclosure obligation. Infer it from the operative term clause. Do not return the negotiation period, agreement renewal period, disclosure window, or document retention period.",
+      "x-alternativeNames": [
+        "Term",
+        "Duration",
+        "Confidentiality Period",
+        "Survival"
+      ]
+    }
+  }
+}

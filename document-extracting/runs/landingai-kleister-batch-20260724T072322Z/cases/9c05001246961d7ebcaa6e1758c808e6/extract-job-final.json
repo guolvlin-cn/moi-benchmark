@@ -1,0 +1,91 @@
+{
+  "job_id": "cmrymlzg803yse401a0y5f64a",
+  "status": "completed",
+  "received_at": 1784878560,
+  "created_at": 1784878560,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2008-07-02",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "UnionBanCal Corporation",
+        "The Bank of Tokyo-Mitsubishi UFJ, Ltd.",
+        "The Special Committee of the Board of Directors of UnionBanCal Corporation"
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "0399cdb9-7151-4efa-809e-3feda816a56d",
+          "fd581d59-64d8-44b4-b1a8-6fa1bdf7f13f",
+          "b56f921e-fddb-498a-ba4e-5b998a10166d",
+          "a05ca9a4-abe6-4f43-90e4-bc11b507f46d"
+        ],
+        "value": "2008-07-02"
+      },
+      "jurisdiction": {
+        "references": [
+          "c69192bb-b465-48c2-a208-d0bd4e5acc46"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "2b92016b-16bc-4395-94e6-eb34088fb89c",
+            "23f4cf50-6b91-4a9a-9ff1-e42a5ee87a51"
+          ],
+          "value": "UnionBanCal Corporation"
+        },
+        {
+          "references": [
+            "f6b20dc8-b42b-4cd1-91c5-febe504bf1d1",
+            "689478da-4d43-49cb-a53f-7b78d4ffc709"
+          ],
+          "value": "The Bank of Tokyo-Mitsubishi UFJ, Ltd."
+        },
+        {
+          "references": [
+            "0dbbe11c-04dd-4c0b-a827-3a06ae98cc4a",
+            "4d06d1f0-d303-4981-ace3-b74187591c8c"
+          ],
+          "value": "The Special Committee of the Board of Directors of UnionBanCal Corporation"
+        }
+      ],
+      "term": {
+        "references": [
+          "5e20112a-7a52-47a7-b0ff-3e975797c60c"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15472,
+      "credit_usage": 4.3,
+      "job_id": "cmrymlzg803yse401a0y5f64a",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 4.3,
+    "job_id": "cmrymlzg803yse401a0y5f64a",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

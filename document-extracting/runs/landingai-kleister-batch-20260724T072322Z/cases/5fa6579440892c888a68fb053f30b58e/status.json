@@ -1,0 +1,56 @@
+{
+  "case_id": "5fa6579440892c888a68fb053f30b58e",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/5fa6579440892c888a68fb053f30b58e.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "895c10f8058e87a37026b0e160e5b4d0caed2d2bfe78387e3f9a4a6f04bd048f",
+  "status": "completed",
+  "parse_job_id": "cmrymi4z70405cx01nzfcj8pm",
+  "extract_job_id": "cmrymio83030ld501ifg9c080",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.408617+00:00",
+  "updated_at": "2026-07-24T07:33:40.011467+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:33:01.403389+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:33:22.226790+00:00",
+  "parse_metadata": {
+    "filename": "5fa6579440892c888a68fb053f30b58e.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 4,
+    "duration_ms": 14080,
+    "credit_usage": 12.0,
+    "job_id": "cmrymi4z70405cx01nzfcj8pm",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:33:26.296118+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:33:40.011464+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12964,
+    "credit_usage": 3.6,
+    "job_id": "cmrymio83030ld501ifg9c080",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of California",
+    "party": [
+      "KBSIII REIT Acquisition VII, LLC",
+      "KBS Limited Partnership III",
+      "KBS Real Estate Investment Trust III, Inc.",
+      "KBS Capital Advisors LLC",
+      "Recipient"
+    ],
+    "term": "2_years"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryjgnoj035jcx01xi5zwdbp",
+  "status": "completed",
+  "received_at": 1784873273,
+  "created_at": 1784873273,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "5/20/92",
+      "foreign_principle_name": "UMC",
+      "registrant_name": "Hogan & Hartson",
+      "registration_num": "2244",
+      "signer_name": "Mark S. McConnell",
+      "signer_title": "Partner"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "1-2"
+        ],
+        "value": "5/20/92"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0-9"
+        ],
+        "value": "UMC"
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Hogan & Hartson"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "2244"
+      },
+      "signer_name": {
+        "references": [
+          "1-3"
+        ],
+        "value": "Mark S. McConnell"
+      },
+      "signer_title": {
+        "references": [
+          "1-3"
+        ],
+        "value": "Partner"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10638,
+      "credit_usage": 1.4,
+      "job_id": "cmryjgnoj035jcx01xi5zwdbp",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11000,
+    "credit_usage": 1.4,
+    "job_id": "cmryjgnoj035jcx01xi5zwdbp",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}
