@@ -1,0 +1,67 @@
+{
+  "note": "workflow default_values are merged by the backend",
+  "uploaded_file": {
+    "file_id": "b1008d37-7231-4ba9-b7e6-fcc7467391cf",
+    "md5": "8995f26807aa1c6d5f74f9b3f54d0dd6",
+    "original_name": "20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form.pdf",
+    "size": 163254
+  },
+  "values": {
+    "extract_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "file_date": {
+          "description": "The filing or registration date shown on the document. Return an empty string when the field is absent or uncertain; do not guess.",
+          "type": "string"
+        },
+        "foreign_principle_name": {
+          "description": "The foreign principal represented by the registrant. Keep this exact field-name spelling. Return an empty string when absent or uncertain; do not confuse it with the registrant.",
+          "type": "string"
+        },
+        "registrant_name": {
+          "description": "The official name of the registrant individual or organization. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "registration_num": {
+          "description": "The registration number as text, preserving leading zeros. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "signer_name": {
+          "description": "The name of the person who signed or executed the document. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "signer_title": {
+          "description": "The signer's title, position, capacity, or role. Return an empty string when absent or uncertain; do not return the signer name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file_date",
+        "foreign_principle_name",
+        "registrant_name",
+        "registration_num",
+        "signer_name",
+        "signer_title"
+      ],
+      "type": "object"
+    },
+    "source_ref": {
+      "display_location": "20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form.pdf",
+      "file_id": "b1008d37-7231-4ba9-b7e6-fcc7467391cf",
+      "file_name": "20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form.pdf",
+      "id_parents": [
+        "catalog-1",
+        "database-10001",
+        "volume-20001"
+      ],
+      "ids": [
+        "b1008d37-7231-4ba9-b7e6-fcc7467391cf"
+      ],
+      "kind": "file",
+      "location": "20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form.pdf",
+      "resource_type": "file",
+      "volume_id": 20001
+    }
+  },
+  "workflow_id": "2b084712-3ed2-4034-965b-8e2657693359"
+}

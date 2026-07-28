@@ -1,0 +1,51 @@
+{
+  "case_id": "X51007846301",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51007846301.jpg",
+  "source_type": "image",
+  "image_sha256": "6f2bc95a5f7b60da2ce975d31221420ff324bd902c2b9520030e15a163435bad",
+  "gold_entities": "train/entities/X51007846301.txt",
+  "gold_box": "train/box/X51007846301.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykqssz037he401s4blfp3l",
+  "extract_job_id": "cmrykr7nc0299d501vbwhv8xw",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.269778+00:00",
+  "updated_at": "2026-07-24T06:44:21.162060+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:43:46.405936+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:44:01.862993+00:00",
+  "parse_metadata": {
+    "filename": "X51007846301.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 9691,
+    "credit_usage": 3.0,
+    "job_id": "cmrykqssz037he401s4blfp3l",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:44:05.555587+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:44:21.162055+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12354,
+    "credit_usage": 0.6,
+    "job_id": "cmrykr7nc0299d501vbwhv8xw",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "BAR WANG RICE@PERMAS JAYA",
+    "date": "10 Jun 2018",
+    "address": "12, Jalan Tampoi 7/4, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor",
+    "total": "RM8.50"
+  }
+}

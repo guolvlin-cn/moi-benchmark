@@ -1,0 +1,85 @@
+{
+  "job_id": "cmrymm04u040mcx016dndsl6c",
+  "status": "completed",
+  "received_at": 1784878561,
+  "created_at": 1784878561,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2012-06-11",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "Lightwave Logic, Inc.",
+        "Ronald A. Bucchi"
+      ],
+      "term": null
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "0f2bd940-d239-4ffb-a5d5-aa7f00276a1d",
+          "ef260c31-b6ad-4f40-b9ae-9e64008a86bb"
+        ],
+        "value": "2012-06-11"
+      },
+      "jurisdiction": {
+        "references": [
+          "0003c3ed-b0d7-47f0-afd1-424c511242c5",
+          "0781c97f-d945-4ca2-89ee-69334e97565a"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "0f2bd940-d239-4ffb-a5d5-aa7f00276a1d",
+            "ef260c31-b6ad-4f40-b9ae-9e64008a86bb"
+          ],
+          "value": "Lightwave Logic, Inc."
+        },
+        {
+          "references": [
+            "0f2bd940-d239-4ffb-a5d5-aa7f00276a1d",
+            "ef260c31-b6ad-4f40-b9ae-9e64008a86bb"
+          ],
+          "value": "Ronald A. Bucchi"
+        }
+      ],
+      "term": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 14530,
+      "credit_usage": 3.3,
+      "job_id": "cmrymm04u040mcx016dndsl6c",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 3.3,
+    "job_id": "cmrymm04u040mcx016dndsl6c",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

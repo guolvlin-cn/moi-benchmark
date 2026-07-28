@@ -1,0 +1,53 @@
+{
+  "case_id": "ab46a92eef527dbae20fc09b2741c804",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/ab46a92eef527dbae20fc09b2741c804.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "eeca8b39c249d291f5f39eef6e3f649c48a70b3e90f8b3b5c8daff3f17b6a2a7",
+  "status": "completed",
+  "parse_job_id": "cmrymlskn03yre401c5coqcx3",
+  "extract_job_id": "cmrymm7x803yte401i39ztj3x",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.419453+00:00",
+  "updated_at": "2026-07-24T07:36:26.869512+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:35:51.942440+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:36:09.593226+00:00",
+  "parse_metadata": {
+    "filename": "ab46a92eef527dbae20fc09b2741c804.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 7,
+    "duration_ms": 9434,
+    "credit_usage": 21.0,
+    "job_id": "cmrymlskn03yre401c5coqcx3",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:36:11.800273+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:36:26.869506+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12809,
+    "credit_usage": 4.7,
+    "job_id": "cmrymm7x803yte401i39ztj3x",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2007-03-04",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "Webex Communications, Inc.",
+      "Cisco Systems, Inc."
+    ],
+    "term": "2_years"
+  }
+}

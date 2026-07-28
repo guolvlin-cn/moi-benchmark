@@ -1,0 +1,1103 @@
+{
+  "job_id": "cmrykr1sf0298d501bvj8vos6",
+  "status": "completed",
+  "received_at": 1784875437,
+  "created_at": 1784875437,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='11f3e8b7-4cf7-4fca-a631-a922a5cddaf4'></a>\n\nRESTORAN WAN SHENG\n002043319-W\nNo.2, Jalan Temenggung 19/9,\nSeksyen 9, Bandar Mahkota Chéras,\n43200 Cheras, Selangor\nGST REG NO: 001335787520\n\n<a id='60d03dfd-3f8c-4913-a11c-bdf6b0c6718f'></a>\n\nTax Invoice\n\n<a id='239ac10a-69ef-4be1-9c68-a2d3636926da'></a>\n\nINV No.: 1076565 Cashier: Thandar\nDate : 04-04-2018 14:26:20\n\n<a id='6a997fc4-43c8-4e7d-8938-c799810c4555'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Description</td><td id=\"0-3\">Qty</td><td id=\"0-4\">U.price</td><td id=\"0-5\">Total</td><td id=\"0-6\">TAX</td></tr>\n<tr><td id=\"0-7\">Teh (B)</td><td id=\"0-8\"></td><td id=\"0-9\"></td><td id=\"0-a\">1</td><td id=\"0-b\"></td></tr>\n<tr><td id=\"0-c\"></td><td id=\"0-d\">1 x</td><td id=\"0-e\">2.20</td><td id=\"0-f\">2.20</td><td id=\"0-g\">SR</td></tr>\n<tr><td id=\"0-h\">Cham (B)</td><td id=\"0-i\">1 x</td><td id=\"0-j\">2.20</td><td id=\"0-k\">2.20</td><td id=\"0-l\">SR</td></tr>\n<tr><td id=\"0-m\">Milo (B)</td><td id=\"0-n\">1 x</td><td id=\"0-o\">2.80</td><td id=\"0-p\">2.80</td><td id=\"0-q\">SR</td></tr>\n<tr><td id=\"0-r\">Take Away</td><td id=\"0-s\">3 x</td><td id=\"0-t\">0.20</td><td id=\"0-u\">0.60</td><td id=\"0-v\">SR</td></tr>\n</table>\n<table id=\"0-w\">\n<tr><td id=\"0-x\" colspan=\"2\">Total QTY: 6</td></tr>\n<tr><td id=\"0-y\">Total (Excluding GST):</td><td id=\"0-z\">7.37</td></tr>\n<tr><td id=\"0-A\">GST payable (6%):</td><td id=\"0-B\">0.43</td></tr>\n<tr><td id=\"0-C\">Total (Inclusive of GST):</td><td id=\"0-D\">7.80</td></tr>\n<tr><td id=\"0-E\">TOTAL:</td><td id=\"0-F\">7.80</td></tr>\n<tr><td id=\"0-G\">CASH :</td><td id=\"0-H\">7.80</td></tr>\n</table>\n\n<a id='b0643427-28a4-4650-b8d6-d7e8344ea8c2'></a>\n\n<table id=\"0-I\">\n<tr><td id=\"0-J\">GST</td><td id=\"0-K\">Summary</td><td id=\"0-L\">Amount (RM)</td><td id=\"0-M\">Tax(RM)</td></tr>\n<tr><td id=\"0-N\">SR</td><td id=\"0-O\">( @ 6%)</td><td id=\"0-P\">7.37</td><td id=\"0-Q\">0.43</td></tr>\n</table>",
+    "chunks": [
+      {
+        "markdown": "<a id='11f3e8b7-4cf7-4fca-a631-a922a5cddaf4'></a>\n\nRESTORAN WAN SHENG\n002043319-W\nNo.2, Jalan Temenggung 19/9,\nSeksyen 9, Bandar Mahkota Chéras,\n43200 Cheras, Selangor\nGST REG NO: 001335787520",
+        "type": "text",
+        "id": "11f3e8b7-4cf7-4fca-a631-a922a5cddaf4",
+        "grounding": {
+          "box": {
+            "left": 0.11460065841674805,
+            "top": 0.1440674513578415,
+            "right": 0.7537974715232849,
+            "bottom": 0.2855297327041626
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='60d03dfd-3f8c-4913-a11c-bdf6b0c6718f'></a>\n\nTax Invoice",
+        "type": "text",
+        "id": "60d03dfd-3f8c-4913-a11c-bdf6b0c6718f",
+        "grounding": {
+          "box": {
+            "left": 0.19392958283424377,
+            "top": 0.30173859000205994,
+            "right": 0.6289788484573364,
+            "bottom": 0.3306834399700165
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='239ac10a-69ef-4be1-9c68-a2d3636926da'></a>\n\nINV No.: 1076565 Cashier: Thandar\nDate : 04-04-2018 14:26:20",
+        "type": "text",
+        "id": "239ac10a-69ef-4be1-9c68-a2d3636926da",
+        "grounding": {
+          "box": {
+            "left": 0.0423319935798645,
+            "top": 0.3462979793548584,
+            "right": 0.7023220062255859,
+            "bottom": 0.40581053495407104
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='6a997fc4-43c8-4e7d-8938-c799810c4555'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Description</td><td id=\"0-3\">Qty</td><td id=\"0-4\">U.price</td><td id=\"0-5\">Total</td><td id=\"0-6\">TAX</td></tr>\n<tr><td id=\"0-7\">Teh (B)</td><td id=\"0-8\"></td><td id=\"0-9\"></td><td id=\"0-a\">1</td><td id=\"0-b\"></td></tr>\n<tr><td id=\"0-c\"></td><td id=\"0-d\">1 x</td><td id=\"0-e\">2.20</td><td id=\"0-f\">2.20</td><td id=\"0-g\">SR</td></tr>\n<tr><td id=\"0-h\">Cham (B)</td><td id=\"0-i\">1 x</td><td id=\"0-j\">2.20</td><td id=\"0-k\">2.20</td><td id=\"0-l\">SR</td></tr>\n<tr><td id=\"0-m\">Milo (B)</td><td id=\"0-n\">1 x</td><td id=\"0-o\">2.80</td><td id=\"0-p\">2.80</td><td id=\"0-q\">SR</td></tr>\n<tr><td id=\"0-r\">Take Away</td><td id=\"0-s\">3 x</td><td id=\"0-t\">0.20</td><td id=\"0-u\">0.60</td><td id=\"0-v\">SR</td></tr>\n</table>\n<table id=\"0-w\">\n<tr><td id=\"0-x\" colspan=\"2\">Total QTY: 6</td></tr>\n<tr><td id=\"0-y\">Total (Excluding GST):</td><td id=\"0-z\">7.37</td></tr>\n<tr><td id=\"0-A\">GST payable (6%):</td><td id=\"0-B\">0.43</td></tr>\n<tr><td id=\"0-C\">Total (Inclusive of GST):</td><td id=\"0-D\">7.80</td></tr>\n<tr><td id=\"0-E\">TOTAL:</td><td id=\"0-F\">7.80</td></tr>\n<tr><td id=\"0-G\">CASH :</td><td id=\"0-H\">7.80</td></tr>\n</table>",
+        "type": "table",
+        "id": "6a997fc4-43c8-4e7d-8938-c799810c4555",
+        "grounding": {
+          "box": {
+            "left": 0.03744301199913025,
+            "top": 0.4143224358558655,
+            "right": 0.8249260187149048,
+            "bottom": 0.8305971026420593
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='b0643427-28a4-4650-b8d6-d7e8344ea8c2'></a>\n\n<table id=\"0-I\">\n<tr><td id=\"0-J\">GST</td><td id=\"0-K\">Summary</td><td id=\"0-L\">Amount (RM)</td><td id=\"0-M\">Tax(RM)</td></tr>\n<tr><td id=\"0-N\">SR</td><td id=\"0-O\">( @ 6%)</td><td id=\"0-P\">7.37</td><td id=\"0-Q\">0.43</td></tr>\n</table>",
+        "type": "table",
+        "id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2",
+        "grounding": {
+          "box": {
+            "left": 0.040980398654937744,
+            "top": 0.8633598685264587,
+            "right": 0.8166242241859436,
+            "bottom": 0.9210124611854553
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='11f3e8b7-4cf7-4fca-a631-a922a5cddaf4'></a>\n\nRESTORAN WAN SHENG\n002043319-W\nNo.2, Jalan Temenggung 19/9,\nSeksyen 9, Bandar Mahkota Chéras,\n43200 Cheras, Selangor\nGST REG NO: 001335787520\n\n<a id='60d03dfd-3f8c-4913-a11c-bdf6b0c6718f'></a>\n\nTax Invoice\n\n<a id='239ac10a-69ef-4be1-9c68-a2d3636926da'></a>\n\nINV No.: 1076565 Cashier: Thandar\nDate : 04-04-2018 14:26:20\n\n<a id='6a997fc4-43c8-4e7d-8938-c799810c4555'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Description</td><td id=\"0-3\">Qty</td><td id=\"0-4\">U.price</td><td id=\"0-5\">Total</td><td id=\"0-6\">TAX</td></tr>\n<tr><td id=\"0-7\">Teh (B)</td><td id=\"0-8\"></td><td id=\"0-9\"></td><td id=\"0-a\">1</td><td id=\"0-b\"></td></tr>\n<tr><td id=\"0-c\"></td><td id=\"0-d\">1 x</td><td id=\"0-e\">2.20</td><td id=\"0-f\">2.20</td><td id=\"0-g\">SR</td></tr>\n<tr><td id=\"0-h\">Cham (B)</td><td id=\"0-i\">1 x</td><td id=\"0-j\">2.20</td><td id=\"0-k\">2.20</td><td id=\"0-l\">SR</td></tr>\n<tr><td id=\"0-m\">Milo (B)</td><td id=\"0-n\">1 x</td><td id=\"0-o\">2.80</td><td id=\"0-p\">2.80</td><td id=\"0-q\">SR</td></tr>\n<tr><td id=\"0-r\">Take Away</td><td id=\"0-s\">3 x</td><td id=\"0-t\">0.20</td><td id=\"0-u\">0.60</td><td id=\"0-v\">SR</td></tr>\n</table>\n<table id=\"0-w\">\n<tr><td id=\"0-x\" colspan=\"2\">Total QTY: 6</td></tr>\n<tr><td id=\"0-y\">Total (Excluding GST):</td><td id=\"0-z\">7.37</td></tr>\n<tr><td id=\"0-A\">GST payable (6%):</td><td id=\"0-B\">0.43</td></tr>\n<tr><td id=\"0-C\">Total (Inclusive of GST):</td><td id=\"0-D\">7.80</td></tr>\n<tr><td id=\"0-E\">TOTAL:</td><td id=\"0-F\">7.80</td></tr>\n<tr><td id=\"0-G\">CASH :</td><td id=\"0-H\">7.80</td></tr>\n</table>\n\n<a id='b0643427-28a4-4650-b8d6-d7e8344ea8c2'></a>\n\n<table id=\"0-I\">\n<tr><td id=\"0-J\">GST</td><td id=\"0-K\">Summary</td><td id=\"0-L\">Amount (RM)</td><td id=\"0-M\">Tax(RM)</td></tr>\n<tr><td id=\"0-N\">SR</td><td id=\"0-O\">( @ 6%)</td><td id=\"0-P\">7.37</td><td id=\"0-Q\">0.43</td></tr>\n</table>",
+        "chunks": [
+          "11f3e8b7-4cf7-4fca-a631-a922a5cddaf4",
+          "60d03dfd-3f8c-4913-a11c-bdf6b0c6718f",
+          "239ac10a-69ef-4be1-9c68-a2d3636926da",
+          "6a997fc4-43c8-4e7d-8938-c799810c4555",
+          "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        ]
+      }
+    ],
+    "grounding": {
+      "11f3e8b7-4cf7-4fca-a631-a922a5cddaf4": {
+        "box": {
+          "left": 0.11460065841674805,
+          "top": 0.1440674513578415,
+          "right": 0.7537974715232849,
+          "bottom": 0.2855297327041626
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.987,
+        "low_confidence_spans": []
+      },
+      "60d03dfd-3f8c-4913-a11c-bdf6b0c6718f": {
+        "box": {
+          "left": 0.19392958283424377,
+          "top": 0.30173859000205994,
+          "right": 0.6289788484573364,
+          "bottom": 0.3306834399700165
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "239ac10a-69ef-4be1-9c68-a2d3636926da": {
+        "box": {
+          "left": 0.0423319935798645,
+          "top": 0.3462979793548584,
+          "right": 0.7023220062255859,
+          "bottom": 0.40581053495407104
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.987,
+        "low_confidence_spans": []
+      },
+      "6a997fc4-43c8-4e7d-8938-c799810c4555": {
+        "box": {
+          "left": 0.03744301199913025,
+          "top": 0.4143224358558655,
+          "right": 0.8249260187149048,
+          "bottom": 0.8305971026420593
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.986,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.03968277905395382,
+          "top": 0.41799000894356775,
+          "right": 0.8185860102077651,
+          "bottom": 0.6592791703525407
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.03968277905395382,
+          "top": 0.41799000894356775,
+          "right": 0.2666266823664066,
+          "bottom": 0.460061260377451
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.2665961615738839,
+          "top": 0.4182293027798909,
+          "right": 0.4016406004766148,
+          "bottom": 0.4601700094745841
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.998,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.4016339540282297,
+          "top": 0.41837171527888184,
+          "right": 0.6106522219629572,
+          "bottom": 0.4603383748347786
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.6105576170882943,
+          "top": 0.41859203086284175,
+          "right": 0.7422283253677936,
+          "bottom": 0.4604443601070786
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.7421713365890388,
+          "top": 0.4187308254614782,
+          "right": 0.8185860102077651,
+          "bottom": 0.46050576567836493
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.03980186618595394,
+          "top": 0.45987855174506864,
+          "right": 0.26664982099189644,
+          "bottom": 0.4917751812933735
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.987,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-8": {
+        "box": {
+          "left": 0.2666266823664066,
+          "top": 0.460061260377451,
+          "right": 0.4016339540282297,
+          "bottom": 0.49191459378305763
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.981,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-9": {
+        "box": {
+          "left": 0.4016289062446976,
+          "top": 0.4601700094745841,
+          "right": 0.6107242688804634,
+          "bottom": 0.49213055690824753
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.965,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-a": {
+        "box": {
+          "left": 0.6106522219629572,
+          "top": 0.4603383748347786,
+          "right": 0.7422718004805784,
+          "bottom": 0.49226642513448293
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-b": {
+        "box": {
+          "left": 0.7422283253677936,
+          "top": 0.4604443601070786,
+          "right": 0.8184606699366388,
+          "bottom": 0.49234501757869237
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.967,
+        "position": {
+          "row": 1,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-c": {
+        "box": {
+          "left": 0.039891880948472735,
+          "top": 0.49154097546127806,
+          "right": 0.26666917513920707,
+          "bottom": 0.5183305491015477
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.991,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-d": {
+        "box": {
+          "left": 0.26664982099189644,
+          "top": 0.4917751812933735,
+          "right": 0.4016289062446976,
+          "bottom": 0.5183020766561183
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.971,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-e": {
+        "box": {
+          "left": 0.4016247130021011,
+          "top": 0.49191459378305763,
+          "right": 0.610783480403935,
+          "bottom": 0.5182851269649487
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-f": {
+        "box": {
+          "left": 0.6107242688804634,
+          "top": 0.49213055690824753,
+          "right": 0.7423072886170873,
+          "bottom": 0.5182588577464414
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-g": {
+        "box": {
+          "left": 0.7422718004805784,
+          "top": 0.49226642513448293,
+          "right": 0.8183649557725146,
+          "bottom": 0.5182423390620956
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-h": {
+        "box": {
+          "left": 0.03996804243032336,
+          "top": 0.5183020766561183,
+          "right": 0.2667005140274223,
+          "bottom": 0.5612553204814839
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.97,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-i": {
+        "box": {
+          "left": 0.26666917513920707,
+          "top": 0.5182851269649487,
+          "right": 0.4016247130021011,
+          "bottom": 0.5612751179670671
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.966,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-j": {
+        "box": {
+          "left": 0.4016178770591095,
+          "top": 0.5182588577464414,
+          "right": 0.6108810327291168,
+          "bottom": 0.5613058247954127
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-k": {
+        "box": {
+          "left": 0.610783480403935,
+          "top": 0.5182423390620956,
+          "right": 0.7423661480499879,
+          "bottom": 0.5613251186403002
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-l": {
+        "box": {
+          "left": 0.7423072886170873,
+          "top": 0.5182327964015023,
+          "right": 0.8182871327407795,
+          "bottom": 0.5613362401096404
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-m": {
+        "box": {
+          "left": 0.040089980975981335,
+          "top": 0.5612220681360462,
+          "right": 0.2667321844650228,
+          "bottom": 0.6046629876255697
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.972,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-n": {
+        "box": {
+          "left": 0.2667005140274223,
+          "top": 0.5612553204814839,
+          "right": 0.4016178770591095,
+          "bottom": 0.6047284900139807
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.981,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-o": {
+        "box": {
+          "left": 0.4016109674327712,
+          "top": 0.5612751179670671,
+          "right": 0.6109796668753585,
+          "bottom": 0.6048301676060397
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-p": {
+        "box": {
+          "left": 0.6108810327291168,
+          "top": 0.5613058247954127,
+          "right": 0.7424256715961696,
+          "bottom": 0.6048940029036814
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-q": {
+        "box": {
+          "left": 0.7423661480499879,
+          "top": 0.5613251186403002,
+          "right": 0.818157556515235,
+          "bottom": 0.6049307176114345
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-r": {
+        "box": {
+          "left": 0.04021316869785724,
+          "top": 0.604552981172169,
+          "right": 0.266771567576946,
+          "bottom": 0.658641686468394
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.985,
+        "position": {
+          "row": 5,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-s": {
+        "box": {
+          "left": 0.2667321844650228,
+          "top": 0.6046629876255697,
+          "right": 0.4016109674327712,
+          "bottom": 0.6587976541339309
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.974,
+        "position": {
+          "row": 5,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-t": {
+        "box": {
+          "left": 0.40160236976352504,
+          "top": 0.6047284900139807,
+          "right": 0.6111025162940941,
+          "bottom": 0.6590399967459611
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-u": {
+        "box": {
+          "left": 0.6109796668753585,
+          "top": 0.6048301676060397,
+          "right": 0.742499853181437,
+          "bottom": 0.6591919926961427
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-v": {
+        "box": {
+          "left": 0.7424256715961696,
+          "top": 0.6048940029036814,
+          "right": 0.8180265041592446,
+          "bottom": 0.6592791703525407
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-w": {
+        "box": {
+          "left": 0.0433442209994882,
+          "top": 0.6652478970809454,
+          "right": 0.817952258126569,
+          "bottom": 0.8301327974891919
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-x": {
+        "box": {
+          "left": 0.0433442209994882,
+          "top": 0.6652478970809454,
+          "right": 0.8179293362488812,
+          "bottom": 0.690581470988189
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.961,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 2,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-y": {
+        "box": {
+          "left": 0.04335067451065151,
+          "top": 0.6901239891182094,
+          "right": 0.5338216666612421,
+          "bottom": 0.7126554394810726
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.985,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-z": {
+        "box": {
+          "left": 0.5337507262572028,
+          "top": 0.6904136293365541,
+          "right": 0.817933003846307,
+          "bottom": 0.7129102737509152
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-A": {
+        "box": {
+          "left": 0.04335643531019219,
+          "top": 0.712215515645745,
+          "right": 0.5338921411879395,
+          "bottom": 0.7347511839873972
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-B": {
+        "box": {
+          "left": 0.5338216666612421,
+          "top": 0.7126554394810726,
+          "right": 0.8179366169019016,
+          "bottom": 0.734907018860695
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-C": {
+        "box": {
+          "left": 0.04336224175046234,
+          "top": 0.7344820653413277,
+          "right": 0.5339613045363016,
+          "bottom": 0.7564358372406145
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.974,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-D": {
+        "box": {
+          "left": 0.5338921411879395,
+          "top": 0.7347511839873972,
+          "right": 0.8179401833301807,
+          "bottom": 0.7566198909038784
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-E": {
+        "box": {
+          "left": 0.04336788371199911,
+          "top": 0.7561178716346532,
+          "right": 0.5340694728072974,
+          "bottom": 0.7903496298067828
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.982,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-F": {
+        "box": {
+          "left": 0.5339613045363016,
+          "top": 0.7564358372406145,
+          "right": 0.817945775586589,
+          "bottom": 0.7906662640040334
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-G": {
+        "box": {
+          "left": 0.04337666759196905,
+          "top": 0.7898023135251669,
+          "right": 0.5341937299096233,
+          "bottom": 0.8293077231031051
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.994,
+        "position": {
+          "row": 5,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "0-H": {
+        "box": {
+          "left": 0.5340694728072974,
+          "top": 0.7903496298067828,
+          "right": 0.817952258126569,
+          "bottom": 0.830132797489192
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.998,
+        "position": {
+          "row": 5,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "6a997fc4-43c8-4e7d-8938-c799810c4555"
+        }
+      },
+      "b0643427-28a4-4650-b8d6-d7e8344ea8c2": {
+        "box": {
+          "left": 0.040980398654937744,
+          "top": 0.8633598685264587,
+          "right": 0.8166242241859436,
+          "bottom": 0.9210124611854553
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.989,
+        "low_confidence_spans": []
+      },
+      "0-I": {
+        "box": {
+          "left": 0.04472975798563206,
+          "top": 0.8650833530602697,
+          "right": 0.8132095305351186,
+          "bottom": 0.9210118873129503
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-J": {
+        "box": {
+          "left": 0.04472975798563206,
+          "top": 0.8651291741856094,
+          "right": 0.10775077207424955,
+          "bottom": 0.8923303053144663
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      },
+      "0-K": {
+        "box": {
+          "left": 0.10712878389030459,
+          "top": 0.8651129202872914,
+          "right": 0.35796364558878424,
+          "bottom": 0.8926988952689148
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      },
+      "0-L": {
+        "box": {
+          "left": 0.35766036121781075,
+          "top": 0.865095748287001,
+          "right": 0.6228946335772522,
+          "bottom": 0.8930891162917893
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.983,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      },
+      "0-M": {
+        "box": {
+          "left": 0.6223098013589127,
+          "top": 0.8650833530602697,
+          "right": 0.8131663663465893,
+          "bottom": 0.893369050063262
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.966,
+        "position": {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      },
+      "0-N": {
+        "box": {
+          "left": 0.04475693944804403,
+          "top": 0.8922385418906813,
+          "right": 0.10712878389030459,
+          "bottom": 0.9210118841524506
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      },
+      "0-O": {
+        "box": {
+          "left": 0.10647294340155421,
+          "top": 0.8923303053144663,
+          "right": 0.35766036121781075,
+          "bottom": 0.9210118852743593
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.978,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      },
+      "0-P": {
+        "box": {
+          "left": 0.3573490839339772,
+          "top": 0.8926988952689148,
+          "right": 0.6234779908788629,
+          "bottom": 0.9210118864644778
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.997,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      },
+      "0-Q": {
+        "box": {
+          "left": 0.6228946335772522,
+          "top": 0.8930891162917893,
+          "right": 0.8132095305351186,
+          "bottom": 0.9210118873129503
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "b0643427-28a4-4650-b8d6-d7e8344ea8c2"
+        }
+      }
+    },
+    "metadata": {
+      "filename": "X51008030565.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 8242,
+      "credit_usage": 3.0,
+      "job_id": "cmrykr1sf0298d501bvj8vos6",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51008030565.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 9000,
+    "credit_usage": 3.0,
+    "job_id": "cmrykr1sf0298d501bvj8vos6",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

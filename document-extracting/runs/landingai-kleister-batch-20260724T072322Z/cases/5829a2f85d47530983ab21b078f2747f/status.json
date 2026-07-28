@@ -1,0 +1,53 @@
+{
+  "case_id": "5829a2f85d47530983ab21b078f2747f",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/5829a2f85d47530983ab21b078f2747f.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "78f2344375070ff60ea4f6e027a7365a0825e321c30ac399169605e00cffd605",
+  "status": "completed",
+  "parse_job_id": "cmrymf89w030ad501htprwc8f",
+  "extract_job_id": "cmrymfgqs03xze401pcto0pv3",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.407068+00:00",
+  "updated_at": "2026-07-24T07:31:11.792688+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:30:45.721949+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:30:54.504596+00:00",
+  "parse_metadata": {
+    "filename": "5829a2f85d47530983ab21b078f2747f.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 5,
+    "duration_ms": 6633,
+    "credit_usage": 15.0,
+    "job_id": "cmrymf89w030ad501htprwc8f",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:30:56.719092+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:31:11.792683+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11223,
+    "credit_usage": 6.1,
+    "job_id": "cmrymfgqs03xze401pcto0pv3",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2018-03-30",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "Jamba, Inc.",
+      "FOCUS Brands Inc."
+    ],
+    "term": "2_years"
+  }
+}

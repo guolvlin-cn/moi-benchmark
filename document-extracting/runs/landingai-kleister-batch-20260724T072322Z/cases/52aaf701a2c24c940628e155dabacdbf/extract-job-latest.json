@@ -1,0 +1,80 @@
+{
+  "job_id": "cmryme5l203zlcx0112977ym9",
+  "status": "completed",
+  "received_at": 1784878195,
+  "created_at": 1784878195,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2004-10-11",
+      "jurisdiction": "North Carolina",
+      "party": [
+        "Inspire Pharmaceuticals, Inc.",
+        "Barry G. Pea"
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "427d801c-f6a9-4794-86ad-6365bbaf96f9"
+        ],
+        "value": "2004-10-11"
+      },
+      "jurisdiction": {
+        "references": [
+          "75bbfa7c-3ad7-438c-bc37-5947e6e73ca5"
+        ],
+        "value": "North Carolina"
+      },
+      "party": [
+        {
+          "references": [
+            "5684c987-a8db-4476-b0a6-f9cd04036db6"
+          ],
+          "value": "Inspire Pharmaceuticals, Inc."
+        },
+        {
+          "references": [
+            "121cc083-a021-4fa5-ba4c-1b0a667df458"
+          ],
+          "value": "Barry G. Pea"
+        }
+      ],
+      "term": {
+        "references": [
+          "b123e3f0-06e0-4dff-9f80-de72c5275da3",
+          "6dc09dd4-f862-40c7-841d-a573c66ef0ea",
+          "adac8c95-4179-4077-bb40-e6fb0d87fce0"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 41121,
+      "credit_usage": 3.8,
+      "job_id": "cmryme5l203zlcx0112977ym9",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 41000,
+    "credit_usage": 3.8,
+    "job_id": "cmryme5l203zlcx0112977ym9",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

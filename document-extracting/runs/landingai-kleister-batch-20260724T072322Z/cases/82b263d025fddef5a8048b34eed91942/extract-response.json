@@ -1,0 +1,61 @@
+{
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "Commonwealth of Pennsylvania",
+    "party": [
+      "The Hershey Company, a Delaware corporation together with its subsidiaries and affiliates and its and their respective successors and assigns",
+      "Executive"
+    ],
+    "term": null
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [
+        "d69fb514-205b-4146-8f6b-6c9ea5bef610"
+      ],
+      "value": ""
+    },
+    "jurisdiction": {
+      "references": [
+        "d2fd44d4-978a-402b-896f-93ceef460635"
+      ],
+      "value": "Commonwealth of Pennsylvania"
+    },
+    "party": [
+      {
+        "references": [
+          "d69fb514-205b-4146-8f6b-6c9ea5bef610",
+          "19a58c23-064f-479d-992d-bbf3ec50f9fc"
+        ],
+        "value": "The Hershey Company, a Delaware corporation together with its subsidiaries and affiliates and its and their respective successors and assigns"
+      },
+      {
+        "references": [
+          "d69fb514-205b-4146-8f6b-6c9ea5bef610",
+          "694da668-70b5-4fe5-9f69-e54fe7ef6ff6"
+        ],
+        "value": "Executive"
+      }
+    ],
+    "term": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18930,
+    "credit_usage": 4.1,
+    "job_id": "cmrymux6q042xcx01tsrnk4c0",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

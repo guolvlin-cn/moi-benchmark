@@ -1,0 +1,992 @@
+{
+  "job_id": "cmrykr13z0297d501h7avk337",
+  "status": "completed",
+  "received_at": 1784875436,
+  "created_at": 1784875436,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='3baea985-2e99-468f-b38d-1972829df124'></a>\n\nA06098\n\n<a id='70df24cd-adaa-4100-8f75-030fbf2c8915'></a>\n\nMOONLIGHT CAKE HOUSE SDN BHD 862725-U\n(GST Reg No: 001559298048)\nNo.1, Jalan Permas 10/5, Bandar Baru Permas Jaya\n81750 Johor Bahru, Johor.\nwww.moonlightcake.com\n\n<a id='acbe397e-f2a5-43cc-867d-07b7734b27c7'></a>\n\nTable : Counter\nInvoice No: SP-null-18/06/20-1022050\nDate : 20/06/2018 18:07:10\nPayment Type: Cash\nMember Number: 3000000100068587\n\n<a id='4f4d50fc-9188-4ce3-b733-0d00b954828f'></a>\n\nTAKE AWAY\n\n<a id='41892e8a-de41-4474-800e-51e409fa9dd1'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">T-Butter slice Cheese *#</td><td id=\"0-3\">1</td><td id=\"0-4\">RM4.15 ST</td></tr>\n<tr><td id=\"0-5\">Discount</td><td id=\"0-6\"></td><td id=\"0-7\">RM-0.41</td></tr>\n<tr><td id=\"0-8\">T-Green Tea Mochi *#</td><td id=\"0-9\">1</td><td id=\"0-a\">RM3.30 ST</td></tr>\n<tr><td id=\"0-b\">Discount</td><td id=\"0-c\"></td><td id=\"0-d\">RM-0.33</td></tr>\n<tr><td id=\"0-e\">T-Honey Walnut *#</td><td id=\"0-f\">1</td><td id=\"0-g\">RM3.70 ST</td></tr>\n<tr><td id=\"0-h\">Discount</td><td id=\"0-i\"></td><td id=\"0-j\">RM-0.37</td></tr>\n<tr><td id=\"0-k\">T-Saha Bread *#</td><td id=\"0-l\">1</td><td id=\"0-m\">RM4.60 ST</td></tr>\n<tr><td id=\"0-n\">Discount</td><td id=\"0-o\"></td><td id=\"0-p\">RM-0.46</td></tr>\n</table>\n\n<a id='9959a041-5102-4448-806d-f4903c593d74'></a>\n\nTotal (Incl GST, 0%) RM14.18\nRounding RM0.02\nGrand Total RM14.20\nTotal Paid RM20.20\nChange RM6.00\n\n<a id='aadb4c8b-f333-4848-8197-684e66c034c2'></a>\n\nDiscount Summary\n\n<a id='af269cb2-c3cf-47ba-baf3-b3301589108d'></a>\n\nBirthday Discount RM1.57\n\n<a id='5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b'></a>\n\nGST Summary\n<table id=\"0-q\">\n<tr><td id=\"0-r\">GST Summary</td><td id=\"0-s\">Item</td><td id=\"0-t\">Amount(RM)</td><td id=\"0-u\">GST(RM)</td></tr>\n<tr><td id=\"0-v\">ST = 0%</td><td id=\"0-w\">4</td><td id=\"0-x\">14.18</td><td id=\"0-y\">0.00</td></tr>\n<tr><td id=\"0-z\">NS = 0%</td><td id=\"0-A\">0</td><td id=\"0-B\">0.00</td><td id=\"0-C\">0.00</td></tr>\n</table>\n\n<a id='1c0276dc-00ac-45f6-97b5-78d0975250d9'></a>\n\n20/06/2018 18:07:10",
+    "chunks": [
+      {
+        "markdown": "<a id='3baea985-2e99-468f-b38d-1972829df124'></a>\n\nA06098",
+        "type": "text",
+        "id": "3baea985-2e99-468f-b38d-1972829df124",
+        "grounding": {
+          "box": {
+            "left": 0.5176072716712952,
+            "top": 0.14771932363510132,
+            "right": 0.6116641163825989,
+            "bottom": 0.17829853296279907
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='70df24cd-adaa-4100-8f75-030fbf2c8915'></a>\n\nMOONLIGHT CAKE HOUSE SDN BHD 862725-U\n(GST Reg No: 001559298048)\nNo.1, Jalan Permas 10/5, Bandar Baru Permas Jaya\n81750 Johor Bahru, Johor.\nwww.moonlightcake.com",
+        "type": "text",
+        "id": "70df24cd-adaa-4100-8f75-030fbf2c8915",
+        "grounding": {
+          "box": {
+            "left": 0.29175299406051636,
+            "top": 0.1777624785900116,
+            "right": 0.6389375329017639,
+            "bottom": 0.24303919076919556
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='acbe397e-f2a5-43cc-867d-07b7734b27c7'></a>\n\nTable : Counter\nInvoice No: SP-null-18/06/20-1022050\nDate : 20/06/2018 18:07:10\nPayment Type: Cash\nMember Number: 3000000100068587",
+        "type": "text",
+        "id": "acbe397e-f2a5-43cc-867d-07b7734b27c7",
+        "grounding": {
+          "box": {
+            "left": 0.2920558452606201,
+            "top": 0.27653172612190247,
+            "right": 0.5550682544708252,
+            "bottom": 0.34393319487571716
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='4f4d50fc-9188-4ce3-b733-0d00b954828f'></a>\n\nTAKE AWAY",
+        "type": "text",
+        "id": "4f4d50fc-9188-4ce3-b733-0d00b954828f",
+        "grounding": {
+          "box": {
+            "left": 0.3981495499610901,
+            "top": 0.35005199909210205,
+            "right": 0.5347434282302856,
+            "bottom": 0.3666200637817383
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='41892e8a-de41-4474-800e-51e409fa9dd1'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">T-Butter slice Cheese *#</td><td id=\"0-3\">1</td><td id=\"0-4\">RM4.15 ST</td></tr>\n<tr><td id=\"0-5\">Discount</td><td id=\"0-6\"></td><td id=\"0-7\">RM-0.41</td></tr>\n<tr><td id=\"0-8\">T-Green Tea Mochi *#</td><td id=\"0-9\">1</td><td id=\"0-a\">RM3.30 ST</td></tr>\n<tr><td id=\"0-b\">Discount</td><td id=\"0-c\"></td><td id=\"0-d\">RM-0.33</td></tr>\n<tr><td id=\"0-e\">T-Honey Walnut *#</td><td id=\"0-f\">1</td><td id=\"0-g\">RM3.70 ST</td></tr>\n<tr><td id=\"0-h\">Discount</td><td id=\"0-i\"></td><td id=\"0-j\">RM-0.37</td></tr>\n<tr><td id=\"0-k\">T-Saha Bread *#</td><td id=\"0-l\">1</td><td id=\"0-m\">RM4.60 ST</td></tr>\n<tr><td id=\"0-n\">Discount</td><td id=\"0-o\"></td><td id=\"0-p\">RM-0.46</td></tr>\n</table>",
+        "type": "table",
+        "id": "41892e8a-de41-4474-800e-51e409fa9dd1",
+        "grounding": {
+          "box": {
+            "left": 0.2916789948940277,
+            "top": 0.3722509443759918,
+            "right": 0.6286476850509644,
+            "bottom": 0.48278000950813293
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='9959a041-5102-4448-806d-f4903c593d74'></a>\n\nTotal (Incl GST, 0%) RM14.18\nRounding RM0.02\nGrand Total RM14.20\nTotal Paid RM20.20\nChange RM6.00",
+        "type": "text",
+        "id": "9959a041-5102-4448-806d-f4903c593d74",
+        "grounding": {
+          "box": {
+            "left": 0.38410484790802,
+            "top": 0.484011173248291,
+            "right": 0.6307147741317749,
+            "bottom": 0.5705848932266235
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='aadb4c8b-f333-4848-8197-684e66c034c2'></a>\n\nDiscount Summary",
+        "type": "text",
+        "id": "aadb4c8b-f333-4848-8197-684e66c034c2",
+        "grounding": {
+          "box": {
+            "left": 0.2945535480976105,
+            "top": 0.5813178420066833,
+            "right": 0.41699615120887756,
+            "bottom": 0.5974693894386292
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='af269cb2-c3cf-47ba-baf3-b3301589108d'></a>\n\nBirthday Discount RM1.57",
+        "type": "text",
+        "id": "af269cb2-c3cf-47ba-baf3-b3301589108d",
+        "grounding": {
+          "box": {
+            "left": 0.29462942481040955,
+            "top": 0.6029850244522095,
+            "right": 0.5187282562255859,
+            "bottom": 0.622478723526001
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b'></a>\n\nGST Summary\n<table id=\"0-q\">\n<tr><td id=\"0-r\">GST Summary</td><td id=\"0-s\">Item</td><td id=\"0-t\">Amount(RM)</td><td id=\"0-u\">GST(RM)</td></tr>\n<tr><td id=\"0-v\">ST = 0%</td><td id=\"0-w\">4</td><td id=\"0-x\">14.18</td><td id=\"0-y\">0.00</td></tr>\n<tr><td id=\"0-z\">NS = 0%</td><td id=\"0-A\">0</td><td id=\"0-B\">0.00</td><td id=\"0-C\">0.00</td></tr>\n</table>",
+        "type": "table",
+        "id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b",
+        "grounding": {
+          "box": {
+            "left": 0.2955106198787689,
+            "top": 0.6301326751708984,
+            "right": 0.5912767648696899,
+            "bottom": 0.6958988904953003
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='1c0276dc-00ac-45f6-97b5-78d0975250d9'></a>\n\n20/06/2018 18:07:10",
+        "type": "text",
+        "id": "1c0276dc-00ac-45f6-97b5-78d0975250d9",
+        "grounding": {
+          "box": {
+            "left": 0.2962709069252014,
+            "top": 0.7033783793449402,
+            "right": 0.4389209747314453,
+            "bottom": 0.7211484313011169
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='3baea985-2e99-468f-b38d-1972829df124'></a>\n\nA06098\n\n<a id='70df24cd-adaa-4100-8f75-030fbf2c8915'></a>\n\nMOONLIGHT CAKE HOUSE SDN BHD 862725-U\n(GST Reg No: 001559298048)\nNo.1, Jalan Permas 10/5, Bandar Baru Permas Jaya\n81750 Johor Bahru, Johor.\nwww.moonlightcake.com\n\n<a id='acbe397e-f2a5-43cc-867d-07b7734b27c7'></a>\n\nTable : Counter\nInvoice No: SP-null-18/06/20-1022050\nDate : 20/06/2018 18:07:10\nPayment Type: Cash\nMember Number: 3000000100068587\n\n<a id='4f4d50fc-9188-4ce3-b733-0d00b954828f'></a>\n\nTAKE AWAY\n\n<a id='41892e8a-de41-4474-800e-51e409fa9dd1'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">T-Butter slice Cheese *#</td><td id=\"0-3\">1</td><td id=\"0-4\">RM4.15 ST</td></tr>\n<tr><td id=\"0-5\">Discount</td><td id=\"0-6\"></td><td id=\"0-7\">RM-0.41</td></tr>\n<tr><td id=\"0-8\">T-Green Tea Mochi *#</td><td id=\"0-9\">1</td><td id=\"0-a\">RM3.30 ST</td></tr>\n<tr><td id=\"0-b\">Discount</td><td id=\"0-c\"></td><td id=\"0-d\">RM-0.33</td></tr>\n<tr><td id=\"0-e\">T-Honey Walnut *#</td><td id=\"0-f\">1</td><td id=\"0-g\">RM3.70 ST</td></tr>\n<tr><td id=\"0-h\">Discount</td><td id=\"0-i\"></td><td id=\"0-j\">RM-0.37</td></tr>\n<tr><td id=\"0-k\">T-Saha Bread *#</td><td id=\"0-l\">1</td><td id=\"0-m\">RM4.60 ST</td></tr>\n<tr><td id=\"0-n\">Discount</td><td id=\"0-o\"></td><td id=\"0-p\">RM-0.46</td></tr>\n</table>\n\n<a id='9959a041-5102-4448-806d-f4903c593d74'></a>\n\nTotal (Incl GST, 0%) RM14.18\nRounding RM0.02\nGrand Total RM14.20\nTotal Paid RM20.20\nChange RM6.00\n\n<a id='aadb4c8b-f333-4848-8197-684e66c034c2'></a>\n\nDiscount Summary\n\n<a id='af269cb2-c3cf-47ba-baf3-b3301589108d'></a>\n\nBirthday Discount RM1.57\n\n<a id='5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b'></a>\n\nGST Summary\n<table id=\"0-q\">\n<tr><td id=\"0-r\">GST Summary</td><td id=\"0-s\">Item</td><td id=\"0-t\">Amount(RM)</td><td id=\"0-u\">GST(RM)</td></tr>\n<tr><td id=\"0-v\">ST = 0%</td><td id=\"0-w\">4</td><td id=\"0-x\">14.18</td><td id=\"0-y\">0.00</td></tr>\n<tr><td id=\"0-z\">NS = 0%</td><td id=\"0-A\">0</td><td id=\"0-B\">0.00</td><td id=\"0-C\">0.00</td></tr>\n</table>\n\n<a id='1c0276dc-00ac-45f6-97b5-78d0975250d9'></a>\n\n20/06/2018 18:07:10",
+        "chunks": [
+          "3baea985-2e99-468f-b38d-1972829df124",
+          "70df24cd-adaa-4100-8f75-030fbf2c8915",
+          "acbe397e-f2a5-43cc-867d-07b7734b27c7",
+          "4f4d50fc-9188-4ce3-b733-0d00b954828f",
+          "41892e8a-de41-4474-800e-51e409fa9dd1",
+          "9959a041-5102-4448-806d-f4903c593d74",
+          "aadb4c8b-f333-4848-8197-684e66c034c2",
+          "af269cb2-c3cf-47ba-baf3-b3301589108d",
+          "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b",
+          "1c0276dc-00ac-45f6-97b5-78d0975250d9"
+        ]
+      }
+    ],
+    "grounding": {
+      "3baea985-2e99-468f-b38d-1972829df124": {
+        "box": {
+          "left": 0.5176072716712952,
+          "top": 0.14771932363510132,
+          "right": 0.6116641163825989,
+          "bottom": 0.17829853296279907
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "70df24cd-adaa-4100-8f75-030fbf2c8915": {
+        "box": {
+          "left": 0.29175299406051636,
+          "top": 0.1777624785900116,
+          "right": 0.6389375329017639,
+          "bottom": 0.24303919076919556
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.99,
+        "low_confidence_spans": []
+      },
+      "acbe397e-f2a5-43cc-867d-07b7734b27c7": {
+        "box": {
+          "left": 0.2920558452606201,
+          "top": 0.27653172612190247,
+          "right": 0.5550682544708252,
+          "bottom": 0.34393319487571716
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.976,
+        "low_confidence_spans": []
+      },
+      "4f4d50fc-9188-4ce3-b733-0d00b954828f": {
+        "box": {
+          "left": 0.3981495499610901,
+          "top": 0.35005199909210205,
+          "right": 0.5347434282302856,
+          "bottom": 0.3666200637817383
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "41892e8a-de41-4474-800e-51e409fa9dd1": {
+        "box": {
+          "left": 0.2916789948940277,
+          "top": 0.3722509443759918,
+          "right": 0.6286476850509644,
+          "bottom": 0.48278000950813293
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.999,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.294831617311767,
+          "top": 0.3735181303573364,
+          "right": 0.6251294333645045,
+          "bottom": 0.48260371999419505
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.294831617311767,
+          "top": 0.37500975357125793,
+          "right": 0.46995163520017436,
+          "bottom": 0.3912735968321934
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.961,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.4698057341956958,
+          "top": 0.37440485708577353,
+          "right": 0.5328712370089441,
+          "bottom": 0.3889437188163417
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.5328474967202916,
+          "top": 0.3735181303573364,
+          "right": 0.6251089757617854,
+          "bottom": 0.3881042661239805
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.982,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.2948350444556206,
+          "top": 0.3889437188163417,
+          "right": 0.4698057341956958,
+          "bottom": 0.4036117052263112
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.46967577652715065,
+          "top": 0.3881042661239805,
+          "right": 0.5328474967202916,
+          "bottom": 0.40135504965887425
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.986,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.5328259463741627,
+          "top": 0.38687572897842737,
+          "right": 0.6251117410546446,
+          "bottom": 0.40053996186708973
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.991,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-8": {
+        "box": {
+          "left": 0.2948379445706139,
+          "top": 0.40135504965887425,
+          "right": 0.46967577652715065,
+          "bottom": 0.4162073337299202
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.979,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-9": {
+        "box": {
+          "left": 0.46954495023962584,
+          "top": 0.40053996186708973,
+          "right": 0.5328259463741627,
+          "bottom": 0.41384933611035035
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-a": {
+        "box": {
+          "left": 0.5328043616117528,
+          "top": 0.3993488166210607,
+          "right": 0.625114490317324,
+          "bottom": 0.4129955176345892
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.965,
+        "position": {
+          "row": 2,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-b": {
+        "box": {
+          "left": 0.29484090521659845,
+          "top": 0.41384933611035035,
+          "right": 0.46954495023962584,
+          "bottom": 0.42852539140309875
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-c": {
+        "box": {
+          "left": 0.4694153576225667,
+          "top": 0.4129955176345892,
+          "right": 0.5328043616117528,
+          "bottom": 0.42622580348681255
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.974,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-d": {
+        "box": {
+          "left": 0.5327828808165643,
+          "top": 0.4117495987795265,
+          "right": 0.6251172449895284,
+          "bottom": 0.42539107878639304
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.981,
+        "position": {
+          "row": 3,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-e": {
+        "box": {
+          "left": 0.29484380061860055,
+          "top": 0.42622580348681255,
+          "right": 0.4694153576225667,
+          "bottom": 0.4407615530820262
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.966,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-f": {
+        "box": {
+          "left": 0.46928677968691274,
+          "top": 0.42539107878639304,
+          "right": 0.5327828808165643,
+          "bottom": 0.4385053658729015
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-g": {
+        "box": {
+          "left": 0.5327615772137543,
+          "top": 0.4241747810586636,
+          "right": 0.6251199752468974,
+          "bottom": 0.43768439051294883
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.997,
+        "position": {
+          "row": 4,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-h": {
+        "box": {
+          "left": 0.2948466767706664,
+          "top": 0.4385053658729015,
+          "right": 0.46928677968691274,
+          "bottom": 0.4527341006994816
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-i": {
+        "box": {
+          "left": 0.46916062051148927,
+          "top": 0.43768439051294883,
+          "right": 0.5327615772137543,
+          "bottom": 0.45055392970549196
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.977,
+        "position": {
+          "row": 5,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-j": {
+        "box": {
+          "left": 0.5327406531089065,
+          "top": 0.4364898381547811,
+          "right": 0.6251226608009741,
+          "bottom": 0.4497587117339147
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 5,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-k": {
+        "box": {
+          "left": 0.29484949095933655,
+          "top": 0.45055392970549196,
+          "right": 0.46916062051148927,
+          "bottom": 0.4651628638961853
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.971,
+        "position": {
+          "row": 6,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-l": {
+        "box": {
+          "left": 0.46902974225983235,
+          "top": 0.4497587117339147,
+          "right": 0.5327406531089065,
+          "bottom": 0.46305317888093067
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 6,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-m": {
+        "box": {
+          "left": 0.5327189513907424,
+          "top": 0.4486032572654924,
+          "right": 0.6251254451952883,
+          "bottom": 0.4622817571911393
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.961,
+        "position": {
+          "row": 6,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-n": {
+        "box": {
+          "left": 0.2948524123830543,
+          "top": 0.46305317888093067,
+          "right": 0.46902974225983235,
+          "bottom": 0.48260371999419505
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 7,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-o": {
+        "box": {
+          "left": 0.46884407347450485,
+          "top": 0.4622817571911393,
+          "right": 0.5327189513907424,
+          "bottom": 0.4807850814891255
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.976,
+        "position": {
+          "row": 7,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "0-p": {
+        "box": {
+          "left": 0.5326880426572691,
+          "top": 0.4611625036382827,
+          "right": 0.6251294333645045,
+          "bottom": 0.48011774010200253
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.985,
+        "position": {
+          "row": 7,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "41892e8a-de41-4474-800e-51e409fa9dd1"
+        }
+      },
+      "9959a041-5102-4448-806d-f4903c593d74": {
+        "box": {
+          "left": 0.38410484790802,
+          "top": 0.484011173248291,
+          "right": 0.6307147741317749,
+          "bottom": 0.5705848932266235
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.963,
+        "low_confidence_spans": []
+      },
+      "aadb4c8b-f333-4848-8197-684e66c034c2": {
+        "box": {
+          "left": 0.2945535480976105,
+          "top": 0.5813178420066833,
+          "right": 0.41699615120887756,
+          "bottom": 0.5974693894386292
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.997,
+        "low_confidence_spans": []
+      },
+      "af269cb2-c3cf-47ba-baf3-b3301589108d": {
+        "box": {
+          "left": 0.29462942481040955,
+          "top": 0.6029850244522095,
+          "right": 0.5187282562255859,
+          "bottom": 0.622478723526001
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.989,
+        "low_confidence_spans": []
+      },
+      "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b": {
+        "box": {
+          "left": 0.2955106198787689,
+          "top": 0.6301326751708984,
+          "right": 0.5912767648696899,
+          "bottom": 0.6958988904953003
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.999,
+        "low_confidence_spans": []
+      },
+      "0-q": {
+        "box": {
+          "left": 0.29822311618697106,
+          "top": 0.6485612509995278,
+          "right": 0.5898353267404328,
+          "bottom": 0.6958817758979734
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-r": {
+        "box": {
+          "left": 0.29823940370002633,
+          "top": 0.6508209329683254,
+          "right": 0.37992196547700774,
+          "bottom": 0.6701344243691068
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.988,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-s": {
+        "box": {
+          "left": 0.3797587075801256,
+          "top": 0.6503588799949507,
+          "right": 0.4226974163259837,
+          "bottom": 0.6693246721482284
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-t": {
+        "box": {
+          "left": 0.42268295102313425,
+          "top": 0.6494681243241421,
+          "right": 0.505489954818434,
+          "bottom": 0.6689006218298924
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.989,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-u": {
+        "box": {
+          "left": 0.5054332317599037,
+          "top": 0.6485612509995278,
+          "right": 0.5897464158661844,
+          "bottom": 0.6680798659615902
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.981,
+        "position": {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-v": {
+        "box": {
+          "left": 0.29823159874589317,
+          "top": 0.6693246721482284,
+          "right": 0.38003091275310136,
+          "bottom": 0.682472520249799
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.985,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-w": {
+        "box": {
+          "left": 0.37992196547700774,
+          "top": 0.6689006218298924,
+          "right": 0.4227070550344608,
+          "bottom": 0.6816728159115445
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-x": {
+        "box": {
+          "left": 0.4226974163259837,
+          "top": 0.6680798659615902,
+          "right": 0.5055276428383177,
+          "bottom": 0.681255596078633
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-y": {
+        "box": {
+          "left": 0.505489954818434,
+          "top": 0.6672445976378194,
+          "right": 0.5897898685715586,
+          "bottom": 0.6804459073401956
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-z": {
+        "box": {
+          "left": 0.29822311618697106,
+          "top": 0.6816728159115445,
+          "right": 0.3801480712813807,
+          "bottom": 0.6958817758979734
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.993,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-A": {
+        "box": {
+          "left": 0.38003091275310136,
+          "top": 0.681255596078633,
+          "right": 0.42271736290686573,
+          "bottom": 0.6949516274813516
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-B": {
+        "box": {
+          "left": 0.4227070550344608,
+          "top": 0.6804459073401956,
+          "right": 0.5055675121252606,
+          "bottom": 0.6944683100458214
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "0-C": {
+        "box": {
+          "left": 0.5055276428383177,
+          "top": 0.6796221245458324,
+          "right": 0.5898353267404328,
+          "bottom": 0.6935276572859442
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "5d30a4e1-0dc3-4b93-8502-5ae96cbb9e4b"
+        }
+      },
+      "1c0276dc-00ac-45f6-97b5-78d0975250d9": {
+        "box": {
+          "left": 0.2962709069252014,
+          "top": 0.7033783793449402,
+          "right": 0.4389209747314453,
+          "bottom": 0.7211484313011169
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51007846393.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 12064,
+      "credit_usage": 3.0,
+      "job_id": "cmrykr13z0297d501h7avk337",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51007846393.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 13000,
+    "credit_usage": 3.0,
+    "job_id": "cmrykr13z0297d501h7avk337",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

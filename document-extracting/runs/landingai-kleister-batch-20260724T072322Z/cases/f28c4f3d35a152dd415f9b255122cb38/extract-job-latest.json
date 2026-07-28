@@ -1,0 +1,107 @@
+{
+  "job_id": "cmrymrpsy042ncx01gx0cbhd9",
+  "status": "completed",
+  "received_at": 1784878827,
+  "created_at": 1784878827,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2011-04-27",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "Stryker Corporation",
+        "King & Spalding LLP",
+        "Lerner, David, Littenberg, Krumholz & Mentlik LLP",
+        "Orthovita, Inc."
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "fbd1eb0a-53ea-4838-af06-01abbcb5abbd"
+        ],
+        "value": "2011-04-27"
+      },
+      "jurisdiction": {
+        "references": [
+          "6e570833-2ce1-4d6e-aa66-a0cb380a1a0a"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "86ffe2c7-a1dd-43a0-ad15-13bdfc609a2b",
+            "fbd1eb0a-53ea-4838-af06-01abbcb5abbd",
+            "fed561ee-0f10-43d3-ac78-941a394db06b",
+            "b3ab3b1b-417a-4646-b710-1615f116ec2e",
+            "b14cfe19-ff5c-4599-bea4-5ea4dffd0bb9",
+            "c5d713d9-1619-4fd0-ac2d-ee4e45ddceb2",
+            "76791b3c-ef63-450b-abd5-d9356e278b05"
+          ],
+          "value": "Stryker Corporation"
+        },
+        {
+          "references": [
+            "fbd1eb0a-53ea-4838-af06-01abbcb5abbd",
+            "fed561ee-0f10-43d3-ac78-941a394db06b"
+          ],
+          "value": "King & Spalding LLP"
+        },
+        {
+          "references": [
+            "fbd1eb0a-53ea-4838-af06-01abbcb5abbd",
+            "fed561ee-0f10-43d3-ac78-941a394db06b",
+            "5eeb8bd1-5502-4494-bbb5-da9e4872e8a6"
+          ],
+          "value": "Lerner, David, Littenberg, Krumholz & Mentlik LLP"
+        },
+        {
+          "references": [
+            "608d3065-09a7-4242-b509-04404723e42e",
+            "fbd1eb0a-53ea-4838-af06-01abbcb5abbd",
+            "fed561ee-0f10-43d3-ac78-941a394db06b",
+            "5eeb8bd1-5502-4494-bbb5-da9e4872e8a6",
+            "b14cfe19-ff5c-4599-bea4-5ea4dffd0bb9",
+            "c5d713d9-1619-4fd0-ac2d-ee4e45ddceb2",
+            "03df74cd-5c6a-44e4-9b9b-84aa5fc8ac59"
+          ],
+          "value": "Orthovita, Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "d3fbfb0f-d089-4acd-96f5-d2d858b767a7"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 24009,
+      "credit_usage": 9.7,
+      "job_id": "cmrymrpsy042ncx01gx0cbhd9",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 25000,
+    "credit_usage": 9.7,
+    "job_id": "cmrymrpsy042ncx01gx0cbhd9",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

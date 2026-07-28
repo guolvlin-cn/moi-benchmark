@@ -1,0 +1,50 @@
+{
+  "case_id": "20150825_Representative of the Turkish Republic of Northern Cyprus_Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20150825_Representative of the Turkish Republic of Northern Cyprus_Amendment_Amendment.pdf",
+  "pdf_sha256": "8ca568989a6755e2f45e3f96ad238635626b50aa65aae5bcef91936784c2cf12",
+  "status": "completed",
+  "parse_job_id": "cmryjc0gp033ie401zaez7nzg",
+  "extract_job_id": "cmryjcepy033ke401bna0ohfx",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.421203+00:00",
+  "updated_at": "2026-07-24T06:04:56.369305+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:04:16.728194+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:04:31.515593+00:00",
+  "parse_metadata": {
+    "filename": "20150825_Representative of the Turkish Republic of Northern Cyprus_Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 10364,
+    "credit_usage": 6.0,
+    "job_id": "cmryjc0gp033ie401zaez7nzg",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:04:35.182761+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:04:56.369299+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16967,
+    "credit_usage": 1.7,
+    "job_id": "cmryjcepy033ke401bna0ohfx",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "08/25/2015",
+    "foreign_principle_name": "Turkish Republic of Northern Cyprus",
+    "registrant_name": "Representative of the Turkish Republic of Northern Cyprus",
+    "registration_num": "2619",
+    "signer_name": "Ismet Korukoglu",
+    "signer_title": "Representative"
+  }
+}

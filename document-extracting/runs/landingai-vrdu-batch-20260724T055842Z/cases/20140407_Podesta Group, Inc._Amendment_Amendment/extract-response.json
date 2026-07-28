@@ -1,0 +1,63 @@
+{
+  "extraction": {
+    "file_date": "04/07/2014",
+    "foreign_principle_name": "Hong Kong Trade Development Council and the Republic of Iraq",
+    "registrant_name": "Podesta Group, Inc.",
+    "registration_num": "5926",
+    "signer_name": "Kimberley Fritts",
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "0e068157-a6ae-45f7-b20d-b94caa5fb2d4"
+      ],
+      "value": "04/07/2014"
+    },
+    "foreign_principle_name": {
+      "references": [
+        "11a2005c-6d41-45ce-b4d5-04afe89af375",
+        "41eee457-95a9-4085-a159-281ede50bd31"
+      ],
+      "value": "Hong Kong Trade Development Council and the Republic of Iraq"
+    },
+    "registrant_name": {
+      "references": [
+        "f42adbdb-c107-45fe-b6a2-42a5c1c87c88"
+      ],
+      "value": "Podesta Group, Inc."
+    },
+    "registration_num": {
+      "references": [
+        "f42adbdb-c107-45fe-b6a2-42a5c1c87c88"
+      ],
+      "value": "5926"
+    },
+    "signer_name": {
+      "references": [
+        "bc94927b-f67f-44bb-8433-bd3db8fd1df5"
+      ],
+      "value": "Kimberley Fritts"
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12617,
+    "credit_usage": 1.6,
+    "job_id": "cmryj5cjt0343cx019a99wsow",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "job_id": "cmryml36q040kcx01ofb7d9op",
+  "status": "completed",
+  "received_at": 1784878518,
+  "created_at": 1784878518,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2009-11-06",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "HID Global Corporation",
+        "LaserCard Corporation"
+      ],
+      "term": "3_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "32a51a6d-d512-4cfe-9fec-a86a8219eaa8",
+          "889a1789-011d-4348-b465-e75a14a117f3"
+        ],
+        "value": "2009-11-06"
+      },
+      "jurisdiction": {
+        "references": [
+          "fe2c9192-5c00-4d67-b597-f2f8e484274b"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "55db2311-e512-490b-9ed6-5c8da44188c5",
+            "359cd51b-8f6c-4a4d-9725-5a91b65a76dd",
+            "10e5b02d-3f1d-430a-b75d-4ae0b894069e",
+            "aae60630-5688-47c6-a749-6fcb4c3364a8"
+          ],
+          "value": "HID Global Corporation"
+        },
+        {
+          "references": [
+            "359cd51b-8f6c-4a4d-9725-5a91b65a76dd",
+            "c53bd800-2091-4bc5-a9cb-9355f8a795e8"
+          ],
+          "value": "LaserCard Corporation"
+        }
+      ],
+      "term": {
+        "references": [
+          "f3d838d0-ca81-4861-a74a-593a651aee50"
+        ],
+        "value": "3_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13506,
+      "credit_usage": 5.8,
+      "job_id": "cmryml36q040kcx01ofb7d9op",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 5.8,
+    "job_id": "cmryml36q040kcx01ofb7d9op",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+    "date": "28-05-2018",
+    "address": "NO.1, TAMAN SRI DENGKIL, JALAN AIR HITAM 43800 DENGKIL, SELANGOR.",
+    "total": "112.35"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "a602c8ce-76b0-45c2-ab66-091085cb942a"
+      ],
+      "value": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD"
+    },
+    "date": {
+      "references": [
+        "079ca2dc-9844-45f8-9169-432dcfa3899c"
+      ],
+      "value": "28-05-2018"
+    },
+    "address": {
+      "references": [
+        "a602c8ce-76b0-45c2-ab66-091085cb942a"
+      ],
+      "value": "NO.1, TAMAN SRI DENGKIL, JALAN AIR HITAM 43800 DENGKIL, SELANGOR."
+    },
+    "total": {
+      "references": [
+        "7cb2b74c-f0b7-4212-9057-f6b0ae6f9d3f"
+      ],
+      "value": "112.35"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 9959,
+    "credit_usage": 0.7,
+    "job_id": "cmrykt90w037qe401a0zvovwj",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

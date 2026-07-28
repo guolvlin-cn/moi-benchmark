@@ -1,0 +1,51 @@
+{
+  "case_id": "X51006334741",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51006334741.jpg",
+  "source_type": "image",
+  "image_sha256": "246d06a0935c645d6cde3c7311a905c8e14716886ceb3aa90e98bde838eee29a",
+  "gold_entities": "train/entities/X51006334741.txt",
+  "gold_box": "train/box/X51006334741.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykipaw036he401gsqthu5n",
+  "extract_job_id": "cmrykj3o8037wcx014xvc6osr",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.251097+00:00",
+  "updated_at": "2026-07-24T06:38:01.526445+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:37:28.544450+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:37:44.616854+00:00",
+  "parse_metadata": {
+    "filename": "X51006334741.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 14008,
+    "credit_usage": 3.0,
+    "job_id": "cmrykipaw036he401gsqthu5n",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:37:47.058791+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:38:01.526399+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12072,
+    "credit_usage": 0.5,
+    "job_id": "cmrykj3o8037wcx014xvc6osr",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "Segi Cash & Carry Sdn.Bhd",
+    "date": "04 Jan 2017",
+    "address": "PT17920, SEKSYEN U9, 40150 SHAH ALAM, SELANGOR DARUL EHSAN.",
+    "total": "RM 20.05"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "job_id": "cmrymd2ve02zud501e4wcygr6",
+  "status": "completed",
+  "received_at": 1784878144,
+  "created_at": 1784878144,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2012-12-17",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "Allergan, Inc.",
+        "MAP Pharmaceuticals, Inc."
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "5bf131d5-1cb2-4aff-af52-9e6d3f62b57b",
+          "a4d60195-6430-4218-9b5b-4789aabcf1e9"
+        ],
+        "value": "2012-12-17"
+      },
+      "jurisdiction": {
+        "references": [
+          "e9c9723a-9a6c-4964-aeb3-64e7a510e174"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "c96ec431-ec69-4a79-b199-a64a42872467",
+            "a4d60195-6430-4218-9b5b-4789aabcf1e9",
+            "1f67f486-f8a5-43f4-874b-02ba04c9fb85"
+          ],
+          "value": "Allergan, Inc."
+        },
+        {
+          "references": [
+            "3fa0e77d-5031-4dde-9820-7cda7be95600",
+            "441f375c-3e29-4a99-a28b-26c5bfc47818"
+          ],
+          "value": "MAP Pharmaceuticals, Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "609b527d-ffc6-4c06-8997-2764777cfebc"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15391,
+      "credit_usage": 4.6,
+      "job_id": "cmrymd2ve02zud501e4wcygr6",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 4.6,
+    "job_id": "cmrymd2ve02zud501e4wcygr6",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryki9dr027xd5016ixzp7r6",
+  "status": "completed",
+  "received_at": 1784875027,
+  "created_at": 1784875027,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "BILLION SIX ENTERPRISE",
+      "date": "22/02/2018",
+      "address": "NO 3, JALAN TAMAN JASA 2; ., SECTION U6, 40150 SHAH ALAM.",
+      "total": "63.80"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "c6f1c325-ac7c-4e84-bb08-9acf55a1577c"
+        ],
+        "value": "BILLION SIX ENTERPRISE"
+      },
+      "date": {
+        "references": [
+          "bd2c9f0b-1ca5-40c8-b630-082fb5037bf4"
+        ],
+        "value": "22/02/2018"
+      },
+      "address": {
+        "references": [
+          "c6f1c325-ac7c-4e84-bb08-9acf55a1577c"
+        ],
+        "value": "NO 3, JALAN TAMAN JASA 2; ., SECTION U6, 40150 SHAH ALAM."
+      },
+      "total": {
+        "references": [
+          "0-f"
+        ],
+        "value": "63.80"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12614,
+      "credit_usage": 0.6,
+      "job_id": "cmryki9dr027xd5016ixzp7r6",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 0.6,
+    "job_id": "cmryki9dr027xd5016ixzp7r6",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

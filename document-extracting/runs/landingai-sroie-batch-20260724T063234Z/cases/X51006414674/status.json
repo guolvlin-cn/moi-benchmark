@@ -1,0 +1,51 @@
+{
+  "case_id": "X51006414674",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51006414674.jpg",
+  "source_type": "image",
+  "image_sha256": "e65e0a9e7f175789f8d131d802a1a66dc1e83e967eb9a2d71b417984b25aeb4b",
+  "gold_entities": "train/entities/X51006414674.txt",
+  "gold_box": "train/box/X51006414674.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykk4et036pe40190b7n79y",
+  "extract_job_id": "cmrykkhkg0287d501urj0ymc8",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.253053+00:00",
+  "updated_at": "2026-07-24T06:39:07.049899+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:38:34.798258+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:38:49.463767+00:00",
+  "parse_metadata": {
+    "filename": "X51006414674.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 9861,
+    "credit_usage": 3.0,
+    "job_id": "cmrykk4et036pe40190b7n79y",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:38:51.727313+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:39:07.049895+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10914,
+    "credit_usage": 0.7,
+    "job_id": "cmrykkhkg0287d501urj0ymc8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "DOMINO'S PIZZA PERMAS JAYA",
+    "date": "17/04/18",
+    "address": "No.12, Jalan Permas Jaya 10, Bandar Baru Permas Jaya, 81750 Masai Johor",
+    "total": "3.90"
+  }
+}

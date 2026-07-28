@@ -1,0 +1,54 @@
+{
+  "case_id": "0f32a3a54d9c1e42d26f66746821c3bf",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/0f32a3a54d9c1e42d26f66746821c3bf.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "d01c3df3dcb963dfab3dfc41df721625e75d925ba6d12b294dfb0ee4d3900bcc",
+  "status": "completed",
+  "parse_job_id": "cmrym6ccw03v8cx01lttruxmj",
+  "extract_job_id": "cmrym9nld03yacx01oilv8cmt",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.399165+00:00",
+  "updated_at": "2026-07-24T07:26:49.276820+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:23:51.353056+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:26:21.585678+00:00",
+  "parse_metadata": {
+    "filename": "0f32a3a54d9c1e42d26f66746821c3bf.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 8,
+    "duration_ms": 27925,
+    "credit_usage": 24.0,
+    "job_id": "cmrym6ccw03v8cx01lttruxmj",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:26:26.054249+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:26:49.276814+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19254,
+    "credit_usage": 5.9,
+    "job_id": "cmrym9nld03yacx01oilv8cmt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2012-09-04",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "JDA Software Group, Inc.",
+      "RedPrairie Holding, Inc.",
+      "New Mountain Capital, LLC"
+    ],
+    "term": "2_years"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "case_id": "d55dce3f2401b0c4b66618c7d5f292f5",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/d55dce3f2401b0c4b66618c7d5f292f5.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "622aa83a3ce1901bf3e58a7631580431d12a7161673b9b0786f115b4cb4639a8",
+  "status": "completed",
+  "parse_job_id": "cmrymovuk040be401fcvz79wy",
+  "extract_job_id": "cmrympcg6040ce401kl6rg4c6",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.426646+00:00",
+  "updated_at": "2026-07-24T07:38:57.456207+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:38:16.122574+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:38:34.349345+00:00",
+  "parse_metadata": {
+    "filename": "d55dce3f2401b0c4b66618c7d5f292f5.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 4,
+    "duration_ms": 12402,
+    "credit_usage": 12.0,
+    "job_id": "cmrymovuk040be401fcvz79wy",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:38:37.690618+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:38:57.456204+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18629,
+    "credit_usage": 2.9,
+    "job_id": "cmrympcg6040ce401kl6rg4c6",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2005-02-24",
+    "jurisdiction": "State of Virginia",
+    "party": [
+      "Mobile Satellite Ventures",
+      "Alexander H. Good"
+    ],
+    "term": ""
+  }
+}

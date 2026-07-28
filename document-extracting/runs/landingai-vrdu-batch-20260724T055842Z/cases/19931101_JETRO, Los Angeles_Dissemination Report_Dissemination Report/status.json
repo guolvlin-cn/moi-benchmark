@@ -1,0 +1,50 @@
+{
+  "case_id": "19931101_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19931101_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "d1a3a3eda5362bde12796eea060a5002010c4f07a98a543ce0992f5858e46103",
+  "status": "completed",
+  "parse_job_id": "cmryjjaxw035ucx01y218bnic",
+  "extract_job_id": "cmryjke5w034de401s0v3akmp",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.429751+00:00",
+  "updated_at": "2026-07-24T06:11:08.363852+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:09:56.909643+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:10:43.100634+00:00",
+  "parse_metadata": {
+    "filename": "19931101_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 43063,
+    "credit_usage": 6.0,
+    "job_id": "cmryjjaxw035ucx01y218bnic",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:10:47.712678+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:11:08.363846+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13171,
+    "credit_usage": 1.4,
+    "job_id": "cmryjke5w034de401s0v3akmp",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "11/23/1993",
+    "foreign_principle_name": "Japan External Trade Organization",
+    "registrant_name": "JETRO, Los Angeles",
+    "registration_num": "1833",
+    "signer_name": "Harumi Kamekawa",
+    "signer_title": "Public Relations Director"
+  }
+}

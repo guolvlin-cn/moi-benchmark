@@ -1,0 +1,53 @@
+{
+  "case_id": "0f446b4ed10d8d40824270d746511cca",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/0f446b4ed10d8d40824270d746511cca.pdf",
+  "source_type": "pdf",
+  "source_split": "train",
+  "pdf_sha256": "a348209d52d4103311eee0b4d928f19cf1cfaf52a1e19ba2db138f08e22dbacd",
+  "status": "completed",
+  "parse_job_id": "cmrymsjje042rcx01qax0wf10",
+  "extract_job_id": "cmrymtcm20413e401fsj69dp5",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.441137+00:00",
+  "updated_at": "2026-07-24T07:42:07.449677+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:41:06.782558+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:41:39.160319+00:00",
+  "parse_metadata": {
+    "filename": "0f446b4ed10d8d40824270d746511cca.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 6,
+    "duration_ms": 25111,
+    "credit_usage": 18.0,
+    "job_id": "cmrymsjje042rcx01qax0wf10",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:41:44.505909+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:42:07.449671+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 21184,
+    "credit_usage": 3.4,
+    "job_id": "cmrymtcm20413e401fsj69dp5",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "State of Georgia",
+    "party": [
+      "Ameris Bancorp",
+      "Shirley P. Fiano"
+    ],
+    "term": ""
+  }
+}

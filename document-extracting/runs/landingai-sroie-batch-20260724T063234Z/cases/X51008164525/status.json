@@ -1,0 +1,51 @@
+{
+  "case_id": "X51008164525",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51008164525.jpg",
+  "source_type": "image",
+  "image_sha256": "d94d1670b9f24d69e2d7a517f6893d21f937af1cf627acdc8d614c4e4e2d202b",
+  "gold_entities": "train/entities/X51008164525.txt",
+  "gold_box": "train/box/X51008164525.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykt9vx037re4018j3zpse5",
+  "extract_job_id": "cmryktlku038zcx015636myn8",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.275397+00:00",
+  "updated_at": "2026-07-24T06:46:10.554969+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:45:41.682571+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:45:55.190317+00:00",
+  "parse_metadata": {
+    "filename": "X51008164525.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7070,
+    "credit_usage": 3.0,
+    "job_id": "cmrykt9vx037re4018j3zpse5",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:45:56.867980+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:46:10.554954+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11100,
+    "credit_usage": 0.7,
+    "job_id": "cmryktlku038zcx015636myn8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "PASAR RAYA MEGA MAJU (SEMENYIH) SDN BHD",
+    "date": "03/07/2018",
+    "address": "NO 24, 25 & 26, JALAN PUSAT PERNIAGAAN BUNGA RAYA 4, PUSAT PERNIAGAAN BUNGA RAYA,",
+    "total": "30.45"
+  }
+}

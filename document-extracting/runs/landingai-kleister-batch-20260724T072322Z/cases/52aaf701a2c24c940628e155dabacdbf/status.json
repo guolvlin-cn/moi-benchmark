@@ -1,0 +1,53 @@
+{
+  "case_id": "52aaf701a2c24c940628e155dabacdbf",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/52aaf701a2c24c940628e155dabacdbf.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "aadb60c92830308d9ffa22b34ef1b6b2d1996eb5c469c562ed2b170b29189f27",
+  "status": "completed",
+  "parse_job_id": "cmrymdwt303xne4018r6p8bl3",
+  "extract_job_id": "cmryme5l203zlcx0112977ym9",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.405549+00:00",
+  "updated_at": "2026-07-24T07:30:49.615262+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:29:44.178217+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:29:52.645016+00:00",
+  "parse_metadata": {
+    "filename": "52aaf701a2c24c940628e155dabacdbf.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 6,
+    "duration_ms": 6465,
+    "credit_usage": 18.0,
+    "job_id": "cmrymdwt303xne4018r6p8bl3",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:29:55.520927+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:30:49.615257+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 41121,
+    "credit_usage": 3.8,
+    "job_id": "cmryme5l203zlcx0112977ym9",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2004-10-11",
+    "jurisdiction": "North Carolina",
+    "party": [
+      "Inspire Pharmaceuticals, Inc.",
+      "Barry G. Pea"
+    ],
+    "term": ""
+  }
+}

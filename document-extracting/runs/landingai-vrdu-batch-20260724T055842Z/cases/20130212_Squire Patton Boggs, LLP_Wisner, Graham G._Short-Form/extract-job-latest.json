@@ -1,0 +1,85 @@
+{
+  "job_id": "cmryj9ln4034tcx01x8esu4d5",
+  "status": "completed",
+  "received_at": 1784872943,
+  "created_at": 1784872943,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "02/12/2013",
+      "foreign_principle_name": "Government of Albania",
+      "registrant_name": "Patton Boggs LLP",
+      "registration_num": "2165",
+      "signer_name": "Graham G. Wisner",
+      "signer_title": "Of Counsel"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "3f9cf896-9884-4857-bb9c-070e62abd6b8",
+          "38a1369b-69b3-4800-95db-32184bcb37f9",
+          "df5e9929-1b87-40d3-9ed5-6aedd5af2536",
+          "fb36da3f-0931-4c56-9b05-47dd9eb27a78"
+        ],
+        "value": "02/12/2013"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "85ad59a8-920c-44b9-ba1d-fdb5241dc683"
+        ],
+        "value": "Government of Albania"
+      },
+      "registrant_name": {
+        "references": [
+          "85ad59a8-920c-44b9-ba1d-fdb5241dc683"
+        ],
+        "value": "Patton Boggs LLP"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "2165"
+      },
+      "signer_name": {
+        "references": [
+          "0-2",
+          "fb36da3f-0931-4c56-9b05-47dd9eb27a78"
+        ],
+        "value": "Graham G. Wisner"
+      },
+      "signer_title": {
+        "references": [
+          "0-i"
+        ],
+        "value": "Of Counsel"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 16466,
+      "credit_usage": 2.1,
+      "job_id": "cmryj9ln4034tcx01x8esu4d5",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17000,
+    "credit_usage": 2.1,
+    "job_id": "cmryj9ln4034tcx01x8esu4d5",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

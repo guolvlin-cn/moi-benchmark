@@ -1,0 +1,638 @@
+{
+  "markdown": "<a id='cf41ab61-ef30-47fb-aa89-3b0a6d1a1c82'></a>\n\nKedai Uhat Dan Runcit CHONG HWA\n3, Jalan Perdana 5, Taman Indah Perdana,\nKepong, 52100 KL.\nTelephone No. 03-62801198\nGST No. 001379917824\n\n<a id='a91f57a2-6d28-4b2b-96cb-fe191cd0aadf'></a>\n\nReceipt: 33037\nDate: Oct 3, 2016 12:16:25 PM\nTerminal: CW01\nServed by: Employee\n\n<a id='9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Item</td><td id=\"0-3\">Price</td><td id=\"0-4\">Qty</td><td id=\"0-5\">Value</td></tr>\n<tr><td id=\"0-6\">Liquid Medicine</td><td id=\"0-7\">RM33.90</td><td id=\"0-8\">x1</td><td id=\"0-9\">RM33.90</td></tr>\n</table>\n\n<a id='6ead6986-2952-40e6-b100-c6925201d85a'></a>\n\nItems count: 1\n\n<a id='fa30f282-2e2e-4d1a-8174-5411eb3da035'></a>\n\nTotal Sales Incl. GST @ 6% RM33.90\n\nCash\n\nTendered: RM100.00\nChange: RM66.10\n\n<a id='5e4484a5-36ed-4098-b627-30672a13ebf5'></a>\n\nNett of Tax: RM31.98\nGST @ 6%: RM1.92\n\n<a id='050f5530-81f0-4f55-ae2d-e1c1136496f7'></a>\n\n<table id=\"0-a\">\n<tr><td id=\"0-b\">SR</td><td id=\"0-c\">RM31.98</td><td id=\"0-d\">RM1.92</td></tr>\n<tr><td id=\"0-e\">Standard Rated Tax</td><td id=\"0-f\">RM0.00</td><td id=\"0-g\">RM0.00</td></tr>\n<tr><td id=\"0-h\">ZR</td><td id=\"0-i\">RM0.00</td><td id=\"0-j\">RM0.00</td></tr>\n<tr><td id=\"0-k\">Zero Rated Tax (ZR</td><td id=\"0-l\">RM0.00</td><td id=\"0-m\">RM0.00</td></tr>\n</table>\n\n<a id='0d1a4674-6ce9-4130-b542-adcdd7d68259'></a>\n\nThank You",
+  "chunks": [
+    {
+      "markdown": "<a id='cf41ab61-ef30-47fb-aa89-3b0a6d1a1c82'></a>\n\nKedai Uhat Dan Runcit CHONG HWA\n3, Jalan Perdana 5, Taman Indah Perdana,\nKepong, 52100 KL.\nTelephone No. 03-62801198\nGST No. 001379917824",
+      "type": "text",
+      "id": "cf41ab61-ef30-47fb-aa89-3b0a6d1a1c82",
+      "grounding": {
+        "box": {
+          "left": 0.06513157486915588,
+          "top": 0.09326162189245224,
+          "right": 0.9407186508178711,
+          "bottom": 0.23831707239151
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='a91f57a2-6d28-4b2b-96cb-fe191cd0aadf'></a>\n\nReceipt: 33037\nDate: Oct 3, 2016 12:16:25 PM\nTerminal: CW01\nServed by: Employee",
+      "type": "text",
+      "id": "a91f57a2-6d28-4b2b-96cb-fe191cd0aadf",
+      "grounding": {
+        "box": {
+          "left": 0.03728187084197998,
+          "top": 0.2612176835536957,
+          "right": 0.8836378455162048,
+          "bottom": 0.37837710976600647
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Item</td><td id=\"0-3\">Price</td><td id=\"0-4\">Qty</td><td id=\"0-5\">Value</td></tr>\n<tr><td id=\"0-6\">Liquid Medicine</td><td id=\"0-7\">RM33.90</td><td id=\"0-8\">x1</td><td id=\"0-9\">RM33.90</td></tr>\n</table>",
+      "type": "table",
+      "id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2",
+      "grounding": {
+        "box": {
+          "left": 0.04040834307670593,
+          "top": 0.39327186346054077,
+          "right": 0.968510627746582,
+          "bottom": 0.49230247735977173
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='6ead6986-2952-40e6-b100-c6925201d85a'></a>\n\nItems count: 1",
+      "type": "text",
+      "id": "6ead6986-2952-40e6-b100-c6925201d85a",
+      "grounding": {
+        "box": {
+          "left": 0.04330983757972717,
+          "top": 0.5057680606842041,
+          "right": 0.3684595823287964,
+          "bottom": 0.5410174131393433
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='fa30f282-2e2e-4d1a-8174-5411eb3da035'></a>\n\nTotal Sales Incl. GST @ 6% RM33.90\n\nCash\n\nTendered: RM100.00\nChange: RM66.10",
+      "type": "text",
+      "id": "fa30f282-2e2e-4d1a-8174-5411eb3da035",
+      "grounding": {
+        "box": {
+          "left": 0.035563766956329346,
+          "top": 0.5582742691040039,
+          "right": 0.9702857136726379,
+          "bottom": 0.6926772594451904
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='5e4484a5-36ed-4098-b627-30672a13ebf5'></a>\n\nNett of Tax: RM31.98\nGST @ 6%: RM1.92",
+      "type": "text",
+      "id": "5e4484a5-36ed-4098-b627-30672a13ebf5",
+      "grounding": {
+        "box": {
+          "left": 0.037784188985824585,
+          "top": 0.7102320790290833,
+          "right": 0.9693821668624878,
+          "bottom": 0.7746382355690002
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='050f5530-81f0-4f55-ae2d-e1c1136496f7'></a>\n\n<table id=\"0-a\">\n<tr><td id=\"0-b\">SR</td><td id=\"0-c\">RM31.98</td><td id=\"0-d\">RM1.92</td></tr>\n<tr><td id=\"0-e\">Standard Rated Tax</td><td id=\"0-f\">RM0.00</td><td id=\"0-g\">RM0.00</td></tr>\n<tr><td id=\"0-h\">ZR</td><td id=\"0-i\">RM0.00</td><td id=\"0-j\">RM0.00</td></tr>\n<tr><td id=\"0-k\">Zero Rated Tax (ZR</td><td id=\"0-l\">RM0.00</td><td id=\"0-m\">RM0.00</td></tr>\n</table>",
+      "type": "table",
+      "id": "050f5530-81f0-4f55-ae2d-e1c1136496f7",
+      "grounding": {
+        "box": {
+          "left": 0.03470581769943237,
+          "top": 0.7909400463104248,
+          "right": 0.9707877039909363,
+          "bottom": 0.9105710983276367
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='0d1a4674-6ce9-4130-b542-adcdd7d68259'></a>\n\nThank You",
+      "type": "text",
+      "id": "0d1a4674-6ce9-4130-b542-adcdd7d68259",
+      "grounding": {
+        "box": {
+          "left": 0.40657633543014526,
+          "top": 0.9271900653839111,
+          "right": 0.622507631778717,
+          "bottom": 0.9614540338516235
+        },
+        "page": 0
+      }
+    }
+  ],
+  "splits": [
+    {
+      "class": "full",
+      "identifier": "full",
+      "pages": [
+        0
+      ],
+      "markdown": "<a id='cf41ab61-ef30-47fb-aa89-3b0a6d1a1c82'></a>\n\nKedai Uhat Dan Runcit CHONG HWA\n3, Jalan Perdana 5, Taman Indah Perdana,\nKepong, 52100 KL.\nTelephone No. 03-62801198\nGST No. 001379917824\n\n<a id='a91f57a2-6d28-4b2b-96cb-fe191cd0aadf'></a>\n\nReceipt: 33037\nDate: Oct 3, 2016 12:16:25 PM\nTerminal: CW01\nServed by: Employee\n\n<a id='9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">Item</td><td id=\"0-3\">Price</td><td id=\"0-4\">Qty</td><td id=\"0-5\">Value</td></tr>\n<tr><td id=\"0-6\">Liquid Medicine</td><td id=\"0-7\">RM33.90</td><td id=\"0-8\">x1</td><td id=\"0-9\">RM33.90</td></tr>\n</table>\n\n<a id='6ead6986-2952-40e6-b100-c6925201d85a'></a>\n\nItems count: 1\n\n<a id='fa30f282-2e2e-4d1a-8174-5411eb3da035'></a>\n\nTotal Sales Incl. GST @ 6% RM33.90\n\nCash\n\nTendered: RM100.00\nChange: RM66.10\n\n<a id='5e4484a5-36ed-4098-b627-30672a13ebf5'></a>\n\nNett of Tax: RM31.98\nGST @ 6%: RM1.92\n\n<a id='050f5530-81f0-4f55-ae2d-e1c1136496f7'></a>\n\n<table id=\"0-a\">\n<tr><td id=\"0-b\">SR</td><td id=\"0-c\">RM31.98</td><td id=\"0-d\">RM1.92</td></tr>\n<tr><td id=\"0-e\">Standard Rated Tax</td><td id=\"0-f\">RM0.00</td><td id=\"0-g\">RM0.00</td></tr>\n<tr><td id=\"0-h\">ZR</td><td id=\"0-i\">RM0.00</td><td id=\"0-j\">RM0.00</td></tr>\n<tr><td id=\"0-k\">Zero Rated Tax (ZR</td><td id=\"0-l\">RM0.00</td><td id=\"0-m\">RM0.00</td></tr>\n</table>\n\n<a id='0d1a4674-6ce9-4130-b542-adcdd7d68259'></a>\n\nThank You",
+      "chunks": [
+        "cf41ab61-ef30-47fb-aa89-3b0a6d1a1c82",
+        "a91f57a2-6d28-4b2b-96cb-fe191cd0aadf",
+        "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2",
+        "6ead6986-2952-40e6-b100-c6925201d85a",
+        "fa30f282-2e2e-4d1a-8174-5411eb3da035",
+        "5e4484a5-36ed-4098-b627-30672a13ebf5",
+        "050f5530-81f0-4f55-ae2d-e1c1136496f7",
+        "0d1a4674-6ce9-4130-b542-adcdd7d68259"
+      ]
+    }
+  ],
+  "grounding": {
+    "cf41ab61-ef30-47fb-aa89-3b0a6d1a1c82": {
+      "box": {
+        "left": 0.06513157486915588,
+        "top": 0.09326162189245224,
+        "right": 0.9407186508178711,
+        "bottom": 0.23831707239151
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.998,
+      "low_confidence_spans": []
+    },
+    "a91f57a2-6d28-4b2b-96cb-fe191cd0aadf": {
+      "box": {
+        "left": 0.03728187084197998,
+        "top": 0.2612176835536957,
+        "right": 0.8836378455162048,
+        "bottom": 0.37837710976600647
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.979,
+      "low_confidence_spans": []
+    },
+    "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2": {
+      "box": {
+        "left": 0.04040834307670593,
+        "top": 0.39327186346054077,
+        "right": 0.968510627746582,
+        "bottom": 0.49230247735977173
+      },
+      "page": 0,
+      "type": "chunkTable",
+      "confidence": 0.999,
+      "low_confidence_spans": []
+    },
+    "0-1": {
+      "box": {
+        "left": 0.04694183444150099,
+        "top": 0.3965328207312897,
+        "right": 0.9626760556658258,
+        "bottom": 0.48997971785993144
+      },
+      "page": 0,
+      "type": "table",
+      "confidence": null,
+      "low_confidence_spans": []
+    },
+    "0-2": {
+      "box": {
+        "left": 0.04695664594876776,
+        "top": 0.3965598482732245,
+        "right": 0.38278035321815773,
+        "bottom": 0.44151750886319874
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 0,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "0-3": {
+      "box": {
+        "left": 0.38276868110291395,
+        "top": 0.39654969146489855,
+        "right": 0.6006806076740633,
+        "bottom": 0.4414191296003773
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 0,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "0-4": {
+      "box": {
+        "left": 0.6001377459811429,
+        "top": 0.3965429534134206,
+        "right": 0.7452439125801805,
+        "bottom": 0.4413554549413049
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.999,
+      "position": {
+        "row": 0,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "0-5": {
+      "box": {
+        "left": 0.7444354277065937,
+        "top": 0.3965328207312897,
+        "right": 0.9626563238208495,
+        "bottom": 0.4413131830610067
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 0,
+        "col": 3,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "0-6": {
+      "box": {
+        "left": 0.04694183444150099,
+        "top": 0.4414191296003773,
+        "right": 0.38279291091681633,
+        "bottom": 0.48968196158767757
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.977,
+      "position": {
+        "row": 1,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "0-7": {
+      "box": {
+        "left": 0.38278035321815773,
+        "top": 0.4413554549413049,
+        "right": 0.6001377459811429,
+        "bottom": 0.48979326167476966
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.992,
+      "position": {
+        "row": 1,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "0-8": {
+      "box": {
+        "left": 0.599550878852352,
+        "top": 0.4413131830610067,
+        "right": 0.7444354277065937,
+        "bottom": 0.4898672062384293
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.999,
+      "position": {
+        "row": 1,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "0-9": {
+      "box": {
+        "left": 0.7435586130554358,
+        "top": 0.44124925543937893,
+        "right": 0.9626760556658258,
+        "bottom": 0.48997971785993144
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.998,
+      "position": {
+        "row": 1,
+        "col": 3,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "9fddb8bf-e2a8-4382-ac89-2b0a7b02fae2"
+      }
+    },
+    "6ead6986-2952-40e6-b100-c6925201d85a": {
+      "box": {
+        "left": 0.04330983757972717,
+        "top": 0.5057680606842041,
+        "right": 0.3684595823287964,
+        "bottom": 0.5410174131393433
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 1.0,
+      "low_confidence_spans": []
+    },
+    "fa30f282-2e2e-4d1a-8174-5411eb3da035": {
+      "box": {
+        "left": 0.035563766956329346,
+        "top": 0.5582742691040039,
+        "right": 0.9702857136726379,
+        "bottom": 0.6926772594451904
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.702,
+      "low_confidence_spans": [
+        {
+          "text": " 6% RM3",
+          "span": [
+            23,
+            30
+          ],
+          "confidence": 0.702
+        }
+      ]
+    },
+    "5e4484a5-36ed-4098-b627-30672a13ebf5": {
+      "box": {
+        "left": 0.037784188985824585,
+        "top": 0.7102320790290833,
+        "right": 0.9693821668624878,
+        "bottom": 0.7746382355690002
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.994,
+      "low_confidence_spans": []
+    },
+    "050f5530-81f0-4f55-ae2d-e1c1136496f7": {
+      "box": {
+        "left": 0.03470581769943237,
+        "top": 0.7909400463104248,
+        "right": 0.9707877039909363,
+        "bottom": 0.9105710983276367
+      },
+      "page": 0,
+      "type": "chunkTable",
+      "confidence": 0.968,
+      "low_confidence_spans": []
+    },
+    "0-a": {
+      "box": {
+        "left": 0.04138663028784162,
+        "top": 0.7942198561518636,
+        "right": 0.9624711500619014,
+        "bottom": 0.9074977101375907
+      },
+      "page": 0,
+      "type": "table",
+      "confidence": null,
+      "low_confidence_spans": []
+    },
+    "0-b": {
+      "box": {
+        "left": 0.04138663028784162,
+        "top": 0.794465001435135,
+        "right": 0.4459945262428382,
+        "bottom": 0.82281778230026
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 0,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-c": {
+      "box": {
+        "left": 0.4458637380979918,
+        "top": 0.794342513795584,
+        "right": 0.703659144895473,
+        "bottom": 0.8228265149967309
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.999,
+      "position": {
+        "row": 0,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-d": {
+      "box": {
+        "left": 0.7036465854090304,
+        "top": 0.7942198561518636,
+        "right": 0.9619611314590236,
+        "bottom": 0.8228352692946949
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.992,
+      "position": {
+        "row": 0,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-e": {
+      "box": {
+        "left": 0.041493475728683754,
+        "top": 0.8228040730649185,
+        "right": 0.44612235923040044,
+        "bottom": 0.8506328160538772
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.986,
+      "position": {
+        "row": 1,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-f": {
+      "box": {
+        "left": 0.4459945262428382,
+        "top": 0.82281778230026,
+        "right": 0.7036713313156021,
+        "bottom": 0.8505299322656945
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.995,
+      "position": {
+        "row": 1,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-g": {
+      "box": {
+        "left": 0.703659144895473,
+        "top": 0.8228265149967309,
+        "right": 0.9621286522501121,
+        "bottom": 0.8504644289499479
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.981,
+      "position": {
+        "row": 1,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-h": {
+      "box": {
+        "left": 0.041599113518962845,
+        "top": 0.8505299322656945,
+        "right": 0.4462441375488007,
+        "bottom": 0.8770149667844063
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 2,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-i": {
+      "box": {
+        "left": 0.44612235923040044,
+        "top": 0.8504644289499479,
+        "right": 0.7036829766304138,
+        "bottom": 0.8769295266614926
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.971,
+      "position": {
+        "row": 2,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-j": {
+      "box": {
+        "left": 0.7036713313156021,
+        "top": 0.8503986946107148,
+        "right": 0.9622892349060396,
+        "bottom": 0.8768751554229048
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.981,
+      "position": {
+        "row": 2,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-k": {
+      "box": {
+        "left": 0.04169926005116836,
+        "top": 0.8769295266614926,
+        "right": 0.44638363424795324,
+        "bottom": 0.9074977101375907
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.968,
+      "position": {
+        "row": 3,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-l": {
+      "box": {
+        "left": 0.4462441375488007,
+        "top": 0.8768751554229048,
+        "right": 0.7036962428033388,
+        "bottom": 0.9071701830078677
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.979,
+      "position": {
+        "row": 3,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0-m": {
+      "box": {
+        "left": 0.7036829766304138,
+        "top": 0.8768205376246769,
+        "right": 0.9624711500619016,
+        "bottom": 0.9069618701352393
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.987,
+      "position": {
+        "row": 3,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "050f5530-81f0-4f55-ae2d-e1c1136496f7"
+      }
+    },
+    "0d1a4674-6ce9-4130-b542-adcdd7d68259": {
+      "box": {
+        "left": 0.40657633543014526,
+        "top": 0.9271900653839111,
+        "right": 0.622507631778717,
+        "bottom": 0.9614540338516235
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 1.0,
+      "low_confidence_spans": []
+    }
+  },
+  "metadata": {
+    "filename": "X51006733494.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7075,
+    "credit_usage": 3.0,
+    "job_id": "cmrykoe5w0376e401a2bsijed",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  }
+}

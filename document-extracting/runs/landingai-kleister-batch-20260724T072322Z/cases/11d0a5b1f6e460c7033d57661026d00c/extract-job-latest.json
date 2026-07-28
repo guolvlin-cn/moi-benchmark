@@ -1,0 +1,82 @@
+{
+  "job_id": "cmrym9om203ybcx01pa24mmoz",
+  "status": "completed",
+  "received_at": 1784877986,
+  "created_at": 1784877986,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2015-03-01",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "AUSPEX PHARMACEUTICALS",
+        "TEVA PHARMACEUTICAL INDUSTRIES, LTD."
+      ],
+      "term": "3_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "146a5c8f-fe9f-48fc-a233-05b119f1f6d3",
+          "85d51866-92e8-4ac6-b121-e3ae1d6c8258",
+          "8b552c3e-7a08-4bed-b64c-8fe3cbe1e708"
+        ],
+        "value": "2015-03-01"
+      },
+      "jurisdiction": {
+        "references": [
+          "5d4282e1-082e-4f0b-965b-4b6650782425"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "85d51866-92e8-4ac6-b121-e3ae1d6c8258",
+            "660b90ed-73b2-4875-ae8a-e25f73ad0961"
+          ],
+          "value": "AUSPEX PHARMACEUTICALS"
+        },
+        {
+          "references": [
+            "85d51866-92e8-4ac6-b121-e3ae1d6c8258",
+            "667b798a-178f-46cc-9d42-ba1165a7d52e"
+          ],
+          "value": "TEVA PHARMACEUTICAL INDUSTRIES, LTD."
+        }
+      ],
+      "term": {
+        "references": [
+          "ee415ca4-346e-4a98-a59d-e09dd44933bb"
+        ],
+        "value": "3_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 20614,
+      "credit_usage": 6.4,
+      "job_id": "cmrym9om203ybcx01pa24mmoz",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 21000,
+    "credit_usage": 6.4,
+    "job_id": "cmrym9om203ybcx01pa24mmoz",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

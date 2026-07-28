@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "BILLION SIX ENTERPRISE",
+    "date": "04/05/2017",
+    "address": "NO 3, JALAN TAMAN JASA 2, SECTION U6, 40150 SHAH ALAM.",
+    "total": "12.00"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "366d5807-2a85-4e5b-abee-8e71a1d077bf"
+      ],
+      "value": "BILLION SIX ENTERPRISE"
+    },
+    "date": {
+      "references": [
+        "dab69962-805c-47cc-80d2-c7fb32db26b6"
+      ],
+      "value": "04/05/2017"
+    },
+    "address": {
+      "references": [
+        "366d5807-2a85-4e5b-abee-8e71a1d077bf"
+      ],
+      "value": "NO 3, JALAN TAMAN JASA 2, SECTION U6, 40150 SHAH ALAM."
+    },
+    "total": {
+      "references": [
+        "0-f"
+      ],
+      "value": "12.00"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10264,
+    "credit_usage": 0.6,
+    "job_id": "cmrykjvtc037ycx01qrd15qiu",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

@@ -1,0 +1,1199 @@
+{
+  "job_id": "cmrykew4f037gcx01ohwrdo40",
+  "status": "completed",
+  "received_at": 1784874870,
+  "created_at": 1784874870,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "dpt-2-20260410",
+  "data": {
+    "markdown": "<a id='eb4c3478-f73e-4650-a71a-5299c441c899'></a>\n\nTHAI DELICIOUS RESTAURANT\nNO.22 JALAN PUTERI 2/4\nBANDAR PUTERI\n47100 PUCHONG, SELANGOR\n03-8051 9514\n\n<a id='80d4a01d-0909-4769-8776-d93da02b4ab3'></a>\n\n--- \nBill No : 01-36870\nDate : 02/02/2017 7:31:08 PM\nCashier : 123\nPax : 4\n\n<a id='0bdedbe4-f139-481e-a0d9-d7ba9c44b567'></a>\n\nTable A3\n\n<a id='54b5c86c-3179-4f10-9918-acd76b53fac5'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\"></td><td id=\"0-3\">Description</td><td id=\"0-4\">Qty</td><td id=\"0-5\">Price</td><td id=\"0-6\">Amount</td></tr>\n<tr><td id=\"0-7\">1</td><td id=\"0-8\">06S BRAISED PORK LEG SMALL ขาหมูเล็ก</td><td id=\"0-9\">1</td><td id=\"0-a\">20.00</td><td id=\"0-b\">20.00</td></tr>\n<tr><td id=\"0-c\">2</td><td id=\"0-d\">32 PHRANAKON SALTED EGG SQUID หมึกไข่เค็ม</td><td id=\"0-e\">1</td><td id=\"0-f\">28.00</td><td id=\"0-g\">28.00</td></tr>\n<tr><td id=\"0-h\">3</td><td id=\"0-i\">51 GARLIC FRIED KAILAN คะน้าน้ำมัน กระเทียม</td><td id=\"0-j\">1</td><td id=\"0-k\">13.00</td><td id=\"0-l\">13.00</td></tr>\n<tr><td id=\"0-m\">4</td><td id=\"0-n\">84 THAI STYLE KERABUTOFU</td><td id=\"0-o\">1</td><td id=\"0-p\">15.00</td><td id=\"0-q\">15.00</td></tr>\n<tr><td id=\"0-r\">5</td><td id=\"0-s\">130 PLAIN RICE</td><td id=\"0-t\">4</td><td id=\"0-u\">1.80</td><td id=\"0-v\">7.20</td></tr>\n<tr><td id=\"0-w\">6</td><td id=\"0-x\">113 COCONUT\nTHAI</td><td id=\"0-y\">1</td><td id=\"0-z\">6.50</td><td id=\"0-A\">6.50</td></tr>\n<tr><td id=\"0-B\">7</td><td id=\"0-C\">116 DISTILLED\nWATER</td><td id=\"0-D\">1</td><td id=\"0-E\">0.60</td><td id=\"0-F\">0.60</td></tr>\n<tr><td id=\"0-G\">8</td><td id=\"0-H\">106B COLD\nPANDAN GINGER\nTEA</td><td id=\"0-I\">1</td><td id=\"0-J\">2.50</td><td id=\"0-K\">2.50</td></tr>\n</table>\n<table id=\"0-L\">\n<tr><td id=\"0-M\">Total:</td><td id=\"0-N\">92.80</td></tr>\n<tr><td id=\"0-O\">Grand Total:</td><td id=\"0-P\">92.80</td></tr>\n<tr><td id=\"0-Q\">Cash Received:</td><td id=\"0-R\">100.00</td></tr>\n<tr><td id=\"0-S\">Change:</td><td id=\"0-T\">7.20</td></tr>\n<tr><td id=\"0-U\">AVERAGE/PAX(S):</td><td id=\"0-V\">23.20</td></tr>\n</table>\n\n<a id='31aa0a6b-ed11-480c-9801-4abc2dc404f0'></a>\n\nThank You. Please Come Again.",
+    "chunks": [
+      {
+        "markdown": "<a id='eb4c3478-f73e-4650-a71a-5299c441c899'></a>\n\nTHAI DELICIOUS RESTAURANT\nNO.22 JALAN PUTERI 2/4\nBANDAR PUTERI\n47100 PUCHONG, SELANGOR\n03-8051 9514",
+        "type": "text",
+        "id": "eb4c3478-f73e-4650-a71a-5299c441c899",
+        "grounding": {
+          "box": {
+            "left": 0.13755986094474792,
+            "top": 0.10626251995563507,
+            "right": 0.823325514793396,
+            "bottom": 0.2384084016084671
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='80d4a01d-0909-4769-8776-d93da02b4ab3'></a>\n\n--- \nBill No : 01-36870\nDate : 02/02/2017 7:31:08 PM\nCashier : 123\nPax : 4",
+        "type": "text",
+        "id": "80d4a01d-0909-4769-8776-d93da02b4ab3",
+        "grounding": {
+          "box": {
+            "left": 0.06401070952415466,
+            "top": 0.24750137329101562,
+            "right": 0.6752755641937256,
+            "bottom": 0.34916627407073975
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='0bdedbe4-f139-481e-a0d9-d7ba9c44b567'></a>\n\nTable A3",
+        "type": "text",
+        "id": "0bdedbe4-f139-481e-a0d9-d7ba9c44b567",
+        "grounding": {
+          "box": {
+            "left": 0.7417668104171753,
+            "top": 0.24892307817935944,
+            "right": 0.8758077621459961,
+            "bottom": 0.2979218661785126
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='54b5c86c-3179-4f10-9918-acd76b53fac5'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\"></td><td id=\"0-3\">Description</td><td id=\"0-4\">Qty</td><td id=\"0-5\">Price</td><td id=\"0-6\">Amount</td></tr>\n<tr><td id=\"0-7\">1</td><td id=\"0-8\">06S BRAISED PORK LEG SMALL ขาหมูเล็ก</td><td id=\"0-9\">1</td><td id=\"0-a\">20.00</td><td id=\"0-b\">20.00</td></tr>\n<tr><td id=\"0-c\">2</td><td id=\"0-d\">32 PHRANAKON SALTED EGG SQUID หมึกไข่เค็ม</td><td id=\"0-e\">1</td><td id=\"0-f\">28.00</td><td id=\"0-g\">28.00</td></tr>\n<tr><td id=\"0-h\">3</td><td id=\"0-i\">51 GARLIC FRIED KAILAN คะน้าน้ำมัน กระเทียม</td><td id=\"0-j\">1</td><td id=\"0-k\">13.00</td><td id=\"0-l\">13.00</td></tr>\n<tr><td id=\"0-m\">4</td><td id=\"0-n\">84 THAI STYLE KERABUTOFU</td><td id=\"0-o\">1</td><td id=\"0-p\">15.00</td><td id=\"0-q\">15.00</td></tr>\n<tr><td id=\"0-r\">5</td><td id=\"0-s\">130 PLAIN RICE</td><td id=\"0-t\">4</td><td id=\"0-u\">1.80</td><td id=\"0-v\">7.20</td></tr>\n<tr><td id=\"0-w\">6</td><td id=\"0-x\">113 COCONUT\nTHAI</td><td id=\"0-y\">1</td><td id=\"0-z\">6.50</td><td id=\"0-A\">6.50</td></tr>\n<tr><td id=\"0-B\">7</td><td id=\"0-C\">116 DISTILLED\nWATER</td><td id=\"0-D\">1</td><td id=\"0-E\">0.60</td><td id=\"0-F\">0.60</td></tr>\n<tr><td id=\"0-G\">8</td><td id=\"0-H\">106B COLD\nPANDAN GINGER\nTEA</td><td id=\"0-I\">1</td><td id=\"0-J\">2.50</td><td id=\"0-K\">2.50</td></tr>\n</table>\n<table id=\"0-L\">\n<tr><td id=\"0-M\">Total:</td><td id=\"0-N\">92.80</td></tr>\n<tr><td id=\"0-O\">Grand Total:</td><td id=\"0-P\">92.80</td></tr>\n<tr><td id=\"0-Q\">Cash Received:</td><td id=\"0-R\">100.00</td></tr>\n<tr><td id=\"0-S\">Change:</td><td id=\"0-T\">7.20</td></tr>\n<tr><td id=\"0-U\">AVERAGE/PAX(S):</td><td id=\"0-V\">23.20</td></tr>\n</table>",
+        "type": "table",
+        "id": "54b5c86c-3179-4f10-9918-acd76b53fac5",
+        "grounding": {
+          "box": {
+            "left": 0.10408809781074524,
+            "top": 0.38226398825645447,
+            "right": 0.9151440858840942,
+            "bottom": 0.9187514781951904
+          },
+          "page": 0
+        }
+      },
+      {
+        "markdown": "<a id='31aa0a6b-ed11-480c-9801-4abc2dc404f0'></a>\n\nThank You. Please Come Again.",
+        "type": "text",
+        "id": "31aa0a6b-ed11-480c-9801-4abc2dc404f0",
+        "grounding": {
+          "box": {
+            "left": 0.26305460929870605,
+            "top": 0.9383891224861145,
+            "right": 0.7249046564102173,
+            "bottom": 0.9622940421104431
+          },
+          "page": 0
+        }
+      }
+    ],
+    "splits": [
+      {
+        "class": "full",
+        "identifier": "full",
+        "pages": [
+          0
+        ],
+        "markdown": "<a id='eb4c3478-f73e-4650-a71a-5299c441c899'></a>\n\nTHAI DELICIOUS RESTAURANT\nNO.22 JALAN PUTERI 2/4\nBANDAR PUTERI\n47100 PUCHONG, SELANGOR\n03-8051 9514\n\n<a id='80d4a01d-0909-4769-8776-d93da02b4ab3'></a>\n\n--- \nBill No : 01-36870\nDate : 02/02/2017 7:31:08 PM\nCashier : 123\nPax : 4\n\n<a id='0bdedbe4-f139-481e-a0d9-d7ba9c44b567'></a>\n\nTable A3\n\n<a id='54b5c86c-3179-4f10-9918-acd76b53fac5'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\"></td><td id=\"0-3\">Description</td><td id=\"0-4\">Qty</td><td id=\"0-5\">Price</td><td id=\"0-6\">Amount</td></tr>\n<tr><td id=\"0-7\">1</td><td id=\"0-8\">06S BRAISED PORK LEG SMALL ขาหมูเล็ก</td><td id=\"0-9\">1</td><td id=\"0-a\">20.00</td><td id=\"0-b\">20.00</td></tr>\n<tr><td id=\"0-c\">2</td><td id=\"0-d\">32 PHRANAKON SALTED EGG SQUID หมึกไข่เค็ม</td><td id=\"0-e\">1</td><td id=\"0-f\">28.00</td><td id=\"0-g\">28.00</td></tr>\n<tr><td id=\"0-h\">3</td><td id=\"0-i\">51 GARLIC FRIED KAILAN คะน้าน้ำมัน กระเทียม</td><td id=\"0-j\">1</td><td id=\"0-k\">13.00</td><td id=\"0-l\">13.00</td></tr>\n<tr><td id=\"0-m\">4</td><td id=\"0-n\">84 THAI STYLE KERABUTOFU</td><td id=\"0-o\">1</td><td id=\"0-p\">15.00</td><td id=\"0-q\">15.00</td></tr>\n<tr><td id=\"0-r\">5</td><td id=\"0-s\">130 PLAIN RICE</td><td id=\"0-t\">4</td><td id=\"0-u\">1.80</td><td id=\"0-v\">7.20</td></tr>\n<tr><td id=\"0-w\">6</td><td id=\"0-x\">113 COCONUT\nTHAI</td><td id=\"0-y\">1</td><td id=\"0-z\">6.50</td><td id=\"0-A\">6.50</td></tr>\n<tr><td id=\"0-B\">7</td><td id=\"0-C\">116 DISTILLED\nWATER</td><td id=\"0-D\">1</td><td id=\"0-E\">0.60</td><td id=\"0-F\">0.60</td></tr>\n<tr><td id=\"0-G\">8</td><td id=\"0-H\">106B COLD\nPANDAN GINGER\nTEA</td><td id=\"0-I\">1</td><td id=\"0-J\">2.50</td><td id=\"0-K\">2.50</td></tr>\n</table>\n<table id=\"0-L\">\n<tr><td id=\"0-M\">Total:</td><td id=\"0-N\">92.80</td></tr>\n<tr><td id=\"0-O\">Grand Total:</td><td id=\"0-P\">92.80</td></tr>\n<tr><td id=\"0-Q\">Cash Received:</td><td id=\"0-R\">100.00</td></tr>\n<tr><td id=\"0-S\">Change:</td><td id=\"0-T\">7.20</td></tr>\n<tr><td id=\"0-U\">AVERAGE/PAX(S):</td><td id=\"0-V\">23.20</td></tr>\n</table>\n\n<a id='31aa0a6b-ed11-480c-9801-4abc2dc404f0'></a>\n\nThank You. Please Come Again.",
+        "chunks": [
+          "eb4c3478-f73e-4650-a71a-5299c441c899",
+          "80d4a01d-0909-4769-8776-d93da02b4ab3",
+          "0bdedbe4-f139-481e-a0d9-d7ba9c44b567",
+          "54b5c86c-3179-4f10-9918-acd76b53fac5",
+          "31aa0a6b-ed11-480c-9801-4abc2dc404f0"
+        ]
+      }
+    ],
+    "grounding": {
+      "eb4c3478-f73e-4650-a71a-5299c441c899": {
+        "box": {
+          "left": 0.13755986094474792,
+          "top": 0.10626251995563507,
+          "right": 0.823325514793396,
+          "bottom": 0.2384084016084671
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      },
+      "80d4a01d-0909-4769-8776-d93da02b4ab3": {
+        "box": {
+          "left": 0.06401070952415466,
+          "top": 0.24750137329101562,
+          "right": 0.6752755641937256,
+          "bottom": 0.34916627407073975
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.956,
+        "low_confidence_spans": []
+      },
+      "0bdedbe4-f139-481e-a0d9-d7ba9c44b567": {
+        "box": {
+          "left": 0.7417668104171753,
+          "top": 0.24892307817935944,
+          "right": 0.8758077621459961,
+          "bottom": 0.2979218661785126
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 0.988,
+        "low_confidence_spans": []
+      },
+      "54b5c86c-3179-4f10-9918-acd76b53fac5": {
+        "box": {
+          "left": 0.10408809781074524,
+          "top": 0.38226398825645447,
+          "right": 0.9151440858840942,
+          "bottom": 0.9187514781951904
+        },
+        "page": 0,
+        "type": "chunkTable",
+        "confidence": 0.588,
+        "low_confidence_spans": []
+      },
+      "0-1": {
+        "box": {
+          "left": 0.10476026184947498,
+          "top": 0.3822774103874291,
+          "right": 0.915133015404864,
+          "bottom": 0.7812146703295095
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-2": {
+        "box": {
+          "left": 0.10476026184947498,
+          "top": 0.3822803923595904,
+          "right": 0.15098406408881046,
+          "bottom": 0.408611615520432
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.972,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-3": {
+        "box": {
+          "left": 0.15083374625858287,
+          "top": 0.38227927654341115,
+          "right": 0.43689521226144623,
+          "bottom": 0.40872917066993597
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-4": {
+        "box": {
+          "left": 0.4368214788712987,
+          "top": 0.3822788406471123,
+          "right": 0.5485874410621241,
+          "bottom": 0.40877509401618883
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-5": {
+        "box": {
+          "left": 0.5485432808101324,
+          "top": 0.3822782340171909,
+          "right": 0.7040413594267193,
+          "bottom": 0.4088390104067568
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-6": {
+        "box": {
+          "left": 0.7040247292664868,
+          "top": 0.3822774103874291,
+          "right": 0.9151246242963634,
+          "bottom": 0.4089257993442226
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-7": {
+        "box": {
+          "left": 0.10476830196678659,
+          "top": 0.408592613460315,
+          "right": 0.15128758897633734,
+          "bottom": 0.46178016868700844
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-8": {
+        "box": {
+          "left": 0.15098406408881046,
+          "top": 0.408611615520432,
+          "right": 0.43704342980114813,
+          "bottom": 0.4618982739074116
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-9": {
+        "box": {
+          "left": 0.43689521226144623,
+          "top": 0.40872917066993597,
+          "right": 0.5486760562513517,
+          "bottom": 0.46194441258269825
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-a": {
+        "box": {
+          "left": 0.5485874410621241,
+          "top": 0.40877509401618883,
+          "right": 0.7040746498489627,
+          "bottom": 0.46200864008927944
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-b": {
+        "box": {
+          "left": 0.7040413594267193,
+          "top": 0.4088390104067568,
+          "right": 0.9151258227093712,
+          "bottom": 0.4620958692609215
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-c": {
+        "box": {
+          "left": 0.10478454850753499,
+          "top": 0.46176094860097927,
+          "right": 0.1515860062988084,
+          "bottom": 0.5140540280232488
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-d": {
+        "box": {
+          "left": 0.15128758897633734,
+          "top": 0.46178016868700844,
+          "right": 0.4371888424077934,
+          "bottom": 0.5140611819566082
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-e": {
+        "box": {
+          "left": 0.43704342980114813,
+          "top": 0.4618982739074116,
+          "right": 0.5487629218566175,
+          "bottom": 0.5140639767241248
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-f": {
+        "box": {
+          "left": 0.5486760562513517,
+          "top": 0.46194441258269825,
+          "right": 0.704107245029424,
+          "bottom": 0.5140678678722341
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-g": {
+        "box": {
+          "left": 0.7040746498489627,
+          "top": 0.46200864008927944,
+          "right": 0.915126994237898,
+          "bottom": 0.514073153608342
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-h": {
+        "box": {
+          "left": 0.10480052724006436,
+          "top": 0.5140528561154207,
+          "right": 0.1518844831673633,
+          "bottom": 0.5663416298695284
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-i": {
+        "box": {
+          "left": 0.1515860062988084,
+          "top": 0.5140540280232488,
+          "right": 0.43733451745391727,
+          "bottom": 0.5663383180663488
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.977,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-j": {
+        "box": {
+          "left": 0.4371888424077934,
+          "top": 0.5140611819566082,
+          "right": 0.5488499988708379,
+          "bottom": 0.5663182331940368
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-k": {
+        "box": {
+          "left": 0.5487629218566175,
+          "top": 0.5140639767241248,
+          "right": 0.7041399481302971,
+          "bottom": 0.566310386727279
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-l": {
+        "box": {
+          "left": 0.704107245029424,
+          "top": 0.5140678678722341,
+          "right": 0.9151281710445885,
+          "bottom": 0.5662994601957407
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-m": {
+        "box": {
+          "left": 0.10481650501501691,
+          "top": 0.5663383180663488,
+          "right": 0.1521894394343009,
+          "bottom": 0.619760923652671
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-n": {
+        "box": {
+          "left": 0.1518844831673633,
+          "top": 0.5663182331940368,
+          "right": 0.4374834327060734,
+          "bottom": 0.6197576064293667
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.973,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-o": {
+        "box": {
+          "left": 0.43733451745391727,
+          "top": 0.566310386727279,
+          "right": 0.5489390309080009,
+          "bottom": 0.6197376222316124
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-p": {
+        "box": {
+          "left": 0.5488499988708379,
+          "top": 0.5662994601957407,
+          "right": 0.7041733949887652,
+          "bottom": 0.6197298150195161
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-q": {
+        "box": {
+          "left": 0.7041399481302971,
+          "top": 0.5662846146150522,
+          "right": 0.9151293750806792,
+          "bottom": 0.6197189412040723
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-r": {
+        "box": {
+          "left": 0.10483282824069065,
+          "top": 0.6197576064293667,
+          "right": 0.15231567788712805,
+          "bottom": 0.641872144991432
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-s": {
+        "box": {
+          "left": 0.1521894394343009,
+          "top": 0.6197376222316124,
+          "right": 0.43754511074743296,
+          "bottom": 0.6418708372273241
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.981,
+        "position": {
+          "row": 5,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-t": {
+        "box": {
+          "left": 0.4374834327060734,
+          "top": 0.6197298150195161,
+          "right": 0.5489759142589521,
+          "bottom": 0.6418629803715898
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-u": {
+        "box": {
+          "left": 0.5489390309080009,
+          "top": 0.6197189412040723,
+          "right": 0.7041872551549001,
+          "bottom": 0.6418599109276732
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-v": {
+        "box": {
+          "left": 0.7041733949887652,
+          "top": 0.6197041642156917,
+          "right": 0.9151298742270584,
+          "bottom": 0.6418556355164666
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 5,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-w": {
+        "box": {
+          "left": 0.10483958472192195,
+          "top": 0.6418708372273241,
+          "right": 0.15253602061537816,
+          "bottom": 0.6804718861555831
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 6,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-x": {
+        "box": {
+          "left": 0.15231567788712805,
+          "top": 0.6418629803715898,
+          "right": 0.4376526704591531,
+          "bottom": 0.6804683445266094
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.588,
+        "position": {
+          "row": 6,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-y": {
+        "box": {
+          "left": 0.43754511074743296,
+          "top": 0.6418599109276732,
+          "right": 0.5490402123184712,
+          "bottom": 0.6804471683708129
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.962,
+        "position": {
+          "row": 6,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-z": {
+        "box": {
+          "left": 0.5489759142589521,
+          "top": 0.6418556355164666,
+          "right": 0.7042114055835093,
+          "bottom": 0.6804388954062508
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.996,
+        "position": {
+          "row": 6,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-A": {
+        "box": {
+          "left": 0.7041872551549001,
+          "top": 0.6418498249459739,
+          "right": 0.9151307433825614,
+          "bottom": 0.6804273705466344
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.994,
+        "position": {
+          "row": 6,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-B": {
+        "box": {
+          "left": 0.10485137956684312,
+          "top": 0.6804683445266094,
+          "right": 0.15274343661072845,
+          "bottom": 0.7168035522895022
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.993,
+        "position": {
+          "row": 7,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-C": {
+        "box": {
+          "left": 0.15253602061537816,
+          "top": 0.6804471683708129,
+          "right": 0.43775397948208083,
+          "bottom": 0.716801471823802
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.997,
+        "position": {
+          "row": 7,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-D": {
+        "box": {
+          "left": 0.4376526704591531,
+          "top": 0.6804388954062508,
+          "right": 0.5491007876755056,
+          "bottom": 0.716789087888362
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.99,
+        "position": {
+          "row": 7,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-E": {
+        "box": {
+          "left": 0.5490402123184712,
+          "top": 0.6804273705466344,
+          "right": 0.7042341650322521,
+          "bottom": 0.7167842497807251
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.961,
+        "position": {
+          "row": 7,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-F": {
+        "box": {
+          "left": 0.7042114055835093,
+          "top": 0.6804117051663061,
+          "right": 0.9151315628336306,
+          "bottom": 0.7167775091117292
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 7,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-G": {
+        "box": {
+          "left": 0.10486248136065969,
+          "top": 0.716801471823802,
+          "right": 0.15310815843023992,
+          "bottom": 0.7806899114496557
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.99,
+        "position": {
+          "row": 8,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-H": {
+        "box": {
+          "left": 0.15274343661072845,
+          "top": 0.716789087888362,
+          "right": 0.43793266021554605,
+          "bottom": 0.7808860522777978
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.999,
+        "position": {
+          "row": 8,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-I": {
+        "box": {
+          "left": 0.43775397948208083,
+          "top": 0.7167842497807251,
+          "right": 0.5492077513141937,
+          "bottom": 0.7809626804765056
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.99,
+        "position": {
+          "row": 8,
+          "col": 2,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-J": {
+        "box": {
+          "left": 0.5491007876755056,
+          "top": 0.7167775091117292,
+          "right": 0.7042744193349001,
+          "bottom": 0.7810694651965426
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.982,
+        "position": {
+          "row": 8,
+          "col": 3,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-K": {
+        "box": {
+          "left": 0.7042341650322521,
+          "top": 0.7167683454515625,
+          "right": 0.915133015404864,
+          "bottom": 0.7812146703295098
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.982,
+        "position": {
+          "row": 8,
+          "col": 4,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-L": {
+        "box": {
+          "left": 0.11037962315155207,
+          "top": 0.7826258217941504,
+          "right": 0.9112640521133688,
+          "bottom": 0.918745370560254
+        },
+        "page": 0,
+        "type": "table",
+        "confidence": null,
+        "low_confidence_spans": []
+      },
+      "0-M": {
+        "box": {
+          "left": 0.11037962315155207,
+          "top": 0.7832391569867829,
+          "right": 0.5751341708007252,
+          "bottom": 0.8086287737533213
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.979,
+        "position": {
+          "row": 0,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-N": {
+        "box": {
+          "left": 0.5748630307515201,
+          "top": 0.7826258217941504,
+          "right": 0.9105686024908884,
+          "bottom": 0.8081435784607145
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 0,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-O": {
+        "box": {
+          "left": 0.11040645444641567,
+          "top": 0.8081435784607145,
+          "right": 0.5754023301720063,
+          "bottom": 0.8327884350931551
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.998,
+        "position": {
+          "row": 1,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-P": {
+        "box": {
+          "left": 0.5751341708007252,
+          "top": 0.8077933707982341,
+          "right": 0.9107251187827724,
+          "bottom": 0.8327742223812704
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 1,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-Q": {
+        "box": {
+          "left": 0.11043286923916475,
+          "top": 0.8327742223812704,
+          "right": 0.5756369307875144,
+          "bottom": 0.8545204874200264
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.97,
+        "position": {
+          "row": 2,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-R": {
+        "box": {
+          "left": 0.5754023301720063,
+          "top": 0.8327639725765341,
+          "right": 0.9108593534869848,
+          "bottom": 0.854322468845756
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 2,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-S": {
+        "box": {
+          "left": 0.11045662982298055,
+          "top": 0.854322468845756,
+          "right": 0.5759227609437253,
+          "bottom": 0.8805761879149319
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.998,
+        "position": {
+          "row": 3,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-T": {
+        "box": {
+          "left": 0.5756369307875144,
+          "top": 0.8541797709153647,
+          "right": 0.911025122789998,
+          "bottom": 0.8806265976501055
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 3,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-U": {
+        "box": {
+          "left": 0.11048504108485954,
+          "top": 0.880506171720272,
+          "right": 0.576338305205311,
+          "bottom": 0.9187442470487698
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 0.99,
+        "position": {
+          "row": 4,
+          "col": 0,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "0-V": {
+        "box": {
+          "left": 0.5759227609437253,
+          "top": 0.8805761879149319,
+          "right": 0.9112640521133688,
+          "bottom": 0.9187453705602538
+        },
+        "page": 0,
+        "type": "tableCell",
+        "confidence": 1.0,
+        "position": {
+          "row": 4,
+          "col": 1,
+          "rowspan": 1,
+          "colspan": 1,
+          "chunk_id": "54b5c86c-3179-4f10-9918-acd76b53fac5"
+        }
+      },
+      "31aa0a6b-ed11-480c-9801-4abc2dc404f0": {
+        "box": {
+          "left": 0.26305460929870605,
+          "top": 0.9383891224861145,
+          "right": 0.7249046564102173,
+          "bottom": 0.9622940421104431
+        },
+        "page": 0,
+        "type": "chunkText",
+        "confidence": 1.0,
+        "low_confidence_spans": []
+      }
+    },
+    "metadata": {
+      "filename": "X51005568829.jpg",
+      "org_id": "uxkmyluf3ldw",
+      "page_count": 1,
+      "duration_ms": 5835,
+      "credit_usage": 3.0,
+      "job_id": "cmrykew4f037gcx01ohwrdo40",
+      "version": "dpt-2-20260410",
+      "failed_pages": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "X51005568829.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 8000,
+    "credit_usage": 3.0,
+    "job_id": "cmrykew4f037gcx01ohwrdo40",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "failure_reason": null
+}

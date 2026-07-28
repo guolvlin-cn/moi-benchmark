@@ -1,0 +1,83 @@
+{
+  "job_id": "cmryj6snt0253d501submw0q1",
+  "status": "completed",
+  "received_at": 1784872812,
+  "created_at": 1784872812,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "July 22, 2011",
+      "foreign_principle_name": "BGR Gabara, Ltd. (for Free Democrats)",
+      "registrant_name": "BGR Government Affairs, LLC",
+      "registration_num": "5430",
+      "signer_name": "William Samuel Patten Jr.",
+      "signer_title": "Independent Contractor"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "c8cf0b3b-9b54-46dc-90da-46a3df7537dc"
+        ],
+        "value": "July 22, 2011"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0-h",
+          "20f296cb-174a-4d06-a6c8-bdc21b735add"
+        ],
+        "value": "BGR Gabara, Ltd. (for Free Democrats)"
+      },
+      "registrant_name": {
+        "references": [
+          "0-9"
+        ],
+        "value": "BGR Government Affairs, LLC"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "5430"
+      },
+      "signer_name": {
+        "references": [
+          "0-2",
+          "c8cf0b3b-9b54-46dc-90da-46a3df7537dc"
+        ],
+        "value": "William Samuel Patten Jr."
+      },
+      "signer_title": {
+        "references": [
+          "0-f"
+        ],
+        "value": "Independent Contractor"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13517,
+      "credit_usage": 2.1,
+      "job_id": "cmryj6snt0253d501submw0q1",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 2.1,
+    "job_id": "cmryj6snt0253d501submw0q1",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

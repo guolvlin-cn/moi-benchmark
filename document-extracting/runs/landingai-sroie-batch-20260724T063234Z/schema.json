@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "company": {
+      "type": "string",
+      "description": "The merchant or company name printed on the receipt. Return the business name, not a tax registration label, cashier name, or payment provider.",
+      "x-alternativeNames": [
+        "Company",
+        "Merchant",
+        "Merchant Name",
+        "Business Name",
+        "Store Name"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "description": "The transaction date printed on the receipt. Preserve the date as shown and do not return a time, invoice number, or tax registration date.",
+      "x-alternativeNames": [
+        "Date",
+        "Transaction Date",
+        "Receipt Date",
+        "Invoice Date"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "description": "The merchant or company address printed on the receipt. Include all address lines belonging to the merchant and exclude customer or delivery addresses.",
+      "x-alternativeNames": [
+        "Address",
+        "Business Address",
+        "Merchant Address",
+        "Store Address"
+      ]
+    },
+    "total": {
+      "type": "string",
+      "description": "The final total amount payable on the receipt. Do not return subtotal, tax, service charge, cash tendered, change, rounding adjustment, or balance before the final total.",
+      "x-alternativeNames": [
+        "Total",
+        "Grand Total",
+        "Amount Due",
+        "Total Amount",
+        "Net Total"
+      ]
+    }
+  }
+}

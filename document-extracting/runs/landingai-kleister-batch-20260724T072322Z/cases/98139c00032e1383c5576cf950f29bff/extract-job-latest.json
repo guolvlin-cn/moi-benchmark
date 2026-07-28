@@ -1,0 +1,78 @@
+{
+  "job_id": "cmrymlk4z040lcx01d2th7dnw",
+  "status": "completed",
+  "received_at": 1784878540,
+  "created_at": 1784878540,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "1999-03-16",
+      "jurisdiction": "State of Oregon",
+      "party": [
+        "ACUMED, INC.",
+        "MEDEX SURGICAL"
+      ],
+      "term": "indefinitely"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "b7a5c92b-a111-4202-ab3b-25f1ef68b6a5"
+        ],
+        "value": "1999-03-16"
+      },
+      "jurisdiction": {
+        "references": [
+          "b7a5c92b-a111-4202-ab3b-25f1ef68b6a5"
+        ],
+        "value": "State of Oregon"
+      },
+      "party": [
+        {
+          "references": [
+            "b7a5c92b-a111-4202-ab3b-25f1ef68b6a5"
+          ],
+          "value": "ACUMED, INC."
+        },
+        {
+          "references": [
+            "b7a5c92b-a111-4202-ab3b-25f1ef68b6a5"
+          ],
+          "value": "MEDEX SURGICAL"
+        }
+      ],
+      "term": {
+        "references": [
+          "b7a5c92b-a111-4202-ab3b-25f1ef68b6a5"
+        ],
+        "value": "indefinitely"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 9429,
+      "credit_usage": 1.2,
+      "job_id": "cmrymlk4z040lcx01d2th7dnw",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10000,
+    "credit_usage": 1.2,
+    "job_id": "cmrymlk4z040lcx01d2th7dnw",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

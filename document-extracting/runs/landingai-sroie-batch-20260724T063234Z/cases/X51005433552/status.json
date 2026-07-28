@@ -1,0 +1,51 @@
+{
+  "case_id": "X51005433552",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51005433552.jpg",
+  "source_type": "image",
+  "image_sha256": "1c740bd37d2a9463ad8de91803c9499e09ea2008898135ca4333e5b09bddf5e5",
+  "gold_entities": "train/entities/X51005433552.txt",
+  "gold_box": "train/box/X51005433552.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykcrjz0278d501l2qr6ape",
+  "extract_job_id": "cmrykd8a8027ad501l7f4rldl",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.230569+00:00",
+  "updated_at": "2026-07-24T06:33:27.492478+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:32:51.547674+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:33:08.687966+00:00",
+  "parse_metadata": {
+    "filename": "X51005433552.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 8271,
+    "credit_usage": 3.0,
+    "job_id": "cmrykcrjz0278d501l2qr6ape",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:33:13.099847+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:33:27.492472+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10598,
+    "credit_usage": 0.6,
+    "job_id": "cmrykd8a8027ad501l7f4rldl",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "WARAKUYA PERMAS CITY SDN BHD",
+    "date": "10/03/2018",
+    "address": "JALAN PERMAS UTARA 1. PERMAS JAYA 81750 MASAI JOHOR",
+    "total": "57.80"
+  }
+}

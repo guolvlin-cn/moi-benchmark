@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "myNEWS.com",
+    "date": "23/03/2018",
+    "address": "PAGOH REST AND SERVICE AREA LOT R1, KWS REHAT & RAWAT PAGOH ARAH UTARA, SIMPANG AMPAT PAGOH, LEBUHRAYA UTARA SELATAN., 84600, PAGOH, JOHOR",
+    "total": "10.00"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "df8fef2e-7407-4bef-bea0-8b2dbc279868"
+      ],
+      "value": "myNEWS.com"
+    },
+    "date": {
+      "references": [
+        "30d0bf66-53f4-42e9-9018-88a64165ed02"
+      ],
+      "value": "23/03/2018"
+    },
+    "address": {
+      "references": [
+        "df8fef2e-7407-4bef-bea0-8b2dbc279868"
+      ],
+      "value": "PAGOH REST AND SERVICE AREA LOT R1, KWS REHAT & RAWAT PAGOH ARAH UTARA, SIMPANG AMPAT PAGOH, LEBUHRAYA UTARA SELATAN., 84600, PAGOH, JOHOR"
+    },
+    "total": {
+      "references": [
+        "dbc7b592-e3cb-4c74-80d3-eed8ec831ecf"
+      ],
+      "value": "10.00"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16824,
+    "credit_usage": 0.5,
+    "job_id": "cmryke1ty027gd501pqxtxw0r",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "20100720_Daniel J. Edelman, Inc._Dolezal, Ashley_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20100720_Daniel J. Edelman, Inc._Dolezal, Ashley_Short-Form.pdf",
+  "pdf_sha256": "d55a22b685fc7e28c2072daf6dea4d7876464fd1bc15d957ea366f00105a45f3",
+  "status": "completed",
+  "parse_job_id": "cmryjdwti025md501wk2yx88j",
+  "extract_job_id": "cmryje4to033pe40127t5e3ln",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.423797+00:00",
+  "updated_at": "2026-07-24T06:06:17.010593+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:05:45.296814+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:05:52.905689+00:00",
+  "parse_metadata": {
+    "filename": "20100720_Daniel J. Edelman, Inc._Dolezal, Ashley_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 6503,
+    "credit_usage": 6.0,
+    "job_id": "cmryjdwti025md501wk2yx88j",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:05:55.684035+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:06:17.010587+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15015,
+    "credit_usage": 2.0,
+    "job_id": "cmryje4to033pe40127t5e3ln",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "2010-07-20",
+    "foreign_principle_name": "Oerlikon Solar",
+    "registrant_name": "Edelman",
+    "registration_num": "3634",
+    "signer_name": "Ashley Dolezal",
+    "signer_title": "Public Relations"
+  }
+}

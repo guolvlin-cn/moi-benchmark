@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykn6ke038dcx01x1x2kaxr",
+  "status": "completed",
+  "received_at": 1784875257,
+  "created_at": 1784875257,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "GARDENIA BAKERIES (KL) SDN BHD",
+      "date": "01/10/2017",
+      "address": "Lot 3, Jalan Pelabur 23/1, 40300 Shah Alam, Selangor.",
+      "total": "31.32"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "0a95e686-5945-439d-b89c-cfcbe49ccc1c"
+        ],
+        "value": "GARDENIA BAKERIES (KL) SDN BHD"
+      },
+      "date": {
+        "references": [
+          "f34eaaa4-50b2-4fe4-bffa-12be02564b6a"
+        ],
+        "value": "01/10/2017"
+      },
+      "address": {
+        "references": [
+          "0a95e686-5945-439d-b89c-cfcbe49ccc1c"
+        ],
+        "value": "Lot 3, Jalan Pelabur 23/1, 40300 Shah Alam, Selangor."
+      },
+      "total": {
+        "references": [
+          "0-W"
+        ],
+        "value": "31.32"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11606,
+      "credit_usage": 0.8,
+      "job_id": "cmrykn6ke038dcx01x1x2kaxr",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.8,
+    "job_id": "cmrykn6ke038dcx01x1x2kaxr",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

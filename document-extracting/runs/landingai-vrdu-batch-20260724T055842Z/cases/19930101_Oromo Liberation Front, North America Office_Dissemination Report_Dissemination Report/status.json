@@ -1,0 +1,50 @@
+{
+  "case_id": "19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "76687306664afc62c55295ab6a02ec82d054c9808012bd2da51312aa12be0460",
+  "status": "completed",
+  "parse_job_id": "cmryjcg4m0353cx012ygpnc21",
+  "extract_job_id": "cmryjcs4z033me401n249qoja",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.422190+00:00",
+  "updated_at": "2026-07-24T06:05:08.404064+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:04:36.992515+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:04:51.695826+00:00",
+  "parse_metadata": {
+    "filename": "19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 8503,
+    "credit_usage": 6.0,
+    "job_id": "cmryjcg4m0353cx012ygpnc21",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:04:52.567376+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:05:08.404060+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12796,
+    "credit_usage": 1.6,
+    "job_id": "cmryjcs4z033me401n249qoja",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "1993-01-13",
+    "foreign_principle_name": "Oromo Liberation Front (OLF)",
+    "registrant_name": "Tamam A. Youssouf",
+    "registration_num": "4610",
+    "signer_name": "Tamam A. Youssouf",
+    "signer_title": "N. Am Representative"
+  }
+}

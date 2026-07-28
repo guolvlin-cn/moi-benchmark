@@ -1,0 +1,57 @@
+{
+  "extraction": {
+    "effective_date": null,
+    "jurisdiction": "State of Minnesota",
+    "party": [
+      "The St. Paul Travelers Companies, Inc., a Minnesota corporation with its principal place of business located in St. Paul, Minnesota and its affiliated entities",
+      "the participant named in the term sheet"
+    ],
+    "term": null
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [],
+      "value": null
+    },
+    "jurisdiction": {
+      "references": [
+        "74ef8adc-2678-446f-8296-12c99fd0e517"
+      ],
+      "value": "State of Minnesota"
+    },
+    "party": [
+      {
+        "references": [
+          "5850ce60-a2d4-42b8-8857-3f946a89ff10"
+        ],
+        "value": "The St. Paul Travelers Companies, Inc., a Minnesota corporation with its principal place of business located in St. Paul, Minnesota and its affiliated entities"
+      },
+      {
+        "references": [
+          "5850ce60-a2d4-42b8-8857-3f946a89ff10"
+        ],
+        "value": "the participant named in the term sheet"
+      }
+    ],
+    "term": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18937,
+    "credit_usage": 3.4,
+    "job_id": "cmrymgn0u03y3e401peilg2lt",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'effective_date' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'effective_date' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

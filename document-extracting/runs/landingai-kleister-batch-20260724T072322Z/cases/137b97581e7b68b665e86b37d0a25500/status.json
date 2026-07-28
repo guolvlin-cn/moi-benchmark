@@ -1,0 +1,53 @@
+{
+  "case_id": "137b97581e7b68b665e86b37d0a25500",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/137b97581e7b68b665e86b37d0a25500.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "fc9e16f244d0a752e1c471ca9938504f5508a454bcc01fc0f92a6a48623625c3",
+  "status": "completed",
+  "parse_job_id": "cmrym9vtw02ymd5012ytj9ulr",
+  "extract_job_id": "cmrymb57o02zfd501ltlanck8",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.400162+00:00",
+  "updated_at": "2026-07-24T07:27:49.699144+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:26:36.280698+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:27:31.806004+00:00",
+  "parse_metadata": {
+    "filename": "137b97581e7b68b665e86b37d0a25500.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 4,
+    "duration_ms": 19083,
+    "credit_usage": 12.0,
+    "job_id": "cmrym9vtw02ymd5012ytj9ulr",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:27:35.065188+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:27:49.699140+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10236,
+    "credit_usage": 4.8,
+    "job_id": "cmrymb57o02zfd501ltlanck8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2009-04-30",
+    "jurisdiction": "Delaware",
+    "party": [
+      "California Micro Devices Corporation",
+      "ON Semiconductor Corporation"
+    ],
+    "term": "3_years"
+  }
+}

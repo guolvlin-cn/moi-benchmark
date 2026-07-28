@@ -1,0 +1,80 @@
+{
+  "job_id": "cmrymf65703zvcx01ukalh80q",
+  "status": "completed",
+  "received_at": 1784878242,
+  "created_at": 1784878242,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "State of New Jersey",
+      "party": [
+        "OceanFirst Financial Corp.",
+        "[•]"
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "29512a16-296f-4659-ae27-5d17f230e0f4"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "9ff2e070-189d-4999-8ccc-da7fe210536f"
+        ],
+        "value": "State of New Jersey"
+      },
+      "party": [
+        {
+          "references": [
+            "fed17bcf-34e2-486a-a9a7-9d1dfd168a6a",
+            "b070d480-89d3-4864-a931-da0a0ec37ea0"
+          ],
+          "value": "OceanFirst Financial Corp."
+        },
+        {
+          "references": [
+            "fed17bcf-34e2-486a-a9a7-9d1dfd168a6a",
+            "b070d480-89d3-4864-a931-da0a0ec37ea0"
+          ],
+          "value": "[•]"
+        }
+      ],
+      "term": {
+        "references": [
+          "8bc42301-66f1-4a20-b110-2d602b0671d9"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 18337,
+      "credit_usage": 2.6,
+      "job_id": "cmrymf65703zvcx01ukalh80q",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19000,
+    "credit_usage": 2.6,
+    "job_id": "cmrymf65703zvcx01ukalh80q",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

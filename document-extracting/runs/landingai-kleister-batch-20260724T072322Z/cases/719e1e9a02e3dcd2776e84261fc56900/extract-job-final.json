@@ -1,0 +1,85 @@
+{
+  "job_id": "cmrymubg6033nd5010b0wl451",
+  "status": "completed",
+  "received_at": 1784878949,
+  "created_at": 1784878949,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2008-09-01",
+      "jurisdiction": "State of California",
+      "party": [
+        "THOMAS PROPERTIES GROUP, INC.",
+        "THOMAS PROPERTIES GROUP, L.P.",
+        "PAUL S. RUTTER"
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "b54fa0d2-aba7-4811-a3f9-3118d98d24c7"
+        ],
+        "value": "2008-09-01"
+      },
+      "jurisdiction": {
+        "references": [
+          "6c516f4c-6655-4450-bd8d-1d05f6baeb8d"
+        ],
+        "value": "State of California"
+      },
+      "party": [
+        {
+          "references": [
+            "b54fa0d2-aba7-4811-a3f9-3118d98d24c7"
+          ],
+          "value": "THOMAS PROPERTIES GROUP, INC."
+        },
+        {
+          "references": [
+            "b54fa0d2-aba7-4811-a3f9-3118d98d24c7"
+          ],
+          "value": "THOMAS PROPERTIES GROUP, L.P."
+        },
+        {
+          "references": [
+            "b54fa0d2-aba7-4811-a3f9-3118d98d24c7"
+          ],
+          "value": "PAUL S. RUTTER"
+        }
+      ],
+      "term": {
+        "references": [
+          "b0ac339c-66b5-4fb2-86bc-7110da732fc3"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 17113,
+      "credit_usage": 2.2,
+      "job_id": "cmrymubg6033nd5010b0wl451",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18000,
+    "credit_usage": 2.2,
+    "job_id": "cmrymubg6033nd5010b0wl451",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

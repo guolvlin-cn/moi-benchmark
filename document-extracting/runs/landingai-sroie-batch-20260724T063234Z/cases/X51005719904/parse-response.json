@@ -1,0 +1,509 @@
+{
+  "markdown": "<a id='b33786ba-339c-4c88-82d8-ccfd9f9bc5d8'></a>\n\nYam Fresh\nNo.145G, Jalan Rimbunan Raya 1,\nLaman Rimbunan Kepong,\n52100 Kuala Lumpur\nTel: (603) 6243 5520\nGST ID=001817907200\n\n<a id='3c7f73a4-63ce-437b-a774-01f807630b67'></a>\n\nBill No.: 001-3246\nDate: 2018-03-18 13:18:48\n\nDine In\n\n<a id='53d8ae16-1ae0-4151-88c9-1ca41738c4b6'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">R05 Oyster Mee :Take Away</td><td id=\"0-3\">1</td><td id=\"0-4\">RM9.90</td></tr>\n<tr><td id=\"0-5\">A07 BlackSugar Ice :Fresh Milk :Pearl</td><td id=\"0-6\">1</td><td id=\"0-7\">RM7.50</td></tr>\n<tr><td id=\"0-8\">:Herb.J :Take Away</td><td id=\"0-9\"></td><td id=\"0-a\">RM3.00</td></tr>\n<tr><td id=\"0-b\">S02 Pudding Soybean :Take Away</td><td id=\"0-c\">1</td><td id=\"0-d\">RM8.90</td></tr>\n<tr><td id=\"0-e\"></td><td id=\"0-f\" colspan=\"2\">Grand Total RM29.30</td></tr>\n</table>\n\n<a id='806ccfba-b2c8-4159-bb30-4c31211508fb'></a>\n\n(Bill Inclusive of 6% GST : RM1.66)\n\n<a id='6aa0c89b-c743-471a-86f3-0a6094277f9e'></a>\n\nCash RM30.30\nChange RM1.00\n\n<a id='438e7c3d-d2f3-44d4-8ce9-a9abbaea03f5'></a>\n\nThank You.\nPlease visit us at:-\nFacebook:-Yam Fresh\ns\nWifi SSID: yamfresh\nWifi Pasword: buyadrinkfirst\n\n<a id='ad35f1a5-e848-42ad-91be-2e85d07c8fe1'></a>\n\n001-2018-03-18 13:21:02 Rainy\n\n<a id='f05ca4f1-d612-49b9-87f7-c229500eb0d2'></a>\n\n001-3246 [1]",
+  "chunks": [
+    {
+      "markdown": "<a id='b33786ba-339c-4c88-82d8-ccfd9f9bc5d8'></a>\n\nYam Fresh\nNo.145G, Jalan Rimbunan Raya 1,\nLaman Rimbunan Kepong,\n52100 Kuala Lumpur\nTel: (603) 6243 5520\nGST ID=001817907200",
+      "type": "text",
+      "id": "b33786ba-339c-4c88-82d8-ccfd9f9bc5d8",
+      "grounding": {
+        "box": {
+          "left": 0.15612539649009705,
+          "top": 0.06175275146961212,
+          "right": 0.754500150680542,
+          "bottom": 0.20793689787387848
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='3c7f73a4-63ce-437b-a774-01f807630b67'></a>\n\nBill No.: 001-3246\nDate: 2018-03-18 13:18:48\n\nDine In",
+      "type": "text",
+      "id": "3c7f73a4-63ce-437b-a774-01f807630b67",
+      "grounding": {
+        "box": {
+          "left": 0.0005161166191101074,
+          "top": 0.2691197097301483,
+          "right": 0.914936900138855,
+          "bottom": 0.3395048677921295
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='53d8ae16-1ae0-4151-88c9-1ca41738c4b6'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">R05 Oyster Mee :Take Away</td><td id=\"0-3\">1</td><td id=\"0-4\">RM9.90</td></tr>\n<tr><td id=\"0-5\">A07 BlackSugar Ice :Fresh Milk :Pearl</td><td id=\"0-6\">1</td><td id=\"0-7\">RM7.50</td></tr>\n<tr><td id=\"0-8\">:Herb.J :Take Away</td><td id=\"0-9\"></td><td id=\"0-a\">RM3.00</td></tr>\n<tr><td id=\"0-b\">S02 Pudding Soybean :Take Away</td><td id=\"0-c\">1</td><td id=\"0-d\">RM8.90</td></tr>\n<tr><td id=\"0-e\"></td><td id=\"0-f\" colspan=\"2\">Grand Total RM29.30</td></tr>\n</table>",
+      "type": "table",
+      "id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6",
+      "grounding": {
+        "box": {
+          "left": 0.0007047951221466064,
+          "top": 0.34430694580078125,
+          "right": 0.9195342063903809,
+          "bottom": 0.6409213542938232
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='806ccfba-b2c8-4159-bb30-4c31211508fb'></a>\n\n(Bill Inclusive of 6% GST : RM1.66)",
+      "type": "text",
+      "id": "806ccfba-b2c8-4159-bb30-4c31211508fb",
+      "grounding": {
+        "box": {
+          "left": 0.0032190680503845215,
+          "top": 0.6437047123908997,
+          "right": 0.6832940578460693,
+          "bottom": 0.6752623915672302
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='6aa0c89b-c743-471a-86f3-0a6094277f9e'></a>\n\nCash RM30.30\nChange RM1.00",
+      "type": "text",
+      "id": "6aa0c89b-c743-471a-86f3-0a6094277f9e",
+      "grounding": {
+        "box": {
+          "left": 0.5251784324645996,
+          "top": 0.6893328428268433,
+          "right": 0.9179930686950684,
+          "bottom": 0.7451610565185547
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='438e7c3d-d2f3-44d4-8ce9-a9abbaea03f5'></a>\n\nThank You.\nPlease visit us at:-\nFacebook:-Yam Fresh\ns\nWifi SSID: yamfresh\nWifi Pasword: buyadrinkfirst",
+      "type": "text",
+      "id": "438e7c3d-d2f3-44d4-8ce9-a9abbaea03f5",
+      "grounding": {
+        "box": {
+          "left": 0.1675790548324585,
+          "top": 0.7585441470146179,
+          "right": 0.7214765548706055,
+          "bottom": 0.9048600792884827
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='ad35f1a5-e848-42ad-91be-2e85d07c8fe1'></a>\n\n001-2018-03-18 13:21:02 Rainy",
+      "type": "text",
+      "id": "ad35f1a5-e848-42ad-91be-2e85d07c8fe1",
+      "grounding": {
+        "box": {
+          "left": 0.0018013417720794678,
+          "top": 0.9188690185546875,
+          "right": 0.45951420068740845,
+          "bottom": 0.9446943998336792
+        },
+        "page": 0
+      }
+    },
+    {
+      "markdown": "<a id='f05ca4f1-d612-49b9-87f7-c229500eb0d2'></a>\n\n001-3246 [1]",
+      "type": "text",
+      "id": "f05ca4f1-d612-49b9-87f7-c229500eb0d2",
+      "grounding": {
+        "box": {
+          "left": 0.5265403985977173,
+          "top": 0.9188202619552612,
+          "right": 0.7137079238891602,
+          "bottom": 0.9441124200820923
+        },
+        "page": 0
+      }
+    }
+  ],
+  "splits": [
+    {
+      "class": "full",
+      "identifier": "full",
+      "pages": [
+        0
+      ],
+      "markdown": "<a id='b33786ba-339c-4c88-82d8-ccfd9f9bc5d8'></a>\n\nYam Fresh\nNo.145G, Jalan Rimbunan Raya 1,\nLaman Rimbunan Kepong,\n52100 Kuala Lumpur\nTel: (603) 6243 5520\nGST ID=001817907200\n\n<a id='3c7f73a4-63ce-437b-a774-01f807630b67'></a>\n\nBill No.: 001-3246\nDate: 2018-03-18 13:18:48\n\nDine In\n\n<a id='53d8ae16-1ae0-4151-88c9-1ca41738c4b6'></a>\n\n<table id=\"0-1\">\n<tr><td id=\"0-2\">R05 Oyster Mee :Take Away</td><td id=\"0-3\">1</td><td id=\"0-4\">RM9.90</td></tr>\n<tr><td id=\"0-5\">A07 BlackSugar Ice :Fresh Milk :Pearl</td><td id=\"0-6\">1</td><td id=\"0-7\">RM7.50</td></tr>\n<tr><td id=\"0-8\">:Herb.J :Take Away</td><td id=\"0-9\"></td><td id=\"0-a\">RM3.00</td></tr>\n<tr><td id=\"0-b\">S02 Pudding Soybean :Take Away</td><td id=\"0-c\">1</td><td id=\"0-d\">RM8.90</td></tr>\n<tr><td id=\"0-e\"></td><td id=\"0-f\" colspan=\"2\">Grand Total RM29.30</td></tr>\n</table>\n\n<a id='806ccfba-b2c8-4159-bb30-4c31211508fb'></a>\n\n(Bill Inclusive of 6% GST : RM1.66)\n\n<a id='6aa0c89b-c743-471a-86f3-0a6094277f9e'></a>\n\nCash RM30.30\nChange RM1.00\n\n<a id='438e7c3d-d2f3-44d4-8ce9-a9abbaea03f5'></a>\n\nThank You.\nPlease visit us at:-\nFacebook:-Yam Fresh\ns\nWifi SSID: yamfresh\nWifi Pasword: buyadrinkfirst\n\n<a id='ad35f1a5-e848-42ad-91be-2e85d07c8fe1'></a>\n\n001-2018-03-18 13:21:02 Rainy\n\n<a id='f05ca4f1-d612-49b9-87f7-c229500eb0d2'></a>\n\n001-3246 [1]",
+      "chunks": [
+        "b33786ba-339c-4c88-82d8-ccfd9f9bc5d8",
+        "3c7f73a4-63ce-437b-a774-01f807630b67",
+        "53d8ae16-1ae0-4151-88c9-1ca41738c4b6",
+        "806ccfba-b2c8-4159-bb30-4c31211508fb",
+        "6aa0c89b-c743-471a-86f3-0a6094277f9e",
+        "438e7c3d-d2f3-44d4-8ce9-a9abbaea03f5",
+        "ad35f1a5-e848-42ad-91be-2e85d07c8fe1",
+        "f05ca4f1-d612-49b9-87f7-c229500eb0d2"
+      ]
+    }
+  ],
+  "grounding": {
+    "b33786ba-339c-4c88-82d8-ccfd9f9bc5d8": {
+      "box": {
+        "left": 0.15612539649009705,
+        "top": 0.06175275146961212,
+        "right": 0.754500150680542,
+        "bottom": 0.20793689787387848
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.985,
+      "low_confidence_spans": []
+    },
+    "3c7f73a4-63ce-437b-a774-01f807630b67": {
+      "box": {
+        "left": 0.0005161166191101074,
+        "top": 0.2691197097301483,
+        "right": 0.914936900138855,
+        "bottom": 0.3395048677921295
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.996,
+      "low_confidence_spans": []
+    },
+    "53d8ae16-1ae0-4151-88c9-1ca41738c4b6": {
+      "box": {
+        "left": 0.0007047951221466064,
+        "top": 0.34430694580078125,
+        "right": 0.9195342063903809,
+        "bottom": 0.6409213542938232
+      },
+      "page": 0,
+      "type": "chunkTable",
+      "confidence": 0.963,
+      "low_confidence_spans": []
+    },
+    "0-1": {
+      "box": {
+        "left": 0.0031664770182699004,
+        "top": 0.34578322553013474,
+        "right": 0.9136353613699502,
+        "bottom": 0.6409127089711575
+      },
+      "page": 0,
+      "type": "table",
+      "confidence": null,
+      "low_confidence_spans": []
+    },
+    "0-2": {
+      "box": {
+        "left": 0.003332419591246286,
+        "top": 0.34578322553013474,
+        "right": 0.382170488968744,
+        "bottom": 0.40284450954878415
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.971,
+      "position": {
+        "row": 0,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-3": {
+      "box": {
+        "left": 0.3818193692358834,
+        "top": 0.34610953599219885,
+        "right": 0.7206284098130121,
+        "bottom": 0.4026234673425041
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 0,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-4": {
+      "box": {
+        "left": 0.7205617843053193,
+        "top": 0.3464016690603324,
+        "right": 0.9134780288318973,
+        "bottom": 0.4024260247818078
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.967,
+      "position": {
+        "row": 0,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-5": {
+      "box": {
+        "left": 0.003283545182409943,
+        "top": 0.4026234673425041,
+        "right": 0.38260715136371326,
+        "bottom": 0.4729617935031364
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.989,
+      "position": {
+        "row": 1,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-6": {
+      "box": {
+        "left": 0.382170488968744,
+        "top": 0.4024260247818078,
+        "right": 0.7205617843053193,
+        "bottom": 0.47290578503365566
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 1,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-7": {
+      "box": {
+        "left": 0.7204780274116147,
+        "top": 0.4023134631472617,
+        "right": 0.9135245273979097,
+        "bottom": 0.472855897206109
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 1,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-8": {
+      "box": {
+        "left": 0.0032519171939476487,
+        "top": 0.47290578503365566,
+        "right": 0.38288904002729923,
+        "bottom": 0.5183366369174396
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.998,
+      "position": {
+        "row": 2,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-9": {
+      "box": {
+        "left": 0.38260715136371326,
+        "top": 0.472855897206109,
+        "right": 0.7204780274116147,
+        "bottom": 0.5182767371374838
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.984,
+      "position": {
+        "row": 2,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-a": {
+      "box": {
+        "left": 0.7204240751935623,
+        "top": 0.47282739320892386,
+        "right": 0.9135544425653926,
+        "bottom": 0.5182234802953105
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 2,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-b": {
+      "box": {
+        "left": 0.0032102611041403503,
+        "top": 0.5182767371374838,
+        "right": 0.3832615635802516,
+        "bottom": 0.5782356871127468
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.996,
+      "position": {
+        "row": 3,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-c": {
+      "box": {
+        "left": 0.38288904002729923,
+        "top": 0.5182234802953105,
+        "right": 0.7204240751935623,
+        "bottom": 0.5783576182223374
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 3,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-d": {
+      "box": {
+        "left": 0.7203525622342883,
+        "top": 0.5181930078630519,
+        "right": 0.9135941626360937,
+        "bottom": 0.5784275167448437
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 1.0,
+      "position": {
+        "row": 3,
+        "col": 2,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-e": {
+      "box": {
+        "left": 0.0031664770182699004,
+        "top": 0.5780982165863982,
+        "right": 0.383650952829748,
+        "bottom": 0.6409127089711575
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.982,
+      "position": {
+        "row": 4,
+        "col": 0,
+        "rowspan": 1,
+        "colspan": 1,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "0-f": {
+      "box": {
+        "left": 0.38326156358025165,
+        "top": 0.5782356871127468,
+        "right": 0.9136353613699502,
+        "bottom": 0.6409092290845833
+      },
+      "page": 0,
+      "type": "tableCell",
+      "confidence": 0.994,
+      "position": {
+        "row": 4,
+        "col": 1,
+        "rowspan": 1,
+        "colspan": 2,
+        "chunk_id": "53d8ae16-1ae0-4151-88c9-1ca41738c4b6"
+      }
+    },
+    "806ccfba-b2c8-4159-bb30-4c31211508fb": {
+      "box": {
+        "left": 0.0032190680503845215,
+        "top": 0.6437047123908997,
+        "right": 0.6832940578460693,
+        "bottom": 0.6752623915672302
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.994,
+      "low_confidence_spans": []
+    },
+    "6aa0c89b-c743-471a-86f3-0a6094277f9e": {
+      "box": {
+        "left": 0.5251784324645996,
+        "top": 0.6893328428268433,
+        "right": 0.9179930686950684,
+        "bottom": 0.7451610565185547
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.965,
+      "low_confidence_spans": []
+    },
+    "438e7c3d-d2f3-44d4-8ce9-a9abbaea03f5": {
+      "box": {
+        "left": 0.1675790548324585,
+        "top": 0.7585441470146179,
+        "right": 0.7214765548706055,
+        "bottom": 0.9048600792884827
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 0.975,
+      "low_confidence_spans": []
+    },
+    "ad35f1a5-e848-42ad-91be-2e85d07c8fe1": {
+      "box": {
+        "left": 0.0018013417720794678,
+        "top": 0.9188690185546875,
+        "right": 0.45951420068740845,
+        "bottom": 0.9446943998336792
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 1.0,
+      "low_confidence_spans": []
+    },
+    "f05ca4f1-d612-49b9-87f7-c229500eb0d2": {
+      "box": {
+        "left": 0.5265403985977173,
+        "top": 0.9188202619552612,
+        "right": 0.7137079238891602,
+        "bottom": 0.9441124200820923
+      },
+      "page": 0,
+      "type": "chunkText",
+      "confidence": 1.0,
+      "low_confidence_spans": []
+    }
+  },
+  "metadata": {
+    "filename": "X51005719904.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 6084,
+    "credit_usage": 3.0,
+    "job_id": "cmrykh6gs0369e401wqc59syq",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  }
+}

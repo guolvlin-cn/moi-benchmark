@@ -1,0 +1,82 @@
+{
+  "job_id": "cmryjbncj025hd501u7yg0jlu",
+  "status": "completed",
+  "received_at": 1784873039,
+  "created_at": 1784873039,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "1989-02-14",
+      "foreign_principle_name": null,
+      "registrant_name": "Manufactured Imports Promotion Organization",
+      "registration_num": "3196",
+      "signer_name": "Norihiro Kono",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "1dc0cec1-8976-4ede-921a-abd8304aa63d"
+        ],
+        "value": "1989-02-14"
+      },
+      "foreign_principle_name": {
+        "references": [],
+        "value": null
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Manufactured Imports Promotion Organization"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "3196"
+      },
+      "signer_name": {
+        "references": [
+          "989612b6-e4db-46f8-b715-daa0c5bd004b"
+        ],
+        "value": "Norihiro Kono"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15065,
+      "credit_usage": 1.2,
+      "job_id": "cmryjbncj025hd501u7yg0jlu",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 1.2,
+    "job_id": "cmryjbncj025hd501u7yg0jlu",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,57 @@
+{
+  "case_id": "db004ff0a64417b9987241241b209c69",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/db004ff0a64417b9987241241b209c69.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "07ef045a138a963af9f8a8abadb9760b95803da523a3dcca5462aa7e7b766153",
+  "status": "completed",
+  "parse_job_id": "cmrympv4g040fe4018file7ma",
+  "extract_job_id": "cmrymq8gm0335d5011r8hpeuv",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.430222+00:00",
+  "updated_at": "2026-07-24T07:39:42.885431+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:39:01.960186+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:39:17.399423+00:00",
+  "parse_metadata": {
+    "filename": "db004ff0a64417b9987241241b209c69.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 5,
+    "duration_ms": 9245,
+    "credit_usage": 15.0,
+    "job_id": "cmrympv4g040fe4018file7ma",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:39:19.114480+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:39:42.885425+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20781,
+    "credit_usage": 3.8,
+    "job_id": "cmrymq8gm0335d5011r8hpeuv",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2017-10-02",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "Potbelly Corporation",
+      "Ancora Advisors, LLC",
+      "Frederick DiSanto",
+      "James Chadwick",
+      "Brian Hopkins",
+      "Joseph Boehm"
+    ],
+    "term": "2_years"
+  }
+}

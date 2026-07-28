@@ -1,0 +1,63 @@
+{
+  "extraction": {
+    "effective_date": "2009-02-02",
+    "jurisdiction": "Delaware",
+    "party": [
+      "CORPSENSE CONSULTING, INC.",
+      "CADDYSTATS, INC."
+    ],
+    "term": null
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [
+        "fa423ddc-a11a-40cb-8990-fec892aafcd6"
+      ],
+      "value": "2009-02-02"
+    },
+    "jurisdiction": {
+      "references": [
+        "a0a02a3e-9070-47ee-8c56-5db063d73376"
+      ],
+      "value": "Delaware"
+    },
+    "party": [
+      {
+        "references": [
+          "1e17baed-fb8c-427c-b0ec-4c43b3f5f73c",
+          "5a54f9da-8fa2-4935-94bf-cd48d1d5f852",
+          "bc4bb74e-7c23-459e-b709-f1c4454a905a"
+        ],
+        "value": "CORPSENSE CONSULTING, INC."
+      },
+      {
+        "references": [
+          "1e17baed-fb8c-427c-b0ec-4c43b3f5f73c",
+          "5a54f9da-8fa2-4935-94bf-cd48d1d5f852",
+          "bce3de1d-7f3e-4a64-8d3c-bb1cd443420e"
+        ],
+        "value": "CADDYSTATS, INC."
+      }
+    ],
+    "term": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15901,
+    "credit_usage": 2.1,
+    "job_id": "cmrymtx2g0417e401sbbyl6xr",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "job_id": "cmrymdo3i03xie4011crh44oi",
+  "status": "completed",
+  "received_at": 1784878172,
+  "created_at": 1784878172,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2018-10-01",
+      "jurisdiction": "State of California",
+      "party": [
+        "CUBIC CORPORATION",
+        "JOHN D. THOMAS"
+      ],
+      "term": "1_year"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "105c266a-a61d-48a7-be67-e0fd15cbe9a8"
+        ],
+        "value": "2018-10-01"
+      },
+      "jurisdiction": {
+        "references": [
+          "57e5c4eb-5b0d-4e69-a5bc-e261686e06c1"
+        ],
+        "value": "State of California"
+      },
+      "party": [
+        {
+          "references": [
+            "105c266a-a61d-48a7-be67-e0fd15cbe9a8",
+            "a459e04c-8782-421a-acdb-c521a25e8814"
+          ],
+          "value": "CUBIC CORPORATION"
+        },
+        {
+          "references": [
+            "105c266a-a61d-48a7-be67-e0fd15cbe9a8",
+            "a459e04c-8782-421a-acdb-c521a25e8814"
+          ],
+          "value": "JOHN D. THOMAS"
+        }
+      ],
+      "term": {
+        "references": [
+          "6278c859-5245-4c4d-b767-36689c3621bf"
+        ],
+        "value": "1_year"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11740,
+      "credit_usage": 2.5,
+      "job_id": "cmrymdo3i03xie4011crh44oi",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 2.5,
+    "job_id": "cmrymdo3i03xie4011crh44oi",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

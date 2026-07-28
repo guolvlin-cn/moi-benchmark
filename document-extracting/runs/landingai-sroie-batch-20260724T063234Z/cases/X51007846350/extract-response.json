@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "PASARAYA CINWA SDN BHD",
+    "date": "15/06/2018",
+    "address": "NO.6, 8, 10& 12 JALAN PERMAS 4/3 BANDAR BARU PERMAS JAYA, 81750 JOHOR BAHRU, JOHOR.",
+    "total": "14.20"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "374d5147-c1ff-4309-9ac5-c8dd5b3a8d69"
+      ],
+      "value": "PASARAYA CINWA SDN BHD"
+    },
+    "date": {
+      "references": [
+        "35bd14eb-9321-4bd9-a4c9-1413bd3f52fe"
+      ],
+      "value": "15/06/2018"
+    },
+    "address": {
+      "references": [
+        "374d5147-c1ff-4309-9ac5-c8dd5b3a8d69"
+      ],
+      "value": "NO.6, 8, 10& 12 JALAN PERMAS 4/3 BANDAR BARU PERMAS JAYA, 81750 JOHOR BAHRU, JOHOR."
+    },
+    "total": {
+      "references": [
+        "0-10"
+      ],
+      "value": "14.20"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13725,
+    "credit_usage": 0.9,
+    "job_id": "cmrykrejv029ad501wa6kpwdz",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

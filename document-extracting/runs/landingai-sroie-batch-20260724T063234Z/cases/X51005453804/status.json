@@ -1,0 +1,51 @@
+{
+  "case_id": "X51005453804",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51005453804.jpg",
+  "source_type": "image",
+  "image_sha256": "9758674ab336ba9a8d18c098c1d209fd857004883943f75381a4af12cec7a7a7",
+  "gold_entities": "train/entities/X51005453804.txt",
+  "gold_box": "train/box/X51005453804.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykeowa037ecx01915xuyth",
+  "extract_job_id": "cmrykevgh037fcx01z0ntjjtp",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.237515+00:00",
+  "updated_at": "2026-07-24T06:34:51.577615+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:34:21.331675+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:34:28.981122+00:00",
+  "parse_metadata": {
+    "filename": "X51005453804.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 5245,
+    "credit_usage": 3.0,
+    "job_id": "cmrykeowa037ecx01915xuyth",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:34:29.807354+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:34:51.577612+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17050,
+    "credit_usage": 0.6,
+    "job_id": "cmrykevgh037fcx01z0ntjjtp",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "LJAN HING STATIONERY SDN BHD",
+    "date": "27/03/2018",
+    "address": "NO.32 & 33, JALAN SR 1/9, SEKSYEN 9, TAMAN SERDANG RAYA, 43300 SERI KEMBANGAN, SELANGOR DARUL EHSAN",
+    "total": "12.00"
+  }
+}

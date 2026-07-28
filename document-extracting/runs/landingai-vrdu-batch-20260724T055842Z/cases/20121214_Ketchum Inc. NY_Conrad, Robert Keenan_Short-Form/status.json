@@ -1,0 +1,50 @@
+{
+  "case_id": "20121214_Ketchum Inc. NY_Conrad, Robert Keenan_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20121214_Ketchum Inc. NY_Conrad, Robert Keenan_Short-Form.pdf",
+  "pdf_sha256": "2ad9f39940b544c3524b26c827ed78399d10dfbaa4c6b164f512781ccb78da6e",
+  "status": "completed",
+  "parse_job_id": "cmryjnioa0368cx01wl2rnbar",
+  "extract_job_id": "cmryjnvj0026id501wdovl3k7",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.433329+00:00",
+  "updated_at": "2026-07-24T06:13:45.119429+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:13:13.509155+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:13:28.339711+00:00",
+  "parse_metadata": {
+    "filename": "20121214_Ketchum Inc. NY_Conrad, Robert Keenan_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 8758,
+    "credit_usage": 6.0,
+    "job_id": "cmryjnioa0368cx01wl2rnbar",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:13:30.172663+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:13:45.119426+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12929,
+    "credit_usage": 2.0,
+    "job_id": "cmryjnvj0026id501wdovl3k7",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "12/14/2012",
+    "foreign_principle_name": "Russian Federation",
+    "registrant_name": "Ketchum, Inc",
+    "registration_num": "5758",
+    "signer_name": "Robert Keenan Conrad",
+    "signer_title": "Vice President/Group Manager"
+  }
+}

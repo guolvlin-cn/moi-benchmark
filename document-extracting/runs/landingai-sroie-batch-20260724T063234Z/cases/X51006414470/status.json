@@ -1,0 +1,51 @@
+{
+  "case_id": "X51006414470",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51006414470.jpg",
+  "source_type": "image",
+  "image_sha256": "6a71318c8ef1a4ad8fa81ed734e5d5fad6c5388ad8ed7dd79e63bd7f245a36e1",
+  "gold_entities": "train/entities/X51006414470.txt",
+  "gold_box": "train/box/X51006414470.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykjied0283d501gpzll5hx",
+  "extract_job_id": "cmrykjx48037zcx01z2odapy3",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.252536+00:00",
+  "updated_at": "2026-07-24T06:38:48.588722+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:38:06.174978+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:38:21.687291+00:00",
+  "parse_metadata": {
+    "filename": "X51006414470.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 13704,
+    "credit_usage": 3.0,
+    "job_id": "cmrykjied0283d501gpzll5hx",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:38:25.228783+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:38:48.588712+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16649,
+    "credit_usage": 0.6,
+    "job_id": "cmrykjx48037zcx01z2odapy3",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "UNIHAKKA INTERNATIONAL SDN BHD",
+    "date": "09 Apr 2018",
+    "address": "12, Jalan Tampoi 7/4, Kawasan Perindustrian Tampoi, 81200 Johor Bahru, Johor",
+    "total": "$8.20"
+  }
+}

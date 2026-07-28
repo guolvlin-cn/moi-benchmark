@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymofjv0328d50161fy6kqt",
+  "status": "completed",
+  "received_at": 1784878674,
+  "created_at": 1784878674,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2012-07-05",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "Curtiss-Wright Controls, Inc.",
+        "Williams Controls, Inc."
+      ],
+      "term": "3_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "3a379e30-869b-4205-aa9b-9e52ff6619c9",
+          "fe4aef4b-b151-4ecb-b4fc-dbaf99d76629"
+        ],
+        "value": "2012-07-05"
+      },
+      "jurisdiction": {
+        "references": [
+          "d5c57db2-0395-486f-87a1-a03f41abba95"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "38212e66-3839-4683-a3ef-8b3e3887a7d8"
+          ],
+          "value": "Curtiss-Wright Controls, Inc."
+        },
+        {
+          "references": [
+            "38212e66-3839-4683-a3ef-8b3e3887a7d8"
+          ],
+          "value": "Williams Controls, Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "f16bbdab-8515-4f6d-8b11-46d7188040a7"
+        ],
+        "value": "3_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 26234,
+      "credit_usage": 7.4,
+      "job_id": "cmrymofjv0328d50161fy6kqt",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 27000,
+    "credit_usage": 7.4,
+    "job_id": "cmrymofjv0328d50161fy6kqt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

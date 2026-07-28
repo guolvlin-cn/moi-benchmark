@@ -1,0 +1,54 @@
+{
+  "case_id": "294941062474a6d42bdb6b9d4ab4545f",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/294941062474a6d42bdb6b9d4ab4545f.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "bc0cd92d7feb94ea987fc599851a0fa60016cdd5d58bc1e7374bdc9de3ac829a",
+  "status": "completed",
+  "parse_job_id": "cmrymbjw503yzcx016cu0fw3r",
+  "extract_job_id": "cmrymbz5402zmd50192e4jaei",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.401597+00:00",
+  "updated_at": "2026-07-24T07:28:33.728341+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:27:54.069891+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:28:09.464869+00:00",
+  "parse_metadata": {
+    "filename": "294941062474a6d42bdb6b9d4ab4545f.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 4,
+    "duration_ms": 10479,
+    "credit_usage": 12.0,
+    "job_id": "cmrymbjw503yzcx016cu0fw3r",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:28:13.913882+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:28:33.728337+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12691,
+    "credit_usage": 3.1,
+    "job_id": "cmrymbz5402zmd50192e4jaei",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2018-11-15",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "TESARO, Inc.",
+      "GlaxoSmithKline LLC",
+      "Ajinomoto Althea, Inc.DBA Ajinomoto Bio-Pharma Services"
+    ],
+    "term": "5_years"
+  }
+}

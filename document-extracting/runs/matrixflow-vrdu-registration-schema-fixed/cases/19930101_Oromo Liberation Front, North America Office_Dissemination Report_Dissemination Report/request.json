@@ -1,0 +1,67 @@
+{
+  "note": "workflow default_values are merged by the backend",
+  "uploaded_file": {
+    "file_id": "53c539f4-34e1-4c80-aecc-34b9d4d51c04",
+    "md5": "2be66c4ba0c13ce5ba81aaa5c302cc36",
+    "original_name": "19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+    "size": 101533
+  },
+  "values": {
+    "extract_schema": {
+      "additionalProperties": false,
+      "properties": {
+        "file_date": {
+          "description": "The filing or registration date shown on the document. Return an empty string when the field is absent or uncertain; do not guess.",
+          "type": "string"
+        },
+        "foreign_principle_name": {
+          "description": "The foreign principal represented by the registrant. Keep this exact field-name spelling. Return an empty string when absent or uncertain; do not confuse it with the registrant.",
+          "type": "string"
+        },
+        "registrant_name": {
+          "description": "The official name of the registrant individual or organization. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "registration_num": {
+          "description": "The registration number as text, preserving leading zeros. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "signer_name": {
+          "description": "The name of the person who signed or executed the document. Return an empty string when absent or uncertain.",
+          "type": "string"
+        },
+        "signer_title": {
+          "description": "The signer's title, position, capacity, or role. Return an empty string when absent or uncertain; do not return the signer name.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file_date",
+        "foreign_principle_name",
+        "registrant_name",
+        "registration_num",
+        "signer_name",
+        "signer_title"
+      ],
+      "type": "object"
+    },
+    "source_ref": {
+      "display_location": "19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+      "file_id": "53c539f4-34e1-4c80-aecc-34b9d4d51c04",
+      "file_name": "19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+      "id_parents": [
+        "catalog-1",
+        "database-10001",
+        "volume-20001"
+      ],
+      "ids": [
+        "53c539f4-34e1-4c80-aecc-34b9d4d51c04"
+      ],
+      "kind": "file",
+      "location": "19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+      "resource_type": "file",
+      "volume_id": 20001
+    }
+  },
+  "workflow_id": "2b084712-3ed2-4034-965b-8e2657693359"
+}

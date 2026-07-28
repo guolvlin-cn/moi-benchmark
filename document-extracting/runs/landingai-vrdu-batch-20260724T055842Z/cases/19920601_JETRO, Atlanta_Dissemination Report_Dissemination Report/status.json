@@ -1,0 +1,50 @@
+{
+  "case_id": "19920601_JETRO, Atlanta_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19920601_JETRO, Atlanta_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "6c30cce8c8f6e2e565765ed23f7106911728b742adc998a223f6c0eeb5a416b3",
+  "status": "completed",
+  "parse_job_id": "cmryj9tjc0336e401ub2wsdkv",
+  "extract_job_id": "cmryja6ln0338e401fixh1unk",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.419030+00:00",
+  "updated_at": "2026-07-24T06:03:06.171848+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:02:34.417457+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:02:50.178071+00:00",
+  "parse_metadata": {
+    "filename": "19920601_JETRO, Atlanta_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 9575,
+    "credit_usage": 6.0,
+    "job_id": "cmryj9tjc0336e401ub2wsdkv",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:02:51.428377+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:03:06.171845+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10267,
+    "credit_usage": 1.4,
+    "job_id": "cmryja6ln0338e401fixh1unk",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "1992-06-25",
+    "foreign_principle_name": "Japan External Trade Organization",
+    "registrant_name": "JETRO, ATLANTA",
+    "registration_num": "4069",
+    "signer_name": "Yasumasa Iwasaki",
+    "signer_title": "Executive Director"
+  }
+}

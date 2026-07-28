@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryjke5w034de401s0v3akmp",
+  "status": "completed",
+  "received_at": 1784873447,
+  "created_at": 1784873447,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "11/23/1993",
+      "foreign_principle_name": "Japan External Trade Organization",
+      "registrant_name": "JETRO, Los Angeles",
+      "registration_num": "1833",
+      "signer_name": "Harumi Kamekawa",
+      "signer_title": "Public Relations Director"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "54e87f81-df1e-4f2f-b9bd-f3f3278ca8f2"
+        ],
+        "value": "11/23/1993"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0-7"
+        ],
+        "value": "Japan External Trade Organization"
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "JETRO, Los Angeles"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "1833"
+      },
+      "signer_name": {
+        "references": [
+          "1-6"
+        ],
+        "value": "Harumi Kamekawa"
+      },
+      "signer_title": {
+        "references": [
+          "1-6"
+        ],
+        "value": "Public Relations Director"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13171,
+      "credit_usage": 1.4,
+      "job_id": "cmryjke5w034de401s0v3akmp",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 1.4,
+    "job_id": "cmryjke5w034de401s0v3akmp",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

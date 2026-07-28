@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykd7n40279d501y4pz1i9e",
+  "status": "completed",
+  "received_at": 1784874791,
+  "created_at": 1784874791,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "HOME MASTER HARDWARE & ELECTRICAL",
+      "date": "22/12/2017",
+      "address": "NO.113G & 115G, JALAN SETIA GEMBILANG U13/BG BANDAR SETIA ALAM, 40170 BANDAR SETIA ALAM, SELANGOR.",
+      "total": "15.90"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "8b9fdb10-f62b-4f68-b558-f7f967c70832"
+        ],
+        "value": "HOME MASTER HARDWARE & ELECTRICAL"
+      },
+      "date": {
+        "references": [
+          "1d4f9698-f068-42f0-aa75-f79d196a49f2"
+        ],
+        "value": "22/12/2017"
+      },
+      "address": {
+        "references": [
+          "8b9fdb10-f62b-4f68-b558-f7f967c70832"
+        ],
+        "value": "NO.113G & 115G, JALAN SETIA GEMBILANG U13/BG BANDAR SETIA ALAM, 40170 BANDAR SETIA ALAM, SELANGOR."
+      },
+      "total": {
+        "references": [
+          "0-g"
+        ],
+        "value": "15.90"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 14012,
+      "credit_usage": 0.6,
+      "job_id": "cmrykd7n40279d501y4pz1i9e",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykd7n40279d501y4pz1i9e",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

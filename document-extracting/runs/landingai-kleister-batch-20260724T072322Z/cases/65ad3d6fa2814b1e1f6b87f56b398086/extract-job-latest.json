@@ -1,0 +1,79 @@
+{
+  "job_id": "cmrymih5803y7e401dvwgemvw",
+  "status": "completed",
+  "received_at": 1784878396,
+  "created_at": 1784878396,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "Ohio",
+      "party": [
+        "Fifth Third Processing Solutions, LLC",
+        "Employee"
+      ],
+      "term": ""
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "aeed8c69-e51c-4559-9a38-0cdce5f8e53e",
+          "241ccb64-a31e-4dc9-afc4-415c4189bcbc"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "767cf5ec-d8c2-4c32-9bcc-bf1fbe99b04d"
+        ],
+        "value": "Ohio"
+      },
+      "party": [
+        {
+          "references": [
+            "aeed8c69-e51c-4559-9a38-0cdce5f8e53e"
+          ],
+          "value": "Fifth Third Processing Solutions, LLC"
+        },
+        {
+          "references": [
+            "aeed8c69-e51c-4559-9a38-0cdce5f8e53e"
+          ],
+          "value": "Employee"
+        }
+      ],
+      "term": {
+        "references": [
+          "5970c53d-9627-49aa-b1ca-482a9defbc63"
+        ],
+        "value": ""
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 18776,
+      "credit_usage": 3.9,
+      "job_id": "cmrymih5803y7e401dvwgemvw",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20000,
+    "credit_usage": 3.9,
+    "job_id": "cmrymih5803y7e401dvwgemvw",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

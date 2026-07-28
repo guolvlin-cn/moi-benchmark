@@ -1,0 +1,88 @@
+{
+  "job_id": "cmrymou5a032ud501o3m7ebbn",
+  "status": "completed",
+  "received_at": 1784878693,
+  "created_at": 1784878693,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2015-12-08",
+      "jurisdiction": "STATE OF WASHINGTON",
+      "party": [
+        "Anchor Bancorp",
+        "Varonica S. Ragan",
+        "Joel S. Lawson IV"
+      ],
+      "term": "1_year"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "aaf3c4ac-a08b-4e30-bddf-c01d2e655a64"
+        ],
+        "value": "2015-12-08"
+      },
+      "jurisdiction": {
+        "references": [
+          "be7910e1-71ad-4be7-a5db-0a65165b0525"
+        ],
+        "value": "STATE OF WASHINGTON"
+      },
+      "party": [
+        {
+          "references": [
+            "aaf3c4ac-a08b-4e30-bddf-c01d2e655a64",
+            "5e2280d1-be87-49eb-9e65-f83b219c71f2"
+          ],
+          "value": "Anchor Bancorp"
+        },
+        {
+          "references": [
+            "aaf3c4ac-a08b-4e30-bddf-c01d2e655a64",
+            "54db729a-3ec6-45e6-a21b-a0778933e1ae"
+          ],
+          "value": "Varonica S. Ragan"
+        },
+        {
+          "references": [
+            "aaf3c4ac-a08b-4e30-bddf-c01d2e655a64",
+            "e5dcba42-1e40-4070-9423-5a1d915bec70"
+          ],
+          "value": "Joel S. Lawson IV"
+        }
+      ],
+      "term": {
+        "references": [
+          "8199b85a-d31a-4671-ab91-0956eb201277"
+        ],
+        "value": "1_year"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12804,
+      "credit_usage": 4.0,
+      "job_id": "cmrymou5a032ud501o3m7ebbn",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 4.0,
+    "job_id": "cmrymou5a032ud501o3m7ebbn",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

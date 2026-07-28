@@ -1,0 +1,82 @@
+{
+  "job_id": "cmryjffon033ue401qh1z2zwr",
+  "status": "completed",
+  "received_at": 1784873216,
+  "created_at": 1784873216,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "6/29/09",
+      "foreign_principle_name": "twofour54 FZ-LLC",
+      "registrant_name": "Hill & Knowlton, Inc.",
+      "registration_num": "3301",
+      "signer_name": "Caitlin Godoua",
+      "signer_title": "Account Executive, Public Relations"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "3bbca223-186b-44b0-9414-ba36a8fcfdbd"
+        ],
+        "value": "6/29/09"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0573b779-0a55-4b22-b91c-c33938e89677"
+        ],
+        "value": "twofour54 FZ-LLC"
+      },
+      "registrant_name": {
+        "references": [
+          "2d86b466-1b8d-4220-b0f1-82f2b2b1a8bd"
+        ],
+        "value": "Hill & Knowlton, Inc."
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "3301"
+      },
+      "signer_name": {
+        "references": [
+          "0-2",
+          "3bbca223-186b-44b0-9414-ba36a8fcfdbd"
+        ],
+        "value": "Caitlin Godoua"
+      },
+      "signer_title": {
+        "references": [
+          "0-8"
+        ],
+        "value": "Account Executive, Public Relations"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 15412,
+      "credit_usage": 1.9,
+      "job_id": "cmryjffon033ue401qh1z2zwr",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16000,
+    "credit_usage": 1.9,
+    "job_id": "cmryjffon033ue401qh1z2zwr",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,45 @@
+{
+  "extraction": {
+    "company": "GARDENIA BAKERIES (KL) SDN BHD",
+    "date": "17/10/2017",
+    "address": "Lot 3, Jalan Pelabur 23/1, 40300 Shah Alam, Selangor.",
+    "total": "110.46"
+  },
+  "extraction_metadata": {
+    "company": {
+      "references": [
+        "38665e38-2f1f-4ec9-b1fa-0b5bac760ca0"
+      ],
+      "value": "GARDENIA BAKERIES (KL) SDN BHD"
+    },
+    "date": {
+      "references": [
+        "44578bcc-1e33-4d47-927f-1ede4e30f3ea"
+      ],
+      "value": "17/10/2017"
+    },
+    "address": {
+      "references": [
+        "38665e38-2f1f-4ec9-b1fa-0b5bac760ca0"
+      ],
+      "value": "Lot 3, Jalan Pelabur 23/1, 40300 Shah Alam, Selangor."
+    },
+    "total": {
+      "references": [
+        "0-1a"
+      ],
+      "value": "110.46"
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11208,
+    "credit_usage": 0.8,
+    "job_id": "cmrykn5un028ld5014ldtean7",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  }
+}

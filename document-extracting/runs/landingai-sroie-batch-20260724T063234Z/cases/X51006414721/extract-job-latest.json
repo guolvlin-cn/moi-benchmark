@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykkxdn0384cx01tvyd4h9f",
+  "status": "completed",
+  "received_at": 1784875151,
+  "created_at": 1784875151,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "DOMINO'S PIZZA PERMAS JAYA",
+      "date": "27/04/18",
+      "address": "No.12, Jalan Permas Jaya 10, Bandar Baru Permas Jaya, 81750 Masai Johor",
+      "total": "7.20"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "208dcb8b-8781-4405-a409-53362f43662f"
+        ],
+        "value": "DOMINO'S PIZZA PERMAS JAYA"
+      },
+      "date": {
+        "references": [
+          "04f71fdc-cc14-4a61-9675-9b685de9cc9a"
+        ],
+        "value": "27/04/18"
+      },
+      "address": {
+        "references": [
+          "208dcb8b-8781-4405-a409-53362f43662f"
+        ],
+        "value": "No.12, Jalan Permas Jaya 10, Bandar Baru Permas Jaya, 81750 Masai Johor"
+      },
+      "total": {
+        "references": [
+          "1fd481a8-1686-49aa-9684-e71791e07954"
+        ],
+        "value": "7.20"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11350,
+      "credit_usage": 0.6,
+      "job_id": "cmrykkxdn0384cx01tvyd4h9f",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykkxdn0384cx01tvyd4h9f",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

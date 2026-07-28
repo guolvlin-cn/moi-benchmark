@@ -1,0 +1,55 @@
+{
+  "case_id": "20180326_Sorini, Samet _ Associates, LLC_Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20180326_Sorini, Samet _ Associates, LLC_Amendment_Amendment.pdf",
+  "pdf_sha256": "2ba6bcdf730ce88e47f5281f5bdcdb047b5f663eb1f6a3cbf9ff7eb90e7a672a",
+  "status": "completed",
+  "parse_job_id": "cmryj6m7e0252d501cokfqd3w",
+  "extract_job_id": "cmryj7132032ue401up0k0oph",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.415663+00:00",
+  "updated_at": "2026-07-24T06:00:49.876787+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:00:05.024072+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:00:21.308283+00:00",
+  "parse_metadata": {
+    "filename": "20180326_Sorini, Samet _ Associates, LLC_Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 8390,
+    "credit_usage": 6.0,
+    "job_id": "cmryj6m7e0252d501cokfqd3w",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:00:24.210802+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:00:49.876780+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16216,
+    "credit_usage": 1.6,
+    "job_id": "cmryj7132032ue401up0k0oph",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "March 26, 2018",
+    "foreign_principle_name": null,
+    "registrant_name": "SORINI SAMET & ASSOCIATES, LLC",
+    "registration_num": "5839",
+    "signer_name": "Andrew Samet",
+    "signer_title": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "d73afdb784cb0d78e49f9eb7f8217a05",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/d73afdb784cb0d78e49f9eb7f8217a05.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "e2a2970a585ce85bbf2bd1305ad53ff7bac9296cdfd21fd6a33472af58b521e9",
+  "status": "completed",
+  "parse_job_id": "cmrymp4ts041xcx0115ld7yqf",
+  "extract_job_id": "cmrympn5v032yd501fjpp61wq",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.427777+00:00",
+  "updated_at": "2026-07-24T07:39:15.347190+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:38:27.859897+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:38:46.974995+00:00",
+  "parse_metadata": {
+    "filename": "d73afdb784cb0d78e49f9eb7f8217a05.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 9,
+    "duration_ms": 8286,
+    "credit_usage": 27.0,
+    "job_id": "cmrymp4ts041xcx0115ld7yqf",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:38:51.514233+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:39:15.347179+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 22518,
+    "credit_usage": 6.4,
+    "job_id": "cmrympn5v032yd501fjpp61wq",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2010-07-13",
+    "jurisdiction": "State of New York",
+    "party": [
+      "EURAND N.V.",
+      "TPG Capital, L.P.",
+      "Axcan Pharma Inc.",
+      "TPG Capital, L.P.",
+      "Axcan Pharma Inc.",
+      "Eurand N.V.",
+      "TPG Capital, L.P.",
+      "Axcan Pharma Inc.",
+      "Eurand N.V."
+    ],
+    "term": "24_months"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "job_id": "cmrymio83030ld501ifg9c080",
+  "status": "completed",
+  "received_at": 1784878405,
+  "created_at": 1784878405,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "",
+      "jurisdiction": "State of California",
+      "party": [
+        "KBSIII REIT Acquisition VII, LLC",
+        "KBS Limited Partnership III",
+        "KBS Real Estate Investment Trust III, Inc.",
+        "KBS Capital Advisors LLC",
+        "Recipient"
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "fbdbe077-2099-4e8d-bcbc-7d4cfb6894f1"
+        ],
+        "value": ""
+      },
+      "jurisdiction": {
+        "references": [
+          "97abce2f-31a7-4700-8a4b-d2bc0aa290da"
+        ],
+        "value": "State of California"
+      },
+      "party": [
+        {
+          "references": [
+            "fbdbe077-2099-4e8d-bcbc-7d4cfb6894f1"
+          ],
+          "value": "KBSIII REIT Acquisition VII, LLC"
+        },
+        {
+          "references": [
+            "fbdbe077-2099-4e8d-bcbc-7d4cfb6894f1"
+          ],
+          "value": "KBS Limited Partnership III"
+        },
+        {
+          "references": [
+            "fbdbe077-2099-4e8d-bcbc-7d4cfb6894f1"
+          ],
+          "value": "KBS Real Estate Investment Trust III, Inc."
+        },
+        {
+          "references": [
+            "fbdbe077-2099-4e8d-bcbc-7d4cfb6894f1"
+          ],
+          "value": "KBS Capital Advisors LLC"
+        },
+        {
+          "references": [
+            "fbdbe077-2099-4e8d-bcbc-7d4cfb6894f1"
+          ],
+          "value": "Recipient"
+        }
+      ],
+      "term": {
+        "references": [
+          "9849934b-190f-427c-ab54-e3a58a1747ca"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12964,
+      "credit_usage": 3.6,
+      "job_id": "cmrymio83030ld501ifg9c080",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 3.6,
+    "job_id": "cmrymio83030ld501ifg9c080",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

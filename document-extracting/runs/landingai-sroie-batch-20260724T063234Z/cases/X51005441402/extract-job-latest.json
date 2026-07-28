@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykd0pr0376cx01wtujvx8k",
+  "status": "completed",
+  "received_at": 1784874782,
+  "created_at": 1784874782,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "THREE STOOGES BISTRO & CAFE",
+      "date": "03/03/2018",
+      "address": "109, SS21/1A, DAMANSARA UTAMA",
+      "total": "174.90"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "188cd45f-741e-4095-8137-58d41e5ac638"
+        ],
+        "value": "THREE STOOGES BISTRO & CAFE"
+      },
+      "date": {
+        "references": [
+          "ee011053-a8fb-4a95-b409-50ca2d8f255e"
+        ],
+        "value": "03/03/2018"
+      },
+      "address": {
+        "references": [
+          "188cd45f-741e-4095-8137-58d41e5ac638"
+        ],
+        "value": "109, SS21/1A, DAMANSARA UTAMA"
+      },
+      "total": {
+        "references": [
+          "0-g"
+        ],
+        "value": "174.90"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10796,
+      "credit_usage": 0.5,
+      "job_id": "cmrykd0pr0376cx01wtujvx8k",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.5,
+    "job_id": "cmrykd0pr0376cx01wtujvx8k",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,51 @@
+{
+  "case_id": "X51006311767",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51006311767.jpg",
+  "source_type": "image",
+  "image_sha256": "d26bf911e15ffd5660f071d001cd7f9fecdc0d86205257f24c9176e28e88f9b0",
+  "gold_entities": "train/entities/X51006311767.txt",
+  "gold_box": "train/box/X51006311767.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykihkm027yd501hwe87d5b",
+  "extract_job_id": "cmrykivym036je401033bp5ea",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.250259+00:00",
+  "updated_at": "2026-07-24T06:37:59.609083+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:37:18.451604+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:37:34.267240+00:00",
+  "parse_metadata": {
+    "filename": "X51006311767.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 9294,
+    "credit_usage": 3.0,
+    "job_id": "cmrykihkm027yd501hwe87d5b",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:37:37.147435+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:37:59.609077+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15353,
+    "credit_usage": 0.6,
+    "job_id": "cmrykivym036je401033bp5ea",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "TONYMOLY VIVA CITY",
+    "date": "29/03/2018",
+    "address": "UNIT L1-044B, VIVACITY MEGAMALL, JALAN WAN ALWI, 93350 KUCHING, SARAWAK.",
+    "total": "48.95"
+  }
+}

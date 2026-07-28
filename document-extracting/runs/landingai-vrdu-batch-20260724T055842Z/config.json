@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-07-24T05:58:42.411371+00:00",
+  "manifest": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/selection_manifest.json",
+  "manifest_case_count": 100,
+  "parse_model": "dpt-2-20260410",
+  "extract_model": "extract-20260314",
+  "concurrency": 5,
+  "poll_interval": 3.0,
+  "request_timeout": 120
+}

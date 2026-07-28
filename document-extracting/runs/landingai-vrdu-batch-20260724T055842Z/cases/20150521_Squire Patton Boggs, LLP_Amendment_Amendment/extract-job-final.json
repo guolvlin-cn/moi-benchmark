@@ -1,0 +1,84 @@
+{
+  "job_id": "cmryjgtss025ud5010if6hamj",
+  "status": "completed",
+  "received_at": 1784873280,
+  "created_at": 1784873280,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "05/21/2015",
+      "foreign_principle_name": "Republic of Kenya",
+      "registrant_name": "Squire Patton Boggs (US) LLP",
+      "registration_num": "2165",
+      "signer_name": "Edward J. Newberry",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "48471358-372a-4c65-b63c-5cab87a21f86"
+        ],
+        "value": "05/21/2015"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "84831387-2ef6-40a4-977f-e55ad0d95297"
+        ],
+        "value": "Republic of Kenya"
+      },
+      "registrant_name": {
+        "references": [
+          "9aa738e2-5885-4afb-b4ed-5a223d50a182"
+        ],
+        "value": "Squire Patton Boggs (US) LLP"
+      },
+      "registration_num": {
+        "references": [
+          "9aa738e2-5885-4afb-b4ed-5a223d50a182"
+        ],
+        "value": "2165"
+      },
+      "signer_name": {
+        "references": [
+          "ca626192-d522-4602-b7f5-fe93c71c0743"
+        ],
+        "value": "Edward J. Newberry"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11638,
+      "credit_usage": 1.6,
+      "job_id": "cmryjgtss025ud5010if6hamj",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 1.6,
+    "job_id": "cmryjgtss025ud5010if6hamj",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "20150413_Podesta Group, Inc._Tavlarides, Mark_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20150413_Podesta Group, Inc._Tavlarides, Mark_Short-Form.pdf",
+  "pdf_sha256": "dbf046b4b20fa4015098166b560b0b20f7ee793714ccba81233a06dd54d8de60",
+  "status": "completed",
+  "parse_job_id": "cmryjbemt025gd501w6d8jlup",
+  "extract_job_id": "cmryjbu99033he4019qqyylsx",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.420845+00:00",
+  "updated_at": "2026-07-24T06:04:30.656323+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:03:48.413280+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:04:06.933353+00:00",
+  "parse_metadata": {
+    "filename": "20150413_Podesta Group, Inc._Tavlarides, Mark_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 9219,
+    "credit_usage": 6.0,
+    "job_id": "cmryjbemt025gd501w6d8jlup",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:04:08.742228+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:04:30.656319+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16813,
+    "credit_usage": 2.4,
+    "job_id": "cmryjbu99033he4019qqyylsx",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "04/13/2015",
+    "foreign_principle_name": "Union of the Republic of Myanmar",
+    "registrant_name": "Podesta Group, Inc.",
+    "registration_num": "5926",
+    "signer_name": "Mark Tavlarides",
+    "signer_title": "Consultant"
+  }
+}

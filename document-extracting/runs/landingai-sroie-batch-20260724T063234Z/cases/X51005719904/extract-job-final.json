@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykhf8c037pcx01qcsow58k",
+  "status": "completed",
+  "received_at": 1784874988,
+  "created_at": 1784874988,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "Yam Fresh",
+      "date": "2018-03-18",
+      "address": "No.145G, Jalan Rimbunan Raya 1, Laman Rimbunan Kepong, 52100 Kuala Lumpur",
+      "total": "RM29.30"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "b33786ba-339c-4c88-82d8-ccfd9f9bc5d8"
+        ],
+        "value": "Yam Fresh"
+      },
+      "date": {
+        "references": [
+          "3c7f73a4-63ce-437b-a774-01f807630b67"
+        ],
+        "value": "2018-03-18"
+      },
+      "address": {
+        "references": [
+          "b33786ba-339c-4c88-82d8-ccfd9f9bc5d8"
+        ],
+        "value": "No.145G, Jalan Rimbunan Raya 1, Laman Rimbunan Kepong, 52100 Kuala Lumpur"
+      },
+      "total": {
+        "references": [
+          "0-f"
+        ],
+        "value": "RM29.30"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 10495,
+      "credit_usage": 0.5,
+      "job_id": "cmrykhf8c037pcx01qcsow58k",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11000,
+    "credit_usage": 0.5,
+    "job_id": "cmrykhf8c037pcx01qcsow58k",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

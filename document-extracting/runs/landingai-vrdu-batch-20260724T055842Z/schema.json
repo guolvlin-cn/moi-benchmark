@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "file_date": {
+      "type": "string",
+      "description": "The filing date shown on the registration document. Do not use unrelated dates appearing in instructions or historical references.",
+      "x-alternativeNames": [
+        "Date of Filing",
+        "Filing Date",
+        "Date"
+      ]
+    },
+    "foreign_principle_name": {
+      "type": "string",
+      "description": "The name of the foreign principal represented by the registrant. Do not return the registrant name.",
+      "x-alternativeNames": [
+        "Foreign Principal",
+        "Name of Foreign Principal"
+      ]
+    },
+    "registrant_name": {
+      "type": "string",
+      "description": "The official name of the registrant organization or individual. Do not return the foreign principal or signer.",
+      "x-alternativeNames": [
+        "Name of Registrant",
+        "Registrant"
+      ]
+    },
+    "registration_num": {
+      "type": "string",
+      "description": "The registrant's registration number. Preserve it as text and preserve leading zeros.",
+      "x-alternativeNames": [
+        "Registration No.",
+        "Registration Number",
+        "Reg. No."
+      ]
+    },
+    "signer_name": {
+      "type": "string",
+      "description": "The name of the person who signed or executed the document. Do not return a printed name unrelated to the signature.",
+      "x-alternativeNames": [
+        "Name of Signer",
+        "Type or Print Name",
+        "Printed Name"
+      ]
+    },
+    "signer_title": {
+      "type": "string",
+      "description": "The business title or role of the signer, such as Partner, President, Director, or Executive Director. Do not return the signer name.",
+      "x-alternativeNames": [
+        "Title",
+        "Position",
+        "Capacity"
+      ]
+    }
+  }
+}

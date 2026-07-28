@@ -1,0 +1,80 @@
+{
+  "job_id": "cmrymvj6v033sd501mkqzdhir",
+  "status": "completed",
+  "received_at": 1784879005,
+  "created_at": 1784879005,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2008-12-12",
+      "jurisdiction": "State of Texas",
+      "party": [
+        "NetSpend Corporation",
+        "JTH Tax Inc."
+      ],
+      "term": "5_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "3718683a-f7f3-4e78-ae24-6da7ecc6ca1d"
+        ],
+        "value": "2008-12-12"
+      },
+      "jurisdiction": {
+        "references": [
+          "c61d2bc5-89e9-4789-83c9-5605368f1313"
+        ],
+        "value": "State of Texas"
+      },
+      "party": [
+        {
+          "references": [
+            "3718683a-f7f3-4e78-ae24-6da7ecc6ca1d",
+            "88bb2702-087a-4c55-8ea6-f851cab2e6c9"
+          ],
+          "value": "NetSpend Corporation"
+        },
+        {
+          "references": [
+            "3718683a-f7f3-4e78-ae24-6da7ecc6ca1d",
+            "43f7f742-e741-4a05-a0e0-25fba515287a"
+          ],
+          "value": "JTH Tax Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "37f37f83-48fa-47a8-95e2-eaf6d27b702a"
+        ],
+        "value": "5_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 19970,
+      "credit_usage": 3.5,
+      "job_id": "cmrymvj6v033sd501mkqzdhir",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 21000,
+    "credit_usage": 3.5,
+    "job_id": "cmrymvj6v033sd501mkqzdhir",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

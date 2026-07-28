@@ -1,0 +1,608 @@
+{
+  "dataset": "VRDU Registration",
+  "selection_strategy": "official valid list from registration-form/few_shot-splits/FARA-lv2-mixed_template-train_10-test_300-valid_100-SD_0.json",
+  "seed": 20260723,
+  "case_count": 100,
+  "cases": [
+    {
+      "case_id": "20180108_Ryberg and Smith, LLC_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180108_Ryberg and Smith, LLC_Amendment_Amendment.pdf",
+      "pdf_sha256": "d3c558001b2425ed44bf09f4edc3157bd8ca97754c366f9cb86f99e44e2e0901"
+    },
+    {
+      "case_id": "20100120_Squire Patton Boggs, LLP_Deschauer, John J._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20100120_Squire Patton Boggs, LLP_Deschauer, John J._Short-Form.pdf",
+      "pdf_sha256": "fb0f1c3b1655f9bbe289609f185fc39d8cfb8e761f6be148fa369163eed1fd1b"
+    },
+    {
+      "case_id": "19931001_Representative of the Turkish Republic of Northern Cyprus_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19931001_Representative of the Turkish Republic of Northern Cyprus_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "78ab1be79bb6cc1da657885d59220eeefd309b73cb57472877ca87bad773accd"
+    },
+    {
+      "case_id": "20120814_Commonwealth of Dominica Maritime Registry, Inc._Khvedelidze, Parmen_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20120814_Commonwealth of Dominica Maritime Registry, Inc._Khvedelidze, Parmen_Short-Form.pdf",
+      "pdf_sha256": "319b54e6805e30ade7e2253bbb128abd7960a14d4f01a90b6b24a3246b277328"
+    },
+    {
+      "case_id": "20140407_Podesta Group, Inc._Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20140407_Podesta Group, Inc._Amendment_Amendment.pdf",
+      "pdf_sha256": "179e36a01aacbb4bddea66bc6d19c9abaff958966a286e5c6da768a3deb9f53b"
+    },
+    {
+      "case_id": "20130131_Sidley Austin, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20130131_Sidley Austin, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "c00074b6cc3d5712801768296ad76f206ace372fb34bdf024107f44697671b23"
+    },
+    {
+      "case_id": "20170307_S.G.R. LLC Government Relations and Lobbying_Smith, Addison_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20170307_S.G.R. LLC Government Relations and Lobbying_Smith, Addison_Short-Form.pdf",
+      "pdf_sha256": "81d2dca105853955eebeba725ff9183b0f7ccb757465b6250178be0ceac429dd"
+    },
+    {
+      "case_id": "20180315_Miller _ Chevalier Chartered_Orr, P. Welles_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180315_Miller _ Chevalier Chartered_Orr, P. Welles_Short-Form.pdf",
+      "pdf_sha256": "ab2c94c28d7435fb955ffcbb975903d7928ae11ff744d3f7b3c62441045eecf8"
+    },
+    {
+      "case_id": "19910801_British Virgin Islands Tourist Board_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19910801_British Virgin Islands Tourist Board_Amendment_Amendment.pdf",
+      "pdf_sha256": "ed0dbfbc5e4ccdbf2ec7f44f8c1521ef8e789b354c572ebf270518a7ab432ec0"
+    },
+    {
+      "case_id": "20170907_McDermott Will _ Emery, LLP_Ryan, Stephen M._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20170907_McDermott Will _ Emery, LLP_Ryan, Stephen M._Short-Form.pdf",
+      "pdf_sha256": "552411b3d5d71de8fb58b8ca2be82bc4d7dba4fb28ab6aac5805c77304087c04"
+    },
+    {
+      "case_id": "20110722_BGR Government Affairs, LLC_Patten, William Samuel Jr._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20110722_BGR Government Affairs, LLC_Patten, William Samuel Jr._Short-Form.pdf",
+      "pdf_sha256": "d112c65ad0b50655a275694e5dd04ee9abfe9469a442fc0a927e7512a3137a79"
+    },
+    {
+      "case_id": "19750815_Moroccan National Tourist Office_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19750815_Moroccan National Tourist Office_Amendment_Amendment.pdf",
+      "pdf_sha256": "3b61694e53ee54e672623aef87c065f03fb1caf7bf45602ea73bef906f2250d0"
+    },
+    {
+      "case_id": "20180326_Sorini, Samet _ Associates, LLC_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180326_Sorini, Samet _ Associates, LLC_Amendment_Amendment.pdf",
+      "pdf_sha256": "2ba6bcdf730ce88e47f5281f5bdcdb047b5f663eb1f6a3cbf9ff7eb90e7a672a"
+    },
+    {
+      "case_id": "20160301_Daniel J. Edelman, Inc._Wasser, Debra_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20160301_Daniel J. Edelman, Inc._Wasser, Debra_Short-Form.pdf",
+      "pdf_sha256": "580fc1dbcd53eaa6bf133c035fc64c9eb9f4e48ad446eacc0a7c8c0177117528"
+    },
+    {
+      "case_id": "19830801_British Virgin Islands Tourist Board_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19830801_British Virgin Islands Tourist Board_Amendment_Amendment.pdf",
+      "pdf_sha256": "52817d31faa912b5083ac7784773f1a0ff070ef4a95055ad57d6afad4912de77"
+    },
+    {
+      "case_id": "20130110_BLJ Worldwide LTD_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20130110_BLJ Worldwide LTD_Amendment_Amendment.pdf",
+      "pdf_sha256": "7a7dc3e2ef38cec7bfd9c2182e937a4ab188b42bb0983dee73788ab1e6491a44"
+    },
+    {
+      "case_id": "20160130_Squire Patton Boggs, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20160130_Squire Patton Boggs, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "8f10fd74e67277bd80a1ba90061f0cea011804d986504008338611a22bc4f922"
+    },
+    {
+      "case_id": "20110407_JETRO, New York_Hoshino, Kaori_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20110407_JETRO, New York_Hoshino, Kaori_Short-Form.pdf",
+      "pdf_sha256": "f97ac9e9b3217dbe5e1f0168b5b6cd5b19fbdd97fafe286b11e86eda77f3520d"
+    },
+    {
+      "case_id": "20140414_Greenberg Traurig, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20140414_Greenberg Traurig, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "81e0bc6940831da18947baf79575258df2f873ebec2113e871078b4222e3e71a"
+    },
+    {
+      "case_id": "19640701_VisitBritain_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19640701_VisitBritain_Amendment_Amendment.pdf",
+      "pdf_sha256": "c6cbf78616f9394d6ac4b6e62977732e9d996a6058caffe1173d288267a2d1ac"
+    },
+    {
+      "case_id": "19851101_Scottish Enterprise_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19851101_Scottish Enterprise_Amendment_Amendment.pdf",
+      "pdf_sha256": "5cebce677b76aded7f5e5780845a00ce2d5dda30a027938defb1db9cae78b85b"
+    },
+    {
+      "case_id": "20170124_K_L Gates, LLP_Gordon, Barton J._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20170124_K_L Gates, LLP_Gordon, Barton J._Short-Form.pdf",
+      "pdf_sha256": "4e1d218057512a923c756138b37dd5966774772386d4c226ab706da83f963bce"
+    },
+    {
+      "case_id": "20180418_BGR Government Affairs, LLC_Rubino, Mike_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180418_BGR Government Affairs, LLC_Rubino, Mike_Short-Form.pdf",
+      "pdf_sha256": "a370a25d5df2c3eeea9dd802a5e9b588a6d816fe927e07d25d3d5b4e8d6dd5c4"
+    },
+    {
+      "case_id": "20151217_Squire Patton Boggs, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20151217_Squire Patton Boggs, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "5e3513caff5df3d9c587cd781d972af0a6a4956878cc1f10f9ae1fb70757a720"
+    },
+    {
+      "case_id": "20180202_Quebec Government Office_Lepage, Annelise Melanie_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180202_Quebec Government Office_Lepage, Annelise Melanie_Short-Form.pdf",
+      "pdf_sha256": "d925cf8214f8aee12ce856416d8d4db0f58c5f0e9e4a475a8b4fae3315ae3ae5"
+    },
+    {
+      "case_id": "20130212_Squire Patton Boggs, LLP_Wisner, Graham G._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20130212_Squire Patton Boggs, LLP_Wisner, Graham G._Short-Form.pdf",
+      "pdf_sha256": "2a030443ef9315b4ec64d70b8643bacd74ed114cfd1fa61a3780c24ea2cbd876"
+    },
+    {
+      "case_id": "19920901_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19920901_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "406965e738cd8fb147d6bd217703857615ffcd7ad6459f6c401938a0f34415ef"
+    },
+    {
+      "case_id": "20121119_Commonwealth of Dominica Maritime Registry, Inc._Hang, Sui Yan_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20121119_Commonwealth of Dominica Maritime Registry, Inc._Hang, Sui Yan_Short-Form.pdf",
+      "pdf_sha256": "343a0c6fec6a528d97a104880aecdd5634b79f7b544750020c3f59fd4876b66f"
+    },
+    {
+      "case_id": "20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20110506_Ketchum Inc. NY_Hart, Brian Christopher_Short-Form.pdf",
+      "pdf_sha256": "2277f7a3ac5dd584079f1b7757b489d64ee89bf9b4da29e4ef36e2352d44dce7"
+    },
+    {
+      "case_id": "19920601_JETRO, Atlanta_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19920601_JETRO, Atlanta_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "6c30cce8c8f6e2e565765ed23f7106911728b742adc998a223f6c0eeb5a416b3"
+    },
+    {
+      "case_id": "19930501_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19930501_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "9119f68b9d824e4bb3e5976ea270ef53395ca773b4e0fe398e2fd670e904f90f"
+    },
+    {
+      "case_id": "20160419_Podesta Group, Inc._Chandra, Tara_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20160419_Podesta Group, Inc._Chandra, Tara_Short-Form.pdf",
+      "pdf_sha256": "cba7f6baa4be3284bbbf8c53c9e5fef2594881a52446e837ee9f24952729650e"
+    },
+    {
+      "case_id": "19950330_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19950330_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "dfc5a14a035f602bfe018a3b5919d55be9c0e4dad3bc9b9cf205d295abf1174f"
+    },
+    {
+      "case_id": "20160615_Daniel J. Edelman, Inc._Surrell, Jeff_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20160615_Daniel J. Edelman, Inc._Surrell, Jeff_Short-Form.pdf",
+      "pdf_sha256": "0fd84d8e3aa51946ac2f762a502da984d2e6e4433116d0f2166abe91e248e26e"
+    },
+    {
+      "case_id": "20090925_Podesta Group, Inc._Young, Nicole_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20090925_Podesta Group, Inc._Young, Nicole_Short-Form.pdf",
+      "pdf_sha256": "b7a586f80dcf90e46988c38ff7d3f7d07afafc419b10be0e5663f42f97b15124"
+    },
+    {
+      "case_id": "19920901_Far East Trade Services, Inc._Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19920901_Far East Trade Services, Inc._Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "646842c64c94c3d555b51298a77b54ebeae82554e2eeb25dfb946453666001f5"
+    },
+    {
+      "case_id": "19930201_Far East Trade Services, Inc._Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19930201_Far East Trade Services, Inc._Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "34774d82bd64909a3c553accf74269f1ceefd47e78e8c7a8e550c3c51f55e3a1"
+    },
+    {
+      "case_id": "19890201_Manufactured Imports and Investment Promotion Organization (MIPRO)_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19890201_Manufactured Imports and Investment Promotion Organization (MIPRO)_Amendment_Amendment.pdf",
+      "pdf_sha256": "a4f68ff1640cd117ca747c634208938f7a7b1c631d5a69b4c2e18443f814e508"
+    },
+    {
+      "case_id": "20150413_Podesta Group, Inc._Tavlarides, Mark_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20150413_Podesta Group, Inc._Tavlarides, Mark_Short-Form.pdf",
+      "pdf_sha256": "dbf046b4b20fa4015098166b560b0b20f7ee793714ccba81233a06dd54d8de60"
+    },
+    {
+      "case_id": "20180612_Sonoran Policy Group, LLC_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180612_Sonoran Policy Group, LLC_Amendment_Amendment.pdf",
+      "pdf_sha256": "013e803a805cb4f0029417bee9a89f6bc648c9b8ca5b804b3f33c319f2b57b71"
+    },
+    {
+      "case_id": "20150825_Representative of the Turkish Republic of Northern Cyprus_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20150825_Representative of the Turkish Republic of Northern Cyprus_Amendment_Amendment.pdf",
+      "pdf_sha256": "8ca568989a6755e2f45e3f96ad238635626b50aa65aae5bcef91936784c2cf12"
+    },
+    {
+      "case_id": "20100222_Daniel J. Edelman, Inc._Moeenziai, Ladan_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20100222_Daniel J. Edelman, Inc._Moeenziai, Ladan_Short-Form.pdf",
+      "pdf_sha256": "c952e23fa0e3e76e53ad823f048fa9978bfe8a8a35e71a0245635a4e1ac38501"
+    },
+    {
+      "case_id": "19750801_Netherlands Board of Tourism and Conventions (NBTC)_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19750801_Netherlands Board of Tourism and Conventions (NBTC)_Amendment_Amendment.pdf",
+      "pdf_sha256": "4499ef373fd88a887cc0c194e64e9ad944507464d3783aedb8315edadd1591b7"
+    },
+    {
+      "case_id": "19931001_Quebec Government Office_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19931001_Quebec Government Office_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "4dbfd29712c03ea4eb012c0f20496afc425a675f527fe30c40d62243a9427cbd"
+    },
+    {
+      "case_id": "19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19930101_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "76687306664afc62c55295ab6a02ec82d054c9808012bd2da51312aa12be0460"
+    },
+    {
+      "case_id": "20161109_Kuykendall, Gregory J., PC_Kuykendall, Gregory_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20161109_Kuykendall, Gregory J., PC_Kuykendall, Gregory_Short-Form.pdf",
+      "pdf_sha256": "d782bcb0deff218a578939e7edebc5c130b3557fddfd0c7e2d0a65eedc3a94af"
+    },
+    {
+      "case_id": "20150331_DLA Piper US LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20150331_DLA Piper US LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "b57d464c865bfcce32cb2fa07e55f139ae9ae2385e50398539c35a8f11137ed2"
+    },
+    {
+      "case_id": "20130605_JWI, LLC_Kurz, Jonathan L._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20130605_JWI, LLC_Kurz, Jonathan L._Short-Form.pdf",
+      "pdf_sha256": "50ef96fe0c232ff9b1879d164f61d264ab9f1e2f2722987518c38c17502b04a7"
+    },
+    {
+      "case_id": "20170830_SAPRAC, Inc._Daffa, Reem_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20170830_SAPRAC, Inc._Daffa, Reem_Short-Form.pdf",
+      "pdf_sha256": "45f9c63bab73e713a361a191fb1fa86c205443ed7ab11d0e40473118053298b1"
+    },
+    {
+      "case_id": "19780701_Office of Tibet_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19780701_Office of Tibet_Amendment_Amendment.pdf",
+      "pdf_sha256": "e9a0128661b2f843f7b556a89aceae371f6711b84e21a7250f4b87328749bf7c"
+    },
+    {
+      "case_id": "20100720_Daniel J. Edelman, Inc._Dolezal, Ashley_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20100720_Daniel J. Edelman, Inc._Dolezal, Ashley_Short-Form.pdf",
+      "pdf_sha256": "d55a22b685fc7e28c2072daf6dea4d7876464fd1bc15d957ea366f00105a45f3"
+    },
+    {
+      "case_id": "19921001_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19921001_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "2f678ab8798fce6c58c8507e93c72035b80b54609c780cc7933556b78da72ce3"
+    },
+    {
+      "case_id": "19630701_KOTRA_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19630701_KOTRA_Amendment_Amendment.pdf",
+      "pdf_sha256": "50706c6d7257f7444a6437dc215a7ac1ea072c732e04b3f5af9209ca812b2a8d"
+    },
+    {
+      "case_id": "20121023_Commonwealth of Dominica Maritime Registry, Inc._Kikvadze, Zurab_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20121023_Commonwealth of Dominica Maritime Registry, Inc._Kikvadze, Zurab_Short-Form.pdf",
+      "pdf_sha256": "db15d54ef9b28091891f4f40e6a2bda14d7c902224f3f31c7dcc66013c0bbd90"
+    },
+    {
+      "case_id": "20120806_Squire Patton Boggs, LLP_Boggs, Thomas Hale , Jr._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20120806_Squire Patton Boggs, LLP_Boggs, Thomas Hale , Jr._Short-Form.pdf",
+      "pdf_sha256": "a0e7eebd583f2ee90fd4f2c2658dcf19e057ee44a6efaa8b3ececf5a7ef3b483"
+    },
+    {
+      "case_id": "19930501_Office of Tibet_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19930501_Office of Tibet_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "da3e25cddf2ac83e16ce97ba180b50e78aadf76661e765f3ebe42e58acbf6d03"
+    },
+    {
+      "case_id": "20090731_Hill and Knowlton Strategies, LLC_Godoua, Caitlin_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20090731_Hill and Knowlton Strategies, LLC_Godoua, Caitlin_Short-Form.pdf",
+      "pdf_sha256": "f3c65f5e00bf589fe8d0abf6541a8cf3ab9a722c34b9c9598ce80aa301ba6214"
+    },
+    {
+      "case_id": "19950321_Bermuda Tourism Authority_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19950321_Bermuda Tourism Authority_Amendment_Amendment.pdf",
+      "pdf_sha256": "c331a3a3a063d7045f6ed88cc629451e07ec2afe3793ab301138ee626fb7d072"
+    },
+    {
+      "case_id": "20141030_Public Strategies Washington, Inc._Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20141030_Public Strategies Washington, Inc._Amendment_Amendment.pdf",
+      "pdf_sha256": "6cfa2d7a81dd75a88f40eb63c8582eeeee34e34115e227f50ed303a3af523a19"
+    },
+    {
+      "case_id": "19950112_Hogan Lovells US LLP_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19950112_Hogan Lovells US LLP_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "50f6936b748348138bc30fc135c04b95162fc6ad8ca92bb70485be5126cbb529"
+    },
+    {
+      "case_id": "19860901_Singapore Economic Development Board_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19860901_Singapore Economic Development Board_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "7eb3a6b244278b43851469a1e040ca34f1f97770ccff6661c580c58f3820e94c"
+    },
+    {
+      "case_id": "19920501_Hogan Lovells US LLP_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19920501_Hogan Lovells US LLP_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "10d2ac03deba823c64883af2a4d7426d5ac6f6ae51cbcf9edfe885dc00c07b43"
+    },
+    {
+      "case_id": "20150521_Squire Patton Boggs, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20150521_Squire Patton Boggs, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "9a3ab0b3bc7b89a018fbc1679efcc262e185a627cf540dddaa763d378ce9277e"
+    },
+    {
+      "case_id": "20120313_Podesta Group, Inc._Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20120313_Podesta Group, Inc._Amendment_Amendment.pdf",
+      "pdf_sha256": "bf7010100d6a28731f7938fb6d54d387cb54f88607bdaa37ebe6aa5c43806190"
+    },
+    {
+      "case_id": "19921201_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19921201_Oromo Liberation Front, North America Office_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "6836571e6401c09ec28b9b8380d0b53928395ac43d32cb695f363f80e6b6cedb"
+    },
+    {
+      "case_id": "20170920_DCI Group AZ, LLC_McCabe, Brian_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20170920_DCI Group AZ, LLC_McCabe, Brian_Short-Form.pdf",
+      "pdf_sha256": "4e90167949deb8d2a800b83b7ea106bd4aef908b64679e5e35c40174183f48be"
+    },
+    {
+      "case_id": "19950710_Far East Trade Services, Inc._Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19950710_Far East Trade Services, Inc._Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "850fcf4eb9b4a7b9404461ae36d34293ec8224f85c3e685cf7fbf8aa0245507b"
+    },
+    {
+      "case_id": "20100204_Squire Patton Boggs, LLP_Weiler, David J._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20100204_Squire Patton Boggs, LLP_Weiler, David J._Short-Form.pdf",
+      "pdf_sha256": "8400d09ca23249df9ef123262d35ff3fad4eaec4176149f58e86cdabea66f646"
+    },
+    {
+      "case_id": "19781101_VisitDenmark_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19781101_VisitDenmark_Amendment_Amendment.pdf",
+      "pdf_sha256": "d40cf9a05f40952bfa4a57780b96af83e20ea709928c8c2cd7ceb266ac1e5b68"
+    },
+    {
+      "case_id": "19790501_IDA Ireland_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19790501_IDA Ireland_Amendment_Amendment.pdf",
+      "pdf_sha256": "6e50a663d397983e8217bc7a815365e0ea641048cb60ea62a2a0e9839d0ca3f7"
+    },
+    {
+      "case_id": "20130315_Daniel J. Edelman, Inc._Suiters, Tyler_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20130315_Daniel J. Edelman, Inc._Suiters, Tyler_Short-Form.pdf",
+      "pdf_sha256": "4711435f204f6702a0aece54988a142ac0f340730c319d3314ea80a6a7966fcb"
+    },
+    {
+      "case_id": "20120503_Hecht, Latham, Spencer _ Associates, Inc._Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20120503_Hecht, Latham, Spencer _ Associates, Inc._Amendment_Amendment.pdf",
+      "pdf_sha256": "24356cbd1374005a90e4a8ad45205669cf2a96406648b813149d041738a2b52c"
+    },
+    {
+      "case_id": "19670801_JETRO, San Francisco_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19670801_JETRO, San Francisco_Amendment_Amendment.pdf",
+      "pdf_sha256": "5bd83796f4fe14ed0f983a6e4dc58fe91612e28f846ae7d38d6d7e578b6060cb"
+    },
+    {
+      "case_id": "20140430_Pearson _ Associates_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20140430_Pearson _ Associates_Amendment_Amendment.pdf",
+      "pdf_sha256": "64fcdea41ee5fb2782993ba6916614d8d749048e19a1a967c23da3af2b0efab8"
+    },
+    {
+      "case_id": "20180323_MSLGROUP Americas, Inc._Shapiro, Jared_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180323_MSLGROUP Americas, Inc._Shapiro, Jared_Short-Form.pdf",
+      "pdf_sha256": "4e4c371c40aba7699e40baf7867506654693e7bac9c4bbf8f7141cbffe6c4057"
+    },
+    {
+      "case_id": "19910901_Akin, Gump, Strauss, Hauer _ Feld, LLP_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19910901_Akin, Gump, Strauss, Hauer _ Feld, LLP_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "9be12503414e5fe7d34e52a67c7b57b1b51ca41675463b5e4a5bf757265c32d7"
+    },
+    {
+      "case_id": "19931101_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19931101_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "d1a3a3eda5362bde12796eea060a5002010c4f07a98a543ce0992f5858e46103"
+    },
+    {
+      "case_id": "20121128_KOTRA_Jeon, Misung_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20121128_KOTRA_Jeon, Misung_Short-Form.pdf",
+      "pdf_sha256": "04ec6b1fefc54f99270f28dfda84915e034dca9ef4c2183fc3dd1decc1e8d1bf"
+    },
+    {
+      "case_id": "19921201_JETRO, Atlanta_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19921201_JETRO, Atlanta_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "ae36a1a4867f61c77c8f77e4cc4bfcf5f63cd2802079a03990680fa2b46a124b"
+    },
+    {
+      "case_id": "19931101_Scottish Enterprise_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19931101_Scottish Enterprise_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "7e59bb2a4f6ee7448ecd87e7b3359fa428a8c1568702a5612fa737a23c6f00f7"
+    },
+    {
+      "case_id": "20180220_Dentons US LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180220_Dentons US LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "a4315f6a0095dc6db6c46194f9001634d2029598357b45736867a0c4c4f79936"
+    },
+    {
+      "case_id": "19801001_Arnold _ Porter Kaye Scholer, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19801001_Arnold _ Porter Kaye Scholer, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "4cb0ad234a5eaa1e49c0a18ff342a85233db88013f90412ac6d6cda782e24006"
+    },
+    {
+      "case_id": "20170613_Pillsbury Winthrop Shaw Pittman, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20170613_Pillsbury Winthrop Shaw Pittman, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "0182d081ee88f294113971684e3e7800b0a65dccd6f0f40f2c4f66cecfe62451"
+    },
+    {
+      "case_id": "19910201_JETRO, New York_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19910201_JETRO, New York_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "0c1546d4d95a190a6294d31641d51e757efc781edd4ae8bb735e8a852c7bf5ab"
+    },
+    {
+      "case_id": "20060127_Hogan Lovells US LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20060127_Hogan Lovells US LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "8dbc3c168d2bfd4e89f23bcac30a64750684b33eb78db5c2c0b1dda6d55d3c17"
+    },
+    {
+      "case_id": "19920501_International Registries, Inc._Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19920501_International Registries, Inc._Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "212cabbd1a2297ae6808ff9c6548be56ba313642c9a1d218f69891d903049065"
+    },
+    {
+      "case_id": "20180503_Pillsbury Winthrop Shaw Pittman, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180503_Pillsbury Winthrop Shaw Pittman, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "991b6f2f1df9d99afe7c4b76ee0fad4dd9e23e15053014b37f5afc47716c9fba"
+    },
+    {
+      "case_id": "20100803_BLJ Worldwide LTD_Karr, Valerie_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20100803_BLJ Worldwide LTD_Karr, Valerie_Short-Form.pdf",
+      "pdf_sha256": "4105482c139965fc3271170d8bedc944f8d20566929a31fad0902b5418c98db5"
+    },
+    {
+      "case_id": "20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form.pdf",
+      "pdf_sha256": "0bb843126f224232b6cdab1f1e27e5fc55288aa8090807a7dd01ae676d8d7aec"
+    },
+    {
+      "case_id": "19671011_Austrian Tourist Office, Inc._Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19671011_Austrian Tourist Office, Inc._Amendment_Amendment.pdf",
+      "pdf_sha256": "b1efa96168f52437973730c21f989eac6e5ebaeda4801a381d1f16b790095786"
+    },
+    {
+      "case_id": "20171003_Sonoran Policy Group, LLC_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20171003_Sonoran Policy Group, LLC_Amendment_Amendment.pdf",
+      "pdf_sha256": "c83da7554ed71df2bbc1b6b079919795c5fb2de12f771adada04825d7f0cd8d8"
+    },
+    {
+      "case_id": "19950530_Malaysian Industrial Development Authority_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19950530_Malaysian Industrial Development Authority_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "5703bab119ad9c91bd6b8589f6b9a213a195baad49b7c7ea1b13c6344127f1a3"
+    },
+    {
+      "case_id": "19980619_Foley Hoag, LLP_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19980619_Foley Hoag, LLP_Amendment_Amendment.pdf",
+      "pdf_sha256": "f743f281e0952b586516d308c2882e2ca6155160736fe9b5b3e5217c88ad868a"
+    },
+    {
+      "case_id": "19930801_Scottish Enterprise_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19930801_Scottish Enterprise_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "243fd5e5aa922a386f8bbd88eceb0c577f91d96d8ee7fda64e064cb905384875"
+    },
+    {
+      "case_id": "20121214_Ketchum Inc. NY_Conrad, Robert Keenan_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20121214_Ketchum Inc. NY_Conrad, Robert Keenan_Short-Form.pdf",
+      "pdf_sha256": "2ad9f39940b544c3524b26c827ed78399d10dfbaa4c6b164f512781ccb78da6e"
+    },
+    {
+      "case_id": "19920101_Office of Tibet_Dissemination Report_Dissemination Report",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/19920101_Office of Tibet_Dissemination Report_Dissemination Report.pdf",
+      "pdf_sha256": "d0a251c88ce1118cee33899877fd5fe8d6fe290b1b7b4117d2b2f35f3f918dd8"
+    },
+    {
+      "case_id": "20180601_Parvin, C. Landon_Amendment_Amendment",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180601_Parvin, C. Landon_Amendment_Amendment.pdf",
+      "pdf_sha256": "456444e682110cb8fff666d93a2eb60caa3ac38e190b15c5648eac779ddafa47"
+    },
+    {
+      "case_id": "20180715_Brownstein Hyatt Farber Schreck, LLP_Cohen, David_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20180715_Brownstein Hyatt Farber Schreck, LLP_Cohen, David_Short-Form.pdf",
+      "pdf_sha256": "4a30942909b1d8ba9d066968a5960044debfd34e098805026f20da8a562a06cf"
+    },
+    {
+      "case_id": "20140812_Greenberg Traurig, LLP_Schwartz, Allison Shulman_Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20140812_Greenberg Traurig, LLP_Schwartz, Allison Shulman_Short-Form.pdf",
+      "pdf_sha256": "63bc1250807f3739d3eedca4ad918b6cd890a7db89a06b4782b7b69dfbcaae45"
+    },
+    {
+      "case_id": "20170313_Alston _ Bird, LLP_Jones, Robert C._Short-Form",
+      "split": "valid",
+      "pdf": "registration-form/main/pdfs/20170313_Alston _ Bird, LLP_Jones, Robert C._Short-Form.pdf",
+      "pdf_sha256": "2525f58e42d2c66b1df6e7c07acf72c0d7217591fdbf89302337788d44881678"
+    }
+  ]
+}

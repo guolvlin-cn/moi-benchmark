@@ -1,0 +1,50 @@
+{
+  "case_id": "20100803_BLJ Worldwide LTD_Karr, Valerie_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20100803_BLJ Worldwide LTD_Karr, Valerie_Short-Form.pdf",
+  "pdf_sha256": "4105482c139965fc3271170d8bedc944f8d20566929a31fad0902b5418c98db5",
+  "status": "completed",
+  "parse_job_id": "cmryjlxnt034he401zvtbgcwz",
+  "extract_job_id": "cmryjmb3z0363cx01kjft6onb",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.431950+00:00",
+  "updated_at": "2026-07-24T06:12:41.754213+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:11:59.638559+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:12:14.164329+00:00",
+  "parse_metadata": {
+    "filename": "20100803_BLJ Worldwide LTD_Karr, Valerie_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 12379,
+    "credit_usage": 6.0,
+    "job_id": "cmryjlxnt034he401zvtbgcwz",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:12:17.036343+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:12:41.754209+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15940,
+    "credit_usage": 2.0,
+    "job_id": "cmryjmb3z0363cx01kjft6onb",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "2010-08-03",
+    "foreign_principle_name": "The Loomba Foundation",
+    "registrant_name": "Brown Lloyd James",
+    "registration_num": "5875",
+    "signer_name": "Valerie Karr",
+    "signer_title": "employee"
+  }
+}

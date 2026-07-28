@@ -1,0 +1,50 @@
+{
+  "case_id": "19950330_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19950330_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "dfc5a14a035f602bfe018a3b5919d55be9c0e4dad3bc9b9cf205d295abf1174f",
+  "status": "completed",
+  "parse_job_id": "cmryjaedm025cd501agzpak1d",
+  "extract_job_id": "cmryjatne025fd501q97h2j3b",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.419765+00:00",
+  "updated_at": "2026-07-24T06:03:42.916583+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:03:01.419236+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:03:18.460102+00:00",
+  "parse_metadata": {
+    "filename": "19950330_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 3,
+    "duration_ms": 15324,
+    "credit_usage": 9.0,
+    "job_id": "cmryjaedm025cd501agzpak1d",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:03:21.203543+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:03:42.916578+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14943,
+    "credit_usage": 1.9,
+    "job_id": "cmryjatne025fd501q97h2j3b",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "3/13/95",
+    "foreign_principle_name": "Japan External Trade Organization",
+    "registrant_name": "JETRO, Los Angeles",
+    "registration_num": "1833",
+    "signer_name": "Ichiro Sone",
+    "signer_title": "Public Relations Director"
+  }
+}

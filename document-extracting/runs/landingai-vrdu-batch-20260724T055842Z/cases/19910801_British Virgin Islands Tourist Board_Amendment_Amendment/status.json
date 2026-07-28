@@ -1,0 +1,55 @@
+{
+  "case_id": "19910801_British Virgin Islands Tourist Board_Amendment_Amendment",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19910801_British Virgin Islands Tourist Board_Amendment_Amendment.pdf",
+  "pdf_sha256": "ed0dbfbc5e4ccdbf2ec7f44f8c1521ef8e789b354c572ebf270518a7ab432ec0",
+  "status": "completed",
+  "parse_job_id": "cmryj666d0347cx01s2okni8x",
+  "extract_job_id": "cmryj6d6s0348cx0145d7f2d8",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.414909+00:00",
+  "updated_at": "2026-07-24T06:00:08.891690+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T05:59:44.169073+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T05:59:51.414638+00:00",
+  "parse_metadata": {
+    "filename": "19910801_British Virgin Islands Tourist Board_Amendment_Amendment.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 3,
+    "duration_ms": 6295,
+    "credit_usage": 9.0,
+    "job_id": "cmryj666d0347cx01s2okni8x",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T05:59:53.350678+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:00:08.891684+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13222,
+    "credit_usage": 1.9,
+    "job_id": "cmryj6d6s0348cx0145d7f2d8",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "1991-08-05",
+    "foreign_principle_name": null,
+    "registrant_name": "British Virgin Islands Tourist Board",
+    "registration_num": "3354",
+    "signer_name": null,
+    "signer_title": null
+  }
+}

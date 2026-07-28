@@ -1,0 +1,65 @@
+{
+  "extraction": {
+    "file_date": "01/30/2016",
+    "foreign_principle_name": "The Confederation of Garment Exporters of the Philippines (CONGEP)",
+    "registrant_name": "Squire Patton Boggs (US) LLP",
+    "registration_num": "2165",
+    "signer_name": "Edward J. Newberry",
+    "signer_title": null
+  },
+  "extraction_metadata": {
+    "file_date": {
+      "references": [
+        "5640f65f-b635-449c-b8de-8ec3cab43306",
+        "25043544-a99a-403a-a99b-36735d3b2383",
+        "0e4bbf7e-3d13-47c7-9f51-7c4c757dacaf",
+        "db7e5567-727c-4b15-a5e6-3b47aab77f42"
+      ],
+      "value": "01/30/2016"
+    },
+    "foreign_principle_name": {
+      "references": [
+        "05c40b05-a623-4c5f-b108-12a147bc27fd"
+      ],
+      "value": "The Confederation of Garment Exporters of the Philippines (CONGEP)"
+    },
+    "registrant_name": {
+      "references": [
+        "1-0"
+      ],
+      "value": "Squire Patton Boggs (US) LLP"
+    },
+    "registration_num": {
+      "references": [
+        "1-1"
+      ],
+      "value": "2165"
+    },
+    "signer_name": {
+      "references": [
+        "382172c2-94c7-4216-bdcf-0be691e8ab3f"
+      ],
+      "value": "Edward J. Newberry"
+    },
+    "signer_title": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16147,
+    "credit_usage": 1.5,
+    "job_id": "cmryj7oyn034kcx010jlvp5vf",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "job_id": "cmryj6k030349cx01tm7e136x",
+  "status": "completed",
+  "received_at": 1784872801,
+  "created_at": 1784872801,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "09/07/2017",
+      "foreign_principle_name": "VTA Telecom Corp. and Viettel Group",
+      "registrant_name": "McDermott Will & Emery LLP",
+      "registration_num": "6447",
+      "signer_name": "Stephen M. Ryan",
+      "signer_title": "partner"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "3d9033cb-0740-4e96-ad48-b23d3649138d",
+          "534b19ec-8ede-4a40-8601-c5ae87c0d9d1"
+        ],
+        "value": "09/07/2017"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "f0face8c-c943-4db4-8e53-e19a31e82b23"
+        ],
+        "value": "VTA Telecom Corp. and Viettel Group"
+      },
+      "registrant_name": {
+        "references": [
+          "f0face8c-c943-4db4-8e53-e19a31e82b23"
+        ],
+        "value": "McDermott Will & Emery LLP"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "6447"
+      },
+      "signer_name": {
+        "references": [
+          "0-2",
+          "534b19ec-8ede-4a40-8601-c5ae87c0d9d1"
+        ],
+        "value": "Stephen M. Ryan"
+      },
+      "signer_title": {
+        "references": [
+          "f0face8c-c943-4db4-8e53-e19a31e82b23"
+        ],
+        "value": "partner"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12262,
+      "credit_usage": 2.1,
+      "job_id": "cmryj6k030349cx01tm7e136x",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 2.1,
+    "job_id": "cmryj6k030349cx01tm7e136x",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

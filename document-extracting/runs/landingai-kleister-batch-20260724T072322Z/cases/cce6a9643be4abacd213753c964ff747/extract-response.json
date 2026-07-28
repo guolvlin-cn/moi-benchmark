@@ -1,0 +1,64 @@
+{
+  "extraction": {
+    "effective_date": "2008-08-01",
+    "jurisdiction": "State of New York",
+    "party": [
+      "Omrix Biopharmaceuticals, Inc.",
+      "Ethicon, Inc."
+    ],
+    "term": null
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [
+        "7e2ecf95-f7b2-49b0-9270-b943a001192e",
+        "bb8bc1a3-440d-4cad-b547-6cd552b383e4"
+      ],
+      "value": "2008-08-01"
+    },
+    "jurisdiction": {
+      "references": [
+        "b3b39b6a-e863-4222-8425-ee224d231344"
+      ],
+      "value": "State of New York"
+    },
+    "party": [
+      {
+        "references": [
+          "084e9c20-8110-4d56-8cf8-eeb7b35c8ab7",
+          "7e2ecf95-f7b2-49b0-9270-b943a001192e",
+          "251eec64-25e5-4c81-ab8e-ca09b36864d5"
+        ],
+        "value": "Omrix Biopharmaceuticals, Inc."
+      },
+      {
+        "references": [
+          "084e9c20-8110-4d56-8cf8-eeb7b35c8ab7",
+          "7e2ecf95-f7b2-49b0-9270-b943a001192e",
+          "f342a6fd-dbd4-42b0-99a6-3791073899e6"
+        ],
+        "value": "Ethicon, Inc."
+      }
+    ],
+    "term": {
+      "references": [],
+      "value": null
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17213,
+    "credit_usage": 3.0,
+    "job_id": "cmrymo6a30325d501rkcx6bei",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'term' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

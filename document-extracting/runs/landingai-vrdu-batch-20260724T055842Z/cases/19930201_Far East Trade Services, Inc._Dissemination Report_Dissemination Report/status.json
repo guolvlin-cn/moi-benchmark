@@ -1,0 +1,50 @@
+{
+  "case_id": "19930201_Far East Trade Services, Inc._Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19930201_Far East Trade Services, Inc._Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "34774d82bd64909a3c553accf74269f1ceefd47e78e8c7a8e550c3c51f55e3a1",
+  "status": "completed",
+  "parse_job_id": "cmryjb7am034zcx01ktzs4o9r",
+  "extract_job_id": "cmryjbmgh033fe4014e7j9m8u",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.420504+00:00",
+  "updated_at": "2026-07-24T06:04:13.451533+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:03:38.940859+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:03:54.016298+00:00",
+  "parse_metadata": {
+    "filename": "19930201_Far East Trade Services, Inc._Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 12438,
+    "credit_usage": 6.0,
+    "job_id": "cmryjb7am034zcx01ktzs4o9r",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:03:58.602026+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:04:13.451527+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13610,
+    "credit_usage": 1.5,
+    "job_id": "cmryjbmgh033fe4014e7j9m8u",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "1993-02-08",
+    "foreign_principle_name": "Far East Trade Service, Inc.",
+    "registrant_name": "Far East Trade Service, Inc.",
+    "registration_num": "2985",
+    "signer_name": "Robert Y. Wang",
+    "signer_title": "Director"
+  }
+}

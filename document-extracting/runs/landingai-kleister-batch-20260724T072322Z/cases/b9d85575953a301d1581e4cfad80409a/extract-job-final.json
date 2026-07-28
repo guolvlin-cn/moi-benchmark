@@ -1,0 +1,86 @@
+{
+  "job_id": "cmrymw3ky041ge401hqtzdbgp",
+  "status": "completed",
+  "received_at": 1784879032,
+  "created_at": 1784879032,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2009-02-03",
+      "jurisdiction": "Delaware",
+      "party": [
+        "Tyco Healthcare Group LP, d/b/a Covidien",
+        "VNUS Medical Technologies, Inc."
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "39741437-e1b8-4bae-b3ea-1c5b438219b1",
+          "954fb488-6e1c-4bfc-b025-8a56ab30ee0a",
+          "290f3239-6434-4c84-8ae0-6e77eece5733",
+          "e89707d8-5e31-482a-9a82-8f0dfec94cb5",
+          "04a00085-3f07-4187-a569-a3602c85deae",
+          "239423f7-624f-43b6-bc68-cbf407f21527",
+          "fbd00311-5d48-4054-8215-e0f551730f1f"
+        ],
+        "value": "2009-02-03"
+      },
+      "jurisdiction": {
+        "references": [
+          "1689945c-3f09-4826-a442-b41c8f0b9445"
+        ],
+        "value": "Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "3a8fe288-2623-46f1-93cb-11ced9f90cb1",
+            "5ccd74c7-ee29-4512-b1d4-a517c982c9c0"
+          ],
+          "value": "Tyco Healthcare Group LP, d/b/a Covidien"
+        },
+        {
+          "references": [
+            "1c2f7225-a0c2-4bfd-aa8c-889722600f7c",
+            "21ad5b46-384a-470c-985a-165ce220a66e"
+          ],
+          "value": "VNUS Medical Technologies, Inc."
+        }
+      ],
+      "term": {
+        "references": [
+          "20f3badb-bdcd-4ce7-983d-26d0735f4586"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13938,
+      "credit_usage": 4.2,
+      "job_id": "cmrymw3ky041ge401hqtzdbgp",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 4.2,
+    "job_id": "cmrymw3ky041ge401hqtzdbgp",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

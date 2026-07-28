@@ -1,0 +1,50 @@
+{
+  "case_id": "20110722_BGR Government Affairs, LLC_Patten, William Samuel Jr._Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20110722_BGR Government Affairs, LLC_Patten, William Samuel Jr._Short-Form.pdf",
+  "pdf_sha256": "d112c65ad0b50655a275694e5dd04ee9abfe9469a442fc0a927e7512a3137a79",
+  "status": "completed",
+  "parse_job_id": "cmryj6kqq034acx011am5ihce",
+  "extract_job_id": "cmryj6snt0253d501submw0q1",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.415322+00:00",
+  "updated_at": "2026-07-24T06:00:30.010692+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:00:03.078644+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:00:10.558371+00:00",
+  "parse_metadata": {
+    "filename": "20110722_BGR Government Affairs, LLC_Patten, William Samuel Jr._Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 3,
+    "duration_ms": 6772,
+    "credit_usage": 9.0,
+    "job_id": "cmryj6kqq034acx011am5ihce",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:00:13.420885+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:00:30.010689+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13517,
+    "credit_usage": 2.1,
+    "job_id": "cmryj6snt0253d501submw0q1",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "July 22, 2011",
+    "foreign_principle_name": "BGR Gabara, Ltd. (for Free Democrats)",
+    "registrant_name": "BGR Government Affairs, LLC",
+    "registration_num": "5430",
+    "signer_name": "William Samuel Patten Jr.",
+    "signer_title": "Independent Contractor"
+  }
+}

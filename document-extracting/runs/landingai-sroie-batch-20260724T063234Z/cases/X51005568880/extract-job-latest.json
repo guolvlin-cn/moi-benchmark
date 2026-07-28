@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykfgfm027ld5013puboxzx",
+  "status": "completed",
+  "received_at": 1784874896,
+  "created_at": 1784874896,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "MR.D.I.Y(M)SDN BHD",
+      "date": "19-09-17",
+      "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",
+      "total": "15.90"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "3d7dfc45-e5fc-4f3e-b920-fc51624e2f05"
+        ],
+        "value": "MR.D.I.Y(M)SDN BHD"
+      },
+      "date": {
+        "references": [
+          "9e4f6c3c-eaf8-47c7-893e-d1f140f6f3d1"
+        ],
+        "value": "19-09-17"
+      },
+      "address": {
+        "references": [
+          "3d7dfc45-e5fc-4f3e-b920-fc51624e2f05"
+        ],
+        "value": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR"
+      },
+      "total": {
+        "references": [
+          "55b38332-acc6-445f-8461-4fdab7ef8d61"
+        ],
+        "value": "15.90"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 9246,
+      "credit_usage": 0.7,
+      "job_id": "cmrykfgfm027ld5013puboxzx",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10000,
+    "credit_usage": 0.7,
+    "job_id": "cmrykfgfm027ld5013puboxzx",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

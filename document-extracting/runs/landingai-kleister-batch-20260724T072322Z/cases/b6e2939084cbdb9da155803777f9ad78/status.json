@@ -1,0 +1,56 @@
+{
+  "case_id": "b6e2939084cbdb9da155803777f9ad78",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/b6e2939084cbdb9da155803777f9ad78.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "c103044f30246e11ee6d0948ce1a85479fc25d91c93659e326543d936d38c2b3",
+  "status": "completed",
+  "parse_job_id": "cmrymmyc403zle401y2lxsz7c",
+  "extract_job_id": "cmrymn7ce0418cx01qw0h9pxa",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.420916+00:00",
+  "updated_at": "2026-07-24T07:37:21.299335+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:36:46.094537+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:36:55.192849+00:00",
+  "parse_metadata": {
+    "filename": "b6e2939084cbdb9da155803777f9ad78.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 6019,
+    "credit_usage": 6.0,
+    "job_id": "cmrymmyc403zle401y2lxsz7c",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:36:57.712301+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:37:21.299331+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 16183,
+    "credit_usage": 1.5,
+    "job_id": "cmrymn7ce0418cx01qw0h9pxa",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2005-05-04",
+    "jurisdiction": "Idaho",
+    "party": [
+      "Silver Valley Capital",
+      "Sterling Mining Company",
+      "Kimberly Gold Mines, Inc.",
+      "Shoshone Silver Mining Company",
+      "Michael L. Mooney"
+    ],
+    "term": ""
+  }
+}

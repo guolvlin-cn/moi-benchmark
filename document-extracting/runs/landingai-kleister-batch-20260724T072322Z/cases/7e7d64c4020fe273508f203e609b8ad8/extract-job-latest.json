@@ -1,0 +1,99 @@
+{
+  "job_id": "cmrymkjl30311d501rkgeznr0",
+  "status": "completed",
+  "received_at": 1784878493,
+  "created_at": 1784878493,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2010-06-23",
+      "jurisdiction": "State of Texas",
+      "party": [
+        "Allis-Chalmers Energy Inc.",
+        "Seawell Limited",
+        "Allis-Chalmers Energy Inc.",
+        "Seawell Limited"
+      ],
+      "term": "2_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "73f20467-9a36-4786-81ea-0db109cdbabc"
+        ],
+        "value": "2010-06-23"
+      },
+      "jurisdiction": {
+        "references": [
+          "8f1f3b5a-14c4-4f23-b354-2c8732957cba"
+        ],
+        "value": "State of Texas"
+      },
+      "party": [
+        {
+          "references": [
+            "c6c57a95-c62d-4f23-a7f2-3182c085be4b",
+            "3bf08db9-ceac-46bc-88b0-1df0a02249de",
+            "8f54207e-0375-45c5-874d-47d7538ca626",
+            "2896c175-0fc8-47a8-bb4c-b45e2a201e04",
+            "24ef56a8-aea9-40f3-9ed3-aca2e37bec7a"
+          ],
+          "value": "Allis-Chalmers Energy Inc."
+        },
+        {
+          "references": [
+            "c6c57a95-c62d-4f23-a7f2-3182c085be4b",
+            "8f54207e-0375-45c5-874d-47d7538ca626"
+          ],
+          "value": "Seawell Limited"
+        },
+        {
+          "references": [
+            "c6c57a95-c62d-4f23-a7f2-3182c085be4b",
+            "8f54207e-0375-45c5-874d-47d7538ca626"
+          ],
+          "value": "Allis-Chalmers Energy Inc."
+        },
+        {
+          "references": [
+            "c6c57a95-c62d-4f23-a7f2-3182c085be4b",
+            "8f54207e-0375-45c5-874d-47d7538ca626"
+          ],
+          "value": "Seawell Limited"
+        }
+      ],
+      "term": {
+        "references": [
+          "7f408504-627f-4fb0-97cc-cf5f4984d91c"
+        ],
+        "value": "2_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 18866,
+      "credit_usage": 6.5,
+      "job_id": "cmrymkjl30311d501rkgeznr0",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20000,
+    "credit_usage": 6.5,
+    "job_id": "cmrymkjl30311d501rkgeznr0",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

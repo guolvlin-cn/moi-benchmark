@@ -1,0 +1,85 @@
+{
+  "job_id": "cmryjip9c0260d501depnwtse",
+  "status": "completed",
+  "received_at": 1784873368,
+  "created_at": 1784873368,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "03/15/2013",
+      "foreign_principle_name": "Permanent Mission of the Kingdom of Saudi Arabia",
+      "registrant_name": "Daniel J. Edelman, Inc.",
+      "registration_num": "3634",
+      "signer_name": "Tyler Suiters",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "7fe9fd08-8ef6-44ad-ac42-c4e23c0d7fe6"
+        ],
+        "value": "03/15/2013"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "bb01c432-43e6-4ace-9969-7e50bfb56b3c"
+        ],
+        "value": "Permanent Mission of the Kingdom of Saudi Arabia"
+      },
+      "registrant_name": {
+        "references": [
+          "0-a"
+        ],
+        "value": "Daniel J. Edelman, Inc."
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "3634"
+      },
+      "signer_name": {
+        "references": [
+          "0-2",
+          "745d891f-2d0b-47ae-aa0d-cad5ed78df8c"
+        ],
+        "value": "Tyler Suiters"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 16319,
+      "credit_usage": 1.9,
+      "job_id": "cmryjip9c0260d501depnwtse",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17000,
+    "credit_usage": 1.9,
+    "job_id": "cmryjip9c0260d501depnwtse",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

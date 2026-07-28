@@ -1,0 +1,80 @@
+{
+  "job_id": "cmrymr96g042lcx01sh6euy1r",
+  "status": "completed",
+  "received_at": 1784878806,
+  "created_at": 1784878806,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2015-04-02",
+      "jurisdiction": "State of Delaware",
+      "party": [
+        "Magnetek, Inc.",
+        "Columbus McKinnon Corporation"
+      ],
+      "term": "3_years"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "fdf32e58-a87a-4b5a-bd0c-c4698d12ce20"
+        ],
+        "value": "2015-04-02"
+      },
+      "jurisdiction": {
+        "references": [
+          "5085223c-458e-408b-9405-25a21d8d8c56"
+        ],
+        "value": "State of Delaware"
+      },
+      "party": [
+        {
+          "references": [
+            "dba2999b-79d8-4279-9e0c-30b268e68e13",
+            "511a26c9-8f10-40c4-a66a-7eef5446931b"
+          ],
+          "value": "Magnetek, Inc."
+        },
+        {
+          "references": [
+            "f1a5548c-1d1c-4adb-b22e-289cde1acaee",
+            "4369dab3-1c04-4e40-8f53-6a2db4072a45"
+          ],
+          "value": "Columbus McKinnon Corporation"
+        }
+      ],
+      "term": {
+        "references": [
+          "7eda2b99-f8b6-4d24-a4fa-d927c1420203"
+        ],
+        "value": "3_years"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 20386,
+      "credit_usage": 6.4,
+      "job_id": "cmrymr96g042lcx01sh6euy1r",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 21000,
+    "credit_usage": 6.4,
+    "job_id": "cmrymr96g042lcx01sh6euy1r",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

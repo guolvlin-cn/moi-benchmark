@@ -1,0 +1,53 @@
+{
+  "case_id": "7684f321eb08514fa1794427e73479b9",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/7684f321eb08514fa1794427e73479b9.pdf",
+  "source_type": "pdf",
+  "source_split": "train",
+  "pdf_sha256": "51a1a517a79a456a2a49affb0e7b219cf2680d381f83a71062467f4c8811ae1c",
+  "status": "completed",
+  "parse_job_id": "cmrymtzjm0418e401ej8icg9i",
+  "extract_job_id": "cmrymuwjo033pd501ckne8ll8",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.445675+00:00",
+  "updated_at": "2026-07-24T07:43:20.936102+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:42:14.269725+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:42:55.077199+00:00",
+  "parse_metadata": {
+    "filename": "7684f321eb08514fa1794427e73479b9.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 9,
+    "duration_ms": 35030,
+    "credit_usage": 27.0,
+    "job_id": "cmrymtzjm0418e401ej8icg9i",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:42:56.958865+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:43:20.936088+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17120,
+    "credit_usage": 5.7,
+    "job_id": "cmrymuwjo033pd501ckne8ll8",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": "Illinois",
+    "party": [
+      "Sears Holdings Corporation and its controlled affiliates and subsidiaries",
+      "Executive"
+    ],
+    "term": "1_year"
+  }
+}

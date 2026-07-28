@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykdv0i037acx01j1tlmyel",
+  "status": "completed",
+  "received_at": 1784874822,
+  "created_at": 1784874822,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "RESTAURANT SIN DU",
+      "date": "09/03/2018",
+      "address": "K3-113, JL IBRAHIM SULTAN 80300 JOHOR BAHRU JOHOR",
+      "total": "170. 00"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "677d54d1-34b9-41b3-b470-cd97f7f7618b"
+        ],
+        "value": "RESTAURANT SIN DU"
+      },
+      "date": {
+        "references": [
+          "108d6031-b776-43da-929a-6a9901b94a34"
+        ],
+        "value": "09/03/2018"
+      },
+      "address": {
+        "references": [
+          "677d54d1-34b9-41b3-b470-cd97f7f7618b"
+        ],
+        "value": "K3-113, JL IBRAHIM SULTAN 80300 JOHOR BAHRU JOHOR"
+      },
+      "total": {
+        "references": [
+          "536d1237-fbf2-460b-bda5-9fe8f960fa41"
+        ],
+        "value": "170. 00"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 7664,
+      "credit_usage": 0.3,
+      "job_id": "cmrykdv0i037acx01j1tlmyel",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 8000,
+    "credit_usage": 0.3,
+    "job_id": "cmrykdv0i037acx01j1tlmyel",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

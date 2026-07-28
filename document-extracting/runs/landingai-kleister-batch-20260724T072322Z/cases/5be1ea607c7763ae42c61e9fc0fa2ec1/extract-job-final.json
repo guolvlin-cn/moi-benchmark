@@ -1,0 +1,78 @@
+{
+  "job_id": "cmrymgdsq030dd501u4stvag4",
+  "status": "completed",
+  "received_at": 1784878299,
+  "created_at": 1784878299,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "effective_date": "2015-06-23",
+      "jurisdiction": "State of New York",
+      "party": [
+        "Consac, LLC",
+        "MusclePharm Corporation"
+      ],
+      "term": "12_months"
+    },
+    "extraction_metadata": {
+      "effective_date": {
+        "references": [
+          "de3f7d9d-fee5-4505-984d-24406f9dca1b"
+        ],
+        "value": "2015-06-23"
+      },
+      "jurisdiction": {
+        "references": [
+          "a8090373-10be-4371-bdf9-417b4ed7fe13"
+        ],
+        "value": "State of New York"
+      },
+      "party": [
+        {
+          "references": [
+            "de3f7d9d-fee5-4505-984d-24406f9dca1b"
+          ],
+          "value": "Consac, LLC"
+        },
+        {
+          "references": [
+            "de3f7d9d-fee5-4505-984d-24406f9dca1b"
+          ],
+          "value": "MusclePharm Corporation"
+        }
+      ],
+      "term": {
+        "references": [
+          "a8090373-10be-4371-bdf9-417b4ed7fe13"
+        ],
+        "value": "12_months"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12787,
+      "credit_usage": 4.3,
+      "job_id": "cmrymgdsq030dd501u4stvag4",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 4.3,
+    "job_id": "cmrymgdsq030dd501u4stvag4",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,51 @@
+{
+  "case_id": "X51008142031",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51008142031.jpg",
+  "source_type": "image",
+  "image_sha256": "feabf37deec2861d665b1b207b1bba095a1307faa390405ae2580ce98979067a",
+  "gold_entities": "train/entities/X51008142031.txt",
+  "gold_box": "train/box/X51008142031.txt",
+  "status": "completed",
+  "parse_job_id": "cmryksnio038tcx01eau2esdz",
+  "extract_job_id": "cmrykt220029kd501v1ok6inj",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.274824+00:00",
+  "updated_at": "2026-07-24T06:45:46.782798+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:45:12.698396+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:45:28.812309+00:00",
+  "parse_metadata": {
+    "filename": "X51008142031.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 10029,
+    "credit_usage": 3.0,
+    "job_id": "cmryksnio038tcx01eau2esdz",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:45:31.544257+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:45:46.782794+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11679,
+    "credit_usage": 0.6,
+    "job_id": "cmrykt220029kd501v1ok6inj",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "ONE ONE THREE SEAFOOD RESTAURANT SDN BHD",
+    "date": "22-05-2018",
+    "address": "NO.1, TAMAN SRI DENGKIL, JALAN AIR HITAM 43800 DENGKIL, SELANGOR.",
+    "total": "71.00"
+  }
+}

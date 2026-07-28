@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryj5ivl0344cx01k4fp5ju1",
+  "status": "completed",
+  "received_at": 1784872753,
+  "created_at": 1784872753,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "2010-01-20",
+      "foreign_principle_name": "The Federal Republic of Nigeria",
+      "registrant_name": "Patton Boggs LLP",
+      "registration_num": "2165",
+      "signer_name": "John J. Deschauer",
+      "signer_title": "partner"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "0639fc5c-7e0e-4477-84ba-7a8c18c1651b"
+        ],
+        "value": "2010-01-20"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "28048b32-5644-4f69-9a11-d42f2dadff55"
+        ],
+        "value": "The Federal Republic of Nigeria"
+      },
+      "registrant_name": {
+        "references": [
+          "d1549844-96df-48a5-af54-3324999daf6c"
+        ],
+        "value": "Patton Boggs LLP"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "2165"
+      },
+      "signer_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "John J. Deschauer"
+      },
+      "signer_title": {
+        "references": [
+          "d1549844-96df-48a5-af54-3324999daf6c"
+        ],
+        "value": "partner"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 17389,
+      "credit_usage": 2.3,
+      "job_id": "cmryj5ivl0344cx01k4fp5ju1",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18000,
+    "credit_usage": 2.3,
+    "job_id": "cmryj5ivl0344cx01k4fp5ju1",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

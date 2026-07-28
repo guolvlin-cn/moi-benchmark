@@ -1,0 +1,55 @@
+{
+  "case_id": "19921001_JETRO, Los Angeles_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19921001_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "2f678ab8798fce6c58c8507e93c72035b80b54609c780cc7933556b78da72ce3",
+  "status": "completed",
+  "parse_job_id": "cmryjdxh9033oe401fxto8zsd",
+  "extract_job_id": "cmryjftia035fcx019erb4g6a",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.424016+00:00",
+  "updated_at": "2026-07-24T06:07:39.126147+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:05:46.136711+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:07:09.880460+00:00",
+  "parse_metadata": {
+    "filename": "19921001_JETRO, Los Angeles_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 77686,
+    "credit_usage": 6.0,
+    "job_id": "cmryjdxh9033oe401fxto8zsd",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:07:14.303685+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:07:39.126143+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 18052,
+    "credit_usage": 0.9,
+    "job_id": "cmryjftia035fcx019erb4g6a",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'foreign_principle_name' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "",
+    "foreign_principle_name": null,
+    "registrant_name": null,
+    "registration_num": null,
+    "signer_name": "Eduard Hoogstad",
+    "signer_title": null
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "20100120_Squire Patton Boggs, LLP_Deschauer, John J._Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20100120_Squire Patton Boggs, LLP_Deschauer, John J._Short-Form.pdf",
+  "pdf_sha256": "fb0f1c3b1655f9bbe289609f185fc39d8cfb8e761f6be148fa369163eed1fd1b",
+  "status": "completed",
+  "parse_job_id": "cmryj51x8024rd5013jlz9bb6",
+  "extract_job_id": "cmryj5ivl0344cx01k4fp5ju1",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.413127+00:00",
+  "updated_at": "2026-07-24T05:59:36.456468+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T05:58:51.987493+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T05:59:10.688905+00:00",
+  "parse_metadata": {
+    "filename": "20100120_Squire Patton Boggs, LLP_Deschauer, John J._Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 8866,
+    "credit_usage": 6.0,
+    "job_id": "cmryj51x8024rd5013jlz9bb6",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T05:59:13.962642+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T05:59:36.456464+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17389,
+    "credit_usage": 2.3,
+    "job_id": "cmryj5ivl0344cx01k4fp5ju1",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "2010-01-20",
+    "foreign_principle_name": "The Federal Republic of Nigeria",
+    "registrant_name": "Patton Boggs LLP",
+    "registration_num": "2165",
+    "signer_name": "John J. Deschauer",
+    "signer_title": "partner"
+  }
+}

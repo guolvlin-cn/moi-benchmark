@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryjjuuo0263d501mpu3o2ks",
+  "status": "completed",
+  "received_at": 1784873422,
+  "created_at": 1784873422,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "1993-11-15",
+      "foreign_principle_name": "Scottish Enterprise",
+      "registrant_name": "Locate in Scotland",
+      "registration_num": "3013",
+      "signer_name": "James A. Coppola, CPA",
+      "signer_title": "CPA"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "8d757c6a-456a-4a18-b5b1-da18938fba1f"
+        ],
+        "value": "1993-11-15"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0-6"
+        ],
+        "value": "Scottish Enterprise"
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Locate in Scotland"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "3013"
+      },
+      "signer_name": {
+        "references": [
+          "1-9"
+        ],
+        "value": "James A. Coppola, CPA"
+      },
+      "signer_title": {
+        "references": [
+          "1-8"
+        ],
+        "value": "CPA"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 13257,
+      "credit_usage": 1.4,
+      "job_id": "cmryjjuuo0263d501mpu3o2ks",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14000,
+    "credit_usage": 1.4,
+    "job_id": "cmryjjuuo0263d501mpu3o2ks",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

@@ -1,0 +1,51 @@
+{
+  "case_id": "X51008064061",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51008064061.jpg",
+  "source_type": "image",
+  "image_sha256": "aee24b0dbfee0391211827219d5b6c250f313c23a089cebe88f9c55cefad0a18",
+  "gold_entities": "train/entities/X51008064061.txt",
+  "gold_box": "train/box/X51008064061.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykrtl6029dd501px2qsy7o",
+  "extract_job_id": "cmryks2ow029gd5017fii2erb",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.271461+00:00",
+  "updated_at": "2026-07-24T06:45:00.871923+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:44:33.948858+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:44:41.731078+00:00",
+  "parse_metadata": {
+    "filename": "X51008064061.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7042,
+    "credit_usage": 3.0,
+    "job_id": "cmrykrtl6029dd501px2qsy7o",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:44:45.711421+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:45:00.871916+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11227,
+    "credit_usage": 0.5,
+    "job_id": "cmryks2ow029gd5017fii2erb",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "MR. D.I.Y. (M) SDN BHD",
+    "date": "03-05-18",
+    "address": "LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",
+    "total": "RM 69.20"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "case_id": "11d0a5b1f6e460c7033d57661026d00c",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/11d0a5b1f6e460c7033d57661026d00c.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "e1ea9aba85073d7ec147a6c7edf4e6bd6051a72096664058cffd015f29c18b9d",
+  "status": "completed",
+  "parse_job_id": "cmrym6hkt03vccx01dmanzson",
+  "extract_job_id": "cmrym9om203ybcx01pa24mmoz",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.399576+00:00",
+  "updated_at": "2026-07-24T07:26:50.405647+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:23:58.061682+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:26:24.680091+00:00",
+  "parse_metadata": {
+    "filename": "11d0a5b1f6e460c7033d57661026d00c.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 10,
+    "duration_ms": 22550,
+    "credit_usage": 30.0,
+    "job_id": "cmrym6hkt03vccx01dmanzson",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:26:26.949748+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:26:50.405644+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20614,
+    "credit_usage": 6.4,
+    "job_id": "cmrym9om203ybcx01pa24mmoz",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2015-03-01",
+    "jurisdiction": "State of Delaware",
+    "party": [
+      "AUSPEX PHARMACEUTICALS",
+      "TEVA PHARMACEUTICAL INDUSTRIES, LTD."
+    ],
+    "term": "3_years"
+  }
+}

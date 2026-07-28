@@ -1,0 +1,53 @@
+{
+  "case_id": "03efbda01358533c167ca9b1e6d72051",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/03efbda01358533c167ca9b1e6d72051.pdf",
+  "source_type": "pdf",
+  "source_split": "train",
+  "pdf_sha256": "cc5fa63311f72b77f950968c0ddc0aac6116c6cf4898af8d65a197168625de6b",
+  "status": "completed",
+  "parse_job_id": "cmrymrr83042ocx012zdg330i",
+  "extract_job_id": "cmryms5m9042qcx01n5agi3c2",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.437028+00:00",
+  "updated_at": "2026-07-24T07:41:04.214377+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:40:30.112003+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:40:46.686432+00:00",
+  "parse_metadata": {
+    "filename": "03efbda01358533c167ca9b1e6d72051.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 15701,
+    "credit_usage": 6.0,
+    "job_id": "cmrymrr83042ocx012zdg330i",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:40:48.749938+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:41:04.214373+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12718,
+    "credit_usage": 1.7,
+    "job_id": "cmryms5m9042qcx01n5agi3c2",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "1999-02-06",
+    "jurisdiction": "Pennsylvania",
+    "party": [
+      "High Speed Net Solutions",
+      "R. J. Seifert Enterprises"
+    ],
+    "term": "2_years"
+  }
+}

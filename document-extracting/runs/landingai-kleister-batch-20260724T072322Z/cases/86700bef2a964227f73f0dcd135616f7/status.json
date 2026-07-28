@@ -1,0 +1,53 @@
+{
+  "case_id": "86700bef2a964227f73f0dcd135616f7",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/86700bef2a964227f73f0dcd135616f7.pdf",
+  "source_type": "pdf",
+  "source_split": "train",
+  "pdf_sha256": "d02dc8ac3036b1121b2e3523adfcb5e33e1231f5406e0dea964c0ea1e577a773",
+  "status": "completed",
+  "parse_job_id": "cmrymuxzj041ce401rpkvgiq6",
+  "extract_job_id": "cmrymvc0u042ycx015jbybw4v",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.449965+00:00",
+  "updated_at": "2026-07-24T07:43:40.086183+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:42:58.834398+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:43:14.621816+00:00",
+  "parse_metadata": {
+    "filename": "86700bef2a964227f73f0dcd135616f7.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 9,
+    "duration_ms": 14108,
+    "credit_usage": 27.0,
+    "job_id": "cmrymuxzj041ce401rpkvgiq6",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:43:17.012371+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:43:40.086179+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 20706,
+    "credit_usage": 4.9,
+    "job_id": "cmrymvc0u042ycx015jbybw4v",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2010-08-01",
+    "jurisdiction": "Commonwealth of Virginia",
+    "party": [
+      "Joseph M. Squeri",
+      "Comstock Homebuilding Companies, Inc."
+    ],
+    "term": ""
+  }
+}

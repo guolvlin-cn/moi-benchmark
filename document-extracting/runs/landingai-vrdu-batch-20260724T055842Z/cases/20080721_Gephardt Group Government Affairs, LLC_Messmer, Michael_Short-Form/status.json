@@ -1,0 +1,55 @@
+{
+  "case_id": "20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form.pdf",
+  "pdf_sha256": "0bb843126f224232b6cdab1f1e27e5fc55288aa8090807a7dd01ae676d8d7aec",
+  "status": "completed",
+  "parse_job_id": "cmryjmbri034je40139j0b76p",
+  "extract_job_id": "cmryjmotc0364cx0190z1a037",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.432165+00:00",
+  "updated_at": "2026-07-24T06:12:51.486696+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:12:17.973599+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:12:33.946510+00:00",
+  "parse_metadata": {
+    "filename": "20080721_Gephardt Group Government Affairs, LLC_Messmer, Michael_Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 3,
+    "duration_ms": 9119,
+    "credit_usage": 9.0,
+    "job_id": "cmryjmbri034je40139j0b76p",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:12:34.840778+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:12:51.486690+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 14253,
+    "credit_usage": 2.4,
+    "job_id": "cmryjmotc0364cx0190z1a037",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  },
+  "extraction": {
+    "file_date": "7/21/08",
+    "foreign_principle_name": "Republic of Turkey",
+    "registrant_name": "Gephardt Group, LLC",
+    "registration_num": "5874",
+    "signer_name": "Richard A. Gephardt",
+    "signer_title": null
+  }
+}

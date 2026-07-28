@@ -1,0 +1,53 @@
+{
+  "case_id": "d908ff8d69096e5f441e6c05144de7c7",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/d908ff8d69096e5f441e6c05144de7c7.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "f8e981e9597a4e7539405a2d474cfd2048d4ca112427da59aea9b45d51da4286",
+  "status": "completed",
+  "parse_job_id": "cmrympdoo032wd501vpmpb686",
+  "extract_job_id": "cmrympopp040ee401ikratc75",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.429027+00:00",
+  "updated_at": "2026-07-24T07:39:26.639339+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:38:39.233836+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:38:49.555376+00:00",
+  "parse_metadata": {
+    "filename": "d908ff8d69096e5f441e6c05144de7c7.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 16,
+    "duration_ms": 8844,
+    "credit_usage": 48.0,
+    "job_id": "cmrympdoo032wd501vpmpb686",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:38:53.562255+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:39:26.639335+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 22507,
+    "credit_usage": 10.3,
+    "job_id": "cmrympopp040ee401ikratc75",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2008-01-01",
+    "jurisdiction": "California",
+    "party": [
+      "GigOptix LLC",
+      "Avi Katz"
+    ],
+    "term": ""
+  }
+}

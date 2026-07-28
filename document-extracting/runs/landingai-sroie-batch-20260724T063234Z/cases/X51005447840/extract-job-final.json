@@ -1,0 +1,67 @@
+{
+  "job_id": "cmryke8rd037ccx01qzeubnrt",
+  "status": "completed",
+  "received_at": 1784874840,
+  "created_at": 1784874840,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "PASARAYA BORONG PINTAR SDN BHD",
+      "date": "14/03/2018",
+      "address": "NO 19-G&19-1&19-2 JALAN TASIK UTAMA 4, MEDAN NIAGA TASIK DAMAI",
+      "total": "8.20"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "05354e10-8789-416f-adfb-44ed25178aea"
+        ],
+        "value": "PASARAYA BORONG PINTAR SDN BHD"
+      },
+      "date": {
+        "references": [
+          "ca68a69b-832e-4ec0-a739-506b06898663"
+        ],
+        "value": "14/03/2018"
+      },
+      "address": {
+        "references": [
+          "05354e10-8789-416f-adfb-44ed25178aea"
+        ],
+        "value": "NO 19-G&19-1&19-2 JALAN TASIK UTAMA 4, MEDAN NIAGA TASIK DAMAI"
+      },
+      "total": {
+        "references": [
+          "0-G"
+        ],
+        "value": "8.20"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 18644,
+      "credit_usage": 0.7,
+      "job_id": "cmryke8rd037ccx01qzeubnrt",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19000,
+    "credit_usage": 0.7,
+    "job_id": "cmryke8rd037ccx01qzeubnrt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

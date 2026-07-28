@@ -1,0 +1,51 @@
+{
+  "case_id": "X51006619780",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51006619780.jpg",
+  "source_type": "image",
+  "image_sha256": "c9aecdd560d9af9a1f34bcdeb88be17c71c655bb671d2428b0b17fb84299ab3f",
+  "gold_entities": "train/entities/X51006619780.txt",
+  "gold_box": "train/box/X51006619780.txt",
+  "status": "completed",
+  "parse_job_id": "cmryknrth028pd50106qbr58t",
+  "extract_job_id": "cmryko0ko028td501i1shzxdx",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.262507+00:00",
+  "updated_at": "2026-07-24T06:41:52.024449+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:41:25.021915+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:41:32.980498+00:00",
+  "parse_metadata": {
+    "filename": "X51006619780.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 6240,
+    "credit_usage": 3.0,
+    "job_id": "cmryknrth028pd50106qbr58t",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:41:36.356128+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:41:52.024445+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11114,
+    "credit_usage": 0.4,
+    "job_id": "cmryko0ko028td501i1shzxdx",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "Yam Fresh",
+    "date": "2016-07-31",
+    "address": "No.145G, Jalan Rimbunan Raya 1, Laman Rimbunan Kepong, 52100 Kuala Lumpur",
+    "total": "RM8.35"
+  }
+}

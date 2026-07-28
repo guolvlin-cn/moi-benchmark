@@ -1,0 +1,84 @@
+{
+  "job_id": "cmryj9krl034scx015eyek06r",
+  "status": "completed",
+  "received_at": 1784872942,
+  "created_at": 1784872942,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "02/02/2018",
+      "foreign_principle_name": "Quebec Government (Ministry of International Relations)",
+      "registrant_name": "Quebec Government Office",
+      "registration_num": "01787",
+      "signer_name": "Annelise Melanie Lepage",
+      "signer_title": "Director"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "3941b59a-51ae-4952-b769-8d004faad92c",
+          "111092a8-fd43-4313-bf96-67658aba49e0",
+          "5a538c5a-1d93-4e57-baf1-370729ecae33"
+        ],
+        "value": "02/02/2018"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "936f7775-1cce-49b1-871a-83671ffc05fd"
+        ],
+        "value": "Quebec Government (Ministry of International Relations)"
+      },
+      "registrant_name": {
+        "references": [
+          "936f7775-1cce-49b1-871a-83671ffc05fd"
+        ],
+        "value": "Quebec Government Office"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "01787"
+      },
+      "signer_name": {
+        "references": [
+          "0-2",
+          "5a538c5a-1d93-4e57-baf1-370729ecae33"
+        ],
+        "value": "Annelise Melanie Lepage"
+      },
+      "signer_title": {
+        "references": [
+          "936f7775-1cce-49b1-871a-83671ffc05fd"
+        ],
+        "value": "Director"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 16604,
+      "credit_usage": 2.1,
+      "job_id": "cmryj9krl034scx015eyek06r",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 17000,
+    "credit_usage": 2.1,
+    "job_id": "cmryj9krl034scx015eyek06r",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

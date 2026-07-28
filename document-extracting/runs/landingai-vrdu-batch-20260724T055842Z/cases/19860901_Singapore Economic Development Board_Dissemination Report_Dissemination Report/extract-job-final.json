@@ -1,0 +1,81 @@
+{
+  "job_id": "cmryjhjw8025xd501wul3v9y7",
+  "status": "completed",
+  "received_at": 1784873314,
+  "created_at": 1784873314,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "09/15/86",
+      "foreign_principle_name": "Singapore Economic Development Board",
+      "registrant_name": "Singapore Economic Development Board",
+      "registration_num": "2003",
+      "signer_name": "Jonathan Yuen",
+      "signer_title": "Staff Director"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "0-u"
+        ],
+        "value": "09/15/86"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0-5"
+        ],
+        "value": "Singapore Economic Development Board"
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "Singapore Economic Development Board"
+      },
+      "registration_num": {
+        "references": [
+          "0-2"
+        ],
+        "value": "2003"
+      },
+      "signer_name": {
+        "references": [
+          "0-v"
+        ],
+        "value": "Jonathan Yuen"
+      },
+      "signer_title": {
+        "references": [
+          "0-v"
+        ],
+        "value": "Staff Director"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 12241,
+      "credit_usage": 1.1,
+      "job_id": "cmryjhjw8025xd501wul3v9y7",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13000,
+    "credit_usage": 1.1,
+    "job_id": "cmryjhjw8025xd501wul3v9y7",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

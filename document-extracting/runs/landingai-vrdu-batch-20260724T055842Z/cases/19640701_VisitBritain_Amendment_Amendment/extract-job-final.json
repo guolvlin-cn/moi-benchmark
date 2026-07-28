@@ -1,0 +1,84 @@
+{
+  "job_id": "cmryj8h7c034ncx01sin5e6xe",
+  "status": "completed",
+  "received_at": 1784872891,
+  "created_at": 1784872891,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "1964-07-29",
+      "foreign_principle_name": "British Travel and Holidays Association",
+      "registrant_name": "British Travel Association",
+      "registration_num": "579",
+      "signer_name": "K.W.F. CLARK",
+      "signer_title": null
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "c70d6c8a-312b-4433-bbfd-1c73b9f08c51"
+        ],
+        "value": "1964-07-29"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "46783d97-e055-45d3-bc0b-b2891afb7d75"
+        ],
+        "value": "British Travel and Holidays Association"
+      },
+      "registrant_name": {
+        "references": [
+          "46783d97-e055-45d3-bc0b-b2891afb7d75"
+        ],
+        "value": "British Travel Association"
+      },
+      "registration_num": {
+        "references": [
+          "095a2922-ccdb-4c94-ac5e-4bf7bc236bab"
+        ],
+        "value": "579"
+      },
+      "signer_name": {
+        "references": [
+          "16e38b69-273f-427d-b0ac-a59f20ceaf11"
+        ],
+        "value": "K.W.F. CLARK"
+      },
+      "signer_title": {
+        "references": [],
+        "value": null
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 18063,
+      "credit_usage": 1.6,
+      "job_id": "cmryj8h7c034ncx01sin5e6xe",
+      "version": "extract-20260314",
+      "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+      "fallback_model_version": null,
+      "warnings": [
+        {
+          "code": "nonconformant_output",
+          "msg": "The value at 'signer_title' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+        }
+      ]
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 19000,
+    "credit_usage": 1.6,
+    "job_id": "cmryj8h7c034ncx01sin5e6xe",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

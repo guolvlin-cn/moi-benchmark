@@ -1,0 +1,51 @@
+{
+  "case_id": "X51005742068",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51005742068.jpg",
+  "source_type": "image",
+  "image_sha256": "e5932b5932013efa8b9aac59d037c73fa6aeae4124a18c4203dcd79a1d8fc49c",
+  "gold_entities": "train/entities/X51005742068.txt",
+  "gold_box": "train/box/X51005742068.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykhm35036ce401qwikenm2",
+  "extract_job_id": "cmrykhttx036de401n2y0yswt",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.247772+00:00",
+  "updated_at": "2026-07-24T06:37:03.561966+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:36:37.656814+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:36:46.834090+00:00",
+  "parse_metadata": {
+    "filename": "X51005742068.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 6511,
+    "credit_usage": 3.0,
+    "job_id": "cmrykhm35036ce401qwikenm2",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:36:47.686217+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:37:03.561960+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 9469,
+    "credit_usage": 0.4,
+    "job_id": "cmrykhttx036de401n2y0yswt",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "BHPetrol Palekbang",
+    "date": "24-03-2018",
+    "address": "Lot 1626, Mukim Kampung Laut Tumpat 16200 Palekbang, Kelantan",
+    "total": "6.00"
+  }
+}

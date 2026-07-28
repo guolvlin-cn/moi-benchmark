@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykhlfn027ud5015r2xz5vf",
+  "status": "completed",
+  "received_at": 1784874996,
+  "created_at": 1784874996,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "KEDAI PAPAN YEW CHUAN",
+      "date": "06/03/2018",
+      "address": "LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",
+      "total": "127.20"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "3808f7b1-da27-4d43-b492-3b87e1e7540a"
+        ],
+        "value": "KEDAI PAPAN YEW CHUAN"
+      },
+      "date": {
+        "references": [
+          "8b7bb942-394c-464c-b041-f52cd24c41fd"
+        ],
+        "value": "06/03/2018"
+      },
+      "address": {
+        "references": [
+          "3808f7b1-da27-4d43-b492-3b87e1e7540a"
+        ],
+        "value": "LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR."
+      },
+      "total": {
+        "references": [
+          "0-v"
+        ],
+        "value": "127.20"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 9980,
+      "credit_usage": 0.6,
+      "job_id": "cmrykhlfn027ud5015r2xz5vf",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 10000,
+    "credit_usage": 0.6,
+    "job_id": "cmrykhlfn027ud5015r2xz5vf",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

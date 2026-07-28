@@ -1,0 +1,50 @@
+{
+  "case_id": "20170313_Alston _ Bird, LLP_Jones, Robert C._Short-Form",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/20170313_Alston _ Bird, LLP_Jones, Robert C._Short-Form.pdf",
+  "pdf_sha256": "2525f58e42d2c66b1df6e7c07acf72c0d7217591fdbf89302337788d44881678",
+  "status": "completed",
+  "parse_job_id": "cmryjog8a034re401uw19oa7f",
+  "extract_job_id": "cmryjp8hu034ue401zgcdzx1y",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.434869+00:00",
+  "updated_at": "2026-07-24T06:14:52.270297+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:13:57.025898+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:14:32.711746+00:00",
+  "parse_metadata": {
+    "filename": "20170313_Alston _ Bird, LLP_Jones, Robert C._Short-Form.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 2,
+    "duration_ms": 31768,
+    "credit_usage": 6.0,
+    "job_id": "cmryjog8a034re401uw19oa7f",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:14:33.650701+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:14:52.270292+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13926,
+    "credit_usage": 2.0,
+    "job_id": "cmryjp8hu034ue401zgcdzx1y",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "03/13/2017",
+    "foreign_principle_name": "Foreign Ministry, Republic of Kosovo",
+    "registrant_name": "Alston & Bird LLP",
+    "registration_num": "5549",
+    "signer_name": "Robert C Jones",
+    "signer_title": "partner"
+  }
+}

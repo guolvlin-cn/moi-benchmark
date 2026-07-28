@@ -1,0 +1,82 @@
+{
+  "job_id": "cmryjlaf00268d501r922znwz",
+  "status": "completed",
+  "received_at": 1784873489,
+  "created_at": 1784873489,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "file_date": "1992-12-11",
+      "foreign_principle_name": "Japan External Trade Organization",
+      "registrant_name": "JETRO Atlanta",
+      "registration_num": "4069",
+      "signer_name": "Yasumasa Iwasaki",
+      "signer_title": "Executive Director"
+    },
+    "extraction_metadata": {
+      "file_date": {
+        "references": [
+          "0-d",
+          "3ca41041-4c63-44ed-84bf-b4bad3db2777"
+        ],
+        "value": "1992-12-11"
+      },
+      "foreign_principle_name": {
+        "references": [
+          "0-6"
+        ],
+        "value": "Japan External Trade Organization"
+      },
+      "registrant_name": {
+        "references": [
+          "0-2"
+        ],
+        "value": "JETRO Atlanta"
+      },
+      "registration_num": {
+        "references": [
+          "0-3"
+        ],
+        "value": "4069"
+      },
+      "signer_name": {
+        "references": [
+          "1-6"
+        ],
+        "value": "Yasumasa Iwasaki"
+      },
+      "signer_title": {
+        "references": [
+          "1-6"
+        ],
+        "value": "Executive Director"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 14755,
+      "credit_usage": 1.4,
+      "job_id": "cmryjlaf00268d501r922znwz",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15000,
+    "credit_usage": 1.4,
+    "job_id": "cmryjlaf00268d501r922znwz",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

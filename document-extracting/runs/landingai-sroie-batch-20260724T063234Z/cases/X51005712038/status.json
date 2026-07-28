@@ -1,0 +1,51 @@
+{
+  "case_id": "X51005712038",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/SROIE2019/train/img/X51005712038.jpg",
+  "source_type": "image",
+  "image_sha256": "e256fe5db45939a2b81d25f01f98ae9be06c698a7365dcdff22ed7ebce3169ac",
+  "gold_entities": "train/entities/X51005712038.txt",
+  "gold_box": "train/box/X51005712038.txt",
+  "status": "completed",
+  "parse_job_id": "cmrykgjbi0365e4012q2ma6zd",
+  "extract_job_id": "cmrykgqrb0366e4014a1gtvpp",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T06:32:34.245293+00:00",
+  "updated_at": "2026-07-24T06:36:12.767242+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:35:47.373098+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:35:54.854096+00:00",
+  "parse_metadata": {
+    "filename": "X51005712038.jpg",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 6380,
+    "credit_usage": 3.0,
+    "job_id": "cmrykgjbi0365e4012q2ma6zd",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:35:57.100819+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:36:12.767237+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11437,
+    "credit_usage": 0.7,
+    "job_id": "cmrykgqrb0366e4014a1gtvpp",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "company": "SWC ENTERPRISE SDN BHD",
+    "date": "28/03/2018",
+    "address": "5-7, JALAN MAHAGONI 7/1 SEKSYEN 4, BANDAR UTAMA, 44300 BATANG KALI, SELANGOR",
+    "total": "30.00"
+  }
+}

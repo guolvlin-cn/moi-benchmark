@@ -1,0 +1,67 @@
+{
+  "job_id": "cmrykd8wg027bd501lcp9o37k",
+  "status": "completed",
+  "received_at": 1784874793,
+  "created_at": 1784874793,
+  "progress": 1.0,
+  "org_id": "uxkmyluf3ldw",
+  "version": "extract-20260314",
+  "data": {
+    "extraction": {
+      "company": "BREWERY TAP",
+      "date": "30/03/2018",
+      "address": "Avtivo Plaza, Lot B-F-11, Block B No1.Jalan PJU 9/1, D'sara Avevue Bandar Sri D'sara, 52000 KL",
+      "total": "189.75"
+    },
+    "extraction_metadata": {
+      "company": {
+        "references": [
+          "96e1234f-213a-4dd4-a0ea-146567224333"
+        ],
+        "value": "BREWERY TAP"
+      },
+      "date": {
+        "references": [
+          "401ae2c1-da88-48a6-8111-975ca6e8da04"
+        ],
+        "value": "30/03/2018"
+      },
+      "address": {
+        "references": [
+          "96e1234f-213a-4dd4-a0ea-146567224333"
+        ],
+        "value": "Avtivo Plaza, Lot B-F-11, Block B No1.Jalan PJU 9/1, D'sara Avevue Bandar Sri D'sara, 52000 KL"
+      },
+      "total": {
+        "references": [
+          "0-I"
+        ],
+        "value": "189.75"
+      }
+    },
+    "metadata": {
+      "filename": "document.md",
+      "org_id": "uxkmyluf3ldw",
+      "duration_ms": 11661,
+      "credit_usage": 0.7,
+      "job_id": "cmrykd8wg027bd501lcp9o37k",
+      "version": "extract-20260314",
+      "schema_violation_error": null,
+      "fallback_model_version": null,
+      "warnings": []
+    }
+  },
+  "output_url": null,
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 12000,
+    "credit_usage": 0.7,
+    "job_id": "cmrykd8wg027bd501lcp9o37k",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "failure_reason": null
+}

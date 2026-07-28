@@ -1,0 +1,50 @@
+{
+  "case_id": "19930501_Office of Tibet_Dissemination Report_Dissemination Report",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/VRDU/registration-form/main/pdfs/19930501_Office of Tibet_Dissemination Report_Dissemination Report.pdf",
+  "pdf_sha256": "da3e25cddf2ac83e16ce97ba180b50e78aadf76661e765f3ebe42e58acbf6d03",
+  "status": "completed",
+  "parse_job_id": "cmryjeowt035ccx014s4ekte7",
+  "extract_job_id": "cmryjf1zv035dcx013gvhbkij",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T05:58:42.425090+00:00",
+  "updated_at": "2026-07-24T06:06:54.475415+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T06:06:21.765931+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T06:06:37.838895+00:00",
+  "parse_metadata": {
+    "filename": "19930501_Office of Tibet_Dissemination Report_Dissemination Report.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 1,
+    "duration_ms": 7937,
+    "credit_usage": 3.0,
+    "job_id": "cmryjeowt035ccx014s4ekte7",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T06:06:38.665585+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T06:06:54.475411+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 13033,
+    "credit_usage": 1.2,
+    "job_id": "cmryjf1zv035dcx013gvhbkij",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "file_date": "May 14 1993",
+    "foreign_principle_name": "His Holiness the Dalai Lama",
+    "registrant_name": "The Office of Tibet",
+    "registration_num": "1699",
+    "signer_name": "Thubten Samphel",
+    "signer_title": "editor"
+  }
+}

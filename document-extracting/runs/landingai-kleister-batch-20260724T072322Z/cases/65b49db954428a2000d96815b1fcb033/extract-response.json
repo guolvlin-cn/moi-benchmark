@@ -1,0 +1,59 @@
+{
+  "extraction": {
+    "effective_date": "",
+    "jurisdiction": null,
+    "party": [
+      "HI-TEX, INC.",
+      "QUAKER FABRIC CORPORATION OF FALL RIVER"
+    ],
+    "term": ""
+  },
+  "extraction_metadata": {
+    "effective_date": {
+      "references": [
+        "7faf0d7e-fcba-43f4-a25e-a7256644abdc"
+      ],
+      "value": ""
+    },
+    "jurisdiction": {
+      "references": [],
+      "value": null
+    },
+    "party": [
+      {
+        "references": [
+          "7faf0d7e-fcba-43f4-a25e-a7256644abdc"
+        ],
+        "value": "HI-TEX, INC."
+      },
+      {
+        "references": [
+          "7faf0d7e-fcba-43f4-a25e-a7256644abdc"
+        ],
+        "value": "QUAKER FABRIC CORPORATION OF FALL RIVER"
+      }
+    ],
+    "term": {
+      "references": [
+        "b854d30b-3b74-406d-83a2-bdb1af5d1bdd"
+      ],
+      "value": ""
+    }
+  },
+  "metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15111,
+    "credit_usage": 1.6,
+    "job_id": "cmrymjar7040ccx011laczl29",
+    "version": "extract-20260314",
+    "schema_violation_error": "Extracted data does not completely conform to the requested schema. See below error for details.\nThe value at 'jurisdiction' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true.\nPlease read our documentation for more information: https://docs.landing.ai/ade/ade-extract-troubleshoot",
+    "fallback_model_version": null,
+    "warnings": [
+      {
+        "code": "nonconformant_output",
+        "msg": "The value at 'jurisdiction' was not found in the document, so null was returned. Since the schema requires a non-null value, verify that the document indeed doesn't contain this data, and if so, update the schema to allow null by adding 'null' to the field's type (e.g., type: ['string', 'null']) or by setting nullable: true."
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "case_id": "64ee806eb8c3db587c89b4215fac31da",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/64ee806eb8c3db587c89b4215fac31da.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "ab519fae491411ec93ba81f0d37fd3527666934cfccad886888a0e81b82f1aa9",
+  "status": "completed",
+  "parse_job_id": "cmrymi6z503y5e401q2kwib0l",
+  "extract_job_id": "cmrymioux030md5013il6jyxq",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.410381+00:00",
+  "updated_at": "2026-07-24T07:33:49.905083+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:33:03.942057+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:33:24.475239+00:00",
+  "parse_metadata": {
+    "filename": "64ee806eb8c3db587c89b4215fac31da.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 10,
+    "duration_ms": 13056,
+    "credit_usage": 30.0,
+    "job_id": "cmrymi6z503y5e401q2kwib0l",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:33:27.140236+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:33:49.905080+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 15056,
+    "credit_usage": 3.6,
+    "job_id": "cmrymioux030md5013il6jyxq",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2016-01-19",
+    "jurisdiction": "State of Minnesota",
+    "party": [
+      "Target Corporation",
+      "Target Enterprise, Inc.",
+      "Tina Tyler"
+    ],
+    "term": "indefinite"
+  }
+}

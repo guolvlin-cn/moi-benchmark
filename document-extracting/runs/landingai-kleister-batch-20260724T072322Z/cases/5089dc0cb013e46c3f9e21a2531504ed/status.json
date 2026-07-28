@@ -1,0 +1,53 @@
+{
+  "case_id": "5089dc0cb013e46c3f9e21a2531504ed",
+  "pdf_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-extracting/datasets/Kleister-NDA/documents/5089dc0cb013e46c3f9e21a2531504ed.pdf",
+  "source_type": "pdf",
+  "source_split": "dev-0",
+  "pdf_sha256": "ef72c2950c95c50ad2182afbfe571d4dcf2940d0d3ab970c65cf5547f8a1c6df",
+  "status": "completed",
+  "parse_job_id": "cmrymdpph03zhcx01b83vcltt",
+  "extract_job_id": "cmryme4u80305d5010uuz146h",
+  "parse_submit_attempts": 1,
+  "extract_submit_attempts": 1,
+  "created_at": "2026-07-24T07:23:22.404782+00:00",
+  "updated_at": "2026-07-24T07:30:11.678203+00:00",
+  "error": null,
+  "parse_submitted_at": "2026-07-24T07:29:34.928286+00:00",
+  "parse_remote_status": "completed",
+  "parse_progress": 1.0,
+  "parse_completed_at": "2026-07-24T07:29:50.503321+00:00",
+  "parse_metadata": {
+    "filename": "5089dc0cb013e46c3f9e21a2531504ed.pdf",
+    "org_id": "uxkmyluf3ldw",
+    "page_count": 5,
+    "duration_ms": 10873,
+    "credit_usage": 15.0,
+    "job_id": "cmrymdpph03zhcx01b83vcltt",
+    "version": "dpt-2-20260410",
+    "failed_pages": []
+  },
+  "extract_submitted_at": "2026-07-24T07:29:54.625409+00:00",
+  "extract_remote_status": "completed",
+  "extract_progress": 1.0,
+  "extract_completed_at": "2026-07-24T07:30:11.678196+00:00",
+  "extract_metadata": {
+    "filename": "document.md",
+    "org_id": "uxkmyluf3ldw",
+    "duration_ms": 11126,
+    "credit_usage": 3.4,
+    "job_id": "cmryme4u80305d5010uuz146h",
+    "version": "extract-20260314",
+    "schema_violation_error": null,
+    "fallback_model_version": null,
+    "warnings": []
+  },
+  "extraction": {
+    "effective_date": "2012-03-31",
+    "jurisdiction": "State of California",
+    "party": [
+      "Integrated Device Technology, Inc.",
+      "PLX Technology, Inc."
+    ],
+    "term": "1_year"
+  }
+}
