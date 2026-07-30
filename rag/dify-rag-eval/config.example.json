@@ -1,0 +1,17 @@
+{
+  "base_url": "https://api.dify.ai/v1",
+  "app_type": "chat",
+  "api_key_env": "DIFY_API_KEY",
+  "user_prefix": "dify-rag-eval",
+  "timeout_seconds": 120,
+  "max_retries": 3,
+  "concurrency": 2,
+  "repeats": 1,
+  "top_k": 5,
+  "inputs": {},
+  "workflow": {
+    "query_input": "query",
+    "answer_path": "data.outputs.answer",
+    "contexts_path": "data.outputs.contexts"
+  }
+}

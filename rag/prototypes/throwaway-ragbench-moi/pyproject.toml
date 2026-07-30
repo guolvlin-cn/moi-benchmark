@@ -1,0 +1,21 @@
+[project]
+name = "ragbench-moi-prototype"
+version = "0.1.0"
+description = "Throwaway RAGBench Parquet-to-PDF and MOI feasibility harness"
+requires-python = ">=3.12"
+dependencies = [
+    "pyarrow>=15",
+    "pypdf>=4",
+    "reportlab>=4",
+    "requests>=2.31",
+]
+
+[project.scripts]
+ragbench-moi = "ragbench_moi:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["ragbench_moi"]

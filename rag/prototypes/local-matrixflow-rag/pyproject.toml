@@ -1,0 +1,15 @@
+[project]
+name = "local-matrixflow-rag-benchmark"
+version = "0.1.0"
+description = "Minimal local Matrixflow RAG benchmark pipeline"
+requires-python = ">=3.9"
+
+[project.scripts]
+local-matrixflow-rag = "local_matrixflow_rag:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["local_matrixflow_rag"]
