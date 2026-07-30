@@ -1,0 +1,386 @@
+==========================================================================================
+  Chat2DB Spider mix50 — Gold SQL vs Chat2DB SQL 查询结果逐题对比
+==========================================================================================
+
+#01 [easy  ] [pets_1         ] ✓
+  问题: What type of pet is the youngest animal, and how much does it weigh?
+  Gold SQL: SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1
+  Chat2DB:  SELECT PetType, weight FROM Pets ORDER BY pet_age ASC LIMIT 1
+  Gold结果 (1行): [('dog', 9.3)]
+  Chat2DB  (1行): [('dog', 9.3)]
+
+#02 [easy  ] [concert_singer ] ✓
+  问题: What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?
+  Gold SQL: SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'
+  Chat2DB:  SELECT Name, Country FROM singer WHERE Song_Name LIKE '%Hey%'
+  Gold结果 (1行): [('Justin Brown', 'France')]
+  Chat2DB  (1行): [('Justin Brown', 'France')]
+
+#03 [easy  ] [car_1          ] ✓
+  问题: In 1980, how many cars were made?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;
+  Chat2DB:  SELECT COUNT(*) FROM cars_data WHERE Year = 1980
+  Gold结果 (1行): [(29,)]
+  Chat2DB  (1行): [(29,)]
+
+#04 [easy  ] [concert_singer ] ✓
+  问题: What is the average, minimum, and maximum age for all French singers?
+  Gold SQL: SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'
+  Chat2DB:  SELECT AVG(Age), MIN(Age), MAX(Age) FROM singer WHERE Country = 'France'
+  Gold结果 (1行): [(34.5, 25, 43)]
+  Chat2DB  (1行): [(34.5, 25, 43)]
+
+#05 [easy  ] [pets_1         ] ✓
+  问题: How many different types of pet are there?
+  Gold SQL: SELECT count(DISTINCT pettype) FROM pets
+  Chat2DB:  SELECT COUNT(DISTINCT PetType) FROM Pets
+  Gold结果 (1行): [(2,)]
+  Chat2DB  (1行): [(2,)]
+
+#06 [easy  ] [car_1          ] ✓
+  问题: What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980 ?
+  Gold SQL: select max(mpg) from cars_data where cylinders  =  8 or year  <  1980
+  Chat2DB:  SELECT MAX(MPG) FROM cars_data WHERE Cylinders = 8 OR Year < 1980
+  Gold结果 (1行): [('null',)]
+  Chat2DB  (1行): [('null',)]
+
+#07 [easy  ] [pets_1         ] ✓
+  问题: How many pets have a greater weight than 10?
+  Gold SQL: SELECT count(*) FROM pets WHERE weight  >  10
+  Chat2DB:  SELECT COUNT(*) FROM Pets WHERE weight > 10
+  Gold结果 (1行): [(2,)]
+  Chat2DB  (1行): [(2,)]
+
+#08 [easy  ] [car_1          ] ✓
+  问题: What is the horsepower of the car with the greatest accelerate?
+  Gold SQL: SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;
+  Chat2DB:  SELECT Horsepower FROM cars_data ORDER BY Accelerate DESC LIMIT 1
+  Gold结果 (1行): [('71',)]
+  Chat2DB  (1行): [('71',)]
+
+#09 [easy  ] [concert_singer ] ✓
+  问题: What is the name and capacity for the stadium with the highest average attendance?
+  Gold SQL: SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1
+  Chat2DB:  SELECT Name, Capacity FROM stadium ORDER BY Average DESC LIMIT 1
+  Gold结果 (1行): [("Stark's Park", 10104)]
+  Chat2DB  (1行): [("Stark's Park", 10104)]
+
+#10 [easy  ] [concert_singer ] ✓
+  问题: What is the average, minimum, and maximum age for all French singers?
+  Gold SQL: SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'
+  Chat2DB:  SELECT AVG(Age), MIN(Age), MAX(Age) FROM singer WHERE Country = 'France'
+  Gold结果 (1行): [(34.5, 25, 43)]
+  Chat2DB  (1行): [(34.5, 25, 43)]
+
+#11 [easy  ] [pets_1         ] ✓
+  问题: How much does the youngest dog weigh?
+  Gold SQL: SELECT weight FROM pets ORDER BY pet_age LIMIT 1
+  Chat2DB:  SELECT weight FROM Pets WHERE PetType = 'dog' ORDER BY pet_age ASC LIMIT 1
+  Gold结果 (1行): [(9.3,)]
+  Chat2DB  (1行): [(9.3,)]
+
+#12 [easy  ] [car_1          ] ✓
+  问题: In 1980, how many cars were made?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;
+  Chat2DB:  SELECT COUNT(*) FROM cars_data WHERE Year = 1980
+  Gold结果 (1行): [(29,)]
+  Chat2DB  (1行): [(29,)]
+
+#13 [easy  ] [pets_1         ] ✓
+  问题: How many different types of pet are there?
+  Gold SQL: SELECT count(DISTINCT pettype) FROM pets
+  Chat2DB:  SELECT COUNT(DISTINCT PetType) FROM Pets
+  Gold结果 (1行): [(2,)]
+  Chat2DB  (1行): [(2,)]
+
+#14 [easy  ] [car_1          ] ✓
+  问题: What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?
+  Gold SQL: select distinct year from cars_data where weight between 3000 and 4000;
+  Chat2DB:  SELECT DISTINCT T1.Year FROM cars_data AS T1 WHERE T1.Weight < 4000 AND T1.Year IN (SELECT Year FROM cars_data WHERE Weight > 3000)
+  Gold结果 (13行): [(1970,), (1971,), (1972,)] ... 共13行
+  Chat2DB  (13行): [(1970,), (1971,), (1972,)] ... 共13行
+
+#15 [easy  ] [concert_singer ] ✓
+  问题: What are  the different countries with singers above age 20?
+  Gold SQL: SELECT DISTINCT country FROM singer WHERE age  >  20
+  Chat2DB:  SELECT DISTINCT Country FROM singer WHERE Age > 20
+  Gold结果 (3行): [('Netherlands',)
+          ('United States',)
+          ('France',)]
+  Chat2DB  (3行): [('Netherlands',)
+          ('United States',)
+          ('France',)]
+
+#16 [easy  ] [pets_1         ] ✓
+  问题: What is the id and weight of every pet who is older than 1?
+  Gold SQL: SELECT petid ,  weight FROM pets WHERE pet_age  >  1
+  Chat2DB:  SELECT PetID, weight FROM Pets WHERE pet_age > 1
+  Gold结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+  Chat2DB  (2行): [(2001, 12.0)
+          (2002, 13.4)]
+
+#17 [easy  ] [concert_singer ] ✓
+  问题: What is the average and maximum capacities for all stadiums ?
+  Gold SQL: select avg(capacity) ,  max(capacity) from stadium
+  Chat2DB:  SELECT AVG(Capacity), MAX(Capacity) FROM stadium
+  Gold结果 (1行): [(10621.666666666666, 52500)]
+  Chat2DB  (1行): [(10621.666666666666, 52500)]
+
+#18 [easy  ] [car_1          ] ✓
+  问题: What is the number of cars with a horsepower greater than 150?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE horsepower  >  150;
+  Chat2DB:  SELECT COUNT(*) FROM cars_data WHERE Horsepower > 150
+  Gold结果 (1行): [(281,)]
+  Chat2DB  (1行): [(281,)]
+
+#19 [easy  ] [pets_1         ] ✓
+  问题: How many pets have a greater weight than 10?
+  Gold SQL: SELECT count(*) FROM pets WHERE weight  >  10
+  Chat2DB:  SELECT COUNT(*) FROM Pets WHERE weight > 10
+  Gold结果 (1行): [(2,)]
+  Chat2DB  (1行): [(2,)]
+
+#20 [easy  ] [car_1          ] ✓
+  问题: What is the number of cars with more than 4 cylinders?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE Cylinders  >  4;
+  Chat2DB:  SELECT COUNT(*) FROM cars_data WHERE Cylinders > 4
+  Gold结果 (1行): [(195,)]
+  Chat2DB  (1行): [(195,)]
+
+#21 [easy  ] [concert_singer ] ✓
+  问题: What is the name and capacity for the stadium with the highest average attendance?
+  Gold SQL: SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1
+  Chat2DB:  SELECT Name, Capacity FROM stadium ORDER BY Average DESC LIMIT 1
+  Gold结果 (1行): [("Stark's Park", 10104)]
+  Chat2DB  (1行): [("Stark's Park", 10104)]
+
+#22 [easy  ] [concert_singer ] ✓
+  问题: What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?
+  Gold SQL: SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'
+  Chat2DB:  SELECT Name, Country FROM singer WHERE Song_Name LIKE '%Hey%'
+  Gold结果 (1行): [('Justin Brown', 'France')]
+  Chat2DB  (1行): [('Justin Brown', 'France')]
+
+#23 [easy  ] [car_1          ] ✓
+  问题: What is the number of continents?
+  Gold SQL: SELECT count(*) FROM CONTINENTS;
+  Chat2DB:  SELECT COUNT(*) FROM continents
+  Gold结果 (1行): [(5,)]
+  Chat2DB  (1行): [(5,)]
+
+#24 [easy  ] [pets_1         ] ✓
+  问题: What type of pet is the youngest animal, and how much does it weigh?
+  Gold SQL: SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1
+  Chat2DB:  SELECT PetType, weight FROM Pets ORDER BY pet_age ASC LIMIT 1
+  Gold结果 (1行): [('dog', 9.3)]
+  Chat2DB  (1行): [('dog', 9.3)]
+
+#25 [easy  ] [pets_1         ] ✓
+  问题: How much does the youngest dog weigh?
+  Gold SQL: SELECT weight FROM pets ORDER BY pet_age LIMIT 1
+  Chat2DB:  SELECT weight FROM Pets WHERE PetType = 'dog' ORDER BY pet_age ASC LIMIT 1
+  Gold结果 (1行): [(9.3,)]
+  Chat2DB  (1行): [(9.3,)]
+
+#26 [easy  ] [concert_singer ] ✗
+  问题: What are the names and release years for all the songs of the youngest singer?
+  Gold SQL: SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1
+  Chat2DB:  SELECT Name, Song_release_year FROM singer ORDER BY Age ASC LIMIT 1
+  Gold结果 (1行): [('Love', '2016')]
+  Chat2DB  (1行): [('Tribal King', '2016')]
+  ← 结果内容不同
+
+#27 [easy  ] [car_1          ] ✓
+  问题: What is the minimum weight of the car with 8 cylinders produced in 1974 ?
+  Gold SQL: select min(weight) from cars_data where cylinders  =  8 and year  =  1974
+  Chat2DB:  SELECT MIN(Weight) FROM cars_data WHERE Cylinders = 8 AND Year = 1974
+  Gold结果 (1行): [(4141,)]
+  Chat2DB  (1行): [(4141,)]
+
+#28 [easy  ] [pets_1         ] ✓
+  问题: What is the id and weight of every pet who is older than 1?
+  Gold SQL: SELECT petid ,  weight FROM pets WHERE pet_age  >  1
+  Chat2DB:  SELECT PetID, weight FROM Pets WHERE pet_age > 1
+  Gold结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+  Chat2DB  (2行): [(2001, 12.0)
+          (2002, 13.4)]
+
+#29 [easy  ] [concert_singer ] ✗
+  问题: What is the maximum capacity and the average of all stadiums ?
+  Gold SQL: select max(capacity), average from stadium
+  Chat2DB:  SELECT MAX(Capacity), AVG(Capacity) FROM stadium
+  Gold结果 (1行): [(52500, 730)]
+  Chat2DB  (1行): [(52500, 10621.666666666666)]
+  ← 结果内容不同
+
+#30 [easy  ] [car_1          ] ✓
+  问题: What is the number of continents?
+  Gold SQL: SELECT count(*) FROM CONTINENTS;
+  Chat2DB:  SELECT COUNT(*) FROM continents
+  Gold结果 (1行): [(5,)]
+  Chat2DB  (1行): [(5,)]
+
+#31 [medium] [pets_1         ] ✓
+  问题: What is the id of the pet owned by the student whose last name is 'Smith'?
+  Gold SQL: SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'
+  Chat2DB:  SELECT T2.PetID FROM Student AS T1 JOIN Has_Pet AS T3 ON T1.StuID = T3.StuID JOIN Pets AS T2 ON T3.PetID = T2.PetID WHERE T1.LName = 'Smith'
+  Gold结果 (1行): [(2001,)]
+  Chat2DB  (1行): [(2001,)]
+
+#32 [medium] [car_1          ] ✓
+  问题: What is the number of makers of care in France?
+  Gold SQL: SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france';
+  Chat2DB:  SELECT COUNT(*) FROM car_makers AS T1 JOIN countries AS T2 ON T1.Country = T2.CountryId WHERE T2.CountryName = 'france'
+  Gold结果 (1行): [(3,)]
+  Chat2DB  (1行): [(3,)]
+
+#33 [medium] [concert_singer ] ✓
+  问题: What is the year that had the most concerts?
+  Gold SQL: SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1
+  Chat2DB:  SELECT Year FROM concert GROUP BY Year ORDER BY COUNT(*) DESC LIMIT 1
+  Gold结果 (1行): [('2015',)]
+  Chat2DB  (1行): [('2015',)]
+
+#34 [medium] [pets_1         ] ✓
+  问题: What is the average and maximum age for each pet type?
+  Gold SQL: SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype
+  Chat2DB:  SELECT AVG(pet_age), MAX(pet_age), PetType FROM Pets GROUP BY PetType
+  Gold结果 (2行): [(3.0, 3, 'cat')
+          (1.5, 2, 'dog')]
+  Chat2DB  (2行): [(3.0, 3, 'cat')
+          (1.5, 2, 'dog')]
+
+#35 [medium] [car_1          ] ✓
+  问题: What is the count of the car models produced in the United States?
+  Gold SQL: SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';
+  Chat2DB:  SELECT COUNT(*) FROM model_list AS T1 JOIN car_makers AS T2 ON T1.Maker = T2.Id JOIN countries AS T3 ON T2.Country = T3.CountryId WHERE T3.CountryName = 'usa'
+  Gold结果 (1行): [(13,)]
+  Chat2DB  (1行): [(13,)]
+
+#36 [medium] [concert_singer ] ✓
+  问题: How many singers are from each country?
+  Gold SQL: SELECT country ,  count(*) FROM singer GROUP BY country
+  Chat2DB:  SELECT Country, COUNT(*) FROM singer GROUP BY Country
+  Gold结果 (3行): [('France', 4)
+          ('Netherlands', 1)
+          ('United States', 1)]
+  Chat2DB  (3行): [('France', 4)
+          ('Netherlands', 1)
+          ('United States', 1)]
+
+#37 [medium] [concert_singer ] ✓
+  问题: Show the stadium name and capacity with most number of concerts in year 2014 or after.
+  Gold SQL: SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1
+  Chat2DB:  SELECT T1.Name, T1.Capacity FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year >= 2014 GROUP BY T1.Stadium_ID ORDER BY COUNT(*) DESC LIMIT 1
+  Gold结果 (1行): [('Somerset Park', 11998)]
+  Chat2DB  (1行): [('Somerset Park', 11998)]
+
+#38 [medium] [pets_1         ] ✓
+  问题: List the maximum weight and type for each type of pet.
+  Gold SQL: SELECT max(weight) ,  petType FROM pets GROUP BY petType
+  Chat2DB:  SELECT MAX(weight), PetType FROM Pets GROUP BY PetType
+  Gold结果 (2行): [(12.0, 'cat')
+          (13.4, 'dog')]
+  Chat2DB  (2行): [(12.0, 'cat')
+          (13.4, 'dog')]
+
+#39 [medium] [car_1          ] ✓
+  问题: What is the largest amount of horsepower for the models with 3 cylinders and what make is it?
+  Gold SQL: SELECT T2.horsepower ,  T1.Make FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.cylinders  =  3 ORDER BY T2.horsepower DESC LIMIT 1;
+  Chat2DB:  SELECT T1.Horsepower, T2.Make FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Id = T2.MakeId WHERE T1.Cylinders = 3 ORDER BY T1.Horsepower DESC LIMIT 1
+  Gold结果 (1行): [('97', 'mazda rx2 coupe')]
+  Chat2DB  (1行): [('97', 'mazda rx2 coupe')]
+
+#40 [medium] [car_1          ] ✓
+  问题: What is the number of car models that are produced by each maker and what is the id and full name of each maker?
+  Gold SQL: SELECT Count(*) ,  T2.FullName ,  T2.id FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id GROUP BY T2.id;
+  Chat2DB:  SELECT COUNT(T1.ModelId), T2.Id, T2.FullName FROM model_list AS T1 JOIN car_makers AS T2 ON T1.Maker = T2.Id GROUP BY T2.Id, T2.FullName
+  Gold结果 (22行): [(1, 'American Motor Company', 1), (2, 'Volkswagen', 2), (1, 'BMW', 3)] ... 共22行
+  Chat2DB  (22行): [(1, 1, 'American Motor Company'), (2, 2, 'Volkswagen'), (1, 3, 'BMW')] ... 共22行
+
+#41 [medium] [pets_1         ] ✓
+  问题: How many pets are owned by students that have an age greater than 20?
+  Gold SQL: SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20
+  Chat2DB:  SELECT COUNT(*) FROM Pets AS T1 JOIN Has_Pet AS T2 ON T1.PetID = T2.PetID JOIN Student AS T3 ON T2.StuID = T3.StuID WHERE T3.Age > 20
+  Gold结果 (1行): [(0,)]
+  Chat2DB  (1行): [(0,)]
+
+#42 [medium] [concert_singer ] ✓
+  问题: What are the names , themes , and number of singers for every concert ?
+  Gold SQL: SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id
+  Chat2DB:  SELECT T1.concert_Name, T1.Theme, COUNT(T2.Singer_ID) FROM concert AS T1 JOIN singer_in_concert AS T2 ON T1.concert_ID = T2.concert_ID GROUP BY T1.concert_ID
+  Gold结果 (6行): [('Auditions', 'Free choice', 3), ('Super bootcamp', 'Free choice 2', 2), ('Home Visits', 'Bleeding Love', 1)] ... 共6行
+  Chat2DB  (6行): [('Auditions', 'Free choice', 3), ('Super bootcamp', 'Free choice 2', 2), ('Home Visits', 'Bleeding Love', 1)] ... 共6行
+
+#43 [medium] [concert_singer ] ✓
+  问题: What is the name and capacity of the stadium with the most concerts after 2013 ?
+  Gold SQL: select t2.name ,  t2.capacity from concert as t1 join stadium as t2 on t1.stadium_id  =  t2.stadium_id where t1.year  >  2013 group by t2.stadium_id order by count(*) desc limit 1
+  Chat2DB:  SELECT T1.Name, T1.Capacity FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year > 2013 GROUP BY T1.Stadium_ID ORDER BY COUNT(*) DESC LIMIT 1
+  Gold结果 (1行): [('Somerset Park', 11998)]
+  Chat2DB  (1行): [('Somerset Park', 11998)]
+
+#44 [medium] [car_1          ] ✗
+  问题: What are the names of all European countries with at least 3 manufacturers?
+  Gold SQL: SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;
+  Chat2DB:  SELECT T2.CountryName, COUNT(*) FROM car_makers AS T1 JOIN countries AS T2 ON T1.Country = T2.CountryId JOIN continents AS T3 ON T2.Continent = T3.ContId WHERE T3.Continent = 'europe' GROUP BY T2.CountryName HAVING COUNT(*) >= 3
+  Gold结果 (2行): [('france',)
+          ('germany',)]
+  Chat2DB  (2行): [('france', 3)
+          ('germany', 4)]
+  ← 结果内容不同
+
+#45 [medium] [pets_1         ] ✓
+  问题: What are the different first names and ages of the students who do have pets?
+  Gold SQL: SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid
+  Chat2DB:  SELECT DISTINCT T1.Fname, T1.Age FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID
+  Gold结果 (2行): [('Linda', 18)
+          ('Tracy', 19)]
+  Chat2DB  (2行): [('Linda', 18)
+          ('Tracy', 19)]
+
+#46 [hard  ] [pets_1         ] ✓
+  问题: What are the ids of the students who do not own cats as pets?
+  Gold SQL: SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'
+  Chat2DB:  SELECT StuID FROM Student WHERE StuID NOT IN (SELECT T1.StuID FROM Has_Pet AS T1 JOIN Pets AS T2 ON T1.PetID = T2.PetID WHERE T2.PetType = 'cat')
+  Gold结果 (33行): [(1002,), (1003,), (1004,)] ... 共33行
+  Chat2DB  (33行): [(1002,), (1003,), (1004,)] ... 共33行
+
+#47 [hard  ] [concert_singer ] ✓
+  问题: What are the names of the stadiums without any concerts?
+  Gold SQL: SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)
+  Chat2DB:  SELECT Name FROM stadium WHERE Stadium_ID NOT IN (SELECT Stadium_ID FROM concert)
+  Gold结果 (4行): [('Bayview Stadium',)
+          ('Hampden Park',)
+          ('Forthbank Stadium',)
+          ('Gayfield Park',)]
+  Chat2DB  (4行): [('Bayview Stadium',)
+          ('Hampden Park',)
+          ('Forthbank Stadium',)
+          ('Gayfield Park',)]
+
+#48 [hard  ] [car_1          ] ✓
+  问题: What is the maker of the carr produced in the earliest year and what year was it?
+  Gold SQL: SELECT T2.Make ,  T1.Year FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Year  =  (SELECT min(YEAR) FROM CARS_DATA);
+  Chat2DB:  SELECT T2.Make, T1.Year FROM cars_data AS T1 JOIN car_names AS T2 ON T1.Id = T2.MakeId WHERE T1.Year = (SELECT MIN(Year) FROM cars_data)
+  Gold结果 (35行): [('chevrolet chevelle malibu', 1970), ('buick skylark 320', 1970), ('plymouth satellite', 1970)] ... 共35行
+  Chat2DB  (35行): [('chevrolet chevelle malibu', 1970), ('buick skylark 320', 1970), ('plymouth satellite', 1970)] ... 共35行
+
+#49 [hard  ] [concert_singer ] ✓
+  问题: What are the names of all stadiums that did not have a concert in 2014?
+  Gold SQL: SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014
+  Chat2DB:  SELECT Name FROM stadium WHERE Stadium_ID NOT IN (SELECT T1.Stadium_ID FROM stadium AS T1 JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.Year = 2014)
+  Gold结果 (6行): [('Balmoor',), ('Bayview Stadium',), ('Forthbank Stadium',)] ... 共6行
+  Chat2DB  (6行): [('Bayview Stadium',), ('Hampden Park',), ('Forthbank Stadium',)] ... 共6行
+
+#50 [hard  ] [pets_1         ] ✓
+  问题: What are the students' first names who have both cats and dogs as pets?
+  Gold SQL: select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'cat' intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'dog'
+  Chat2DB:  SELECT T1.Fname FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID JOIN Pets AS T3 ON T2.PetID = T3.PetID WHERE T3.PetType = 'cat' AND T1.StuID IN (SELECT T1.StuID FROM Student AS T1 JOIN Has_Pet AS T2 ON T1.StuID = T2.StuID JOIN Pets AS T3 ON T2.PetID = T3.PetID WHERE T3.PetType = 'dog')
+  Gold结果 (0行): []
+  Chat2DB  (0行): []
+
+==========================================================================================
+  总计: 47通过 / 3失败 = 94.0%
+==========================================================================================

@@ -1,0 +1,400 @@
+==========================================================================================
+  MOI Spider mix50 — Gold SQL vs MOI SQL 查询结果逐题对比
+==========================================================================================
+
+#01 [easy  ] [pets_1         ] ✗
+  问题: What type of pet is the youngest animal, and how much does it weigh?
+  Gold SQL: SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1
+  MOI  SQL: SELECT `PetType` AS `宠物类型`,`pet_age` AS `年龄`,`weight` AS `体重` FROM `pets` ORDER BY `pet_age` LIMIT 1
+  Gold结果 (1行): [('dog', 9.3)]
+  MOI 结果 (1行): [('dog', 1, 9.3)]
+  ← 结果内容不同
+
+#02 [easy  ] [concert_singer ] ✓
+  问题: What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?
+  Gold SQL: SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'
+  MOI  SQL: SELECT `Name` AS `歌手姓名`,`Country` AS `国籍` FROM `singer` WHERE `Song_Name` LIKE '%Hey%'
+  Gold结果 (1行): [('Justin Brown', 'France')]
+  MOI 结果 (1行): [('Justin Brown', 'France')]
+
+#03 [easy  ] [car_1          ] ✓
+  问题: In 1980, how many cars were made?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;
+  MOI  SQL: SELECT COUNT(1) AS `1980年汽车数量` FROM `cars_data` WHERE `Year`=1980
+  Gold结果 (1行): [(29,)]
+  MOI 结果 (1行): [(29,)]
+
+#04 [easy  ] [concert_singer ] ✓
+  问题: What is the average, minimum, and maximum age for all French singers?
+  Gold SQL: SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'
+  MOI  SQL: SELECT AVG(`Age`) AS `平均年龄`,MIN(`Age`) AS `最小年龄`,MAX(`Age`) AS `最大年龄` FROM `singer` WHERE `Country`='France'
+  Gold结果 (1行): [(34.5, 25, 43)]
+  MOI 结果 (1行): [(34.5, 25, 43)]
+
+#05 [easy  ] [pets_1         ] ✓
+  问题: How many different types of pet are there?
+  Gold SQL: SELECT count(DISTINCT pettype) FROM pets
+  MOI  SQL: SELECT COUNT(DISTINCT `PetType`) AS `宠物类型数量` FROM `pets`
+  Gold结果 (1行): [(2,)]
+  MOI 结果 (1行): [(2,)]
+
+#06 [easy  ] [car_1          ] ✗
+  问题: What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980 ?
+  Gold SQL: select max(mpg) from cars_data where cylinders  =  8 or year  <  1980
+  MOI  SQL: SELECT MAX(CAST(`MPG` AS DOUBLE)) AS `最大MPG` FROM `cars_data` WHERE (`Cylinders`=8 OR `Year`<1980) AND `MPG` IS NOT NULL AND `MPG`!=''
+  Gold结果 (1行): [('null',)]
+  MOI 结果 (1行): [(43.1,)]
+  ← 结果内容不同
+
+#07 [easy  ] [pets_1         ] ✓
+  问题: How many pets have a greater weight than 10?
+  Gold SQL: SELECT count(*) FROM pets WHERE weight  >  10
+  MOI  SQL: SELECT COUNT(1) AS `体重超过10的宠物数量` FROM `pets` WHERE `weight`>10
+  Gold结果 (1行): [(2,)]
+  MOI 结果 (1行): [(2,)]
+
+#08 [easy  ] [car_1          ] ✗
+  问题: What is the horsepower of the car with the greatest accelerate?
+  Gold SQL: SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;
+  MOI  SQL: SELECT `Horsepower`, `Accelerate` FROM `cars_data` ORDER BY `Accelerate` DESC LIMIT 1
+  Gold结果 (1行): [('71',)]
+  MOI 结果 (1行): [('71', 24.8)]
+  ← 结果内容不同
+
+#09 [easy  ] [concert_singer ] ✗
+  问题: What is the name and capacity for the stadium with the highest average attendance?
+  Gold SQL: SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1
+  MOI  SQL: SELECT `Name` AS `体育场名称`,`Capacity` AS `容量`,`Average` AS `平均上座率` FROM `stadium` ORDER BY `Average` DESC LIMIT 1
+  Gold结果 (1行): [("Stark's Park", 10104)]
+  MOI 结果 (1行): [("Stark's Park", 10104, 2106)]
+  ← 结果内容不同
+
+#10 [easy  ] [concert_singer ] ✓
+  问题: What is the average, minimum, and maximum age for all French singers?
+  Gold SQL: SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'
+  MOI  SQL: SELECT AVG(`Age`) AS `平均年龄`,MIN(`Age`) AS `最小年龄`,MAX(`Age`) AS `最大年龄` FROM `singer` WHERE `Country`='France'
+  Gold结果 (1行): [(34.5, 25, 43)]
+  MOI 结果 (1行): [(34.5, 25, 43)]
+
+#11 [easy  ] [pets_1         ] ✓
+  问题: How much does the youngest dog weigh?
+  Gold SQL: SELECT weight FROM pets ORDER BY pet_age LIMIT 1
+  MOI  SQL: SELECT `weight` AS `体重` FROM `pets` WHERE `PetType`='dog' ORDER BY `pet_age` LIMIT 1
+  Gold结果 (1行): [(9.3,)]
+  MOI 结果 (1行): [(9.3,)]
+
+#12 [easy  ] [car_1          ] ✓
+  问题: In 1980, how many cars were made?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;
+  MOI  SQL: SELECT COUNT(1) AS `1980年汽车数量` FROM `cars_data` WHERE `Year`=1980
+  Gold结果 (1行): [(29,)]
+  MOI 结果 (1行): [(29,)]
+
+#13 [easy  ] [pets_1         ] ✓
+  问题: How many different types of pet are there?
+  Gold SQL: SELECT count(DISTINCT pettype) FROM pets
+  MOI  SQL: SELECT COUNT(DISTINCT `PetType`) AS `宠物类型数量` FROM `pets`
+  Gold结果 (1行): [(2,)]
+  MOI 结果 (1行): [(2,)]
+
+#14 [easy  ] [car_1          ] ✓
+  问题: What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?
+  Gold SQL: select distinct year from cars_data where weight between 3000 and 4000;
+  MOI  SQL: SELECT `Year` AS `年份` FROM `cars_data` WHERE `Weight`<4000 GROUP BY `Year` INTERSECT SELECT `Year` AS `年份` FROM `cars_data` WHERE `Weight`>3000 GROUP BY `Year` ORDER BY `年份`
+  Gold结果 (13行): [(1970,), (1971,), (1972,)] ... 共13行
+  MOI 结果 (13行): [(1970,), (1971,), (1972,)] ... 共13行
+
+#15 [easy  ] [concert_singer ] ✓
+  问题: What are  the different countries with singers above age 20?
+  Gold SQL: SELECT DISTINCT country FROM singer WHERE age  >  20
+  MOI  SQL: SELECT DISTINCT `Country` AS `国家` FROM `singer` WHERE `Age`>20 ORDER BY `Country`
+  Gold结果 (3行): [('Netherlands',)
+          ('United States',)
+          ('France',)]
+  MOI 结果 (3行): [('France',)
+          ('Netherlands',)
+          ('United States',)]
+
+#16 [easy  ] [pets_1         ] ✓
+  问题: What is the id and weight of every pet who is older than 1?
+  Gold SQL: SELECT petid ,  weight FROM pets WHERE pet_age  >  1
+  MOI  SQL: SELECT `PetID` AS `宠物ID`,`weight` AS `体重` FROM `pets` WHERE `pet_age`>1
+  Gold结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+  MOI 结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+
+#17 [easy  ] [concert_singer ] ✓
+  问题: What is the average and maximum capacities for all stadiums ?
+  Gold SQL: select avg(capacity) ,  max(capacity) from stadium
+  MOI  SQL: SELECT AVG(`Capacity`) AS `平均容量`,MAX(`Capacity`) AS `最大容量` FROM `stadium`
+  Gold结果 (1行): [(10621.666666666666, 52500)]
+  MOI 结果 (1行): [(10621.666666666666, 52500)]
+
+#18 [easy  ] [car_1          ] ✗
+  问题: What is the number of cars with a horsepower greater than 150?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE horsepower  >  150;
+  MOI  SQL: SELECT COUNT(1) AS `马力大于150的车辆数` FROM `cars_data` WHERE CAST(`Horsepower` AS DOUBLE)>150
+  Gold结果 (1行): [(281,)]
+  MOI 结果 (1行): [(49,)]
+  ← 结果内容不同
+
+#19 [easy  ] [pets_1         ] ✓
+  问题: How many pets have a greater weight than 10?
+  Gold SQL: SELECT count(*) FROM pets WHERE weight  >  10
+  MOI  SQL: SELECT COUNT(1) AS `体重超过10的宠物数量` FROM `pets` WHERE `weight`>10
+  Gold结果 (1行): [(2,)]
+  MOI 结果 (1行): [(2,)]
+
+#20 [easy  ] [car_1          ] ✓
+  问题: What is the number of cars with more than 4 cylinders?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE Cylinders  >  4;
+  MOI  SQL: SELECT COUNT(1) AS `超过4缸的汽车数量` FROM `cars_data` WHERE `Cylinders`>4
+  Gold结果 (1行): [(195,)]
+  MOI 结果 (1行): [(195,)]
+
+#21 [easy  ] [concert_singer ] ✗
+  问题: What is the name and capacity for the stadium with the highest average attendance?
+  Gold SQL: SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1
+  MOI  SQL: SELECT `Name` AS `体育场名称`,`Capacity` AS `容量`,`Average` AS `平均上座率` FROM `stadium` ORDER BY `Average` DESC LIMIT 1
+  Gold结果 (1行): [("Stark's Park", 10104)]
+  MOI 结果 (1行): [("Stark's Park", 10104, 2106)]
+  ← 结果内容不同
+
+#22 [easy  ] [concert_singer ] ✓
+  问题: What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?
+  Gold SQL: SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'
+  MOI  SQL: SELECT `Name` AS `姓名`,`Country` AS `国家` FROM `singer` WHERE `Song_Name` LIKE '%Hey%'
+  Gold结果 (1行): [('Justin Brown', 'France')]
+  MOI 结果 (1行): [('Justin Brown', 'France')]
+
+#23 [easy  ] [car_1          ] ✓
+  问题: What is the number of continents?
+  Gold SQL: SELECT count(*) FROM CONTINENTS;
+  MOI  SQL: SELECT COUNT(1) AS `大洲数量` FROM `continents`
+  Gold结果 (1行): [(5,)]
+  MOI 结果 (1行): [(5,)]
+
+#24 [easy  ] [pets_1         ] ✗
+  问题: What type of pet is the youngest animal, and how much does it weigh?
+  Gold SQL: SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1
+  MOI  SQL: SELECT `PetType` AS `宠物类型`,`pet_age` AS `年龄`,`weight` AS `体重` FROM `pets` ORDER BY `pet_age` LIMIT 1
+  Gold结果 (1行): [('dog', 9.3)]
+  MOI 结果 (1行): [('dog', 1, 9.3)]
+  ← 结果内容不同
+
+#25 [easy  ] [pets_1         ] ✓
+  问题: How much does the youngest dog weigh?
+  Gold SQL: SELECT weight FROM pets ORDER BY pet_age LIMIT 1
+  MOI  SQL: SELECT `weight` AS `体重` FROM `pets` WHERE `PetType`='dog' ORDER BY `pet_age` LIMIT 1
+  Gold结果 (1行): [(9.3,)]
+  MOI 结果 (1行): [(9.3,)]
+
+#26 [easy  ] [concert_singer ] ✓
+  问题: What are the names and release years for all the songs of the youngest singer?
+  Gold SQL: SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1
+  MOI  SQL: SELECT `Song_Name` AS `歌曲名称`,`Song_release_year` AS `发行年份` FROM `singer` WHERE `Age`=(SELECT MIN(`Age`) FROM `singer`)
+  Gold结果 (1行): [('Love', '2016')]
+  MOI 结果 (1行): [('Love', '2016')]
+
+#27 [easy  ] [car_1          ] ✓
+  问题: What is the minimum weight of the car with 8 cylinders produced in 1974 ?
+  Gold SQL: select min(weight) from cars_data where cylinders  =  8 and year  =  1974
+  MOI  SQL: SELECT MIN(`Weight`) AS `最小重量` FROM `cars_data` WHERE `Cylinders`=8 AND `Year`=1974
+  Gold结果 (1行): [(4141,)]
+  MOI 结果 (1行): [(4141,)]
+
+#28 [easy  ] [pets_1         ] ✓
+  问题: What is the id and weight of every pet who is older than 1?
+  Gold SQL: SELECT petid ,  weight FROM pets WHERE pet_age  >  1
+  MOI  SQL: SELECT `PetID` AS `宠物ID`,`weight` AS `体重` FROM `pets` WHERE `pet_age`>1
+  Gold结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+  MOI 结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+
+#29 [easy  ] [concert_singer ] ✗
+  问题: What is the maximum capacity and the average of all stadiums ?
+  Gold SQL: select max(capacity), average from stadium
+  MOI  SQL: SELECT MAX(`Capacity`) AS `最大容量`,AVG(`Capacity`) AS `平均容量` FROM `stadium`
+  Gold结果 (1行): [(52500, 730)]
+  MOI 结果 (1行): [(52500, 10621.666666666666)]
+  ← 结果内容不同
+
+#30 [easy  ] [car_1          ] ✓
+  问题: What is the number of continents?
+  Gold SQL: SELECT count(*) FROM CONTINENTS;
+  MOI  SQL: SELECT COUNT(1) AS `大洲数量` FROM `continents`
+  Gold结果 (1行): [(5,)]
+  MOI 结果 (1行): [(5,)]
+
+#31 [medium] [pets_1         ] ✓
+  问题: What is the id of the pet owned by the student whose last name is 'Smith'?
+  Gold SQL: SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'
+  MOI  SQL: SELECT `h`.`PetID` AS `宠物ID` FROM `has_pet` AS `h` JOIN `student` AS `s` ON `h`.`StuID`=`s`.`StuID` WHERE `s`.`LName`='Smith'
+  Gold结果 (1行): [(2001,)]
+  MOI 结果 (1行): [(2001,)]
+
+#32 [medium] [car_1          ] ✗
+  问题: What is the number of makers of care in France?
+  Gold SQL: SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france';
+  MOI  SQL: SELECT `c`.`CountryName` AS `国家`,COUNT(1) AS `制造商数量` FROM `car_makers` AS `cm` JOIN `countries` AS `c` ON `cm`.`Country`=`c`.`CountryId` GROUP BY `c`.`CountryName` ORDER BY `制造商数量` DESC
+  Gold结果 (1行): [(3,)]
+  MOI 结果 (8行): [('japan', 5), ('usa', 4), ('germany', 4)] ... 共8行
+  ← 行数不同(gold=1≠pred=8)
+
+#33 [medium] [concert_singer ] ✗
+  问题: What is the year that had the most concerts?
+  Gold SQL: SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1
+  MOI  SQL: SELECT `Year`,COUNT(1) AS `音乐会数量` FROM `concert` GROUP BY `Year` ORDER BY `音乐会数量` DESC LIMIT 1
+  Gold结果 (1行): [('2015',)]
+  MOI 结果 (1行): [('2015', 3)]
+  ← 结果内容不同
+
+#34 [medium] [pets_1         ] ✓
+  问题: What is the average and maximum age for each pet type?
+  Gold SQL: SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype
+  MOI  SQL: SELECT `PetType` AS `宠物类型`,AVG(`pet_age`) AS `平均年龄`,MAX(`pet_age`) AS `最大年龄` FROM `pets` GROUP BY `PetType`
+  Gold结果 (2行): [(3.0, 3, 'cat')
+          (1.5, 2, 'dog')]
+  MOI 结果 (2行): [('cat', 3.0, 3)
+          ('dog', 1.5, 2)]
+
+#35 [medium] [car_1          ] ✓
+  问题: What is the count of the car models produced in the United States?
+  Gold SQL: SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';
+  MOI  SQL: SELECT COUNT(1) AS `美国生产车型数量` FROM (`model_list` AS `ml` JOIN `car_makers` AS `cm` ON `ml`.`Maker`=`cm`.`Id`) JOIN `countries` AS `c` ON `cm`.`Country`=`c`.`CountryId` WHERE `c`.`CountryName`='usa'
+  Gold结果 (1行): [(13,)]
+  MOI 结果 (1行): [(13,)]
+
+#36 [medium] [concert_singer ] ✓
+  问题: How many singers are from each country?
+  Gold SQL: SELECT country ,  count(*) FROM singer GROUP BY country
+  MOI  SQL: SELECT `Country` AS `国家`,COUNT(1) AS `歌手数量` FROM `singer` GROUP BY `Country` ORDER BY `歌手数量` DESC
+  Gold结果 (3行): [('France', 4)
+          ('Netherlands', 1)
+          ('United States', 1)]
+  MOI 结果 (3行): [('France', 4)
+          ('United States', 1)
+          ('Netherlands', 1)]
+
+#37 [medium] [concert_singer ] ✗
+  问题: Show the stadium name and capacity with most number of concerts in year 2014 or after.
+  Gold SQL: SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1
+  MOI  SQL: SELECT `s`.`Name` AS `体育场名称`,`s`.`Capacity` AS `容量`,COUNT(`c`.`concert_ID`) AS `演唱会数量` FROM `concert` AS `c` JOIN `stadium` AS `s` ON `c`.`Stadium_ID`=`s`.`Stadium_ID` WHERE CAST(`c`.`Year` AS SIGNED)>=2014 GROUP BY `c`.`Stadium_ID`,`s`.`Name`,`s`.`Capacity` ORDER BY `演唱会数量` DESC LIMIT 1
+  Gold结果 (1行): [('Somerset Park', 11998)]
+  MOI 结果 (1行): [('Somerset Park', 11998, 2)]
+  ← 结果内容不同
+
+#38 [medium] [pets_1         ] ✓
+  问题: List the maximum weight and type for each type of pet.
+  Gold SQL: SELECT max(weight) ,  petType FROM pets GROUP BY petType
+  MOI  SQL: SELECT `PetType` AS `宠物类型`,MAX(`weight`) AS `最大体重` FROM `pets` GROUP BY `PetType`
+  Gold结果 (2行): [(12.0, 'cat')
+          (13.4, 'dog')]
+  MOI 结果 (2行): [('cat', 12.0)
+          ('dog', 13.4)]
+
+#39 [medium] [car_1          ] ✗
+  问题: What is the largest amount of horsepower for the models with 3 cylinders and what make is it?
+  Gold SQL: SELECT T2.horsepower ,  T1.Make FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.cylinders  =  3 ORDER BY T2.horsepower DESC LIMIT 1;
+  MOI  SQL: SELECT `cn`.`Make` AS `品牌`,`cd`.`Horsepower` AS `马力` FROM `cars_data` AS `cd` JOIN `car_names` AS `cn` ON `cd`.`Id`=`cn`.`MakeId` WHERE `cd`.`Cylinders`=3 ORDER BY CAST(`cd`.`Horsepower` AS SIGNED) DESC LIMIT 1
+  Gold结果 (1行): [('97', 'mazda rx2 coupe')]
+  MOI 结果 (1行): [('mazda rx-4', '110')]
+  ← 结果内容不同
+
+#40 [medium] [car_1          ] ✗
+  问题: What is the number of car models that are produced by each maker and what is the id and full name of each maker?
+  Gold SQL: SELECT Count(*) ,  T2.FullName ,  T2.id FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id GROUP BY T2.id;
+  MOI  SQL: -- ERROR ConnectionError
+  Gold结果 (22行): [(1, 'American Motor Company', 1), (2, 'Volkswagen', 2), (1, 'BMW', 3)] ... 共22行
+  MOI 结果 (0行): []
+  ← MOI未生成有效SQL
+
+#41 [medium] [pets_1         ] ✓
+  问题: How many pets are owned by students that have an age greater than 20?
+  Gold SQL: SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20
+  MOI  SQL: SELECT COUNT(`hp`.`PetID`) AS `宠物数量` FROM `has_pet` AS `hp` JOIN `student` AS `s` ON `hp`.`StuID`=`s`.`StuID` WHERE `s`.`Age`>20
+  Gold结果 (1行): [(0,)]
+  MOI 结果 (1行): [(0,)]
+
+#42 [medium] [concert_singer ] ✓
+  问题: What are the names , themes , and number of singers for every concert ?
+  Gold SQL: SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id
+  MOI  SQL: SELECT `c`.`concert_Name` AS `演唱会名称`,`c`.`Theme` AS `主题`,COUNT(`s`.`Singer_ID`) AS `歌手数量` FROM `concert` AS `c` LEFT JOIN `singer_in_concert` AS `s` ON `c`.`concert_ID`=`s`.`concert_ID` GROUP BY `c`.`concert_ID`,`c`.`concert_Name`,`c`.`Theme`
+  Gold结果 (6行): [('Auditions', 'Free choice', 3), ('Super bootcamp', 'Free choice 2', 2), ('Home Visits', 'Bleeding Love', 1)] ... 共6行
+  MOI 结果 (6行): [('Auditions', 'Free choice', 3), ('Super bootcamp', 'Free choice 2', 2), ('Home Visits', 'Bleeding Love', 1)] ... 共6行
+
+#43 [medium] [concert_singer ] ✗
+  问题: What is the name and capacity of the stadium with the most concerts after 2013 ?
+  Gold SQL: select t2.name ,  t2.capacity from concert as t1 join stadium as t2 on t1.stadium_id  =  t2.stadium_id where t1.year  >  2013 group by t2.stadium_id order by count(*) desc limit 1
+  MOI  SQL: SELECT `s`.`Name` AS `体育场名称`,`s`.`Capacity` AS `容量`,COUNT(`c`.`concert_ID`) AS `演唱会数量` FROM `concert` AS `c` JOIN `stadium` AS `s` ON `c`.`Stadium_ID`=`s`.`Stadium_ID` WHERE CAST(`c`.`Year` AS SIGNED)>2013 GROUP BY `c`.`Stadium_ID`,`s`.`Name`,`s`.`Capacity` ORDER BY `演唱会数量` DESC LIMIT 1
+  Gold结果 (1行): [('Somerset Park', 11998)]
+  MOI 结果 (1行): [('Somerset Park', 11998, 2)]
+  ← 结果内容不同
+
+#44 [medium] [car_1          ] ✗
+  问题: What are the names of all European countries with at least 3 manufacturers?
+  Gold SQL: SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;
+  MOI  SQL: SELECT `c`.`CountryName` AS `国家名称`,COUNT(`cm`.`Id`) AS `制造商数量` FROM (`car_makers` AS `cm` JOIN `countries` AS `c` ON `cm`.`Country`=`c`.`CountryId`) JOIN `continents` AS `ct` ON `c`.`Continent`=`ct`.`ContId` WHERE `ct`.`Continent`='europe' GROUP BY `c`.`CountryName` HAVING COUNT(`cm`.`Id`)>=3 ORDER BY `制造商数量` DESC
+  Gold结果 (2行): [('france',)
+          ('germany',)]
+  MOI 结果 (2行): [('germany', 4)
+          ('france', 3)]
+  ← 结果内容不同
+
+#45 [medium] [pets_1         ] ✓
+  问题: What are the different first names and ages of the students who do have pets?
+  Gold SQL: SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid
+  MOI  SQL: SELECT DISTINCT `s`.`Fname` AS `名字`,`s`.`Age` AS `年龄` FROM `student` AS `s` JOIN `has_pet` AS `hp` ON `s`.`StuID`=`hp`.`StuID` ORDER BY `s`.`Fname`,`s`.`Age`
+  Gold结果 (2行): [('Linda', 18)
+          ('Tracy', 19)]
+  MOI 结果 (2行): [('Linda', 18)
+          ('Tracy', 19)]
+
+#46 [hard  ] [pets_1         ] ✓
+  问题: What are the ids of the students who do not own cats as pets?
+  Gold SQL: SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'
+  MOI  SQL: SELECT `StuID` AS `学生ID` FROM `student` WHERE `StuID` NOT IN (SELECT `h`.`StuID` FROM `has_pet` AS `h` JOIN `pets` AS `p` ON `h`.`PetID`=`p`.`PetID` WHERE `p`.`PetType`='cat')
+  Gold结果 (33行): [(1002,), (1003,), (1004,)] ... 共33行
+  MOI 结果 (33行): [(1002,), (1003,), (1004,)] ... 共33行
+
+#47 [hard  ] [concert_singer ] ✓
+  问题: What are the names of the stadiums without any concerts?
+  Gold SQL: SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)
+  MOI  SQL: SELECT `s`.`Name` AS `体育场名称` FROM `stadium` AS `s` LEFT JOIN `concert` AS `c` ON `s`.`Stadium_ID`=`c`.`Stadium_ID` WHERE `c`.`Stadium_ID` IS NULL
+  Gold结果 (4行): [('Bayview Stadium',)
+          ('Hampden Park',)
+          ('Forthbank Stadium',)
+          ('Gayfield Park',)]
+  MOI 结果 (4行): [('Bayview Stadium',)
+          ('Hampden Park',)
+          ('Forthbank Stadium',)
+          ('Gayfield Park',)]
+
+#48 [hard  ] [car_1          ] ✗
+  问题: What is the maker of the carr produced in the earliest year and what year was it?
+  Gold SQL: SELECT T2.Make ,  T1.Year FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Year  =  (SELECT min(YEAR) FROM CARS_DATA);
+  MOI  SQL: SELECT `cm`.`Maker` AS `制造商`,`c`.`Year` AS `生产年份` FROM ((`cars_data` AS `c` JOIN `car_names` AS `cn` ON `c`.`Id`=`cn`.`MakeId`) JOIN `model_list` AS `ml` ON `cn`.`MakeId`=`ml`.`ModelId`) JOIN `car_makers` AS `cm` ON `ml`.`Maker`=`cm`.`Id` WHERE `c`.`Year`=1970 LIMIT 1
+  Gold结果 (35行): [('chevrolet chevelle malibu', 1970), ('buick skylark 320', 1970), ('plymouth satellite', 1970)] ... 共35行
+  MOI 结果 (1行): [('amc', 1970)]
+  ← 行数不同(gold=35≠pred=1)
+
+#49 [hard  ] [concert_singer ] ✓
+  问题: What are the names of all stadiums that did not have a concert in 2014?
+  Gold SQL: SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014
+  MOI  SQL: SELECT `s`.`Name` AS `体育场名称` FROM `stadium` AS `s` WHERE `s`.`Stadium_ID` NOT IN (SELECT `c`.`Stadium_ID` FROM `concert` AS `c` WHERE `c`.`Year`='2014') ORDER BY `s`.`Name`
+  Gold结果 (6行): [('Balmoor',), ('Bayview Stadium',), ('Forthbank Stadium',)] ... 共6行
+  MOI 结果 (6行): [('Balmoor',), ('Bayview Stadium',), ('Forthbank Stadium',)] ... 共6行
+
+#50 [hard  ] [pets_1         ] ✗
+  问题: What are the students' first names who have both cats and dogs as pets?
+  Gold SQL: select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'cat' intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'dog'
+  MOI  SQL: SELECT `s`.`Fname` AS `名字`,GROUP_CONCAT(DISTINCT `p`.`PetType` SEPARATOR ',') AS `宠物类型` FROM (`student` AS `s` JOIN `has_pet` AS `hp` ON `s`.`StuID`=`hp`.`StuID`) JOIN `pets` AS `p` ON `hp`.`PetID`=`p`.`PetID` GROUP BY `s`.`StuID`,`s`.`Fname`
+  Gold结果 (0行): []
+  MOI 结果 (0行): ERROR: near "SEPARATOR": syntax error
+  ← MOI SQL执行报错
+
+==========================================================================================
+  总计: 33通过 / 17失败 = 66.0%
+==========================================================================================
