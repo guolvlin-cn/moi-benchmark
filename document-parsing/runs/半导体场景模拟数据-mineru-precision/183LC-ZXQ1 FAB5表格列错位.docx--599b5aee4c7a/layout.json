@@ -1,0 +1,118 @@
+{
+    "pdf_info": [
+        {
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "lines": [
+                        {
+                            "spans": [
+                                {
+                                    "type": "text",
+                                    "content": "检测结果",
+                                    "style": [
+                                        "bold"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "is_numbered_style": true,
+                    "level": 1,
+                    "section_number": "1"
+                },
+                {
+                    "type": "title",
+                    "lines": [
+                        {
+                            "spans": [
+                                {
+                                    "type": "text",
+                                    "content": "化学因素检测结果",
+                                    "style": [
+                                        "bold"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "is_numbered_style": true,
+                    "level": 2,
+                    "section_number": "1.1"
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        {
+                            "spans": [
+                                {
+                                    "type": "text",
+                                    "content": "工作场所空气中读物浓度检测结果    单位：mg/m³",
+                                    "style": [
+                                        "bold"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "table",
+                    "blocks": [
+                        {
+                            "lines": [
+                                {
+                                    "spans": [
+                                        {
+                                            "type": "table",
+                                            "html": "<table><tr><td rowspan=\"2\"><p><strong>单元/</strong></p><p><strong>车间</strong></p></td><td rowspan=\"2\"><p><strong>岗位/</strong></p><p><strong>工种</strong></p></td><td rowspan=\"2\"><p><strong>采样点位/对象</strong></p></td><td rowspan=\"2\"><p><strong>接触</strong></p><p><strong>时间h/d,d/w</strong></p></td><td rowspan=\"2\"><p><strong>样品编号(ZX250050-1)</strong></p></td><td rowspan=\"2\"><p><strong>检测</strong></p><p><strong>项目</strong></p></td><td colspan=\"3\"><p><strong>检测结果</strong></p></td><td rowspan=\"2\"><p><strong>结果</strong></p><p><strong>判定</strong></p></td></tr><tr><td><p><strong>CSTE或CPE</strong></p></td><td><p><strong>CTWA</strong></p></td><td><p><strong>CME</strong></p></td></tr><tr><td rowspan=\"21\"><p><strong>FAB5</strong></p></td><td rowspan=\"7\"><p><strong>DIFFWET工程师</strong></p></td><td><p><strong>SDRPM011#</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>1A1</strong></p></td><td><p><strong>氮氧化物</strong></p></td><td><p><strong>0.07</strong></p></td><td></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDWSN012#1</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>2A1</strong></p></td><td><p><strong>氟化氢（按F计）</strong></p></td><td></td><td></td><td><p><strong>&lt;0.056</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDPRM012#2</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>2A2</strong></p></td><td><p><strong>氟化氢（按F计）</strong></p></td><td></td><td></td><td><p><strong>&lt;0.056</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPU013#</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>2A3</strong></p></td><td><p><strong>氟化氢（按F计）</strong></p></td><td></td><td></td><td><p><strong>&lt;0.056</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDPRM013#1</strong></p></td><td rowspan=\"3\"><p><strong>8,5</strong></p></td><td><p><strong>3A1</strong></p></td><td><p><strong>氨</strong></p></td><td><p><strong>&lt;0.08</strong></p></td><td rowspan=\"3\"><p><strong>&lt;0.08</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD013#2</strong></p></td><td><p><strong>3A2</strong></p></td><td><p><strong>氨</strong></p></td><td><p><strong>&lt;0.08</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD013#3</strong></p></td><td><p><strong>3A3</strong></p></td><td><p><strong>氨</strong></p></td><td><p><strong>&lt;0.08</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td rowspan=\"5\"><p><strong>DIFFFUR工程师</strong></p></td><td><p><strong>SDRPD014#1</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>4A1</strong></p></td><td><p><strong>磷化氢</strong></p></td><td></td><td></td><td><p><strong>&lt;0.05</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD014#2</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>4A2</strong></p></td><td><p><strong>磷化氢</strong></p></td><td></td><td></td><td><p><strong>&lt;0.05</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD015#1</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>5A1</strong></p></td><td><p><strong>氨</strong></p></td><td><p><strong>&lt;0.08</strong></p></td><td rowspan=\"3\"><p><strong>&lt;0.08</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD015#2</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>5A2</strong></p></td><td><p><strong>氨</strong></p></td><td><p><strong>&lt;0.08</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD015#3</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>5A3</strong></p></td><td><p><strong>氨</strong></p></td><td><p><strong>&lt;0.08</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td rowspan=\"9\"><p><strong>DIFFIMP工程师</strong></p></td><td><p><strong>SDRPD016#1</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>6A1</strong></p></td><td><p><strong>砷化氢（肿）</strong></p></td><td></td><td></td><td><p><strong>&lt;0.03</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD016#2</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>6A2</strong></p></td><td><p><strong>砷化氢（肿）</strong></p></td><td></td><td></td><td><p><strong>&lt;0.03</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD016#3</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>6A3</strong></p></td><td><p><strong>砷化氢（肿）</strong></p></td><td></td><td></td><td><p><strong>&lt;0.03</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD017#1</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>7A1</strong></p></td><td><p><strong>磷化氢</strong></p></td><td></td><td></td><td><p><strong>&lt;0.05</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD017#2</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>7A2</strong></p></td><td><p><strong>磷化氢</strong></p></td><td></td><td></td><td><p><strong>&lt;0.05</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD017#3</strong></p></td><td><p><strong>8,5</strong></p></td><td><p><strong>7A3</strong></p></td><td><p><strong>磷化氢</strong></p></td><td></td><td></td><td><p><strong>&lt;0.05</strong></p></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SIHC11627#1</strong></p></td><td rowspan=\"3\"><p><strong>8,5</strong></p></td><td><p><strong>7B1</strong></p></td><td><p><strong>氟及其化合物（不含氟化氢）（按F计）</strong></p></td><td><p><strong>&lt;0.056</strong></p></td><td rowspan=\"3\"><p><strong>&lt;0.056</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD017#2</strong></p></td><td><p><strong>7B2</strong></p></td><td><p><strong>氟及其化合物（不含氟化氢）（按F计）</strong></p></td><td><p><strong>&lt;0.056</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr><tr><td><p><strong>SDRPD017#3</strong></p></td><td><p><strong>7B3</strong></p></td><td><p><strong>氟及其化合物（不含氟化氢）（按F计）</strong></p></td><td><p><strong>&lt;0.056</strong></p></td><td></td><td><p><strong>符合</strong></p></td></tr></table>"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 3
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "type": "header",
+                    "lines": [
+                        {
+                            "spans": [
+                                {
+                                    "type": "text",
+                                    "content": "报告编号：LC-ZX250050-1"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "type": "footer",
+                    "lines": [
+                        {
+                            "spans": [
+                                {
+                                    "type": "text",
+                                    "content": "xx检测认真集团股份有限公司"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                }
+            ],
+            "page_idx": 0
+        }
+    ],
+    "_backend": "office",
+    "_version_name": "3.4.3"
+}

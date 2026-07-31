@@ -1,0 +1,31 @@
+[
+    {
+        "type": "text",
+        "text": "**SEASF06B+LDD+Stage+WAT+VBG+Fail+8-D+Report**",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "**D4:Define and Verify Root Cause**",
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- Root Cause Evidence"
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "table_caption": [],
+        "table_body": "<table>\n  <tr>\n    <th colspan=\"2\">Oxidation</th>\n    <th>Avg.</th>\n    <th>STD</th>\n    <th></th>\n    <th>Avg.</th>\n    <th>STD</th>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_A</td>\n    <td>pre</td>\n    <td>6.48</td>\n    <td>0.058</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">8.77</td>\n    <td rowspan=\"2\">0.139</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>15.25</td>\n    <td>0.197</td>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_B</td>\n    <td>pre</td>\n    <td>6.51</td>\n    <td>0.058</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">8.53</td>\n    <td rowspan=\"2\">0.167</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>15.04</td>\n    <td>0.225</td>\n  </tr>\n</table>",
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "table_caption": [],
+        "table_body": "<table>\n  <tr>\n    <th colspan=\"2\">Charge</th>\n    <th>Avg.</th>\n    <th></th>\n    <th>Avg.</th>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_A</td>\n    <td>pre</td>\n    <td>0.431</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">0.012</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>0.419</td>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_B</td>\n    <td>pre</td>\n    <td>0.444</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">0.03</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>0.474</td>\n  </tr>\n</table>",
+        "page_idx": 0
+    }
+]

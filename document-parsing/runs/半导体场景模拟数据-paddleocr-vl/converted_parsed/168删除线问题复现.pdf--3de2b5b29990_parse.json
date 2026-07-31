@@ -1,0 +1,2502 @@
+{
+  "filename": "168删除线问题复现.pdf",
+  "filetype": "PDF",
+  "block_count": 69,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          36.0,
+          46.0,
+          76.0,
+          71.0
+        ],
+        "polygon": [
+          [
+            36,
+            46
+          ],
+          [
+            76,
+            46
+          ],
+          [
+            76,
+            71
+          ],
+          [
+            36,
+            71
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufacteturing International Corporation",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          76.0,
+          62.0,
+          344.0,
+          73.0
+        ],
+        "polygon": [
+          [
+            76,
+            62
+          ],
+          [
+            344,
+            62
+          ],
+          [
+            344,
+            73
+          ],
+          [
+            76,
+            73
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DocNo.:xx-xxxx-xx-xxxx</td><td>Doc.Title:SMIC200mmxxxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:1/3</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          75.0,
+          552.0,
+          101.0
+        ],
+        "polygon": [
+          [
+            39,
+            75
+          ],
+          [
+            553,
+            75
+          ],
+          [
+            553,
+            101
+          ],
+          [
+            39,
+            101
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "1. Project background and objectives",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          37.0,
+          114.0,
+          227.0,
+          127.0
+        ],
+        "polygon": [
+          [
+            37,
+            114
+          ],
+          [
+            227,
+            114
+          ],
+          [
+            227,
+            127
+          ],
+          [
+            37,
+            127
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "1.1. DCC: Document Control Center",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          56.0,
+          129.0,
+          243.0,
+          141.0
+        ],
+        "polygon": [
+          [
+            56,
+            129
+          ],
+          [
+            244,
+            129
+          ],
+          [
+            244,
+            141
+          ],
+          [
+            56,
+            141
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "1.2. DCN: Document Change Notice(for Company Rules and Regulations)",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          56.0,
+          144.0,
+          426.0,
+          157.0
+        ],
+        "polygon": [
+          [
+            56,
+            144
+          ],
+          [
+            426,
+            144
+          ],
+          [
+            426,
+            158
+          ],
+          [
+            56,
+            158
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "1.3. DMS: Document Management System",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          56.0,
+          160.0,
+          274.0,
+          173.0
+        ],
+        "polygon": [
+          [
+            56,
+            160
+          ],
+          [
+            274,
+            160
+          ],
+          [
+            274,
+            173
+          ],
+          [
+            56,
+            173
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-8",
+      "index": 7,
+      "type": "title",
+      "level": "1",
+      "content": "1.4. Background description",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          57.0,
+          175.0,
+          197.0,
+          187.0
+        ],
+        "polygon": [
+          [
+            57,
+            175
+          ],
+          [
+            197,
+            175
+          ],
+          [
+            197,
+            188
+          ],
+          [
+            57,
+            188
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "With the continuous evolution of artificial intelligence technology, large language models (LLM) and multimodal models have demonstrated remarkable capabilities in comprehension, generation, and reasoning. An increasing number of enterprises are beginning to experiment with integrating AI technology into their actual business processes, aiming to enhance information processing efficiency, optimize decision-making quality, and reduce reliance on human experience. Against this backdrop.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          76.0,
+          189.0,
+          555.0,
+          272.0
+        ],
+        "polygon": [
+          [
+            76,
+            189
+          ],
+          [
+            555,
+            189
+          ],
+          [
+            555,
+            272
+          ],
+          [
+            76,
+            272
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-10",
+      "index": 9,
+      "type": "title",
+      "level": "2",
+      "content": "1.4.1. Industry prospects",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          77.0,
+          274.0,
+          204.0,
+          286.0
+        ],
+        "polygon": [
+          [
+            77,
+            274
+          ],
+          [
+            204,
+            274
+          ],
+          [
+            204,
+            287
+          ],
+          [
+            77,
+            287
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "A. The current industry as a whole exhibits the following characteristics:",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          98.0,
+          288.0,
+          458.0,
+          300.0
+        ],
+        "polygon": [
+          [
+            98,
+            288
+          ],
+          [
+            459,
+            288
+          ],
+          [
+            459,
+            300
+          ],
+          [
+            98,
+            300
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-12",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "B. The capabilities of pre-trained models have rapidly improved, but there are still differences in scenario generalization",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          99.0,
+          303.0,
+          554.0,
+          329.0
+        ],
+        "polygon": [
+          [
+            99,
+            303
+          ],
+          [
+            554,
+            303
+          ],
+          [
+            554,
+            329
+          ],
+          [
+            99,
+            329
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-13",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "C. The scale of internal data within the enterprise continues to grow, leading to a strong demand for intelligent retrieval and analysis",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          99.0,
+          331.0,
+          554.0,
+          356.0
+        ],
+        "polygon": [
+          [
+            99,
+            331
+          ],
+          [
+            554,
+            331
+          ],
+          [
+            554,
+            356
+          ],
+          [
+            99,
+            356
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-14",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "D. AI systems are gradually evolving from single-point applications towards platformization and servitization",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          99.0,
+          358.0,
+          553.0,
+          385.0
+        ],
+        "polygon": [
+          [
+            99,
+            358
+          ],
+          [
+            554,
+            358
+          ],
+          [
+            554,
+            386
+          ],
+          [
+            99,
+            386
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-15",
+      "index": 14,
+      "type": "text",
+      "level": null,
+      "content": "E. Main pain points",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          99.0,
+          386.0,
+          205.0,
+          398.0
+        ],
+        "polygon": [
+          [
+            99,
+            386
+          ],
+          [
+            206,
+            386
+          ],
+          [
+            206,
+            398
+          ],
+          [
+            99,
+            398
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-16",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "F. In the actual implementation process, common issues include but are not limited to:",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          99.0,
+          400.0,
+          526.0,
+          413.0
+        ],
+        "polygon": [
+          [
+            99,
+            400
+          ],
+          [
+            526,
+            400
+          ],
+          [
+            526,
+            413
+          ],
+          [
+            99,
+            413
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-17",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "G. The data sources are complex, with a coexistence of structured, semi-structured, and unstructured data",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          99.0,
+          416.0,
+          554.0,
+          441.0
+        ],
+        "polygon": [
+          [
+            99,
+            416
+          ],
+          [
+            554,
+            416
+          ],
+          [
+            554,
+            441
+          ],
+          [
+            99,
+            441
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-18",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "H. The coupling between model services and business logic is too high, resulting in poor system maintainability",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          99.0,
+          443.0,
+          554.0,
+          469.0
+        ],
+        "polygon": [
+          [
+            99,
+            443
+          ],
+          [
+            554,
+            443
+          ],
+          [
+            554,
+            469
+          ],
+          [
+            99,
+            469
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-19",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "I. Without a unified evaluation and monitoring mechanism, it is difficult to continuously ensure the effectiveness of the model.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          98.0,
+          471.0,
+          553.0,
+          497.0
+        ],
+        "polygon": [
+          [
+            98,
+            471
+          ],
+          [
+            554,
+            471
+          ],
+          [
+            554,
+            497
+          ],
+          [
+            98,
+            497
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-20",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "a. 为了能使 Reticle Stocker 钠够正确快速的读取光照条码，光照 MA 必须使用 Barcode Reader 扫描自光照厂所送出的 Barcode（以有效防止人为之输入错误），之后再利用光照室旁的 Barcode Printer 打印 Reticle ID，并贴雨 Reticle POD 之上。",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          119.0,
+          498.0,
+          554.0,
+          558.0
+        ],
+        "polygon": [
+          [
+            119,
+            498
+          ],
+          [
+            554,
+            498
+          ],
+          [
+            554,
+            558
+          ],
+          [
+            119,
+            558
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-21",
+      "index": 20,
+      "type": "text",
+      "level": null,
+      "content": "b. Barcode 使用 9cm X 3cm 标签打印，它的形式如下（图四）：",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          119.0,
+          560.0,
+          457.0,
+          574.0
+        ],
+        "polygon": [
+          [
+            119,
+            560
+          ],
+          [
+            457,
+            560
+          ],
+          [
+            457,
+            574
+          ],
+          [
+            119,
+            574
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-22",
+      "index": 21,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          120.0,
+          582.0,
+          350.0,
+          668.0
+        ],
+        "polygon": [
+          [
+            120,
+            582
+          ],
+          [
+            351,
+            582
+          ],
+          [
+            351,
+            668
+          ],
+          [
+            120,
+            668
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-23",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "001800 111AA. IDA",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "vision_footnote",
+        "bbox": [
+          176.0,
+          670.0,
+          288.0,
+          678.0
+        ],
+        "polygon": [
+          [
+            176,
+            670
+          ],
+          [
+            288,
+            670
+          ],
+          [
+            288,
+            678
+          ],
+          [
+            176,
+            678
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-24",
+      "index": 23,
+      "type": "text",
+      "level": null,
+      "content": "图四 Barcode 打印实例",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          231.0,
+          678.0,
+          359.0,
+          691.0
+        ],
+        "polygon": [
+          [
+            231,
+            678
+          ],
+          [
+            360,
+            678
+          ],
+          [
+            360,
+            691
+          ],
+          [
+            231,
+            691
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-25",
+      "index": 24,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          35.0,
+          750.0,
+          553.0,
+          772.0
+        ],
+        "polygon": [
+          [
+            35,
+            750
+          ],
+          [
+            554,
+            750
+          ],
+          [
+            554,
+            772
+          ],
+          [
+            35,
+            772
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-26",
+      "index": 25,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          35.0,
+          782.0,
+          438.0,
+          793.0
+        ],
+        "polygon": [
+          [
+            35,
+            782
+          ],
+          [
+            438,
+            782
+          ],
+          [
+            438,
+            793
+          ],
+          [
+            35,
+            793
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-27",
+      "index": 26,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          475.0,
+          782.0,
+          519.0,
+          791.0
+        ],
+        "polygon": [
+          [
+            475,
+            782
+          ],
+          [
+            519,
+            782
+          ],
+          [
+            519,
+            791
+          ],
+          [
+            475,
+            791
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-28",
+      "index": 27,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          36.0,
+          46.0,
+          76.0,
+          71.0
+        ],
+        "polygon": [
+          [
+            36,
+            46
+          ],
+          [
+            76,
+            46
+          ],
+          [
+            76,
+            71
+          ],
+          [
+            36,
+            71
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-29",
+      "index": 28,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          77.0,
+          62.0,
+          343.0,
+          73.0
+        ],
+        "polygon": [
+          [
+            77,
+            62
+          ],
+          [
+            343,
+            62
+          ],
+          [
+            343,
+            73
+          ],
+          [
+            77,
+            73
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-30",
+      "index": 29,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DocNo.:xx-xxxx-xx-xxxx</td><td>Doc.Title:SMIC200mmxxxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:2/3</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          74.0,
+          552.0,
+          100.0
+        ],
+        "polygon": [
+          [
+            39,
+            74
+          ],
+          [
+            552,
+            74
+          ],
+          [
+            552,
+            100
+          ],
+          [
+            39,
+            100
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-31",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "c. Recicle POD Size:  $ 227.33W \\times 230L \\times 92.2H $ (mm). Barcode 打印完毕后，要贴在 Reticle POD 的适当位置上，才能被 Reticle Stock 顺利地读出。Barcode 贴在 POD 上的位置如下（图五）所示：",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          117.0,
+          114.0,
+          555.0,
+          161.0
+        ],
+        "polygon": [
+          [
+            117,
+            114
+          ],
+          [
+            555,
+            114
+          ],
+          [
+            555,
+            161
+          ],
+          [
+            117,
+            161
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-32",
+      "index": 31,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          84.0,
+          168.0,
+          535.0,
+          286.0
+        ],
+        "polygon": [
+          [
+            84,
+            168
+          ],
+          [
+            535,
+            168
+          ],
+          [
+            535,
+            286
+          ],
+          [
+            84,
+            286
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-33",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "图五 Barcode 位置及贴法",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          255.0,
+          302.0,
+          376.0,
+          315.0
+        ],
+        "polygon": [
+          [
+            255,
+            302
+          ],
+          [
+            376,
+            302
+          ],
+          [
+            376,
+            315
+          ],
+          [
+            255,
+            315
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-34",
+      "index": 33,
+      "type": "title",
+      "level": "1",
+      "content": "1.5. 技术选型说明",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          56.0,
+          316.0,
+          154.0,
+          330.0
+        ],
+        "polygon": [
+          [
+            56,
+            316
+          ],
+          [
+            154,
+            316
+          ],
+          [
+            154,
+            331
+          ],
+          [
+            56,
+            331
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-35",
+      "index": 34,
+      "type": "title",
+      "level": "3",
+      "content": "1.5.1. 后端与基础设施",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          76.0,
+          333.0,
+          199.0,
+          347.0
+        ],
+        "polygon": [
+          [
+            76,
+            333
+          ],
+          [
+            199,
+            333
+          ],
+          [
+            199,
+            347
+          ],
+          [
+            76,
+            347
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-36",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": "编程语言：Python",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          356.0,
+          233.0,
+          371.0
+        ],
+        "polygon": [
+          [
+            116,
+            356
+          ],
+          [
+            233,
+            356
+          ],
+          [
+            233,
+            371
+          ],
+          [
+            116,
+            371
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-37",
+      "index": 36,
+      "type": "text",
+      "level": null,
+      "content": "服务框架：FastAPI",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          115.0,
+          387.0,
+          239.0,
+          402.0
+        ],
+        "polygon": [
+          [
+            115,
+            387
+          ],
+          [
+            239,
+            387
+          ],
+          [
+            239,
+            402
+          ],
+          [
+            115,
+            402
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-38",
+      "index": 37,
+      "type": "text",
+      "level": null,
+      "content": "模型部署：vLLM / Triton",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          418.0,
+          270.0,
+          433.0
+        ],
+        "polygon": [
+          [
+            116,
+            418
+          ],
+          [
+            270,
+            418
+          ],
+          [
+            270,
+            433
+          ],
+          [
+            116,
+            433
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-39",
+      "index": 38,
+      "type": "text",
+      "level": null,
+      "content": "容器与编排：Docker + Kubernetes",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          449.0,
+          314.0,
+          464.0
+        ],
+        "polygon": [
+          [
+            116,
+            449
+          ],
+          [
+            314,
+            449
+          ],
+          [
+            314,
+            465
+          ],
+          [
+            116,
+            465
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-40",
+      "index": 39,
+      "type": "title",
+      "level": "2",
+      "content": "1.5.2. 模型相关",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          76.0,
+          472.0,
+          164.0,
+          487.0
+        ],
+        "polygon": [
+          [
+            76,
+            472
+          ],
+          [
+            164,
+            472
+          ],
+          [
+            164,
+            487
+          ],
+          [
+            76,
+            487
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-41",
+      "index": 40,
+      "type": "text",
+      "level": null,
+      "content": "大语言模型 (LLM)",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          115.0,
+          496.0,
+          240.0,
+          512.0
+        ],
+        "polygon": [
+          [
+            115,
+            496
+          ],
+          [
+            240,
+            496
+          ],
+          [
+            240,
+            512
+          ],
+          [
+            115,
+            512
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-42",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": "向量模型（Embedding）",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          115.0,
+          527.0,
+          258.0,
+          543.0
+        ],
+        "polygon": [
+          [
+            115,
+            527
+          ],
+          [
+            258,
+            527
+          ],
+          [
+            258,
+            544
+          ],
+          [
+            115,
+            544
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-43",
+      "index": 42,
+      "type": "text",
+      "level": null,
+      "content": "• RAG 检索增强生成",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          559.0,
+          242.0,
+          573.0
+        ],
+        "polygon": [
+          [
+            116,
+            559
+          ],
+          [
+            242,
+            559
+          ],
+          [
+            242,
+            573
+          ],
+          [
+            116,
+            573
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-44",
+      "index": 43,
+      "type": "title",
+      "level": "2",
+      "content": "1.5.3. 其他模型相关",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          76.0,
+          582.0,
+          187.0,
+          597.0
+        ],
+        "polygon": [
+          [
+            76,
+            582
+          ],
+          [
+            187,
+            582
+          ],
+          [
+            187,
+            597
+          ],
+          [
+            76,
+            597
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-45",
+      "index": 44,
+      "type": "text",
+      "level": null,
+      "content": "视觉大模型 (VLM)",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          605.0,
+          242.0,
+          620.0
+        ],
+        "polygon": [
+          [
+            116,
+            605
+          ],
+          [
+            242,
+            605
+          ],
+          [
+            242,
+            621
+          ],
+          [
+            116,
+            621
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-46",
+      "index": 45,
+      "type": "text",
+      "level": null,
+      "content": "向量模型（Embedding）",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          637.0,
+          257.0,
+          652.0
+        ],
+        "polygon": [
+          [
+            116,
+            637
+          ],
+          [
+            258,
+            637
+          ],
+          [
+            258,
+            652
+          ],
+          [
+            116,
+            652
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-47",
+      "index": 46,
+      "type": "text",
+      "level": null,
+      "content": "• RAG 检索增强生成",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          668.0,
+          242.0,
+          682.0
+        ],
+        "polygon": [
+          [
+            116,
+            668
+          ],
+          [
+            243,
+            668
+          ],
+          [
+            243,
+            683
+          ],
+          [
+            116,
+            683
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-48",
+      "index": 47,
+      "type": "text",
+      "level": null,
+      "content": "1.6. Technical selection description",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          56.0,
+          691.0,
+          233.0,
+          704.0
+        ],
+        "polygon": [
+          [
+            56,
+            691
+          ],
+          [
+            233,
+            691
+          ],
+          [
+            233,
+            705
+          ],
+          [
+            56,
+            705
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-49",
+      "index": 48,
+      "type": "text",
+      "level": null,
+      "content": "1.6.1. Backend and Infrastructure",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          76.0,
+          706.0,
+          247.0,
+          719.0
+        ],
+        "polygon": [
+          [
+            76,
+            706
+          ],
+          [
+            247,
+            706
+          ],
+          [
+            247,
+            719
+          ],
+          [
+            76,
+            719
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-50",
+      "index": 49,
+      "type": "text",
+      "level": null,
+      "content": "• Programming language: Python",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          721.0,
+          291.0,
+          734.0
+        ],
+        "polygon": [
+          [
+            116,
+            721
+          ],
+          [
+            292,
+            721
+          ],
+          [
+            292,
+            734
+          ],
+          [
+            116,
+            734
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-51",
+      "index": 50,
+      "type": "text",
+      "level": null,
+      "content": "• Service framework: FastAPI",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          736.0,
+          276.0,
+          749.0
+        ],
+        "polygon": [
+          [
+            116,
+            736
+          ],
+          [
+            277,
+            736
+          ],
+          [
+            277,
+            749
+          ],
+          [
+            116,
+            749
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-52",
+      "index": 51,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          35.0,
+          750.0,
+          554.0,
+          773.0
+        ],
+        "polygon": [
+          [
+            35,
+            750
+          ],
+          [
+            555,
+            750
+          ],
+          [
+            555,
+            773
+          ],
+          [
+            35,
+            773
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-53",
+      "index": 52,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          35.0,
+          781.0,
+          439.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            35,
+            781
+          ],
+          [
+            439,
+            781
+          ],
+          [
+            439,
+            793
+          ],
+          [
+            35,
+            793
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-54",
+      "index": 53,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          475.0,
+          782.0,
+          519.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            475,
+            782
+          ],
+          [
+            519,
+            782
+          ],
+          [
+            519,
+            792
+          ],
+          [
+            475,
+            792
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-55",
+      "index": 54,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          36.0,
+          46.0,
+          76.0,
+          71.0
+        ],
+        "polygon": [
+          [
+            36,
+            46
+          ],
+          [
+            76,
+            46
+          ],
+          [
+            76,
+            71
+          ],
+          [
+            36,
+            71
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-56",
+      "index": 55,
+      "type": "text",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          77.0,
+          62.0,
+          344.0,
+          73.0
+        ],
+        "polygon": [
+          [
+            77,
+            62
+          ],
+          [
+            344,
+            62
+          ],
+          [
+            344,
+            74
+          ],
+          [
+            77,
+            74
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-57",
+      "index": 56,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DocNo.:xx-xxxx-xx-xxxx</td><td>Doc.Title:SMIC200mmxxxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:3/3</td></tr></table>",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          75.0,
+          553.0,
+          100.0
+        ],
+        "polygon": [
+          [
+            39,
+            75
+          ],
+          [
+            553,
+            75
+          ],
+          [
+            553,
+            100
+          ],
+          [
+            39,
+            100
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-58",
+      "index": 57,
+      "type": "text",
+      "level": null,
+      "content": "• Model deployment: vLLM / Triton",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          116.0,
+          307.0,
+          129.0
+        ],
+        "polygon": [
+          [
+            116,
+            116
+          ],
+          [
+            308,
+            116
+          ],
+          [
+            308,
+            129
+          ],
+          [
+            116,
+            129
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-59",
+      "index": 58,
+      "type": "text",
+      "level": null,
+      "content": "• Containers and orchestration: Docker + Kubernetes",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          131.0,
+          386.0,
+          144.0
+        ],
+        "polygon": [
+          [
+            116,
+            131
+          ],
+          [
+            386,
+            131
+          ],
+          [
+            386,
+            144
+          ],
+          [
+            116,
+            144
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-60",
+      "index": 59,
+      "type": "text",
+      "level": null,
+      "content": "1.6.2. Model-related",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          76.0,
+          146.0,
+          183.0,
+          158.0
+        ],
+        "polygon": [
+          [
+            76,
+            146
+          ],
+          [
+            184,
+            146
+          ],
+          [
+            184,
+            158
+          ],
+          [
+            76,
+            158
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-61",
+      "index": 60,
+      "type": "text",
+      "level": null,
+      "content": "- Large Language Model (LLM)",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          161.0,
+          287.0,
+          174.0
+        ],
+        "polygon": [
+          [
+            116,
+            161
+          ],
+          [
+            288,
+            161
+          ],
+          [
+            288,
+            174
+          ],
+          [
+            116,
+            174
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-62",
+      "index": 61,
+      "type": "text",
+      "level": null,
+      "content": "• Vector model (Embedding)",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          117.0,
+          176.0,
+          271.0,
+          189.0
+        ],
+        "polygon": [
+          [
+            117,
+            176
+          ],
+          [
+            271,
+            176
+          ],
+          [
+            271,
+            190
+          ],
+          [
+            117,
+            190
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-63",
+      "index": 62,
+      "type": "text",
+      "level": null,
+      "content": "RAG: Retrieval Augmented Generation",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          117.0,
+          192.0,
+          330.0,
+          205.0
+        ],
+        "polygon": [
+          [
+            117,
+            192
+          ],
+          [
+            330,
+            192
+          ],
+          [
+            330,
+            205
+          ],
+          [
+            117,
+            205
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-64",
+      "index": 63,
+      "type": "text",
+      "level": null,
+      "content": "1.6.3. Other model-related",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          76.0,
+          206.0,
+          212.0,
+          219.0
+        ],
+        "polygon": [
+          [
+            76,
+            206
+          ],
+          [
+            213,
+            206
+          ],
+          [
+            213,
+            219
+          ],
+          [
+            76,
+            219
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-65",
+      "index": 64,
+      "type": "text",
+      "level": null,
+      "content": "- Visual Large Model (VLM)",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          221.0,
+          273.0,
+          234.0
+        ],
+        "polygon": [
+          [
+            116,
+            221
+          ],
+          [
+            273,
+            221
+          ],
+          [
+            273,
+            234
+          ],
+          [
+            116,
+            234
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-66",
+      "index": 65,
+      "type": "text",
+      "level": null,
+      "content": "• Vector model (Embedding)",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          237.0,
+          270.0,
+          250.0
+        ],
+        "polygon": [
+          [
+            116,
+            237
+          ],
+          [
+            271,
+            237
+          ],
+          [
+            271,
+            251
+          ],
+          [
+            116,
+            251
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-67",
+      "index": 66,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          35.0,
+          749.0,
+          555.0,
+          772.0
+        ],
+        "polygon": [
+          [
+            35,
+            749
+          ],
+          [
+            555,
+            749
+          ],
+          [
+            555,
+            772
+          ],
+          [
+            35,
+            772
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-68",
+      "index": 67,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          35.0,
+          782.0,
+          438.0,
+          793.0
+        ],
+        "polygon": [
+          [
+            35,
+            782
+          ],
+          [
+            438,
+            782
+          ],
+          [
+            438,
+            793
+          ],
+          [
+            35,
+            793
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-69",
+      "index": 68,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          475.0,
+          782.0,
+          519.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            475,
+            782
+          ],
+          [
+            519,
+            782
+          ],
+          [
+            519,
+            792
+          ],
+          [
+            475,
+            792
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        87,
+                        97,
+                        252,
+                        122
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                88,
+                                97,
+                                251,
+                                121
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        97,
+                                        251,
+                                        121
+                                    ],
+                                    "type": "text",
+                                    "content": "Support ending",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        171,
+                        143,
+                        509,
+                        275
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                171,
+                                143,
+                                509,
+                                275
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        171,
+                                        143,
+                                        509,
+                                        275
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                171,
+                                                143,
+                                                509,
+                                                275
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">APF releases that are scheduled to no longer support specific platforms or database integrations are described in the table below.</td></tr><tr><td>Support ending for: operation systems</td><td>No longer supported in:</td></tr><tr><td>Windows Server 2012</td><td>APF 2025.1</td></tr><tr><td>CentOS 7</td><td>APF 2025.2</td></tr><tr><td>MySQL 5.6</td><td>APF 2026.1</td></tr></table>",
+                                            "image_path": "383391a033c877e34d18e57a9bcecab100180991c08ffd4207ccfad2a1204471.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        87,
+                        97,
+                        252,
+                        122
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                88,
+                                97,
+                                251,
+                                121
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        97,
+                                        251,
+                                        121
+                                    ],
+                                    "type": "text",
+                                    "content": "Support ending",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        171,
+                        143,
+                        509,
+                        275
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                171,
+                                143,
+                                509,
+                                275
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        171,
+                                        143,
+                                        509,
+                                        275
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                171,
+                                                143,
+                                                509,
+                                                275
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td colspan=\"2\">APF releases that are scheduled to no longer support specific platforms or database integrations are described in the table below.</td></tr><tr><td>Support ending for: operation systems</td><td>No longer supported in:</td></tr><tr><td>Windows Server 2012</td><td>APF 2025.1</td></tr><tr><td>CentOS 7</td><td>APF 2025.2</td></tr><tr><td>MySQL 5.6</td><td>APF 2026.1</td></tr></table>",
+                                            "image_path": "383391a033c877e34d18e57a9bcecab100180991c08ffd4207ccfad2a1204471.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": false,
+    "_version_name": "3.4.0"
+}

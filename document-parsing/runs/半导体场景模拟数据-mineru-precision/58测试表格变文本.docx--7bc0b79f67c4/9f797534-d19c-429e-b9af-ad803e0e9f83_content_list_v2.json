@@ -1,0 +1,24 @@
+[
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The rapid advancement of semiconductor technology has fundamentally transformed the landscape of modern embedded systems. In today's industrial environment, the integration of high-performance microcontrollers, such as the STM32 series or ARM-based processors, is no longer just about raw clock speed. Instead, the focus has shifted toward power efficiency, hardware-level security, and seamless peripheral integration. Systems must now handle complex tasks ranging from real-time sensor fusion to high-speed data transmission via encrypted network protocols."
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p>Name</p></td><td><p>Purpose</p></td></tr><tr><td><p>APF Help</p></td><td><p>Accessible from the APF Help Shortcut in the windows start menu</p><p>Initial Setup: Verify system environment variables.</p><ul><li>Activity Manager Help</li><li>Diagnostic Tool Help</li></ul></td></tr><tr><td><p>APF</p></td><td><p>Standard interface for application framework and logic.</p><p>Process management and background task scheduling.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            }
+        }
+    ]
+]

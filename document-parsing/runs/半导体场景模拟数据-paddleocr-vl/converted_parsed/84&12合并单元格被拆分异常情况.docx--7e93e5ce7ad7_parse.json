@@ -1,0 +1,79 @@
+{
+  "filename": "84&12合并单元格被拆分异常情况.docx",
+  "filetype": "DOCX",
+  "block_count": 2,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "text",
+      "level": null,
+      "content": "9.4 TECN process flow(Create/ Renew/ Abolish)",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          44.0,
+          73.0,
+          290.0,
+          86.0
+        ],
+        "polygon": [
+          [
+            44,
+            73
+          ],
+          [
+            291,
+            73
+          ],
+          [
+            291,
+            86
+          ],
+          [
+            44,
+            86
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Flow</td><td>Responsibility</td><td>Description</td></tr><tr><td rowspan=\"2\"></td><td>Change initiator</td><td>1. Fill out TECN from, attach change related report or data, if any, and then submit to manager for sign-off</td></tr><tr><td>Initiator&#x27;s manager</td><td>2. Revise the request if it&#x27;s rejected, and submit for internal sign-off again.</td></tr><tr><td rowspan=\"4\"><img src=\"https://xmind-parser.bj.bcebos.com/vlm_cloud/parseResult/task-KkWFKr4pwUPldZYFUf6dhlfc6jZ5c4TT/0-2.jpg?authorization=bce-auth-v1%2FALTAK7IDj758EUbA1igu04rHAh%2F2026-07-27T04%3A48%3A00Z%2F2592000%2F%2F304c35db87d6a128948eb2cc50830f8ed486cb25da541e6e1feb8f4546ddc58e\" ></td><td>Related function&#x27;s manager</td><td>1. Approve or reject the request.2. If reject, should describe the reason.</td></tr><tr><td>DCC</td><td>1. Approve or reject the request.2. If reject, should describe the reason.</td></tr><tr><td>DCC</td><td>1. Check if the sign-off process is completed, TECN from is correctly filled out, and-necessary date/files is attached. If not, reject the request to the initiator for revising or even re-issuing.</td></tr><tr><td>DCC</td><td>1. Release or recall TECN.</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          49.0,
+          87.0,
+          543.0,
+          587.0
+        ],
+        "polygon": [
+          [
+            49,
+            87
+          ],
+          [
+            543,
+            87
+          ],
+          [
+            543,
+            587
+          ],
+          [
+            49,
+            587
+          ]
+        ]
+      }
+    }
+  ]
+}

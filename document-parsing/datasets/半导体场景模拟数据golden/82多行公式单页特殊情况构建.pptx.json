@@ -1,0 +1,126 @@
+{
+  "doc_id": "82_4c6010a653",
+  "_generated_at": "2026-07-29T09:15:02+00:00",
+  "header_footer": {
+    "expected_headers": [],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 0,
+    "table_html_summaries": [],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "Analysis",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "Analysis",
+      "距离计算方法主要有：",
+      "  (1) 欧氏距离'eucildean': $$c = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$$",
+      "  (2) 曼哈顿距离'manhattan': $$ c = |x_1 - x_2| + |y_1 - y_2| $$",
+      "  (3) 切比雪夫距离'chebyshev': $$D_{Chebyshev}\\left(p,q\\right)\\coloneq\\max_{i}\\left(\\left\\vert p_{i}-q_{i}\\right\\vert\\right)$$",
+      "  (4) 闵可夫斯基距离'minkowski': $d_{12} = \\sqrt[p]{\\sum_{k=1}^{n} |x_{1k} - x_{2k}|^p}$",
+      "  (5) 带权重闵可夫斯基距离'wminkowski': $d_{12} = \\sqrt{\\sum_{k=1}^{n} (x_{1k} - x_{2k})^2}$，其中$w$为特征权重",
+      "  (6）标准化欧氏距离'seuclidean'：即对于各特征维度做了归一化以后的欧氏距离。此时个样本特征维度的均值为0，方差为1.",
+      "  (7) 马氏距离 'mahalanobis'：$D_M(x) = \\sqrt{(x - \\mu)^T \\Sigma^{-1} (x - \\mu)}$ 为样本协方差矩阵的逆矩阵。当样本分布独立时，$\\Sigma$ 为单位矩阵，此时马氏距离等同于欧氏距离。"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "距离计算方法主要有：",
+          "page_num": 1
+        },
+        {
+          "text": "  (1) 欧氏距离'eucildean': $$c = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$$",
+          "page_num": 1
+        },
+        {
+          "text": "  (2) 曼哈顿距离'manhattan': $$ c = |x_1 - x_2| + |y_1 - y_2| $$",
+          "page_num": 1
+        },
+        {
+          "text": "  (3) 切比雪夫距离'chebyshev': $$D_{Chebyshev}\\left(p,q\\right)\\coloneq\\max_{i}\\left(\\left\\vert p_{i}-q_{i}\\right\\vert\\right)$$",
+          "page_num": 1
+        },
+        {
+          "text": "  (4) 闵可夫斯基距离'minkowski': $d_{12} = \\sqrt[p]{\\sum_{k=1}^{n} |x_{1k} - x_{2k}|^p}$",
+          "page_num": 1
+        },
+        {
+          "text": "  (5) 带权重闵可夫斯基距离'wminkowski': $d_{12} = \\sqrt{\\sum_{k=1}^{n} (x_{1k} - x_{2k})^2}$，其中$w$为特征权重",
+          "page_num": 1
+        },
+        {
+          "text": "  (6）标准化欧氏距离'seuclidean'：即对于各特征维度做了归一化以后的欧氏距离。此时个样本特征维度的均值为0，方差为1.",
+          "page_num": 1
+        },
+        {
+          "text": "  (7) 马氏距离 'mahalanobis'：$D_M(x) = \\sqrt{(x - \\mu)^T \\Sigma^{-1} (x - \\mu)}$ 为样本协方差矩阵的逆矩阵。当样本分布独立时，$\\Sigma$ 为单位矩阵，此时马氏距离等同于欧氏距离。",
+          "page_num": 1
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": []
+    },
+    "formula": {
+      "expected_formulas": [
+        {
+          "text": "c = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}",
+          "source": "inline"
+        },
+        {
+          "text": "c = |x_1 - x_2| + |y_1 - y_2|",
+          "source": "inline"
+        },
+        {
+          "text": "D_{Chebyshev}\\left(p,q\\right)\\coloneq\\max_{i}\\left(\\left\\vert p_{i}-q_{i}\\right\\vert\\right)",
+          "source": "inline"
+        },
+        {
+          "text": "d_{12} = \\sqrt[p]{\\sum_{k=1}^{n} |x_{1k} - x_{2k}|^p}",
+          "source": "inline"
+        },
+        {
+          "text": "d_{12} = \\sqrt{\\sum_{k=1}^{n} (x_{1k} - x_{2k})^2}",
+          "source": "inline"
+        },
+        {
+          "text": "w",
+          "source": "inline"
+        },
+        {
+          "text": "D_M(x) = \\sqrt{(x - \\mu)^T \\Sigma^{-1} (x - \\mu)}",
+          "source": "inline"
+        },
+        {
+          "text": "\\Sigma",
+          "source": "inline"
+        }
+      ],
+      "formula_count": 8
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

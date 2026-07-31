@@ -1,0 +1,416 @@
+{
+  "doc_id": "86-YMS_mock_page14_fd122c7dee",
+  "_generated_at": "2026-07-29T09:08:36+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "SMIC dental/xzixong261030",
+        "count": 1
+      },
+      {
+        "text": "2026年7月29日14时19分",
+        "count": 3
+      },
+      {
+        "text": "Confidential/xzixong261030",
+        "count": 3
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "MatrixOne Intelligence",
+        "count": 3
+      },
+      {
+        "text": "SMIC",
+        "count": 4
+      },
+      {
+        "text": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备 44030402004672号 | 粤ICP备2021044820号",
+        "count": 1
+      },
+      {
+        "text": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备44030402004672号|粤ICP备2021044820号",
+        "count": 2
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 1,
+    "table_html_summaries": [
+      "<table border='\\\"1\\\"' cellspacing='\\\"0\\\"'><tr><th>xx</th><th>xx</th><th>xx</th></tr><tr><td>a</td><td>a</td><td>q</td></tr><tr><td>b</td><td>b</td><td>w</td></tr><tr><td>c</td><td>c</td><td>e</td></tr><tr><td>d</td><td>d</td><td>r</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "YMSmock",
+        "level": 1
+      },
+      {
+        "text": "P14: 正态分布",
+        "level": 1
+      },
+      {
+        "text": "IMP MCI Tune Beam-AMU Out Of Tange Error",
+        "level": 1
+      },
+      {
+        "text": "P14: 正态分布",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "YMSmock",
+      "P14: 正态分布",
+      "• 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。",
+      "  • 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。",
+      "  • 正态分布的概率密度函数（Probability Density Function, PDF）的数学表达式为：$f(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$。1. 当 $x=\\mu$ 时，指数部分为0，函数取到最大值。2. 当 $x$ 远离 $\\mu$ 时，$(x-\\mu)^2$ 增大，指数部分迅速衰减为0，导致概率密度急剧下降。",
+      "- 正态曲线下",
+      "  • 横轴区间$(\\mu-\\sigma, \\mu+\\sigma)$内的面积为$68.268949\\%$",
+      "    $P\\{|X-\\mu|<\\sigma\\}=2\\Phi(1)-1=0.6826$",
+      "  • 横轴区间 $(\\mu - 1.96\\sigma, \\mu + 1.96\\sigma)$ 内的面积为 $95.449974\\%$",
+      "    • \\( P\\{|X-\\mu| < 2\\sigma\\} = 2\\Phi(2) - 1 = 0.9544 \\)",
+      "  • 横轴区间 $(\\mu - 2.58\\sigma, \\mu + 2.58\\sigma)$ 内的面积为 $99.730020\\%$",
+      "    • \\( P\\{|X-\\mu| < 3\\sigma\\} = 2\\Phi(3) - 1 = 0.9974 \\)",
+      "• “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能.",
+      "<img>",
+      "IMP MCI Tune Beam-AMU Out Of Tange Error",
+      "□ Issue Description:",
+      "  ✓ Pie inform 18ums 03YB S4H154/159 WAT VBG fail",
+      "□Impact:",
+      "  ✓ VBG&GOI scrap",
+      "□ Evidence & Analysis:",
+      "  ✓ tile 1 desc",
+      "  ✓ tile 2 desc",
+      "  ✓ tile 3 desc",
+      "  ✓ tile 4 desc",
+      "  ✓ tile 5 desc",
+      "□ Root Cause:",
+      "  ✓ Dry pump含金属成分的密封镀层再高温下附着不稳定",
+      "□Actions:",
+      "  ✓ Dry pump维修不是用密封镀层或使用不含金属成分的密封镀层",
+      "  ✓ 值班手册更新：Asher太极更换dry pump constraint LDD loop",
+      "11、15",
+      "□ Lot Disposition",
+      "  ✓ scrap 3xxx xxx xxx",
+      "<img>",
+      "<img>",
+      "<table border='\\\"1\\\"' cellspacing='\\\"0\\\"'><tr><th>xx</th><th>xx</th><th>xx</th></tr><tr><td>a</td><td>a</td><td>q</td></tr><tr><td>b</td><td>b</td><td>w</td></tr><tr><td>c</td><td>c</td><td>e</td></tr><tr><td>d</td><td>d</td><td>r</td></tr></table>",
+      "<img>",
+      "<img>",
+      "<img>",
+      "<img>",
+      "<img>",
+      "<img>",
+      "P14: 正态分布",
+      "• 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。",
+      "  • 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。",
+      "  • 正态分布的概率密度函数（Probability Density Function, PDF）的数学表达式为：$f(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$。1. 当 $x = \\mu$ 时，指数部分为 0，函数取到最大值。2. 当 $x$ 远离 $\\mu$ 时，$(x-\\mu)^2$ 增大，指数部分迅速衰减为 0，导致概率密度急剧下降。",
+      "• 正态曲线下",
+      "  • 横轴区间 $(\\mu-\\sigma, \\mu+\\sigma)$ 内的面积为 $68.268949\\%$",
+      "    $P\\{|X-\\mu|<\\sigma\\}=2\\Phi(1)-1=0.6826$",
+      "  • 横轴区间 $(\\mu-1.96\\sigma, \\mu+1.96\\sigma)$ 内的面积为 $95.449974\\%$",
+      "    • \\( P\\{|X-\\mu| < 2\\sigma\\} = 2\\Phi(2) - 1 = 0.9544 \\)",
+      "  • 横轴区间 $(\\mu - 2.58\\sigma, \\mu + 2.58\\sigma)$ 内的面积为 $99.730020\\%$",
+      "    • \\( P\\{|X-\\mu| < 3\\sigma\\} = 2\\Phi(3) - 1 = 0.9974 \\)",
+      " • “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能.",
+      "<img>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "2": 1,
+      "3": 8,
+      "4": 1
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "• 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。",
+          "page_num": 2
+        },
+        {
+          "text": "  • 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。",
+          "page_num": 2
+        },
+        {
+          "text": "  • 正态分布的概率密度函数（Probability Density Function, PDF）的数学表达式为：$f(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$。1. 当 $x=\\mu$ 时，指数部分为0，函数取到最大值。2. 当 $x$ 远离 $\\mu$ 时，$(x-\\mu)^2$ 增大，指数部分迅速衰减为0，导致概率密度急剧下降。",
+          "page_num": 2
+        },
+        {
+          "text": "- 正态曲线下",
+          "page_num": 2
+        },
+        {
+          "text": "  • 横轴区间$(\\mu-\\sigma, \\mu+\\sigma)$内的面积为$68.268949\\%$",
+          "page_num": 2
+        },
+        {
+          "text": "    $P\\{|X-\\mu|<\\sigma\\}=2\\Phi(1)-1=0.6826$",
+          "page_num": 2
+        },
+        {
+          "text": "  • 横轴区间 $(\\mu - 1.96\\sigma, \\mu + 1.96\\sigma)$ 内的面积为 $95.449974\\%$",
+          "page_num": 2
+        },
+        {
+          "text": "    • \\( P\\{|X-\\mu| < 2\\sigma\\} = 2\\Phi(2) - 1 = 0.9544 \\)",
+          "page_num": 2
+        },
+        {
+          "text": "  • 横轴区间 $(\\mu - 2.58\\sigma, \\mu + 2.58\\sigma)$ 内的面积为 $99.730020\\%$",
+          "page_num": 2
+        },
+        {
+          "text": "    • \\( P\\{|X-\\mu| < 3\\sigma\\} = 2\\Phi(3) - 1 = 0.9974 \\)",
+          "page_num": 2
+        },
+        {
+          "text": "• “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能.",
+          "page_num": 2
+        },
+        {
+          "text": "□ Issue Description:",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ Pie inform 18ums 03YB S4H154/159 WAT VBG fail",
+          "page_num": 3
+        },
+        {
+          "text": "□Impact:",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ VBG&GOI scrap",
+          "page_num": 3
+        },
+        {
+          "text": "□ Evidence & Analysis:",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ tile 1 desc",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ tile 2 desc",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ tile 3 desc",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ tile 4 desc",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ tile 5 desc",
+          "page_num": 3
+        },
+        {
+          "text": "□ Root Cause:",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ Dry pump含金属成分的密封镀层再高温下附着不稳定",
+          "page_num": 3
+        },
+        {
+          "text": "□Actions:",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ Dry pump维修不是用密封镀层或使用不含金属成分的密封镀层",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ 值班手册更新：Asher太极更换dry pump constraint LDD loop",
+          "page_num": 3
+        },
+        {
+          "text": "11、15",
+          "page_num": 3
+        },
+        {
+          "text": "□ Lot Disposition",
+          "page_num": 3
+        },
+        {
+          "text": "  ✓ scrap 3xxx xxx xxx",
+          "page_num": 3
+        },
+        {
+          "text": "• 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。",
+          "page_num": 4
+        },
+        {
+          "text": "  • 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。",
+          "page_num": 4
+        },
+        {
+          "text": "  • 正态分布的概率密度函数（Probability Density Function, PDF）的数学表达式为：$f(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$。1. 当 $x = \\mu$ 时，指数部分为 0，函数取到最大值。2. 当 $x$ 远离 $\\mu$ 时，$(x-\\mu)^2$ 增大，指数部分迅速衰减为 0，导致概率密度急剧下降。",
+          "page_num": 4
+        },
+        {
+          "text": "• 正态曲线下",
+          "page_num": 4
+        },
+        {
+          "text": "  • 横轴区间 $(\\mu-\\sigma, \\mu+\\sigma)$ 内的面积为 $68.268949\\%$",
+          "page_num": 4
+        },
+        {
+          "text": "    $P\\{|X-\\mu|<\\sigma\\}=2\\Phi(1)-1=0.6826$",
+          "page_num": 4
+        },
+        {
+          "text": "  • 横轴区间 $(\\mu-1.96\\sigma, \\mu+1.96\\sigma)$ 内的面积为 $95.449974\\%$",
+          "page_num": 4
+        },
+        {
+          "text": "    • \\( P\\{|X-\\mu| < 2\\sigma\\} = 2\\Phi(2) - 1 = 0.9544 \\)",
+          "page_num": 4
+        },
+        {
+          "text": "  • 横轴区间 $(\\mu - 2.58\\sigma, \\mu + 2.58\\sigma)$ 内的面积为 $99.730020\\%$",
+          "page_num": 4
+        },
+        {
+          "text": "    • \\( P\\{|X-\\mu| < 3\\sigma\\} = 2\\Phi(3) - 1 = 0.9974 \\)",
+          "page_num": 4
+        },
+        {
+          "text": " • “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能.",
+          "page_num": 4
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table border='\\\"1\\\"' cellspacing='\\\"0\\\"'><tr><th>xx</th><th>xx</th><th>xx</th></tr><tr><td>a</td><td>a</td><td>q</td></tr><tr><td>b</td><td>b</td><td>w</td></tr><tr><td>c</td><td>c</td><td>e</td></tr><tr><td>d</td><td>d</td><td>r</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [
+        {
+          "text": "f(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}",
+          "source": "inline"
+        },
+        {
+          "text": "x=\\mu",
+          "source": "inline"
+        },
+        {
+          "text": "x",
+          "source": "inline"
+        },
+        {
+          "text": "\\mu",
+          "source": "inline"
+        },
+        {
+          "text": "(x-\\mu)^2",
+          "source": "inline"
+        },
+        {
+          "text": "(\\mu-\\sigma, \\mu+\\sigma)",
+          "source": "inline"
+        },
+        {
+          "text": "68.268949\\%",
+          "source": "inline"
+        },
+        {
+          "text": "P\\{|X-\\mu|<\\sigma\\}=2\\Phi(1)-1=0.6826",
+          "source": "inline"
+        },
+        {
+          "text": "(\\mu - 1.96\\sigma, \\mu + 1.96\\sigma)",
+          "source": "inline"
+        },
+        {
+          "text": "95.449974\\%",
+          "source": "inline"
+        },
+        {
+          "text": "(\\mu - 2.58\\sigma, \\mu + 2.58\\sigma)",
+          "source": "inline"
+        },
+        {
+          "text": "99.730020\\%",
+          "source": "inline"
+        },
+        {
+          "text": "f(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}",
+          "source": "inline"
+        },
+        {
+          "text": "x = \\mu",
+          "source": "inline"
+        },
+        {
+          "text": "x",
+          "source": "inline"
+        },
+        {
+          "text": "\\mu",
+          "source": "inline"
+        },
+        {
+          "text": "(x-\\mu)^2",
+          "source": "inline"
+        },
+        {
+          "text": "(\\mu-\\sigma, \\mu+\\sigma)",
+          "source": "inline"
+        },
+        {
+          "text": "68.268949\\%",
+          "source": "inline"
+        },
+        {
+          "text": "P\\{|X-\\mu|<\\sigma\\}=2\\Phi(1)-1=0.6826",
+          "source": "inline"
+        },
+        {
+          "text": "(\\mu-1.96\\sigma, \\mu+1.96\\sigma)",
+          "source": "inline"
+        },
+        {
+          "text": "95.449974\\%",
+          "source": "inline"
+        },
+        {
+          "text": "(\\mu - 2.58\\sigma, \\mu + 2.58\\sigma)",
+          "source": "inline"
+        },
+        {
+          "text": "99.730020\\%",
+          "source": "inline"
+        }
+      ],
+      "formula_count": 24
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

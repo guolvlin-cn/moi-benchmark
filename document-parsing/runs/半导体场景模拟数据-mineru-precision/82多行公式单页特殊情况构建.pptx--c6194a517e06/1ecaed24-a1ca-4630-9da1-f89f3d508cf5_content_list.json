@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "**Analysis**",
+        "text_level": 2,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "距离计算方法主要有：",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "（1）欧氏距离’euclidean’:",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "（2）曼哈顿距离’manhattan’:",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "（3）切比雪夫距离’chebyshev’：",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "（4）闵可夫斯基距离’minkowski’：",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "（5）带权重闵可夫斯基距离’wminkowski’：                              ，其中w为特征权重",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "（6）标准化欧氏距离’seuclidean’：即对于各特征维度做了归一化以后的欧氏距离。此时个样本特征维度的均值为0，方差为1.",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "（7）马氏距离‘mahalanobis’：                                             其中，为样本协方差矩阵的逆矩阵。当样本分布独立时，S为单位矩阵，此时马氏距离等同于欧氏距离。",
+        "page_idx": 0
+    }
+]

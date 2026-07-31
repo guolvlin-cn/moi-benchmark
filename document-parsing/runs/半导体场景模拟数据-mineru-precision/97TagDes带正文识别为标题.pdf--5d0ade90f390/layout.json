@@ -1,0 +1,1238 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        67,
+                        71,
+                        239,
+                        93
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                72,
+                                238,
+                                91
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        72,
+                                        238,
+                                        91
+                                    ],
+                                    "type": "text",
+                                    "content": "Dispatch list format",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        139,
+                        105,
+                        533,
+                        151
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                143,
+                                108,
+                                530,
+                                118
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        108,
+                                        530,
+                                        118
+                                    ],
+                                    "type": "text",
+                                    "content": "Although the Dispatch API provides functions for parsing and accessing the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                123,
+                                531,
+                                133
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        123,
+                                        531,
+                                        133
+                                    ],
+                                    "type": "text",
+                                    "content": "dispatch result, you may want to handle the response yourself. In that case, this",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                138,
+                                396,
+                                148
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        138,
+                                        396,
+                                        148
+                                    ],
+                                    "type": "text",
+                                    "content": "description of the returned dispatch list may be helpful.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        139,
+                        152,
+                        534,
+                        260
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                142,
+                                153,
+                                531,
+                                165
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        153,
+                                        531,
+                                        165
+                                    ],
+                                    "type": "text",
+                                    "content": "Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                169,
+                                531,
+                                180
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        169,
+                                        531,
+                                        180
+                                    ],
+                                    "type": "text",
+                                    "content": "exchange batch control or data acquisition tasks using a compact and extensible",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                185,
+                                531,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        185,
+                                        531,
+                                        195
+                                    ],
+                                    "type": "text",
+                                    "content": "TLV (Type–Length–Value) binary encoding. This approach ensures compatibility",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                200,
+                                530,
+                                211
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        200,
+                                        530,
+                                        211
+                                    ],
+                                    "type": "text",
+                                    "content": "across vendors # , supports dynamic task type extensions, and performs reliably",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                216,
+                                531,
+                                227
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        216,
+                                        531,
+                                        227
+                                    ],
+                                    "type": "text",
+                                    "content": "even under constrained network conditions. The following sections outline the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                232,
+                                532,
+                                243
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        232,
+                                        532,
+                                        243
+                                    ],
+                                    "type": "text",
+                                    "content": "technical specification and usage guidelines for this fictional API.Also, note that",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                248,
+                                432,
+                                258
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        248,
+                                        432,
+                                        258
+                                    ],
+                                    "type": "text",
+                                    "content": "there is one key, #<sub>ISS_SLIS_DIAGS</sub>, which does not confirmed.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        67,
+                        286,
+                        215,
+                        308
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                285,
+                                213,
+                                307
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        285,
+                                        213,
+                                        307
+                                    ],
+                                    "type": "text",
+                                    "content": "Tag descriptions",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        140,
+                        320,
+                        533,
+                        349
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 5,
+                    "lines": [
+                        {
+                            "bbox": [
+                                143,
+                                321,
+                                531,
+                                333
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        321,
+                                        531,
+                                        333
+                                    ],
+                                    "type": "text",
+                                    "content": "The following table provides description for the tages used in a dispatch query",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                337,
+                                173,
+                                349
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        337,
+                                        173,
+                                        349
+                                    ],
+                                    "type": "text",
+                                    "content": "result:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        161,
+                        351,
+                        533,
+                        569
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                161,
+                                351,
+                                533,
+                                569
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        161,
+                                        351,
+                                        533,
+                                        569
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                161,
+                                                351,
+                                                533,
+                                                569
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>Tag</td><td>Description</td></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formatting the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-DIAGS</td><td>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the otheer tags.</td></tr></table>",
+                                            "image_path": "23d31b7bdec903a323a5551a8c08473bb5d6f1e0bc8d3a150be1db01f510d4e5.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 6
+                        }
+                    ],
+                    "index": 6
+                },
+                {
+                    "bbox": [
+                        66,
+                        595,
+                        280,
+                        616
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                595,
+                                279,
+                                615
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        595,
+                                        279,
+                                        615
+                                    ],
+                                    "type": "text",
+                                    "content": "Parding the dispatch list",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        140,
+                        629,
+                        533,
+                        657
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                143,
+                                630,
+                                531,
+                                642
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        630,
+                                        531,
+                                        642
+                                    ],
+                                    "type": "text",
+                                    "content": "The following functions are available for parding and processing the dispatcher",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                645,
+                                173,
+                                656
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        645,
+                                        173,
+                                        656
+                                    ],
+                                    "type": "text",
+                                    "content": "result:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        76,
+                        662,
+                        528,
+                        765
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                76,
+                                662,
+                                528,
+                                765
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        76,
+                                        662,
+                                        528,
+                                        765
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                76,
+                                                662,
+                                                528,
+                                                765
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>[C++]</td></tr><tr><td>#include &quot;writerlibx/iss_schedmsg.h&quot;</td></tr><tr><td>#include &quot;writerlibx/iss_schedmsg_print.h&quot;</td></tr><tr><td>/* Parsing of raw dispatch results */</td></tr><tr><td>schedmsg * iss_parseSchedMsg(const char *rawText, u_int text Size);</td></tr></table>",
+                                            "image_path": "a58a0faf2bafdb4c529ec9b79436041865097cd4e1842ea01e06077933943e78.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 9
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        343,
+                        22,
+                        533,
+                        47
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                345,
+                                24,
+                                531,
+                                33
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        345,
+                                        24,
+                                        531,
+                                        33
+                                    ],
+                                    "type": "text",
+                                    "content": "Applied APF RTD 9.4.0 Dispatch API Guide",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                383,
+                                36,
+                                531,
+                                44
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        383,
+                                        36,
+                                        531,
+                                        44
+                                    ],
+                                    "type": "text",
+                                    "content": "Chapter 1. Using the Dispatch API",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        384,
+                        791,
+                        511,
+                        803
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                385,
+                                793,
+                                511,
+                                802
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        385,
+                                        793,
+                                        511,
+                                        802
+                                    ],
+                                    "type": "text",
+                                    "content": "Applied Materials Confidential",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        520,
+                        791,
+                        533,
+                        802
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 11,
+                    "lines": [
+                        {
+                            "bbox": [
+                                520,
+                                792,
+                                532,
+                                802
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        520,
+                                        792,
+                                        532,
+                                        802
+                                    ],
+                                    "type": "text",
+                                    "content": "13",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        67,
+                        71,
+                        239,
+                        93
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                72,
+                                238,
+                                91
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        72,
+                                        238,
+                                        91
+                                    ],
+                                    "type": "text",
+                                    "content": "Dispatch list format",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        139,
+                        105,
+                        533,
+                        151
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                143,
+                                108,
+                                530,
+                                118
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        108,
+                                        530,
+                                        118
+                                    ],
+                                    "type": "text",
+                                    "content": "Although the Dispatch API provides functions for parsing and accessing the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                123,
+                                531,
+                                133
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        123,
+                                        531,
+                                        133
+                                    ],
+                                    "type": "text",
+                                    "content": "dispatch result, you may want to handle the response yourself. In that case, this",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                138,
+                                396,
+                                148
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        138,
+                                        396,
+                                        148
+                                    ],
+                                    "type": "text",
+                                    "content": "description of the returned dispatch list may be helpful.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        139,
+                        152,
+                        534,
+                        260
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                142,
+                                153,
+                                531,
+                                165
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        153,
+                                        531,
+                                        165
+                                    ],
+                                    "type": "text",
+                                    "content": "Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                169,
+                                531,
+                                180
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        169,
+                                        531,
+                                        180
+                                    ],
+                                    "type": "text",
+                                    "content": "exchange batch control or data acquisition tasks using a compact and extensible",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                185,
+                                531,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        185,
+                                        531,
+                                        195
+                                    ],
+                                    "type": "text",
+                                    "content": "TLV (Type–Length–Value) binary encoding. This approach ensures compatibility",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                200,
+                                530,
+                                211
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        200,
+                                        530,
+                                        211
+                                    ],
+                                    "type": "text",
+                                    "content": "across vendors # , supports dynamic task type extensions, and performs reliably",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                216,
+                                531,
+                                227
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        216,
+                                        531,
+                                        227
+                                    ],
+                                    "type": "text",
+                                    "content": "even under constrained network conditions. The following sections outline the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                232,
+                                532,
+                                243
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        232,
+                                        532,
+                                        243
+                                    ],
+                                    "type": "text",
+                                    "content": "technical specification and usage guidelines for this fictional API.Also, note that",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                248,
+                                432,
+                                258
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        248,
+                                        432,
+                                        258
+                                    ],
+                                    "type": "text",
+                                    "content": "there is one key, #<sub>ISS_SLIS_DIAGS</sub>, which does not confirmed.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        67,
+                        286,
+                        215,
+                        308
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                285,
+                                213,
+                                307
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        285,
+                                        213,
+                                        307
+                                    ],
+                                    "type": "text",
+                                    "content": "Tag descriptions",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        140,
+                        320,
+                        533,
+                        349
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 5,
+                    "lines": [
+                        {
+                            "bbox": [
+                                143,
+                                321,
+                                531,
+                                333
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        321,
+                                        531,
+                                        333
+                                    ],
+                                    "type": "text",
+                                    "content": "The following table provides description for the tages used in a dispatch query",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                143,
+                                337,
+                                173,
+                                349
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        337,
+                                        173,
+                                        349
+                                    ],
+                                    "type": "text",
+                                    "content": "result:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        161,
+                        351,
+                        533,
+                        569
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                161,
+                                351,
+                                533,
+                                569
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        161,
+                                        351,
+                                        533,
+                                        569
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                161,
+                                                351,
+                                                533,
+                                                569
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>Tag</td><td>Description</td></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formatting the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-DIAGS</td><td>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the otheer tags.</td></tr></table>",
+                                            "image_path": "23d31b7bdec903a323a5551a8c08473bb5d6f1e0bc8d3a150be1db01f510d4e5.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 6
+                        }
+                    ],
+                    "index": 6
+                },
+                {
+                    "bbox": [
+                        66,
+                        595,
+                        280,
+                        616
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                595,
+                                279,
+                                615
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        595,
+                                        279,
+                                        615
+                                    ],
+                                    "type": "text",
+                                    "content": "Parding the dispatch list",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        140,
+                        629,
+                        533,
+                        657
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                143,
+                                630,
+                                531,
+                                642
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        143,
+                                        630,
+                                        531,
+                                        642
+                                    ],
+                                    "type": "text",
+                                    "content": "The following functions are available for parding and processing the dispatcher",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                142,
+                                645,
+                                173,
+                                656
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        142,
+                                        645,
+                                        173,
+                                        656
+                                    ],
+                                    "type": "text",
+                                    "content": "result:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        76,
+                        662,
+                        528,
+                        765
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                76,
+                                662,
+                                528,
+                                765
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        76,
+                                        662,
+                                        528,
+                                        765
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                76,
+                                                662,
+                                                528,
+                                                765
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>[C++]</td></tr><tr><td>#include &quot;writerlibx/iss_schedmsg.h&quot;</td></tr><tr><td>#include &quot;writerlibx/iss_schedmsg_print.h&quot;</td></tr><tr><td>/* Parsing of raw dispatch results */</td></tr><tr><td>schedmsg * iss_parseSchedMsg(const char *rawText, u_int text Size);</td></tr></table>",
+                                            "image_path": "a58a0faf2bafdb4c529ec9b79436041865097cd4e1842ea01e06077933943e78.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 9
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": false,
+    "_version_name": "3.4.0"
+}

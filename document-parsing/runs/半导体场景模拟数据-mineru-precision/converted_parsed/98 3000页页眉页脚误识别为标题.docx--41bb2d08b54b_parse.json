@@ -1,0 +1,311 @@
+{
+  "filename": "df491531-b728-4e1b-ac38-46fea6b20eb6_content_list.json",
+  "filetype": "JSON",
+  "block_count": 38,
+  "blocks": [
+    {
+      "id": "6619ac6f-0543-434f-bfcf-8ea1accbf6d2",
+      "index": 0,
+      "type": "text",
+      "level": null,
+      "content": "**Support coverage**",
+      "page_num": 1
+    },
+    {
+      "id": "92399818-1c01-41e3-b02a-ae910aff732a",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "This section description the support converage provide with the release,including version obsolescence, how to access the distribution site, and how to contact software support.",
+      "page_num": 1
+    },
+    {
+      "id": "baf617a5-afd3-4f1b-bf61-322ac784d31e",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "**Version obsolescence**",
+      "page_num": 1
+    },
+    {
+      "id": "6b74dbe1-3dfa-49a5-9100-27b1e8745cf5",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).",
+      "page_num": 1
+    },
+    {
+      "id": "831252c6-8847-4829-9aea-47304aad8e1a",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.",
+      "page_num": 1
+    },
+    {
+      "id": "1f2ecc73-c41c-4668-acdd-6b6111da6200",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+      "page_num": 1
+    },
+    {
+      "id": "37674715-1d00-47ce-aff3-86337e842c9a",
+      "index": 6,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td><p><strong>Version</strong></p></td><td><p><strong>Released</strong></p></td><td><p><strong>Superseded</strong></p></td><td><p><strong>Standaed Support Ends</strong></p></td><td><p><strong>Extended Support Ends</strong></p></td></tr><tr><td><p>Date</p></td><td><p>Plan(%)</p></td><td><p>Actual(%)</p></td><td><p>任务总数</p></td><td><p>已完成任务数</p></td></tr><tr><td><p>25-05-09</p></td><td><p>6.2 </p></td><td><p>6.2 </p></td><td><p>15 </p></td><td><p>15 </p></td></tr><tr><td><p>25-05-16</p></td><td><p>8.3 </p></td><td><p>8.3 </p></td><td><p>20 </p></td><td><p>20 </p></td></tr><tr><td><p>25-05-23</p></td><td><p>10.7 </p></td><td><p>10.7 </p></td><td><p>26 </p></td><td><p>26 </p></td></tr><tr><td><p>25-05-30</p></td><td><p>14.0 </p></td><td><p>12.8 </p></td><td><p>34 </p></td><td><p>31 </p></td></tr><tr><td><p>25-06-13</p></td><td><p>19.0 </p></td><td></td><td></td><td></td></tr></table>",
+      "page_num": 1
+    },
+    {
+      "id": "40b1ba64-ad45-4812-848e-fce462bed877",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "**Accessing the distribution site**",
+      "page_num": 1
+    },
+    {
+      "id": "d50666d8-eb8f-4947-a7f7-bcf69e841e5e",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "Term Breakdown (typical engineering interpretation)",
+      "page_num": 1
+    },
+    {
+      "id": "ec0f7c47-2838-4f73-bb1c-01a5ca1b637c",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "1.ISS",
+      "page_num": 1
+    },
+    {
+      "id": "81fef8e7-8108-4298-9b14-800613d939d7",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "2.Integrated / Intelligent System Services",
+      "page_num": 1
+    },
+    {
+      "id": "e02a61af-a858-4d6a-8d0c-f46e0fe6e568",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "Refers to the system-level service layer of the equipment software.",
+      "page_num": 1
+    },
+    {
+      "id": "70f752c9-8d79-416d-b7e4-adfd001fc90f",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "Device Data / Diagnostic Data Information System",
+      "page_num": 1
+    },
+    {
+      "id": "ba113efb-f284-44e3-b25a-fd51f2ba1032",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "page_num": 1
+    },
+    {
+      "id": "1defc851-0998-42d2-993a-9e24b32587a2",
+      "index": 14,
+      "type": "text",
+      "level": null,
+      "content": "**Support coverage\\_1**",
+      "page_num": 1
+    },
+    {
+      "id": "badc27bf-de29-4c58-879d-7b24fe1a83ad",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "This section description the support converage provide with the release,including version obsolescence, how to access the distribution site, and how to contact software support.-1",
+      "page_num": 1
+    },
+    {
+      "id": "c46f7683-1e46-40de-a8f8-b2dddf8dd152",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "**Version obsolescence**",
+      "page_num": 1
+    },
+    {
+      "id": "6dc05748-61d0-4c7a-a2b8-d81c93835ee1",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).-1",
+      "page_num": 1
+    },
+    {
+      "id": "1258e98d-ee83-45c0-a35a-1dfab8239b05",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.-1",
+      "page_num": 1
+    },
+    {
+      "id": "64830d8c-5553-48fd-a01b-c9876aee22a9",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+      "page_num": 1
+    },
+    {
+      "id": "ce3a03ed-b13a-45bd-bac1-ad12dcdc87b4",
+      "index": 20,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td><p><strong>Version</strong></p></td><td><p><strong>Released</strong></p></td><td><p><strong>Superseded</strong></p></td><td><p><strong>Standaed Support Ends</strong></p></td><td><p><strong>Extended Support Ends</strong></p></td></tr><tr><td><p>Date</p></td><td><p>Plan(%)</p></td><td><p>Actual(%)</p></td><td><p>任务总数</p></td><td><p>已完成任务数</p></td></tr><tr><td><p>25-05-09</p></td><td><p>6.2 </p></td><td><p>6.2 </p></td><td><p>15 </p></td><td><p>15 </p></td></tr><tr><td><p>25-05-16</p></td><td><p>8.3 </p></td><td><p>8.3 </p></td><td><p>20 </p></td><td><p>20 </p></td></tr><tr><td><p>25-05-23</p></td><td><p>10.7 </p></td><td><p>10.7 </p></td><td><p>26 </p></td><td><p>26 </p></td></tr><tr><td><p>25-05-30</p></td><td><p>14.0 </p></td><td><p>12.8 </p></td><td><p>34 </p></td><td><p>31 </p></td></tr><tr><td><p>25-06-13</p></td><td><p>19.0-1 </p></td><td></td><td></td><td></td></tr></table>",
+      "page_num": 1
+    },
+    {
+      "id": "a075a6eb-2663-4caf-b185-f8fb4594f7df",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "**Accessing the distribution site-1**",
+      "page_num": 1
+    },
+    {
+      "id": "6532320b-20b2-4507-a57b-1d8c7b6931ef",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "Term Breakdown (typical engineering interpretation)-1",
+      "page_num": 1
+    },
+    {
+      "id": "2924473b-eee9-4d01-97b6-ff2080e25fd8",
+      "index": 23,
+      "type": "text",
+      "level": null,
+      "content": "1.ISS",
+      "page_num": 1
+    },
+    {
+      "id": "30a0a93d-6f5e-42a1-9cfe-08e6545ecace",
+      "index": 24,
+      "type": "text",
+      "level": null,
+      "content": "2.Integrated / Intelligent System Services-1",
+      "page_num": 1
+    },
+    {
+      "id": "062d4e9a-9c7f-4d60-be36-597184a23d0c",
+      "index": 25,
+      "type": "text",
+      "level": null,
+      "content": "Refers to the system-level service layer of the equipment software.",
+      "page_num": 1
+    },
+    {
+      "id": "33d15935-55ba-4a3a-9fae-55d624acccda",
+      "index": 26,
+      "type": "text",
+      "level": null,
+      "content": "Device Data / Diagnostic Data Information System",
+      "page_num": 1
+    },
+    {
+      "id": "00df879a-f45d-4b33-9867-2160423034e3",
+      "index": 27,
+      "type": "text",
+      "level": null,
+      "content": "Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.-1",
+      "page_num": 1
+    },
+    {
+      "id": "4f7300ab-d00f-4675-bda9-0db3528f68ea",
+      "index": 28,
+      "type": "text",
+      "level": null,
+      "content": "**About This Document**",
+      "page_num": 1
+    },
+    {
+      "id": "17c7c5c8-b706-4b1e-a47c-f9f6de21b9c6",
+      "index": 29,
+      "type": "text",
+      "level": null,
+      "content": "Term Breakdown (typical engineering interpretation)",
+      "page_num": 1
+    },
+    {
+      "id": "f76f434f-60cc-45cb-acca-6addec72596b",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "- ISS,Integrated / Intelligent System Services",
+      "page_num": 1
+    },
+    {
+      "id": "138f1c68-90a8-42da-a514-d954152431b6",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": "Refers to the system-level service layer of the equipment software.",
+      "page_num": 1
+    },
+    {
+      "id": "77a715a9-7996-48bc-aece-fa6760b82e58",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "- DDIS,Device Data / Diagnostic Data Information System",
+      "page_num": 1
+    },
+    {
+      "id": "cb7c6701-edc1-4418-94d3-463c2be52487",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": "Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "page_num": 1
+    },
+    {
+      "id": "8244d8d1-eeba-4788-8d73-1f8ced4bb635",
+      "index": 34,
+      "type": "text",
+      "level": null,
+      "content": "- DIAGS,Diagnostics,Explicitly denotes diagnostic, health, or troubleshooting-related data and functions.",
+      "page_num": 1
+    },
+    {
+      "id": "ff8aefd3-ecf9-45a0-95ca-265b2845174d",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": "- Combined Meaning,ISS-DDIS-DIAGS\n- A system-level diagnostic data module or namespace used for equipment health monitoring, fault diagnosis, and maintenance analysis, rather than for process or recipe control.\n- Typical Usage Contexts,Dispatch or query result namespaces\n- Equipment diagnostic or service queries\n- System logs and traces\n- Maintenance / engineering mode data access\n- Key Distinction\n- Process data → used for wafer processing and recipe control\n- ISS-DDIS-DIAGS → used for equipment diagnostics, debugging, and health monitoring,One-sentence summary\n- ISS-DDIS-DIAGS refers to a system-level diagnostics module that provides device health and troubleshooting data within the equipment software architecture.\n- If you can share the exact query output or field names where this appears, the meaning can be narrowed further (e.g., real-time diagnostics vs. historical logs).",
+      "page_num": 1
+    },
+    {
+      "id": "cbfde1e7-93f4-4ef7-86cb-827dde95884b",
+      "index": 36,
+      "type": "header",
+      "level": null,
+      "content": "**Applied APF RTD 9 Release Notes** **About This Document**",
+      "page_num": 1
+    },
+    {
+      "id": "8a733a49-4d63-42f6-adb5-5c40be9cd274",
+      "index": 37,
+      "type": "footer",
+      "level": null,
+      "content": "Applied Materials Confidential | v",
+      "page_num": 1
+    }
+  ]
+}

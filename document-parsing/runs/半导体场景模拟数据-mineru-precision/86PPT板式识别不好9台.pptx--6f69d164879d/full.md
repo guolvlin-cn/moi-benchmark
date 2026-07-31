@@ -1,0 +1,15 @@
+## Start From 2014
+
+2014年\~2023年
+
+Fab5 Furnace TEOS 机台陆续装机共 **9** 台
+
+2022 SDTEF08
+
+2023 SDT
+
+2014 SDT02
+
+2014  SDT04
+
+2020 SDTEF06/SDTED07 installed

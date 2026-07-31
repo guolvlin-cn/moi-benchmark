@@ -1,0 +1,78 @@
+{
+  "doc_id": "12-__f685acd93c",
+  "_generated_at": "2026-07-29T07:17:10+00:00",
+  "header_footer": {
+    "expected_headers": [],
+    "expected_footers": [],
+    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+  },
+  "table": {
+    "expected_table_count": 2,
+    "table_html_summaries": [
+      "<table><tr><th colspan=\"2\">Oxidation <br></th><th>Avg.</th><th>STD</th><th><br></th><th>Avg.</th><th>STD</th></tr><tr><td rowspan=\"2\">SEASF06_A</td><td>pre</td><td>6.48</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.77 <br></td><td rowspan=\"2\">0.139 <br></td></tr><tr><td>post</td><td>15.25</td><td>0.197</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td>pre</td><td>6.51</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.53</td><td rowspan=\"2\">0.167</td></tr><tr><td>post</td><td>15.04</td><td>0.225</td></tr></table>",
+      "<table><tr><th colspan=\"2\">Charge <br></th><th>Avg.</th><th><br></th><th>Avg.</th></tr><tr><td rowspan=\"2\">SEASF06_A</td><td>pre</td><td>0.431</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">0.012</td></tr><tr><td>post</td><td>0.419</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td>pre</td><td>0.444</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">0.03</td></tr><tr><td>post</td><td>0.474</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "SEASF06B+LDD+Stage+WAT+VBG+Fail+8-D+Report",
+        "level": 1
+      }
+    ],
+    "_todo": "请检查标题文本和层级是否正确"
+  },
+  "layout": {
+    "expected_reading_order": [
+      "SEASF06B+LDD+Stage+WAT+VBG+Fail+8-D+Report",
+      "D4:Define and Verify Root Cause",
+      "▶ Root Cause Evidence",
+      "<table><tr><th colspan=\"2\">Oxidation <br></th><th>Avg.</th><th>STD</th><th><br></th><th>Avg.</th><th>STD</th></tr><tr><td rowspan=\"2\">SEASF06_A</td><td>pre</td><td>6.48</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.77 <br></td><td rowspan=\"2\">0.139 <br></td></tr><tr><td>post</td><td>15.25</td><td>0.197</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td>pre</td><td>6.51</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.53</td><td rowspan=\"2\">0.167</td></tr><tr><td>post</td><td>15.04</td><td>0.225</td></tr></table>",
+      "<table><tr><th colspan=\"2\">Charge <br></th><th>Avg.</th><th><br></th><th>Avg.</th></tr><tr><td rowspan=\"2\">SEASF06_A</td><td>pre</td><td>0.431</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">0.012</td></tr><tr><td>post</td><td>0.419</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td>pre</td><td>0.444</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">0.03</td></tr><tr><td>post</td><td>0.474</td></tr></table>"
+    ],
+    "expected_no_split_texts": [],
+    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "D4:Define and Verify Root Cause",
+          "page_num": 1
+        },
+        {
+          "text": "▶ Root Cause Evidence",
+          "page_num": 1
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th colspan=\"2\">Oxidation <br></th><th>Avg.</th><th>STD</th><th><br></th><th>Avg.</th><th>STD</th></tr><tr><td rowspan=\"2\">SEASF06_A</td><td>pre</td><td>6.48</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.77 <br></td><td rowspan=\"2\">0.139 <br></td></tr><tr><td>post</td><td>15.25</td><td>0.197</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td>pre</td><td>6.51</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.53</td><td rowspan=\"2\">0.167</td></tr><tr><td>post</td><td>15.04</td><td>0.225</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th colspan=\"2\">Charge <br></th><th>Avg.</th><th><br></th><th>Avg.</th></tr><tr><td rowspan=\"2\">SEASF06_A</td><td>pre</td><td>0.431</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">0.012</td></tr><tr><td>post</td><td>0.419</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td>pre</td><td>0.444</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">0.03</td></tr><tr><td>post</td><td>0.474</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": false
+}

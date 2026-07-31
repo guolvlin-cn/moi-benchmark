@@ -1,0 +1,74 @@
+{
+  "doc_id": "213_06f657f15d",
+  "_generated_at": "2026-07-30T06:22:18+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Semiconfuctor Manufaceturing International Corporation\nDoc.No.: CR-WHMS-01-2005\nDoc.Title:SMIC Raw Materials Warehouse Management Procedure\nRec.:1\nPage No.:1/5",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC\nAccording to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 1,
+    "table_html_summaries": [
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图<br><br>**节点和流程：**<br>1. 供应商  <br>   - → 仓库  <br>2. 采购  <br>   - → 供应商  <br>   - → 物管  <br>3. 仓库  <br>   - → 检验 MQE/Us  <br>4. 检验 MQE/Us（菱形判断节点）  <br>   - 合格 → 合格区 库存  <br>   - 不合格 → 不合格区  <br>5. 不合格区  <br>   - → 检验 MQE/Us（反馈回环）  <br>6. 合格区 库存  <br>   - → 客户  <br>   - → 需求单位  <br>   - → 报废品仓库  <br>7. 需求单位（六边形）  <br>   - → 物管  <br>8. 物管  <br>   - → 采购  <br>9. 报废品仓库  <br>   - → 海关监管  <br>10. 海关监管（菱形判断节点）  <br>    - → 报废核销  <br>    - → 自行处理  <br>11. 报废核销  <br>    - → 报废品处置  <br>12. 报废品处置  <br>    - → 海关  <br>13. 海关  <br>    - → 结束  <br><br>**公式：** 无<br><br>**总结：** 该流程图描述了一个包含采购、仓储、检验、库存管理、报废处理及海关监管等环节的闭环业务流程。</td><td>供应商<br><br>采购<br><br>仓库<br><br>MQE/USER<br><br>仓库<br><br>物管<br>需求单位</td><td>1. 供应商送货<br><br>2. 下订单给供应商<br><br>3. 仓库管理<br><br>4. 检验物料<br><br>5. 库存管理<br><br>6.申请需求</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "1. 仓管系统功能之维护 SAP System",
+        "level": 1
+      },
+      {
+        "text": "1.1. 仓管作业流程图：",
+        "level": 2
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "1. 仓管系统功能之维护 SAP System",
+      "1.1. 仓管作业流程图：",
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图<br><br>**节点和流程：**<br>1. 供应商  <br>   - → 仓库  <br>2. 采购  <br>   - → 供应商  <br>   - → 物管  <br>3. 仓库  <br>   - → 检验 MQE/Us  <br>4. 检验 MQE/Us（菱形判断节点）  <br>   - 合格 → 合格区 库存  <br>   - 不合格 → 不合格区  <br>5. 不合格区  <br>   - → 检验 MQE/Us（反馈回环）  <br>6. 合格区 库存  <br>   - → 客户  <br>   - → 需求单位  <br>   - → 报废品仓库  <br>7. 需求单位（六边形）  <br>   - → 物管  <br>8. 物管  <br>   - → 采购  <br>9. 报废品仓库  <br>   - → 海关监管  <br>10. 海关监管（菱形判断节点）  <br>    - → 报废核销  <br>    - → 自行处理  <br>11. 报废核销  <br>    - → 报废品处置  <br>12. 报废品处置  <br>    - → 海关  <br>13. 海关  <br>    - → 结束  <br><br>**公式：** 无<br><br>**总结：** 该流程图描述了一个包含采购、仓储、检验、库存管理、报废处理及海关监管等环节的闭环业务流程。</td><td>供应商<br><br>采购<br><br>仓库<br><br>MQE/USER<br><br>仓库<br><br>物管<br>需求单位</td><td>1. 供应商送货<br><br>2. 下订单给供应商<br><br>3. 仓库管理<br><br>4. 检验物料<br><br>5. 库存管理<br><br>6.申请需求</td></tr></table>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": []
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图<br><br>**节点和流程：**<br>1. 供应商  <br>   - → 仓库  <br>2. 采购  <br>   - → 供应商  <br>   - → 物管  <br>3. 仓库  <br>   - → 检验 MQE/Us  <br>4. 检验 MQE/Us（菱形判断节点）  <br>   - 合格 → 合格区 库存  <br>   - 不合格 → 不合格区  <br>5. 不合格区  <br>   - → 检验 MQE/Us（反馈回环）  <br>6. 合格区 库存  <br>   - → 客户  <br>   - → 需求单位  <br>   - → 报废品仓库  <br>7. 需求单位（六边形）  <br>   - → 物管  <br>8. 物管  <br>   - → 采购  <br>9. 报废品仓库  <br>   - → 海关监管  <br>10. 海关监管（菱形判断节点）  <br>    - → 报废核销  <br>    - → 自行处理  <br>11. 报废核销  <br>    - → 报废品处置  <br>12. 报废品处置  <br>    - → 海关  <br>13. 海关  <br>    - → 结束  <br><br>**公式：** 无<br><br>**总结：** 该流程图描述了一个包含采购、仓储、检验、库存管理、报废处理及海关监管等环节的闭环业务流程。</td><td>供应商<br><br>采购<br><br>仓库<br><br>MQE/USER<br><br>仓库<br><br>物管<br>需求单位</td><td>1. 供应商送货<br><br>2. 下订单给供应商<br><br>3. 仓库管理<br><br>4. 检验物料<br><br>5. 库存管理<br><br>6.申请需求</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

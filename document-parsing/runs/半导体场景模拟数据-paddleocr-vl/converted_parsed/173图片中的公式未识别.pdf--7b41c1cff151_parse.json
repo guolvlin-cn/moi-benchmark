@@ -1,0 +1,407 @@
+{
+  "filename": "173图片中的公式未识别.pdf",
+  "filetype": "PDF",
+  "block_count": 11,
+  "blocks": [
+    {
+      "id": "1Y3HgC-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          0.0,
+          0.0,
+          74.0,
+          58.0
+        ],
+        "polygon": [
+          [
+            0,
+            0
+          ],
+          [
+            74,
+            0
+          ],
+          [
+            74,
+            58
+          ],
+          [
+            0,
+            58
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-2",
+      "index": 1,
+      "type": "header",
+      "level": null,
+      "content": "WPH introduction",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          77.0,
+          23.0,
+          221.0,
+          43.0
+        ],
+        "polygon": [
+          [
+            77,
+            23
+          ],
+          [
+            221,
+            23
+          ],
+          [
+            221,
+            43
+          ],
+          [
+            77,
+            43
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-3",
+      "index": 2,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          658.0,
+          12.0,
+          710.0,
+          44.0
+        ],
+        "polygon": [
+          [
+            658,
+            12
+          ],
+          [
+            710,
+            12
+          ],
+          [
+            710,
+            44
+          ],
+          [
+            658,
+            44
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "1 WPH(Water Per Hour): Theoretical unit throughput by recipe\nPeak WPH: The throughput under continuous run status",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          40.0,
+          74.0,
+          417.0,
+          109.0
+        ],
+        "polygon": [
+          [
+            40,
+            74
+          ],
+          [
+            417,
+            74
+          ],
+          [
+            417,
+            106
+          ],
+          [
+            40,
+            106
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-5",
+      "index": 4,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          6.0,
+          118.0,
+          689.0,
+          285.0
+        ],
+        "polygon": [
+          [
+            6,
+            118
+          ],
+          [
+            689,
+            118
+          ],
+          [
+            689,
+            286
+          ],
+          [
+            6,
+            286
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": " $$ \\textcircled{4}{~}={\\frac{\\sum_{i=1}^{n}{\\it M o v e~o f~r e c i p e i}}{\\mathrm{T h e o r e t i c a l~p r o d u c t i o n~t i m e~b y~r e c i p e i~}}}=\\quad\\frac{\\sum_{i=1}^{n}{\\it M o v e~o f~r e c i p e i}}{\\sum_{i=1}^{n}{\\frac{\\mathrm{M o v e~o f~r e c i p e i}}{\\mathrm{P e a k~W P H~b y~r e c i p e i}}}} $$ ",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "display_formula",
+        "bbox": [
+          255.0,
+          310.0,
+          670.0,
+          354.0
+        ],
+        "polygon": [
+          [
+            255,
+            310
+          ],
+          [
+            670,
+            310
+          ],
+          [
+            670,
+            354
+          ],
+          [
+            255,
+            354
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-7",
+      "index": 6,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          442.0,
+          383.0,
+          541.0,
+          434.0
+        ],
+        "polygon": [
+          [
+            442,
+            383
+          ],
+          [
+            541,
+            383
+          ],
+          [
+            541,
+            434
+          ],
+          [
+            442,
+            434
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-8",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "The average speed?  $ (6+3)/2=4.5\\text{m/s} $?  $ \\times (30+60)/(20/6+60/3)=3.6\\text{m/s} $? ✓",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          25.0,
+          447.0,
+          488.0,
+          465.0
+        ],
+        "polygon": [
+          [
+            25,
+            447
+          ],
+          [
+            488,
+            447
+          ],
+          [
+            488,
+            465
+          ],
+          [
+            25,
+            465
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "Recipe 1: PWPH 1=20, move 1=1000",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          26.0,
+          470.0,
+          271.0,
+          487.0
+        ],
+        "polygon": [
+          [
+            26,
+            470
+          ],
+          [
+            271,
+            470
+          ],
+          [
+            271,
+            487
+          ],
+          [
+            26,
+            487
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-10",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "Recipe 2: PWPH 2=25, move 2=1500",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          26.0,
+          487.0,
+          270.0,
+          503.0
+        ],
+        "polygon": [
+          [
+            26,
+            487
+          ],
+          [
+            270,
+            487
+          ],
+          [
+            270,
+            503
+          ],
+          [
+            26,
+            503
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "Average PWPH: 1000+1500)/(1000/20+1500/25)=22.7",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          25.0,
+          504.0,
+          370.0,
+          522.0
+        ],
+        "polygon": [
+          [
+            25,
+            504
+          ],
+          [
+            370,
+            504
+          ],
+          [
+            370,
+            522
+          ],
+          [
+            25,
+            522
+          ]
+        ]
+      }
+    }
+  ]
+}

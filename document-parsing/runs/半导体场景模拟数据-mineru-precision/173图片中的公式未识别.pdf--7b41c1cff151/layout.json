@@ -1,0 +1,1060 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        48,
+                        72,
+                        418,
+                        109
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                72,
+                                418,
+                                109
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        72,
+                                        418,
+                                        109
+                                    ],
+                                    "type": "text",
+                                    "content": "1 WPH(Water Per Hour): Theoretical unit throughput by recipe Peak WPH: The throughput under continuous run status"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        375,
+                        131,
+                        390,
+                        149
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                375,
+                                131,
+                                390,
+                                149
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        375,
+                                        131,
+                                        390,
+                                        149
+                                    ],
+                                    "type": "text",
+                                    "content": "2"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        12,
+                        117,
+                        688,
+                        286
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                12,
+                                117,
+                                688,
+                                286
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        12,
+                                        117,
+                                        688,
+                                        286
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                12,
+                                                117,
+                                                688,
+                                                286
+                                            ],
+                                            "type": "image",
+                                            "image_path": "7e294e4a34660f88532bd22fed687136349580dfd591270f0d6138febfe89250.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        290,
+                        292,
+                        444,
+                        310
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                290,
+                                292,
+                                444,
+                                310
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        290,
+                                        292,
+                                        444,
+                                        310
+                                    ],
+                                    "type": "text",
+                                    "content": "Average Peak WPH"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        256,
+                        309,
+                        668,
+                        354
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                256,
+                                309,
+                                668,
+                                354
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        256,
+                                        309,
+                                        668,
+                                        354
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "4 = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\text {Theoretical production time by recipei}} = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\sum_ {i = 1} ^ {n} \\frac {\\text {Move of recipei}}{\\text {Peak WPH by recipei}}}",
+                                    "image_path": "f54791e482dcf94b5ee37726eba7404aaff012da6446b9af229ad621b06ddf68.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        80,
+                        406,
+                        151,
+                        426
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                80,
+                                406,
+                                151,
+                                426
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        80,
+                                        406,
+                                        151,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "30m@6m/s"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        291,
+                        407,
+                        362,
+                        426
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                291,
+                                407,
+                                362,
+                                426
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        291,
+                                        407,
+                                        362,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "30m@6m/s"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        442,
+                        383,
+                        540,
+                        433
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                442,
+                                383,
+                                540,
+                                433
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        442,
+                                        383,
+                                        540,
+                                        433
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                442,
+                                                383,
+                                                540,
+                                                433
+                                            ],
+                                            "type": "image",
+                                            "image_path": "c17adbf372adcfd0957a0cb4bdf0612c53cc3d48edbc3618fe98b768898e9bd0.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "bbox": [
+                        24,
+                        446,
+                        488,
+                        465
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                446,
+                                488,
+                                465
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "text",
+                                    "content": "The average speed?  "
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "(6+3)/2=4.5\\text{m/s}"
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "text",
+                                    "content": " ? ✗  "
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "(30+60)/(20/6+60/3)=3.6\\text{m/s}"
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "text",
+                                    "content": " ? √"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        469,
+                        270,
+                        487
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                469,
+                                270,
+                                487
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        469,
+                                        270,
+                                        487
+                                    ],
+                                    "type": "text",
+                                    "content": "Recipe 1: PWPH 1=20, move 1=1000"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        487,
+                        271,
+                        503
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                487,
+                                271,
+                                503
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        487,
+                                        271,
+                                        503
+                                    ],
+                                    "type": "text",
+                                    "content": "Recipe 2: PWPH 2=25, move 2=1500"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        503,
+                        370,
+                        522
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                503,
+                                370,
+                                522
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        503,
+                                        370,
+                                        522
+                                    ],
+                                    "type": "text",
+                                    "content": "Average PWPH: 1000+1500)/(1000/20+1500/25)=22.7"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14,
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        1,
+                        0,
+                        74,
+                        57
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                1,
+                                0,
+                                74,
+                                57
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        1,
+                                        0,
+                                        74,
+                                        57
+                                    ],
+                                    "type": "text",
+                                    "content": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        76,
+                        22,
+                        221,
+                        43
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                76,
+                                22,
+                                221,
+                                43
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        76,
+                                        22,
+                                        221,
+                                        43
+                                    ],
+                                    "type": "text",
+                                    "content": "WPH introduction"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        658,
+                        11,
+                        711,
+                        45
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                658,
+                                11,
+                                711,
+                                45
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        658,
+                                        11,
+                                        711,
+                                        45
+                                    ],
+                                    "type": "text",
+                                    "content": "SMIC"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                }
+            ],
+            "page_size": [
+                720,
+                540
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        48,
+                        72,
+                        418,
+                        109
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                72,
+                                418,
+                                109
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        72,
+                                        418,
+                                        109
+                                    ],
+                                    "type": "text",
+                                    "content": "1 WPH(Water Per Hour): Theoretical unit throughput by recipe Peak WPH: The throughput under continuous run status"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        375,
+                        131,
+                        390,
+                        149
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                375,
+                                131,
+                                390,
+                                149
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        375,
+                                        131,
+                                        390,
+                                        149
+                                    ],
+                                    "type": "text",
+                                    "content": "2"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        12,
+                        117,
+                        688,
+                        286
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                12,
+                                117,
+                                688,
+                                286
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        12,
+                                        117,
+                                        688,
+                                        286
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                12,
+                                                117,
+                                                688,
+                                                286
+                                            ],
+                                            "type": "image",
+                                            "image_path": "7e294e4a34660f88532bd22fed687136349580dfd591270f0d6138febfe89250.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        290,
+                        292,
+                        444,
+                        310
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                290,
+                                292,
+                                444,
+                                310
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        290,
+                                        292,
+                                        444,
+                                        310
+                                    ],
+                                    "type": "text",
+                                    "content": "Average Peak WPH"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        256,
+                        309,
+                        668,
+                        354
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                256,
+                                309,
+                                668,
+                                354
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        256,
+                                        309,
+                                        668,
+                                        354
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "4 = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\text {Theoretical production time by recipei}} = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\sum_ {i = 1} ^ {n} \\frac {\\text {Move of recipei}}{\\text {Peak WPH by recipei}}}",
+                                    "image_path": "f54791e482dcf94b5ee37726eba7404aaff012da6446b9af229ad621b06ddf68.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        80,
+                        406,
+                        151,
+                        426
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                80,
+                                406,
+                                151,
+                                426
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        80,
+                                        406,
+                                        151,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "30m@6m/s"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        291,
+                        407,
+                        362,
+                        426
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                291,
+                                407,
+                                362,
+                                426
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        291,
+                                        407,
+                                        362,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "30m@6m/s"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        442,
+                        383,
+                        540,
+                        433
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                442,
+                                383,
+                                540,
+                                433
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        442,
+                                        383,
+                                        540,
+                                        433
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                442,
+                                                383,
+                                                540,
+                                                433
+                                            ],
+                                            "type": "image",
+                                            "image_path": "c17adbf372adcfd0957a0cb4bdf0612c53cc3d48edbc3618fe98b768898e9bd0.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "bbox": [
+                        24,
+                        446,
+                        488,
+                        465
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                24,
+                                446,
+                                488,
+                                465
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "text",
+                                    "content": "The average speed?  "
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "(6+3)/2=4.5\\text{m/s}"
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "text",
+                                    "content": " ? ✗  "
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "(30+60)/(20/6+60/3)=3.6\\text{m/s}"
+                                },
+                                {
+                                    "bbox": [
+                                        24,
+                                        446,
+                                        488,
+                                        465
+                                    ],
+                                    "type": "text",
+                                    "content": " ? √"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        469,
+                        270,
+                        487
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                469,
+                                270,
+                                487
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        469,
+                                        270,
+                                        487
+                                    ],
+                                    "type": "text",
+                                    "content": "Recipe 1: PWPH 1=20, move 1=1000"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        487,
+                        271,
+                        503
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                487,
+                                271,
+                                503
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        487,
+                                        271,
+                                        503
+                                    ],
+                                    "type": "text",
+                                    "content": "Recipe 2: PWPH 2=25, move 2=1500"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13,
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        25,
+                        503,
+                        370,
+                        522
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                25,
+                                503,
+                                370,
+                                522
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        25,
+                                        503,
+                                        370,
+                                        522
+                                    ],
+                                    "type": "text",
+                                    "content": "Average PWPH: 1000+1500)/(1000/20+1500/25)=22.7"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14,
+                    "merge_prev": false
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": true,
+    "_version_name": "3.4.0"
+}

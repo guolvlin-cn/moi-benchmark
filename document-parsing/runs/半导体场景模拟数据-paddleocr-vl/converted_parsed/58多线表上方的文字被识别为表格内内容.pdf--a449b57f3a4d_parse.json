@@ -1,0 +1,124 @@
+{
+  "filename": "58多线表上方的文字被识别为表格内内容.pdf",
+  "filetype": "PDF",
+  "block_count": 3,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "title",
+      "level": "1",
+      "content": "Support ending",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          87.0,
+          98.0,
+          252.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            87,
+            98
+          ],
+          [
+            252,
+            98
+          ],
+          [
+            252,
+            122
+          ],
+          [
+            87,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "APF releases that are scheduled to no longer support specific platforms or database integrations are described in the table below.\nSupport ending for: No longer supported in: operation systems",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          170.0,
+          144.0,
+          508.0,
+          203.0
+        ],
+        "polygon": [
+          [
+            170,
+            144
+          ],
+          [
+            508,
+            144
+          ],
+          [
+            508,
+            204
+          ],
+          [
+            170,
+            204
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td colspan=\"3\">APF releases that are scheduled to no longer support specific platforms or database integrations are described in the table below.</td></tr><tr><td>Support ending for:</td><td colspan=\"2\">No longer supported in:</td></tr><tr><td colspan=\"3\">operation systems</td></tr><tr><td>Windows Server 2012</td><td>APF 2025.1</td><td></td></tr><tr><td>CentOS 7</td><td>APF 2025.2</td><td></td></tr><tr><td>MySQL 5.6</td><td>APF 2026.1</td><td></td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          170.0,
+          144.0,
+          511.0,
+          274.0
+        ],
+        "polygon": [
+          [
+            170,
+            144
+          ],
+          [
+            170,
+            274
+          ],
+          [
+            511,
+            274
+          ],
+          [
+            511,
+            203
+          ],
+          [
+            508,
+            199
+          ],
+          [
+            505,
+            144
+          ]
+        ]
+      }
+    }
+  ]
+}

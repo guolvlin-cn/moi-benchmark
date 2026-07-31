@@ -1,0 +1,676 @@
+{
+  "filename": "cf80b717-b082-4457-97f1-6895b3cafa7f_content_list.json",
+  "filetype": "JSON",
+  "block_count": 83,
+  "blocks": [
+    {
+      "id": "97b2f0ea-b59a-4a8a-ab3c-e7705b8a5fad",
+      "index": 0,
+      "type": "text",
+      "level": null,
+      "content": "芯片技术：从硅晶到智能未来",
+      "page_num": 1
+    },
+    {
+      "id": "e56444f5-b681-4f41-baf9-1f242e59ae41",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "Chip Technology: From Silicon Crystal to Intelligent Future",
+      "page_num": 1
+    },
+    {
+      "id": "744a5990-1e42-403f-a102-6011b7fc014b",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "芯片技术作为现代信息社会的核心，其重要性不言而喻。自摩尔定律提出以来，我们见证了芯片上晶体管数量大约每*18*个月翻倍的惊人发展。制程工艺从最初的微米级不断突破，如今已迈入先进的纳米级，例如*5nm*甚至*3nm*。这使得单个芯片的集成度达到了惊人的*10^{10}* 量级，驱动着人工智能、物联网、高性能计算等领域的飞速发展。",
+      "page_num": 1
+    },
+    {
+      "id": "b5276525-73f7-4781-b591-317aab5ca3a5",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "- 晶体管数量增长：从 *10^3* 到 *10^{10}*",
+      "page_num": 1
+    },
+    {
+      "id": "aa8eeab5-aae9-46b5-8431-0f8b3cc1da57",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "- 制程演进：从微米 (*\\mu m*) 到纳米 (*nm*) 级别",
+      "page_num": 1
+    },
+    {
+      "id": "5d08cbf0-5555-4d3b-9fcd-7ae6556f1dbd",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "- 频率提升：从兆赫兹 (*MHz*) 到吉赫兹 (*GHz*)",
+      "page_num": 1
+    },
+    {
+      "id": "99f00fb0-4acf-4a4a-8e58-7353fb9bb08f",
+      "index": 6,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/e851968ab49aaf0fa5c3417e1eb90488c6ee60dd555925c6f21f2e61dc8bdf42.png",
+      "page_num": 1
+    },
+    {
+      "id": "bab5c998-b570-42ec-8ba2-ddd0e0decfb3",
+      "index": 7,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/3b34370b3d630d2b190e2e44ae1fecf87c4a88be506c577a7fb5b59a20a9fd1b.png",
+      "page_num": 1
+    },
+    {
+      "id": "62924ad4-18d2-4e74-abe1-b63da94573e0",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "其中 *N* 是晶体管数量，*f* 是工作频率。",
+      "page_num": 1
+    },
+    {
+      "id": "1b63921f-6550-4793-a181-b562d21f8fe9",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "摩尔定律的奇迹",
+      "page_num": 2
+    },
+    {
+      "id": "96d47d5c-a064-49cb-8cb5-500c4cf744f9",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "摩尔定律是半导体产业发展的核心驱动力，深刻影响着数字时代的进程。",
+      "page_num": 2
+    },
+    {
+      "id": "1bd45c24-8192-4cac-ba9d-d247fe5d207f",
+      "index": 11,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/2d76fcbfc34507b89225385598013d1bc9711a4b77ae405f06225b897bde86cd.png",
+      "page_num": 2
+    },
+    {
+      "id": "4ca6f045-4b2f-415a-99fc-25ebf2e1a419",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "该公式描述了集成电路上晶体管数量的增长趋势，其中 *N(t)* 表示在时间 *t* 后的晶体管数量，*N₀* 是初始数量，而指数部分 *(t/18个月)* 则反映了晶体管数量大约每18个月翻一番的规律。",
+      "page_num": 2
+    },
+    {
+      "id": "f0c93d4e-275f-40e4-a71d-d49cc90b5973",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "这一趋势导致性能指数级提升，推动了计算机和数字设备的快速发展，深刻改变了现代社会，成为技术进步的基石。具体细节包括：",
+      "page_num": 2
+    },
+    {
+      "id": "0466f165-125e-41f8-9d98-a329932b872b",
+      "index": 14,
+      "type": "text",
+      "level": null,
+      "content": "- 1971年，首款微处理器Intel 4004仅集成 2,300 个晶体管。",
+      "page_num": 2
+    },
+    {
+      "id": "24b49d05-0bb7-4d9a-9f0f-3d2b919724eb",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "- 至2020年，Apple M1芯片已包含高达 160亿 个晶体管。",
+      "page_num": 2
+    },
+    {
+      "id": "73bb959e-670f-4001-af63-f7ec8e76a4fb",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "- 晶体管密度 *D* 与特征尺寸 *L* 的平方呈反比关系，即 *D \\propto 1/L²*。",
+      "page_num": 2
+    },
+    {
+      "id": "446c7603-1070-4f22-9096-698c51652a0f",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "- 芯片性能提升 *P(t)* 大致与晶体管数量的 *\\alpha* 次方成正比，即 *P(t) \\approx N(t)^\\alpha*，其中 *\\alpha* 值通常在 0.5 到 0.7 之间。",
+      "page_num": 2
+    },
+    {
+      "id": "6a0d069c-7701-4268-9ab0-fbc5d55c3c5e",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "纳米制程的极限挑战",
+      "page_num": 3
+    },
+    {
+      "id": "daa8a69d-b624-4a6a-8be8-7888623b2f50",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "其中 *λ* 是光刻波长，*NA* 是数值孔径，*k₁ ≈ 0.25* 是工艺因子",
+      "page_num": 3
+    },
+    {
+      "id": "c34b3378-63ea-40d5-808d-3e55cae0ba99",
+      "index": 20,
+      "type": "text",
+      "level": null,
+      "content": "纳米制程关键参数对比",
+      "page_num": 3
+    },
+    {
+      "id": "57eeedf5-c0d0-4d37-b7d8-56d2f6ebb567",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "7nm制程",
+      "page_num": 3
+    },
+    {
+      "id": "17d08745-ac6c-456d-9394-8694582f38c0",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "5nm制程",
+      "page_num": 3
+    },
+    {
+      "id": "47ed3a8a-a654-413b-9f64-8ce467419708",
+      "index": 23,
+      "type": "text",
+      "level": null,
+      "content": "3nm制程",
+      "page_num": 3
+    },
+    {
+      "id": "d4b9b770-20d7-4d2e-9ecf-7a0cee467cf7",
+      "index": 24,
+      "type": "text",
+      "level": null,
+      "content": "未来1nm",
+      "page_num": 3
+    },
+    {
+      "id": "a9b84315-4116-4d68-a459-154f051a9186",
+      "index": 25,
+      "type": "text",
+      "level": null,
+      "content": "栅极长度 *L\\_g* ≈ 18nm",
+      "page_num": 3
+    },
+    {
+      "id": "6810fba7-dc2f-4d28-a427-0a88be33379e",
+      "index": 26,
+      "type": "text",
+      "level": null,
+      "content": "栅极长度 *L\\_g* ≈ 12nm，使用EUV光刻 *λ* = 13.5nm",
+      "page_num": 3
+    },
+    {
+      "id": "db470b3b-4448-42f9-a681-c22d8cb41a52",
+      "index": 27,
+      "type": "text",
+      "level": null,
+      "content": "栅极长度 *L\\_g* ≈ 10nm，*NA*提升至0.55",
+      "page_num": 3
+    },
+    {
+      "id": "552be7ae-c66f-45c8-8933-3485691cdfc8",
+      "index": 28,
+      "type": "text",
+      "level": null,
+      "content": "量子效应主导，需要新材料",
+      "page_num": 3
+    },
+    {
+      "id": "5f54937a-d48d-46e7-88e9-5aaed6db41ca",
+      "index": 29,
+      "type": "text",
+      "level": null,
+      "content": "随着半导体制造工艺向纳米级推进，我们正面临着前所未有的极限挑战。在光刻技术中，关键尺寸 *CD* 的减小受限于瑞利判据：分辨率极限 *R = k₁λ/NA*。其中，*k₁* 是一个依赖于工艺的因子，*λ* 是光刻波长，*NA* 是数值孔径。为了实现更小的 *CD*，传统方法是减小 *λ* 和增大 *NA*。例如，极紫外 (EUV) 光刻技术采用了 *λ = 13.5nm* 的极短波长，带来了巨大的突破。然而，数值孔径 *NA* 的提升面临物理限制（当前最高约0.55），且 *k₁* 因子也难以进一步优化。",
+      "page_num": 3
+    },
+    {
+      "id": "27954b70-a52b-4f76-b47e-3f15a240f7e1",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "当制程节点达到 *5nm* 以下时，栅极长度 *L\\_g* 已接近 *10nm*，此时量子效应（如隧穿效应）开始主导器件行为。隧穿概率 *T \\propto e^{-2 \\int\\_{x\\_1}^{x\\_2} \\sqrt{\\frac{2m}{\\hbar^2}(V(x)-E)} dx}*，对材料科学和器件物理提出了更严峻的挑战。每一次制程缩小都要求创新解决方案和巨大研发投入，例如使用环绕栅极晶体管 (GAA) 等新结构和新材料来应对。与此同时，EUV光刻技术的复杂性也带来了良率和成本的双重挑战，预示着摩尔定律的持续发展正接近物理极限。",
+      "page_num": 3
+    },
+    {
+      "id": "00516faf-b97d-4a2f-b189-2a4bec2fed97",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": "晶体管的量子隧道效应",
+      "page_num": 4
+    },
+    {
+      "id": "08e1ab8d-77e8-429a-b262-f526612706b6",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "描述电子的量子状态演化",
+      "page_num": 4
+    },
+    {
+      "id": "198c4492-6c34-4ec7-baef-9207a9b47942",
+      "index": 33,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/551b987eeb4a555112798b34d52fd75a66949b7c9f55e37832dd6dac34ab9db7.png",
+      "page_num": 4
+    },
+    {
+      "id": "fc1ce1d4-59a9-45ae-820e-85b85f8b9d37",
+      "index": 34,
+      "type": "text",
+      "level": null,
+      "content": "量子隧穿的物理机制",
+      "page_num": 4
+    },
+    {
+      "id": "aed28ac9-0e6b-434f-a924-bcb11885c213",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": "在纳米级晶体管中，电子的量子特性尤为重要。量子隧道效应使电子在能量不足时也能穿透势垒，这显著影响了晶体管的漏电流、功耗和性能。",
+      "page_num": 4
+    },
+    {
+      "id": "1a58d68a-93b1-4abe-8d93-184be6c4ba72",
+      "index": 36,
+      "type": "text",
+      "level": null,
+      "content": "隧穿概率通常表示为 *T ≈ e^{-2κd}*，其中 *d* 是势垒宽度，*κ* 是衰减常数。当栅极氧化层厚度 *t\\_{ox}* 小于 *2nm* 时，隧穿电流密度 *J* 会呈指数级增长，对器件稳定性提出严峻挑战。",
+      "page_num": 4
+    },
+    {
+      "id": "995c7e0c-f476-4605-8f3e-1e255f778bfc",
+      "index": 37,
+      "type": "text",
+      "level": null,
+      "content": "隧穿电流的公式可以表示为 *J ∝ E^2 e^{-B/E}*，其中 *E* 是电场强度。",
+      "page_num": 4
+    },
+    {
+      "id": "9e3d042b-2678-4247-b668-295e5334bc5f",
+      "index": 38,
+      "type": "text",
+      "level": null,
+      "content": "关键参数",
+      "page_num": 4
+    },
+    {
+      "id": "b3c5f88c-bcc9-499f-a550-bbb796bb2a36",
+      "index": 39,
+      "type": "text",
+      "level": null,
+      "content": "- 亚阈值摆幅：*SS = (kT/q)ln10 ≈ 60mV/decade*",
+      "page_num": 4
+    },
+    {
+      "id": "6280fd89-5e88-4ad4-9857-4b51de5bd26c",
+      "index": 40,
+      "type": "text",
+      "level": null,
+      "content": "- 漏电流：*I\\_{leak}* 与 *t\\_{ox}* 呈指数关系",
+      "page_num": 4
+    },
+    {
+      "id": "e639d696-1018-4b85-b256-c1e2abee2af1",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": "- 静态功耗：*P = I\\_{leak} × V\\_{dd}*",
+      "page_num": 4
+    },
+    {
+      "id": "cfd47461-c46d-4d16-bdcb-b389d81ae2df",
+      "index": 42,
+      "type": "text",
+      "level": null,
+      "content": "解决方案",
+      "page_num": 4
+    },
+    {
+      "id": "4391dbda-ad94-4221-99b2-edb0b41c1d66",
+      "index": 43,
+      "type": "text",
+      "level": null,
+      "content": "为了有效控制晶体管的开关行为，同时抑制量子隧道效应和短沟道效应带来的不利影响，业界引入了多种创新技术：",
+      "page_num": 4
+    },
+    {
+      "id": "5439b44c-3d58-480f-8e5c-174022742a70",
+      "index": 44,
+      "type": "text",
+      "level": null,
+      "content": "- **FinFET 结构：** 通过三面栅极对沟道进行更精细的控制，有效降低漏电流。",
+      "page_num": 4
+    },
+    {
+      "id": "7a495ba3-0052-4a97-8026-9ce6969daeb5",
+      "index": 45,
+      "type": "text",
+      "level": null,
+      "content": "- **GAA 晶体管：** 采用全环绕栅极设计，提供极致的静电控制，进一步减小亚阈值摆幅。",
+      "page_num": 4
+    },
+    {
+      "id": "6bead8b5-9858-4065-99f8-ecb60f078a5c",
+      "index": 46,
+      "type": "text",
+      "level": null,
+      "content": "- **高 k 介质材料：** 替代传统的二氧化硅栅氧，在保持相同电容的同时能大幅减小等效氧化层厚度（EOT），从而有效抑制隧穿电流。",
+      "page_num": 4
+    },
+    {
+      "id": "934f34e8-56bb-4fc4-b56a-6393401b4474",
+      "index": 47,
+      "type": "text",
+      "level": null,
+      "content": "这些新型技术为突破传统CMOS技术的物理极限铺平了道路，确保摩尔定律能够继续发展。",
+      "page_num": 4
+    },
+    {
+      "id": "bc46ed2c-d74f-4581-b758-e55704c1e012",
+      "index": 48,
+      "type": "text",
+      "level": null,
+      "content": "芯片设计的复杂性爆炸",
+      "page_num": 5
+    },
+    {
+      "id": "3935f4dd-2e93-4cf8-ae60-3fe28944546a",
+      "index": 49,
+      "type": "text",
+      "level": null,
+      "content": "设计成本随复杂度呈指数增长",
+      "page_num": 5
+    },
+    {
+      "id": "295971b8-110f-48ef-a647-54fb7f77a23d",
+      "index": 50,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/568e989b85216b582aa45e1aec553f7f67c9df615c9f3f7a7c6098ed459b2aef.png",
+      "page_num": 5
+    },
+    {
+      "id": "45b9ed72-de27-437b-8ba1-e6b0eb32453e",
+      "index": 51,
+      "type": "text",
+      "level": null,
+      "content": "复杂度的多维挑战",
+      "page_num": 5
+    },
+    {
+      "id": "df80088c-acfa-4878-bc60-46c2c089f014",
+      "index": 52,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>设计规模：</strong><em>N\\_{gates} &gt; 10^{10}</em> 个晶体管",
+      "page_num": 5
+    },
+    {
+      "id": "f2db997b-c981-4b25-b003-52b0a317ec3b",
+      "index": 53,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>验证复杂度：</strong>从 <em>O(N^2)</em> 跃升至 <em>O(N^3)</em>",
+      "page_num": 5
+    },
+    {
+      "id": "6fb4104e-6641-4cab-9f30-b8279aadcc70",
+      "index": 54,
+      "type": "text",
+      "level": null,
+      "content": "- **设计周期：** 7nm 芯片需 24-36 个月",
+      "page_num": 5
+    },
+    {
+      "id": "6f14f5be-09e9-41d7-9e49-cb07f3dac9b9",
+      "index": 55,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>掩模成本：</strong><em>C\\_{mask} &gt; \\$15M</em>",
+      "page_num": 5
+    },
+    {
+      "id": "606e8150-156a-47f7-8e2c-4a95e1a475d6",
+      "index": 56,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>团队规模：</strong><em>N\\_{engineers} \\propto \\sqrt{Complexity}</em>",
+      "page_num": 5
+    },
+    {
+      "id": "7b04c743-443b-408e-b76c-243a09b11802",
+      "index": 57,
+      "type": "text",
+      "level": null,
+      "content": "设计流程各阶段分析",
+      "page_num": 5
+    },
+    {
+      "id": "332e3b03-4be5-454c-902d-4a98fb0df2cf",
+      "index": 58,
+      "type": "text",
+      "level": null,
+      "content": "**设计阶段**",
+      "page_num": 5
+    },
+    {
+      "id": "7ee4bafa-d296-4e32-8912-05fd8a564d13",
+      "index": 59,
+      "type": "text",
+      "level": null,
+      "content": "规格定义 (T\\_spec)",
+      "page_num": 5
+    },
+    {
+      "id": "aa1de0c2-1407-446f-83d3-60a70b5c7e96",
+      "index": 60,
+      "type": "text",
+      "level": null,
+      "content": "RTL设计 (T\\_RTL)",
+      "page_num": 5
+    },
+    {
+      "id": "1b490fbb-d0e8-4159-986f-793f5f13dca6",
+      "index": 61,
+      "type": "text",
+      "level": null,
+      "content": "验证 (T\\_verify)",
+      "page_num": 5
+    },
+    {
+      "id": "3caecf8c-eab7-42e8-b0b2-d2b040f12276",
+      "index": 62,
+      "type": "text",
+      "level": null,
+      "content": "布局布线 (T\\_layout)",
+      "page_num": 5
+    },
+    {
+      "id": "98c03e07-e452-4289-8791-3c19d4c036ff",
+      "index": 63,
+      "type": "text",
+      "level": null,
+      "content": "**时间占比**",
+      "page_num": 5
+    },
+    {
+      "id": "4c8cc282-f93a-4afa-b1d3-957099ce4c8e",
+      "index": 64,
+      "type": "text",
+      "level": null,
+      "content": "15%",
+      "page_num": 5
+    },
+    {
+      "id": "620c614a-c9f7-4401-9086-2a99b012f826",
+      "index": 65,
+      "type": "text",
+      "level": null,
+      "content": "25%",
+      "page_num": 5
+    },
+    {
+      "id": "63cba46e-9307-4ca0-9502-a7665c0ef94b",
+      "index": 66,
+      "type": "text",
+      "level": null,
+      "content": "40%",
+      "page_num": 5
+    },
+    {
+      "id": "6cf8bc2e-c085-4059-8e58-e2dc2b780b20",
+      "index": 67,
+      "type": "text",
+      "level": null,
+      "content": "20%",
+      "page_num": 5
+    },
+    {
+      "id": "426d3130-937d-4ccf-be1f-625ce508608c",
+      "index": 68,
+      "type": "text",
+      "level": null,
+      "content": "**算法复杂度**",
+      "page_num": 5
+    },
+    {
+      "id": "059c1b6b-1d0b-4b78-b6c7-ac5a10980717",
+      "index": 69,
+      "type": "text",
+      "level": null,
+      "content": "O(N)",
+      "page_num": 5
+    },
+    {
+      "id": "f1e4f23c-056b-42d1-a1c1-d31cb4c9bca2",
+      "index": 70,
+      "type": "text",
+      "level": null,
+      "content": "O(N log N)",
+      "page_num": 5
+    },
+    {
+      "id": "5bf65c31-9fbd-4b58-85d2-301b59756de2",
+      "index": 71,
+      "type": "text",
+      "level": null,
+      "content": "O(N²) - O(N³)",
+      "page_num": 5
+    },
+    {
+      "id": "5148c82c-2858-4c8a-9980-c043c45410f7",
+      "index": 72,
+      "type": "text",
+      "level": null,
+      "content": "NP完全",
+      "page_num": 5
+    },
+    {
+      "id": "a35b9b3c-5690-4492-9d12-1fdeaab4bb17",
+      "index": 73,
+      "type": "text",
+      "level": null,
+      "content": "EDA工具的挑战",
+      "page_num": 5
+    },
+    {
+      "id": "32753146-e8ea-4918-9035-53ef5f9daf77",
+      "index": 74,
+      "type": "text",
+      "level": null,
+      "content": "- **布局布线：** NP完全问题",
+      "page_num": 5
+    },
+    {
+      "id": "12028fcf-0135-40ac-a89f-a147438f6f63",
+      "index": 75,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>时序收敛：</strong><em>T\\_{closure} \\propto N^\\alpha</em>，<em>\\alpha &gt; 1</em>",
+      "page_num": 5
+    },
+    {
+      "id": "e763740e-ff35-4388-ab03-a4892b2827b0",
+      "index": 76,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>功耗优化：</strong><em>P\\_{total} = P\\_{dynamic} + P\\_{static}</em>",
+      "page_num": 5
+    },
+    {
+      "id": "5bffbb40-9ab5-4a1e-a304-41149907dfeb",
+      "index": 77,
+      "type": "text",
+      "level": null,
+      "content": "- **AI辅助：** AI辅助EDA工具正在兴起",
+      "page_num": 5
+    },
+    {
+      "id": "86de2bed-4d55-4433-960e-ca76cbfaba68",
+      "index": 78,
+      "type": "text",
+      "level": null,
+      "content": "成本与风险",
+      "page_num": 5
+    },
+    {
+      "id": "672b2cb7-517a-4a62-b52c-3d914f1a3c54",
+      "index": 79,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>流片成功率：</strong><em>Y\\_{first} &lt; 50\\%</em>",
+      "page_num": 5
+    },
+    {
+      "id": "13458a34-1557-452b-adde-4d7629a944db",
+      "index": 80,
+      "type": "text",
+      "level": null,
+      "content": "- <strong>总开发成本：</strong><em>C\\_{total} = C\\_{design} + C\\_{mask} + C\\_{tape-out} + C\\_{test}</em>",
+      "page_num": 5
+    },
+    {
+      "id": "5dae56e2-a88b-48e3-8930-9201f0cdd2e5",
+      "index": 81,
+      "type": "text",
+      "level": null,
+      "content": "- **投资回报：** 投资回报周期延长",
+      "page_num": 5
+    },
+    {
+      "id": "a0c1e91b-0cdf-430e-80dd-d0581bca9c64",
+      "index": 82,
+      "type": "text",
+      "level": null,
+      "content": "- **行业整合：** 加速半导体行业整合趋势",
+      "page_num": 5
+    }
+  ]
+}

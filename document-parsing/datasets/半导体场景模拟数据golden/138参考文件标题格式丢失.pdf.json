@@ -1,0 +1,365 @@
+{
+  "doc_id": "138_11abc15a4e",
+  "_generated_at": "2026-07-30T08:41:29+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "SMI Restricted / e024120",
+        "count": 3
+      },
+      {
+        "text": "Time Now /2026-3-13 10:30",
+        "count": 3
+      }
+    ],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 0,
+    "table_html_summaries": [],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "1. Title: SMIC IT Request Management Procedure",
+        "level": 1
+      },
+      {
+        "text": "2. Purpose: Objective of this procedure is to ensure Completeness & Rationality of IT requests, so as to optimize SMIC management efficiency fastest.",
+        "level": 1
+      },
+      {
+        "text": "3. Scope: IT Application Systems",
+        "level": 1
+      },
+      {
+        "text": "4. Nomenclature:",
+        "level": 1
+      },
+      {
+        "text": "4.1. Fab Related: IT/MIT related",
+        "level": 2
+      },
+      {
+        "text": "4.2. Non-Fab Related:IT/CIT related",
+        "level": 2
+      },
+      {
+        "text": "5. Reference:",
+        "level": 1
+      },
+      {
+        "text": "5.1. IT-CIMS-01-2006: SMIC(SH/TJ/SZ)1 T/CIM Software Control Procedure",
+        "level": 2
+      },
+      {
+        "text": "5.2. IT-CIMS-01-2008: SMJC(BJ/SH/SZ)1T/CIM Software Control Procedure",
+        "level": 2
+      },
+      {
+        "text": "6. Responsibility:",
+        "level": 1
+      },
+      {
+        "text": "6.1. SMIT IT Development Team",
+        "level": 2
+      },
+      {
+        "text": "6.1.1. Take the responsibility for IT technical solution evaluation;",
+        "level": 3
+      },
+      {
+        "text": "6.1.2. Take the responsibility for IT technical solution resource cost evaluation;",
+        "level": 3
+      },
+      {
+        "text": "6.1.3. Take the responsibility for IT development resource planning;",
+        "level": 3
+      },
+      {
+        "text": "6.1.4. Take the responsibility for IT service request system maintenance",
+        "level": 3
+      },
+      {
+        "text": "6.2. User",
+        "level": 2
+      },
+      {
+        "text": "6.2.1. Take the responsibility for user request document implementation",
+        "level": 3
+      },
+      {
+        "text": "6.2.2. Take the responsibility for user request measurable benefit valuation;",
+        "level": 3
+      },
+      {
+        "text": "6.2.3. Take the responsibility for related org. user request alignment;",
+        "level": 3
+      },
+      {
+        "text": "6.3. TBC (Technical Board Coordination)",
+        "level": 2
+      },
+      {
+        "text": "6.3.1. Take the responsibility for fab user request prioritization if the priority are conflict across function",
+        "level": 3
+      },
+      {
+        "text": "6.4.QRE",
+        "level": 2
+      },
+      {
+        "text": "6.4.1. Take the responsibility for non-fab user request prioritization if the priority are conflict across function",
+        "level": 3
+      },
+      {
+        "text": "7.2. Request Preparation",
+        "level": 2
+      },
+      {
+        "text": "7.3. Request Valuation(Benefit)",
+        "level": 2
+      },
+      {
+        "text": "7.4. User Alignment",
+        "level": 2
+      },
+      {
+        "text": "7.5. Solution & Resource Cost Evaluation",
+        "level": 2
+      },
+      {
+        "text": "7.6. Request Accept Criteria",
+        "level": 2
+      },
+      {
+        "text": "7.7. Request Prioritization",
+        "level": 2
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "1. Title: SMIC IT Request Management Procedure",
+      "2. Purpose: Objective of this procedure is to ensure Completeness & Rationality of IT requests, so as to optimize SMIC management efficiency fastest.",
+      "3. Scope: IT Application Systems",
+      "4. Nomenclature:",
+      "4.1. Fab Related: IT/MIT related",
+      "4.2. Non-Fab Related:IT/CIT related",
+      "5. Reference:",
+      "5.1. IT-CIMS-01-2006: SMIC(SH/TJ/SZ)1 T/CIM Software Control Procedure",
+      "5.2. IT-CIMS-01-2008: SMJC(BJ/SH/SZ)1T/CIM Software Control Procedure",
+      "6. Responsibility:",
+      "6.1. SMIT IT Development Team",
+      "6.1.1. Take the responsibility for IT technical solution evaluation;",
+      "6.1.2. Take the responsibility for IT technical solution resource cost evaluation;",
+      "6.1.3. Take the responsibility for IT development resource planning;",
+      "6.1.4. Take the responsibility for IT service request system maintenance",
+      "6.2. User",
+      "6.2.1. Take the responsibility for user request document implementation",
+      "6.2.2. Take the responsibility for user request measurable benefit valuation;",
+      "6.2.3. Take the responsibility for related org. user request alignment;",
+      "6.3. TBC (Technical Board Coordination)",
+      "6.3.1. Take the responsibility for fab user request prioritization if the priority are conflict across function",
+      "6.4.QRE",
+      "6.4.1. Take the responsibility for non-fab user request prioritization if the priority are conflict across function",
+      "<img>",
+      "7.2. Request Preparation",
+      "      ✧ Users should provide below information for management change to issue change request and apply in IT service request system for signoff",
+      "        ✓ Background(Current management, pain point)",
+      "        ✓ Management Change(Improvement Idea)",
+      "        ✓ Benefit",
+      "7.3. Request Valuation(Benefit)",
+      "  ✧ For Fab related:",
+      "      ✧ Based on management change, user should provide request benefit in $",
+      "        ✓ Benefit Approval Procedure",
+      "          ✓ Benefit' <= $100,000(100K) → Need direct manager approval",
+      "          ✓ $100,000(100K)< Benefit < $1,000,000(1M) → Need module head approval",
+      "          ✓ Benefit > $1,000,000(1M) → Need fab head approval",
+      "      ✧ Benefit type",
+      "        ✓ Cost saving → Need measurable benefit in $",
+      "        ✓ Efficiency improvement → Need measurable benefit in $",
+      "        ✓ Quality improvement → Need measurable benefit in $",
+      "        ✓ Customer satisfaction → Need attach related email",
+      "        ✓ Top management strategy → Need attach related email",
+      "  ✧ For Non-Fab related",
+      "      User should provide the qualitative benefit of requests before submitted to IT<sup>←</sup>",
+      "7.4. User Alignment",
+      "      ✧ User contact windows should get approval from his/her organization",
+      "      ✧ User should get approval from all relative user organization.",
+      "      For example, Fab1 DIFF operation request need be approved by Fab7 DIFF.Security",
+      "      Requirement need be approved by Legal or IT security team.",
+      "7.5. Solution & Resource Cost Evaluation",
+      "      ✧ After user request approved by all relative user contact windows, IT should provide technical solution with resource cost in $ for each request.",
+      "7.6. Request Accept Criteria",
+      "      ✧ For Fab related(Accept request which meet below all items):",
+      "        ✓ Benefit approved by all relative user and management team",
+      "        ✓ IT Solution is feasible",
+      "        ✓ ROI(ROI = Benefit / IT development cost) > 1",
+      "      ✧ ForNon-Fab related",
+      "        IT will negotiate with user to make the decision by benefit, ROI and IT resource.",
+      "7.7. Request Prioritization",
+      "      ✧ For Fab related",
+      "        ✧ Priority = Contribution * Urgent"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "2": 1
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "      ✧ Users should provide below information for management change to issue change request and apply in IT service request system for signoff",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Background(Current management, pain point)",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Management Change(Improvement Idea)",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Benefit",
+          "page_num": 3
+        },
+        {
+          "text": "  ✧ For Fab related:",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ Based on management change, user should provide request benefit in $",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Benefit Approval Procedure",
+          "page_num": 3
+        },
+        {
+          "text": "          ✓ Benefit' <= $100,000(100K) → Need direct manager approval",
+          "page_num": 3
+        },
+        {
+          "text": "          ✓ $100,000(100K)< Benefit < $1,000,000(1M) → Need module head approval",
+          "page_num": 3
+        },
+        {
+          "text": "          ✓ Benefit > $1,000,000(1M) → Need fab head approval",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ Benefit type",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Cost saving → Need measurable benefit in $",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Efficiency improvement → Need measurable benefit in $",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Quality improvement → Need measurable benefit in $",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Customer satisfaction → Need attach related email",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Top management strategy → Need attach related email",
+          "page_num": 3
+        },
+        {
+          "text": "  ✧ For Non-Fab related",
+          "page_num": 3
+        },
+        {
+          "text": "      User should provide the qualitative benefit of requests before submitted to IT<sup>←</sup>",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ User contact windows should get approval from his/her organization",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ User should get approval from all relative user organization.",
+          "page_num": 3
+        },
+        {
+          "text": "      For example, Fab1 DIFF operation request need be approved by Fab7 DIFF.Security",
+          "page_num": 3
+        },
+        {
+          "text": "      Requirement need be approved by Legal or IT security team.",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ After user request approved by all relative user contact windows, IT should provide technical solution with resource cost in $ for each request.",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ For Fab related(Accept request which meet below all items):",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ Benefit approved by all relative user and management team",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ IT Solution is feasible",
+          "page_num": 3
+        },
+        {
+          "text": "        ✓ ROI(ROI = Benefit / IT development cost) > 1",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ ForNon-Fab related",
+          "page_num": 3
+        },
+        {
+          "text": "        IT will negotiate with user to make the decision by benefit, ROI and IT resource.",
+          "page_num": 3
+        },
+        {
+          "text": "      ✧ For Fab related",
+          "page_num": 3
+        },
+        {
+          "text": "        ✧ Priority = Contribution * Urgent",
+          "page_num": 3
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": []
+    },
+    "formula": {
+      "expected_formulas": [
+        {
+          "text": "100,000(100K)< Benefit <",
+          "source": "inline"
+        }
+      ],
+      "formula_count": 1
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

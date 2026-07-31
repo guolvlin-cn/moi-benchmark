@@ -1,0 +1,332 @@
+{
+  "filename": "82多行公式单页特殊情况构建.pptx",
+  "filetype": "PPTX",
+  "block_count": 9,
+  "blocks": [
+    {
+      "id": "TxyYgT-layout-1",
+      "index": 0,
+      "type": "title",
+      "level": "1",
+      "content": "Analysis",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          355.0,
+          48.0,
+          476.0,
+          79.0
+        ],
+        "polygon": [
+          [
+            355,
+            48
+          ],
+          [
+            476,
+            48
+          ],
+          [
+            476,
+            79
+          ],
+          [
+            355,
+            79
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-2",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "距离计算方法主要有：",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          111.0,
+          110.0,
+          231.0,
+          126.0
+        ],
+        "polygon": [
+          [
+            111,
+            110
+          ],
+          [
+            231,
+            110
+          ],
+          [
+            231,
+            127
+          ],
+          [
+            111,
+            127
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-3",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "(1) 欧氏距离'euclidean'c =  $ \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2} $",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          116.0,
+          128.0,
+          463.0,
+          159.0
+        ],
+        "polygon": [
+          [
+            116,
+            129
+          ],
+          [
+            462,
+            126
+          ],
+          [
+            463,
+            156
+          ],
+          [
+            116,
+            159
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "(2) 曼哈顿距离'manhattan':  $ c = |x_1 - x_2| + |y_1 - y_2| $",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          118.0,
+          163.0,
+          470.0,
+          192.0
+        ],
+        "polygon": [
+          [
+            118,
+            163
+          ],
+          [
+            470,
+            163
+          ],
+          [
+            470,
+            192
+          ],
+          [
+            118,
+            192
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "(3) 切比雪夫距离'chebyshev's Dayshev (p, q) :=  $ \\max_{i}(|p_i - q_i|) $",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          118.0,
+          199.0,
+          571.0,
+          229.0
+        ],
+        "polygon": [
+          [
+            118,
+            199
+          ],
+          [
+            572,
+            199
+          ],
+          [
+            572,
+            229
+          ],
+          [
+            118,
+            229
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "(4) 闵可夫斯基距离'minkowski  $ d_{12} = \\sqrt[p]{\\sum_{k=1}^{n} |x_{1k} - x_{2k}|^p} $",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          117.0,
+          229.0,
+          440.0,
+          264.0
+        ],
+        "polygon": [
+          [
+            117,
+            226
+          ],
+          [
+            440,
+            229
+          ],
+          [
+            440,
+            263
+          ],
+          [
+            117,
+            260
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "(5) 带权重闵可夫斯基距离'wminkowsk $ d_{12}=\\sqrt{\\sum_{k=1}^{n}(x_{1k}-x_{2k})^{2}} $，其中w为特征权重",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          118.0,
+          267.0,
+          583.0,
+          297.0
+        ],
+        "polygon": [
+          [
+            118,
+            267
+          ],
+          [
+            583,
+            267
+          ],
+          [
+            583,
+            298
+          ],
+          [
+            118,
+            298
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-8",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "（6）标准化欧氏距离'seuclidean'：即对于各特征维度做了归一化以后的欧氏距离。此时个样本特征维度的均值为0，方差为1.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          118.0,
+          301.0,
+          791.0,
+          318.0
+        ],
+        "polygon": [
+          [
+            118,
+            301
+          ],
+          [
+            791,
+            301
+          ],
+          [
+            791,
+            318
+          ],
+          [
+            118,
+            318
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "(7) 马氏距离‘mahalanobis’:  $ D_M(x) = \\sqrt{(x - \\mu)^T \\Sigma^{-1}(x - \\mu)} $ 中，为样本协方差矩阵的逆矩阵。当样本分布独立时，S为单位矩阵，此时马氏距离等同于欧氏距离。",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          112.0,
+          332.0,
+          881.0,
+          382.0
+        ],
+        "polygon": [
+          [
+            112,
+            332
+          ],
+          [
+            881,
+            332
+          ],
+          [
+            881,
+            382
+          ],
+          [
+            112,
+            382
+          ]
+        ]
+      }
+    }
+  ]
+}

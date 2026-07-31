@@ -1,0 +1,717 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.149,
+                0.086,
+                0.294,
+                0.103
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.148,
+                0.124,
+                0.266,
+                0.139
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.141,
+                0.86,
+                0.911
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>Task ID</td><td>Task Description</td><td>Priority</td><td>Assigned Department</td><td>Estimated Hours</td><td>Status</td></tr><tr><td>T-001</td><td>Initial Client Consultation</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Requirement Analysis</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Market Competitor Audit</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr><tr><td>T-004</td><td>UI Wireframe Design</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Database Schema Setup</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr><tr><td>T-006</td><td>API Authentication Layer</td><td>High</td><td>Backend</td><td>16</td><td>In Progress</td></tr><tr><td>T-007</td><td>Frontend Component Library</td><td>Medium</td><td>Frontend</td><td>24</td><td>Pending</td></tr><tr><td>T-008</td><td>User Interview Scripts</td><td>Low</td><td>Research</td><td>6</td><td>Completed</td></tr><tr><td>T-009</td><td>Brand Color Palette Selection</td><td>Medium</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-010</td><td>Unit Testing Framework</td><td>High</td><td>QA</td><td>14</td><td>In Progress</td></tr><tr><td>T-011</td><td>Cloud Infrastructure Setup</td><td>Critical</td><td>DevOps</td><td>8</td><td>Completed</td></tr><tr><td>T-012</td><td>Social Media Campaign Plan</td><td>Low</td><td>Marketing</td><td>10</td><td>Pending</td></tr><tr><td>T-013</td><td>Security Vulnerability Scan</td><td>Critical</td><td>Cyber Security</td><td>12</td><td>In Progress</td></tr><tr><td>T-014</td><td>Mobile Responsive Testing</td><td>Medium</td><td>QA</td><td>18</td><td>Pending</td></tr><tr><td>T-015</td><td>Legal Terms of Service Draft</td><td>Low</td><td>Legal</td><td>5</td><td>Completed</td></tr><tr><td>T-016</td><td>Payment Gateway</td><td>Critical</td><td>Backend</td><td>30</td><td>In Progress</td></tr></table>"
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.152,
+                0.088,
+                0.291,
+                0.101
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.149,
+                0.125,
+                0.264,
+                0.139
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.139,
+                0.085,
+                0.86,
+                0.914
+            ],
+            "angle": 0,
+            "content": "<table><tr><td></td><td>Integration</td><td></td><td></td><td></td><td></td></tr><tr><td>T-017</td><td>Localization for EN/ES</td><td>Medium</td><td>Product</td><td>15</td><td>Pending</td></tr><tr><td>T-018</td><td>SEO Keyword Optimization</td><td>Medium</td><td>Marketing</td><td>7</td><td>Completed</td></tr><tr><td>T-019</td><td>Beta Tester Recruitment</td><td>High</td><td>Product</td><td>9</td><td>In Progress</td></tr><tr><td>T-020</td><td>Error Logging Implementation</td><td>Medium</td><td>Backend</td><td>6</td><td>Completed</td></tr><tr><td>T-021</td><td>Weekly Stakeholder Report</td><td>Low</td><td>Admin</td><td>2</td><td>Completed</td></tr><tr><td>T-022</td><td>Performance Bottleneck Audit</td><td>High</td><td>Engineering</td><td>14</td><td>In Progress</td></tr><tr><td>T-023</td><td>Illustration Assets Creation</td><td>Low</td><td>Design</td><td>20</td><td>Pending</td></tr><tr><td>T-024</td><td>Data Migration Script</td><td>Critical</td><td>Data Science</td><td>11</td><td>Completed</td></tr><tr><td>T-025</td><td>Email Notification Template</td><td>Medium</td><td>Frontend</td><td>5</td><td>In Progress</td></tr><tr><td>T-026</td><td>User Onboarding Flow</td><td>High</td><td>Design</td><td>12</td><td>Pending</td></tr><tr><td>T-027</td><td>Help Center Documentation</td><td>Low</td><td>Support</td><td>25</td><td>In Progress</td></tr><tr><td>T-028</td><td>SSL Certificate Renewal</td><td>Critical</td><td>DevOps</td><td>1</td><td>Completed</td></tr><tr><td>T-029</td><td>Landing Page A/B Testing</td><td>Medium</td><td>Marketing</td><td>16</td><td>Pending</td></tr><tr><td>T-030</td><td>CRM System Synchronization</td><td>Medium</td><td>Sales</td><td>8</td><td>Completed</td></tr><tr><td>T-031</td><td>Accessibility Compliance Check</td><td>High</td><td>QA</td><td>10</td><td>In Progress</td></tr><tr><td>T-032</td><td>Vector Icon Set Export</td><td>Low</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-033</td><td>Cache Layer Configuration</td><td>High</td><td>Backend</td><td>7</td><td>In Progress</td></tr><tr><td>T-034</td><td>Bug Triage Meeting</td><td>Medium</td><td>Engineering</td><td>3</td><td>Completed</td></tr><tr><td>T-035</td><td>Investor Pitch Deck Update</td><td>High</td><td>Executive</td><td>10</td><td>In Progress</td></tr></table>",
+            "cell_merge": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.139,
+                0.084,
+                0.86,
+                0.744
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>T-036</td><td>Server Load Balancing</td><td>Critical</td><td>DevOps</td><td>9</td><td>Completed</td></tr><tr><td>T-037</td><td>Newsletter Subscriber Audit</td><td>Low</td><td>Marketing</td><td>5</td><td>Pending</td></tr><tr><td>T-038</td><td>Dark Mode Theme Implementation</td><td>Medium</td><td>Frontend</td><td>14</td><td>In Progress</td></tr><tr><td>T-039</td><td>Third-party Library Update</td><td>Low</td><td>Engineering</td><td>6</td><td>Completed</td></tr><tr><td>T-040</td><td>Customer Feedback Survey</td><td>Medium</td><td>Support</td><td>8</td><td>Pending</td></tr><tr><td>T-041</td><td>End-to-End Encryption Test</td><td>Critical</td><td>Cyber Security</td><td>20</td><td>In Progress</td></tr><tr><td>T-042</td><td>Content Management System (CMS)</td><td>High</td><td>Backend</td><td>22</td><td>Pending</td></tr><tr><td>T-043</td><td>Employee Training Module</td><td>Low</td><td>HR</td><td>15</td><td>In Progress</td></tr><tr><td>T-044</td><td>Financial Audit Q1</td><td>High</td><td>Finance</td><td>40</td><td>Completed</td></tr><tr><td>T-045</td><td>Backup Restoration Drill</td><td>Critical</td><td>DevOps</td><td>4</td><td>In Progress</td></tr><tr><td>T-046</td><td>Press Release Distribution</td><td>Medium</td><td>PR</td><td>3</td><td>Pending</td></tr><tr><td>T-047</td><td>Mobile Push Notification Logic</td><td>Medium</td><td>Backend</td><td>9</td><td>In Progress</td></tr><tr><td>T-048</td><td>Analytics Dashboard Refresh</td><td>Low</td><td>Data Science</td><td>12</td><td>Completed</td></tr><tr><td>T-049</td><td>Technical Debt Review</td><td>Medium</td><td>Engineering</td><td>10</td><td>In Progress</td></tr></table>",
+            "cell_merge": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image_footnote",
+            "bbox": [
+                0.148,
+                0.086,
+                0.264,
+                0.102
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.138,
+                0.103,
+                0.86,
+                0.913
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>Task ID</td><td>Task Description</td><td>Priority</td><td>Assigned Department</td><td>Estimated Hours</td><td>Status</td></tr><tr><td>T-001</td><td>Initial Client Consultation</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Requirement Analysis</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Market Competitor Audit</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr><tr><td>T-004</td><td>UI Wireframe Design</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Database Schema Setup</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr><tr><td>T-006</td><td>API Authentication Layer</td><td>High</td><td>Backend</td><td>16</td><td>In Progress</td></tr><tr><td>T-007</td><td>Frontend Component Library</td><td>Medium</td><td>Frontend</td><td>24</td><td>Pending</td></tr><tr><td>T-008</td><td>User Interview Scripts</td><td>Low</td><td>Research</td><td>6</td><td>Completed</td></tr><tr><td>T-009</td><td>Brand Color Palette Selection</td><td>Medium</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-010</td><td>Unit Testing Framework</td><td>High</td><td>QA</td><td>14</td><td>In Progress</td></tr><tr><td>T-011</td><td>Cloud Infrastructure Setup</td><td>Critical</td><td>DevOps</td><td>8</td><td>Completed</td></tr><tr><td>T-012</td><td>Social Media Campaign Plan</td><td>Low</td><td>Marketing</td><td>10</td><td>Pending</td></tr><tr><td>T-013</td><td>Security Vulnerability Scan</td><td>Critical</td><td>Cyber Security</td><td>12</td><td>In Progress</td></tr><tr><td>T-014</td><td>Mobile Responsive Testing</td><td>Medium</td><td>QA</td><td>18</td><td>Pending</td></tr><tr><td>T-015</td><td>Legal Terms of Service Draft</td><td>Low</td><td>Legal</td><td>5</td><td>Completed</td></tr><tr><td>T-016</td><td>Payment Gateway Integration</td><td>Critical</td><td>Backend</td><td>30</td><td>In Progress</td></tr><tr><td>T-017</td><td>Localization for</td><td>Medium</td><td>Product</td><td>15</td><td>Pending</td></tr></table>",
+            "cell_merge": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.151,
+                0.088,
+                0.261,
+                0.102
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.138,
+                0.084,
+                0.86,
+                0.914
+            ],
+            "angle": 0,
+            "content": "<table><tr><td></td><td colspan=\"5\">EN/ES</td></tr><tr><td>T-018</td><td>SEO Keyword Optimization</td><td>Medium</td><td>Marketing</td><td>7</td><td>Completed</td></tr><tr><td>T-019</td><td>Beta Tester Recruitment</td><td>High</td><td>Product</td><td>9</td><td>In Progress</td></tr><tr><td>T-020</td><td>Error Logging Implementation</td><td>Medium</td><td>Backend</td><td>6</td><td>Completed</td></tr><tr><td>T-021</td><td>Weekly Stakeholder Report</td><td>Low</td><td>Admin</td><td>2</td><td>Completed</td></tr><tr><td>T-022</td><td>Performance Bottleneck Audit</td><td>High</td><td>Engineering</td><td>14</td><td>In Progress</td></tr><tr><td>T-023</td><td>Illustration Assets Creation</td><td>Low</td><td>Design</td><td>20</td><td>Pending</td></tr><tr><td>T-024</td><td>Data Migration Script</td><td>Critical</td><td>Data Science</td><td>11</td><td>Completed</td></tr><tr><td>T-025</td><td>Email Notification Template</td><td>Medium</td><td>Frontend</td><td>5</td><td>In Progress</td></tr><tr><td>T-026</td><td>User Onboarding Flow</td><td>High</td><td>Design</td><td>12</td><td>Pending</td></tr><tr><td>T-027</td><td>Help Center Documentation</td><td>Low</td><td>Support</td><td>25</td><td>In Progress</td></tr><tr><td>T-028</td><td>SSL Certificate Renewal</td><td>Critical</td><td>DevOps</td><td>1</td><td>Completed</td></tr><tr><td>T-029</td><td>Landing Page A/B Testing</td><td>Medium</td><td>Marketing</td><td>16</td><td>Pending</td></tr><tr><td>T-030</td><td>CRM System Synchronization</td><td>Medium</td><td>Sales</td><td>8</td><td>Completed</td></tr><tr><td>T-031</td><td>Accessibility Compliance Check</td><td>High</td><td>QA</td><td>10</td><td>In Progress</td></tr><tr><td>T-032</td><td>Vector Icon Set Export</td><td>Low</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-033</td><td>Cache Layer Configuration</td><td>High</td><td>Backend</td><td>7</td><td>In Progress</td></tr><tr><td>T-034</td><td>Bug Triage Meeting</td><td>Medium</td><td>Engineering</td><td>3</td><td>Completed</td></tr><tr><td>T-035</td><td>Investor Pitch Deck Update</td><td>High</td><td>Executive</td><td>10</td><td>In Progress</td></tr><tr><td>T-036</td><td>Server Load Balancing</td><td>Critical</td><td>DevOps</td><td>9</td><td>Completed</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.138,
+                0.083,
+                0.86,
+                0.706
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>T-037</td><td>Newsletter Subscriber Audit</td><td>Low</td><td>Marketing</td><td>5</td><td>Pending</td></tr><tr><td>T-038</td><td>Dark Mode Theme Implementation</td><td>Medium</td><td>Frontend</td><td>14</td><td>In Progress</td></tr><tr><td>T-039</td><td>Third-party Library Update</td><td>Low</td><td>Engineering</td><td>6</td><td>Completed</td></tr><tr><td>T-040</td><td>Customer Feedback Survey</td><td>Medium</td><td>Support</td><td>8</td><td>Pending</td></tr><tr><td>T-041</td><td>End-to-End Encryption Test</td><td>Critical</td><td>Cyber Security</td><td>20</td><td>In Progress</td></tr><tr><td>T-042</td><td>Content Management System (CMS)</td><td>High</td><td>Backend</td><td>22</td><td>Pending</td></tr><tr><td>T-043</td><td>Employee Training Module</td><td>Low</td><td>HR</td><td>15</td><td>In Progress</td></tr><tr><td>T-044</td><td>Financial Audit Q1</td><td>High</td><td>Finance</td><td>40</td><td>Completed</td></tr><tr><td>T-045</td><td>Backup Restoration Drill</td><td>Critical</td><td>DevOps</td><td>4</td><td>In Progress</td></tr><tr><td>T-046</td><td>Press Release Distribution</td><td>Medium</td><td>PR</td><td>3</td><td>Pending</td></tr><tr><td>T-047</td><td>Mobile Push Notification Logic</td><td>Medium</td><td>Backend</td><td>9</td><td>In Progress</td></tr><tr><td>T-048</td><td>Analytics Dashboard Refresh</td><td>Low</td><td>Data Science</td><td>12</td><td>Completed</td></tr><tr><td>T-049</td><td>Technical Debt Review</td><td>Medium</td><td>Engineering</td><td>10</td><td>In Progress</td></tr></table>",
+            "cell_merge": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.147,
+                0.086,
+                0.264,
+                0.101
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.141,
+                0.103,
+                0.855,
+                0.905
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>Task ID</td><td>Task Description</td><td>Priority</td><td>Assigned Department</td><td>Estimated Hours</td><td>Status</td></tr><tr><td>T-001</td><td>Initial Client Consultation Requirement</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Analysis Market Competitor</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Audit UI Wireframe</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr><tr><td>T-004</td><td>Design Database</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Schema Setup API Authentication</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr><tr><td>T-006</td><td>Layer Frontend Component</td><td>High</td><td>Backend</td><td>16</td><td>In Progress</td></tr><tr><td>T-007</td><td>Library User Interview</td><td>Medium</td><td>Frontend</td><td>24</td><td>Pending</td></tr><tr><td>T-008</td><td>Scripts Brand Color Palette</td><td>Low</td><td>Research</td><td>6</td><td>Completed</td></tr><tr><td>T-009</td><td>Selection Unit Testing</td><td>Medium</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-010</td><td>Framework Cloud Infrastructure</td><td>High</td><td>QA</td><td>14</td><td>In Progress</td></tr><tr><td>T-011</td><td>Setup Social Media</td><td>Critical</td><td>DevOps</td><td>8</td><td>Completed</td></tr><tr><td>T-012</td><td>Campaign Plan Security Vulnerability</td><td>Low</td><td>Marketing</td><td>10</td><td>Pending</td></tr><tr><td>T-013</td><td>Scan Mobile Responsive</td><td>Critical</td><td>Cyber Security</td><td>12</td><td>In Progress</td></tr><tr><td>T-014</td><td rowspan=\"2\">Testing Legal Terms of Service Draft Payment Gateway</td><td>Medium</td><td>QA</td><td>18</td><td>Pending</td></tr><tr><td>T-015</td><td>Low</td><td>Legal</td><td>5</td><td>Completed</td></tr><tr><td>T-016</td><td rowspan=\"2\">Integration Localization for</td><td>Critical</td><td rowspan=\"2\">Backend Product</td><td>30</td><td>In Progress</td></tr><tr><td>T-017</td><td>Medium</td><td>15</td><td>Pending</td></tr></table>",
+            "cell_merge": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.15,
+                0.087,
+                0.262,
+                0.103
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.144,
+                0.088,
+                0.841,
+                0.903
+            ],
+            "angle": 0,
+            "content": "<table><tr><td rowspan=\"2\"></td><td colspan=\"5\">EN/ES</td></tr><tr><td colspan=\"5\">SEO Keyword</td></tr><tr><td rowspan=\"2\">T-018</td><td>Optimization</td><td>Medium</td><td>Marketing</td><td>7</td><td>Completed</td></tr><tr><td colspan=\"5\">Beta Tester</td></tr><tr><td rowspan=\"2\">T-019</td><td>Recruitment</td><td>High</td><td>Product</td><td>9</td><td>In Progress</td></tr><tr><td colspan=\"5\">Error Logging</td></tr><tr><td rowspan=\"3\">T-020</td><td>Implementation</td><td>Medium</td><td>Backend</td><td>6</td><td>Completed</td></tr><tr><td colspan=\"5\">Weekly</td></tr><tr><td colspan=\"5\">Stakeholder</td></tr><tr><td rowspan=\"3\">T-021</td><td>Report</td><td>Low</td><td>Admin</td><td>2</td><td>Completed</td></tr><tr><td colspan=\"5\">Performance</td></tr><tr><td colspan=\"5\">Bottleneck</td></tr><tr><td rowspan=\"2\">T-022</td><td>Audit</td><td>High</td><td>Engineering</td><td>14</td><td>In Progress</td></tr><tr><td colspan=\"5\">Illustration</td></tr><tr><td rowspan=\"2\">T-023</td><td>Assets Creation</td><td>Low</td><td>Design</td><td>20</td><td>Pending</td></tr><tr><td colspan=\"5\">Data Migration</td></tr><tr><td rowspan=\"3\">T-024</td><td>Script</td><td>Critical</td><td>Data Science</td><td>11</td><td>Completed</td></tr><tr><td colspan=\"5\">Email</td></tr><tr><td colspan=\"5\">Notification</td></tr><tr><td rowspan=\"3\">T-025</td><td>Template</td><td>Medium</td><td>Frontend</td><td>5</td><td>In Progress</td></tr><tr><td colspan=\"5\">User</td></tr><tr><td colspan=\"5\">Onboarding</td></tr><tr><td rowspan=\"2\">T-026</td><td>Flow</td><td>High</td><td>Design</td><td>12</td><td>Pending</td></tr><tr><td colspan=\"5\">Help Center</td></tr><tr><td rowspan=\"2\">T-027</td><td>Documentation</td><td>Low</td><td>Support</td><td>25</td><td>In Progress</td></tr><tr><td colspan=\"5\">SSL Certificate</td></tr><tr><td rowspan=\"2\">T-028</td><td>Renewal</td><td>Critical</td><td>DevOps</td><td>1</td><td>Completed</td></tr><tr><td colspan=\"5\">Landing Page</td></tr><tr><td rowspan=\"2\">T-029</td><td>A/B Testing</td><td>Medium</td><td>Marketing</td><td>16</td><td>Pending</td></tr><tr><td colspan=\"5\">CRM System</td></tr><tr><td rowspan=\"3\">T-030</td><td>Synchronization</td><td>Medium</td><td>Sales</td><td>8</td><td>Completed</td></tr><tr><td colspan=\"5\">Accessibility</td></tr><tr><td colspan=\"5\">Compliance</td></tr><tr><td rowspan=\"2\">T-031</td><td>Check</td><td>High</td><td>QA</td><td>10</td><td>In Progress</td></tr><tr><td colspan=\"5\">Vector Icon Set</td></tr><tr><td rowspan=\"2\">T-032</td><td>Export</td><td>Low</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td colspan=\"5\">Cache Layer</td></tr><tr><td rowspan=\"2\">T-033</td><td>Configuration</td><td>High</td><td>Backend</td><td>7</td><td>In Progress</td></tr><tr><td colspan=\"5\">Bug Triage</td></tr><tr><td rowspan=\"2\">T-034</td><td>Meeting</td><td>Medium</td><td>Engineering</td><td>3</td><td>Completed</td></tr><tr><td colspan=\"5\">Investor Pitch</td></tr><tr><td rowspan=\"2\">T-035</td><td>Deck Update</td><td>High</td><td>Executive</td><td>10</td><td>In Progress</td></tr><tr><td colspan=\"5\">Server Load</td></tr><tr><td>T-036</td><td>Balancing</td><td>Critical</td><td>DevOps</td><td>9</td><td>Completed</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.141,
+                0.086,
+                0.852,
+                0.7
+            ],
+            "angle": 0,
+            "content": "<table><tr><td></td><td colspan=\"5\">Newsletter Subscriber</td></tr><tr><td>T-037</td><td>Audit Dark Mode Theme</td><td>Low</td><td>Marketing</td><td>5</td><td>Pending</td></tr><tr><td>T-038</td><td>Implementation Third-party</td><td>Medium</td><td>Frontend</td><td>14</td><td>In Progress</td></tr><tr><td>T-039</td><td>Library Update Customer Feedback</td><td>Low</td><td>Engineering</td><td>6</td><td>Completed</td></tr><tr><td>T-040</td><td>Survey End-to-End</td><td>Medium</td><td>Support Cyber</td><td>8</td><td>Pending</td></tr><tr><td>T-041</td><td>Encryption Test Content Management</td><td>Critical</td><td>Security</td><td>20</td><td>In Progress</td></tr><tr><td>T-042</td><td>System (CMS) Employee Training</td><td>High</td><td>Backend</td><td>22</td><td>Pending</td></tr><tr><td>T-043</td><td>Module Financial Audit</td><td>Low</td><td>HR</td><td>15</td><td>In Progress</td></tr><tr><td>T-044</td><td>Q1 Backup</td><td>High</td><td>Finance</td><td>40</td><td>Completed</td></tr><tr><td>T-045</td><td>Restoration Drill Press Release</td><td>Critical</td><td>DevOps</td><td>4</td><td>In Progress</td></tr><tr><td>T-046</td><td>Distribution Mobile Push Notification</td><td>Medium</td><td>PR</td><td>3</td><td>Pending</td></tr><tr><td>T-047</td><td>Logic Analytics Dashboard</td><td>Medium</td><td>Backend</td><td>9</td><td>In Progress</td></tr><tr><td>T-048</td><td rowspan=\"2\">Refresh Technical Debt Review</td><td>Low</td><td>Data Science</td><td>12</td><td>Completed</td></tr><tr><td>T-049</td><td>Medium</td><td>Engineering</td><td>10</td><td>In Progress</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.148,
+                0.051,
+                0.317,
+                0.065
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.178,
+                0.084,
+                0.302,
+                0.111
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.313,
+                0.114,
+                0.691,
+                0.129
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.129,
+                0.86,
+                0.148
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>001</td><td>万物皆可 MO</td><td>Rev: 48</td><td>page No1/3</td></tr></table>"
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.148,
+                0.179,
+                0.332,
+                0.194
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.195,
+                0.859,
+                0.909
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>Task ID</td><td>Task Description</td><td>Priority</td><td>Assigned Department</td><td>Estimated Hours</td><td>Status</td></tr><tr><td>T-001</td><td>Initial Client Consultation</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Requirement Analysis</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Market Competitor Audit</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr><tr><td>T-004</td><td>UI Wireframe Design</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Database Schema Setup</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr><tr><td>T-006</td><td>API Authentication Layer</td><td>High</td><td>Backend</td><td>16</td><td>In Progress</td></tr><tr><td>T-007</td><td>Frontend Component Library</td><td>Medium</td><td>Frontend</td><td>24</td><td>Pending</td></tr><tr><td>T-008</td><td>User Interview Scripts</td><td>Low</td><td>Research</td><td>6</td><td>Completed</td></tr><tr><td>T-009</td><td>Brand Color Palette Selection</td><td>Medium</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-010</td><td>Unit Testing Framework</td><td>High</td><td>QA</td><td>14</td><td>In Progress</td></tr><tr><td>T-011</td><td>Cloud Infrastructure Setup</td><td>Critical</td><td>DevOps</td><td>8</td><td>Completed</td></tr><tr><td>T-012</td><td>Social Media Campaign Plan</td><td>Low</td><td>Marketing</td><td>10</td><td>Pending</td></tr><tr><td>T-013</td><td>Security Vulnerability Scan</td><td>Critical</td><td>Cyber Security</td><td>12</td><td>In Progress</td></tr><tr><td>T-014</td><td>Mobile Responsive Testing</td><td>Medium</td><td>QA</td><td>18</td><td>Pending</td></tr><tr><td>T-015</td><td>Legal Terms of</td><td>Low</td><td>Legal</td><td>5</td><td>Completed</td></tr></table>"
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.151,
+                0.053,
+                0.315,
+                0.064
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.175,
+                0.082,
+                0.254,
+                0.113
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.255,
+                0.084,
+                0.294,
+                0.099
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.29,
+                0.085,
+                0.302,
+                0.111
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.255,
+                0.097,
+                0.294,
+                0.112
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.316,
+                0.116,
+                0.687,
+                0.128
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.151,
+                0.181,
+                0.33,
+                0.193
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.148,
+                0.051,
+                0.317,
+                0.065
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.178,
+                0.084,
+                0.302,
+                0.111
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.312,
+                0.114,
+                0.692,
+                0.129
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.129,
+                0.86,
+                0.148
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>001</td><td>万物皆可 MO</td><td>Rev: 48</td><td>page No1/3</td></tr></table>"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.175,
+                0.86,
+                0.911
+            ],
+            "angle": 0,
+            "content": "<table><tr><td></td><td>Service Draft</td><td></td><td></td><td></td><td></td></tr><tr><td>T-016</td><td>Payment Gateway Integration</td><td>Critical</td><td>Backend</td><td>30</td><td>In Progress</td></tr><tr><td>T-017</td><td>Localization for EN/ES</td><td>Medium</td><td>Product</td><td>15</td><td>Pending</td></tr><tr><td>T-018</td><td>SEO Keyword Optimization</td><td>Medium</td><td>Marketing</td><td>7</td><td>Completed</td></tr><tr><td>T-019</td><td>Beta Tester Recruitment</td><td>High</td><td>Product</td><td>9</td><td>In Progress</td></tr><tr><td>T-020</td><td>Error Logging Implementation</td><td>Medium</td><td>Backend</td><td>6</td><td>Completed</td></tr><tr><td>T-021</td><td>Weekly Stakeholder Report</td><td>Low</td><td>Admin</td><td>2</td><td>Completed</td></tr><tr><td>T-022</td><td>Performance Bottleneck Audit</td><td>High</td><td>Engineering</td><td>14</td><td>In Progress</td></tr><tr><td>T-023</td><td>Illustration Assets Creation</td><td>Low</td><td>Design</td><td>20</td><td>Pending</td></tr><tr><td>T-024</td><td>Data Migration Script</td><td>Critical</td><td>Data Science</td><td>11</td><td>Completed</td></tr><tr><td>T-025</td><td>Email Notification Template</td><td>Medium</td><td>Frontend</td><td>5</td><td>In Progress</td></tr><tr><td>T-026</td><td>User Onboarding Flow</td><td>High</td><td>Design</td><td>12</td><td>Pending</td></tr><tr><td>T-027</td><td>Help Center Documentation</td><td>Low</td><td>Support</td><td>25</td><td>In Progress</td></tr><tr><td>T-028</td><td>SSL Certificate Renewal</td><td>Critical</td><td>DevOps</td><td>1</td><td>Completed</td></tr><tr><td>T-029</td><td>Landing Page A/B Testing</td><td>Medium</td><td>Marketing</td><td>16</td><td>Pending</td></tr><tr><td>T-030</td><td>CRM System Synchronization</td><td>Medium</td><td>Sales</td><td>8</td><td>Completed</td></tr><tr><td>T-031</td><td>Accessibility Compliance Check</td><td>High</td><td>QA</td><td>10</td><td>In Progress</td></tr></table>"
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.151,
+                0.053,
+                0.315,
+                0.064
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.175,
+                0.082,
+                0.254,
+                0.113
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.255,
+                0.084,
+                0.294,
+                0.099
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.29,
+                0.085,
+                0.302,
+                0.111
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.255,
+                0.097,
+                0.294,
+                0.112
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.316,
+                0.115,
+                0.688,
+                0.128
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.148,
+                0.051,
+                0.317,
+                0.065
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.178,
+                0.084,
+                0.302,
+                0.111
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.312,
+                0.114,
+                0.692,
+                0.129
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.129,
+                0.86,
+                0.149
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>001</td><td>万物皆可 MO</td><td>Rev: 48</td><td>page No1/3</td></tr></table>"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.139,
+                0.175,
+                0.86,
+                0.911
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>T-032</td><td>Vector Icon Set Export</td><td>Low</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-033</td><td>Cache Layer Configuration</td><td>High</td><td>Backend</td><td>7</td><td>In Progress</td></tr><tr><td>T-034</td><td>Bug Triage Meeting</td><td>Medium</td><td>Engineering</td><td>3</td><td>Completed</td></tr><tr><td>T-035</td><td>Investor Pitch Deck Update</td><td>High</td><td>Executive</td><td>10</td><td>In Progress</td></tr><tr><td>T-036</td><td>Server Load Balancing</td><td>Critical</td><td>DevOps</td><td>9</td><td>Completed</td></tr><tr><td>T-037</td><td>Newsletter Subscriber Audit</td><td>Low</td><td>Marketing</td><td>5</td><td>Pending</td></tr><tr><td>T-038</td><td>Dark Mode Theme Implementation</td><td>Medium</td><td>Frontend</td><td>14</td><td>In Progress</td></tr><tr><td>T-039</td><td>Third-party Library Update</td><td>Low</td><td>Engineering</td><td>6</td><td>Completed</td></tr><tr><td>T-040</td><td>Customer Feedback Survey</td><td>Medium</td><td>Support</td><td>8</td><td>Pending</td></tr><tr><td>T-041</td><td>End-to-End Encryption Test</td><td>Critical</td><td>Cyber Security</td><td>20</td><td>In Progress</td></tr><tr><td>T-042</td><td>Content Management System (CMS)</td><td>High</td><td>Backend</td><td>22</td><td>Pending</td></tr><tr><td>T-043</td><td>Employee Training Module</td><td>Low</td><td>HR</td><td>15</td><td>In Progress</td></tr><tr><td>T-044</td><td>Financial Audit Q1</td><td>High</td><td>Finance</td><td>40</td><td>Completed</td></tr><tr><td>T-045</td><td>Backup Restoration Drill</td><td>Critical</td><td>DevOps</td><td>4</td><td>In Progress</td></tr><tr><td>T-046</td><td>Press Release Distribution</td><td>Medium</td><td>PR</td><td>3</td><td>Pending</td></tr><tr><td>T-047</td><td>Mobile Push Notification Logic</td><td>Medium</td><td>Backend</td><td>9</td><td>In Progress</td></tr><tr><td>T-048</td><td>Analytics</td><td>Low</td><td>Data Science</td><td>12</td><td>Completed</td></tr></table>"
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.151,
+                0.053,
+                0.315,
+                0.064
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.175,
+                0.082,
+                0.254,
+                0.113
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.255,
+                0.084,
+                0.294,
+                0.099
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.29,
+                0.085,
+                0.302,
+                0.111
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.255,
+                0.097,
+                0.294,
+                0.112
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.316,
+                0.115,
+                0.688,
+                0.128
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.148,
+                0.052,
+                0.317,
+                0.064
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.179,
+                0.084,
+                0.302,
+                0.111
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "image_caption",
+            "bbox": [
+                0.313,
+                0.114,
+                0.691,
+                0.129
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.129,
+                0.859,
+                0.148
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>001</td><td>万物皆可 MO</td><td>Rev: 48</td><td>page No1/3</td></tr></table>"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.14,
+                0.175,
+                0.859,
+                0.253
+            ],
+            "angle": 0,
+            "content": "<table><tr><td></td><td>DashboardRefresh</td><td></td><td></td><td></td><td></td></tr><tr><td>T-049</td><td>Technical DebtReview</td><td>Medium</td><td>Engineering</td><td>10</td><td>In Progress</td></tr></table>"
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.151,
+                0.053,
+                0.315,
+                0.064
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.316,
+                0.116,
+                0.687,
+                0.128
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]

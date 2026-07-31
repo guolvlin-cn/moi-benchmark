@@ -1,0 +1,744 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Title: SMIC Raw Material Abnormal Handing O.I."
+                    }
+                ],
+                "level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Purpose:"
+                    }
+                ],
+                "level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "To establish SMIC internal procedure for periodic performance evaluuation and communication on with Class-I"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "This document defines QCDESE evaluation procedures including scoring rules, internal review process, approval of final report, publication, and communication post-publication for SMIC Class-I"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Scope: Applies to all SMIC group company and all SMIC Class-I Suppliers(Raw Material)."
+                    }
+                ],
+                "level": 1
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Material Group</strong></p></td><td><p><strong>Sub-Group</strong></p></td></tr><tr><td rowspan=\"3\"><p>Wafer</p></td><td><p>200mm wafer</p></td></tr><tr><td><p>300mm wafer</p></td></tr><tr><td><p>Control wafer</p></td></tr><tr><td><p>Gas</p></td><td><p>——</p></td></tr><tr><td rowspan=\"3\"><p>Chemical</p></td><td><p>Bulk Chemical</p></td></tr><tr><td><p>Formula Chemical</p></td></tr><tr><td><p>Precursor and others</p></td></tr><tr><td rowspan=\"2\"><p>Photo Resst</p></td><td><p>Photo Resist</p></td></tr><tr><td><p>Photo Chermical</p></td></tr><tr><td><p>Pad</p></td><td><p>——</p></td></tr><tr><td><p>Disk</p></td><td><p>——</p></td></tr><tr><td><p>Slurry</p></td><td><p>——</p></td></tr><tr><td><p>Quartz</p></td><td><p>——</p></td></tr><tr><td><p>Target</p></td><td><p>——</p></td></tr><tr><td><p>Mask Blank</p></td><td><p>——</p></td></tr><tr><td><p>Pellicle</p></td><td><p>——</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Nomenclature:"
+                    }
+                ],
+                "level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.4 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.5 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.6 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.7 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.8 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "异常事件处理流程："
+                    }
+                ],
+                "level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "原材料检验过程中出发OOS或其他检验异常处理流程"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "隔离OSS物料"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "基于IOND结论进行物料处置"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE触发IQND"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE审核报告"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "供应商调查原因并回复CAR"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "发送CAR给供应商"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "触发OOS或其他检验异常"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p>作业流程</p></td><td><p>负责单位/人员</p></td><td><p>作业说明</p></td></tr><tr><td><p>隔离OSS物料</p><p>基于IOND结论进行物料处置</p><p>MQE触发IQND</p><p>MQE审核报告</p><p>供应商调查原因并回复CAR</p><p>发送CAR给供应商</p><p>触发OOS或其他检验异常</p></td><td><p>MQE</p><p>MQE/WH</p><p>MQE</p><p>供应商</p><p>MQE</p><p>MQE</p><p>MQE/WH</p></td><td><p>新批次触发OOS或其他检验异常</p><p>隔离异常批次</p><p>MQE发送CAR给供应商</p><p>供应商确认异常原因并回复CAR</p><p>MQE审核报告</p><p>MQE触发IQND</p><p>基于IQND结论处置物料</p></td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "IQND流程："
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "是"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "否"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "事件关闭"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE审核CAR"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "发送CAR给供应商并IQND退货"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "物料异常"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "如需供应商可现场确认"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE工程师现场确认"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Fab/FAC处置"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "隔离异常物料"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "使用前发现异常"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p>作业流程</p></td><td><p>负责单位/人员</p></td><td><p>作业说明</p></td></tr><tr><td><p>是</p><p>否</p><p>事件关闭</p><p>MQE审核CAR</p><p>发送CAR给供应商并IQND退货</p><p>物料异常</p><p>如需供应商可现场确认</p><p>MQE工程师现场确认</p><p>Fab/FAC处置</p><p>隔离异常物料</p><p>使用前发现异常</p></td><td><p>Fab/FAC</p><p>MQE/FAC/Fab</p><p>MQE</p><p>供应商</p><p>Fab/FAC</p><p>MQE</p><p>MQE</p><p>MQE</p></td><td><p>使用前发现异常</p><p>隔离异常批次</p><p>MQE工程师现场确认</p><p>如有必要，供应商可现场确认异常情况</p><p>如异常与原料无关，Fab/FAC自行处置</p><p>如确为原物料异常，MQE发送CAR给供应商并IQND退货</p><p>MQE审核报告</p><p>事件关闭</p></td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "IQND流程："
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE审核CAR"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "否"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "PUR确认退货"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "是"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "事件关闭"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "厂长判断是否"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE和User三级判断"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "User司机评估风险确认是否可以特采"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE工"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "程师触发IQND"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MQE四级确认是否特"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MC评估库存确认是"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p>作业流程</p></td><td><p>负责单位/人员</p></td><td><p>作业说明</p></td></tr><tr><td><p>MQE审核CAR</p><p>否</p><p>否</p><p>MQE审核CAR</p><p>MQE审核CAR</p><p>MQE审核CAR</p><p>PUR确认退货</p><p>否</p><p>是</p><p>事件关闭</p><p>MQE审核CAR</p><p>厂长判断是否</p><p>MQE和User三级判断</p><p>User司机评估风险确认是否可以特采</p><p>是</p><p>否</p><p>MQE工</p><p>程师触发IQND</p><p>MQE四级确认是否特</p><p>是</p><p>否</p><p>MC评估库存确认是</p></td><td><p>Fab/FAC</p><p>MQE/FAC/Fab</p><p>MQE</p><p>供应商</p><p>Fab/FAC</p><p>MQE</p><p>MQE</p><p>MQE</p></td><td><p>使用前发现异常</p><p>隔离异常批次</p><p>MQE工程师现场确认</p><p>如有必要，供应商可现场确认异常情况</p><p>如异常与原料无关，Fab/FAC自行处置</p><p>如确为原物料异常，MQE发送CAR给供应商并IQND退货</p><p>MQE审核报告</p><p>事件关闭</p></td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "6 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Project backgroud"
+                    }
+                ],
+                "level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "6.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "DCC：Document Control Center"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "6.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "DCN：Document Change Notice(for Company Rules and Regulations)"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "6.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "DMS：Document Management System"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "Semiconfuctor Manufaceturing International Corporation"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30"
+                    }
+                ]
+            }
+        }
+    ]
+]

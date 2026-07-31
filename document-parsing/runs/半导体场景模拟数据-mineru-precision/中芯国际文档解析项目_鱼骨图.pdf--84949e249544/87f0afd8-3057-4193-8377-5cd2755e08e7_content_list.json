@@ -1,0 +1,484 @@
+[
+    {
+        "type": "text",
+        "text": "中芯国际文档解析项目开工会",
+        "text_level": 2,
+        "bbox": [
+            191,
+            307,
+            805,
+            562
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "2025 年 12 月 26 日",
+        "bbox": [
+            685,
+            779,
+            855,
+            818
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "矩阵起源",
+        "bbox": [
+            801,
+            40,
+            965,
+            125
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "会议议程",
+        "text_level": 2,
+        "bbox": [
+            36,
+            437,
+            239,
+            531
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "01 项目背景\n02 需求分析\n03 项目计划\n04 项目协作\n05 风险应对",
+        "bbox": [
+            529,
+            233,
+            725,
+            731
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "图片",
+        "bbox": [
+            679,
+            774,
+            702,
+            798
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "项目背景介绍",
+        "text_level": 2,
+        "bbox": [
+            72,
+            96,
+            251,
+            151
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "中芯国际 SMIC 文档解析开发项目",
+        "text_level": 2,
+        "bbox": [
+            43,
+            224,
+            266,
+            255
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "主要是为了对PDF、PPT、Word、Exce等多种格式文件以及图片、表格、流程图等内容进行解析，将非结构化数据转化为结构化数据并利用。",
+        "bbox": [
+            42,
+            268,
+            305,
+            422
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "基于大模型算法构建文档要素抽取引擎，实现对PDF、PPT、Word、Excel等文档以及文档内图片、表格、流程图等复杂数据的解析分析，最终形成可支持智能问答系统、AI数字员工、光刻机异常分析助手、PDE培训数字员工、QE/CE稽核数字员工等应用的功能模块。",
+        "bbox": [
+            42,
+            470,
+            301,
+            746
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/fe98dab74fd8793b7d634d6b565a1f36a9aea4df55bc7cd74b2b422d1ad90d0b.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            318,
+            212,
+            978,
+            846
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "智能问答系统",
+        "bbox": [
+            816,
+            335,
+            930,
+            374
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "AI 数字员工",
+        "bbox": [
+            816,
+            450,
+            916,
+            485
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "PDE 培训数字员工",
+        "bbox": [
+            807,
+            557,
+            966,
+            596
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "QE/CE稽核数字员工",
+        "bbox": [
+            807,
+            688,
+            979,
+            725
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "底部贴边文本样例，button text sample，button text sample，button text sample",
+        "bbox": [
+            102,
+            955,
+            773,
+            996
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/919be8a7a3505ad8a2291e0fd73e0747e5afe410bb9330782ec88125d37787ca.jpg",
+        "image_caption": [
+            "需求示例1如下图"
+        ],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            84,
+            259,
+            422,
+            703
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/ac6f70f6f25cf52935724d86094e13a14780e2cd7b2e25a0c1f9ea72ef7b1d6c.jpg",
+        "image_caption": [
+            "需求示例1如下图"
+        ],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            564,
+            275,
+            810,
+            712
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            41,
+            33,
+            134,
+            114
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "产品需求分析",
+        "bbox": [
+            227,
+            51,
+            405,
+            107
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "文字公式解析",
+        "bbox": [
+            75,
+            242,
+            192,
+            283
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "高可用",
+        "bbox": [
+            342,
+            242,
+            404,
+            283
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "接口对接",
+        "bbox": [
+            568,
+            242,
+            650,
+            285
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "标题层级关系",
+        "bbox": [
+            79,
+            337,
+            159,
+            366
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "宕机自动回复",
+        "bbox": [
+            314,
+            331,
+            395,
+            362
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "多种文件统一接口",
+        "bbox": [
+            526,
+            325,
+            631,
+            357
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "块级和行级公式",
+        "bbox": [
+            83,
+            387,
+            176,
+            418
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "多节点部署",
+        "bbox": [
+            343,
+            381,
+            411,
+            412
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "API可调试",
+        "bbox": [
+            585,
+            377,
+            648,
+            407
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "中英文混合",
+        "bbox": [
+            131,
+            437,
+            196,
+            466
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "文档优先解析策略",
+        "bbox": [
+            328,
+            431,
+            432,
+            462
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "API可配置",
+        "bbox": [
+            606,
+            427,
+            669,
+            455
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "多场景流程图识别解析跨页表和多线表解析表格和图片混合解析",
+        "bbox": [
+            170,
+            642,
+            322,
+            768
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "资源可监控 计算资源扩展 500高并发访问",
+        "bbox": [
+            435,
+            635,
+            560,
+            762
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "图片理解表格解析",
+        "bbox": [
+            191,
+            827,
+            345,
+            870
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "可扩展 / 高并发",
+        "bbox": [
+            440,
+            818,
+            571,
+            861
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "矩阵起源",
+        "bbox": [
+            41,
+            31,
+            203,
+            118
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "产品需求分析鱼骨图",
+        "bbox": [
+            226,
+            24,
+            492,
+            79
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "最终交付目标为 100%，时间 2025/1/19",
+        "bbox": [
+            631,
+            116,
+            966,
+            157
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "table",
+        "img_path": "images/ee830d59882e773d3d2c9a51a17f9c126c2a81038f5a696833b8d057be77c29a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>需求类别</td><td>子类别</td><td>需求概要</td><td>MOI 满足情况</td><td>MOI 满足度</td></tr><tr><td rowspan=\"4\">解析</td><td>文字解析</td><td>能够正确识别全字符集,对文档中的标题、正文及其层级内容可以正确区别,识别中日英等混合语言的文档。</td><td>不支持页眉页脚解析</td><td>95%</td></tr><tr><td>图片理解</td><td>对流程图、图表、图文混合图像等图片类型进行正确的文字提取和语义理解,提供必要的跨页合并和结构化数据输出,支持多中图片文件类型的解析。</td><td>Caption 理解效果需要提升不支持图表解析为结构化数据</td><td>70%</td></tr><tr><td>表格解析</td><td>能够正确按照表格拓普输出结构化数据,对表格中的嵌入图片正确理解,支持跨页表格以及excel 中的离散表格识别提取</td><td>不支持跨页表格拼接不支持是否合并单元格输出控制</td><td>80%</td></tr><tr><td>公式解析</td><td>正确识别 Office 文档中各个位置的公式,并输出为 markdown 公式语法</td><td>行级、表格内公式无法识别</td><td>70%</td></tr><tr><td rowspan=\"2\">性能</td><td>可扩展/高并发</td><td>支持计算资源的横向扩展,支持 500 人高并发访问</td><td>支持计算资源扩展,支持任务并发配置及文件内图片解析并发</td><td>100%</td></tr><tr><td>高可用</td><td>支持系统宕机自动恢复,高负载持续运行,并在多节点部署,支持文档优先解析策略。</td><td>计算节点为无状态服务节点</td><td>100%</td></tr><tr><td>可视化</td><td>可观测</td><td>对系统的监控状态检测,提供任务监控及审计日志,具有自动清理数据的能力。</td><td>基础的信息都有记录,待信息整合不支持 API 调用后自动清理数据</td><td>70%</td></tr><tr><td>API</td><td>接口对接</td><td>支持单一 API 对各种类型文档解析,API 可配置是否返回原始文件、数据清除、批量解析、状态推送等</td><td>已支持基础的 API 接口,待支持若干可配置功能</td><td>80%</td></tr></table>",
+        "bbox": [
+            26,
+            166,
+            971,
+            998
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "矩阵起源",
+        "bbox": [
+            40,
+            29,
+            204,
+            118
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "产品需求分析计划",
+        "bbox": [
+            225,
+            22,
+            464,
+            81
+        ],
+        "page_idx": 5
+    }
+]

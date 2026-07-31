@@ -1,0 +1,174 @@
+[
+    {
+        "type": "text",
+        "text": "1 WPH(Water Per Hour): Theoretical unit throughput by recipe Peak WPH: The throughput under continuous run status",
+        "bbox": [
+            66,
+            133,
+            580,
+            201
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "2",
+        "bbox": [
+            520,
+            242,
+            541,
+            275
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/7e294e4a34660f88532bd22fed687136349580dfd591270f0d6138febfe89250.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            16,
+            216,
+            955,
+            529
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Average Peak WPH",
+        "bbox": [
+            402,
+            540,
+            616,
+            574
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n4 = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\text {Theoretical production time by recipei}} = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\sum_ {i = 1} ^ {n} \\frac {\\text {Move of recipei}}{\\text {Peak WPH by recipei}}}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            355,
+            572,
+            927,
+            655
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "30m@6m/s",
+        "bbox": [
+            111,
+            751,
+            209,
+            788
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "30m@6m/s",
+        "bbox": [
+            404,
+            753,
+            502,
+            788
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/c17adbf372adcfd0957a0cb4bdf0612c53cc3d48edbc3618fe98b768898e9bd0.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            613,
+            709,
+            750,
+            801
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The average speed? $(6+3)/2=4.5\\text{m/s}$ ? ✗ $(30+60)/(20/6+60/3)=3.6\\text{m/s}$ ? √",
+        "bbox": [
+            33,
+            825,
+            677,
+            861
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Recipe 1: PWPH 1=20, move 1=1000",
+        "bbox": [
+            34,
+            868,
+            375,
+            901
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Recipe 2: PWPH 2=25, move 2=1500",
+        "bbox": [
+            34,
+            901,
+            376,
+            931
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Average PWPH: 1000+1500)/(1000/20+1500/25)=22.7",
+        "bbox": [
+            34,
+            931,
+            513,
+            966
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            1,
+            0,
+            102,
+            105
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "WPH introduction",
+        "bbox": [
+            105,
+            40,
+            306,
+            79
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "SMIC",
+        "bbox": [
+            913,
+            20,
+            987,
+            83
+        ],
+        "page_idx": 0
+    }
+]

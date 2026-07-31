@@ -1,0 +1,152 @@
+{
+  "filename": "12表格不合并单元格错乱_居中.pptx",
+  "filetype": "PPTX",
+  "block_count": 4,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "title",
+      "level": "1",
+      "content": "SEASF06B+LDD+Stage+WAT+VBG+Fail+8-D+Report",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          137.0,
+          30.0,
+          651.0,
+          56.0
+        ],
+        "polygon": [
+          [
+            137,
+            30
+          ],
+          [
+            651,
+            30
+          ],
+          [
+            651,
+            56
+          ],
+          [
+            137,
+            56
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "D4: Define and Verify Root Cause",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          28.0,
+          84.0,
+          386.0,
+          109.0
+        ],
+        "polygon": [
+          [
+            28,
+            84
+          ],
+          [
+            386,
+            84
+          ],
+          [
+            386,
+            110
+          ],
+          [
+            28,
+            110
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "▶ Root Cause Evidence",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          29.0,
+          114.0,
+          290.0,
+          138.0
+        ],
+        "polygon": [
+          [
+            29,
+            114
+          ],
+          [
+            290,
+            114
+          ],
+          [
+            290,
+            138
+          ],
+          [
+            29,
+            138
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td colspan=\"2\">Oxidation</td><td>Avg.</td><td>STD</td><td></td><td>Avg.</td><td>STD</td></tr><tr><td rowspan=\"2\">SEASF06_A</td><td>pre</td><td>6.48</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.77</td><td rowspan=\"2\">0.139</td></tr><tr><td>post</td><td>15.25</td><td>0.197</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td>pre</td><td>6.51</td><td>0.058</td><td rowspan=\"2\">差值</td><td rowspan=\"2\">8.53</td><td rowspan=\"2\">0.167</td></tr><tr><td>post</td><td>15.04</td><td>0.225</td></tr><tr><td colspan=\"3\">Charge</td><td>Avg.</td><td></td><td colspan=\"2\">Avg.</td></tr><tr><td rowspan=\"2\">SEASF06_A</td><td colspan=\"2\">pre</td><td>0.431</td><td rowspan=\"2\">差值</td><td rowspan=\"2\" colspan=\"2\">0.012</td></tr><tr><td colspan=\"2\">post</td><td>0.419</td></tr><tr><td rowspan=\"2\">SEASF06_B</td><td colspan=\"2\">pre</td><td>0.444</td><td rowspan=\"2\">差值</td><td rowspan=\"2\" colspan=\"2\">0.03</td></tr><tr><td colspan=\"2\">post</td><td>0.474</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          31.0,
+          149.0,
+          867.0,
+          484.0
+        ],
+        "polygon": [
+          [
+            31,
+            152
+          ],
+          [
+            31,
+            484
+          ],
+          [
+            867,
+            484
+          ],
+          [
+            867,
+            152
+          ]
+        ]
+      }
+    }
+  ]
+}

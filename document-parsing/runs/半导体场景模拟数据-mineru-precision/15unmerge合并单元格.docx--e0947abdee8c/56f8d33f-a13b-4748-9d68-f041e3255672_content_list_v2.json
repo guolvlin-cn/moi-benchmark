@@ -1,0 +1,1744 @@
+[
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "AI 应用落地方案说明书"
+                    }
+                ]
+            },
+            "anchor": "封面"
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1. Project background and objectives\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1. DCC：Document Control Center\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.2. DCN：Document Change Notice(for Company Rules and Regulations)\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.3. DMS：Document Management System\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4. Background description\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4.1. Industry prospects1\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4.2. Industry prospects2\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4.3. Industry prospects3\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4.4. Industry prospects4\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4.5. Industry prospects\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4.6. Main pain points\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.5. Construction objectives\t3"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2. Overall scheme design\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1. Overview of system architecture\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2. 技术选型说明\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2.1. 后端与基础设施\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2.2. 模型相关\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2.3. 其他模型相关\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3. Technical selection description\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.1. Backend and Infrastructure\t4"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.2. Model-related\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.3. Other model-related\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.4. Backend and Infrastructure\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.5. Model-related\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.6. Other model-related\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.7. RAG: Retrieval Augmented GenerationOther model-related\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.8. Other model-related\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3. Core functional modules\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.1. All documents generated by function departments should be named according to the below-mentioned categories of documents.\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.1.1. Data Source\t5"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.1.2. All documents generated by function de\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.1.3. 数据处理模块包括以下流程\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.2. 模型服务模块\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.2.1. 推理服务\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.2.2. 模型更新策略\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3. 应用层模块\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3.1. 典型应用场景\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3.2. 权限与安全\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "4. 4. Implementation plan and milestones\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "4.1. Categories and hierarchy of documents\t6"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2. 实施阶段划分\t7"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3. 风险与应对\t7"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.1. 技术风险\t7"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.2. 业务风险\t7"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5. Attachment\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.1. Atachment1：Formate for xxxxx1\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.2. Atachment1：Formate for xxxxx2\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.3. Atachment1：Formate for xxxxx3\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.4. Atachment1：Formate for xxxxx4\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.5. Atachment1：Formate for xxxxx5\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.6. Atachment1：Formate for xxxxx6\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.7. Atachment1：Formate for xxxxx7\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.8. Atachment1：Formate for xxxxx8\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.9. Atachment1：Formate for xxxxx9\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5.10. Atachment1：Formate for xxxxx10\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "6. 总结与展望\t8"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Overall scheme design"
+                    }
+                ],
+                "level": 1
+            },
+            "anchor": "_Toc662067944"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Overview of system architecture"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc1263159701"
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The system is designed with a layered architecture, encompassing a data layer, a model layer, and an application layer. This design ensures the independence between modules and facilitates the addition of new functional modules in the future."
+                    }
+                ]
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/0e4ac7ea1c986681ccf3e319b68ce231e890ee13bb79909c9068e5a8293f94f2.png"
+                },
+                "image_caption": []
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "技术选型说明"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc2049244112"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.2.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "后端与基础设施"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc303059798"
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "unordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "编程语言：Python"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "服务框架：FastAPI"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "模型部署：vLLM / Triton"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "容器与编排：Docker + Kubernetes"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "大语言模型（LLM）"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "向量模型（Embedding）"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "RAG 检索增强生成"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "视觉大模型（VLM）"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "向量模型（Embedding）"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "RAG 检索增强生成"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Programming language: Python"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Service framework: FastAPI"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Model deployment: vLLM / Triton"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Containers and orchestration: Docker + Kubernetes"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Large Language Model (LLM)"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Vector model (Embedding)"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Vector model (Embedding)"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "RAG: Retrieval Augmented Generation"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Service framework: FastAPI"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.2.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "模型相关"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc1842297949"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.2.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "其他模型相关"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc1082406397"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Technical selection description"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc670340642"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.3.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Backend and Infrastructure"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc715957932"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.3.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Model-related"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc754088983"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Core functional modules"
+                    }
+                ],
+                "level": 1
+            },
+            "anchor": "_Toc1711130330"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "All documents generated by function departments should be named according to the below-mentioned categories of documents."
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc2013939333"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Data Source"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc1788609364"
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Equipment pperation instruction"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Data Type </strong></p></td><td><p><strong>Data Type </strong></p></td><td><p><strong>Data Type </strong></p></td><td><p><strong>Data Type </strong></p></td></tr><tr><td rowspan=\"2\"><p>Document Data </p></td><td><p>Document Management System</p></td><td><p>PDF / DOCX</p></td><td><p>Daily</p></td></tr><tr><td><p>Business Databases</p></td><td><p>CSV / XLSX</p></td><td><p>Real-time</p></td></tr><tr><td><p>Log Data </p></td><td><p>Application Systems </p></td><td><p>JSON</p></td><td><p>Real-time</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "2.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Other documents"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Data Type </strong></p></td><td><p><strong>Data Type </strong></p></td><td><p><strong>Data Type </strong></p></td><td><p><strong>Data Type </strong></p></td></tr><tr><td><p>Document Data </p></td><td><p>Document Management System</p></td><td><p>PDF / DOCX</p></td><td rowspan=\"3\"><p>Daily</p><p>Real-time</p></td></tr><tr><td><p>Tabular Data </p></td><td rowspan=\"2\"><p>Business Databases</p><p>Application Systems </p></td><td><p>CSV / XLSX</p></td></tr><tr><td><p>Log Data </p></td><td><p>JSON</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "All documents generated by function de"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc681490042"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.1.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "数据处理模块包括以下流程 "
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc1272846443"
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- 清洗无效数据，去除空值与重复数据\n\t- 结构化与切分（Chunking）\n\t- 向量化与索引构建，用于快速检索和匹配"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "模型服务模块"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc1645559734"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "推理服务"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc1628043272"
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "模型通过统一的 API 服务对外提供能力，支持高并发和流式输出，以满足业务实时性要求。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.2.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "模型更新策略"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc1434126077"
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "unordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "支持模型热更新，避免服务中断"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "支持多版本并行部署，便于 A/B 测试和回滚"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "智能问答助手"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "文档检索与总结"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "应用层模块"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc522211"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.3.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "典型应用场景"
+                    }
+                ],
+                "level": 3
+            },
+            "anchor": "_Toc186865689"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.4 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Categories and hierarchy of documents"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc309327574"
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Task ID</strong></p></td><td><p><strong>Task Des</strong></p></td><td><p><strong>Priority</strong></p></td><td><p><strong>Assigned Department</strong></p></td><td><p><strong>Estimated Hours</strong></p></td><td><p><strong>Status</strong></p></td></tr><tr><td><p>T-001</p></td><td><p>Initial Client Consultation</p></td><td><p>High</p></td><td><p>Sales</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-002</p></td><td><p>Requirement Analysis</p></td><td><p>Critical</p></td><td><p>Engineering</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-003</p></td><td><p>Market Competitor Audit</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>8</p></td><td><p>Pending</p></td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2.5 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "实施阶段划分"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Task ID</strong></p></td><td><p><strong>Task Des</strong></p></td><td><p><strong>Priority</strong></p></td><td><p><strong>Assigned Department</strong></p></td><td><p><strong>Estimated Hours</strong></p></td><td><p><strong>Status</strong></p></td></tr><tr><td rowspan=\"2\"><p>T-001</p></td><td><p>Initial Client Consultation</p></td><td><p>High</p></td><td rowspan=\"2\"><p>Sales</p><p>Engineering</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>Requirement Analysis</p></td><td><p>Critical</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-003</p></td><td><p>Market Competitor Audit</p></td><td colspan=\"2\"><p>Medium</p><p>Marketing</p></td><td><p>8</p></td><td><p>Pending</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Attachment"
+                    }
+                ],
+                "level": 1
+            },
+            "anchor": "_Toc118945561"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Atachment1：Formate for xxxxx1"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc1958252017"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Atachment1：Formate for xxxxx2"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc7275797"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Atachment1：Formate for xxxxx3"
+                    }
+                ],
+                "level": 2
+            },
+            "anchor": "_Toc2025235947"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "总结与展望"
+                    }
+                ],
+                "level": 1
+            },
+            "anchor": "_Toc1614256597"
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Effective period of TECN"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "SMIC document security levels are categorized accounting to the security control level’s defined in “CR-GWNL-01-1001 SMIC Classified Information Protection Policy (CIPP)”as follows"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Security B-SMIC Confidential"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Security C-SMIC Restricted"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Effective period of TECN"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Document format should follow the requirements sign-off"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "2.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Document sign-off should follow the requirements in item 20"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "3.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Document access authority should follow the requirements in item 18.2"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "4.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Document effectiveness cycle time should be within 14 working days"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "All documents generated by function departments should be named according to the below-mentioned categories of documents for example,”SMIC Document Control Procedure” Document title naming rules are follows:"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "FAB documents"
+                    }
+                ],
+                "level": 3
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Equipment operation instruction"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Document Scope</strong></p></td><td><p><strong>Naming Rule Format</strong></p></td></tr><tr><td colspan=\"2\"><p>200mm Fab</p><p>SMIC 200mm XXX(Module)XXX(Equipment/System Name)O.I.E.g SMIC 200mm ETCH LAM</p></td></tr><tr><td><p>ALL Fab :Moduleis operational</p></td><td><p>SMIC XXX(Module)XXX(Equipment/System Name)O.I.E.g SMIC LITHO Entegris XCDA PM O.I.</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "2.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Other documents"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Document Scope</strong></p></td><td><p><strong>Naming Rule Format</strong></p></td></tr><tr><td rowspan=\"2\"><p>200mm Fab</p><p>300mm Fab</p><p>ALL Fab :Moduleis operational</p></td><td><p>SMIC 200mm XXX(Module)XXX(Function/System Name)Rule/Procedure</p><p>E.g. SMIC 200mm MFG Production Plan Review Procedure</p></td></tr><tr><td><p>SMIC 300mm XXX(Module)XXX(Function/System Name)Rule/Procedure</p><p>E.g. SMIC 300mm YE Recipe Request Procedure</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Non-FAB documents/DCN"
+                    }
+                ],
+                "level": 3
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(E.g. Mask Operation,RE lab,Facility,etc)"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Document Scope</strong></p></td><td><p><strong>Naming Rule Format</strong></p></td></tr><tr><td><p>SMIC(SH,BJ,TJ,SZ)</p></td><td><p>SMIC (XX)(Site) XXX(Function area)XXX(Equipment/System name) O.I./Rule/Procrdure/Guideline/Policy</p><p>E.g. SMIC (SH/BJ) Information Equipment Management Protection Procedure</p></td></tr><tr><td><p>SMIC and SMIC managed facilities</p></td><td><p>SMIC XXX(Function Area)XXX(Function/Equipment/System Name) O.I./Rule/Procedure</p><p>E.g. SMIC Facility UPS O.I.</p></td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.3.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Technology development related documents naming rule is defined in “ TD-GENL-01-2047 SMIC Deaign Rules Template” and “TD-GENL-01-2064 SMIC PDK Document Title and Attached File Naming Rule”"
+                    }
+                ],
+                "level": 3
+            }
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "Semiconfuctor Manufaceturing International Corporation"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30"
+                    }
+                ]
+            }
+        }
+    ]
+]

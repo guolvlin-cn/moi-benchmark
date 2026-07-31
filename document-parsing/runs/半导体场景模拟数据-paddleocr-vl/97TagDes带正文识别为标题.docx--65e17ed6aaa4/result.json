@@ -1,0 +1,2737 @@
+{
+  "file_name": "97TagDes带正文识别为标题.docx",
+  "file_id": "file-5Y5a7c8UXwkxhrZeV5gFVTdDudXm4the",
+  "pdf_data": "",
+  "pages": [
+    {
+      "page_id": "ZbE2yu-page-0",
+      "page_num": 0,
+      "layouts": [
+        {
+          "layout_id": "ZbE2yu-layout-1",
+          "text": "Applied APF RTD 9.4.0 Dispatch API Guide Chapter 1. Using the Dispatch API",
+          "position": [
+            363,
+            23,
+            170,
+            23
+          ],
+          "polygon": [
+            [
+              363,
+              23
+            ],
+            [
+              533,
+              23
+            ],
+            [
+              533,
+              47
+            ],
+            [
+              363,
+              47
+            ]
+          ],
+          "type": "header",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "Applied APF RTD 9.4.0 Dispatch API Guide",
+              "location": [
+                [
+                  363,
+                  24
+                ],
+                [
+                  532,
+                  24
+                ],
+                [
+                  532,
+                  33
+                ],
+                [
+                  363,
+                  33
+                ]
+              ]
+            },
+            {
+              "text": "Chapter 1. Using the Dispatch API",
+              "location": [
+                [
+                  396,
+                  35
+                ],
+                [
+                  532,
+                  35
+                ],
+                [
+                  532,
+                  44
+                ],
+                [
+                  396,
+                  44
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-2",
+          "text": "Dispatch list format",
+          "position": [
+            68,
+            73,
+            172,
+            20
+          ],
+          "polygon": [
+            [
+              68,
+              73
+            ],
+            [
+              240,
+              73
+            ],
+            [
+              240,
+              93
+            ],
+            [
+              68,
+              93
+            ]
+          ],
+          "type": "paragraph_title",
+          "sub_type": "title_2",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "Dispatch list format",
+              "location": [
+                [
+                  68,
+                  74
+                ],
+                [
+                  239,
+                  74
+                ],
+                [
+                  239,
+                  92
+                ],
+                [
+                  68,
+                  92
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-3",
+          "text": "Although the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful. Pre-defined headers for the dispatch list",
+          "position": [
+            140,
+            107,
+            394,
+            60
+          ],
+          "polygon": [
+            [
+              140,
+              107
+            ],
+            [
+              534,
+              107
+            ],
+            [
+              534,
+              167
+            ],
+            [
+              140,
+              167
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "Although the Dispatch API provides functions for parsing and accessing the",
+              "location": [
+                [
+                  140,
+                  107
+                ],
+                [
+                  534,
+                  107
+                ],
+                [
+                  534,
+                  120
+                ],
+                [
+                  140,
+                  120
+                ]
+              ]
+            },
+            {
+              "text": "dispatch result, you may want to handle the response yourself. In that case, this",
+              "location": [
+                [
+                  140,
+                  122
+                ],
+                [
+                  534,
+                  122
+                ],
+                [
+                  534,
+                  135
+                ],
+                [
+                  140,
+                  135
+                ]
+              ]
+            },
+            {
+              "text": "description of the returned dispatch list may be helpful. Pre-defined headers for the",
+              "location": [
+                [
+                  140,
+                  138
+                ],
+                [
+                  534,
+                  138
+                ],
+                [
+                  534,
+                  150
+                ],
+                [
+                  140,
+                  150
+                ]
+              ]
+            },
+            {
+              "text": "dispatch list",
+              "location": [
+                [
+                  141,
+                  153
+                ],
+                [
+                  198,
+                  153
+                ],
+                [
+                  198,
+                  167
+                ],
+                [
+                  141,
+                  167
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-4",
+          "text": "Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API. Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.",
+          "position": [
+            140,
+            169,
+            394,
+            108
+          ],
+          "polygon": [
+            [
+              140,
+              169
+            ],
+            [
+              535,
+              169
+            ],
+            [
+              535,
+              277
+            ],
+            [
+              140,
+              277
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to",
+              "location": [
+                [
+                  143,
+                  169
+                ],
+                [
+                  532,
+                  169
+                ],
+                [
+                  532,
+                  180
+                ],
+                [
+                  143,
+                  180
+                ]
+              ]
+            },
+            {
+              "text": "exchange batch control or data acquisition tasks using a compact and extensible",
+              "location": [
+                [
+                  143,
+                  185
+                ],
+                [
+                  532,
+                  185
+                ],
+                [
+                  532,
+                  196
+                ],
+                [
+                  143,
+                  196
+                ]
+              ]
+            },
+            {
+              "text": "TLV(Type-Length-Value)binary encoding. This approach ensures compatibility",
+              "location": [
+                [
+                  143,
+                  201
+                ],
+                [
+                  532,
+                  201
+                ],
+                [
+                  532,
+                  212
+                ],
+                [
+                  143,
+                  212
+                ]
+              ]
+            },
+            {
+              "text": "across vendors #rows, supports dynamic task type extensions, and performs",
+              "location": [
+                [
+                  143,
+                  216
+                ],
+                [
+                  532,
+                  216
+                ],
+                [
+                  532,
+                  227
+                ],
+                [
+                  143,
+                  227
+                ]
+              ]
+            },
+            {
+              "text": "reliably even under constrained network conditions. The following sections outline",
+              "location": [
+                [
+                  143,
+                  232
+                ],
+                [
+                  532,
+                  232
+                ],
+                [
+                  532,
+                  242
+                ],
+                [
+                  143,
+                  242
+                ]
+              ]
+            },
+            {
+              "text": "the technical specification and usage guidelines for this fictional API.Also, note that",
+              "location": [
+                [
+                  143,
+                  247
+                ],
+                [
+                  532,
+                  247
+                ],
+                [
+                  532,
+                  257
+                ],
+                [
+                  143,
+                  257
+                ]
+              ]
+            },
+            {
+              "text": "there is one key, #ISS_SLIS_DIAGS, which does not confirmed.",
+              "location": [
+                [
+                  143,
+                  262
+                ],
+                [
+                  441,
+                  262
+                ],
+                [
+                  441,
+                  273
+                ],
+                [
+                  143,
+                  273
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-5",
+          "text": "Tag descriptions",
+          "position": [
+            67,
+            303,
+            148,
+            21
+          ],
+          "polygon": [
+            [
+              67,
+              303
+            ],
+            [
+              215,
+              303
+            ],
+            [
+              215,
+              324
+            ],
+            [
+              67,
+              324
+            ]
+          ],
+          "type": "paragraph_title",
+          "sub_type": "title_1",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "Tag descriptions",
+              "location": [
+                [
+                  67,
+                  304
+                ],
+                [
+                  215,
+                  304
+                ],
+                [
+                  215,
+                  323
+                ],
+                [
+                  67,
+                  323
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-6",
+          "text": "The following table provides description for the tages used in a dispatch query result:\nTag Description\n#headers Pre-defined headers for the dispatch list.\n#columns The column heading names for the list.\n#widths The widths for each column, used in formatting the data.\n#types The data types for each column. Normally used to decide how to justify a column by default.\n#lotcol Which column contains the lot names.\n#rows The query data table in row-major form.\n#blocked A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.\n#ISS-DDIS- This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the other tags.",
+          "position": [
+            141,
+            337,
+            392,
+            29
+          ],
+          "polygon": [
+            [
+              141,
+              337
+            ],
+            [
+              534,
+              337
+            ],
+            [
+              534,
+              366
+            ],
+            [
+              141,
+              366
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "The following table provides description for the tages used in a dispatch query.",
+              "location": [
+                [
+                  143,
+                  337
+                ],
+                [
+                  532,
+                  337
+                ],
+                [
+                  532,
+                  349
+                ],
+                [
+                  143,
+                  349
+                ]
+              ]
+            },
+            {
+              "text": "result:",
+              "location": [
+                [
+                  143,
+                  355
+                ],
+                [
+                  173,
+                  355
+                ],
+                [
+                  173,
+                  364
+                ],
+                [
+                  143,
+                  364
+                ]
+              ]
+            },
+            {
+              "text": "Tag",
+              "location": [
+                [
+                  143,
+                  367
+                ],
+                [
+                  161,
+                  367
+                ],
+                [
+                  161,
+                  378
+                ],
+                [
+                  143,
+                  378
+                ]
+              ]
+            },
+            {
+              "text": "Description",
+              "location": [
+                [
+                  236,
+                  367
+                ],
+                [
+                  295,
+                  367
+                ],
+                [
+                  295,
+                  378
+                ],
+                [
+                  236,
+                  378
+                ]
+              ]
+            },
+            {
+              "text": "#headers",
+              "location": [
+                [
+                  142,
+                  382
+                ],
+                [
+                  192,
+                  382
+                ],
+                [
+                  192,
+                  391
+                ],
+                [
+                  142,
+                  391
+                ]
+              ]
+            },
+            {
+              "text": "Pre-defined headers for the dispatch list.",
+              "location": [
+                [
+                  236,
+                  381
+                ],
+                [
+                  426,
+                  381
+                ],
+                [
+                  426,
+                  392
+                ],
+                [
+                  236,
+                  392
+                ]
+              ]
+            },
+            {
+              "text": "#columns",
+              "location": [
+                [
+                  142,
+                  396
+                ],
+                [
+                  192,
+                  396
+                ],
+                [
+                  192,
+                  405
+                ],
+                [
+                  142,
+                  405
+                ]
+              ]
+            },
+            {
+              "text": "The column heading names for the list.",
+              "location": [
+                [
+                  236,
+                  395
+                ],
+                [
+                  419,
+                  395
+                ],
+                [
+                  419,
+                  405
+                ],
+                [
+                  236,
+                  405
+                ]
+              ]
+            },
+            {
+              "text": "#widths",
+              "location": [
+                [
+                  142,
+                  409
+                ],
+                [
+                  186,
+                  409
+                ],
+                [
+                  186,
+                  418
+                ],
+                [
+                  142,
+                  418
+                ]
+              ]
+            },
+            {
+              "text": "The widths for each column, used in formatting the data.",
+              "location": [
+                [
+                  236,
+                  408
+                ],
+                [
+                  495,
+                  408
+                ],
+                [
+                  495,
+                  419
+                ],
+                [
+                  236,
+                  419
+                ]
+              ]
+            },
+            {
+              "text": "#types",
+              "location": [
+                [
+                  143,
+                  424
+                ],
+                [
+                  181,
+                  424
+                ],
+                [
+                  181,
+                  434
+                ],
+                [
+                  143,
+                  434
+                ]
+              ]
+            },
+            {
+              "text": "The data types for each column. Normally used to decide how",
+              "location": [
+                [
+                  236,
+                  423
+                ],
+                [
+                  533,
+                  423
+                ],
+                [
+                  533,
+                  433
+                ],
+                [
+                  236,
+                  433
+                ]
+              ]
+            },
+            {
+              "text": "to justify a column by default.",
+              "location": [
+                [
+                  236,
+                  439
+                ],
+                [
+                  374,
+                  439
+                ],
+                [
+                  374,
+                  449
+                ],
+                [
+                  236,
+                  449
+                ]
+              ]
+            },
+            {
+              "text": "#lotcol",
+              "location": [
+                [
+                  142,
+                  452
+                ],
+                [
+                  187,
+                  452
+                ],
+                [
+                  187,
+                  462
+                ],
+                [
+                  142,
+                  462
+                ]
+              ]
+            },
+            {
+              "text": "Which column contains the lot names.",
+              "location": [
+                [
+                  236,
+                  452
+                ],
+                [
+                  415,
+                  452
+                ],
+                [
+                  415,
+                  462
+                ],
+                [
+                  236,
+                  462
+                ]
+              ]
+            },
+            {
+              "text": "#rows",
+              "location": [
+                [
+                  142,
+                  467
+                ],
+                [
+                  174,
+                  467
+                ],
+                [
+                  174,
+                  475
+                ],
+                [
+                  142,
+                  475
+                ]
+              ]
+            },
+            {
+              "text": "The query data table in row-major form.",
+              "location": [
+                [
+                  236,
+                  465
+                ],
+                [
+                  421,
+                  465
+                ],
+                [
+                  421,
+                  476
+                ],
+                [
+                  236,
+                  476
+                ]
+              ]
+            },
+            {
+              "text": "#blocked",
+              "location": [
+                [
+                  142,
+                  480
+                ],
+                [
+                  194,
+                  480
+                ],
+                [
+                  194,
+                  489
+                ],
+                [
+                  142,
+                  489
+                ]
+              ]
+            },
+            {
+              "text": "A flag for each lot that indicates if it is blocked. The WorkStram",
+              "location": [
+                [
+                  236,
+                  479
+                ],
+                [
+                  533,
+                  479
+                ],
+                [
+                  533,
+                  490
+                ],
+                [
+                  236,
+                  490
+                ]
+              ]
+            },
+            {
+              "text": "Dispatcher interface uses this flag to determine whether that lot",
+              "location": [
+                [
+                  236,
+                  495
+                ],
+                [
+                  533,
+                  495
+                ],
+                [
+                  533,
+                  506
+                ],
+                [
+                  236,
+                  506
+                ]
+              ]
+            },
+            {
+              "text": "is selectable by the operator.",
+              "location": [
+                [
+                  236,
+                  511
+                ],
+                [
+                  372,
+                  511
+                ],
+                [
+                  372,
+                  521
+                ],
+                [
+                  236,
+                  521
+                ]
+              ]
+            },
+            {
+              "text": "#ISS-DDIS-",
+              "location": [
+                [
+                  143,
+                  524
+                ],
+                [
+                  206,
+                  524
+                ],
+                [
+                  206,
+                  533
+                ],
+                [
+                  143,
+                  533
+                ]
+              ]
+            },
+            {
+              "text": "This is diagnostic information from the dispatcher, relating",
+              "location": [
+                [
+                  236,
+                  523
+                ],
+                [
+                  506,
+                  523
+                ],
+                [
+                  506,
+                  535
+                ],
+                [
+                  236,
+                  535
+                ]
+              ]
+            },
+            {
+              "text": "DIAGS",
+              "location": [
+                [
+                  143,
+                  540
+                ],
+                [
+                  176,
+                  540
+                ],
+                [
+                  176,
+                  548
+                ],
+                [
+                  143,
+                  548
+                ]
+              ]
+            },
+            {
+              "text": "to the execution time of the rule. Note that it does not follow",
+              "location": [
+                [
+                  236,
+                  538
+                ],
+                [
+                  516,
+                  538
+                ],
+                [
+                  516,
+                  548
+                ],
+                [
+                  236,
+                  548
+                ]
+              ]
+            },
+            {
+              "text": "the same “#tag value” formats as the other tags.",
+              "location": [
+                [
+                  236,
+                  554
+                ],
+                [
+                  468,
+                  554
+                ],
+                [
+                  468,
+                  565
+                ],
+                [
+                  236,
+                  565
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-7",
+          "text": "",
+          "position": [
+            142,
+            369,
+            157,
+            14
+          ],
+          "polygon": [
+            [
+              142,
+              369
+            ],
+            [
+              299,
+              369
+            ],
+            [
+              299,
+              383
+            ],
+            [
+              142,
+              383
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-8",
+          "text": "",
+          "position": [
+            141,
+            384,
+            286,
+            13
+          ],
+          "polygon": [
+            [
+              141,
+              384
+            ],
+            [
+              428,
+              384
+            ],
+            [
+              428,
+              397
+            ],
+            [
+              141,
+              397
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-9",
+          "text": "",
+          "position": [
+            141,
+            400,
+            280,
+            13
+          ],
+          "polygon": [
+            [
+              141,
+              400
+            ],
+            [
+              141,
+              412
+            ],
+            [
+              421,
+              412
+            ],
+            [
+              421,
+              400
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-10",
+          "text": "",
+          "position": [
+            141,
+            415,
+            356,
+            13
+          ],
+          "polygon": [
+            [
+              141,
+              415
+            ],
+            [
+              497,
+              415
+            ],
+            [
+              497,
+              428
+            ],
+            [
+              141,
+              428
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-11",
+          "text": "",
+          "position": [
+            140,
+            430,
+            393,
+            28
+          ],
+          "polygon": [
+            [
+              140,
+              430
+            ],
+            [
+              533,
+              430
+            ],
+            [
+              533,
+              459
+            ],
+            [
+              140,
+              459
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-12",
+          "text": "",
+          "position": [
+            141,
+            461,
+            277,
+            14
+          ],
+          "polygon": [
+            [
+              141,
+              461
+            ],
+            [
+              418,
+              461
+            ],
+            [
+              418,
+              475
+            ],
+            [
+              141,
+              475
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-13",
+          "text": "",
+          "position": [
+            141,
+            477,
+            281,
+            13
+          ],
+          "polygon": [
+            [
+              141,
+              477
+            ],
+            [
+              423,
+              477
+            ],
+            [
+              423,
+              491
+            ],
+            [
+              141,
+              491
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-14",
+          "text": "",
+          "position": [
+            141,
+            493,
+            393,
+            44
+          ],
+          "polygon": [
+            [
+              141,
+              493
+            ],
+            [
+              534,
+              493
+            ],
+            [
+              534,
+              537
+            ],
+            [
+              141,
+              537
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-15",
+          "text": "",
+          "position": [
+            140,
+            539,
+            376,
+            46
+          ],
+          "polygon": [
+            [
+              140,
+              539
+            ],
+            [
+              516,
+              539
+            ],
+            [
+              516,
+              586
+            ],
+            [
+              140,
+              586
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": null,
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-16",
+          "text": "<table><tr><td colspan=\"2\">&quot;ion&quot;</td></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formatting the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-DIAGS</td><td>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same &quot;#tag value&quot; formats as the other tags.</td></tr></table>",
+          "position": [
+            138,
+            367,
+            397,
+            218
+          ],
+          "polygon": [
+            [
+              138,
+              384
+            ],
+            [
+              138,
+              585
+            ],
+            [
+              535,
+              585
+            ],
+            [
+              535,
+              376
+            ],
+            [
+              526,
+              367
+            ],
+            [
+              306,
+              367
+            ],
+            [
+              273,
+              372
+            ],
+            [
+              305,
+              384
+            ]
+          ],
+          "type": "table",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "ion",
+              "location": [
+                [
+                  274,
+                  369
+                ],
+                [
+                  295,
+                  369
+                ],
+                [
+                  295,
+                  378
+                ],
+                [
+                  274,
+                  378
+                ]
+              ]
+            },
+            {
+              "text": "#headers",
+              "location": [
+                [
+                  143,
+                  385
+                ],
+                [
+                  192,
+                  385
+                ],
+                [
+                  192,
+                  394
+                ],
+                [
+                  143,
+                  394
+                ]
+              ]
+            },
+            {
+              "text": "Pre-defined headers for the dispatch list.",
+              "location": [
+                [
+                  236,
+                  384
+                ],
+                [
+                  426,
+                  384
+                ],
+                [
+                  426,
+                  394
+                ],
+                [
+                  236,
+                  394
+                ]
+              ]
+            },
+            {
+              "text": "#columns",
+              "location": [
+                [
+                  143,
+                  401
+                ],
+                [
+                  192,
+                  401
+                ],
+                [
+                  192,
+                  410
+                ],
+                [
+                  143,
+                  410
+                ]
+              ]
+            },
+            {
+              "text": "The column heading names for the list.",
+              "location": [
+                [
+                  236,
+                  400
+                ],
+                [
+                  419,
+                  400
+                ],
+                [
+                  419,
+                  410
+                ],
+                [
+                  236,
+                  410
+                ]
+              ]
+            },
+            {
+              "text": "#widths",
+              "location": [
+                [
+                  143,
+                  417
+                ],
+                [
+                  186,
+                  417
+                ],
+                [
+                  186,
+                  426
+                ],
+                [
+                  143,
+                  426
+                ]
+              ]
+            },
+            {
+              "text": "The widths for each column, used in formatting the data.",
+              "location": [
+                [
+                  236,
+                  416
+                ],
+                [
+                  496,
+                  416
+                ],
+                [
+                  496,
+                  427
+                ],
+                [
+                  236,
+                  427
+                ]
+              ]
+            },
+            {
+              "text": "#types",
+              "location": [
+                [
+                  143,
+                  434
+                ],
+                [
+                  180,
+                  434
+                ],
+                [
+                  180,
+                  444
+                ],
+                [
+                  143,
+                  444
+                ]
+              ]
+            },
+            {
+              "text": "The data types for each column. Normally used to decide how",
+              "location": [
+                [
+                  236,
+                  433
+                ],
+                [
+                  533,
+                  433
+                ],
+                [
+                  533,
+                  443
+                ],
+                [
+                  236,
+                  443
+                ]
+              ]
+            },
+            {
+              "text": "to justify a column by default.",
+              "location": [
+                [
+                  236,
+                  449
+                ],
+                [
+                  373,
+                  449
+                ],
+                [
+                  373,
+                  460
+                ],
+                [
+                  236,
+                  460
+                ]
+              ]
+            },
+            {
+              "text": "#lotcol",
+              "location": [
+                [
+                  143,
+                  466
+                ],
+                [
+                  186,
+                  466
+                ],
+                [
+                  186,
+                  475
+                ],
+                [
+                  143,
+                  475
+                ]
+              ]
+            },
+            {
+              "text": "Which column contains the lot names.",
+              "location": [
+                [
+                  236,
+                  465
+                ],
+                [
+                  415,
+                  465
+                ],
+                [
+                  415,
+                  475
+                ],
+                [
+                  236,
+                  475
+                ]
+              ]
+            },
+            {
+              "text": "#rows",
+              "location": [
+                [
+                  143,
+                  482
+                ],
+                [
+                  175,
+                  482
+                ],
+                [
+                  175,
+                  491
+                ],
+                [
+                  143,
+                  491
+                ]
+              ]
+            },
+            {
+              "text": "The query data table in row-major form.",
+              "location": [
+                [
+                  236,
+                  481
+                ],
+                [
+                  421,
+                  481
+                ],
+                [
+                  421,
+                  492
+                ],
+                [
+                  236,
+                  492
+                ]
+              ]
+            },
+            {
+              "text": "#blocked",
+              "location": [
+                [
+                  143,
+                  498
+                ],
+                [
+                  194,
+                  498
+                ],
+                [
+                  194,
+                  507
+                ],
+                [
+                  143,
+                  507
+                ]
+              ]
+            },
+            {
+              "text": "A flag for each lot that indicates if it is blocked. The WorkStram",
+              "location": [
+                [
+                  236,
+                  497
+                ],
+                [
+                  533,
+                  497
+                ],
+                [
+                  533,
+                  508
+                ],
+                [
+                  236,
+                  508
+                ]
+              ]
+            },
+            {
+              "text": "dispatcher interface uses this flag to determine whether that lot",
+              "location": [
+                [
+                  236,
+                  513
+                ],
+                [
+                  533,
+                  513
+                ],
+                [
+                  533,
+                  524
+                ],
+                [
+                  236,
+                  524
+                ]
+              ]
+            },
+            {
+              "text": "is selectable by the operator.",
+              "location": [
+                [
+                  236,
+                  530
+                ],
+                [
+                  371,
+                  530
+                ],
+                [
+                  371,
+                  540
+                ],
+                [
+                  236,
+                  540
+                ]
+              ]
+            },
+            {
+              "text": "#ISS-DDIS-",
+              "location": [
+                [
+                  143,
+                  545
+                ],
+                [
+                  206,
+                  545
+                ],
+                [
+                  206,
+                  554
+                ],
+                [
+                  143,
+                  554
+                ]
+              ]
+            },
+            {
+              "text": "This is diagnostic information from the dispatcher, relating",
+              "location": [
+                [
+                  236,
+                  544
+                ],
+                [
+                  506,
+                  544
+                ],
+                [
+                  506,
+                  556
+                ],
+                [
+                  236,
+                  556
+                ]
+              ]
+            },
+            {
+              "text": "DIAGS",
+              "location": [
+                [
+                  143,
+                  561
+                ],
+                [
+                  175,
+                  561
+                ],
+                [
+                  175,
+                  570
+                ],
+                [
+                  143,
+                  570
+                ]
+              ]
+            },
+            {
+              "text": "to the execution time of the rule. Note that it does not follow",
+              "location": [
+                [
+                  236,
+                  560
+                ],
+                [
+                  514,
+                  560
+                ],
+                [
+                  514,
+                  570
+                ],
+                [
+                  236,
+                  570
+                ]
+              ]
+            },
+            {
+              "text": "the same \"#tag value\" formats as the other tags.",
+              "location": [
+                [
+                  236,
+                  576
+                ],
+                [
+                  467,
+                  576
+                ],
+                [
+                  467,
+                  585
+                ],
+                [
+                  236,
+                  585
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-17",
+          "text": "Parding the dispatch list",
+          "position": [
+            68,
+            612,
+            213,
+            21
+          ],
+          "polygon": [
+            [
+              68,
+              612
+            ],
+            [
+              281,
+              612
+            ],
+            [
+              281,
+              633
+            ],
+            [
+              68,
+              633
+            ]
+          ],
+          "type": "paragraph_title",
+          "sub_type": "title_1",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "Parding the dispatch list",
+              "location": [
+                [
+                  68,
+                  614
+                ],
+                [
+                  280,
+                  614
+                ],
+                [
+                  280,
+                  631
+                ],
+                [
+                  68,
+                  631
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-18",
+          "text": "The following functions are available for parding and processing the dispatcher result:",
+          "position": [
+            141,
+            645,
+            392,
+            29
+          ],
+          "polygon": [
+            [
+              141,
+              645
+            ],
+            [
+              533,
+              645
+            ],
+            [
+              533,
+              674
+            ],
+            [
+              141,
+              674
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "The following functions are available for parding and processing the dispatcher.",
+              "location": [
+                [
+                  142,
+                  646
+                ],
+                [
+                  533,
+                  646
+                ],
+                [
+                  533,
+                  658
+                ],
+                [
+                  142,
+                  658
+                ]
+              ]
+            },
+            {
+              "text": "result:",
+              "location": [
+                [
+                  142,
+                  664
+                ],
+                [
+                  172,
+                  664
+                ],
+                [
+                  172,
+                  673
+                ],
+                [
+                  142,
+                  673
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-19",
+          "text": "[C++]",
+          "position": [
+            79,
+            686,
+            26,
+            14
+          ],
+          "polygon": [
+            [
+              79,
+              686
+            ],
+            [
+              105,
+              686
+            ],
+            [
+              105,
+              700
+            ],
+            [
+              79,
+              700
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "[C++]",
+              "location": [
+                [
+                  79,
+                  688
+                ],
+                [
+                  104,
+                  688
+                ],
+                [
+                  104,
+                  699
+                ],
+                [
+                  79,
+                  699
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-20",
+          "text": "#include \"writerlibx/iss_schedmsg.h\"",
+          "position": [
+            79,
+            702,
+            162,
+            13
+          ],
+          "polygon": [
+            [
+              79,
+              702
+            ],
+            [
+              241,
+              702
+            ],
+            [
+              241,
+              716
+            ],
+            [
+              79,
+              716
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "#include \"writerlibx/iss_schedmsg.h\"",
+              "location": [
+                [
+                  79,
+                  704
+                ],
+                [
+                  240,
+                  704
+                ],
+                [
+                  240,
+                  713
+                ],
+                [
+                  79,
+                  713
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-21",
+          "text": "#include \"writerlibx/iss_schedmsg_print.h\"",
+          "position": [
+            79,
+            718,
+            188,
+            14
+          ],
+          "polygon": [
+            [
+              79,
+              718
+            ],
+            [
+              267,
+              718
+            ],
+            [
+              267,
+              732
+            ],
+            [
+              79,
+              732
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "#include“writerlibx/iss_schedmsg_print.h”",
+              "location": [
+                [
+                  79,
+                  720
+                ],
+                [
+                  266,
+                  720
+                ],
+                [
+                  266,
+                  729
+                ],
+                [
+                  79,
+                  729
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-22",
+          "text": "/* Parsing of raw dispatch results */",
+          "position": [
+            78,
+            749,
+            158,
+            13
+          ],
+          "polygon": [
+            [
+              78,
+              749
+            ],
+            [
+              236,
+              749
+            ],
+            [
+              236,
+              763
+            ],
+            [
+              78,
+              763
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "/* Parsing of raw dispatch results */",
+              "location": [
+                [
+                  80,
+                  751
+                ],
+                [
+                  235,
+                  751
+                ],
+                [
+                  235,
+                  761
+                ],
+                [
+                  80,
+                  761
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-23",
+          "text": "schedmsg * iss_parseSchedMsg(const char * rawText, u_int text Size);",
+          "position": [
+            78,
+            765,
+            298,
+            14
+          ],
+          "polygon": [
+            [
+              78,
+              765
+            ],
+            [
+              376,
+              765
+            ],
+            [
+              376,
+              779
+            ],
+            [
+              78,
+              779
+            ]
+          ],
+          "type": "text",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "schedmsg * iss_parseSchedMsg(const char * rawText, u_int text Size);",
+              "location": [
+                [
+                  78,
+                  765
+                ],
+                [
+                  375,
+                  765
+                ],
+                [
+                  375,
+                  779
+                ],
+                [
+                  78,
+                  779
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-24",
+          "text": "Applied Materials Confidential",
+          "position": [
+            392,
+            793,
+            118,
+            11
+          ],
+          "polygon": [
+            [
+              392,
+              793
+            ],
+            [
+              511,
+              793
+            ],
+            [
+              511,
+              804
+            ],
+            [
+              392,
+              804
+            ]
+          ],
+          "type": "footer",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "Applied",
+              "location": [
+                [
+                  393,
+                  794
+                ],
+                [
+                  422,
+                  794
+                ],
+                [
+                  422,
+                  802
+                ],
+                [
+                  393,
+                  802
+                ]
+              ]
+            },
+            {
+              "text": "Materials Confidential",
+              "location": [
+                [
+                  424,
+                  794
+                ],
+                [
+                  510,
+                  794
+                ],
+                [
+                  510,
+                  801
+                ],
+                [
+                  424,
+                  801
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        },
+        {
+          "layout_id": "ZbE2yu-layout-25",
+          "text": "13",
+          "position": [
+            522,
+            793,
+            11,
+            9
+          ],
+          "polygon": [
+            [
+              522,
+              793
+            ],
+            [
+              533,
+              793
+            ],
+            [
+              533,
+              802
+            ],
+            [
+              522,
+              802
+            ]
+          ],
+          "type": "number",
+          "sub_type": "",
+          "parent": "",
+          "children": [],
+          "span_boxes": [
+            {
+              "text": "13",
+              "location": [
+                [
+                  522,
+                  794
+                ],
+                [
+                  532,
+                  794
+                ],
+                [
+                  532,
+                  801
+                ],
+                [
+                  522,
+                  801
+                ]
+              ]
+            }
+          ],
+          "table_html": ""
+        }
+      ],
+      "images": [],
+      "inner_images": {},
+      "tables": [
+        {
+          "layout_id": "ZbE2yu-layout-16",
+          "markdown": "| \"ion\" | \"ion\" |\n| --- | --- |\n| #headers | Pre-defined headers for the dispatch list. |\n| #columns | The column heading names for the list. |\n| #widths | The widths for each column, used in formatting the data. |\n| #types | The data types for each column. Normally used to decide how to justify a column by default. |\n| #lotcol | Which column contains the lot names. |\n| #rows | The query data table in row-major form. |\n| #blocked | A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator. |\n| #ISS-DDIS-DIAGS | This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same \"#tag value\" formats as the other tags. |\n",
+          "table_html": "<table><tr><td colspan=\"2\">&quot;ion&quot;</td></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formatting the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-DIAGS</td><td>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same &quot;#tag value&quot; formats as the other tags.</td></tr></table>",
+          "table_title_id": null,
+          "position": null,
+          "cells": [
+            {
+              "layout_id": "ZbE2yu-layout-16-0",
+              "text": "\"ion\"",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-1",
+              "text": "#headers",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-2",
+              "text": "Pre-defined headers for the dispatch list.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-3",
+              "text": "#columns",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-4",
+              "text": "The column heading names for the list.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-5",
+              "text": "#widths",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-6",
+              "text": "The widths for each column, used in formatting the data.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-7",
+              "text": "#types",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-8",
+              "text": "The data types for each column. Normally used to decide how to justify a column by default.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-9",
+              "text": "#lotcol",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-10",
+              "text": "Which column contains the lot names.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-11",
+              "text": "#rows",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-12",
+              "text": "The query data table in row-major form.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-13",
+              "text": "#blocked",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-14",
+              "text": "A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-15",
+              "text": "#ISS-DDIS-DIAGS",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            },
+            {
+              "layout_id": "ZbE2yu-layout-16-16",
+              "text": "This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same \"#tag value\" formats as the other tags.",
+              "position": null,
+              "polygon": null,
+              "type": "text",
+              "sub_type": "",
+              "parent": "",
+              "children": [],
+              "span_boxes": null,
+              "table_html": ""
+            }
+          ],
+          "matrix": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              8
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              11,
+              12
+            ],
+            [
+              13,
+              14
+            ],
+            [
+              15,
+              16
+            ]
+          ],
+          "merge_table": null
+        }
+      ],
+      "text": "Applied APF RTD 9.4.0 Dispatch API Guide Chapter 1. Using the Dispatch APIDispatch list formatAlthough the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful. Pre-defined headers for the dispatch listDesigned for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API. Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.Tag descriptionsThe following table provides description for the tages used in a dispatch query result:\nTag Description\n#headers Pre-defined headers for the dispatch list.\n#columns The column heading names for the list.\n#widths The widths for each column, used in formatting the data.\n#types The data types for each column. Normally used to decide how to justify a column by default.\n#lotcol Which column contains the lot names.\n#rows The query data table in row-major form.\n#blocked A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.\n#ISS-DDIS- This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the other tags.<table><tr><td colspan=\"2\">&quot;ion&quot;</td></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formatting the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-DIAGS</td><td>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same &quot;#tag value&quot; formats as the other tags.</td></tr></table>Parding the dispatch listThe following functions are available for parding and processing the dispatcher result:[C++]#include \"writerlibx/iss_schedmsg.h\"#include \"writerlibx/iss_schedmsg_print.h\"/* Parsing of raw dispatch results */schedmsg * iss_parseSchedMsg(const char * rawText, u_int text Size);Applied Materials Confidential13",
+      "markdown": "## Dispatch list format\n\nAlthough the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful. Pre-defined headers for the dispatch list\n\nDesigned for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API. Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.\n\n## Tag descriptions\n\nThe following table provides description for the tages used in a dispatch query result:\n\nTag Description\n\n#headers Pre-defined headers for the dispatch list.\n\n#columns The column heading names for the list.\n\n#widths The widths for each column, used in formatting the data.\n\n#types The data types for each column. Normally used to decide how to justify a column by default.\n\n#lotcol Which column contains the lot names.\n\n#rows The query data table in row-major form.\n\n#blocked A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.\n\n#ISS-DDIS- This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the other tags.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td colspan=\"2\">&quot;ion&quot;</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#headers</td><td style='text-align: center; word-wrap: break-word;'>Pre-defined headers for the dispatch list.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#columns</td><td style='text-align: center; word-wrap: break-word;'>The column heading names for the list.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#widths</td><td style='text-align: center; word-wrap: break-word;'>The widths for each column, used in formatting the data.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#types</td><td style='text-align: center; word-wrap: break-word;'>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#lotcol</td><td style='text-align: center; word-wrap: break-word;'>Which column contains the lot names.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#rows</td><td style='text-align: center; word-wrap: break-word;'>The query data table in row-major form.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#blocked</td><td style='text-align: center; word-wrap: break-word;'>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>#ISS-DDIS-DIAGS</td><td style='text-align: center; word-wrap: break-word;'>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same &quot;#tag value&quot; formats as the other tags.</td></tr></table>\n\n## Parding the dispatch list\n\nThe following functions are available for parding and processing the dispatcher result:\n\n[C++]\n\n#include \"writerlibx/iss_schedmsg.h\"\n\n#include \"writerlibx/iss_schedmsg_print.h\"\n\n/* Parsing of raw dispatch results */\n\nschedmsg * iss_parseSchedMsg(const char * rawText, u_int text Size);",
+      "meta": {
+        "page_width": 595,
+        "page_height": 842
+      },
+      "display_size_ratio": 2.0,
+      "snapshot": "",
+      "display_data": "",
+      "pdf_data": ""
+    }
+  ],
+  "chunks": []
+}

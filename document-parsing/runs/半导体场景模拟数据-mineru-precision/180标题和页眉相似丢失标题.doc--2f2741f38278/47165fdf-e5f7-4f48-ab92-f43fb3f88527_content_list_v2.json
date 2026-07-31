@@ -1,0 +1,519 @@
+[
+    [
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Semiconfuctor Manufaceturing International Corporation"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "2.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Purpose:"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "3.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Scope: Applies to all SMIC group company and all SMIC Class-I Suppliers(Raw Material)."
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "To establish SMIC internal procedure for periodic performance evaluuation and communication on with Class-I"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "This document defines QCDESE evaluation procedures including scoring rules, internal review process, approval of final report, publication, and communication post-publication for SMIC Class-I"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p><strong>Material Group</strong></p></td><td><p><strong>Sub-Group</strong></p></td></tr><tr><td rowspan=\"3\"><p>Wafer</p></td><td><p>200mm wafer</p></td></tr><tr><td><p>300mm wafer</p></td></tr><tr><td><p>Control wafer</p></td></tr><tr><td><p>Gas</p></td><td><p>——</p></td></tr><tr><td rowspan=\"3\"><p>Chemical</p></td><td><p>Bulk Chemical</p></td></tr><tr><td><p>Formula Chemical</p></td></tr><tr><td><p>Precursor and others</p></td></tr><tr><td rowspan=\"2\"><p>Photo Resst</p></td><td><p>Photo Resist</p></td></tr><tr><td><p>Photo Chermical</p></td></tr><tr><td><p>Pad</p></td><td><p>——</p></td></tr><tr><td><p>Disk</p></td><td><p>——</p></td></tr><tr><td><p>Slurry</p></td><td><p>——</p></td></tr><tr><td><p>Quartz</p></td><td><p>——</p></td></tr><tr><td><p>Target</p></td><td><p>——</p></td></tr><tr><td><p>Mask Blank</p></td><td><p>——</p></td></tr><tr><td><p>Pellicle</p></td><td><p>——</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "4.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Nomenclature:"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "5.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Reference："
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "6.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Responsibility:"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.4 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.5 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.6 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.7 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.8 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.9 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.10 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.11 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.12 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.13 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.14 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "MSDS: Meterial Safety Data Sheet."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.15 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "CSL: Chimical Safety Label."
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.16 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "QR-IQCs-01-2005 SMIC Incoming Quality Assurance Procedure"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.17 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "QR-IQCs-01-2005 SMIC OutcomingQuality Assurance Procedure"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.18 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "SQE"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.19 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Maintain this document"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.20 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Initial QCDSE vendor list"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.21 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Responsible for Quality scoring"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.22 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Generate QCDSE report, obtain internal approval and publish to vendors"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.23 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "Initial QCDSE vendor list"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.24 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "DCN：Document Change Notice(for Company Rules and Regulations)"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.25 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "DMS：Document Management System"
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "Semiconfuctor Manufaceturing International Corporation"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priorn writtrn permission of SMIC According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30"
+                    }
+                ]
+            }
+        }
+    ]
+]

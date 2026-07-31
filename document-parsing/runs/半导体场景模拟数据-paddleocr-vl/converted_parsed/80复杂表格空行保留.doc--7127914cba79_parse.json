@@ -1,0 +1,802 @@
+{
+  "filename": "80复杂表格空行保留.doc",
+  "filetype": "DOC",
+  "block_count": 22,
+  "blocks": [
+    {
+      "id": "3HgCGx-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          47.0,
+          43.0,
+          138.0,
+          71.0
+        ],
+        "polygon": [
+          [
+            47,
+            43
+          ],
+          [
+            138,
+            43
+          ],
+          [
+            138,
+            71
+          ],
+          [
+            47,
+            71
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-2",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "Semiconfuctor Manufacteturing International Corporation",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          139.0,
+          64.0,
+          384.0,
+          75.0
+        ],
+        "polygon": [
+          [
+            139,
+            64
+          ],
+          [
+            385,
+            64
+          ],
+          [
+            385,
+            75
+          ],
+          [
+            139,
+            75
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-3",
+      "index": 2,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DocNo.:xx-xxxx-xx-xxxx</td><td>Doc.Title:SMIC200mmxxxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:1/2</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          42.0,
+          76.0,
+          538.0,
+          102.0
+        ],
+        "polygon": [
+          [
+            42,
+            76
+          ],
+          [
+            539,
+            76
+          ],
+          [
+            539,
+            103
+          ],
+          [
+            42,
+            103
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "阿斯蒂芬阿萨德",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          46.0,
+          117.0,
+          120.0,
+          129.0
+        ],
+        "polygon": [
+          [
+            46,
+            117
+          ],
+          [
+            120,
+            117
+          ],
+          [
+            120,
+            129
+          ],
+          [
+            46,
+            129
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "阿第三方阿萨德",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          46.0,
+          133.0,
+          120.0,
+          145.0
+        ],
+        "polygon": [
+          [
+            46,
+            133
+          ],
+          [
+            120,
+            133
+          ],
+          [
+            120,
+            145
+          ],
+          [
+            46,
+            145
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "奥德赛发斯蒂芬阿斯蒂芬阿斯顿发 sd",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          46.0,
+          148.0,
+          213.0,
+          161.0
+        ],
+        "polygon": [
+          [
+            46,
+            148
+          ],
+          [
+            213,
+            148
+          ],
+          [
+            213,
+            161
+          ],
+          [
+            46,
+            161
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "表格一：",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          46.0,
+          165.0,
+          83.0,
+          176.0
+        ],
+        "polygon": [
+          [
+            46,
+            165
+          ],
+          [
+            83,
+            165
+          ],
+          [
+            83,
+            176
+          ],
+          [
+            46,
+            176
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-8",
+      "index": 7,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>核心流程图二</td><td>阶段概括</td><td>详细执行要点（扩充）</td></tr><tr><td rowspan=\"5\"><img src=\"https://xmind-parser.bj.bcebos.com/vlm_cloud/parseResult/task-v59tLCeDJUTCHcp1AKOy9pgev0QXolTE/0-7.jpg?authorization=bce-auth-v1%2FALTAK7IDj758EUbA1igu04rHAh%2F2026-07-27T04%3A53%3A18Z%2F2592000%2F%2Fed2e38f5bdcfc5963dd964e44eda959b1330234f08637205893ec12a095b260b\" ></td><td>CE</td><td>STEP1 CE START</td></tr><tr><td>CE</td><td>STE2 CE EXEC 开始执行数据处理步骤</td></tr><tr><td>MFG</td><td>STEP3 CE 判断执行结果是否成功，再决定如何处理</td></tr><tr><td>MFG</td><td>STEP4 如果执行成功，发起执行后的后续数据持久化处理</td></tr><tr><td>MFG</td><td>STEP5 如果执行失败，结束退出</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          33.0,
+          192.0,
+          475.0,
+          569.0
+        ],
+        "polygon": [
+          [
+            33,
+            192
+          ],
+          [
+            33,
+            569
+          ],
+          [
+            475,
+            569
+          ],
+          [
+            475,
+            192
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "阿第三方阿斯蒂芬阿斯蒂芬",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          45.0,
+          586.0,
+          176.0,
+          599.0
+        ],
+        "polygon": [
+          [
+            45,
+            586
+          ],
+          [
+            176,
+            586
+          ],
+          [
+            176,
+            600
+          ],
+          [
+            45,
+            600
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-10",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "阿第三方 asdf",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          46.0,
+          602.0,
+          114.0,
+          614.0
+        ],
+        "polygon": [
+          [
+            46,
+            602
+          ],
+          [
+            114,
+            602
+          ],
+          [
+            114,
+            615
+          ],
+          [
+            46,
+            615
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "多发点发生的 阿斯顿发生的发阿斯蒂芬阿斯蒂芬水电费阿第三方阿是放大",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          45.0,
+          618.0,
+          391.0,
+          631.0
+        ],
+        "polygon": [
+          [
+            45,
+            618
+          ],
+          [
+            392,
+            618
+          ],
+          [
+            392,
+            631
+          ],
+          [
+            45,
+            631
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-12",
+      "index": 11,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          45.0,
+          748.0,
+          547.0,
+          770.0
+        ],
+        "polygon": [
+          [
+            45,
+            748
+          ],
+          [
+            547,
+            748
+          ],
+          [
+            547,
+            771
+          ],
+          [
+            45,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-13",
+      "index": 12,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          46.0,
+          782.0,
+          403.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            46,
+            782
+          ],
+          [
+            400,
+            782
+          ],
+          [
+            400,
+            792
+          ],
+          [
+            46,
+            792
+          ]
+        ]
+      }
+    },
+    {
+      "id": "3HgCGx-layout-14",
+      "index": 13,
+      "type": "footer",
+      "level": null,
+      "content": "2026/1/26",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          463.0,
+          782.0,
+          505.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            463,
+            782
+          ],
+          [
+            504,
+            782
+          ],
+          [
+            504,
+            792
+          ],
+          [
+            463,
+            792
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-15",
+      "index": 14,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          47.0,
+          42.0,
+          138.0,
+          70.0
+        ],
+        "polygon": [
+          [
+            47,
+            42
+          ],
+          [
+            138,
+            42
+          ],
+          [
+            138,
+            71
+          ],
+          [
+            47,
+            71
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-16",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "Semiconfuctor Manufacteturing International Corporation",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          139.0,
+          64.0,
+          384.0,
+          75.0
+        ],
+        "polygon": [
+          [
+            139,
+            64
+          ],
+          [
+            385,
+            64
+          ],
+          [
+            385,
+            75
+          ],
+          [
+            139,
+            75
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-17",
+      "index": 16,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DocNo.:xx-xxxx-xx-xxxx</td><td>Doc.Title:SMIC200mmxxxxxx xxxx xxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:2/2</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          44.0,
+          77.0,
+          540.0,
+          103.0
+        ],
+        "polygon": [
+          [
+            44,
+            77
+          ],
+          [
+            540,
+            77
+          ],
+          [
+            540,
+            103
+          ],
+          [
+            44,
+            103
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-18",
+      "index": 17,
+      "type": "title",
+      "level": "1",
+      "content": "表格3",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          46.0,
+          133.0,
+          78.0,
+          145.0
+        ],
+        "polygon": [
+          [
+            46,
+            133
+          ],
+          [
+            78,
+            133
+          ],
+          [
+            78,
+            145
+          ],
+          [
+            46,
+            145
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-19",
+      "index": 18,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>flow chart</td><td>Responsibility</td><td>description</td></tr><tr><td rowspan=\"6\"><img src=\"https://xmind-parser.bj.bcebos.com/vlm_cloud/parseResult/task-v59tLCeDJUTCHcp1AKOy9pgev0QXolTE/1-6.jpg?authorization=bce-auth-v1%2FALTAK7IDj758EUbA1igu04rHAh%2F2026-07-27T04%3A53%3A18Z%2F2592000%2F%2F904430e53f34453342f46202e807e1f6a94fd2ee13afdd8fa3a7341c487ac4cb\" ></td><td>CE DDFGG</td><td>初始化运行环境，为后续累加与计数操作做好准备。</td></tr><tr><td>CE DDFFGG</td><td>将累加器 sum 归零，保证后续累加结果从 0 开始</td></tr><tr><td>CEFFGG</td><td>将计数器 count 归零，确保后续统计从 0 开始</td></tr><tr><td>DFGECC</td><td>获取外部输入值 n，为累加与计数提供原始数据</td></tr><tr><td>SRFGGC</td><td>标志流程正常结束，释放资源并返回控制权</td></tr><tr><td>GFDDS</td><td>标志流程正常结束，释放资源并返回控制权</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          63.0,
+          175.0,
+          535.0,
+          701.0
+        ],
+        "polygon": [
+          [
+            63,
+            175
+          ],
+          [
+            535,
+            175
+          ],
+          [
+            535,
+            701
+          ],
+          [
+            63,
+            701
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-20",
+      "index": 19,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          45.0,
+          748.0,
+          547.0,
+          771.0
+        ],
+        "polygon": [
+          [
+            45,
+            748
+          ],
+          [
+            547,
+            748
+          ],
+          [
+            547,
+            772
+          ],
+          [
+            45,
+            772
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-21",
+      "index": 20,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          46.0,
+          782.0,
+          404.0,
+          793.0
+        ],
+        "polygon": [
+          [
+            46,
+            782
+          ],
+          [
+            401,
+            782
+          ],
+          [
+            401,
+            792
+          ],
+          [
+            46,
+            792
+          ]
+        ]
+      }
+    },
+    {
+      "id": "9ZUZTx-layout-22",
+      "index": 21,
+      "type": "footer",
+      "level": null,
+      "content": "2026/1/26",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          463.0,
+          781.0,
+          504.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            463,
+            781
+          ],
+          [
+            504,
+            781
+          ],
+          [
+            504,
+            792
+          ],
+          [
+            463,
+            792
+          ]
+        ]
+      }
+    }
+  ]
+}

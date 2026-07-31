@@ -1,0 +1,2181 @@
+{
+  "filename": "08标题识别为页眉.pptx",
+  "filetype": "PPTX",
+  "block_count": 59,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          50.0,
+          81.0,
+          300.0,
+          173.0
+        ],
+        "polygon": [
+          [
+            300,
+            81
+          ],
+          [
+            190,
+            81
+          ],
+          [
+            50,
+            90
+          ],
+          [
+            50,
+            173
+          ],
+          [
+            199,
+            173
+          ],
+          [
+            300,
+            160
+          ],
+          [
+            300,
+            152
+          ],
+          [
+            300,
+            147
+          ],
+          [
+            300,
+            144
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "Semiconductor Manufacturing International Corporation",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          210.0,
+          139.0,
+          684.0,
+          159.0
+        ],
+        "polygon": [
+          [
+            210,
+            139
+          ],
+          [
+            210,
+            159
+          ],
+          [
+            683,
+            159
+          ],
+          [
+            683,
+            139
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "title",
+      "level": "1",
+      "content": "SEASF06B LDD Stage\nWAT VBG Fail 8_D Report",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          235.0,
+          190.0,
+          809.0,
+          293.0
+        ],
+        "polygon": [
+          [
+            235,
+            189
+          ],
+          [
+            809,
+            192
+          ],
+          [
+            809,
+            290
+          ],
+          [
+            235,
+            287
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "Owner: JiaKai\\_jiang",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          304.0,
+          328.0,
+          583.0,
+          356.0
+        ],
+        "polygon": [
+          [
+            304,
+            328
+          ],
+          [
+            304,
+            354
+          ],
+          [
+            309,
+            356
+          ],
+          [
+            389,
+            356
+          ],
+          [
+            390,
+            354
+          ],
+          [
+            583,
+            356
+          ],
+          [
+            583,
+            328
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "Reviewer: Wang\\_kang",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          304.0,
+          372.0,
+          551.0,
+          400.0
+        ],
+        "polygon": [
+          [
+            304,
+            372
+          ],
+          [
+            552,
+            372
+          ],
+          [
+            552,
+            400
+          ],
+          [
+            304,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "Origanization: ETCH/PE1",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          305.0,
+          415.0,
+          580.0,
+          443.0
+        ],
+        "polygon": [
+          [
+            305,
+            415
+          ],
+          [
+            580,
+            415
+          ],
+          [
+            580,
+            443
+          ],
+          [
+            305,
+            443
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "2022-09-16",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          485.0,
+          458.0,
+          613.0,
+          483.0
+        ],
+        "polygon": [
+          [
+            485,
+            458
+          ],
+          [
+            613,
+            458
+          ],
+          [
+            613,
+            483
+          ],
+          [
+            485,
+            483
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-8",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "SMIC confidential",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          438.0,
+          503.0,
+          521.0,
+          516.0
+        ],
+        "polygon": [
+          [
+            438,
+            503
+          ],
+          [
+            521,
+            503
+          ],
+          [
+            521,
+            516
+          ],
+          [
+            438,
+            516
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-9",
+      "index": 8,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          37.0,
+          23.0,
+          126.0,
+          66.0
+        ],
+        "polygon": [
+          [
+            37,
+            23
+          ],
+          [
+            126,
+            23
+          ],
+          [
+            126,
+            67
+          ],
+          [
+            37,
+            67
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-10",
+      "index": 9,
+      "type": "title",
+      "level": "2",
+      "content": "SEASF06B LDD Stage WAT VBG Fail 8_D Report",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          135.0,
+          25.0,
+          902.0,
+          62.0
+        ],
+        "polygon": [
+          [
+            135,
+            25
+          ],
+          [
+            902,
+            25
+          ],
+          [
+            902,
+            63
+          ],
+          [
+            135,
+            63
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-11",
+      "index": 10,
+      "type": "title",
+      "level": "1",
+      "content": "8D REVISION HISTORY",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          55.0,
+          95.0,
+          429.0,
+          127.0
+        ],
+        "polygon": [
+          [
+            55,
+            95
+          ],
+          [
+            430,
+            95
+          ],
+          [
+            430,
+            127
+          ],
+          [
+            55,
+            127
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-12",
+      "index": 11,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Report Data</td><td>REV</td><td>Description of Change</td></tr><tr><td>09-16</td><td>1</td><td>initial</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          49.0,
+          141.0,
+          911.0,
+          433.0
+        ],
+        "polygon": [
+          [
+            49,
+            141
+          ],
+          [
+            911,
+            141
+          ],
+          [
+            911,
+            433
+          ],
+          [
+            49,
+            433
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-13",
+      "index": 12,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer_image",
+        "bbox": [
+          823.0,
+          457.0,
+          909.0,
+          492.0
+        ],
+        "polygon": [
+          [
+            823,
+            457
+          ],
+          [
+            909,
+            457
+          ],
+          [
+            909,
+            493
+          ],
+          [
+            823,
+            493
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-14",
+      "index": 13,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC confidential",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          442.0,
+          509.0,
+          518.0,
+          519.0
+        ],
+        "polygon": [
+          [
+            442,
+            509
+          ],
+          [
+            518,
+            509
+          ],
+          [
+            518,
+            519
+          ],
+          [
+            442,
+            519
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-15",
+      "index": 14,
+      "type": "footer",
+      "level": null,
+      "content": "All copyright and IP belong to SMIC For reference only and may not be copied or distributed without written permission from SMIC. SMIC shall not be responsible for any party's reliance on these materials.",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          68.0,
+          520.0,
+          888.0,
+          531.0
+        ],
+        "polygon": [
+          [
+            68,
+            520
+          ],
+          [
+            888,
+            520
+          ],
+          [
+            888,
+            531
+          ],
+          [
+            68,
+            531
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-16",
+      "index": 15,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          37.0,
+          24.0,
+          126.0,
+          67.0
+        ],
+        "polygon": [
+          [
+            37,
+            24
+          ],
+          [
+            126,
+            24
+          ],
+          [
+            126,
+            67
+          ],
+          [
+            37,
+            67
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-17",
+      "index": 16,
+      "type": "title",
+      "level": "2",
+      "content": "SEASF06B LDD Stage WAT VBG Fail 8_D Report",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          137.0,
+          25.0,
+          901.0,
+          62.0
+        ],
+        "polygon": [
+          [
+            137,
+            25
+          ],
+          [
+            901,
+            25
+          ],
+          [
+            901,
+            62
+          ],
+          [
+            137,
+            62
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-18",
+      "index": 17,
+      "type": "title",
+      "level": "3",
+      "content": "D2: Problem Description",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          77.0,
+          92.0,
+          474.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            77,
+            92
+          ],
+          [
+            475,
+            92
+          ],
+          [
+            475,
+            128
+          ],
+          [
+            77,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-19",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "Here are 5 key points about semiconductors in English:",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          71.0,
+          140.0,
+          517.0,
+          161.0
+        ],
+        "polygon": [
+          [
+            71,
+            140
+          ],
+          [
+            517,
+            140
+          ],
+          [
+            517,
+            162
+          ],
+          [
+            71,
+            162
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-20",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "1. **Semiconductors** are materials with electrical conductivity between conductors and insulators, enabling precise control of electron flow.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          67.0,
+          183.0,
+          858.0,
+          226.0
+        ],
+        "polygon": [
+          [
+            67,
+            183
+          ],
+          [
+            858,
+            183
+          ],
+          [
+            858,
+            227
+          ],
+          [
+            67,
+            227
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-21",
+      "index": 20,
+      "type": "text",
+      "level": null,
+      "content": "2. **Silicon** dominates the industry due to its abundance, ideal bandgap, and excellent native oxide properties for manufacturing.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          65.0,
+          248.0,
+          872.0,
+          292.0
+        ],
+        "polygon": [
+          [
+            65,
+            248
+          ],
+          [
+            872,
+            248
+          ],
+          [
+            872,
+            292
+          ],
+          [
+            65,
+            292
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-22",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "3. **Doping** introduces impurities into pure semiconductors to create N-type (electron-rich) or P-type (hole-rich) materials essential for device operation.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          65.0,
+          312.0,
+          848.0,
+          357.0
+        ],
+        "polygon": [
+          [
+            65,
+            312
+          ],
+          [
+            848,
+            312
+          ],
+          [
+            848,
+            357
+          ],
+          [
+            65,
+            357
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-23",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "4. **CMOS technology** combines complementary MOSFETs to achieve low power consumption and high noise immunity in modern integrated circuits.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          66.0,
+          377.0,
+          846.0,
+          421.0
+        ],
+        "polygon": [
+          [
+            66,
+            377
+          ],
+          [
+            846,
+            377
+          ],
+          [
+            846,
+            421
+          ],
+          [
+            66,
+            421
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-24",
+      "index": 23,
+      "type": "text",
+      "level": null,
+      "content": "5. **Advanced nodes** below 3nm now employ **Gate-All-Around (GAA)** transistors to overcome physical limitations and maintain Moore's Law progression.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          443.0,
+          908.0,
+          488.0
+        ],
+        "polygon": [
+          [
+            68,
+            443
+          ],
+          [
+            908,
+            443
+          ],
+          [
+            908,
+            488
+          ],
+          [
+            68,
+            488
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-25",
+      "index": 24,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC confidential",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          442.0,
+          509.0,
+          517.0,
+          519.0
+        ],
+        "polygon": [
+          [
+            442,
+            509
+          ],
+          [
+            517,
+            509
+          ],
+          [
+            517,
+            519
+          ],
+          [
+            442,
+            519
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-26",
+      "index": 25,
+      "type": "footer",
+      "level": null,
+      "content": "All copyright and IP belong to SMIC For reference only and may not be copied or distributed without written permission from SMIC. SMIC shall not be responsible for any party's reliance on these materials.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          69.0,
+          520.0,
+          888.0,
+          531.0
+        ],
+        "polygon": [
+          [
+            69,
+            520
+          ],
+          [
+            888,
+            520
+          ],
+          [
+            888,
+            531
+          ],
+          [
+            69,
+            531
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-27",
+      "index": 26,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          38.0,
+          24.0,
+          126.0,
+          67.0
+        ],
+        "polygon": [
+          [
+            38,
+            24
+          ],
+          [
+            126,
+            24
+          ],
+          [
+            126,
+            67
+          ],
+          [
+            38,
+            67
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-28",
+      "index": 27,
+      "type": "title",
+      "level": "2",
+      "content": "SEASF06B LDD Stage WAT VBG Fail 8_D Report",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          137.0,
+          25.0,
+          901.0,
+          62.0
+        ],
+        "polygon": [
+          [
+            137,
+            25
+          ],
+          [
+            901,
+            25
+          ],
+          [
+            901,
+            62
+          ],
+          [
+            137,
+            62
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-29",
+      "index": 28,
+      "type": "title",
+      "level": "3",
+      "content": "D3: Problem Description",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          77.0,
+          92.0,
+          474.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            77,
+            92
+          ],
+          [
+            475,
+            92
+          ],
+          [
+            475,
+            128
+          ],
+          [
+            77,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-30",
+      "index": 29,
+      "type": "text",
+      "level": null,
+      "content": "Here are 5 key points about semiconductors in English:",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          71.0,
+          140.0,
+          517.0,
+          161.0
+        ],
+        "polygon": [
+          [
+            71,
+            140
+          ],
+          [
+            517,
+            140
+          ],
+          [
+            517,
+            162
+          ],
+          [
+            71,
+            162
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-31",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "✓ Semiconductors $ ^{**} $ are materials with electrical conductivity between conductors and insulators, enabling precise control of electron flow.",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          183.0,
+          848.0,
+          226.0
+        ],
+        "polygon": [
+          [
+            68,
+            183
+          ],
+          [
+            848,
+            183
+          ],
+          [
+            848,
+            227
+          ],
+          [
+            68,
+            227
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-32",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": "- Silicon** dominates the industry due to its abundance, ideal bandgap, and excellent native oxide properties for manufacturing.",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          65.0,
+          248.0,
+          859.0,
+          292.0
+        ],
+        "polygon": [
+          [
+            65,
+            248
+          ],
+          [
+            860,
+            248
+          ],
+          [
+            860,
+            292
+          ],
+          [
+            65,
+            292
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-33",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "Doping $ ^{**} $ introduces impurities into pure semiconductors to create N-type (electron-rich) or P-type (hole-rich) materials essential for device operation.",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          67.0,
+          313.0,
+          869.0,
+          356.0
+        ],
+        "polygon": [
+          [
+            67,
+            313
+          ],
+          [
+            869,
+            313
+          ],
+          [
+            869,
+            356
+          ],
+          [
+            67,
+            356
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-34",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": "CMOS technology** combines complementary MOSFETs to achieve low power consumption and high noise immunity in modern integrated circuits.",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          377.0,
+          868.0,
+          421.0
+        ],
+        "polygon": [
+          [
+            68,
+            377
+          ],
+          [
+            869,
+            377
+          ],
+          [
+            869,
+            421
+          ],
+          [
+            68,
+            421
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-35",
+      "index": 34,
+      "type": "text",
+      "level": null,
+      "content": "◆ Advanced nodes** below 3nm now employ **Gate-All-Around (GAA)** transistors to overcome physical limitations and maintain Moore's Law progression.",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          71.0,
+          443.0,
+          904.0,
+          487.0
+        ],
+        "polygon": [
+          [
+            71,
+            443
+          ],
+          [
+            904,
+            443
+          ],
+          [
+            904,
+            487
+          ],
+          [
+            71,
+            487
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-36",
+      "index": 35,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC confidential",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          442.0,
+          509.0,
+          517.0,
+          519.0
+        ],
+        "polygon": [
+          [
+            442,
+            509
+          ],
+          [
+            517,
+            509
+          ],
+          [
+            517,
+            519
+          ],
+          [
+            442,
+            519
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-37",
+      "index": 36,
+      "type": "footer",
+      "level": null,
+      "content": "All copyright and IP belong to SMIC For reference only and may not be copied or distributed without written permission from SMIC. SMIC shall not be responsible for any party's reliance on these materials.",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          69.0,
+          520.0,
+          888.0,
+          531.0
+        ],
+        "polygon": [
+          [
+            69,
+            520
+          ],
+          [
+            888,
+            520
+          ],
+          [
+            888,
+            531
+          ],
+          [
+            69,
+            531
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-38",
+      "index": 37,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          37.0,
+          24.0,
+          126.0,
+          67.0
+        ],
+        "polygon": [
+          [
+            37,
+            24
+          ],
+          [
+            126,
+            24
+          ],
+          [
+            126,
+            67
+          ],
+          [
+            37,
+            67
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-39",
+      "index": 38,
+      "type": "title",
+      "level": "2",
+      "content": "SEASF06B LDD Stage WAT VBG Fail 8_D Report",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          137.0,
+          25.0,
+          901.0,
+          62.0
+        ],
+        "polygon": [
+          [
+            137,
+            25
+          ],
+          [
+            902,
+            25
+          ],
+          [
+            902,
+            62
+          ],
+          [
+            137,
+            62
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-40",
+      "index": 39,
+      "type": "title",
+      "level": "3",
+      "content": "D4: Problem Description",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          77.0,
+          92.0,
+          474.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            77,
+            92
+          ],
+          [
+            475,
+            92
+          ],
+          [
+            475,
+            128
+          ],
+          [
+            77,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-41",
+      "index": 40,
+      "type": "text",
+      "level": null,
+      "content": "Here are 5 key points about semiconductors in English:",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          71.0,
+          140.0,
+          517.0,
+          161.0
+        ],
+        "polygon": [
+          [
+            71,
+            140
+          ],
+          [
+            517,
+            140
+          ],
+          [
+            517,
+            162
+          ],
+          [
+            71,
+            162
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-42",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": "1. **Semiconductors** are materials with electrical conductivity between conductors and insulators, enabling precise control of electron flow.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          67.0,
+          183.0,
+          858.0,
+          226.0
+        ],
+        "polygon": [
+          [
+            67,
+            183
+          ],
+          [
+            858,
+            183
+          ],
+          [
+            858,
+            227
+          ],
+          [
+            67,
+            227
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-43",
+      "index": 42,
+      "type": "text",
+      "level": null,
+      "content": "2. **Silicon** dominates the industry due to its abundance, ideal bandgap, and excellent native oxide properties for manufacturing.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          65.0,
+          248.0,
+          872.0,
+          292.0
+        ],
+        "polygon": [
+          [
+            65,
+            248
+          ],
+          [
+            872,
+            248
+          ],
+          [
+            872,
+            292
+          ],
+          [
+            65,
+            292
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-44",
+      "index": 43,
+      "type": "text",
+      "level": null,
+      "content": "3. **Doping** introduces impurities into pure semiconductors to create N-type (electron-rich) or P-type (hole-rich) materials essential for device operation.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          65.0,
+          312.0,
+          848.0,
+          357.0
+        ],
+        "polygon": [
+          [
+            65,
+            312
+          ],
+          [
+            848,
+            312
+          ],
+          [
+            848,
+            357
+          ],
+          [
+            65,
+            357
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-45",
+      "index": 44,
+      "type": "text",
+      "level": null,
+      "content": "4. **CMOS technology** combines complementary MOSFETs to achieve low power consumption and high noise immunity in modern integrated circuits.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          66.0,
+          377.0,
+          846.0,
+          421.0
+        ],
+        "polygon": [
+          [
+            66,
+            377
+          ],
+          [
+            846,
+            377
+          ],
+          [
+            846,
+            421
+          ],
+          [
+            66,
+            421
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-46",
+      "index": 45,
+      "type": "text",
+      "level": null,
+      "content": "5. **Advanced nodes** below 3nm now employ **Gate-All-Around (GAA)** transistors to overcome physical limitations and maintain Moore's Law progression.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          67.0,
+          443.0,
+          907.0,
+          489.0
+        ],
+        "polygon": [
+          [
+            67,
+            443
+          ],
+          [
+            908,
+            443
+          ],
+          [
+            908,
+            489
+          ],
+          [
+            67,
+            489
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-47",
+      "index": 46,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC confidential",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          442.0,
+          509.0,
+          517.0,
+          519.0
+        ],
+        "polygon": [
+          [
+            442,
+            509
+          ],
+          [
+            517,
+            509
+          ],
+          [
+            517,
+            519
+          ],
+          [
+            442,
+            519
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-48",
+      "index": 47,
+      "type": "footer",
+      "level": null,
+      "content": "All copyright and IP belong to SMIC For reference only and may not be copied or distributed without written permission from SMIC. SMIC shall not be responsible for any party's reliance on these materials.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          69.0,
+          520.0,
+          888.0,
+          532.0
+        ],
+        "polygon": [
+          [
+            69,
+            520
+          ],
+          [
+            888,
+            520
+          ],
+          [
+            888,
+            532
+          ],
+          [
+            69,
+            532
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-49",
+      "index": 48,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          37.0,
+          24.0,
+          126.0,
+          67.0
+        ],
+        "polygon": [
+          [
+            37,
+            24
+          ],
+          [
+            126,
+            24
+          ],
+          [
+            126,
+            67
+          ],
+          [
+            37,
+            67
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-50",
+      "index": 49,
+      "type": "title",
+      "level": "2",
+      "content": "SEASF06B LDD Stage WAT VBG Fail 8_D Report",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          137.0,
+          25.0,
+          901.0,
+          62.0
+        ],
+        "polygon": [
+          [
+            137,
+            25
+          ],
+          [
+            901,
+            25
+          ],
+          [
+            901,
+            62
+          ],
+          [
+            137,
+            62
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-51",
+      "index": 50,
+      "type": "title",
+      "level": "3",
+      "content": "D5: Problem Description",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          77.0,
+          92.0,
+          474.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            77,
+            92
+          ],
+          [
+            475,
+            92
+          ],
+          [
+            475,
+            128
+          ],
+          [
+            77,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-52",
+      "index": 51,
+      "type": "text",
+      "level": null,
+      "content": "Here are 5 key points about semiconductors in English:",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          71.0,
+          140.0,
+          517.0,
+          161.0
+        ],
+        "polygon": [
+          [
+            71,
+            140
+          ],
+          [
+            517,
+            140
+          ],
+          [
+            517,
+            162
+          ],
+          [
+            71,
+            162
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-53",
+      "index": 52,
+      "type": "text",
+      "level": null,
+      "content": "1. **Semiconductors** are materials with electrical conductivity between conductors and insulators, enabling precise control of electron flow.",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          67.0,
+          183.0,
+          858.0,
+          226.0
+        ],
+        "polygon": [
+          [
+            67,
+            183
+          ],
+          [
+            858,
+            183
+          ],
+          [
+            858,
+            227
+          ],
+          [
+            67,
+            227
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-54",
+      "index": 53,
+      "type": "text",
+      "level": null,
+      "content": "2. **Silicon** dominates the industry due to its abundance, ideal bandgap, and excellent native oxide properties for manufacturing.",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          65.0,
+          248.0,
+          872.0,
+          292.0
+        ],
+        "polygon": [
+          [
+            65,
+            248
+          ],
+          [
+            872,
+            248
+          ],
+          [
+            872,
+            292
+          ],
+          [
+            65,
+            292
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-55",
+      "index": 54,
+      "type": "text",
+      "level": null,
+      "content": "3. **Doping** introduces impurities into pure semiconductors to create N-type (electron-rich) or P-type (hole-rich) materials essential for device operation.",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          65.0,
+          312.0,
+          848.0,
+          357.0
+        ],
+        "polygon": [
+          [
+            65,
+            312
+          ],
+          [
+            848,
+            312
+          ],
+          [
+            848,
+            357
+          ],
+          [
+            65,
+            357
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-56",
+      "index": 55,
+      "type": "text",
+      "level": null,
+      "content": "4. **CMOS technology** combines complementary MOSFETs to achieve low power consumption and high noise immunity in modern integrated circuits.",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          66.0,
+          377.0,
+          846.0,
+          421.0
+        ],
+        "polygon": [
+          [
+            66,
+            377
+          ],
+          [
+            846,
+            377
+          ],
+          [
+            846,
+            421
+          ],
+          [
+            66,
+            421
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-57",
+      "index": 56,
+      "type": "text",
+      "level": null,
+      "content": "5. **Advanced nodes** below 3nm now employ **Gate-All-Around (GAA)** transistors to overcome physical limitations and maintain Moore's Law progression.",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          443.0,
+          908.0,
+          488.0
+        ],
+        "polygon": [
+          [
+            68,
+            443
+          ],
+          [
+            908,
+            443
+          ],
+          [
+            908,
+            488
+          ],
+          [
+            68,
+            488
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-58",
+      "index": 57,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC confidential",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          442.0,
+          509.0,
+          517.0,
+          519.0
+        ],
+        "polygon": [
+          [
+            442,
+            509
+          ],
+          [
+            517,
+            509
+          ],
+          [
+            517,
+            519
+          ],
+          [
+            442,
+            519
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-59",
+      "index": 58,
+      "type": "footer",
+      "level": null,
+      "content": "All copyright and IP belong to SMIC For reference only and may not be copied or distributed without written permission from SMIC. SMIC shall not be responsible for any party's reliance on these materials.",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          69.0,
+          520.0,
+          889.0,
+          532.0
+        ],
+        "polygon": [
+          [
+            69,
+            520
+          ],
+          [
+            889,
+            520
+          ],
+          [
+            889,
+            532
+          ],
+          [
+            69,
+            532
+          ]
+        ]
+      }
+    }
+  ]
+}

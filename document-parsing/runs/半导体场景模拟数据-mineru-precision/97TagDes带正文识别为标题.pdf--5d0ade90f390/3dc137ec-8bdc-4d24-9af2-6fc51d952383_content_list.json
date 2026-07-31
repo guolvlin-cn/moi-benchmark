@@ -1,0 +1,143 @@
+[
+    {
+        "type": "text",
+        "text": "Dispatch list format",
+        "text_level": 2,
+        "bbox": [
+            112,
+            84,
+            401,
+            110
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Although the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful.",
+        "bbox": [
+            233,
+            124,
+            895,
+            179
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type–Length–Value) binary encoding. This approach ensures compatibility across vendors # , supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API.Also, note that there is one key, #<sub>ISS\\_SLIS\\_DIAGS</sub>, which does not confirmed.",
+        "bbox": [
+            233,
+            180,
+            897,
+            309
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Tag descriptions",
+        "text_level": 2,
+        "bbox": [
+            112,
+            340,
+            361,
+            366
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The following table provides description for the tages used in a dispatch query result:",
+        "bbox": [
+            235,
+            380,
+            895,
+            414
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/23d31b7bdec903a323a5551a8c08473bb5d6f1e0bc8d3a150be1db01f510d4e5.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Tag</td><td>Description</td></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formatting the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-DIAGS</td><td>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the otheer tags.</td></tr></table>",
+        "bbox": [
+            270,
+            417,
+            895,
+            676
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Parding the dispatch list",
+        "text_level": 2,
+        "bbox": [
+            110,
+            707,
+            470,
+            732
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The following functions are available for parding and processing the dispatcher result:",
+        "bbox": [
+            235,
+            747,
+            895,
+            781
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/a58a0faf2bafdb4c529ec9b79436041865097cd4e1842ea01e06077933943e78.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>[C++]</td></tr><tr><td>#include &quot;writerlibx/iss_schedmsg.h&quot;</td></tr><tr><td>#include &quot;writerlibx/iss_schedmsg_print.h&quot;</td></tr><tr><td>/* Parsing of raw dispatch results */</td></tr><tr><td>schedmsg * iss_parseSchedMsg(const char *rawText, u_int text Size);</td></tr></table>",
+        "bbox": [
+            127,
+            787,
+            887,
+            909
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Applied APF RTD 9.4.0 Dispatch API Guide Chapter 1. Using the Dispatch API",
+        "bbox": [
+            576,
+            26,
+            895,
+            55
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Applied Materials Confidential",
+        "bbox": [
+            645,
+            940,
+            858,
+            954
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "13",
+        "bbox": [
+            873,
+            940,
+            895,
+            953
+        ],
+        "page_idx": 0
+    }
+]

@@ -1,0 +1,212 @@
+{
+  "doc_id": "35-V2_af5579a205",
+  "_generated_at": "2026-07-30T07:40:11+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Semiconfuctor Manufaceturing International Corporation\nDoclNo.:xx-xxxx-xx-xxxx\nDoc.Title:SMIC200mmxxxxx xxxx xxxx xxxx xxxx xxxx xxx xxxx xxxx xxxx\nRec.:1\nPage No.:1/10",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC\nAccording to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 1,
+    "table_html_summaries": [
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\" style=\"border-collapse: collapse;\"><tr><th>参数名称</th><th>参数类型</th><th>参数范围</th><th>我的描述</th><th>参数示意图</th></tr><tr><td>集成电路引脚</td><td>物理结构参数</td><td>引脚数量、间距、长度等（如 SOP-8、QFN-24 等封装规格）</td><td>表示芯片类元器件的引脚布局，用于电气连接与封装识别</td><td>[image:e59ae496-3150-4bd4-be02-ffd3cacb58fe]</td></tr><tr><td>旋转阀（或旋转执行机构）</td><td>运动结构参数</td><td>旋转角度（0°～360°）、扭矩、转速等</td><td>表示可旋转的阀类或执行机构，用于流体控制或机械传动</td><td>[image:38b00ca3-c325-41f7-8596-72b3961c3535]</td></tr><tr><td>层状流道（或多孔介质流道）</td><td>流体力学参数</td><td>流道宽度（如 38）、层数、孔隙率、流速范围等</td><td>表示多层结构的流体通道，常用于换热、过滤或流体分配场景</td><td>[image:f0b341b1-dcf6-4cf7-beb7-8f821ee9c02c]</td></tr><tr><td>层状流道（或多孔介质流道）</td><td>几何坐标参数</td><td>坐标点（x, y），x∈(−∞, +∞)，y∈(−∞, +∞)</td><td>用于定位平面内点的位置，区分四个象限，图中示例点为（2,1）</td><td>[image:bd8f95da-ac27-45d3-ab0e-0973c65f5269]</td></tr><tr><td>密封流道（或迷宫密封结构）</td><td>密封与流体参数</td><td>流道间隙、密封级数、介质压力、温度等</td><td>表示带有密封结构的流体通道，通过迷宫结构减少泄漏</td><td>[image:e29fecea-3704-4b94-9db7-041d0546ef1f]</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 5
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "1.测试方案",
+        "level": 1
+      },
+      {
+        "text": "1.1．前置条件",
+        "level": 2
+      },
+      {
+        "text": "1.1.1. 输入前置条件",
+        "level": 3
+      },
+      {
+        "text": "1.1.2. 系统状态描述",
+        "level": 3
+      },
+      {
+        "text": "1.2. 测试过程描述",
+        "level": 2
+      },
+      {
+        "text": "1.2.1. 接口调用规范描述",
+        "level": 3
+      },
+      {
+        "text": "1.3. 测试过程描述",
+        "level": 2
+      },
+      {
+        "text": "1.3.1. 接口调用规范描述",
+        "level": 3
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "注意：xxxxxxxxxxxxxxx",
+      "1.测试方案",
+      "1.1．前置条件",
+      "1.1.1. 输入前置条件",
+      "  描述文字，参考附件xxxxxx",
+      "  A. 编号缩进项目 1",
+      "      编号缩进项目1行文",
+      "1.1.2. 系统状态描述",
+      "  三级章节文字内容2",
+      "1.2. 测试过程描述",
+      "1.2.1. 接口调用规范描述",
+      "  A. 调用参数 1",
+      "    参数1类型，参数1范围，参数1含义",
+      "  B. 调用参数 2",
+      "    参数2类型，参数2范围，参数2含义",
+      "  C. 调用参数 3",
+      "    参数3类型，参数3范围，参数3含义",
+      "Table2:",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\" style=\"border-collapse: collapse;\"><tr><th>参数名称</th><th>参数类型</th><th>参数范围</th><th>我的描述</th><th>参数示意图</th></tr><tr><td>集成电路引脚</td><td>物理结构参数</td><td>引脚数量、间距、长度等（如 SOP-8、QFN-24 等封装规格）</td><td>表示芯片类元器件的引脚布局，用于电气连接与封装识别</td><td>[image:e59ae496-3150-4bd4-be02-ffd3cacb58fe]</td></tr><tr><td>旋转阀（或旋转执行机构）</td><td>运动结构参数</td><td>旋转角度（0°～360°）、扭矩、转速等</td><td>表示可旋转的阀类或执行机构，用于流体控制或机械传动</td><td>[image:38b00ca3-c325-41f7-8596-72b3961c3535]</td></tr><tr><td>层状流道（或多孔介质流道）</td><td>流体力学参数</td><td>流道宽度（如 38）、层数、孔隙率、流速范围等</td><td>表示多层结构的流体通道，常用于换热、过滤或流体分配场景</td><td>[image:f0b341b1-dcf6-4cf7-beb7-8f821ee9c02c]</td></tr><tr><td>层状流道（或多孔介质流道）</td><td>几何坐标参数</td><td>坐标点（x, y），x∈(−∞, +∞)，y∈(−∞, +∞)</td><td>用于定位平面内点的位置，区分四个象限，图中示例点为（2,1）</td><td>[image:bd8f95da-ac27-45d3-ab0e-0973c65f5269]</td></tr><tr><td>密封流道（或迷宫密封结构）</td><td>密封与流体参数</td><td>流道间隙、密封级数、介质压力、温度等</td><td>表示带有密封结构的流体通道，通过迷宫结构减少泄漏</td><td>[image:e29fecea-3704-4b94-9db7-041d0546ef1f]</td></tr></table>",
+      "<img>",
+      "<img>",
+      "<img>",
+      "<img>",
+      "<img>",
+      "1.3. 测试过程描述",
+      "1.3.1. 接口调用规范描述",
+      "  D. 调用参数 1",
+      "    参数1类型，参数1范围，参数1含义",
+      "E. 调用参数 2",
+      "  参数2类型，参数2范围，参数2含义",
+      "F. 调用参数 3",
+      "  参数3类型，参数3范围，参数3含义",
+      "G. 调用参数 4",
+      "  参数4类型，参数4范围，参数4含义"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "2": 5
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "注意：xxxxxxxxxxxxxxx",
+          "page_num": 1
+        },
+        {
+          "text": "  描述文字，参考附件xxxxxx",
+          "page_num": 1
+        },
+        {
+          "text": "  A. 编号缩进项目 1",
+          "page_num": 1
+        },
+        {
+          "text": "      编号缩进项目1行文",
+          "page_num": 1
+        },
+        {
+          "text": "  三级章节文字内容2",
+          "page_num": 1
+        },
+        {
+          "text": "  A. 调用参数 1",
+          "page_num": 1
+        },
+        {
+          "text": "    参数1类型，参数1范围，参数1含义",
+          "page_num": 1
+        },
+        {
+          "text": "  B. 调用参数 2",
+          "page_num": 1
+        },
+        {
+          "text": "    参数2类型，参数2范围，参数2含义",
+          "page_num": 1
+        },
+        {
+          "text": "  C. 调用参数 3",
+          "page_num": 1
+        },
+        {
+          "text": "    参数3类型，参数3范围，参数3含义",
+          "page_num": 1
+        },
+        {
+          "text": "Table2:",
+          "page_num": 1
+        },
+        {
+          "text": "  D. 调用参数 1",
+          "page_num": 2
+        },
+        {
+          "text": "    参数1类型，参数1范围，参数1含义",
+          "page_num": 2
+        },
+        {
+          "text": "E. 调用参数 2",
+          "page_num": 3
+        },
+        {
+          "text": "  参数2类型，参数2范围，参数2含义",
+          "page_num": 3
+        },
+        {
+          "text": "F. 调用参数 3",
+          "page_num": 3
+        },
+        {
+          "text": "  参数3类型，参数3范围，参数3含义",
+          "page_num": 3
+        },
+        {
+          "text": "G. 调用参数 4",
+          "page_num": 3
+        },
+        {
+          "text": "  参数4类型，参数4范围，参数4含义",
+          "page_num": 3
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\" style=\"border-collapse: collapse;\"><tr><th>参数名称</th><th>参数类型</th><th>参数范围</th><th>我的描述</th><th>参数示意图</th></tr><tr><td>集成电路引脚</td><td>物理结构参数</td><td>引脚数量、间距、长度等（如 SOP-8、QFN-24 等封装规格）</td><td>表示芯片类元器件的引脚布局，用于电气连接与封装识别</td><td>[image:e59ae496-3150-4bd4-be02-ffd3cacb58fe]</td></tr><tr><td>旋转阀（或旋转执行机构）</td><td>运动结构参数</td><td>旋转角度（0°～360°）、扭矩、转速等</td><td>表示可旋转的阀类或执行机构，用于流体控制或机械传动</td><td>[image:38b00ca3-c325-41f7-8596-72b3961c3535]</td></tr><tr><td>层状流道（或多孔介质流道）</td><td>流体力学参数</td><td>流道宽度（如 38）、层数、孔隙率、流速范围等</td><td>表示多层结构的流体通道，常用于换热、过滤或流体分配场景</td><td>[image:f0b341b1-dcf6-4cf7-beb7-8f821ee9c02c]</td></tr><tr><td>层状流道（或多孔介质流道）</td><td>几何坐标参数</td><td>坐标点（x, y），x∈(−∞, +∞)，y∈(−∞, +∞)</td><td>用于定位平面内点的位置，区分四个象限，图中示例点为（2,1）</td><td>[image:bd8f95da-ac27-45d3-ab0e-0973c65f5269]</td></tr><tr><td>密封流道（或迷宫密封结构）</td><td>密封与流体参数</td><td>流道间隙、密封级数、介质压力、温度等</td><td>表示带有密封结构的流体通道，通过迷宫结构减少泄漏</td><td>[image:e29fecea-3704-4b94-9db7-041d0546ef1f]</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

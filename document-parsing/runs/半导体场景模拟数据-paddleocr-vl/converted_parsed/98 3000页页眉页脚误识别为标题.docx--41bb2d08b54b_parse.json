@@ -1,0 +1,1922 @@
+{
+  "filename": "98 3000页页眉页脚误识别为标题.docx",
+  "filetype": "DOCX",
+  "block_count": 53,
+  "blocks": [
+    {
+      "id": "1Y3HgC-layout-1",
+      "index": 0,
+      "type": "header",
+      "level": null,
+      "content": "Applied APF RTD 9 Release Notes\nAbout This Document",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          351.0,
+          45.0,
+          507.0,
+          74.0
+        ],
+        "polygon": [
+          [
+            351,
+            45
+          ],
+          [
+            508,
+            45
+          ],
+          [
+            508,
+            74
+          ],
+          [
+            351,
+            74
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-2",
+      "index": 1,
+      "type": "title",
+      "level": "2",
+      "content": "Support coverage",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          87.0,
+          90.0,
+          270.0,
+          113.0
+        ],
+        "polygon": [
+          [
+            87,
+            90
+          ],
+          [
+            270,
+            90
+          ],
+          [
+            270,
+            114
+          ],
+          [
+            87,
+            114
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-3",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "This section description the support coverage provide with the release, including version obsolescence, how to access the distribution site, and how to contact software support.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          122.0,
+          507.0,
+          160.0
+        ],
+        "polygon": [
+          [
+            182,
+            122
+          ],
+          [
+            507,
+            122
+          ],
+          [
+            507,
+            160
+          ],
+          [
+            182,
+            160
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-4",
+      "index": 3,
+      "type": "title",
+      "level": "3",
+      "content": "Version obsolescence",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          86.0,
+          200.0,
+          306.0,
+          221.0
+        ],
+        "polygon": [
+          [
+            86,
+            200
+          ],
+          [
+            306,
+            200
+          ],
+          [
+            306,
+            222
+          ],
+          [
+            86,
+            222
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          250.0,
+          496.0,
+          296.0
+        ],
+        "polygon": [
+          [
+            181,
+            250
+          ],
+          [
+            497,
+            250
+          ],
+          [
+            497,
+            296
+          ],
+          [
+            181,
+            296
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          313.0,
+          472.0,
+          358.0
+        ],
+        "polygon": [
+          [
+            182,
+            313
+          ],
+          [
+            472,
+            313
+          ],
+          [
+            472,
+            358
+          ],
+          [
+            182,
+            358
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          375.0,
+          497.0,
+          404.0
+        ],
+        "polygon": [
+          [
+            182,
+            375
+          ],
+          [
+            497,
+            375
+          ],
+          [
+            497,
+            404
+          ],
+          [
+            182,
+            404
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-8",
+      "index": 7,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Version</td><td>Released</td><td>Superseded</td><td>Standaed Support Ends</td><td>Extended Support Ends</td></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0</td><td></td><td></td><td></td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          86.0,
+          405.0,
+          511.0,
+          517.0
+        ],
+        "polygon": [
+          [
+            86,
+            405
+          ],
+          [
+            511,
+            405
+          ],
+          [
+            511,
+            518
+          ],
+          [
+            86,
+            518
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-9",
+      "index": 8,
+      "type": "title",
+      "level": "2",
+      "content": "Accessing the distribution site",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          87.0,
+          563.0,
+          395.0,
+          586.0
+        ],
+        "polygon": [
+          [
+            87,
+            563
+          ],
+          [
+            395,
+            563
+          ],
+          [
+            395,
+            586
+          ],
+          [
+            87,
+            586
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-10",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "Term Breakdown (typical engineering interpretation)",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          597.0,
+          409.0,
+          611.0
+        ],
+        "polygon": [
+          [
+            181,
+            597
+          ],
+          [
+            409,
+            597
+          ],
+          [
+            409,
+            611
+          ],
+          [
+            181,
+            611
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "1. ISS",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          629.0,
+          207.0,
+          641.0
+        ],
+        "polygon": [
+          [
+            182,
+            629
+          ],
+          [
+            206,
+            629
+          ],
+          [
+            206,
+            641
+          ],
+          [
+            182,
+            641
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-12",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "2. Integrated / Intelligent System Services",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          644.0,
+          360.0,
+          657.0
+        ],
+        "polygon": [
+          [
+            182,
+            644
+          ],
+          [
+            360,
+            644
+          ],
+          [
+            360,
+            657
+          ],
+          [
+            182,
+            657
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-13",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "Refers to the system-level service layer of the equipment software.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          660.0,
+          469.0,
+          673.0
+        ],
+        "polygon": [
+          [
+            181,
+            660
+          ],
+          [
+            469,
+            660
+          ],
+          [
+            469,
+            673
+          ],
+          [
+            181,
+            673
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-14",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "Device Data / Diagnostic Data Information System",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          691.0,
+          398.0,
+          704.0
+        ],
+        "polygon": [
+          [
+            181,
+            691
+          ],
+          [
+            398,
+            691
+          ],
+          [
+            398,
+            704
+          ],
+          [
+            181,
+            704
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-15",
+      "index": 14,
+      "type": "text",
+      "level": null,
+      "content": "Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          707.0,
+          500.0,
+          736.0
+        ],
+        "polygon": [
+          [
+            181,
+            707
+          ],
+          [
+            500,
+            707
+          ],
+          [
+            500,
+            736
+          ],
+          [
+            181,
+            736
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-16",
+      "index": 15,
+      "type": "footer",
+      "level": null,
+      "content": "Applied Materials Confidential",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          367.0,
+          780.0,
+          492.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            367,
+            780
+          ],
+          [
+            492,
+            780
+          ],
+          [
+            492,
+            792
+          ],
+          [
+            367,
+            792
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-17",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "V",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          499.0,
+          782.0,
+          506.0,
+          791.0
+        ],
+        "polygon": [
+          [
+            499,
+            782
+          ],
+          [
+            506,
+            782
+          ],
+          [
+            506,
+            791
+          ],
+          [
+            499,
+            791
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-18",
+      "index": 17,
+      "type": "header",
+      "level": null,
+      "content": "Applied APF RTD 9 Release Notes\nAbout This Document",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          351.0,
+          45.0,
+          507.0,
+          73.0
+        ],
+        "polygon": [
+          [
+            351,
+            45
+          ],
+          [
+            507,
+            45
+          ],
+          [
+            507,
+            74
+          ],
+          [
+            351,
+            74
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-19",
+      "index": 18,
+      "type": "title",
+      "level": "1",
+      "content": "Support coverage_1",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          87.0,
+          105.0,
+          289.0,
+          129.0
+        ],
+        "polygon": [
+          [
+            87,
+            105
+          ],
+          [
+            290,
+            105
+          ],
+          [
+            290,
+            129
+          ],
+          [
+            87,
+            129
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-20",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "This section description the support converge provide with the release, including version obsolescence, how to access the distribution site, and how to contact software support.-1",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          138.0,
+          507.0,
+          176.0
+        ],
+        "polygon": [
+          [
+            182,
+            138
+          ],
+          [
+            507,
+            138
+          ],
+          [
+            507,
+            176
+          ],
+          [
+            182,
+            176
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-21",
+      "index": 20,
+      "type": "title",
+      "level": "3",
+      "content": "Version obsolescence",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          87.0,
+          216.0,
+          306.0,
+          238.0
+        ],
+        "polygon": [
+          [
+            87,
+            216
+          ],
+          [
+            306,
+            216
+          ],
+          [
+            306,
+            238
+          ],
+          [
+            87,
+            238
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-22",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).-1",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          265.0,
+          497.0,
+          311.0
+        ],
+        "polygon": [
+          [
+            182,
+            265
+          ],
+          [
+            497,
+            265
+          ],
+          [
+            497,
+            312
+          ],
+          [
+            182,
+            312
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-23",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.-1",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          328.0,
+          471.0,
+          373.0
+        ],
+        "polygon": [
+          [
+            182,
+            328
+          ],
+          [
+            472,
+            328
+          ],
+          [
+            472,
+            374
+          ],
+          [
+            182,
+            374
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-24",
+      "index": 23,
+      "type": "text",
+      "level": null,
+      "content": "Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          391.0,
+          497.0,
+          420.0
+        ],
+        "polygon": [
+          [
+            182,
+            391
+          ],
+          [
+            497,
+            391
+          ],
+          [
+            497,
+            420
+          ],
+          [
+            182,
+            420
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-25",
+      "index": 24,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Version</td><td>Released</td><td>Superseded</td><td>Standaed Support Ends</td><td>Extended Support Ends</td></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0-1</td><td></td><td></td><td></td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          86.0,
+          422.0,
+          511.0,
+          533.0
+        ],
+        "polygon": [
+          [
+            86,
+            422
+          ],
+          [
+            511,
+            422
+          ],
+          [
+            511,
+            533
+          ],
+          [
+            86,
+            533
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-26",
+      "index": 25,
+      "type": "title",
+      "level": "1",
+      "content": "Accessing the distribution site-1",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          87.0,
+          578.0,
+          414.0,
+          602.0
+        ],
+        "polygon": [
+          [
+            87,
+            578
+          ],
+          [
+            414,
+            578
+          ],
+          [
+            414,
+            602
+          ],
+          [
+            87,
+            602
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-27",
+      "index": 26,
+      "type": "text",
+      "level": null,
+      "content": "Term Breakdown (typical engineering interpretation)-1",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          613.0,
+          417.0,
+          627.0
+        ],
+        "polygon": [
+          [
+            181,
+            613
+          ],
+          [
+            417,
+            613
+          ],
+          [
+            417,
+            627
+          ],
+          [
+            181,
+            627
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-28",
+      "index": 27,
+      "type": "text",
+      "level": null,
+      "content": "1. ISS",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          644.0,
+          207.0,
+          656.0
+        ],
+        "polygon": [
+          [
+            182,
+            644
+          ],
+          [
+            206,
+            644
+          ],
+          [
+            206,
+            656
+          ],
+          [
+            182,
+            656
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-29",
+      "index": 28,
+      "type": "text",
+      "level": null,
+      "content": "2. Integrated / Intelligent System Services-1",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          660.0,
+          368.0,
+          673.0
+        ],
+        "polygon": [
+          [
+            182,
+            660
+          ],
+          [
+            368,
+            660
+          ],
+          [
+            368,
+            673
+          ],
+          [
+            182,
+            673
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-30",
+      "index": 29,
+      "type": "text",
+      "level": null,
+      "content": "Refers to the system-level service layer of the equipment software.",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          675.0,
+          469.0,
+          688.0
+        ],
+        "polygon": [
+          [
+            181,
+            675
+          ],
+          [
+            469,
+            675
+          ],
+          [
+            469,
+            689
+          ],
+          [
+            181,
+            689
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-31",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "Device Data / Diagnostic Data Information System\nIndicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          707.0,
+          500.0,
+          751.0
+        ],
+        "polygon": [
+          [
+            181,
+            707
+          ],
+          [
+            500,
+            707
+          ],
+          [
+            500,
+            751
+          ],
+          [
+            181,
+            751
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-32",
+      "index": 31,
+      "type": "footer",
+      "level": null,
+      "content": "Applied Materials Confidentiality",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          367.0,
+          780.0,
+          493.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            366,
+            780
+          ],
+          [
+            489,
+            780
+          ],
+          [
+            489,
+            792
+          ],
+          [
+            366,
+            792
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-33",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "V",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          499.0,
+          782.0,
+          506.0,
+          791.0
+        ],
+        "polygon": [
+          [
+            499,
+            782
+          ],
+          [
+            506,
+            782
+          ],
+          [
+            506,
+            791
+          ],
+          [
+            499,
+            791
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-34",
+      "index": 33,
+      "type": "header",
+      "level": null,
+      "content": "Applied APF RTD 9 Release Notes About This Document",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          352.0,
+          46.0,
+          507.0,
+          73.0
+        ],
+        "polygon": [
+          [
+            352,
+            46
+          ],
+          [
+            507,
+            46
+          ],
+          [
+            507,
+            73
+          ],
+          [
+            352,
+            73
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-35",
+      "index": 34,
+      "type": "title",
+      "level": "4",
+      "content": "About This Document",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          205.0,
+          83.0,
+          389.0,
+          101.0
+        ],
+        "polygon": [
+          [
+            205,
+            83
+          ],
+          [
+            389,
+            83
+          ],
+          [
+            389,
+            101
+          ],
+          [
+            205,
+            101
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-36",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": "Term Breakdown (typical engineering interpretation)",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          109.0,
+          409.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            182,
+            109
+          ],
+          [
+            409,
+            109
+          ],
+          [
+            409,
+            122
+          ],
+          [
+            182,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-37",
+      "index": 36,
+      "type": "text",
+      "level": null,
+      "content": "ISS.Integrated / Intelligent System Services",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          139.0,
+          378.0,
+          152.0
+        ],
+        "polygon": [
+          [
+            182,
+            139
+          ],
+          [
+            378,
+            139
+          ],
+          [
+            378,
+            152
+          ],
+          [
+            182,
+            152
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-38",
+      "index": 37,
+      "type": "text",
+      "level": null,
+      "content": "Refers to the system-level service layer of the equipment software.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          156.0,
+          469.0,
+          169.0
+        ],
+        "polygon": [
+          [
+            182,
+            156
+          ],
+          [
+            469,
+            156
+          ],
+          [
+            469,
+            169
+          ],
+          [
+            182,
+            169
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-39",
+      "index": 38,
+      "type": "text",
+      "level": null,
+      "content": "Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          195.0,
+          498.0,
+          231.0
+        ],
+        "polygon": [
+          [
+            181,
+            195
+          ],
+          [
+            499,
+            195
+          ],
+          [
+            499,
+            231
+          ],
+          [
+            181,
+            231
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-40",
+      "index": 39,
+      "type": "text",
+      "level": null,
+      "content": "● DIAGS, Diagnostics, Explicitly denotes diagnostic, health, or troubleshooting-related data and functions.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          249.0,
+          443.0,
+          278.0
+        ],
+        "polygon": [
+          [
+            182,
+            249
+          ],
+          [
+            443,
+            249
+          ],
+          [
+            443,
+            278
+          ],
+          [
+            182,
+            278
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-41",
+      "index": 40,
+      "type": "text",
+      "level": null,
+      "content": "Combined Meaning, ISS-DDIS-DIAGS",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          296.0,
+          349.0,
+          308.0
+        ],
+        "polygon": [
+          [
+            182,
+            296
+          ],
+          [
+            349,
+            296
+          ],
+          [
+            349,
+            308
+          ],
+          [
+            182,
+            308
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-42",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": "● A system-level diagnostic data module or namespace used for equipment health monitoring, fault diagnosis, and maintenance analysis, rather than for process or recipe control.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          312.0,
+          495.0,
+          355.0
+        ],
+        "polygon": [
+          [
+            182,
+            312
+          ],
+          [
+            495,
+            312
+          ],
+          [
+            495,
+            355
+          ],
+          [
+            182,
+            355
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-43",
+      "index": 42,
+      "type": "text",
+      "level": null,
+      "content": "Typical Usage Contexts, Dispatch or query result namespaces",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          358.0,
+          453.0,
+          370.0
+        ],
+        "polygon": [
+          [
+            182,
+            358
+          ],
+          [
+            453,
+            358
+          ],
+          [
+            453,
+            371
+          ],
+          [
+            182,
+            371
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-44",
+      "index": 43,
+      "type": "text",
+      "level": null,
+      "content": "Equipment diagnostic or service queries",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          375.0,
+          367.0,
+          386.0
+        ],
+        "polygon": [
+          [
+            182,
+            375
+          ],
+          [
+            367,
+            375
+          ],
+          [
+            367,
+            386
+          ],
+          [
+            182,
+            386
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-45",
+      "index": 44,
+      "type": "text",
+      "level": null,
+      "content": "System logs and traces",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          183.0,
+          390.0,
+          293.0,
+          401.0
+        ],
+        "polygon": [
+          [
+            183,
+            390
+          ],
+          [
+            293,
+            390
+          ],
+          [
+            293,
+            402
+          ],
+          [
+            183,
+            402
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-46",
+      "index": 45,
+      "type": "text",
+      "level": null,
+      "content": "• Maintenance / engineering mode data access",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          183.0,
+          405.0,
+          390.0,
+          417.0
+        ],
+        "polygon": [
+          [
+            183,
+            405
+          ],
+          [
+            390,
+            405
+          ],
+          [
+            390,
+            418
+          ],
+          [
+            183,
+            418
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-47",
+      "index": 46,
+      "type": "text",
+      "level": null,
+      "content": "Key Distinction",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          183.0,
+          421.0,
+          260.0,
+          433.0
+        ],
+        "polygon": [
+          [
+            183,
+            421
+          ],
+          [
+            260,
+            421
+          ],
+          [
+            260,
+            433
+          ],
+          [
+            183,
+            433
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-48",
+      "index": 47,
+      "type": "text",
+      "level": null,
+      "content": "Process data → used for wafer processing and recipe control",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          436.0,
+          454.0,
+          448.0
+        ],
+        "polygon": [
+          [
+            182,
+            436
+          ],
+          [
+            454,
+            436
+          ],
+          [
+            454,
+            448
+          ],
+          [
+            182,
+            448
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-49",
+      "index": 48,
+      "type": "text",
+      "level": null,
+      "content": "ISS-DDIS-DIAGS  $ \\rightarrow $ used for equipment diagnostics, debugging, and health monitoring, One-sentence summary",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          182.0,
+          452.0,
+          481.0,
+          479.0
+        ],
+        "polygon": [
+          [
+            182,
+            452
+          ],
+          [
+            481,
+            452
+          ],
+          [
+            481,
+            480
+          ],
+          [
+            182,
+            480
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-50",
+      "index": 49,
+      "type": "text",
+      "level": null,
+      "content": "ISS-DDIS-DIAGS refers to a system-level diagnostics module that provides device health and troubleshooting data within the equipment software architecture.",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          483.0,
+          505.0,
+          526.0
+        ],
+        "polygon": [
+          [
+            181,
+            483
+          ],
+          [
+            506,
+            483
+          ],
+          [
+            506,
+            527
+          ],
+          [
+            181,
+            527
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-51",
+      "index": 50,
+      "type": "text",
+      "level": null,
+      "content": "● If you can share the exact query output or field names where this appears, the meaning can be narrowed further (e.g., real-time diagnostics vs. historical logs).",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          181.0,
+          530.0,
+          499.0,
+          573.0
+        ],
+        "polygon": [
+          [
+            181,
+            530
+          ],
+          [
+            500,
+            530
+          ],
+          [
+            500,
+            574
+          ],
+          [
+            181,
+            574
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-52",
+      "index": 51,
+      "type": "footer",
+      "level": null,
+      "content": "Applied Materials Confidential",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          367.0,
+          781.0,
+          492.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            367,
+            781
+          ],
+          [
+            492,
+            781
+          ],
+          [
+            492,
+            792
+          ],
+          [
+            367,
+            792
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-53",
+      "index": 52,
+      "type": "text",
+      "level": null,
+      "content": "V",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          499.0,
+          783.0,
+          506.0,
+          791.0
+        ],
+        "polygon": [
+          [
+            499,
+            783
+          ],
+          [
+            506,
+            783
+          ],
+          [
+            506,
+            791
+          ],
+          [
+            499,
+            791
+          ]
+        ]
+      }
+    }
+  ]
+}

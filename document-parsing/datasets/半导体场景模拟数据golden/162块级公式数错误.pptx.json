@@ -1,0 +1,161 @@
+{
+  "doc_id": "162_e72dc3ea59",
+  "_generated_at": "2026-07-30T07:20:13+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Confidential/xzixong261030",
+        "count": 1
+      },
+      {
+        "text": "2026年7月29日18时24分",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "SMIC",
+        "count": 1
+      },
+      {
+        "text": "MatrixOne Intelligence",
+        "count": 1
+      },
+      {
+        "text": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备44030402004672号|粤ICP备2021044820号",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 0,
+    "table_html_summaries": [],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "线性回归",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "线性回归",
+      "1、线性回归",
+      "线性回归时回归问题的一种，线性回归利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模。这种函数是一个或多个称为回归系数的模型参数的线性组合。只有一个自变量的情况称为简单线性回归，大于一个自变量情况的叫做多元线性回归。",
+      "线性回归模型为",
+      "    $$\\hat{y} = w x + b$$",
+      "$\\widehat{y}$ 为预测值，自变量 $x$ 和因变量 $y$ 是一致的，目标是通过已知数据点，求解线性模型中的 $w$ 和 $b$ 两个参数。",
+      "(1) 损失函数",
+      "针对任何模型求解问题，最终都是可以得到一组预测值 $\\hat{y}$ ，对于已有的真实值 $y$ ，数据行数为 $n$ ，可以得到预测值与真实值之间的平均饿平方距离，统计中一般称其为MAE（mean square error）均方误差，公式如下：",
+      "  $$L ^ {\\vdots} = \\frac{1}{n} \\sum_ {i = 1} ^ {n} (\\hat{y} _ {1} - y _ {i}) ^ {2}$$",
+      "该公式称为损失函数。"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "1、线性回归",
+          "page_num": 1
+        },
+        {
+          "text": "线性回归时回归问题的一种，线性回归利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模。这种函数是一个或多个称为回归系数的模型参数的线性组合。只有一个自变量的情况称为简单线性回归，大于一个自变量情况的叫做多元线性回归。",
+          "page_num": 1
+        },
+        {
+          "text": "线性回归模型为",
+          "page_num": 1
+        },
+        {
+          "text": "    $$\\hat{y} = w x + b$$",
+          "page_num": 1
+        },
+        {
+          "text": "$\\widehat{y}$ 为预测值，自变量 $x$ 和因变量 $y$ 是一致的，目标是通过已知数据点，求解线性模型中的 $w$ 和 $b$ 两个参数。",
+          "page_num": 1
+        },
+        {
+          "text": "(1) 损失函数",
+          "page_num": 1
+        },
+        {
+          "text": "针对任何模型求解问题，最终都是可以得到一组预测值 $\\hat{y}$ ，对于已有的真实值 $y$ ，数据行数为 $n$ ，可以得到预测值与真实值之间的平均饿平方距离，统计中一般称其为MAE（mean square error）均方误差，公式如下：",
+          "page_num": 1
+        },
+        {
+          "text": "  $$L ^ {\\vdots} = \\frac{1}{n} \\sum_ {i = 1} ^ {n} (\\hat{y} _ {1} - y _ {i}) ^ {2}$$",
+          "page_num": 1
+        },
+        {
+          "text": "该公式称为损失函数。",
+          "page_num": 1
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": []
+    },
+    "formula": {
+      "expected_formulas": [
+        {
+          "text": "\\hat{y} = w x + b",
+          "source": "inline"
+        },
+        {
+          "text": "\\widehat{y}",
+          "source": "inline"
+        },
+        {
+          "text": "x",
+          "source": "inline"
+        },
+        {
+          "text": "y",
+          "source": "inline"
+        },
+        {
+          "text": "w",
+          "source": "inline"
+        },
+        {
+          "text": "b",
+          "source": "inline"
+        },
+        {
+          "text": "\\hat{y}",
+          "source": "inline"
+        },
+        {
+          "text": "y",
+          "source": "inline"
+        },
+        {
+          "text": "n",
+          "source": "inline"
+        },
+        {
+          "text": "L ^ {\\vdots} = \\frac{1}{n} \\sum_ {i = 1} ^ {n} (\\hat{y} _ {1} - y _ {i}) ^ {2}",
+          "source": "inline"
+        }
+      ],
+      "formula_count": 10
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

@@ -1,0 +1,90 @@
+{
+  "doc_id": "173_25a322df41",
+  "_generated_at": "2026-07-29T10:44:19+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "SMIC",
+        "count": 1
+      }
+    ],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 0,
+    "table_html_summaries": [],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "WPH introduction",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "WPH introduction",
+      "<img>",
+      "The average speed? $\\frac{6+3}{2} = 4.5 \\, \\text{m/s}$ ✓ $\\frac{30+60}{\\frac{20}{6} + \\frac{60}{3}} = 3.6 \\, \\text{m/s}$ ✓",
+      "Recipe 1: PwPH 1 = 20 , move 1 = 1000",
+      "Recipe 2: PwPH 2=25, move 2=1500",
+      "Average PwPH: 1000+1500)/(1000/20+1500/25)=22.7"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "1": 1
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "The average speed? $\\frac{6+3}{2} = 4.5 \\, \\text{m/s}$ ✓ $\\frac{30+60}{\\frac{20}{6} + \\frac{60}{3}} = 3.6 \\, \\text{m/s}$ ✓",
+          "page_num": 1
+        },
+        {
+          "text": "Recipe 1: PwPH 1 = 20 , move 1 = 1000",
+          "page_num": 1
+        },
+        {
+          "text": "Recipe 2: PwPH 2=25, move 2=1500",
+          "page_num": 1
+        },
+        {
+          "text": "Average PwPH: 1000+1500)/(1000/20+1500/25)=22.7",
+          "page_num": 1
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": []
+    },
+    "formula": {
+      "expected_formulas": [
+        {
+          "text": "\\frac{6+3}{2} = 4.5 \\, \\text{m/s}",
+          "source": "inline"
+        },
+        {
+          "text": "\\frac{30+60}{\\frac{20}{6} + \\frac{60}{3}} = 3.6 \\, \\text{m/s}",
+          "source": "inline"
+        }
+      ],
+      "formula_count": 2
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

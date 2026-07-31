@@ -1,0 +1,58 @@
+{
+  "doc_id": "80_5a74ba3173",
+  "_generated_at": "2026-07-30T06:36:26+00:00",
+  "header_footer": {
+    "expected_headers": [],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 2,
+    "table_html_summaries": [
+      "<table><tr><th>OmnOrb</th><th>N/A</th><th>N/A</th><th>N/A</th></tr><tr><td rowspan=\"6\">Oracle Client<br>(64 bit)</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr></table>",
+      "<table><tr><th>flow chart</th><th>Responsibility</th><th>description</th></tr><tr><td>Start  <br><br>sum = 0  <br>count = 0  <br><br>Enter n  <br><br>sum = sum + n  <br>count = count + 1<br>  <br>End  <br></td><td>初始化运行环境，为后续累加与计数操作做好准备。<br><br>将累加器 sum 归零，保证后续累加结果从 0 开始<br><br>将计数器 count 零，确保后续统计从 0 开始<br><br>获取外部输入值 n，为累加与计数提供原始数据<br><br>标志流程正常结束，释放资源并返回控制权</td><td>●　在程序或脚本最顶端放置起始标记；<br>●　确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；<br><br>执行赋值语句 sum ← 0；<br>该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；<br>若使用浮点型，注意 0 的精度与类型一致性（int/float）。<br><br>通过标准输入、文件或 UI 读取一个数值；<br>需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；<br><br>执行算术更新 sum ← sum + n；<br><br>在程序底部放置结束标记或返回语句；</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": []
+  },
+  "layout": {
+    "expected_reading_order": [
+      "<table><tr><th>OmnOrb</th><th>N/A</th><th>N/A</th><th>N/A</th></tr><tr><td rowspan=\"6\">Oracle Client<br>(64 bit)</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr></table>",
+      "<table><tr><th>flow chart</th><th>Responsibility</th><th>description</th></tr><tr><td>Start  <br><br>sum = 0  <br>count = 0  <br><br>Enter n  <br><br>sum = sum + n  <br>count = count + 1<br>  <br>End  <br></td><td>初始化运行环境，为后续累加与计数操作做好准备。<br><br>将累加器 sum 归零，保证后续累加结果从 0 开始<br><br>将计数器 count 零，确保后续统计从 0 开始<br><br>获取外部输入值 n，为累加与计数提供原始数据<br><br>标志流程正常结束，释放资源并返回控制权</td><td>●　在程序或脚本最顶端放置起始标记；<br>●　确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；<br><br>执行赋值语句 sum ← 0；<br>该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；<br>若使用浮点型，注意 0 的精度与类型一致性（int/float）。<br><br>通过标准输入、文件或 UI 读取一个数值；<br>需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；<br><br>执行算术更新 sum ← sum + n；<br><br>在程序底部放置结束标记或返回语句；</td></tr></table>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": []
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>OmnOrb</th><th>N/A</th><th>N/A</th><th>N/A</th></tr><tr><td rowspan=\"6\">Oracle Client<br>(64 bit)</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td><td rowspan=\"6\">OCI 11g<br>R2 <br>OCI 12c <br>OCI 12c <br>R2</td></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>flow chart</th><th>Responsibility</th><th>description</th></tr><tr><td>Start  <br><br>sum = 0  <br>count = 0  <br><br>Enter n  <br><br>sum = sum + n  <br>count = count + 1<br>  <br>End  <br></td><td>初始化运行环境，为后续累加与计数操作做好准备。<br><br>将累加器 sum 归零，保证后续累加结果从 0 开始<br><br>将计数器 count 零，确保后续统计从 0 开始<br><br>获取外部输入值 n，为累加与计数提供原始数据<br><br>标志流程正常结束，释放资源并返回控制权</td><td>●　在程序或脚本最顶端放置起始标记；<br>●　确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；<br><br>执行赋值语句 sum ← 0；<br>该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；<br>若使用浮点型，注意 0 的精度与类型一致性（int/float）。<br><br>通过标准输入、文件或 UI 读取一个数值；<br>需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；<br><br>执行算术更新 sum ← sum + n；<br><br>在程序底部放置结束标记或返回语句；</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

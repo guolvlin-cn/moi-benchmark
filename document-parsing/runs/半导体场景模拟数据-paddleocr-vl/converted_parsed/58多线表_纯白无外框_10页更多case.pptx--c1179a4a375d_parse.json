@@ -1,0 +1,2240 @@
+{
+  "filename": "58多线表_纯白无外框_10页更多case.pptx",
+  "filetype": "PPTX",
+  "block_count": 61,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "title",
+      "level": "4",
+      "content": "Case 1: 紧贴文本 + 分段多线表（纯白无外框）",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          86.0,
+          46.0,
+          379.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            86,
+            46
+          ],
+          [
+            379,
+            46
+          ],
+          [
+            379,
+            64
+          ],
+          [
+            86,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "title",
+      "level": "3",
+      "content": "全球供应链风险评估深度报告",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          55.0,
+          85.0,
+          501.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            55,
+            85
+          ],
+          [
+            501,
+            85
+          ],
+          [
+            501,
+            122
+          ],
+          [
+            55,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "段落与表格几乎零间距，测试高密度版式",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          55.0,
+          129.0,
+          349.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            55,
+            129
+          ],
+          [
+            349,
+            129
+          ],
+          [
+            349,
+            149
+          ],
+          [
+            55,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "下表列出本季度亚太及北美市场供应链稳定性审查结果。注意：表格紧贴此段文字以模拟高信息密度版式。",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          172.0,
+          755.0,
+          192.0
+        ],
+        "polygon": [
+          [
+            54,
+            172
+          ],
+          [
+            756,
+            172
+          ],
+          [
+            756,
+            192
+          ],
+          [
+            54,
+            192
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "第一阶段：上游原材料供应风险",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          53.0,
+          235.0,
+          227.0,
+          251.0
+        ],
+        "polygon": [
+          [
+            53,
+            235
+          ],
+          [
+            227,
+            235
+          ],
+          [
+            227,
+            251
+          ],
+          [
+            53,
+            251
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>风险维度</td><td>定性深度分析（含长文本描述）</td><td>风险等级</td><td>对冲策略建议</td></tr><tr><td colspan=\"4\">第一阶段：上游原材料供应风险</td></tr><tr><td>核心矿产</td><td>受地缘政治波动影响，稀有金属开采成本近6个月上涨约24.5%。依赖度仍高（约68%），替代供应商认证尚未完成。若不建立二级储备体系，主产区政策收紧将导致Q3停工风险。</td><td>极高</td><td>启动备选供应商B方案，建立90天战略库存缓冲。</td></tr><tr><td>半成品加工</td><td>东南亚加工基地电力成本上涨，外包成本微调。当前未触及协议调价阈值，但需警惕汇率波动带来间接溢价。</td><td>中等</td><td>锁定固定汇率结算，分批签署远期合约。</td></tr><tr><td colspan=\"4\">第二阶段：物流运输与跨境合规</td></tr><tr><td>海运物流</td><td>主要港口吞吐量受限，集装箱周转下降，平均滞港时间由4.2天延长至7.8天。需重新评估“准时化生产（JIT）”容错能力。</td><td>高</td><td>增加多式联运选项与替代港口；建立安全库存。</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          50.0,
+          207.0,
+          937.0,
+          458.0
+        ],
+        "polygon": [
+          [
+            50,
+            207
+          ],
+          [
+            50,
+            458
+          ],
+          [
+            937,
+            458
+          ],
+          [
+            937,
+            207
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "第二阶段：物流运输与跨境合规",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          53.0,
+          390.0,
+          226.0,
+          406.0
+        ],
+        "polygon": [
+          [
+            53,
+            390
+          ],
+          [
+            53,
+            404
+          ],
+          [
+            111,
+            406
+          ],
+          [
+            115,
+            406
+          ],
+          [
+            121,
+            406
+          ],
+          [
+            130,
+            406
+          ],
+          [
+            226,
+            404
+          ],
+          [
+            226,
+            390
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-8",
+      "index": 7,
+      "type": "title",
+      "level": "4",
+      "content": "Case 2: 图文混排 + 密集参数表（纯白无外框）",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          86.0,
+          46.0,
+          379.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            86,
+            46
+          ],
+          [
+            379,
+            46
+          ],
+          [
+            379,
+            64
+          ],
+          [
+            86,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-9",
+      "index": 8,
+      "type": "title",
+      "level": "2",
+      "content": "研发中心核心技术矩阵与投入产出比",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          54.0,
+          84.0,
+          604.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            54,
+            84
+          ],
+          [
+            605,
+            84
+          ],
+          [
+            605,
+            122
+          ],
+          [
+            54,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-10",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "左表右图：测试并列布局与边界识别",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          55.0,
+          129.0,
+          315.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            55,
+            129
+          ],
+          [
+            315,
+            129
+          ],
+          [
+            315,
+            149
+          ],
+          [
+            55,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "左侧为技术矩阵与成熟度评估；右侧为研发场景示意与注释。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          172.0,
+          429.0,
+          190.0
+        ],
+        "polygon": [
+          [
+            54,
+            172
+          ],
+          [
+            429,
+            172
+          ],
+          [
+            429,
+            191
+          ],
+          [
+            54,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-12",
+      "index": 11,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>技术领域</td><td>技术成熟度与长效影响评估</td><td>年度投入</td></tr><tr><td>神经网络算法</td><td>重点优化低功耗芯片执行效率。通过剪枝在保持98%精度下将推理延迟降低35ms；已应用于第三代智能传感器。</td><td>$4.2M</td></tr><tr><td>量子通信加密</td><td>实验室原型阶段：完成光子纠缠源稳定性测试。商业化路径尚不清晰，但作为未来10年战略储备具高壁垒。</td><td>$1.8M</td></tr><tr><td>分布式算力</td><td>面向超大规模数据集的调度逻辑，支持动态扩展至10,000节点，故障自愈速度提升200%。</td><td>$3.5M</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          50.0,
+          198.0,
+          613.0,
+          413.0
+        ],
+        "polygon": [
+          [
+            50,
+            198
+          ],
+          [
+            613,
+            198
+          ],
+          [
+            613,
+            414
+          ],
+          [
+            50,
+            414
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-13",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "（图像占位）",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          756.0,
+          303.0,
+          828.0,
+          322.0
+        ],
+        "polygon": [
+          [
+            756,
+            303
+          ],
+          [
+            829,
+            303
+          ],
+          [
+            829,
+            322
+          ],
+          [
+            756,
+            322
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-14",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "注：评估口径基于年度研发审计；成熟度分级参考行业曲线。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          638.0,
+          452.0,
+          944.0,
+          484.0
+        ],
+        "polygon": [
+          [
+            638,
+            452
+          ],
+          [
+            944,
+            452
+          ],
+          [
+            944,
+            484
+          ],
+          [
+            638,
+            484
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-15",
+      "index": 14,
+      "type": "title",
+      "level": "4",
+      "content": "Case 3: 超长单元格 + 多级分隔（纯白无外框）",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          87.0,
+          46.0,
+          379.0,
+          63.0
+        ],
+        "polygon": [
+          [
+            87,
+            46
+          ],
+          [
+            379,
+            46
+          ],
+          [
+            379,
+            64
+          ],
+          [
+            87,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-16",
+      "index": 15,
+      "type": "title",
+      "level": "3",
+      "content": "企业社会责任（CSR）实施准则与争议处理",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          54.0,
+          85.0,
+          704.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            54,
+            85
+          ],
+          [
+            704,
+            85
+          ],
+          [
+            704,
+            122
+          ],
+          [
+            54,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-17",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "长段落撑高行高：测试换行与线条保持",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          129.0,
+          331.0,
+          148.0
+        ],
+        "polygon": [
+          [
+            54,
+            129
+          ],
+          [
+            332,
+            129
+          ],
+          [
+            332,
+            149
+          ],
+          [
+            54,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-18",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "以下条款作为员工手册附件，具有法律效力，请务必逐行阅读（长文本撑高行高）。",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          172.0,
+          606.0,
+          192.0
+        ],
+        "polygon": [
+          [
+            54,
+            172
+          ],
+          [
+            606,
+            172
+          ],
+          [
+            606,
+            192
+          ],
+          [
+            54,
+            192
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-19",
+      "index": 18,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>序号</td><td>核心准则类别</td><td>准则详述与执行标准（含大量文本）</td></tr><tr><td>01</td><td>劳动权益保护</td><td>企业承诺尊重员工合法权益：① 严禁强迫劳动/非法加班；② 薪酬福利不低于当地法定最低工资的1.5倍；③ 特殊工种提供防护器具与定期体检；④ 招聘禁止基于性别、年龄、宗教、种族歧视；⑤ 提供匿名热线申诉渠道并在10个工作日内反馈。</td></tr><tr><td>02</td><td>环境合规承诺</td><td>所有生产设施须符合 ISO 14001。废水处理达到国家一级排放标准方可进入市政管网；年度至少三次突发环境事故演练；碳排放数据聘请第三方审计并向社会公开。</td></tr><tr><td colspan=\"3\">争议解决与仲裁机制</td></tr><tr><td>03</td><td>投诉响应程序</td><td>收到书面投诉24小时内完成立案；72小时内组建独立第三方成员的调查小组；10个工作日内出具调查报告与处理建议，确保透明与可追溯。</td></tr></table>",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          49.0,
+          203.0,
+          937.0,
+          471.0
+        ],
+        "polygon": [
+          [
+            49,
+            203
+          ],
+          [
+            937,
+            203
+          ],
+          [
+            937,
+            471
+          ],
+          [
+            49,
+            471
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-20",
+      "index": 19,
+      "type": "title",
+      "level": "4",
+      "content": "Case 4: 上下双表 + 细分分段（纯白无外框）",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          93.0,
+          46.0,
+          373.0,
+          63.0
+        ],
+        "polygon": [
+          [
+            93,
+            46
+          ],
+          [
+            373,
+            46
+          ],
+          [
+            373,
+            64
+          ],
+          [
+            93,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-21",
+      "index": 20,
+      "type": "title",
+      "level": "2",
+      "content": "季度经营指标拆解与偏差归因",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          54.0,
+          85.0,
+          500.0,
+          123.0
+        ],
+        "polygon": [
+          [
+            54,
+            87
+          ],
+          [
+            500,
+            84
+          ],
+          [
+            500,
+            119
+          ],
+          [
+            54,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-22",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "同页多表：测试表格之间近距离干扰",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          55.0,
+          129.0,
+          317.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            55,
+            129
+          ],
+          [
+            317,
+            129
+          ],
+          [
+            317,
+            149
+          ],
+          [
+            55,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-23",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "同页上下两张多线表：上表为关键指标，下表为偏差归因。两表间距极小。",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          172.0,
+          513.0,
+          190.0
+        ],
+        "polygon": [
+          [
+            54,
+            172
+          ],
+          [
+            513,
+            172
+          ],
+          [
+            513,
+            191
+          ],
+          [
+            54,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-24",
+      "index": 23,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>指标</td><td colspan=\"2\">本季</td><td>上季</td><td>同比</td><td>备注</td></tr><tr><td>营收 (Revenue)</td><td colspan=\"2\">¥1.26B</td><td>¥1.18B</td><td>+12.4%</td><td>渠道结构改善</td></tr><tr><td>毛利率 (GM%)</td><td colspan=\"2\">38.7%</td><td>37.2%</td><td>+1.5pp</td><td>采购与产品组合</td></tr><tr><td>经营现金流</td><td colspan=\"2\">¥210M</td><td>¥165M</td><td>+27.3%</td><td>应收周转提升</td></tr><tr><td>偏差项</td><td>影响方向</td><td>影响幅度</td><td>主要原因 (摘要)</td><td></td><td>建议动作</td></tr><tr><td>价格因素</td><td>$ \\uparrow $</td><td>+3.1pp</td><td>核心品类提价与折扣收敛。</td><td></td><td>建立分层定价策略；强化折扣审批。</td></tr><tr><td>成本因素</td><td>$ \\downarrow $</td><td>-1.4pp</td><td>原材料波动与运费上升。</td><td></td><td>锁价/替代料；多式联运。</td></tr><tr><td>结构因素</td><td>$ \\uparrow $</td><td>+2.0pp</td><td>高毛利产品占比提升。</td><td></td><td>加大高毛利品类供给与曝光。</td></tr></table>",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          48.0,
+          194.0,
+          938.0,
+          452.0
+        ],
+        "polygon": [
+          [
+            48,
+            194
+          ],
+          [
+            938,
+            194
+          ],
+          [
+            938,
+            453
+          ],
+          [
+            48,
+            453
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-25",
+      "index": 24,
+      "type": "title",
+      "level": "4",
+      "content": "Case 5: 表格 + 侧边注释面板（纯白无外框）",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          94.0,
+          46.0,
+          372.0,
+          63.0
+        ],
+        "polygon": [
+          [
+            94,
+            46
+          ],
+          [
+            372,
+            46
+          ],
+          [
+            372,
+            64
+          ],
+          [
+            94,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-26",
+      "index": 25,
+      "type": "title",
+      "level": "2",
+      "content": "客户分层策略与转化漏斗诊断",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          54.0,
+          85.0,
+          501.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            54,
+            85
+          ],
+          [
+            502,
+            85
+          ],
+          [
+            502,
+            122
+          ],
+          [
+            54,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-27",
+      "index": 26,
+      "type": "text",
+      "level": null,
+      "content": "右侧边栏说明与表格紧贴：测试误检",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          129.0,
+          315.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            54,
+            129
+          ],
+          [
+            316,
+            129
+          ],
+          [
+            316,
+            149
+          ],
+          [
+            54,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-28",
+      "index": 27,
+      "type": "text",
+      "level": null,
+      "content": "表格与右侧注释面板紧贴，且注释含多行文本，模拟报告页常见“边栏说明”。",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          53.0,
+          172.0,
+          541.0,
+          190.0
+        ],
+        "polygon": [
+          [
+            53,
+            172
+          ],
+          [
+            542,
+            172
+          ],
+          [
+            542,
+            191
+          ],
+          [
+            53,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-29",
+      "index": 28,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>客户层级</td><td>典型特征</td><td>核心动作</td><td>成功指标</td></tr><tr><td>A (战略)</td><td>高客单、长周期、强定制</td><td>联合规划/共创方案</td><td>续约率、NPS、联合收入</td></tr><tr><td>B (成长)</td><td>中高频需求、可复制场景</td><td>标准化交付/模板化</td><td>转化率、扩张率</td></tr><tr><td>C (长尾)</td><td>需求零散、价格敏感</td><td>自动化运营/自助化</td><td>CAC回收期、留存</td></tr></table>",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          50.0,
+          198.0,
+          654.0,
+          362.0
+        ],
+        "polygon": [
+          [
+            50,
+            198
+          ],
+          [
+            654,
+            198
+          ],
+          [
+            654,
+            363
+          ],
+          [
+            50,
+            363
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-30",
+      "index": 29,
+      "type": "title",
+      "level": "4",
+      "content": "边栏注释",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          688.0,
+          215.0,
+          749.0,
+          233.0
+        ],
+        "polygon": [
+          [
+            688,
+            215
+          ],
+          [
+            749,
+            215
+          ],
+          [
+            749,
+            233
+          ],
+          [
+            688,
+            233
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-31",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "• 分层以“生命周期价值 + 交付复杂度”综合判定。",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          688.0,
+          244.0,
+          933.0,
+          272.0
+        ],
+        "polygon": [
+          [
+            688,
+            244
+          ],
+          [
+            933,
+            244
+          ],
+          [
+            933,
+            273
+          ],
+          [
+            688,
+            273
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-32",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": "· A类以共创为主，避免低价标准包。",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          689.0,
+          273.0,
+          884.0,
+          287.0
+        ],
+        "polygon": [
+          [
+            689,
+            273
+          ],
+          [
+            884,
+            273
+          ],
+          [
+            884,
+            288
+          ],
+          [
+            689,
+            288
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-33",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "C类重点优化获客成本与自助化转化。",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          689.0,
+          289.0,
+          895.0,
+          302.0
+        ],
+        "polygon": [
+          [
+            689,
+            289
+          ],
+          [
+            895,
+            289
+          ],
+          [
+            895,
+            302
+          ],
+          [
+            689,
+            302
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-34",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": "· 指标口径需与财务对齐（季度复核）。",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          689.0,
+          303.0,
+          899.0,
+          318.0
+        ],
+        "polygon": [
+          [
+            689,
+            303
+          ],
+          [
+            899,
+            303
+          ],
+          [
+            899,
+            318
+          ],
+          [
+            689,
+            318
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-35",
+      "index": 34,
+      "type": "title",
+      "level": "4",
+      "content": "Case 6: 流程条 + 多线表（纯白无外框）",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          107.0,
+          46.0,
+          358.0,
+          63.0
+        ],
+        "polygon": [
+          [
+            107,
+            46
+          ],
+          [
+            358,
+            46
+          ],
+          [
+            358,
+            64
+          ],
+          [
+            107,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-36",
+      "index": 35,
+      "type": "title",
+      "level": "2",
+      "content": "战略项目里程碑与风险追踪台账",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          55.0,
+          85.0,
+          536.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            55,
+            85
+          ],
+          [
+            536,
+            85
+          ],
+          [
+            536,
+            122
+          ],
+          [
+            55,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-37",
+      "index": 36,
+      "type": "text",
+      "level": null,
+      "content": "顶部里程碑条 + 下方表格混排",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          129.0,
+          273.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            54,
+            129
+          ],
+          [
+            273,
+            129
+          ],
+          [
+            273,
+            149
+          ],
+          [
+            54,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-38",
+      "index": 37,
+      "type": "text",
+      "level": null,
+      "content": "顶部为里程碑条，下面为风险台账多线表（无外框）。",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          172.0,
+          388.0,
+          191.0
+        ],
+        "polygon": [
+          [
+            54,
+            172
+          ],
+          [
+            388,
+            172
+          ],
+          [
+            388,
+            191
+          ],
+          [
+            54,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-39",
+      "index": 38,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>立项</td><td>方案</td><td>试点</td><td>推广</td><td>复盘</td></tr><tr><td>里程碑</td><td>风险描述（摘要）</td><td>影响</td><td>负责人</td><td>缓解动作</td></tr><tr><td>立项</td><td>需求边界不清导致范围蔓延。</td><td>中</td><td>PMO</td><td>建立范围冻结点与变更流程。</td></tr><tr><td>方案</td><td>关键依赖系统接口延期。</td><td>高</td><td>架构组</td><td>提前接口对齐与Mock方案。</td></tr><tr><td>试点</td><td>试点城市数据质量波动。</td><td>中</td><td>数据组</td><td>引入数据校验与回滚机制。</td></tr><tr><td>推广</td><td>一线培训不足影响 adoption。</td><td>中</td><td>运营</td><td>分层培训+自助文档。</td></tr></table>",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          48.0,
+          203.0,
+          937.0,
+          416.0
+        ],
+        "polygon": [
+          [
+            48,
+            203
+          ],
+          [
+            938,
+            203
+          ],
+          [
+            938,
+            416
+          ],
+          [
+            48,
+            416
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-40",
+      "index": 39,
+      "type": "title",
+      "level": "4",
+      "content": "Case 7: 中英双语表头 + 长字段（纯白无外框）",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          86.0,
+          46.0,
+          379.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            86,
+            46
+          ],
+          [
+            380,
+            46
+          ],
+          [
+            380,
+            64
+          ],
+          [
+            86,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-41",
+      "index": 40,
+      "type": "title",
+      "level": "1",
+      "content": "跨境合规检查清单（Compliance Checklist）",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          54.0,
+          85.0,
+          743.0,
+          123.0
+        ],
+        "polygon": [
+          [
+            54,
+            85
+          ],
+          [
+            743,
+            85
+          ],
+          [
+            743,
+            123
+          ],
+          [
+            54,
+            123
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-42",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": "双语混排：测试字符宽度与断行",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          129.0,
+          285.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            54,
+            129
+          ],
+          [
+            285,
+            129
+          ],
+          [
+            285,
+            150
+          ],
+          [
+            54,
+            150
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-43",
+      "index": 42,
+      "type": "text",
+      "level": null,
+      "content": "双语表头 + 复杂字段：适合测试英文单词、中文换行与列宽稳定性。",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          53.0,
+          172.0,
+          475.0,
+          191.0
+        ],
+        "polygon": [
+          [
+            53,
+            172
+          ],
+          [
+            476,
+            172
+          ],
+          [
+            476,
+            191
+          ],
+          [
+            53,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-44",
+      "index": 43,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>检查项 Item</td><td>要求 Requirement</td><td>证据 Evidence</td><td>结论 Result</td></tr><tr><td>数据跨境 Data Transfer</td><td>评估数据类型、目的地与处理者；确保符合地区法规与合同条款。</td><td>传输清单、DPA、SCC/合同、访问日志（抽样）。</td><td>待整改</td></tr><tr><td>加密 Encryption</td><td>传输与存储均需加密；密钥轮换周期≤90天。</td><td>KMS配置、密钥轮换记录、渗透测试摘要。</td><td>通过</td></tr><tr><td>最小权限 Least Privilege</td><td>按岗位授权，季度复核；离职24小时内回收权限。</td><td>IAM策略、审计报表、离职流程记录。</td><td>通过</td></tr></table>",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          49.0,
+          198.0,
+          935.0,
+          371.0
+        ],
+        "polygon": [
+          [
+            49,
+            198
+          ],
+          [
+            935,
+            198
+          ],
+          [
+            935,
+            371
+          ],
+          [
+            49,
+            371
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-45",
+      "index": 44,
+      "type": "text",
+      "level": null,
+      "content": "备注：Result 建议使用（通过/待整改/不适用）三态；Evidence 以编号与链接便于追溯。",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "vision_footnote",
+        "bbox": [
+          53.0,
+          389.0,
+          528.0,
+          406.0
+        ],
+        "polygon": [
+          [
+            53,
+            389
+          ],
+          [
+            528,
+            389
+          ],
+          [
+            528,
+            406
+          ],
+          [
+            53,
+            406
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-46",
+      "index": 45,
+      "type": "title",
+      "level": "4",
+      "content": "Case 8: 高密数值表 + 对齐（纯白无外框）",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          101.0,
+          46.0,
+          366.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            101,
+            46
+          ],
+          [
+            366,
+            46
+          ],
+          [
+            366,
+            64
+          ],
+          [
+            101,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-47",
+      "index": 46,
+      "type": "title",
+      "level": "1",
+      "content": "财务报表关键比率与同比/环比对照",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          54.0,
+          84.0,
+          585.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            54,
+            84
+          ],
+          [
+            586,
+            84
+          ],
+          [
+            586,
+            123
+          ],
+          [
+            54,
+            123
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-48",
+      "index": 47,
+      "type": "text",
+      "level": null,
+      "content": "大量数字符号：测试列宽与对齐",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          53.0,
+          129.0,
+          285.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            53,
+            129
+          ],
+          [
+            285,
+            129
+          ],
+          [
+            285,
+            150
+          ],
+          [
+            53,
+            150
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-49",
+      "index": 48,
+      "type": "text",
+      "level": null,
+      "content": "数值表强调对齐：建议在同列内使用统一格式（%、pp、×）。",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          53.0,
+          172.0,
+          443.0,
+          191.0
+        ],
+        "polygon": [
+          [
+            53,
+            172
+          ],
+          [
+            443,
+            172
+          ],
+          [
+            443,
+            191
+          ],
+          [
+            53,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-50",
+      "index": 49,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>指标</td><td>本期</td><td>上期</td><td>同比</td><td>环比</td><td>说明</td></tr><tr><td>ROE</td><td>14.8%</td><td>13.2%</td><td>+1.6pp</td><td>+0.4pp</td><td>权益回报改善</td></tr><tr><td>资产周转率</td><td>0.86 $ \\times $</td><td>0.82 $ \\times $</td><td>+0.04 $ \\times $</td><td>+0.01 $ \\times $</td><td>存货周转上升</td></tr><tr><td>流动比率</td><td>1.72</td><td>1.65</td><td>+0.07</td><td>+0.02</td><td>短期偿债能力提升</td></tr><tr><td>净利率</td><td>9.3%</td><td>8.7%</td><td>+0.6pp</td><td>+0.2pp</td><td>费用率下降</td></tr><tr><td>经营现金流/净利</td><td>1.21</td><td>1.05</td><td>+0.16</td><td>+0.08</td><td>回款改善</td></tr></table>",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          49.0,
+          198.0,
+          935.0,
+          373.0
+        ],
+        "polygon": [
+          [
+            49,
+            198
+          ],
+          [
+            935,
+            198
+          ],
+          [
+            935,
+            373
+          ],
+          [
+            49,
+            373
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-51",
+      "index": 50,
+      "type": "title",
+      "level": "4",
+      "content": "Case 9: 单元格内项目符号 + 多段落（纯白无外框）",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          72.0,
+          46.0,
+          393.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            72,
+            46
+          ],
+          [
+            393,
+            46
+          ],
+          [
+            393,
+            64
+          ],
+          [
+            72,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-52",
+      "index": 51,
+      "type": "title",
+      "level": "2",
+      "content": "信息安全控制点与审计发现摘要",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          54.0,
+          85.0,
+          535.0,
+          123.0
+        ],
+        "polygon": [
+          [
+            54,
+            87
+          ],
+          [
+            534,
+            84
+          ],
+          [
+            534,
+            120
+          ],
+          [
+            54,
+            122
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-53",
+      "index": 52,
+      "type": "text",
+      "level": null,
+      "content": "同一单元格多段落：测试层次保真",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          55.0,
+          129.0,
+          300.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            55,
+            129
+          ],
+          [
+            300,
+            129
+          ],
+          [
+            300,
+            149
+          ],
+          [
+            55,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-54",
+      "index": 53,
+      "type": "text",
+      "level": null,
+      "content": "单元格内多段落/项目符号：常见于审计发现与整改建议汇总。",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          172.0,
+          435.0,
+          191.0
+        ],
+        "polygon": [
+          [
+            54,
+            172
+          ],
+          [
+            435,
+            172
+          ],
+          [
+            435,
+            191
+          ],
+          [
+            54,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-55",
+      "index": 54,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>控制域</td><td>发现摘要（含项目符号）</td><td>风险等级</td><td>整改动作</td></tr><tr><td>身份与访问</td><td>• 管理员账号未强制MFA（抽样3/20）。\\n• 部分服务账号共享使用，责任不可追溯。\\n• 权限季度复核未形成闭环记录。</td><td>高</td><td>1) 全量开启MFA； 2) 服务账号实名化与密钥轮换； 3) 建立复核工单闭环。</td></tr><tr><td>日志与监控</td><td>• 核心系统日志保留期不足（&lt;90天）。\\n• 告警阈值未区分环境（Prod/Stage）。</td><td>中</td><td>延长保留期至180天； 分环境阈值与降噪规则。</td></tr><tr><td>漏洞管理</td><td>• 高危漏洞修复SLA未达标。\\n• 扫描覆盖率不完整（部分容器镜像缺失）。</td><td>中</td><td>统一SLA与例外审批； 补齐镜像扫描与阻断策略。</td></tr></table>",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          49.0,
+          198.0,
+          938.0,
+          413.0
+        ],
+        "polygon": [
+          [
+            49,
+            198
+          ],
+          [
+            938,
+            198
+          ],
+          [
+            938,
+            413
+          ],
+          [
+            49,
+            413
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-56",
+      "index": 55,
+      "type": "title",
+      "level": "4",
+      "content": "Case 10: 表格贴底 + 脚注（纯白无外框）",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          103.0,
+          46.0,
+          363.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            103,
+            46
+          ],
+          [
+            363,
+            46
+          ],
+          [
+            363,
+            64
+          ],
+          [
+            103,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-57",
+      "index": 56,
+      "type": "title",
+      "level": "1",
+      "content": "人力资源绩效指标（KPI/OKR）与评分规则",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          54.0,
+          84.0,
+          718.0,
+          122.0
+        ],
+        "polygon": [
+          [
+            54,
+            84
+          ],
+          [
+            718,
+            84
+          ],
+          [
+            718,
+            123
+          ],
+          [
+            54,
+            123
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-58",
+      "index": 57,
+      "type": "text",
+      "level": null,
+      "content": "表格贴近页边界 + 脚注干扰",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          129.0,
+          258.0,
+          149.0
+        ],
+        "polygon": [
+          [
+            54,
+            129
+          ],
+          [
+            258,
+            129
+          ],
+          [
+            258,
+            149
+          ],
+          [
+            54,
+            149
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-59",
+      "index": 58,
+      "type": "text",
+      "level": null,
+      "content": "表格贴近页面底部，并附脚注：测试底部线条是否被裁切及脚注干扰。",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          54.0,
+          172.0,
+          484.0,
+          191.0
+        ],
+        "polygon": [
+          [
+            54,
+            172
+          ],
+          [
+            484,
+            172
+          ],
+          [
+            484,
+            191
+          ],
+          [
+            54,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-60",
+      "index": 59,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>指标</td><td>定义</td><td>评分规则</td><td>权重</td></tr><tr><td>目标达成率</td><td>实际/目标（按月滚动）</td><td>≥110%：5分；100~110%：4分；90~100%：3分；80~90%：2分；&lt;80%：1分</td><td>35%</td></tr><tr><td>关键项目交付</td><td>里程碑按时交付与质量</td><td>按期+无P1缺陷：5分；延期≤1周：4分；延期≤2周：3分；延期&gt;2周：1~2分</td><td>30%</td></tr><tr><td>协作与影响力</td><td>跨团队协作与知识沉淀</td><td>360评估+文档/分享记录综合评定（1~5分）</td><td>20%</td></tr><tr><td>合规与风险</td><td>流程合规、风险事件</td><td>零重大违规：5分；一般违规：3~4分；重大违规：1分</td><td>15%</td></tr></table>",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          49.0,
+          195.0,
+          935.0,
+          416.0
+        ],
+        "polygon": [
+          [
+            49,
+            195
+          ],
+          [
+            935,
+            195
+          ],
+          [
+            935,
+            416
+          ],
+          [
+            49,
+            416
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-61",
+      "index": 60,
+      "type": "text",
+      "level": null,
+      "content": "脚注：权重可按岗位调整；评分建议季度末由直属主管与HRBP联合校准，减少主观偏差。",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "vision_footnote",
+        "bbox": [
+          53.0,
+          428.0,
+          528.0,
+          445.0
+        ],
+        "polygon": [
+          [
+            53,
+            428
+          ],
+          [
+            529,
+            428
+          ],
+          [
+            529,
+            446
+          ],
+          [
+            53,
+            446
+          ]
+        ]
+      }
+    }
+  ]
+}

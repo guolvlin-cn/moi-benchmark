@@ -1,0 +1,295 @@
+{
+  "doc_id": "98-3000_775000eed7",
+  "_generated_at": "2026-07-30T08:32:11+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Applied APF RTD 9 Release Notes\nAbout This Document",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "Applied Materials Confidential | v",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 2,
+    "table_html_summaries": [
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0</td><td></td><td></td><td></td></tr></table>",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><th>Date</th><th>Plan(%)</th><th>Actual(%)</th><th>任务总数</th><th>已完成任务数</th></tr></thead><tbody><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0-1</td><td></td><td></td><td></td></tr></tbody></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "Support coverage",
+        "level": 1
+      },
+      {
+        "text": "Version obsolescence",
+        "level": 1
+      },
+      {
+        "text": "Accessing the distribution site",
+        "level": 1
+      },
+      {
+        "text": "Support coverage_1",
+        "level": 1
+      },
+      {
+        "text": "Version obsolescence",
+        "level": 1
+      },
+      {
+        "text": "Accessing the distribution site-1",
+        "level": 1
+      },
+      {
+        "text": "About This Document",
+        "level": 2
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "Support coverage",
+      "  This section describes the support coverage provided with the release, including version obsolescence, how to access the distribution site, and how to contact software support.",
+      "Version obsolescence",
+      "  ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).",
+      "  Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.",
+      "  Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0</td><td></td><td></td><td></td></tr></table>",
+      "Accessing the distribution site",
+      "  Term Breakdown (typical engineering interpretation)",
+      "  1.ISS",
+      "  2.Integrated / Intelligent System Services",
+      "  Refers to the system-level service layer of the equipment software.",
+      "  Device Data / Diagnostic Data Information System",
+      "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "Support coverage_1",
+      "  This section describes the support coverage provided with the release, including version obsolescence, how to access the distribution site, and how to contact software support.-1",
+      "Version obsolescence",
+      "  ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).-1",
+      "  Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.-1",
+      "  Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><th>Date</th><th>Plan(%)</th><th>Actual(%)</th><th>任务总数</th><th>已完成任务数</th></tr></thead><tbody><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0-1</td><td></td><td></td><td></td></tr></tbody></table>",
+      "Accessing the distribution site-1",
+      "  Term Breakdown (typical engineering interpretation)-1",
+      "  1.ISS",
+      "  2.Integrated / Intelligent System Services-1",
+      "  Refers to the system-level service layer of the equipment software.",
+      "  Device Data / Diagnostic Data Information System",
+      "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.-1",
+      "About This Document",
+      "Term Breakdown (typical engineering interpretation)",
+      "• ISS,Integrated / Intelligent System Services",
+      "Refers to the system-level service layer of the equipment software.",
+      "• DDIS, Device Data / Diagnostic Data Information System",
+      "Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "• DIAGS, Diagnostics, Explicitly denotes diagnostic, health, or troubleshooting-related data and functions.",
+      "• Combined Meaning,ISS-DDIS-DIAGS",
+      "• A system-level diagnostic data module or namespace used for",
+      "equipment health monitoring, fault diagnosis, and maintenance analysis, rather than for process or recipe control.",
+      "• Typical Usage Contexts,Dispatch or query result namespaces",
+      "• Equipment diagnostic or service queries",
+      "• System logs and traces",
+      "• Maintenance / engineering mode data access",
+      "• Key Distinction",
+      "• Process data → used for wafer processing and recipe control",
+      "• ISS-DDIS-DIAGS → used for equipment diagnostics, debugging, and health monitoring. One-sentence summary.",
+      "• ISS-DDIS-DIAGS refers to a system-level diagnostics module that provides device health and troubleshooting data within the equipment software architecture.",
+      "• If you can share the exact query output or field names where this appears, the meaning can be narrowed further (e.g., real-time diagnostics vs. historical logs)."
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "  This section describes the support coverage provided with the release, including version obsolescence, how to access the distribution site, and how to contact software support.",
+          "page_num": 1
+        },
+        {
+          "text": "  ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).",
+          "page_num": 1
+        },
+        {
+          "text": "  Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.",
+          "page_num": 1
+        },
+        {
+          "text": "  Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+          "page_num": 1
+        },
+        {
+          "text": "  Term Breakdown (typical engineering interpretation)",
+          "page_num": 1
+        },
+        {
+          "text": "  1.ISS",
+          "page_num": 1
+        },
+        {
+          "text": "  2.Integrated / Intelligent System Services",
+          "page_num": 1
+        },
+        {
+          "text": "  Refers to the system-level service layer of the equipment software.",
+          "page_num": 1
+        },
+        {
+          "text": "  Device Data / Diagnostic Data Information System",
+          "page_num": 1
+        },
+        {
+          "text": "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+          "page_num": 1
+        },
+        {
+          "text": "  This section describes the support coverage provided with the release, including version obsolescence, how to access the distribution site, and how to contact software support.-1",
+          "page_num": 2
+        },
+        {
+          "text": "  ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).-1",
+          "page_num": 2
+        },
+        {
+          "text": "  Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.-1",
+          "page_num": 2
+        },
+        {
+          "text": "  Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+          "page_num": 2
+        },
+        {
+          "text": "  Term Breakdown (typical engineering interpretation)-1",
+          "page_num": 2
+        },
+        {
+          "text": "  1.ISS",
+          "page_num": 2
+        },
+        {
+          "text": "  2.Integrated / Intelligent System Services-1",
+          "page_num": 2
+        },
+        {
+          "text": "  Refers to the system-level service layer of the equipment software.",
+          "page_num": 2
+        },
+        {
+          "text": "  Device Data / Diagnostic Data Information System",
+          "page_num": 2
+        },
+        {
+          "text": "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.-1",
+          "page_num": 2
+        },
+        {
+          "text": "Term Breakdown (typical engineering interpretation)",
+          "page_num": 3
+        },
+        {
+          "text": "• ISS,Integrated / Intelligent System Services",
+          "page_num": 3
+        },
+        {
+          "text": "Refers to the system-level service layer of the equipment software.",
+          "page_num": 3
+        },
+        {
+          "text": "• DDIS, Device Data / Diagnostic Data Information System",
+          "page_num": 3
+        },
+        {
+          "text": "Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+          "page_num": 3
+        },
+        {
+          "text": "• DIAGS, Diagnostics, Explicitly denotes diagnostic, health, or troubleshooting-related data and functions.",
+          "page_num": 3
+        },
+        {
+          "text": "• Combined Meaning,ISS-DDIS-DIAGS",
+          "page_num": 3
+        },
+        {
+          "text": "• A system-level diagnostic data module or namespace used for",
+          "page_num": 3
+        },
+        {
+          "text": "equipment health monitoring, fault diagnosis, and maintenance analysis, rather than for process or recipe control.",
+          "page_num": 3
+        },
+        {
+          "text": "• Typical Usage Contexts,Dispatch or query result namespaces",
+          "page_num": 3
+        },
+        {
+          "text": "• Equipment diagnostic or service queries",
+          "page_num": 3
+        },
+        {
+          "text": "• System logs and traces",
+          "page_num": 3
+        },
+        {
+          "text": "• Maintenance / engineering mode data access",
+          "page_num": 3
+        },
+        {
+          "text": "• Key Distinction",
+          "page_num": 3
+        },
+        {
+          "text": "• Process data → used for wafer processing and recipe control",
+          "page_num": 3
+        },
+        {
+          "text": "• ISS-DDIS-DIAGS → used for equipment diagnostics, debugging, and health monitoring. One-sentence summary.",
+          "page_num": 3
+        },
+        {
+          "text": "• ISS-DDIS-DIAGS refers to a system-level diagnostics module that provides device health and troubleshooting data within the equipment software architecture.",
+          "page_num": 3
+        },
+        {
+          "text": "• If you can share the exact query output or field names where this appears, the meaning can be narrowed further (e.g., real-time diagnostics vs. historical logs).",
+          "page_num": 3
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0</td><td></td><td></td><td></td></tr></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><th>Date</th><th>Plan(%)</th><th>Actual(%)</th><th>任务总数</th><th>已完成任务数</th></tr></thead><tbody><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0-1</td><td></td><td></td><td></td></tr></tbody></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

@@ -1,0 +1,2924 @@
+{
+  "filename": "22芯片技术，从硅晶到智能未来.pptx",
+  "filetype": "PPTX",
+  "block_count": 80,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "title",
+      "level": "1",
+      "content": "芯片技术：从硅晶到智能未来",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          322.0,
+          66.0,
+          831.0,
+          109.0
+        ],
+        "polygon": [
+          [
+            322,
+            66
+          ],
+          [
+            831,
+            66
+          ],
+          [
+            831,
+            109
+          ],
+          [
+            322,
+            109
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "Chip Technology: From Silicon Crystal to Intelligent Future",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          323.0,
+          152.0,
+          830.0,
+          178.0
+        ],
+        "polygon": [
+          [
+            323,
+            152
+          ],
+          [
+            830,
+            152
+          ],
+          [
+            830,
+            178
+          ],
+          [
+            323,
+            178
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "芯片技术作为现代信息社会的核心，其重要性不言而喻。自摩尔定律提出以来，我们见证了芯片上晶体管数量大约每18个月翻倍的惊人发展。制程工艺从最初的微米级不断突破，如今已迈入先进的纳米级，例如5nm甚至3nm。这使得单个芯片的集成度达到了惊人的 $ 10^{10} $量级，驱动着人工智能、物联网、高性能计算等领域的飞速发展。",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          59.0,
+          213.0,
+          448.0,
+          361.0
+        ],
+        "polygon": [
+          [
+            59,
+            213
+          ],
+          [
+            448,
+            213
+          ],
+          [
+            448,
+            361
+          ],
+          [
+            59,
+            361
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "晶体管数量增长：从 $ 10^{3} $到 $ 10^{\\{10\\}} $",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          58.0,
+          401.0,
+          340.0,
+          423.0
+        ],
+        "polygon": [
+          [
+            58,
+            401
+          ],
+          [
+            341,
+            401
+          ],
+          [
+            341,
+            423
+          ],
+          [
+            58,
+            423
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "image",
+      "ocr": "Chart | Median % Yield\nVf Data Map (V) | 3.0\nVoltage Distribution | 3.0 - 3.5 V\nVoltage Distribution | 3.5 - 4.0 V\nSpec. Max. | 95%\nSpec. Min. | 3.11",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "chart",
+        "bbox": [
+          490.0,
+          212.0,
+          771.0,
+          364.0
+        ],
+        "polygon": [
+          [
+            490,
+            212
+          ],
+          [
+            771,
+            212
+          ],
+          [
+            771,
+            365
+          ],
+          [
+            490,
+            365
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "制程演进：从微米 ( $ mu m $) 到纳米 ( $ nm $) 级别",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          58.0,
+          432.0,
+          396.0,
+          454.0
+        ],
+        "polygon": [
+          [
+            58,
+            432
+          ],
+          [
+            396,
+            432
+          ],
+          [
+            396,
+            454
+          ],
+          [
+            58,
+            454
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "· 频率提升：从兆赫兹 (MHz) 到吉赫兹 (GHz)",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          58.0,
+          462.0,
+          387.0,
+          484.0
+        ],
+        "polygon": [
+          [
+            58,
+            462
+          ],
+          [
+            387,
+            462
+          ],
+          [
+            387,
+            484
+          ],
+          [
+            58,
+            484
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-8",
+      "index": 7,
+      "type": "image",
+      "ocr": "Category | Value\nSPECIFICATION TABLE |  \nSpec. Min. | 0.5 mW\n95% | 0.93\nMedian. | 0.93\n5% | 0.52\nSt Dev. | 0.20\n% Yield | 95.89%",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "chart",
+        "bbox": [
+          804.0,
+          214.0,
+          1093.0,
+          366.0
+        ],
+        "polygon": [
+          [
+            804,
+            214
+          ],
+          [
+            1094,
+            214
+          ],
+          [
+            1094,
+            367
+          ],
+          [
+            804,
+            367
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "Performance  $ \\propto $ N  $ \\times $ f",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          463.0,
+          511.0,
+          686.0,
+          537.0
+        ],
+        "polygon": [
+          [
+            463,
+            511
+          ],
+          [
+            686,
+            511
+          ],
+          [
+            686,
+            537
+          ],
+          [
+            463,
+            537
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-10",
+      "index": 9,
+      "type": "footer",
+      "level": null,
+      "content": "其中 N 是晶体管数量，f 是工作频率。",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          59.0,
+          560.0,
+          315.0,
+          580.0
+        ],
+        "polygon": [
+          [
+            59,
+            560
+          ],
+          [
+            316,
+            560
+          ],
+          [
+            316,
+            581
+          ],
+          [
+            59,
+            581
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "Transistor Count",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "aside_text",
+        "bbox": [
+          66.0,
+          286.0,
+          75.0,
+          352.0
+        ],
+        "polygon": [
+          [
+            66,
+            286
+          ],
+          [
+            75,
+            286
+          ],
+          [
+            75,
+            352
+          ],
+          [
+            66,
+            352
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-12",
+      "index": 11,
+      "type": "title",
+      "level": "1",
+      "content": "摩尔定律的奇迹",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          440.0,
+          79.0,
+          714.0,
+          119.0
+        ],
+        "polygon": [
+          [
+            440,
+            79
+          ],
+          [
+            714,
+            79
+          ],
+          [
+            714,
+            120
+          ],
+          [
+            440,
+            120
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-13",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "摩尔定律是半导体产业发展的核心驱动力，深刻影响着数字时代的进程。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          325.0,
+          163.0,
+          816.0,
+          183.0
+        ],
+        "polygon": [
+          [
+            325,
+            163
+          ],
+          [
+            816,
+            163
+          ],
+          [
+            816,
+            183
+          ],
+          [
+            325,
+            183
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-14",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "Moore's Law: Transistor Count Over Time (1970-2025)",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          160.0,
+          220.0,
+          427.0,
+          231.0
+        ],
+        "polygon": [
+          [
+            160,
+            220
+          ],
+          [
+            427,
+            220
+          ],
+          [
+            427,
+            231
+          ],
+          [
+            160,
+            231
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-15",
+      "index": 14,
+      "type": "image",
+      "ocr": "Year | Value\n1970 | 100000000000000000\n1971 | 10000000000000000\n1974 | 10000000000000000\n1978 | 8000000000000000\n1980 | 8086000000000000\n1983 | 8086000000000000\n1986 | 8086000000000000\n1989 | 8086000000000000\n1992 | 8086000000000000\n1995 | 8086000000000000\n1998 | 8086000000000000\n2001 | 8086000000000000\n2004 | 8086000000000000\n2007 | 8086000000000000\n2008 | 8086000000000000\n2010 | 8086000000000000\n2013 | 8086000000000000\n2016 | 8086000000000000\n2019 | 8086000000000000\n2020 | 8086000000000000\n2021 | 8086000000000000\n2022 | 8086000000000000",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "chart",
+        "bbox": [
+          73.0,
+          225.0,
+          448.0,
+          426.0
+        ],
+        "polygon": [
+          [
+            73,
+            225
+          ],
+          [
+            73,
+            289
+          ],
+          [
+            73,
+            293
+          ],
+          [
+            73,
+            309
+          ],
+          [
+            73,
+            422
+          ],
+          [
+            447,
+            425
+          ],
+          [
+            447,
+            270
+          ],
+          [
+            447,
+            235
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-16",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": " $$ N(t)=N_{0}\\times2^{(t/18\\text{个月})} $$ ",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "display_formula",
+        "bbox": [
+          676.0,
+          222.0,
+          907.0,
+          249.0
+        ],
+        "polygon": [
+          [
+            676,
+            222
+          ],
+          [
+            908,
+            222
+          ],
+          [
+            908,
+            249
+          ],
+          [
+            676,
+            249
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-17",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "该公式描述了集成电路上晶体管数量的增长趋势，其中  $ N(t) $ 表示在时间 t 后的晶体管数量， $ N_{\\square} $ 是初始数量，而指数部分  $ (t/18 $ 个月 $ 则反映了晶体管数量大约每18个月翻一番的规律。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          485.0,
+          273.0,
+          1089.0,
+          343.0
+        ],
+        "polygon": [
+          [
+            485,
+            273
+          ],
+          [
+            1089,
+            273
+          ],
+          [
+            1089,
+            343
+          ],
+          [
+            485,
+            343
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-18",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "这一趋势导致性能指数级提升，推动了计算机和数字设备的快速发展，深刻改变了现代社会，成为技术进步的基石。具体细节包括：",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          484.0,
+          362.0,
+          1081.0,
+          408.0
+        ],
+        "polygon": [
+          [
+            484,
+            362
+          ],
+          [
+            1081,
+            362
+          ],
+          [
+            1081,
+            408
+          ],
+          [
+            484,
+            408
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-19",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "1971年，首款微处理器Intel 4004仅集成2,300个晶体管。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          484.0,
+          426.0,
+          907.0,
+          446.0
+        ],
+        "polygon": [
+          [
+            484,
+            426
+          ],
+          [
+            907,
+            426
+          ],
+          [
+            907,
+            447
+          ],
+          [
+            484,
+            447
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-20",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "至2020年，Apple M1芯片已包含高达160亿个晶体管。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          485.0,
+          457.0,
+          892.0,
+          477.0
+        ],
+        "polygon": [
+          [
+            485,
+            457
+          ],
+          [
+            892,
+            457
+          ],
+          [
+            892,
+            477
+          ],
+          [
+            485,
+            477
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-21",
+      "index": 20,
+      "type": "text",
+      "level": null,
+      "content": "晶体管密度D与特征尺寸L的平方呈反比关系，即 $ D\\ \\text{propto}\\ 1/L^{2} $。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          486.0,
+          487.0,
+          969.0,
+          507.0
+        ],
+        "polygon": [
+          [
+            486,
+            487
+          ],
+          [
+            969,
+            487
+          ],
+          [
+            969,
+            508
+          ],
+          [
+            486,
+            508
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-22",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "芯片性能提升  $ P(t) $ 大致与晶体管数量的  $ \\alpha $ 次方成正比，即  $ P(t) $ \\approx  $ N(t)^{\\alpha} $ 其中  $ \\alpha $ 值通常在 0.5 到 0.7 之间。",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          489.0,
+          517.0,
+          1029.0,
+          563.0
+        ],
+        "polygon": [
+          [
+            489,
+            517
+          ],
+          [
+            1029,
+            517
+          ],
+          [
+            1029,
+            564
+          ],
+          [
+            489,
+            564
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-23",
+      "index": 22,
+      "type": "title",
+      "level": "1",
+      "content": "纳米制程的极限挑战",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          416.0,
+          42.0,
+          735.0,
+          83.0
+        ],
+        "polygon": [
+          [
+            416,
+            42
+          ],
+          [
+            736,
+            42
+          ],
+          [
+            736,
+            83
+          ],
+          [
+            416,
+            83
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-24",
+      "index": 23,
+      "type": "text",
+      "level": null,
+      "content": " $ CD = k_{1} \\times \\lambda/NA $",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          500.0,
+          116.0,
+          650.0,
+          140.0
+        ],
+        "polygon": [
+          [
+            500,
+            116
+          ],
+          [
+            650,
+            116
+          ],
+          [
+            650,
+            140
+          ],
+          [
+            500,
+            140
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-25",
+      "index": 24,
+      "type": "text",
+      "level": null,
+      "content": "其中  $ \\lambda $ 是光刻波长，NA 是数值孔径， $ k\\Box\\approx0.25 $ 是工艺因子",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          430.0,
+          159.0,
+          719.0,
+          177.0
+        ],
+        "polygon": [
+          [
+            430,
+            159
+          ],
+          [
+            720,
+            159
+          ],
+          [
+            720,
+            177
+          ],
+          [
+            430,
+            177
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-26",
+      "index": 25,
+      "type": "text",
+      "level": null,
+      "content": "纳米制程关键参数对比",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          468.0,
+          196.0,
+          683.0,
+          223.0
+        ],
+        "polygon": [
+          [
+            468,
+            196
+          ],
+          [
+            683,
+            196
+          ],
+          [
+            683,
+            223
+          ],
+          [
+            468,
+            223
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-27",
+      "index": 26,
+      "type": "text",
+      "level": null,
+      "content": "7nm制程",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          258.0,
+          131.0,
+          278.0
+        ],
+        "polygon": [
+          [
+            68,
+            258
+          ],
+          [
+            131,
+            258
+          ],
+          [
+            131,
+            278
+          ],
+          [
+            68,
+            278
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-28",
+      "index": 27,
+      "type": "text",
+      "level": null,
+      "content": "栅极长度  $ L_{g} \\approx 18 \\, \\text{nm} $",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          414.0,
+          257.0,
+          553.0,
+          279.0
+        ],
+        "polygon": [
+          [
+            414,
+            257
+          ],
+          [
+            554,
+            257
+          ],
+          [
+            554,
+            280
+          ],
+          [
+            414,
+            280
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-29",
+      "index": 28,
+      "type": "text",
+      "level": null,
+      "content": "5nm制程",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          303.0,
+          130.0,
+          323.0
+        ],
+        "polygon": [
+          [
+            68,
+            303
+          ],
+          [
+            131,
+            303
+          ],
+          [
+            131,
+            323
+          ],
+          [
+            68,
+            323
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-30",
+      "index": 29,
+      "type": "text",
+      "level": null,
+      "content": " $ R = k_1 \\lambda / NA $",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          866.0,
+          255.0,
+          977.0,
+          281.0
+        ],
+        "polygon": [
+          [
+            866,
+            255
+          ],
+          [
+            977,
+            255
+          ],
+          [
+            977,
+            282
+          ],
+          [
+            866,
+            282
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-31",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "栅极长度  $ L_{g} \\approx 12\\text{nm} $，使用EUV光刻  $ \\lambda = 13.5\\text{nm} $",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          414.0,
+          302.0,
+          721.0,
+          324.0
+        ],
+        "polygon": [
+          [
+            414,
+            302
+          ],
+          [
+            722,
+            302
+          ],
+          [
+            722,
+            324
+          ],
+          [
+            414,
+            324
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-32",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": "3nm制程",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          347.0,
+          130.0,
+          367.0
+        ],
+        "polygon": [
+          [
+            68,
+            347
+          ],
+          [
+            130,
+            347
+          ],
+          [
+            130,
+            367
+          ],
+          [
+            68,
+            367
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-33",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": " $ CD = k_{1} \\times \\lambda / NA $",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          847.0,
+          300.0,
+          995.0,
+          325.0
+        ],
+        "polygon": [
+          [
+            847,
+            300
+          ],
+          [
+            996,
+            300
+          ],
+          [
+            996,
+            326
+          ],
+          [
+            847,
+            326
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-34",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": "栅极长度  $ L_{g} \\approx 10 \\, \\text{nm} $，NA提升至0.55",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          414.0,
+          347.0,
+          655.0,
+          368.0
+        ],
+        "polygon": [
+          [
+            414,
+            347
+          ],
+          [
+            655,
+            347
+          ],
+          [
+            655,
+            368
+          ],
+          [
+            414,
+            368
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-35",
+      "index": 34,
+      "type": "text",
+      "level": null,
+      "content": " $ R = k_1 \\lambda / NA $",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          867.0,
+          344.0,
+          975.0,
+          371.0
+        ],
+        "polygon": [
+          [
+            867,
+            344
+          ],
+          [
+            975,
+            344
+          ],
+          [
+            975,
+            371
+          ],
+          [
+            867,
+            371
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-36",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": "未来1nm",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          68.0,
+          392.0,
+          131.0,
+          412.0
+        ],
+        "polygon": [
+          [
+            68,
+            392
+          ],
+          [
+            132,
+            392
+          ],
+          [
+            132,
+            412
+          ],
+          [
+            68,
+            412
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-37",
+      "index": 36,
+      "type": "text",
+      "level": null,
+      "content": "量子效应主导，需要新材料",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          414.0,
+          391.0,
+          587.0,
+          413.0
+        ],
+        "polygon": [
+          [
+            414,
+            391
+          ],
+          [
+            588,
+            391
+          ],
+          [
+            588,
+            413
+          ],
+          [
+            414,
+            413
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-38",
+      "index": 37,
+      "type": "text",
+      "level": null,
+      "content": " $ P \\propto e^{-2 \\int_{x_1}^{x_2} \\sqrt{\\frac{2m}{\\hbar^2}(V(x) - E)} \\, dx} $",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          812.0,
+          389.0,
+          1025.0,
+          419.0
+        ],
+        "polygon": [
+          [
+            812,
+            389
+          ],
+          [
+            1026,
+            389
+          ],
+          [
+            1026,
+            420
+          ],
+          [
+            812,
+            420
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-39",
+      "index": 38,
+      "type": "text",
+      "level": null,
+      "content": "随着半导体制造工艺向纳米级推进，我们正面临着前所未有的极限挑战。在光刻技术中，关键尺寸 CD 的减小受限于瑞利判据：分辨率极限  $ R = k \\Delta / \\text{NA} $。其中， $ k $ 是一个依赖于工艺的因子， $ \\lambda $ 是光刻波长，NA 是数值孔径。为了实现更小的 CD，传统方法是减小  $ \\lambda $ 和增大 NA。例如，极紫外 (EUV) 光刻技术采用了  $ \\lambda = 13.5 \\, \\text{nm} $ 的极短波长，带来了巨大的突破。然而，数值孔径 NA 的提升面临物理限制（当前最高约 0.55），且  $ k $ 因子也难以进一步优化。",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          52.0,
+          452.0,
+          1092.0,
+          519.0
+        ],
+        "polygon": [
+          [
+            52,
+            452
+          ],
+          [
+            1093,
+            452
+          ],
+          [
+            1093,
+            519
+          ],
+          [
+            52,
+            519
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-40",
+      "index": 39,
+      "type": "text",
+      "level": null,
+      "content": "当制程节点达到 5nm 以下时，栅极长度  $ L_g $ 已接近 10nm，此时量子效应（如隧穿效应）开始主导器件行为。隧穿概率  $ T\\backslash\\text{propto}e^{N-2\\langle x_1\\rangle\\langle x_2\\rangle} $\n $ \\backslash\\sqrt{\\{2m\\}}\\backslash\\hbar{b}ar^2\\rangle(V(x)-E)\\rangle dx\\} $，对材料科学和器件物理提出了更严峻的挑战。每一次制程缩小都要求创新解决方案和巨大研发投入，例如使用环绕栅极晶体管\n(GAA) 等新结构和新材料来应对。与此同时，EUV光刻技术的复杂性也带来了良率和成本的双重挑战，预示着摩尔定律的持续发展正接近物理极限。",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          52.0,
+          537.0,
+          1063.0,
+          603.0
+        ],
+        "polygon": [
+          [
+            52,
+            537
+          ],
+          [
+            52,
+            602
+          ],
+          [
+            1063,
+            602
+          ],
+          [
+            1063,
+            537
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-41",
+      "index": 40,
+      "type": "title",
+      "level": "2",
+      "content": "晶体管的量子隧道效应",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          431.0,
+          39.0,
+          722.0,
+          71.0
+        ],
+        "polygon": [
+          [
+            431,
+            39
+          ],
+          [
+            723,
+            39
+          ],
+          [
+            723,
+            71
+          ],
+          [
+            431,
+            71
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-42",
+      "index": 41,
+      "type": "image",
+      "ocr": "Parameter | Value\nω(x) | 2.4e-3k\nA | 4.0e-3k\nψ(x) | 2.4e-3k\nB | 4.0e-3k\nC | 6.0e-3k\nC | 2.4e-3k\nC | 6.0e-3k\na | 2.4e-3\nPosition (x) | Energy (E)\n0.0 | 0.0\n0.2 | 0.45\n0.4 | 0.85\n0.6 | 0.95\n0.8 | 0.85\n1.0 | 0.65\n1.2 | 0.45\n1.4 | 0.25\n1.6 | 0.15\n1.8 | 0.10\n2.0 | 0.05",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "chart",
+        "bbox": [
+          49.0,
+          179.0,
+          398.0,
+          368.0
+        ],
+        "polygon": [
+          [
+            49,
+            179
+          ],
+          [
+            398,
+            179
+          ],
+          [
+            398,
+            368
+          ],
+          [
+            49,
+            368
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-43",
+      "index": 42,
+      "type": "text",
+      "level": null,
+      "content": " $ i\\hbar\\,\\partial\\psi/\\partial t=\\hat{H}\\psi $",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          521.0,
+          98.0,
+          631.0,
+          121.0
+        ],
+        "polygon": [
+          [
+            521,
+            98
+          ],
+          [
+            631,
+            98
+          ],
+          [
+            631,
+            121
+          ],
+          [
+            521,
+            121
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-44",
+      "index": 43,
+      "type": "text",
+      "level": null,
+      "content": "描述电子的量子状态演化",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          524.0,
+          137.0,
+          627.0,
+          150.0
+        ],
+        "polygon": [
+          [
+            524,
+            137
+          ],
+          [
+            627,
+            137
+          ],
+          [
+            627,
+            151
+          ],
+          [
+            524,
+            151
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-45",
+      "index": 44,
+      "type": "title",
+      "level": "3",
+      "content": "量子隧穿的物理机制",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          427.0,
+          174.0,
+          560.0,
+          192.0
+        ],
+        "polygon": [
+          [
+            427,
+            174
+          ],
+          [
+            560,
+            174
+          ],
+          [
+            560,
+            193
+          ],
+          [
+            427,
+            193
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-46",
+      "index": 45,
+      "type": "text",
+      "level": null,
+      "content": "在纳米级晶体管中，电子的量子特性尤为重要。量子隧道效应使电子在能量不足时也能穿透势垒，这显著影响了晶体管的漏电流、功耗和性能。",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          424.0,
+          208.0,
+          1098.0,
+          244.0
+        ],
+        "polygon": [
+          [
+            424,
+            208
+          ],
+          [
+            1098,
+            208
+          ],
+          [
+            1098,
+            244
+          ],
+          [
+            424,
+            244
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-47",
+      "index": 46,
+      "type": "text",
+      "level": null,
+      "content": "隧穿概率通常表示为  $ T \\approx e^{\\gamma(-2kd)} $，其中  $ d $ 是势垒宽度， $ \\kappa $ 是衰减常数。当栅极氧化层厚度  $ t_{\\{ox\\}} $ 小于 2nm 时，隧穿电流密度 J 会呈指数级增长，对器件稳定性提出严峻挑战。",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          426.0,
+          256.0,
+          1104.0,
+          292.0
+        ],
+        "polygon": [
+          [
+            426,
+            256
+          ],
+          [
+            1104,
+            256
+          ],
+          [
+            1104,
+            292
+          ],
+          [
+            426,
+            292
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-48",
+      "index": 47,
+      "type": "text",
+      "level": null,
+      "content": "隧穿电流的公式可以表示为  $ J \\propto E^{2} e^{(-B/E)} $，其中  $ E $ 是电场强度。",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          425.0,
+          303.0,
+          762.0,
+          320.0
+        ],
+        "polygon": [
+          [
+            425,
+            303
+          ],
+          [
+            762,
+            303
+          ],
+          [
+            762,
+            321
+          ],
+          [
+            425,
+            321
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-49",
+      "index": 48,
+      "type": "title",
+      "level": "3",
+      "content": "关键参数",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          59.0,
+          422.0,
+          149.0,
+          440.0
+        ],
+        "polygon": [
+          [
+            59,
+            422
+          ],
+          [
+            149,
+            422
+          ],
+          [
+            149,
+            440
+          ],
+          [
+            59,
+            440
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-50",
+      "index": 49,
+      "type": "text",
+      "level": null,
+      "content": "亚阈值摆幅： $ SS = (kT/q)\\ln10 \\approx 60mV/decade $",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          85.0,
+          456.0,
+          349.0,
+          472.0
+        ],
+        "polygon": [
+          [
+            85,
+            456
+          ],
+          [
+            349,
+            456
+          ],
+          [
+            349,
+            472
+          ],
+          [
+            85,
+            472
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-51",
+      "index": 50,
+      "type": "text",
+      "level": null,
+      "content": "漏电流： $ I_{\\{leak\\}} $ 与  $ t_{\\{ox\\}} $ 呈指数关系",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          83.0,
+          479.0,
+          306.0,
+          495.0
+        ],
+        "polygon": [
+          [
+            83,
+            479
+          ],
+          [
+            307,
+            479
+          ],
+          [
+            307,
+            495
+          ],
+          [
+            83,
+            495
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-52",
+      "index": 51,
+      "type": "text",
+      "level": null,
+      "content": "静态功耗： $ P = I_{\\{leak\\}} \\times V_{\\{dd\\}} $",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          83.0,
+          502.0,
+          275.0,
+          518.0
+        ],
+        "polygon": [
+          [
+            83,
+            502
+          ],
+          [
+            276,
+            502
+          ],
+          [
+            276,
+            518
+          ],
+          [
+            83,
+            518
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-53",
+      "index": 52,
+      "type": "title",
+      "level": "3",
+      "content": "解决方案",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          589.0,
+          406.0,
+          650.0,
+          424.0
+        ],
+        "polygon": [
+          [
+            589,
+            406
+          ],
+          [
+            651,
+            406
+          ],
+          [
+            651,
+            424
+          ],
+          [
+            589,
+            424
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-54",
+      "index": 53,
+      "type": "text",
+      "level": null,
+      "content": "为了有效控制晶体管的开关行为，同时抑制量子隧道效应和短沟道效应带来的不利影响，业界引入了多种创新技术：",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          588.0,
+          439.0,
+          1097.0,
+          474.0
+        ],
+        "polygon": [
+          [
+            588,
+            439
+          ],
+          [
+            1097,
+            439
+          ],
+          [
+            1097,
+            474
+          ],
+          [
+            588,
+            474
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-55",
+      "index": 54,
+      "type": "text",
+      "level": null,
+      "content": "FinFET 结构：通过三面栅极对沟道进行更精细的控制，有效降低漏电流。\nGAA 晶体管：采用全环绕栅极设计，提供极致的静电控制，进一步减小亚阈值摆幅。",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          587.0,
+          487.0,
+          1043.0,
+          527.0
+        ],
+        "polygon": [
+          [
+            587,
+            487
+          ],
+          [
+            587,
+            527
+          ],
+          [
+            1042,
+            527
+          ],
+          [
+            1042,
+            491
+          ],
+          [
+            1031,
+            487
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-56",
+      "index": 55,
+      "type": "text",
+      "level": null,
+      "content": "高 k 介质材料：替代传统的二氧化硅栅氧，在保持相同电容的同时能大幅减小等效氧化层厚度（EOT），从而有效抑制隧穿电流。",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          588.0,
+          533.0,
+          1103.0,
+          569.0
+        ],
+        "polygon": [
+          [
+            588,
+            533
+          ],
+          [
+            1103,
+            533
+          ],
+          [
+            1103,
+            569
+          ],
+          [
+            588,
+            569
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-57",
+      "index": 56,
+      "type": "text",
+      "level": null,
+      "content": "这些新型技术为突破传统CMOS技术的物理极限铺平了道路，确保摩尔定律能够继续发展。",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          588.0,
+          581.0,
+          1042.0,
+          597.0
+        ],
+        "polygon": [
+          [
+            588,
+            581
+          ],
+          [
+            1043,
+            581
+          ],
+          [
+            1043,
+            597
+          ],
+          [
+            588,
+            597
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-58",
+      "index": 57,
+      "type": "title",
+      "level": "1",
+      "content": "芯片设计的复杂性爆炸",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "doc_title",
+        "bbox": [
+          451.0,
+          26.0,
+          699.0,
+          53.0
+        ],
+        "polygon": [
+          [
+            451,
+            26
+          ],
+          [
+            699,
+            26
+          ],
+          [
+            699,
+            54
+          ],
+          [
+            451,
+            54
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-59",
+      "index": 58,
+      "type": "text",
+      "level": null,
+      "content": "Cost = Base  $ \\times $ 2(Complexity/Moore $ _{C} $ constant)",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          442.0,
+          90.0,
+          722.0,
+          107.0
+        ],
+        "polygon": [
+          [
+            442,
+            90
+          ],
+          [
+            723,
+            90
+          ],
+          [
+            723,
+            107
+          ],
+          [
+            442,
+            107
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-60",
+      "index": 59,
+      "type": "title",
+      "level": "4",
+      "content": "SEMICONDUCTOR DESIGN COMPLEXITY GROWTH: 1990-2025",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          78.0,
+          166.0,
+          306.0,
+          176.0
+        ],
+        "polygon": [
+          [
+            78,
+            166
+          ],
+          [
+            306,
+            166
+          ],
+          [
+            306,
+            176
+          ],
+          [
+            78,
+            176
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-61",
+      "index": 60,
+      "type": "text",
+      "level": null,
+      "content": "设计成本随复杂度呈指数增长",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          533.0,
+          121.0,
+          635.0,
+          132.0
+        ],
+        "polygon": [
+          [
+            533,
+            121
+          ],
+          [
+            635,
+            121
+          ],
+          [
+            635,
+            133
+          ],
+          [
+            533,
+            133
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-62",
+      "index": 61,
+      "type": "image",
+      "ocr": "Year | Design Cost (Million USD) | Design Team Size\n1990 | 10 | 10\n350nm | 15 | 15\n1995 | 20 | 20\n250nm | 30 | 30\n180nm | 40 | 40\n1999 | 50 | 50\n130nm | 60 | 60\n90nm | 80 | 80\n2003 | 90 | 90\n2005 | 100 | 100\n65nm | 120 | 120\n45nm | 140 | 140\n2007 | 160 | 160\n32nm | 180 | 180\n22nm | 200 | 200\n14nm | 260 | 260\n2014 | 280 | 280\n10nm | 290 | 290\n2016 | 300 | 300\n7nm | 320 | 320\n2018 | 340 | 340\n5nm | 380 | 380\n2020 | 400 | 400\n3nm | 495 | 390",
+      "caption": "",
+      "image_url": "",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "chart",
+        "bbox": [
+          40.0,
+          182.0,
+          342.0,
+          329.0
+        ],
+        "polygon": [
+          [
+            40,
+            182
+          ],
+          [
+            342,
+            182
+          ],
+          [
+            342,
+            329
+          ],
+          [
+            40,
+            329
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-63",
+      "index": 62,
+      "type": "title",
+      "level": "4",
+      "content": "复杂度的多维挑战",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          368.0,
+          164.0,
+          468.0,
+          180.0
+        ],
+        "polygon": [
+          [
+            368,
+            164
+          ],
+          [
+            468,
+            164
+          ],
+          [
+            468,
+            180
+          ],
+          [
+            368,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-64",
+      "index": 63,
+      "type": "text",
+      "level": null,
+      "content": "设计规模：N_{\\{gates\\}} > 10^{10} 个晶体管",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          366.0,
+          192.0,
+          567.0,
+          205.0
+        ],
+        "polygon": [
+          [
+            366,
+            192
+          ],
+          [
+            567,
+            192
+          ],
+          [
+            567,
+            206
+          ],
+          [
+            366,
+            206
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-65",
+      "index": 64,
+      "type": "text",
+      "level": null,
+      "content": "验证复杂度：从  $ O(N^{2}) $ 跃升至  $ O(N^{3}) $",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          366.0,
+          212.0,
+          558.0,
+          225.0
+        ],
+        "polygon": [
+          [
+            366,
+            212
+          ],
+          [
+            558,
+            212
+          ],
+          [
+            558,
+            225
+          ],
+          [
+            366,
+            225
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-66",
+      "index": 65,
+      "type": "text",
+      "level": null,
+      "content": "设计周期：7nm 芯片需24-36个月",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          367.0,
+          231.0,
+          543.0,
+          244.0
+        ],
+        "polygon": [
+          [
+            391,
+            231
+          ],
+          [
+            543,
+            231
+          ],
+          [
+            543,
+            243
+          ],
+          [
+            391,
+            243
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-67",
+      "index": 66,
+      "type": "text",
+      "level": null,
+      "content": "掩模成本： $ C_{\\{mask\\}} > \\15M $",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          394.0,
+          249.0,
+          520.0,
+          263.0
+        ],
+        "polygon": [
+          [
+            394,
+            249
+          ],
+          [
+            521,
+            249
+          ],
+          [
+            521,
+            263
+          ],
+          [
+            394,
+            263
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-68",
+      "index": 67,
+      "type": "text",
+      "level": null,
+      "content": "团队规模：N_{engineers} \\propto \\sqrt{Complexity}",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          393.0,
+          269.0,
+          612.0,
+          283.0
+        ],
+        "polygon": [
+          [
+            393,
+            269
+          ],
+          [
+            612,
+            269
+          ],
+          [
+            612,
+            283
+          ],
+          [
+            393,
+            283
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-69",
+      "index": 68,
+      "type": "title",
+      "level": "4",
+      "content": "设计流程各阶段分析",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          39.0,
+          358.0,
+          149.0,
+          373.0
+        ],
+        "polygon": [
+          [
+            39,
+            358
+          ],
+          [
+            149,
+            358
+          ],
+          [
+            149,
+            373
+          ],
+          [
+            39,
+            373
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-70",
+      "index": 69,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>设计阶段</td><td>时间占比</td><td>算法复杂度</td></tr><tr><td>规格定义 (T_spec)</td><td>15%</td><td>O(N)</td></tr><tr><td>RTL设计 (T_RTL)</td><td>25%</td><td>O(N log N)</td></tr><tr><td>验证 (T_verify)</td><td>40%</td><td>$ O(N^{2}) $ -  $ O(N^{3}) $</td></tr><tr><td>布局布线 (T_layout)</td><td>20%</td><td>NP完全</td></tr></table>",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          42.0,
+          391.0,
+          1108.0,
+          531.0
+        ],
+        "polygon": [
+          [
+            42,
+            391
+          ],
+          [
+            1108,
+            391
+          ],
+          [
+            1108,
+            531
+          ],
+          [
+            42,
+            531
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-71",
+      "index": 70,
+      "type": "title",
+      "level": "4",
+      "content": "EDA工具的挑战",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          37.0,
+          553.0,
+          124.0,
+          568.0
+        ],
+        "polygon": [
+          [
+            37,
+            553
+          ],
+          [
+            125,
+            553
+          ],
+          [
+            125,
+            569
+          ],
+          [
+            37,
+            569
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-72",
+      "index": 71,
+      "type": "text",
+      "level": null,
+      "content": "布局布线：NP完全问题",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          36.0,
+          582.0,
+          169.0,
+          595.0
+        ],
+        "polygon": [
+          [
+            36,
+            582
+          ],
+          [
+            169,
+            582
+          ],
+          [
+            169,
+            595
+          ],
+          [
+            36,
+            595
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-73",
+      "index": 72,
+      "type": "text",
+      "level": null,
+      "content": "时序收敛： $ T_{\\{closure\\}} \\backslash propto N^{\\alpha} \\backslash alpha, \\backslash alpha > 1 $",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          35.0,
+          601.0,
+          286.0,
+          614.0
+        ],
+        "polygon": [
+          [
+            35,
+            601
+          ],
+          [
+            287,
+            601
+          ],
+          [
+            287,
+            615
+          ],
+          [
+            35,
+            615
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-74",
+      "index": 73,
+      "type": "text",
+      "level": null,
+      "content": "功耗优化： $ P_{\\{total\\}} = P_{\\{dynamic\\}} + P_{\\{static\\}} $",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          37.0,
+          620.0,
+          263.0,
+          634.0
+        ],
+        "polygon": [
+          [
+            37,
+            620
+          ],
+          [
+            263,
+            620
+          ],
+          [
+            263,
+            634
+          ],
+          [
+            37,
+            634
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-75",
+      "index": 74,
+      "type": "text",
+      "level": null,
+      "content": "AI辅助：AI辅助FDA工具正在兴起",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          58.0,
+          639.0,
+          210.0,
+          647.0
+        ],
+        "polygon": [
+          [
+            64,
+            639
+          ],
+          [
+            209,
+            639
+          ],
+          [
+            209,
+            648
+          ],
+          [
+            64,
+            648
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-76",
+      "index": 75,
+      "type": "title",
+      "level": "4",
+      "content": "成本与风险",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          587.0,
+          554.0,
+          650.0,
+          569.0
+        ],
+        "polygon": [
+          [
+            587,
+            554
+          ],
+          [
+            651,
+            554
+          ],
+          [
+            651,
+            569
+          ],
+          [
+            587,
+            569
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-77",
+      "index": 76,
+      "type": "text",
+      "level": null,
+      "content": "流片成功率：Y_{first} < 50%",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          586.0,
+          582.0,
+          740.0,
+          595.0
+        ],
+        "polygon": [
+          [
+            586,
+            582
+          ],
+          [
+            740,
+            582
+          ],
+          [
+            740,
+            595
+          ],
+          [
+            586,
+            595
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-78",
+      "index": 77,
+      "type": "text",
+      "level": null,
+      "content": "总开发成本： $ C_{\\{total\\}} = C_{\\{design\\}} + C_{\\{mask\\}} + C_{\\{tape-out\\}} + C_{\\{test\\}} $",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          588.0,
+          601.0,
+          917.0,
+          615.0
+        ],
+        "polygon": [
+          [
+            588,
+            601
+          ],
+          [
+            917,
+            601
+          ],
+          [
+            917,
+            615
+          ],
+          [
+            588,
+            615
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-79",
+      "index": 78,
+      "type": "text",
+      "level": null,
+      "content": "投资回报：投资回报周期延长",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          586.0,
+          620.0,
+          741.0,
+          634.0
+        ],
+        "polygon": [
+          [
+            586,
+            620
+          ],
+          [
+            742,
+            620
+          ],
+          [
+            742,
+            634
+          ],
+          [
+            586,
+            634
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-80",
+      "index": 79,
+      "type": "text",
+      "level": null,
+      "content": "行业整合，加速半导体行业整合趋势",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          586.0,
+          640.0,
+          770.0,
+          648.0
+        ],
+        "polygon": [
+          [
+            586,
+            640
+          ],
+          [
+            770,
+            640
+          ],
+          [
+            770,
+            647
+          ],
+          [
+            586,
+            647
+          ]
+        ]
+      }
+    }
+  ]
+}
