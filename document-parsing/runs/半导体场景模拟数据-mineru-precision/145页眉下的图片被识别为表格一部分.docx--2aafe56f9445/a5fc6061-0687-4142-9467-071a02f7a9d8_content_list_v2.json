@@ -1,0 +1,781 @@
+[
+    [
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "绪论"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "2.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "运算放大器"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "3.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "二极管及其基本电路"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "4.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "场效应三极管及其放大电路"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "5.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "双极结型三极管及其放大电路"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "6.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "频率响应"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "7.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "模拟集成电路"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 1,
+                        "prefix": "    1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "模拟集成电路中的直流偏置技术"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 2,
+                        "prefix": "        1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "FET电流源电路"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 2,
+                        "prefix": "        2.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "BJT电流源电路"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "8.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "差分式放大电路"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "9.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "差分式放大电路的传输特性"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "10.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "反馈放大电路"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "测试表格"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p>流程图</p></td><td><p>文本1</p></td><td><p>文本2</p></td></tr><tr><td rowspan=\"10\"><p><img src=\"images/57c5d1a3c0cfdc347757f8248cdcf70e109c72425731c6bbb5ffea7862633b10.png\"/></p></td><td rowspan=\"10\"><p>test1</p><p>test2、差分式放大电路</p><p>FET差分式放大电路</p></td><td><p>文本21</p></td></tr><tr><td><p>文本22</p></td></tr><tr><td><p>文本23</p></td></tr><tr><td><p>文本24</p></td></tr><tr><td><p>文本25</p></td></tr><tr><td><p>文本26</p></td></tr><tr><td><p>文本27</p></td></tr><tr><td><p>文本28</p></td></tr><tr><td><p>文本29</p></td></tr><tr><td><p>文本20</p></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "解析效果",
+                        "style": [
+                            "bold"
+                        ]
+                    }
+                ],
+                "level": 2
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Reticle"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "pre-alignment"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Marks"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "002100-120AA-1DA"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "alignment"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Markers"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "石英"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "图形区"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MASK Title"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Bar Code"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "图一、光照正面外观"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1.1广超反面外观"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "002100 120AA-1DA"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Bar Code"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Reticle"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "pre-alignment"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Marks"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "石英"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "MASK Title"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "图形区"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Pelicle"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "图二、光照反面外观"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1.1.1 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "准确性",
+                        "style": [
+                            "bold"
+                        ]
+                    }
+                ],
+                "level": 4
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "unordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "案例1："
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "hyperlink",
+                        "content": "https://github.com/matrixorigin/MO-Cloud/issues/7018",
+                        "url": "https://github.com/matrixorigin/MO-Cloud/issues/7018"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "闵可夫斯基"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "闵可夫·J·斯基"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "unordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "测试记录："
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "1.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2026-01-07 30B模型QA环境验证未复现"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "图片类型",
+                        "style": [
+                            "bold"
+                        ]
+                    }
+                ],
+                "level": 3
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1.1.2 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "散点图",
+                        "style": [
+                            "bold"
+                        ]
+                    }
+                ],
+                "level": 4
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "hyperlink",
+                        "content": "https://github.com/matrixorigin/MO-Cloud/issues/6999",
+                        "url": "https://github.com/matrixorigin/MO-Cloud/issues/6999"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "unordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "预期结果："
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "必须作为整体进行Caption和OCR解析，不能被拆分"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "unordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "-",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "测试记录："
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "attribute": "ordered",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "ilevel": 0,
+                        "prefix": "2.",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2026-01-07 30B模型QA环境验证未复现"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/865b682b205570f4d4a0a89c94fc749eb525f850c44ae50228243326ae30d70f.png"
+                },
+                "image_caption": []
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "表格类型",
+                        "style": [
+                            "bold"
+                        ]
+                    }
+                ],
+                "level": 3
+            }
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1.1.1.3 "
+                    },
+                    {
+                        "type": "text",
+                        "content": "三线表",
+                        "style": [
+                            "bold"
+                        ]
+                    }
+                ],
+                "level": 4
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The rapid advancement of semiconductor technology has fundamentally transformed the landscape of modern embedded systems. In today's industrial environment, the integration of high-performance microcontrollers, such as the STM32 series or ARM-based processors, is no longer just about raw clock speed. Instead, the focus has shifted toward power efficiency, hardware-level security, and seamless peripheral integration."
+                    }
+                ]
+            }
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Systems must now handle complex tasks ranging from real-time sensor fusion to high-speed data transmission via encrypted network protocols."
+                    }
+                ]
+            }
+        },
+        {
+            "type": "table",
+            "content": {
+                "table_caption": [],
+                "html": "<table><tr><td><p>Name</p></td><td><p>Purpose</p></td></tr><tr><td><p>APF Help</p></td><td><p>Accessible from the APF Help Shortcut in the windows start menu</p><p>Initial Setup: Verify system environment variables.</p><ul><li>Activity Manager Help</li><li>Diagnostic Tool Help</li></ul></td></tr><tr><td><p>APF1</p></td><td><p>Standard interface for application framework and logic.</p><p>Process management and background task scheduling.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr><tr><td><p>APF Help</p></td><td><p>Accessible from the APF Help Shortcut in the windows start menu</p><p>Initial Setup: Verify system environment variables.</p><ul><li>Activity Manager Help</li><li>Diagnostic Tool Help</li></ul></td></tr><tr><td><p>APF2</p></td><td><p>Standard interface for application framework and logic.</p><p>Process management and background task scheduling.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr><tr><td><p>APF Help</p></td><td><p>Accessible from the APF Help Shortcut in the windows start menu</p><p>Initial Setup: Verify system environment variables.</p><ul><li>Activity Manager Help</li><li>Diagnostic Tool Help</li></ul></td></tr><tr><td><p>APF3</p></td><td><p>Standard interface for application framework and logic.</p><p>Process management and background task scheduling.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr><tr><td><p>APF Help</p></td><td><p>Accessible from the APF Help Shortcut in the windows start menu</p><p>Initial Setup: Verify system environment variables.</p><ul><li>Activity Manager Help</li><li>Diagnostic Tool Help</li></ul></td></tr><tr><td><p>APF4</p></td><td><p>Standard interface for application framework and logic.</p><p>Process management and background task scheduling.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr><tr><td><p>APF Help</p></td><td><p>Accessible from the APF Help Shortcut in the windows start menu</p><p>Initial Setup: Verify system environment variables.</p><ul><li>Activity Manager Help</li><li>Diagnostic Tool Help</li></ul></td></tr><tr><td><p>APF5</p></td><td><p>Standard interface for application framework and logic.</p><p>Process management and background task scheduling.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr><tr><td><p>APF Help</p></td><td><p>Accessible from the APF Help Shortcut in the windows start menu</p><p>Initial Setup: Verify system environment variables.</p><ul><li>Activity Manager Help</li><li>Diagnostic Tool Help</li></ul></td></tr><tr><td><p>APF6</p></td><td><p>Standard interface for application framework and logic.</p><p>Process management and background task scheduling.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr><tr><td><p>Storage</p></td><td><p>High-speed data caching and persistent storage.\t</p><p>Redundant array of independent disks configuration.</p></td></tr></table>",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            }
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "Semiconfuctor Manufaceturing International Corporation"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30"
+                    }
+                ]
+            }
+        }
+    ]
+]

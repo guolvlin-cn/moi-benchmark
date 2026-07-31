@@ -1,0 +1,107 @@
+{
+    "pdf_info": [
+        {
+            "para_blocks": [
+                {
+                    "type": "text",
+                    "lines": [
+                        {
+                            "spans": [
+                                {
+                                    "type": "text",
+                                    "content": "SEASF06B+LDD+Stage+WAT+VBG+Fail+8-D+Report",
+                                    "style": [
+                                        "bold"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "text",
+                    "lines": [
+                        {
+                            "spans": [
+                                {
+                                    "type": "text",
+                                    "content": "D4:Define and Verify Root Cause",
+                                    "style": [
+                                        "bold"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "list",
+                    "attribute": "unordered",
+                    "ilevel": 0,
+                    "blocks": [
+                        {
+                            "type": "text",
+                            "lines": [
+                                {
+                                    "spans": [
+                                        {
+                                            "type": "text",
+                                            "content": "Root Cause Evidence"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "table",
+                    "blocks": [
+                        {
+                            "lines": [
+                                {
+                                    "spans": [
+                                        {
+                                            "type": "table",
+                                            "html": "<table>\n  <tr>\n    <th colspan=\"2\">Oxidation</th>\n    <th>Avg.</th>\n    <th>STD</th>\n    <th></th>\n    <th>Avg.</th>\n    <th>STD</th>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_A</td>\n    <td>pre</td>\n    <td>6.48</td>\n    <td>0.058</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">8.77</td>\n    <td rowspan=\"2\">0.139</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>15.25</td>\n    <td>0.197</td>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_B</td>\n    <td>pre</td>\n    <td>6.51</td>\n    <td>0.058</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">8.53</td>\n    <td rowspan=\"2\">0.167</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>15.04</td>\n    <td>0.225</td>\n  </tr>\n</table>"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "type": "table",
+                    "blocks": [
+                        {
+                            "lines": [
+                                {
+                                    "spans": [
+                                        {
+                                            "type": "table",
+                                            "html": "<table>\n  <tr>\n    <th colspan=\"2\">Charge</th>\n    <th>Avg.</th>\n    <th></th>\n    <th>Avg.</th>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_A</td>\n    <td>pre</td>\n    <td>0.431</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">0.012</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>0.419</td>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_B</td>\n    <td>pre</td>\n    <td>0.444</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">0.03</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>0.474</td>\n  </tr>\n</table>"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 4
+                }
+            ],
+            "discarded_blocks": [],
+            "page_idx": 0
+        }
+    ],
+    "_backend": "office",
+    "_version_name": "3.4.3"
+}

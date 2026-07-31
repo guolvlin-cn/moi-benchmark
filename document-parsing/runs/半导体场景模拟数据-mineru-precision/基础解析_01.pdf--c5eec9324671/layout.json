@@ -1,0 +1,555 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        214,
+                        84,
+                        380,
+                        105
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                217,
+                                86,
+                                377,
+                                105
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        217,
+                                        86,
+                                        377,
+                                        105
+                                    ],
+                                    "type": "text",
+                                    "content": "系统功能模块说明书",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        157,
+                        119,
+                        437,
+                        132
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                160,
+                                121,
+                                434,
+                                131
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        160,
+                                        121,
+                                        434,
+                                        131
+                                    ],
+                                    "type": "text",
+                                    "content": "文档编号：SYS-2026-001 | 版本：V1.0 | 日期：2026-04-17",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        69,
+                        142,
+                        186,
+                        159
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                71,
+                                143,
+                                183,
+                                158
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        71,
+                                        143,
+                                        183,
+                                        158
+                                    ],
+                                    "type": "text",
+                                    "content": "一、功能模块总览",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        68,
+                        169,
+                        524,
+                        198
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                72,
+                                170,
+                                521,
+                                180
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        72,
+                                        170,
+                                        521,
+                                        180
+                                    ],
+                                    "type": "text",
+                                    "content": "下表列出了系统各功能模块的详细说明。表格包含合并单元格和嵌入流程图，用于展示多模态",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                71,
+                                184,
+                                142,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        71,
+                                        184,
+                                        142,
+                                        195
+                                    ],
+                                    "type": "text",
+                                    "content": "文档解析能力。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        70,
+                        206,
+                        539,
+                        729
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                70,
+                                206,
+                                539,
+                                729
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        70,
+                                        206,
+                                        539,
+                                        729
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                70,
+                                                206,
+                                                539,
+                                                729
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>序号</td><td>模块名称</td><td>详细说明</td><td>备注</td></tr><tr><td>1</td><td>用户管理</td><td>包括用户注册、登录、权限分配等功能模块。支持多角色管理体系。</td><td>已完成开发</td></tr><tr><td rowspan=\"2\">2</td><td rowspan=\"2\">数据处理</td><td>数据清洗:对原始数据进行格式校验、去重、异常值过滤等预处理操作。</td><td>进行中</td></tr><tr><td>数据分析:运用统计方法和机器学习算法对清洗后的数据进行深度分析。</td><td>计划Q3完成</td></tr><tr><td>3</td><td>报表生成</td><td>支持自定义报表模板,可导出PDF、Excel等多种格式。包含图表可视化功能。</td><td>待开发</td></tr><tr><td>4</td><td>系统集成</td><td colspan=\"2\">提供RESTful API和SDK,支持与第三方系统对接,包括ERP、CRM、OA等企业级应用的数据互通。</td></tr><tr><td rowspan=\"2\">5</td><td rowspan=\"2\">安全审计</td><td>操作日志记录:记录所有用户操作,包括登录、数据修改、权限变更等关键行为。</td><td>已完成</td></tr><tr><td>安全扫描:定期执行漏洞扫描和渗透测试,确保系统安全性符合等保要求。</td><td>每季度执行</td></tr><tr><td>6</td><td>消息通知</td><td>支持站内信、邮件、短信、企业微信等多渠道消息推送,可配置通知模板和触发规则。</td><td>开发中</td></tr><tr><td>7</td><td>数据处理流程</td><td colspan=\"2\">以下为数据处理核心流程图:</td></tr></table>",
+                                            "image_path": "876efce59f68c4e408ac5404b9a2e428cf916906abb725dfed943a1f04270496.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        214,
+                        84,
+                        380,
+                        105
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                217,
+                                86,
+                                377,
+                                105
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        217,
+                                        86,
+                                        377,
+                                        105
+                                    ],
+                                    "type": "text",
+                                    "content": "系统功能模块说明书",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        157,
+                        119,
+                        437,
+                        132
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                160,
+                                121,
+                                434,
+                                131
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        160,
+                                        121,
+                                        434,
+                                        131
+                                    ],
+                                    "type": "text",
+                                    "content": "文档编号：SYS-2026-001 | 版本：V1.0 | 日期：2026-04-17",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        69,
+                        142,
+                        186,
+                        159
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                71,
+                                143,
+                                183,
+                                158
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        71,
+                                        143,
+                                        183,
+                                        158
+                                    ],
+                                    "type": "text",
+                                    "content": "一、功能模块总览",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        68,
+                        169,
+                        524,
+                        198
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                72,
+                                170,
+                                521,
+                                180
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        72,
+                                        170,
+                                        521,
+                                        180
+                                    ],
+                                    "type": "text",
+                                    "content": "下表列出了系统各功能模块的详细说明。表格包含合并单元格和嵌入流程图，用于展示多模态",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                71,
+                                184,
+                                142,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        71,
+                                        184,
+                                        142,
+                                        195
+                                    ],
+                                    "type": "text",
+                                    "content": "文档解析能力。",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        70,
+                        206,
+                        539,
+                        729
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                70,
+                                206,
+                                539,
+                                729
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        70,
+                                        206,
+                                        539,
+                                        729
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                70,
+                                                206,
+                                                539,
+                                                729
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>序号</td><td>模块名称</td><td>详细说明</td><td>备注</td></tr><tr><td>1</td><td>用户管理</td><td>包括用户注册、登录、权限分配等功能模块。支持多角色管理体系。</td><td>已完成开发</td></tr><tr><td rowspan=\"2\">2</td><td rowspan=\"2\">数据处理</td><td>数据清洗:对原始数据进行格式校验、去重、异常值过滤等预处理操作。</td><td>进行中</td></tr><tr><td>数据分析:运用统计方法和机器学习算法对清洗后的数据进行深度分析。</td><td>计划Q3完成</td></tr><tr><td>3</td><td>报表生成</td><td>支持自定义报表模板,可导出PDF、Excel等多种格式。包含图表可视化功能。</td><td>待开发</td></tr><tr><td>4</td><td>系统集成</td><td colspan=\"2\">提供RESTful API和SDK,支持与第三方系统对接,包括ERP、CRM、OA等企业级应用的数据互通。</td></tr><tr><td rowspan=\"2\">5</td><td rowspan=\"2\">安全审计</td><td>操作日志记录:记录所有用户操作,包括登录、数据修改、权限变更等关键行为。</td><td>已完成</td></tr><tr><td>安全扫描:定期执行漏洞扫描和渗透测试,确保系统安全性符合等保要求。</td><td>每季度执行</td></tr><tr><td>6</td><td>消息通知</td><td>支持站内信、邮件、短信、企业微信等多渠道消息推送,可配置通知模板和触发规则。</td><td>开发中</td></tr><tr><td>7</td><td>数据处理流程</td><td colspan=\"2\">以下为数据处理核心流程图:</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>8</td><td>部署运维</td><td>支持Docker容器化部署,提供Kubernetes编排方案,包含CI/CD自动化流水线配置。</td><td>规划中</td></tr></table>",
+                                            "image_path": "876efce59f68c4e408ac5404b9a2e428cf916906abb725dfed943a1f04270496.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                69,
+                                391,
+                                410,
+                                407
+                            ],
+                            "type": "table_footnote",
+                            "angle": 0,
+                            "index": 5,
+                            "lines": [],
+                            "cross_page": true
+                        }
+                    ],
+                    "index": 4
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        70,
+                        70,
+                        539,
+                        378
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                70,
+                                70,
+                                539,
+                                378
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        70,
+                                        70,
+                                        539,
+                                        378
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                70,
+                                                70,
+                                                539,
+                                                378
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>序号</td><td>模块名称</td><td>详细说明</td><td>备注</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>8</td><td>部署运维</td><td>支持Docker容器化部署,提供Kubernetes编排方案,包含CI/CD自动化流水线配置。</td><td>规划中</td></tr></table>",
+                                            "image_path": "815bb32190b2cce86ad31ec66ee49cad85701edd464c98ce49f1daccdc65e39d.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                69,
+                                391,
+                                410,
+                                407
+                            ],
+                            "type": "table_footnote",
+                            "angle": 0,
+                            "index": 1,
+                            "lines": []
+                        }
+                    ],
+                    "index": 0
+                }
+            ],
+            "discarded_blocks": [],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 1,
+            "para_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        70,
+                        70,
+                        539,
+                        378
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                70,
+                                70,
+                                539,
+                                378
+                            ],
+                            "type": "table_body",
+                            "angle": 0,
+                            "lines": [],
+                            "index": 0,
+                            "lines_deleted": true
+                        },
+                        {
+                            "bbox": [
+                                69,
+                                391,
+                                410,
+                                407
+                            ],
+                            "type": "table_footnote",
+                            "angle": 0,
+                            "index": 1,
+                            "lines": [],
+                            "lines_deleted": true
+                        }
+                    ],
+                    "index": 0
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_effort": "medium",
+    "_ocr_enable": false,
+    "_version_name": "3.4.0"
+}

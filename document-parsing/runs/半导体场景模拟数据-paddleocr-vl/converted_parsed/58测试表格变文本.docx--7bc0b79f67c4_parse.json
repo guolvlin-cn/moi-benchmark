@@ -1,0 +1,79 @@
+{
+  "filename": "58测试表格变文本.docx",
+  "filetype": "DOCX",
+  "block_count": 2,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "text",
+      "level": null,
+      "content": "The rapid advancement of semiconductor technology has fundamentally transformed the landscape of modern embedded systems. In today's industrial environment, the integration of high-performance microcontrollers, such as the STM32 series or ARM-based processors, is no longer just about raw clock speed. Instead, the focus has shifted toward power efficiency, hardware-level security, and seamless peripheral integration. Systems must now handle complex tasks ranging from real-time sensor fusion to high-speed data transmission via encrypted network protocols.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          86.0,
+          75.0,
+          509.0,
+          180.0
+        ],
+        "polygon": [
+          [
+            86,
+            75
+          ],
+          [
+            509,
+            75
+          ],
+          [
+            509,
+            180
+          ],
+          [
+            86,
+            180
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Name</td><td>Purpose</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu\\nInitial Setup: Verify system environment variables.\\n● Activity Manager Help\\n● Diagnostic Tool Help</td></tr><tr><td>APF</td><td>Standard interface for application framework and logic.\\nProcess management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.\\nRedundant array of independent disks configuration.</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          84.0,
+          181.0,
+          511.0,
+          325.0
+        ],
+        "polygon": [
+          [
+            84,
+            181
+          ],
+          [
+            511,
+            181
+          ],
+          [
+            511,
+            325
+          ],
+          [
+            84,
+            325
+          ]
+        ]
+      }
+    }
+  ]
+}

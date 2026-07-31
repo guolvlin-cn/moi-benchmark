@@ -1,0 +1,2053 @@
+{
+  "filename": "165流程图表格中流程图识别为文字.docx",
+  "filetype": "DOCX",
+  "block_count": 56,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          66.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            66
+          ],
+          [
+            43,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          114.0,
+          50.0,
+          530.0,
+          69.0
+        ],
+        "polygon": [
+          [
+            114,
+            50
+          ],
+          [
+            530,
+            50
+          ],
+          [
+            530,
+            69
+          ],
+          [
+            114,
+            69
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-01-3010</td><td>Doc.Title: SMIC Raw Material Abnormal Handing O.I.</td><td>Rev.:1</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          46.0,
+          84.0,
+          549.0,
+          114.0
+        ],
+        "polygon": [
+          [
+            46,
+            84
+          ],
+          [
+            549,
+            84
+          ],
+          [
+            549,
+            114
+          ],
+          [
+            46,
+            114
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "1. Title: SMIC Raw Material Abnormal Handing O.I.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          140.0,
+          311.0,
+          154.0
+        ],
+        "polygon": [
+          [
+            43,
+            140
+          ],
+          [
+            311,
+            140
+          ],
+          [
+            311,
+            154
+          ],
+          [
+            43,
+            154
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "title",
+      "level": "1",
+      "content": "2. Purpose:",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          42.0,
+          168.0,
+          109.0,
+          181.0
+        ],
+        "polygon": [
+          [
+            42,
+            168
+          ],
+          [
+            110,
+            168
+          ],
+          [
+            110,
+            181
+          ],
+          [
+            42,
+            181
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "2.1. To establish SMIC internal procedure for periodic performance evaluation and communication on with Class-I",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          183.0,
+          548.0,
+          212.0
+        ],
+        "polygon": [
+          [
+            63,
+            183
+          ],
+          [
+            548,
+            183
+          ],
+          [
+            548,
+            213
+          ],
+          [
+            63,
+            213
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "2.2. This document defines QCDESE evaluation procedures including scoring rules, internal review process, approval of final report, publication, and communication post-publication for SMIC Class-I",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          62.0,
+          215.0,
+          547.0,
+          260.0
+        ],
+        "polygon": [
+          [
+            62,
+            215
+          ],
+          [
+            548,
+            215
+          ],
+          [
+            548,
+            260
+          ],
+          [
+            62,
+            260
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-8",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "3. Scope:  $ \\underline{\\text{Applies to all SMIC group company and all SMIC Class-I Suppliers}} $(Raw Material).",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          273.0,
+          508.0,
+          288.0
+        ],
+        "polygon": [
+          [
+            42,
+            273
+          ],
+          [
+            508,
+            273
+          ],
+          [
+            508,
+            288
+          ],
+          [
+            42,
+            288
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-9",
+      "index": 8,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Material Group</td><td>Sub-Group</td></tr><tr><td rowspan=\"3\">Wafer</td><td>200mm wafer</td></tr><tr><td>300mm wafer</td></tr><tr><td>Control wafer</td></tr><tr><td>Gas</td><td>——</td></tr><tr><td rowspan=\"3\">Chemical</td><td>Bulk Chemical</td></tr><tr><td>Formula Chemical</td></tr><tr><td>Precursor and others</td></tr><tr><td rowspan=\"2\">Photo Resist</td><td>Photo Resist</td></tr><tr><td>Photo Chemical</td></tr><tr><td>Pad</td><td>——</td></tr><tr><td>Disk</td><td>——</td></tr><tr><td>Slurry</td><td>——</td></tr><tr><td>Quartz</td><td>——</td></tr><tr><td>Target</td><td>——</td></tr><tr><td>Mask Blank</td><td>——</td></tr><tr><td>Pellicle</td><td>——</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          95.0,
+          286.0,
+          306.0,
+          561.0
+        ],
+        "polygon": [
+          [
+            95,
+            291
+          ],
+          [
+            95,
+            561
+          ],
+          [
+            306,
+            561
+          ],
+          [
+            303,
+            286
+          ],
+          [
+            291,
+            286
+          ],
+          [
+            274,
+            286
+          ],
+          [
+            267,
+            286
+          ],
+          [
+            264,
+            291
+          ],
+          [
+            199,
+            286
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-10",
+      "index": 9,
+      "type": "title",
+      "level": "1",
+      "content": "4. Nomenclature:",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          42.0,
+          575.0,
+          138.0,
+          588.0
+        ],
+        "polygon": [
+          [
+            42,
+            575
+          ],
+          [
+            139,
+            575
+          ],
+          [
+            139,
+            589
+          ],
+          [
+            42,
+            589
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "4.1. CSL: Chimical Safety Label.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          591.0,
+          227.0,
+          604.0
+        ],
+        "polygon": [
+          [
+            63,
+            591
+          ],
+          [
+            228,
+            591
+          ],
+          [
+            228,
+            604
+          ],
+          [
+            63,
+            604
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-12",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "4.2. MSDS: Meterial Safetv Data Sheet.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          607.0,
+          259.0,
+          621.0
+        ],
+        "polygon": [
+          [
+            63,
+            607
+          ],
+          [
+            259,
+            607
+          ],
+          [
+            259,
+            617
+          ],
+          [
+            63,
+            617
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-13",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "4.3. CSL: Chimical Safety Label.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          622.0,
+          227.0,
+          635.0
+        ],
+        "polygon": [
+          [
+            63,
+            622
+          ],
+          [
+            227,
+            622
+          ],
+          [
+            227,
+            635
+          ],
+          [
+            63,
+            635
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-14",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "4.4. MSDS: Material Safety Data Sheet.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          638.0,
+          259.0,
+          651.0
+        ],
+        "polygon": [
+          [
+            63,
+            638
+          ],
+          [
+            259,
+            638
+          ],
+          [
+            259,
+            651
+          ],
+          [
+            63,
+            651
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-15",
+      "index": 14,
+      "type": "text",
+      "level": null,
+      "content": "4.5. CSL: Chimical Safety Label.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          653.0,
+          227.0,
+          666.0
+        ],
+        "polygon": [
+          [
+            63,
+            653
+          ],
+          [
+            228,
+            653
+          ],
+          [
+            228,
+            666
+          ],
+          [
+            63,
+            666
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-16",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "4.6. MSDS: Material Safety Data Sheet.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          669.0,
+          259.0,
+          682.0
+        ],
+        "polygon": [
+          [
+            63,
+            669
+          ],
+          [
+            260,
+            669
+          ],
+          [
+            260,
+            682
+          ],
+          [
+            63,
+            682
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-17",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "4.7. CSL: Chimical Safety Label.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          64.0,
+          685.0,
+          228.0,
+          698.0
+        ],
+        "polygon": [
+          [
+            64,
+            685
+          ],
+          [
+            228,
+            685
+          ],
+          [
+            228,
+            698
+          ],
+          [
+            64,
+            698
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-18",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "4.8. MSDS: Material Safety Data Sheet.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          700.0,
+          259.0,
+          714.0
+        ],
+        "polygon": [
+          [
+            63,
+            700
+          ],
+          [
+            260,
+            700
+          ],
+          [
+            260,
+            714
+          ],
+          [
+            63,
+            714
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-19",
+      "index": 18,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          773.0,
+          543.0,
+          795.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            543,
+            773
+          ],
+          [
+            543,
+            795
+          ],
+          [
+            42,
+            795
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-20",
+      "index": 19,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          43.0,
+          806.0,
+          401.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            43,
+            806
+          ],
+          [
+            397,
+            806
+          ],
+          [
+            397,
+            816
+          ],
+          [
+            43,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-21",
+      "index": 20,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          437.0,
+          806.0,
+          477.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            437,
+            806
+          ],
+          [
+            477,
+            806
+          ],
+          [
+            477,
+            815
+          ],
+          [
+            437,
+            815
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-22",
+      "index": 21,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          114.0,
+          66.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            114,
+            23
+          ],
+          [
+            114,
+            66
+          ],
+          [
+            43,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-23",
+      "index": 22,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          113.0,
+          50.0,
+          529.0,
+          69.0
+        ],
+        "polygon": [
+          [
+            113,
+            50
+          ],
+          [
+            530,
+            50
+          ],
+          [
+            530,
+            70
+          ],
+          [
+            113,
+            70
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-24",
+      "index": 23,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-01-3010</td><td>Doc.Title: SMIC Raw Material Abnormal Handing O.I.</td><td>Rev.:1</td><td>Page No.:2/5</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          46.0,
+          84.0,
+          549.0,
+          114.0
+        ],
+        "polygon": [
+          [
+            46,
+            84
+          ],
+          [
+            549,
+            84
+          ],
+          [
+            549,
+            114
+          ],
+          [
+            46,
+            114
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-25",
+      "index": 24,
+      "type": "title",
+      "level": "1",
+      "content": "5. 异常事件处理流程：",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          43.0,
+          127.0,
+          168.0,
+          141.0
+        ],
+        "polygon": [
+          [
+            43,
+            127
+          ],
+          [
+            168,
+            127
+          ],
+          [
+            168,
+            141
+          ],
+          [
+            43,
+            141
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-26",
+      "index": 25,
+      "type": "text",
+      "level": null,
+      "content": "5.1. 原材料检验过程中出发 OOS 或其他检验异常处理流程",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          143.0,
+          371.0,
+          157.0
+        ],
+        "polygon": [
+          [
+            63,
+            143
+          ],
+          [
+            371,
+            143
+          ],
+          [
+            371,
+            157
+          ],
+          [
+            63,
+            157
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-27",
+      "index": 26,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>作业流程</td><td>负责单位/人员</td><td>作业说明</td></tr><tr><td>触发 OOS 或其他检验异常</td><td>MQE</td><td>新批次触发 OOS 或其他检验异常</td></tr><tr><td>隔离 OSS 物料</td><td>MQE/WH</td><td>隔离异常批次</td></tr><tr><td>发送 CAR 给供应商</td><td>MQE</td><td>MQE 发送 CAR 给供应商</td></tr><tr><td>供应商调查原因并回复 CAR</td><td>供应商</td><td>供应商确认异常原因并回复 CAR</td></tr><tr><td>MQE 审核报告</td><td>MQE</td><td>MQE 审核报告</td></tr><tr><td>MQE 触发 IQND</td><td>MQE</td><td>MQE 触发 IQND</td></tr><tr><td>基于 IOND 结论进行物料处置</td><td>MQE/WH</td><td>基于 IQND 结论处置物料</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          46.0,
+          157.0,
+          543.0,
+          481.0
+        ],
+        "polygon": [
+          [
+            46,
+            157
+          ],
+          [
+            544,
+            157
+          ],
+          [
+            544,
+            481
+          ],
+          [
+            46,
+            481
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-28",
+      "index": 27,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          773.0,
+          544.0,
+          795.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            544,
+            773
+          ],
+          [
+            544,
+            795
+          ],
+          [
+            42,
+            795
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-29",
+      "index": 28,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          806.0,
+          401.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            42,
+            806
+          ],
+          [
+            398,
+            806
+          ],
+          [
+            398,
+            816
+          ],
+          [
+            42,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-30",
+      "index": 29,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          437.0,
+          806.0,
+          478.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            437,
+            806
+          ],
+          [
+            478,
+            806
+          ],
+          [
+            478,
+            816
+          ],
+          [
+            437,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-31",
+      "index": 30,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          114.0,
+          66.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            114,
+            23
+          ],
+          [
+            114,
+            66
+          ],
+          [
+            43,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-32",
+      "index": 31,
+      "type": "title",
+      "level": "1",
+      "content": "Semiconfuctor Manufacteturing International Corporation",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "doc_title",
+        "bbox": [
+          113.0,
+          50.0,
+          530.0,
+          70.0
+        ],
+        "polygon": [
+          [
+            113,
+            50
+          ],
+          [
+            530,
+            50
+          ],
+          [
+            530,
+            70
+          ],
+          [
+            113,
+            70
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-33",
+      "index": 32,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-01-3010</td><td>Doc.Title: SMIC Raw Material Abnormal Handing O.I.</td><td>Rev.:1</td><td>Page No.:3/5</td></tr></table>",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          48.0,
+          84.0,
+          550.0,
+          114.0
+        ],
+        "polygon": [
+          [
+            48,
+            84
+          ],
+          [
+            550,
+            84
+          ],
+          [
+            550,
+            114
+          ],
+          [
+            48,
+            114
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-34",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": "5.2. IQND 流程：",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          127.0,
+          149.0,
+          141.0
+        ],
+        "polygon": [
+          [
+            63,
+            127
+          ],
+          [
+            150,
+            127
+          ],
+          [
+            150,
+            141
+          ],
+          [
+            63,
+            141
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-35",
+      "index": 34,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>作业流程</td><td>负责单位/人员</td><td>作业说明</td></tr><tr><td>使用前发现异常</td><td>Fab/FAC</td><td>使用前发现异常</td></tr><tr><td>隔离异常物料</td><td>MQE/FAC/Fab</td><td>隔离异常批次</td></tr><tr><td>MQE 工程师现场确认</td><td>MQE</td><td>MQE 工程师现场确认</td></tr><tr><td>如需供应商可现场确认</td><td>供应商</td><td>如有必要，供应商可现场确认异常情况</td></tr><tr><td>物料异常</td><td>Fab/FAC 处置</td><td>如异常与原料无关，Fab/FAC 自行处置</td></tr><tr><td>发送 CAR 给供应商并 IQND 退货</td><td>MQE</td><td>如确为原物料异常，MQE 发送 CAR 给供应商并 IQND 退货</td></tr><tr><td>MQE 审核 CAR</td><td>MQE</td><td>MQE 审核报告</td></tr><tr><td>事件关闭</td><td>MQE</td><td>事件关闭</td></tr></table>",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          46.0,
+          142.0,
+          546.0,
+          547.0
+        ],
+        "polygon": [
+          [
+            46,
+            142
+          ],
+          [
+            546,
+            142
+          ],
+          [
+            546,
+            547
+          ],
+          [
+            46,
+            547
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-36",
+      "index": 35,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          773.0,
+          544.0,
+          795.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            544,
+            773
+          ],
+          [
+            544,
+            795
+          ],
+          [
+            42,
+            795
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-37",
+      "index": 36,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          806.0,
+          401.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            42,
+            806
+          ],
+          [
+            398,
+            806
+          ],
+          [
+            398,
+            816
+          ],
+          [
+            42,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-38",
+      "index": 37,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          437.0,
+          806.0,
+          478.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            437,
+            806
+          ],
+          [
+            478,
+            806
+          ],
+          [
+            478,
+            816
+          ],
+          [
+            437,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-39",
+      "index": 38,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          114.0,
+          66.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            114,
+            23
+          ],
+          [
+            114,
+            66
+          ],
+          [
+            43,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-40",
+      "index": 39,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufacteturing International Corporation",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          113.0,
+          50.0,
+          530.0,
+          70.0
+        ],
+        "polygon": [
+          [
+            113,
+            50
+          ],
+          [
+            530,
+            50
+          ],
+          [
+            530,
+            70
+          ],
+          [
+            113,
+            70
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-41",
+      "index": 40,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-01-3010</td><td>Doc.Title: SMIC Raw Material Abnormal Handing O.I.</td><td>Rev.:1</td><td>Page No.:4/5</td></tr></table>",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          48.0,
+          84.0,
+          550.0,
+          114.0
+        ],
+        "polygon": [
+          [
+            48,
+            84
+          ],
+          [
+            550,
+            84
+          ],
+          [
+            550,
+            114
+          ],
+          [
+            48,
+            114
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-42",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": "5.3. IQND 流程：",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          127.0,
+          149.0,
+          141.0
+        ],
+        "polygon": [
+          [
+            63,
+            127
+          ],
+          [
+            150,
+            127
+          ],
+          [
+            150,
+            141
+          ],
+          [
+            63,
+            141
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-43",
+      "index": 42,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          45.0,
+          143.0,
+          546.0,
+          754.0
+        ],
+        "polygon": [
+          [
+            45,
+            143
+          ],
+          [
+            546,
+            143
+          ],
+          [
+            546,
+            754
+          ],
+          [
+            45,
+            754
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-44",
+      "index": 43,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          42.0,
+          772.0,
+          544.0,
+          795.0
+        ],
+        "polygon": [
+          [
+            42,
+            772
+          ],
+          [
+            544,
+            772
+          ],
+          [
+            544,
+            796
+          ],
+          [
+            42,
+            796
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-45",
+      "index": 44,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          805.0,
+          400.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            42,
+            805
+          ],
+          [
+            398,
+            805
+          ],
+          [
+            398,
+            816
+          ],
+          [
+            42,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-46",
+      "index": 45,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          437.0,
+          806.0,
+          478.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            437,
+            806
+          ],
+          [
+            478,
+            806
+          ],
+          [
+            478,
+            816
+          ],
+          [
+            437,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-47",
+      "index": 46,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          66.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            66
+          ],
+          [
+            43,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-48",
+      "index": 47,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          114.0,
+          50.0,
+          530.0,
+          69.0
+        ],
+        "polygon": [
+          [
+            114,
+            50
+          ],
+          [
+            530,
+            50
+          ],
+          [
+            530,
+            70
+          ],
+          [
+            114,
+            70
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-49",
+      "index": 48,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-01-3010</td><td>Doc.Title: SMIC Raw Material Abnormal Handing O.I.</td><td>Rev.:1</td><td>Page No.:5/5</td></tr></table>",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          46.0,
+          84.0,
+          549.0,
+          114.0
+        ],
+        "polygon": [
+          [
+            46,
+            84
+          ],
+          [
+            549,
+            84
+          ],
+          [
+            549,
+            114
+          ],
+          [
+            46,
+            114
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-50",
+      "index": 49,
+      "type": "title",
+      "level": "1",
+      "content": "6. Project background",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          43.0,
+          128.0,
+          156.0,
+          142.0
+        ],
+        "polygon": [
+          [
+            43,
+            128
+          ],
+          [
+            156,
+            128
+          ],
+          [
+            156,
+            142
+          ],
+          [
+            43,
+            142
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-51",
+      "index": 50,
+      "type": "text",
+      "level": null,
+      "content": "6.1. DCC: Document Control Center",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          147.0,
+          251.0,
+          161.0
+        ],
+        "polygon": [
+          [
+            63,
+            147
+          ],
+          [
+            251,
+            147
+          ],
+          [
+            251,
+            161
+          ],
+          [
+            63,
+            161
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-52",
+      "index": 51,
+      "type": "text",
+      "level": null,
+      "content": "6.2. DCN: Document Change Notice (for Company Rules and Regulations)",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          178.0,
+          433.0,
+          192.0
+        ],
+        "polygon": [
+          [
+            63,
+            178
+          ],
+          [
+            433,
+            178
+          ],
+          [
+            433,
+            192
+          ],
+          [
+            63,
+            192
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-53",
+      "index": 52,
+      "type": "text",
+      "level": null,
+      "content": "6.3. DMS: Document Management System",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          63.0,
+          194.0,
+          281.0,
+          207.0
+        ],
+        "polygon": [
+          [
+            63,
+            194
+          ],
+          [
+            281,
+            194
+          ],
+          [
+            281,
+            208
+          ],
+          [
+            63,
+            208
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-54",
+      "index": 53,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          773.0,
+          544.0,
+          795.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            544,
+            773
+          ],
+          [
+            544,
+            795
+          ],
+          [
+            42,
+            795
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-55",
+      "index": 54,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          43.0,
+          806.0,
+          401.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            43,
+            806
+          ],
+          [
+            397,
+            806
+          ],
+          [
+            397,
+            816
+          ],
+          [
+            43,
+            816
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-56",
+      "index": 55,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          437.0,
+          806.0,
+          477.0,
+          816.0
+        ],
+        "polygon": [
+          [
+            437,
+            806
+          ],
+          [
+            477,
+            806
+          ],
+          [
+            477,
+            815
+          ],
+          [
+            437,
+            815
+          ]
+        ]
+      }
+    }
+  ]
+}

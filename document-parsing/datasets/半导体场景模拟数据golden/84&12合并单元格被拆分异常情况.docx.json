@@ -1,0 +1,59 @@
+{
+  "doc_id": "84-12_faed7c59a2",
+  "_generated_at": "2026-07-30T06:37:30+00:00",
+  "header_footer": {
+    "expected_headers": [],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 1,
+    "table_html_summaries": [
+      "<table><tr><th>Flow chart</th><th>Responsibility</th><th>Description</th></tr><tr><td>**类型：** 流程图<br><br>**节点和流程：**<br>1. TECN  <br>   Create/Renew/Abolish  <br>   （六边形起始/终止节点）<br>2. Internal Sign-off  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → Parallel Sign-off<br>3. Parallel Sign-off  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → DCC Processing<br>4. DCC Processing  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → DCC Release/Recall TECN<br>5. DCC Release/Recall TECN  <br>   （圆角矩形终止节点）<br><br>**总结：** 该流程图描述了一个包含多次签核决策与循环返回机制的审批处理流程。</td><td>Change initiator<br><br>Initiator's manager<br><br>Related function's manager<br><br>DCC<br><br>DCC</td><td>1. Fill out TECN from, attach change related report or data, if any, and then submit to manager for sign-off<br><br>2. Revise the request if it's rejected, and submit for internal sign-off again.<br><br>1. Approve or reject the request.<br>2. If reject, should describe the reason.<br><br>1. Approve or reject the request.<br>2. If reject, should describe the reason.<br><br>1. Check if the sign-off process is completed, TECN from is correctly filled out, and-necessary date/files is attached. If not, reject the request to the initiator for revising or even re-issuing.<br><br>1. Release or recall TECN.</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "9.4 TECN process flow(Create/ Renew/ Abolish))",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "9.4 TECN process flow(Create/ Renew/ Abolish))",
+      "<table><tr><th>Flow chart</th><th>Responsibility</th><th>Description</th></tr><tr><td>**类型：** 流程图<br><br>**节点和流程：**<br>1. TECN  <br>   Create/Renew/Abolish  <br>   （六边形起始/终止节点）<br>2. Internal Sign-off  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → Parallel Sign-off<br>3. Parallel Sign-off  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → DCC Processing<br>4. DCC Processing  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → DCC Release/Recall TECN<br>5. DCC Release/Recall TECN  <br>   （圆角矩形终止节点）<br><br>**总结：** 该流程图描述了一个包含多次签核决策与循环返回机制的审批处理流程。</td><td>Change initiator<br><br>Initiator's manager<br><br>Related function's manager<br><br>DCC<br><br>DCC</td><td>1. Fill out TECN from, attach change related report or data, if any, and then submit to manager for sign-off<br><br>2. Revise the request if it's rejected, and submit for internal sign-off again.<br><br>1. Approve or reject the request.<br>2. If reject, should describe the reason.<br><br>1. Approve or reject the request.<br>2. If reject, should describe the reason.<br><br>1. Check if the sign-off process is completed, TECN from is correctly filled out, and-necessary date/files is attached. If not, reject the request to the initiator for revising or even re-issuing.<br><br>1. Release or recall TECN.</td></tr></table>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": []
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>Flow chart</th><th>Responsibility</th><th>Description</th></tr><tr><td>**类型：** 流程图<br><br>**节点和流程：**<br>1. TECN  <br>   Create/Renew/Abolish  <br>   （六边形起始/终止节点）<br>2. Internal Sign-off  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → Parallel Sign-off<br>3. Parallel Sign-off  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → DCC Processing<br>4. DCC Processing  <br>   （菱形判断节点）  <br>   - 条件分支：No → 返回 TECN  <br>   - 条件分支：Yes → DCC Release/Recall TECN<br>5. DCC Release/Recall TECN  <br>   （圆角矩形终止节点）<br><br>**总结：** 该流程图描述了一个包含多次签核决策与循环返回机制的审批处理流程。</td><td>Change initiator<br><br>Initiator's manager<br><br>Related function's manager<br><br>DCC<br><br>DCC</td><td>1. Fill out TECN from, attach change related report or data, if any, and then submit to manager for sign-off<br><br>2. Revise the request if it's rejected, and submit for internal sign-off again.<br><br>1. Approve or reject the request.<br>2. If reject, should describe the reason.<br><br>1. Approve or reject the request.<br>2. If reject, should describe the reason.<br><br>1. Check if the sign-off process is completed, TECN from is correctly filled out, and-necessary date/files is attached. If not, reject the request to the initiator for revising or even re-issuing.<br><br>1. Release or recall TECN.</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

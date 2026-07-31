@@ -1,0 +1,912 @@
+{
+  "filename": "08页眉页脚多识别.pptx",
+  "filetype": "PPTX",
+  "block_count": 25,
+  "blocks": [
+    {
+      "id": "c9fOXf-layout-1",
+      "index": 0,
+      "type": "header",
+      "level": null,
+      "content": "SMIC 页眉",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          380.0,
+          25.0,
+          431.0,
+          37.0
+        ],
+        "polygon": [
+          [
+            380,
+            25
+          ],
+          [
+            431,
+            25
+          ],
+          [
+            431,
+            37
+          ],
+          [
+            380,
+            37
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c9fOXf-layout-2",
+      "index": 1,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          511.0,
+          3.0,
+          603.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            511,
+            3
+          ],
+          [
+            603,
+            3
+          ],
+          [
+            603,
+            64
+          ],
+          [
+            511,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c9fOXf-layout-3",
+      "index": 2,
+      "type": "title",
+      "level": "1",
+      "content": "目录",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          353.0,
+          79.0,
+          446.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            353,
+            79
+          ],
+          [
+            446,
+            79
+          ],
+          [
+            446,
+            128
+          ],
+          [
+            353,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c9fOXf-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "□ 第一章\n➢ 研究背景与意义\n➢ 国内外研究现状\n➢ 深度学习隐私威胁\n□ 第二章\n➢ 深度学习隐私保护\n➢ 论文内容与结构安排\n➢ 论文内容",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "content",
+        "bbox": [
+          107.0,
+          158.0,
+          387.0,
+          425.0
+        ],
+        "polygon": [
+          [
+            107,
+            158
+          ],
+          [
+            387,
+            158
+          ],
+          [
+            387,
+            425
+          ],
+          [
+            107,
+            425
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c9fOXf-layout-5",
+      "index": 4,
+      "type": "footer",
+      "level": null,
+      "content": "07/27/2026",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          53.0,
+          504.0,
+          106.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            53,
+            504
+          ],
+          [
+            106,
+            504
+          ],
+          [
+            106,
+            515
+          ],
+          [
+            53,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c9fOXf-layout-6",
+      "index": 5,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC 页脚",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          411.0,
+          504.0,
+          461.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            411,
+            504
+          ],
+          [
+            461,
+            504
+          ],
+          [
+            461,
+            515
+          ],
+          [
+            411,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "c9fOXf-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "1",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          897.0,
+          505.0,
+          905.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            897,
+            505
+          ],
+          [
+            905,
+            505
+          ],
+          [
+            905,
+            514
+          ],
+          [
+            897,
+            514
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gxSv93-layout-8",
+      "index": 7,
+      "type": "header",
+      "level": null,
+      "content": "SMIC 页眉",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          381.0,
+          25.0,
+          432.0,
+          36.0
+        ],
+        "polygon": [
+          [
+            381,
+            25
+          ],
+          [
+            431,
+            25
+          ],
+          [
+            431,
+            36
+          ],
+          [
+            381,
+            36
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gxSv93-layout-9",
+      "index": 8,
+      "type": "title",
+      "level": "1",
+      "content": "目录",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          353.0,
+          79.0,
+          446.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            353,
+            79
+          ],
+          [
+            446,
+            79
+          ],
+          [
+            446,
+            128
+          ],
+          [
+            353,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gxSv93-layout-10",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "□ 第三章\n➢ 研究背景\n➢ 国内外研究\n➢ 深度学习\n□ 第四章\n➢ 隐私保护\n➢ 结构安排\n➢ 主体内容",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "content",
+        "bbox": [
+          86.0,
+          140.0,
+          231.0,
+          407.0
+        ],
+        "polygon": [
+          [
+            86,
+            140
+          ],
+          [
+            232,
+            140
+          ],
+          [
+            232,
+            407
+          ],
+          [
+            86,
+            407
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gxSv93-layout-11",
+      "index": 10,
+      "type": "footer",
+      "level": null,
+      "content": "07/27/2026",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          54.0,
+          504.0,
+          106.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            54,
+            504
+          ],
+          [
+            106,
+            504
+          ],
+          [
+            106,
+            515
+          ],
+          [
+            54,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gxSv93-layout-12",
+      "index": 11,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC 页脚",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          411.0,
+          504.0,
+          461.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            411,
+            504
+          ],
+          [
+            461,
+            504
+          ],
+          [
+            461,
+            515
+          ],
+          [
+            411,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gxSv93-layout-13",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "2",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          896.0,
+          505.0,
+          906.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            896,
+            505
+          ],
+          [
+            906,
+            505
+          ],
+          [
+            906,
+            514
+          ],
+          [
+            896,
+            514
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ax7tli-layout-14",
+      "index": 13,
+      "type": "header",
+      "level": null,
+      "content": "SMIC 页眉",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          381.0,
+          25.0,
+          432.0,
+          36.0
+        ],
+        "polygon": [
+          [
+            381,
+            25
+          ],
+          [
+            431,
+            25
+          ],
+          [
+            431,
+            36
+          ],
+          [
+            381,
+            36
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ax7tli-layout-15",
+      "index": 14,
+      "type": "title",
+      "level": "1",
+      "content": "目录",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          353.0,
+          79.0,
+          446.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            353,
+            79
+          ],
+          [
+            446,
+            79
+          ],
+          [
+            446,
+            128
+          ],
+          [
+            353,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ax7tli-layout-16",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "□ 第五章\n➢ 实验\n➢ 数据\n➢ 差分隐私\n➢ Rényi差分隐私\n□ 第六章\n➢ 隐私保护\n➢ 结构安排\n➢ 主体内容",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "content",
+        "bbox": [
+          103.0,
+          132.0,
+          327.0,
+          427.0
+        ],
+        "polygon": [
+          [
+            103,
+            132
+          ],
+          [
+            327,
+            132
+          ],
+          [
+            327,
+            427
+          ],
+          [
+            103,
+            427
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ax7tli-layout-17",
+      "index": 16,
+      "type": "footer",
+      "level": null,
+      "content": "07/27/2026",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          53.0,
+          504.0,
+          106.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            53,
+            504
+          ],
+          [
+            106,
+            504
+          ],
+          [
+            106,
+            515
+          ],
+          [
+            53,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ax7tli-layout-18",
+      "index": 17,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC 页脚",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          411.0,
+          504.0,
+          461.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            411,
+            504
+          ],
+          [
+            461,
+            504
+          ],
+          [
+            461,
+            515
+          ],
+          [
+            411,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ax7tli-layout-19",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "3",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          896.0,
+          505.0,
+          905.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            896,
+            505
+          ],
+          [
+            905,
+            505
+          ],
+          [
+            905,
+            514
+          ],
+          [
+            896,
+            514
+          ]
+        ]
+      }
+    },
+    {
+      "id": "k6ysk3-layout-20",
+      "index": 19,
+      "type": "header",
+      "level": null,
+      "content": "SMIC 页眉",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          381.0,
+          25.0,
+          432.0,
+          36.0
+        ],
+        "polygon": [
+          [
+            381,
+            25
+          ],
+          [
+            431,
+            25
+          ],
+          [
+            431,
+            36
+          ],
+          [
+            381,
+            36
+          ]
+        ]
+      }
+    },
+    {
+      "id": "k6ysk3-layout-21",
+      "index": 20,
+      "type": "title",
+      "level": "1",
+      "content": "目录",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          353.0,
+          79.0,
+          446.0,
+          128.0
+        ],
+        "polygon": [
+          [
+            353,
+            79
+          ],
+          [
+            446,
+            79
+          ],
+          [
+            446,
+            128
+          ],
+          [
+            353,
+            128
+          ]
+        ]
+      }
+    },
+    {
+      "id": "k6ysk3-layout-22",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "□ 第七章\n➢ 研究背景\n➢ 国内外研究\n➢ 深度学习\n□ 第八章\n➢ 隐私保护\n➢ 结构安排\n➢ 主体内容",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "content",
+        "bbox": [
+          86.0,
+          141.0,
+          269.0,
+          408.0
+        ],
+        "polygon": [
+          [
+            86,
+            141
+          ],
+          [
+            270,
+            141
+          ],
+          [
+            270,
+            408
+          ],
+          [
+            86,
+            408
+          ]
+        ]
+      }
+    },
+    {
+      "id": "k6ysk3-layout-23",
+      "index": 22,
+      "type": "footer",
+      "level": null,
+      "content": "07/27/2026",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          54.0,
+          504.0,
+          106.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            54,
+            504
+          ],
+          [
+            106,
+            504
+          ],
+          [
+            106,
+            515
+          ],
+          [
+            54,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "k6ysk3-layout-24",
+      "index": 23,
+      "type": "footer",
+      "level": null,
+      "content": "SMIC 页脚",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          411.0,
+          504.0,
+          461.0,
+          515.0
+        ],
+        "polygon": [
+          [
+            411,
+            504
+          ],
+          [
+            461,
+            504
+          ],
+          [
+            461,
+            515
+          ],
+          [
+            411,
+            515
+          ]
+        ]
+      }
+    },
+    {
+      "id": "k6ysk3-layout-25",
+      "index": 24,
+      "type": "text",
+      "level": null,
+      "content": "4",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          897.0,
+          505.0,
+          906.0,
+          513.0
+        ],
+        "polygon": [
+          [
+            897,
+            505
+          ],
+          [
+            905,
+            505
+          ],
+          [
+            905,
+            513
+          ],
+          [
+            897,
+            513
+          ]
+        ]
+      }
+    }
+  ]
+}

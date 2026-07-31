@@ -1,0 +1,109 @@
+{
+  "doc_id": "177_cc5649b6dd",
+  "_generated_at": "2026-07-29T10:45:01+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Semiconfuctor Manufaceturing International Corporation\nDoclNo.:xx-xxxx-xx-xxxx\nDoc.Title:SMIC200mmxxxxx xxxx xxxx xxxx xxxx xxxx xxx xxxx xxxx xxxx\nRec.:1\nPage No.:1/10",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC\nAccording to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 2,
+    "table_html_summaries": [
+      "<table><tr><th>核心流程展示</th><th>阶段概括</th><th>标题三：详细执行要点（扩充）</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. `TECN Create/Renew/Abolish`\n2. `Internal Sign-off`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → `Parallel Sign-off`\n3. `Parallel Sign-off`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → `DCC`\n4. `DCC`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → 止节点 `DCC`\n\n**总结：** 该流程图描述了一个包含多次条件判断与循环返回的审批或处理流程。</td><td>A.需求与准备阶段<br/><br/>B.方案与执行阶段<br/><br/>C.验收与优化阶段</td><td>a.1 用户画像分析： 明确核心目标群体的痛点与真实诉求。<br/>a.2 资源盘点： 确认人力、预算及技术工具的到位情况。<br/>a.3 目标设定： 采用 SMART 原则制定阶段性 KPI。<br/><br/>b.1 任务分解： 将大目标拆解为可操作的最小执行单元（WBS）。<br/>b.2 进度监控： 每日同步站会，确保项目不偏离预定轨道。<br/>b.3 风险预警： 针对潜在的技术瓶颈制定备选（Plan B）方案。<br/><br/>c.1 成果核验： 对比初始需求文档，逐项进行质量把控。<br/>c.2 数据复盘： 整理执行过程中的数据，计算最终转化率。<br/>c.3 知识沉淀： 将项目经验录入公司内部库，为后续提供参考。</td></tr></table>",
+      "<table><tr><th>flow chart</th><th>Responsibility</th><th>description</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. ECN  \n   Create / Revise / Abolish\n2. Initial  \n   Signoff  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n3. DCC Process  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n4. Parallel  \n   Sign-off\n5. DCC Process  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n6. DCC Release / Recall\n\n**总结：** 该流程图描述了一个包含多次决策判断与循环反馈的审批与发布流程。</td><td>初始化运行环境，为后续累加与计数操作做好准备。<br/><br/>将累加器 sum 归零，保证后续累加结果从 0 开始<br/><br/>将计数器 count 归零，确保后续统计从 0 开始<br/><br/>获取外部输入值 n，为累加与计数提供原始数据<br/><br/>标志流程正常结束，释放资源并返回控制权</td><td>● 在程序或脚本最顶端放置起始标记；<br/>● 确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；<br/><br/>执行赋值语句 sum ← 0；<br/>该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；<br/>若使用浮点型，注意 0 的精度与类型一致性（int/float）。<br/><br/>通过标准输入、文件或 UI 读取一个数值；<br/>需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；<br/><br/>执行算术更新 sum ← sum + n；<br/><br/>在程序底部放置结束标记或返回语句；</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": []
+  },
+  "layout": {
+    "expected_reading_order": [
+      "阿斯蒂芬阿萨德",
+      "阿第三方阿萨德",
+      "奥德赛发斯蒂芬阿斯蒂芬阿斯顿发 sd",
+      "表格一：",
+      "<table><tr><th>核心流程展示</th><th>阶段概括</th><th>标题三：详细执行要点（扩充）</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. `TECN Create/Renew/Abolish`\n2. `Internal Sign-off`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → `Parallel Sign-off`\n3. `Parallel Sign-off`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → `DCC`\n4. `DCC`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → 止节点 `DCC`\n\n**总结：** 该流程图描述了一个包含多次条件判断与循环返回的审批或处理流程。</td><td>A.需求与准备阶段<br/><br/>B.方案与执行阶段<br/><br/>C.验收与优化阶段</td><td>a.1 用户画像分析： 明确核心目标群体的痛点与真实诉求。<br/>a.2 资源盘点： 确认人力、预算及技术工具的到位情况。<br/>a.3 目标设定： 采用 SMART 原则制定阶段性 KPI。<br/><br/>b.1 任务分解： 将大目标拆解为可操作的最小执行单元（WBS）。<br/>b.2 进度监控： 每日同步站会，确保项目不偏离预定轨道。<br/>b.3 风险预警： 针对潜在的技术瓶颈制定备选（Plan B）方案。<br/><br/>c.1 成果核验： 对比初始需求文档，逐项进行质量把控。<br/>c.2 数据复盘： 整理执行过程中的数据，计算最终转化率。<br/>c.3 知识沉淀： 将项目经验录入公司内部库，为后续提供参考。</td></tr></table>",
+      "阿第三方阿斯蒂芬阿斯蒂芬",
+      "阿第三方asdf",
+      "多发点发生的 阿斯顿发生的发阿斯蒂芬阿斯蒂芬水电费阿第三方阿是放大",
+      "表格3",
+      "<table><tr><th>flow chart</th><th>Responsibility</th><th>description</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. ECN  \n   Create / Revise / Abolish\n2. Initial  \n   Signoff  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n3. DCC Process  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n4. Parallel  \n   Sign-off\n5. DCC Process  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n6. DCC Release / Recall\n\n**总结：** 该流程图描述了一个包含多次决策判断与循环反馈的审批与发布流程。</td><td>初始化运行环境，为后续累加与计数操作做好准备。<br/><br/>将累加器 sum 归零，保证后续累加结果从 0 开始<br/><br/>将计数器 count 归零，确保后续统计从 0 开始<br/><br/>获取外部输入值 n，为累加与计数提供原始数据<br/><br/>标志流程正常结束，释放资源并返回控制权</td><td>● 在程序或脚本最顶端放置起始标记；<br/>● 确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；<br/><br/>执行赋值语句 sum ← 0；<br/>该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；<br/>若使用浮点型，注意 0 的精度与类型一致性（int/float）。<br/><br/>通过标准输入、文件或 UI 读取一个数值；<br/>需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；<br/><br/>执行算术更新 sum ← sum + n；<br/><br/>在程序底部放置结束标记或返回语句；</td></tr></table>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "阿斯蒂芬阿萨德",
+          "page_num": 1
+        },
+        {
+          "text": "阿第三方阿萨德",
+          "page_num": 1
+        },
+        {
+          "text": "奥德赛发斯蒂芬阿斯蒂芬阿斯顿发 sd",
+          "page_num": 1
+        },
+        {
+          "text": "表格一：",
+          "page_num": 1
+        },
+        {
+          "text": "阿第三方阿斯蒂芬阿斯蒂芬",
+          "page_num": 1
+        },
+        {
+          "text": "阿第三方asdf",
+          "page_num": 1
+        },
+        {
+          "text": "多发点发生的 阿斯顿发生的发阿斯蒂芬阿斯蒂芬水电费阿第三方阿是放大",
+          "page_num": 1
+        },
+        {
+          "text": "表格3",
+          "page_num": 2
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>核心流程展示</th><th>阶段概括</th><th>标题三：详细执行要点（扩充）</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. `TECN Create/Renew/Abolish`\n2. `Internal Sign-off`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → `Parallel Sign-off`\n3. `Parallel Sign-off`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → `DCC`\n4. `DCC`\n   - 条件分支：No → 返回 `TECN Create/Renew/Abolish`\n   - 条件分支：Yes → 止节点 `DCC`\n\n**总结：** 该流程图描述了一个包含多次条件判断与循环返回的审批或处理流程。</td><td>A.需求与准备阶段<br/><br/>B.方案与执行阶段<br/><br/>C.验收与优化阶段</td><td>a.1 用户画像分析： 明确核心目标群体的痛点与真实诉求。<br/>a.2 资源盘点： 确认人力、预算及技术工具的到位情况。<br/>a.3 目标设定： 采用 SMART 原则制定阶段性 KPI。<br/><br/>b.1 任务分解： 将大目标拆解为可操作的最小执行单元（WBS）。<br/>b.2 进度监控： 每日同步站会，确保项目不偏离预定轨道。<br/>b.3 风险预警： 针对潜在的技术瓶颈制定备选（Plan B）方案。<br/><br/>c.1 成果核验： 对比初始需求文档，逐项进行质量把控。<br/>c.2 数据复盘： 整理执行过程中的数据，计算最终转化率。<br/>c.3 知识沉淀： 将项目经验录入公司内部库，为后续提供参考。</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>flow chart</th><th>Responsibility</th><th>description</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. ECN  \n   Create / Revise / Abolish\n2. Initial  \n   Signoff  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n3. DCC Process  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n4. Parallel  \n   Sign-off\n5. DCC Process  \n   - 条件分支：N → ECN Create / Revise / Abolish（循环回起点）\n6. DCC Release / Recall\n\n**总结：** 该流程图描述了一个包含多次决策判断与循环反馈的审批与发布流程。</td><td>初始化运行环境，为后续累加与计数操作做好准备。<br/><br/>将累加器 sum 归零，保证后续累加结果从 0 开始<br/><br/>将计数器 count 归零，确保后续统计从 0 开始<br/><br/>获取外部输入值 n，为累加与计数提供原始数据<br/><br/>标志流程正常结束，释放资源并返回控制权</td><td>● 在程序或脚本最顶端放置起始标记；<br/>● 确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；<br/><br/>执行赋值语句 sum ← 0；<br/>该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；<br/>若使用浮点型，注意 0 的精度与类型一致性（int/float）。<br/><br/>通过标准输入、文件或 UI 读取一个数值；<br/>需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；<br/><br/>执行算术更新 sum ← sum + n；<br/><br/>在程序底部放置结束标记或返回语句；</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

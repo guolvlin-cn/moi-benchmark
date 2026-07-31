@@ -1,0 +1,910 @@
+{
+  "filename": "97TagDes带正文识别为标题.pdf",
+  "filetype": "PDF",
+  "block_count": 25,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "header",
+      "level": null,
+      "content": "Applied APF RTD 9.4.0 Dispatch API Guide Chapter 1. Using the Dispatch API",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          344.0,
+          23.0,
+          533.0,
+          46.0
+        ],
+        "polygon": [
+          [
+            344,
+            23
+          ],
+          [
+            533,
+            23
+          ],
+          [
+            533,
+            46
+          ],
+          [
+            344,
+            46
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "title",
+      "level": "1",
+      "content": "Dispatch list format",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          68.0,
+          71.0,
+          239.0,
+          92.0
+        ],
+        "polygon": [
+          [
+            68,
+            71
+          ],
+          [
+            239,
+            71
+          ],
+          [
+            239,
+            93
+          ],
+          [
+            68,
+            93
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "Although the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          140.0,
+          106.0,
+          534.0,
+          151.0
+        ],
+        "polygon": [
+          [
+            140,
+            106
+          ],
+          [
+            534,
+            106
+          ],
+          [
+            534,
+            151
+          ],
+          [
+            140,
+            151
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API.Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          140.0,
+          153.0,
+          534.0,
+          261.0
+        ],
+        "polygon": [
+          [
+            140,
+            153
+          ],
+          [
+            535,
+            153
+          ],
+          [
+            535,
+            261
+          ],
+          [
+            140,
+            261
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "title",
+      "level": "1",
+      "content": "Tag descriptions",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          67.0,
+          287.0,
+          214.0,
+          308.0
+        ],
+        "polygon": [
+          [
+            67,
+            287
+          ],
+          [
+            215,
+            287
+          ],
+          [
+            215,
+            308
+          ],
+          [
+            67,
+            308
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "The following table provides description for the tages used in a dispatch query result:",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          141.0,
+          321.0,
+          534.0,
+          349.0
+        ],
+        "polygon": [
+          [
+            141,
+            321
+          ],
+          [
+            534,
+            321
+          ],
+          [
+            534,
+            349
+          ],
+          [
+            141,
+            349
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "Tag Description\n#headers Pre-defined headers for the dispatch list.\n#columns The column heading names for the list.\n#widths The widths for each column, used in formatting the data.\n#types The data types for each column. Normally used to decide how to justify a column by default.\n#lotcol Which column contains the lot names.\n#rows The query data table in row-major form.\n#blocked A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          161.0,
+          352.0,
+          319.0,
+          366.0
+        ],
+        "polygon": [
+          [
+            161,
+            352
+          ],
+          [
+            319,
+            352
+          ],
+          [
+            319,
+            366
+          ],
+          [
+            161,
+            366
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-8",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          161.0,
+          368.0,
+          448.0,
+          381.0
+        ],
+        "polygon": [
+          [
+            161,
+            368
+          ],
+          [
+            448,
+            368
+          ],
+          [
+            448,
+            381
+          ],
+          [
+            161,
+            381
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          162.0,
+          383.0,
+          441.0,
+          396.0
+        ],
+        "polygon": [
+          [
+            162,
+            383
+          ],
+          [
+            162,
+            396
+          ],
+          [
+            441,
+            396
+          ],
+          [
+            441,
+            383
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-10",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          162.0,
+          398.0,
+          518.0,
+          412.0
+        ],
+        "polygon": [
+          [
+            162,
+            398
+          ],
+          [
+            518,
+            398
+          ],
+          [
+            518,
+            412
+          ],
+          [
+            162,
+            412
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          161.0,
+          414.0,
+          533.0,
+          443.0
+        ],
+        "polygon": [
+          [
+            161,
+            414
+          ],
+          [
+            533,
+            414
+          ],
+          [
+            533,
+            443
+          ],
+          [
+            161,
+            443
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-12",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          161.0,
+          446.0,
+          438.0,
+          459.0
+        ],
+        "polygon": [
+          [
+            161,
+            446
+          ],
+          [
+            439,
+            446
+          ],
+          [
+            439,
+            459
+          ],
+          [
+            161,
+            459
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-13",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          162.0,
+          461.0,
+          444.0,
+          475.0
+        ],
+        "polygon": [
+          [
+            162,
+            461
+          ],
+          [
+            444,
+            461
+          ],
+          [
+            444,
+            475
+          ],
+          [
+            162,
+            475
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-14",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          161.0,
+          476.0,
+          533.0,
+          521.0
+        ],
+        "polygon": [
+          [
+            161,
+            476
+          ],
+          [
+            534,
+            476
+          ],
+          [
+            534,
+            521
+          ],
+          [
+            161,
+            521
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-15",
+      "index": 14,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Tag</td><td>Description</td></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formatting the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The WorkStram dispatcher interface uses this flag to determine whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-DIAGS</td><td>This is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the other tags.</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          160.0,
+          351.0,
+          534.0,
+          569.0
+        ],
+        "polygon": [
+          [
+            160,
+            356
+          ],
+          [
+            160,
+            569
+          ],
+          [
+            534,
+            569
+          ],
+          [
+            532,
+            356
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-16",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "#ISS-DDIS-\nDIAGS\nThis is diagnostic information from the dispatcher, relating to the execution time of the rule. Note that it does not follow the same “#tag value” formats as the other tags.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          161.0,
+          523.0,
+          534.0,
+          570.0
+        ],
+        "polygon": [
+          [
+            161,
+            523
+          ],
+          [
+            534,
+            523
+          ],
+          [
+            534,
+            570
+          ],
+          [
+            161,
+            570
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-17",
+      "index": 16,
+      "type": "title",
+      "level": "2",
+      "content": "Parding the dispatch list",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          68.0,
+          596.0,
+          281.0,
+          616.0
+        ],
+        "polygon": [
+          [
+            68,
+            596
+          ],
+          [
+            281,
+            596
+          ],
+          [
+            281,
+            616
+          ],
+          [
+            68,
+            616
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-18",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "The following functions are available for parding and processing the dispatcher result:",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          140.0,
+          630.0,
+          533.0,
+          658.0
+        ],
+        "polygon": [
+          [
+            140,
+            630
+          ],
+          [
+            533,
+            630
+          ],
+          [
+            533,
+            658
+          ],
+          [
+            140,
+            658
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-19",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "[C++]",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          79.0,
+          671.0,
+          109.0,
+          685.0
+        ],
+        "polygon": [
+          [
+            79,
+            671
+          ],
+          [
+            109,
+            671
+          ],
+          [
+            109,
+            684
+          ],
+          [
+            79,
+            684
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-20",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "#include \"writerlibx/iss_schedmsg.h\"",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          79.0,
+          686.0,
+          256.0,
+          700.0
+        ],
+        "polygon": [
+          [
+            79,
+            686
+          ],
+          [
+            257,
+            686
+          ],
+          [
+            257,
+            700
+          ],
+          [
+            79,
+            700
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-21",
+      "index": 20,
+      "type": "text",
+      "level": null,
+      "content": "#include \"writerlibx/iss_schedmsg_print.h\"",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          79.0,
+          702.0,
+          283.0,
+          716.0
+        ],
+        "polygon": [
+          [
+            79,
+            702
+          ],
+          [
+            283,
+            702
+          ],
+          [
+            283,
+            716
+          ],
+          [
+            79,
+            716
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-22",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "/* Parsing of raw dispatch results */",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          78.0,
+          732.0,
+          248.0,
+          746.0
+        ],
+        "polygon": [
+          [
+            78,
+            732
+          ],
+          [
+            249,
+            732
+          ],
+          [
+            249,
+            747
+          ],
+          [
+            78,
+            747
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-23",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "schedmsg * iss_parseSchedMsg(const char *rawText, u_int text Size);",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          78.0,
+          749.0,
+          410.0,
+          764.0
+        ],
+        "polygon": [
+          [
+            78,
+            749
+          ],
+          [
+            410,
+            749
+          ],
+          [
+            410,
+            764
+          ],
+          [
+            78,
+            764
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-24",
+      "index": 23,
+      "type": "footer",
+      "level": null,
+      "content": "Applied Materials Confidential",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          384.0,
+          792.0,
+          511.0,
+          804.0
+        ],
+        "polygon": [
+          [
+            384,
+            792
+          ],
+          [
+            512,
+            792
+          ],
+          [
+            512,
+            804
+          ],
+          [
+            384,
+            804
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-25",
+      "index": 24,
+      "type": "text",
+      "level": null,
+      "content": "13",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          521.0,
+          793.0,
+          533.0,
+          803.0
+        ],
+        "polygon": [
+          [
+            521,
+            793
+          ],
+          [
+            533,
+            793
+          ],
+          [
+            533,
+            803
+          ],
+          [
+            521,
+            803
+          ]
+        ]
+      }
+    }
+  ]
+}

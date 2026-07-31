@@ -1,0 +1,132 @@
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>RISK LEVEL</td><td style='text-align: center; word-wrap: break-word;'>WL</td><td style='text-align: center; word-wrap: break-word;'>FOR LOGIC PRODUCTS</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>100</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>200</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>3</td><td style='text-align: center; word-wrap: break-word;'>300</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>4</td><td style='text-align: center; word-wrap: break-word;'>400</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>5</td><td style='text-align: center; word-wrap: break-word;'>500</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>6</td><td style='text-align: center; word-wrap: break-word;'>600</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>7</td><td style='text-align: center; word-wrap: break-word;'>700</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan="2">RISK LEVEL</td><td rowspan="2">WL</td><td style='text-align: center; word-wrap: break-word;'>FOR NVM PRODUCTS</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>EEPROM</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>100</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>200</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>3</td><td style='text-align: center; word-wrap: break-word;'>300</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>4</td><td style='text-align: center; word-wrap: break-word;'>400</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>5</td><td style='text-align: center; word-wrap: break-word;'>500</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>6</td><td style='text-align: center; word-wrap: break-word;'>600</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>7</td><td style='text-align: center; word-wrap: break-word;'>700</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC
+
+# Semiconfuctor Manufactcuturing International Corporation
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan="2">RISK LEVEL</td><td rowspan="2">WL</td><td style='text-align: center; word-wrap: break-word;'>FOR NVM PRODUCTS</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>NOR FLASH</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>100</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>200</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>3</td><td style='text-align: center; word-wrap: break-word;'>300</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>4</td><td style='text-align: center; word-wrap: break-word;'>400</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>5</td><td style='text-align: center; word-wrap: break-word;'>500</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>6</td><td style='text-align: center; word-wrap: break-word;'>600</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>7</td><td style='text-align: center; word-wrap: break-word;'>700</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan="2">RISK LEVEL</td><td rowspan="2">WL</td><td style='text-align: center; word-wrap: break-word;'>FOR NORMAL PRODUCTS</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>NAND FLASH</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>100</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>200</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>3</td><td style='text-align: center; word-wrap: break-word;'>300</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>4</td><td style='text-align: center; word-wrap: break-word;'>400</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>5</td><td style='text-align: center; word-wrap: break-word;'>500</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>6</td><td style='text-align: center; word-wrap: break-word;'>600</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>7</td><td style='text-align: center; word-wrap: break-word;'>700</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+notes:
+
+1. The factory floor hummed with a.
+
+2. robotic arms.
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>RISK LEVEL</td><td style='text-align: center; word-wrap: break-word;'>WL</td><td style='text-align: center; word-wrap: break-word;'>FOR OTHER PRODUCT(28nm and above)</td><td style='text-align: center; word-wrap: break-word;'>RE COMMENT</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>100</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>200</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>3</td><td style='text-align: center; word-wrap: break-word;'>300</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>4</td><td style='text-align: center; word-wrap: break-word;'>400</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>5</td><td style='text-align: center; word-wrap: break-word;'>500</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td style='text-align: center; word-wrap: break-word;'></td></tr></table>
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'></td><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td colspan="2">Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:/1/5</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>6</td><td colspan="2">600</td><td style='text-align: center; word-wrap: break-word;'>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td colspan="2"></td></tr></table>
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>RISK LEVEL</td><td style='text-align: center; word-wrap: break-word;'>WL</td><td style='text-align: center; word-wrap: break-word;'>FOR AUTOMOTIVERSA COSIGN FLOW</td><td style='text-align: center; word-wrap: break-word;'>RE COMMENT</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>1</td><td style='text-align: center; word-wrap: break-word;'>0</td><td style='text-align: center; word-wrap: break-word;'>cnc machines</td><td style='text-align: center; word-wrap: break-word;'>improve production efficiency</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>0</td><td style='text-align: center; word-wrap: break-word;'>turbines</td><td style='text-align: center; word-wrap: break-word;'>ensure stable power supply</td></tr></table>
+
+<div style="text-align: center;">Semiconfuctor Manufactcuturing International Corporation</div>
+
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td colspan="2">Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>3</td><td style='text-align: center; word-wrap: break-word;'>0</td><td style='text-align: center; word-wrap: break-word;'>conveyor</td><td colspan="2">speed up material movement</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>4</td><td style='text-align: center; word-wrap: break-word;'>300</td><td style='text-align: center; word-wrap: break-word;'>turbines</td><td colspan="2">ensure stable power supply</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+
+
+
+0626
+
+配置：
+
+enable_table_html_regeneration=1
+
+enable_table_embedded_image_extraction=1
+
+enable_merged_table_split=1
+
+enable_cross_page_table_merge=1
+
+unmerge_table_cells=0
+
+enable_table_inline_image_text=1
+
+cross_page_merge_header_table=1
+
+enable_cross_page_geometric_filter=1
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+将前五个表格称为表1-表5，将最后一个表格前半部分称为表6，后半部分称为表7
+
+### 1. 不该合并的被合并：
+
+现象：表1表2合并为一张表；表3表4合并为一张表；表5未被合并，独立存在，表5上方文字被正常识别为文字，且阅读顺序准确，先文本再表5
+
+debug 信息：
+
+docx 转 pdf 无误；paddle 识别无误；
+
+cross_page_table_match/下有 4 次 vlm 调用
+
+md_1:判断表1和表2是否属于同一个跨页表，返回“true，两个表格具有完全一致的列结构(risk level，wl，产品类别)，且内容属于同一主题范畴，都是关于不同风险等级（risk level）和晶圆数量（wl）下的可行性验证要求，表a针对logic products，表b针对nvm products，这属于同一分类表格下的不同产品条目。两个表格的行号和wl值完全对应，说明它们是并列展示不同产品线的同一套标准，而非跨页延续，因此，它们属于同一个跨页表格的不同部分。”
+
+md_2:判断表2和表3是否属于同一个跨页表，返回“false，这两个表格虽然列结构完全一致（risk level，wl，for nvm products），但他们是针对不同产品类别的独立表格，表b拥有完整的表头，且内容从risk level 1开始重新列举，属于同一文档中并列的两个独立分类表，并非一个表格跨页延续。”
+
+md_3:判断表3和表4是否属于同一个跨页表，返回“true，两者拥有完全一致的列结构，表a针对nor flash，表b针对nand flash，两者是同一分类表格下的不同产品类别条目，符合跨页表格的特征。”
+
+md_4:判断表5和表6是否属于同一个跨页表，返回“false，虽然两个表格的列结构相似，且主题都涉及可靠性风险评估，但它们是描述两个不同产品类别的独立表格，表a针对for other products（28nm and above），表b针对for automotive rsa cosign flow，此外两个表都有各自完整的表头，且风险等级都是从1开始重新计数，因此是两个独立的表格”
+
+表6和表7未进入 vlm 判断跨页表流程
+
+tableprocess-cross_page_append-page2/下有两次 vlm 记录，为 vlm 生成续表
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC
+
+Semiconfuctor Manufactcuturing International Corporation
+
+
+<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Doc.No.:QR-IQCS-02-2002</td><td style='text-align: center; word-wrap: break-word;'>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td style='text-align: center; word-wrap: break-word;'>Rev.: 40</td><td style='text-align: center; word-wrap: break-word;'>Page No.:1/5</td></tr></table>
+
+2. 该合并的未合并：
+
+现象：仍然未合并
+
+debug 信息：
+
+docx 转 pdf 无误，格式保留；paddle 识别无误；
+
+从 pdf 上来看，满足：两个表在相邻页，上表底边超过 50%，下表上边在 50% 内，宽度几乎一样，表中间没有文本，页眉页脚已被剔除干净
+
+无其他思路
+
+The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC

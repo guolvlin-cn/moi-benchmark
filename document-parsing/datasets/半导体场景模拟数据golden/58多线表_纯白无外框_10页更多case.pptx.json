@@ -1,0 +1,353 @@
+{
+  "doc_id": "58-_-_10-case_0a5b21bc9a",
+  "_generated_at": "2026-07-29T09:38:37+00:00",
+  "header_footer": {
+    "expected_headers": [],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 11,
+    "table_html_summaries": [
+      "<table><tr><th>风险维度</th><th>定性深度分析（含长文本描述）</th><th>风险等级</th><th>对冲策略建议</th></tr><tr><td colspan=\"4\">第一阶段：上游原材料供应风险</td></tr><tr><td>核心矿产</td><td>受地缘政治波动影响，稀有金属开采成本近6个月上涨约24.5%。依赖度仍高（约68%），替代供应商认证尚未完成。若不建立二级储备体系，主产区政策收紧将导致Q3停工风险。</td><td>极高</td><td>启动备选供应商B方案，建立90天战略库存缓冲。</td></tr><tr><td>半成品加工</td><td>东南亚加工基地电力成本上涨，外包成本微调。当前未触及协议调价阈值，但需警惕汇率波动带来间接溢价。</td><td>中等</td><td>锁定固定汇率结算，分批签署远期合约。</td></tr><tr><td colspan=\"4\">第二阶段：物流运输与跨境合规</td></tr><tr><td>海运物流</td><td>主要港口吞吐量受限，集装箱周转下降，平均滞港时间由4.2天延长至7.8天。需重新评估“准时化生产（JIT）”容错能力。</td><td>高</td><td>增加多式联运选项与替代港口；建立安全库存。</td></tr></table>",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>技术领域</th><th>技术成熟度与长效影响评估</th><th>年度投入</th></tr></thead><tbody><tr><td>神经网络算法</td><td>重点优化低功耗芯片执行效率。通过剪枝在保持98%精度下将推理延迟降低35ms；已应用于第三代智能传感器。</td><td>$4.2M</td></tr><tr><td>量子通信加密</td><td>实验室原型阶段：完成光子纠缠源稳定性测试。商业化路径尚不清晰，但作为未来10年战略储备具高壁垒。</td><td>$1.8M</td></tr><tr><td>分布式算力</td><td>面向超大规模数据集的调度逻辑，支持动态扩展至10,000节点，故障自愈速度提升200%。</td><td>$3.5M</td></tr></tbody></table>",
+      "<table><tr><th>序号</th><th>核心准则类别</th><th>准则详述与执行标准（含大量文本）</th></tr><tr><td>01</td><td>劳动权益保护</td><td>企业承诺尊重员工合法劳动权益：① 严禁强迫劳动/非法加班；② 薪酬福利不低于当地法定最低工资的1.5倍；③ 特殊工种提供防护器具与定期体检；④ 招聘禁止基于性别、年龄、宗教、种族歧视；⑤ 提供匿名热线申诉渠道并在10个工作日内反馈。</td></tr><tr><td>02</td><td>环境合规承诺</td><td>所有生产设施须符合 ISO 14001。废水处理达到国家一级排放标准方可进入市政管网；年度至少三次突发环境事故演练；碳排放数据聘请第三方审计并向社会公开。</td></tr><tr><td colspan=\"3\">争议解决与仲裁机制</td></tr><tr><td>03</td><td>投诉响应程序</td><td>收到书面投诉24小时内完成立案；72小时内组建含独立第三方成员的调查小组；10个工作日内出具调查报告与处理建议，确保透明与可追溯。</td></tr></table>",
+      "<table><tr><th>指标</th><th>本季</th><th>上季</th><th>同比</th><th>备注</th></tr><tr><td>营收（Revenue）</td><td>¥1.26B</td><td>¥1.18B</td><td>+12.4%</td><td>渠道结构改善</td></tr><tr><td>毛利率（GM%）</td><td>38.7%</td><td>37.2%</td><td>+1.5pp</td><td>采购与产品组合</td></tr><tr><td>经营现金流</td><td>¥210M</td><td>¥165M</td><td>+27.3%</td><td>应收周转提升</td></tr></table>",
+      "<table><tr><th>偏差项</th><th>影响方向</th><th>影响幅度</th><th>主要原因（摘要）</th><th>建议动作</th></tr><tr><td>价格因素</td><td>↑</td><td>+3.1pp</td><td>核心品类提价与折扣收敛。</td><td>建立分层定价策略；强化折扣审批。</td></tr><tr><td>成本因素</td><td>↓</td><td>-1.4pp</td><td>原材料波动与运费上升。</td><td>锁价/替代料；多式联运。</td></tr><tr><td>结构因素</td><td>↑</td><td>+2.0pp</td><td>高毛利产品占比提升。</td><td>加大高毛利品类供给与曝光。</td></tr></table>",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>客户层级</th><th>典型特征</th><th>核心动作</th><th>成功指标</th></tr></thead><tbody><tr><td>A（战略）</td><td>高客单、长周期、强定制</td><td>联合规划/共创方案</td><td>续约率、NPS、联合收入</td></tr><tr><td>B（成长）</td><td>中高频需求、可复制场景</td><td>标准化交付/模板化</td><td>转化率、扩张率</td></tr><tr><td>C（长尾）</td><td>需求零散、价格敏感</td><td>自动化运营/自助化</td><td>CAC回收期、留存</td></tr></tbody></table>",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>立项</th><th>方案</th><th>试点</th><th>推广</th><th>复盘</th></tr></thead><tbody><tr><td>里程碑</td><td>风险描述（摘要）</td><td>影响</td><td>负责人</td><td>缓解动作</td></tr><tr><td>立项</td><td>需求边界不清晰导致范围蔓延。</td><td>中</td><td>PMO</td><td>建立范围冻结点与变更流程。</td></tr><tr><td>方案</td><td>关键依赖系统接口延期。</td><td>高</td><td>架构组</td><td>提前接口对齐与Mock方案。</td></tr><tr><td>试点</td><td>试点城市数据质量波动。</td><td>中</td><td>数据组</td><td>引入数据校验与回滚机制。</td></tr><tr><td>推广</td><td>一线培训不足影响 adoption。</td><td>中</td><td>运营</td><td>分层培训+自助文档。</td></tr></tbody></table>",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>检查项 Item</th><th>要求 Requirement</th><th>证据 Evidence</th><th>结论 Result</th></tr></thead><tbody><tr><td>数据跨境 Data Transfer</td><td>评估数据类型、目的地与处理者；确保符合地区法规与合同条款。</td><td>传输清单、DPA、SCC/合同、访问日志（抽样）。</td><td>待整改</td></tr><tr><td>加密 Encryption</td><td>传输与存储均需加密；密钥轮换周期≤90天。</td><td>KMS配置、密钥轮换记录、渗透测试摘要。</td><td>通过</td></tr><tr><td>最小权限 Least Privilege</td><td>按岗位授权，季度复核；离职24小时内回收权限。</td><td>IAM策略、审计报表、离职流程记录。</td><td>通过</td></tr></tbody></table>",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse;\"><thead><tr><th>指标</th><th>本期</th><th>上期</th><th>同比</th><th>环比</th><th>说明</th></tr></thead><tbody><tr><td>ROE</td><td>14.8%</td><td>13.2%</td><td>+1.6pp</td><td>+0.4pp</td><td>权益回报改善</td></tr><tr><td>资产周转率</td><td>0.86×</td><td>0.82×</td><td>+0.04×</td><td>+0.01×</td><td>存货周转上升</td></tr><tr><td>流动比率</td><td>1.72</td><td>1.65</td><td>+0.07</td><td>+0.02</td><td>短期偿债能力提升</td></tr><tr><td>净利率</td><td>9.3%</td><td>8.7%</td><td>+0.6pp</td><td>+0.2pp</td><td>费用率下降</td></tr><tr><td>经营现金流/净利</td><td>1.21</td><td>1.05</td><td>+0.16</td><td>+0.08</td><td>回款改善</td></tr></tbody></table>",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>控制域</th><th>发现摘要（含项目符号）</th><th>风险等级</th><th>整改动作</th></tr></thead><tbody><tr><td>身份与访问</td><td>• 管理员账号未强制MFA（抽样3/20）。<br/>• 部分服务账号共享使用，责任不可追溯。<br/>• 权限季度复核未形成闭环记录。</td><td>高</td><td>1) 全量开启MFA；2) 服务账号实名化与密钥轮换；3) 建立复核工单闭环。</td></tr><tr><td>日志与监控</td><td>• 核心系统日志保留期不足（&lt;90天）。<br/>• 告警阈值未区分环境（Prod/Stage）。</td><td>中</td><td>延长保留期至180天；分环境阈值与降噪规则。</td></tr><tr><td>漏洞管理</td><td>• 高危漏洞修复SLA未达标。<br/>• 扫描覆盖率不完整（部分容器镜像缺失）。</td><td>中</td><td>统一SLA与例外审批；补齐镜像扫描与阻断策略。</td></tr></tbody></table>",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>指标</th><th>定义</th><th>评分规则</th><th>权重</th></tr></thead><tbody><tr><td>目标达成率</td><td>实际/目标（按月滚动）</td><td>≥110%：5分；100~110%：4分；90~100%：3分；80~90%：2分；&lt;80%：1分</td><td>35%</td></tr><tr><td>关键项目交付</td><td>里程碑按时交付与质量</td><td>按期+无P1缺陷：5分；延期≤1周：4分；延期≤2周：3分；延期&gt;2周：1~2分</td><td>30%</td></tr><tr><td>协作与影响力</td><td>跨团队协作与知识沉淀</td><td>360评估+文档/分享记录综合评定（1~5分）</td><td>20%</td></tr><tr><td>合规与风险</td><td>流程合规、风险事件</td><td>零重大违规：5分；一般违规：3~4分；重大违规：1分</td><td>15%</td></tr></tbody></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "全球供应链风险评估深度报告",
+        "level": 1
+      },
+      {
+        "text": "研发中心核心技术矩阵与投入产出比",
+        "level": 1
+      },
+      {
+        "text": "企业社会责任（CSR）实施准则与争议处理",
+        "level": 1
+      },
+      {
+        "text": "季度经营指标拆解与偏差归因",
+        "level": 1
+      },
+      {
+        "text": "客户分层策略与转化漏斗诊断",
+        "level": 1
+      },
+      {
+        "text": "战略项目里程碑与风险追踪台账",
+        "level": 1
+      },
+      {
+        "text": "跨境合规检查清单（Compliance Checklist）",
+        "level": 1
+      },
+      {
+        "text": "财务报表关键比率与同比/环比对照",
+        "level": 1
+      },
+      {
+        "text": "信息安全控制点与审计发现摘要",
+        "level": 1
+      },
+      {
+        "text": "人力资源绩效指标（KPI/OKR）与评分规则",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "Case 1: 紧贴文本 + 分段多线表（纯白无外框）",
+      "全球供应链风险评估深度报告",
+      "段落与表格几乎零间距，测试高密度版式",
+      "下表列出本季度亚太及北美市场供应链稳定性审查结果。注意：表格紧贴此段文字以模拟高信息密度版式。",
+      "<table><tr><th>风险维度</th><th>定性深度分析（含长文本描述）</th><th>风险等级</th><th>对冲策略建议</th></tr><tr><td colspan=\"4\">第一阶段：上游原材料供应风险</td></tr><tr><td>核心矿产</td><td>受地缘政治波动影响，稀有金属开采成本近6个月上涨约24.5%。依赖度仍高（约68%），替代供应商认证尚未完成。若不建立二级储备体系，主产区政策收紧将导致Q3停工风险。</td><td>极高</td><td>启动备选供应商B方案，建立90天战略库存缓冲。</td></tr><tr><td>半成品加工</td><td>东南亚加工基地电力成本上涨，外包成本微调。当前未触及协议调价阈值，但需警惕汇率波动带来间接溢价。</td><td>中等</td><td>锁定固定汇率结算，分批签署远期合约。</td></tr><tr><td colspan=\"4\">第二阶段：物流运输与跨境合规</td></tr><tr><td>海运物流</td><td>主要港口吞吐量受限，集装箱周转下降，平均滞港时间由4.2天延长至7.8天。需重新评估“准时化生产（JIT）”容错能力。</td><td>高</td><td>增加多式联运选项与替代港口；建立安全库存。</td></tr></table>",
+      "Case 2: 图文混排 + 密集参数表（纯白无外框）",
+      "研发中心核心技术矩阵与投入产出比",
+      "左表右图：测试并列布局与边界识别",
+      "左侧为技术矩阵与成熟度评估；右侧为研发场景示意与注释。",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>技术领域</th><th>技术成熟度与长效影响评估</th><th>年度投入</th></tr></thead><tbody><tr><td>神经网络算法</td><td>重点优化低功耗芯片执行效率。通过剪枝在保持98%精度下将推理延迟降低35ms；已应用于第三代智能传感器。</td><td>$4.2M</td></tr><tr><td>量子通信加密</td><td>实验室原型阶段：完成光子纠缠源稳定性测试。商业化路径尚不清晰，但作为未来10年战略储备具高壁垒。</td><td>$1.8M</td></tr><tr><td>分布式算力</td><td>面向超大规模数据集的调度逻辑，支持动态扩展至10,000节点，故障自愈速度提升200%。</td><td>$3.5M</td></tr></tbody></table>",
+      "注：评估口径基于年度研发审计；成熟度分级参考行业曲线",
+      "Case 3: 超长单元格 + 多级分隔（纯白无外框）",
+      "企业社会责任（CSR）实施准则与争议处理",
+      "长段落撑高行高：测试换行与线条保持",
+      "争议解决与仲裁机制",
+      "以下条款作为员工手册附件，具有法律效力，请务必逐行阅读（长文本撑高行高）。",
+      "<table><tr><th>序号</th><th>核心准则类别</th><th>准则详述与执行标准（含大量文本）</th></tr><tr><td>01</td><td>劳动权益保护</td><td>企业承诺尊重员工合法劳动权益：① 严禁强迫劳动/非法加班；② 薪酬福利不低于当地法定最低工资的1.5倍；③ 特殊工种提供防护器具与定期体检；④ 招聘禁止基于性别、年龄、宗教、种族歧视；⑤ 提供匿名热线申诉渠道并在10个工作日内反馈。</td></tr><tr><td>02</td><td>环境合规承诺</td><td>所有生产设施须符合 ISO 14001。废水处理达到国家一级排放标准方可进入市政管网；年度至少三次突发环境事故演练；碳排放数据聘请第三方审计并向社会公开。</td></tr><tr><td colspan=\"3\">争议解决与仲裁机制</td></tr><tr><td>03</td><td>投诉响应程序</td><td>收到书面投诉24小时内完成立案；72小时内组建含独立第三方成员的调查小组；10个工作日内出具调查报告与处理建议，确保透明与可追溯。</td></tr></table>",
+      "Case 4: 上下双表 + 细分分段（纯白无外框）",
+      "季度经营指标拆解与偏差归因",
+      "同页多表：测试表格之间近距离干扰",
+      "同页上下两张多线表：上表为关键指标，下表为偏差归因。两表间距极小。",
+      "<table><tr><th>指标</th><th>本季</th><th>上季</th><th>同比</th><th>备注</th></tr><tr><td>营收（Revenue）</td><td>¥1.26B</td><td>¥1.18B</td><td>+12.4%</td><td>渠道结构改善</td></tr><tr><td>毛利率（GM%）</td><td>38.7%</td><td>37.2%</td><td>+1.5pp</td><td>采购与产品组合</td></tr><tr><td>经营现金流</td><td>¥210M</td><td>¥165M</td><td>+27.3%</td><td>应收周转提升</td></tr></table>",
+      "<table><tr><th>偏差项</th><th>影响方向</th><th>影响幅度</th><th>主要原因（摘要）</th><th>建议动作</th></tr><tr><td>价格因素</td><td>↑</td><td>+3.1pp</td><td>核心品类提价与折扣收敛。</td><td>建立分层定价策略；强化折扣审批。</td></tr><tr><td>成本因素</td><td>↓</td><td>-1.4pp</td><td>原材料波动与运费上升。</td><td>锁价/替代料；多式联运。</td></tr><tr><td>结构因素</td><td>↑</td><td>+2.0pp</td><td>高毛利产品占比提升。</td><td>加大高毛利品类供给与曝光。</td></tr></table>",
+      "Case 5: 表格 + 侧边注释面板（纯白无外框）",
+      "客户分层策略与转化漏斗诊断",
+      "右侧边栏说明与表格紧贴：测试误检",
+      "表格与右侧注释面板紧贴，且注释含多行文本，模拟报告页常见“边栏说明”。",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>客户层级</th><th>典型特征</th><th>核心动作</th><th>成功指标</th></tr></thead><tbody><tr><td>A（战略）</td><td>高客单、长周期、强定制</td><td>联合规划/共创方案</td><td>续约率、NPS、联合收入</td></tr><tr><td>B（成长）</td><td>中高频需求、可复制场景</td><td>标准化交付/模板化</td><td>转化率、扩张率</td></tr><tr><td>C（长尾）</td><td>需求零散、价格敏感</td><td>自动化运营/自助化</td><td>CAC回收期、留存</td></tr></tbody></table>",
+      "边栏注释",
+      "· 分层以“生命周期价值 + 交付复杂度”综合判定。",
+      "· A类以共创为主，避免低价标准包。",
+      "· C类重点优化获客成本与自助化转化",
+      "· 指标口径需与财务对齐（季度复核）。",
+      "Case 6: 流程条 + 多线表（纯白无外框）",
+      "战略项目里程碑与风险追踪台账",
+      "顶部里程碑条 + 下方表格混排",
+      "顶部为里程碑条，下面为风险台账多线表（无外框）。",
+      "<img>",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>立项</th><th>方案</th><th>试点</th><th>推广</th><th>复盘</th></tr></thead><tbody><tr><td>里程碑</td><td>风险描述（摘要）</td><td>影响</td><td>负责人</td><td>缓解动作</td></tr><tr><td>立项</td><td>需求边界不清晰导致范围蔓延。</td><td>中</td><td>PMO</td><td>建立范围冻结点与变更流程。</td></tr><tr><td>方案</td><td>关键依赖系统接口延期。</td><td>高</td><td>架构组</td><td>提前接口对齐与Mock方案。</td></tr><tr><td>试点</td><td>试点城市数据质量波动。</td><td>中</td><td>数据组</td><td>引入数据校验与回滚机制。</td></tr><tr><td>推广</td><td>一线培训不足影响 adoption。</td><td>中</td><td>运营</td><td>分层培训+自助文档。</td></tr></tbody></table>",
+      "Case 7: 中英双语表头 + 长字段（纯白无外框）",
+      "跨境合规检查清单（Compliance Checklist）",
+      "双语混排：测试字符宽度与断行",
+      "双语表头 + 复杂字段：适合测试英文单词、中文换行与列宽稳定性。",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>检查项 Item</th><th>要求 Requirement</th><th>证据 Evidence</th><th>结论 Result</th></tr></thead><tbody><tr><td>数据跨境 Data Transfer</td><td>评估数据类型、目的地与处理者；确保符合地区法规与合同条款。</td><td>传输清单、DPA、SCC/合同、访问日志（抽样）。</td><td>待整改</td></tr><tr><td>加密 Encryption</td><td>传输与存储均需加密；密钥轮换周期≤90天。</td><td>KMS配置、密钥轮换记录、渗透测试摘要。</td><td>通过</td></tr><tr><td>最小权限 Least Privilege</td><td>按岗位授权，季度复核；离职24小时内回收权限。</td><td>IAM策略、审计报表、离职流程记录。</td><td>通过</td></tr></tbody></table>",
+      "备注：Result 建议使用（通过/待整改/不适用）三态；Evidence 以编号与链接便于追溯。",
+      "Case 8: 高密数值表 + 对齐（纯白无外框）",
+      "财务报表关键比率与同比/环比对照",
+      "大量数字符号：测试列宽与对齐",
+      "数值表强调对齐：建议在同列内使用统一格式（%、pp、×）。",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse;\"><thead><tr><th>指标</th><th>本期</th><th>上期</th><th>同比</th><th>环比</th><th>说明</th></tr></thead><tbody><tr><td>ROE</td><td>14.8%</td><td>13.2%</td><td>+1.6pp</td><td>+0.4pp</td><td>权益回报改善</td></tr><tr><td>资产周转率</td><td>0.86×</td><td>0.82×</td><td>+0.04×</td><td>+0.01×</td><td>存货周转上升</td></tr><tr><td>流动比率</td><td>1.72</td><td>1.65</td><td>+0.07</td><td>+0.02</td><td>短期偿债能力提升</td></tr><tr><td>净利率</td><td>9.3%</td><td>8.7%</td><td>+0.6pp</td><td>+0.2pp</td><td>费用率下降</td></tr><tr><td>经营现金流/净利</td><td>1.21</td><td>1.05</td><td>+0.16</td><td>+0.08</td><td>回款改善</td></tr></tbody></table>",
+      "Case 9: 单元格内项目符号 + 多段落（纯白无外框）",
+      "信息安全控制点与审计发现摘要",
+      "同一单元格多段落：测试层次保真",
+      "单元格内多段落/项目符号：常见于审计发现与整改建议汇总。",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>控制域</th><th>发现摘要（含项目符号）</th><th>风险等级</th><th>整改动作</th></tr></thead><tbody><tr><td>身份与访问</td><td>• 管理员账号未强制MFA（抽样3/20）。<br/>• 部分服务账号共享使用，责任不可追溯。<br/>• 权限季度复核未形成闭环记录。</td><td>高</td><td>1) 全量开启MFA；2) 服务账号实名化与密钥轮换；3) 建立复核工单闭环。</td></tr><tr><td>日志与监控</td><td>• 核心系统日志保留期不足（&lt;90天）。<br/>• 告警阈值未区分环境（Prod/Stage）。</td><td>中</td><td>延长保留期至180天；分环境阈值与降噪规则。</td></tr><tr><td>漏洞管理</td><td>• 高危漏洞修复SLA未达标。<br/>• 扫描覆盖率不完整（部分容器镜像缺失）。</td><td>中</td><td>统一SLA与例外审批；补齐镜像扫描与阻断策略。</td></tr></tbody></table>",
+      "Case 10: 表格贴底 + 脚注（纯白无外框）",
+      "人力资源绩效指标（KPI/OKR）与评分规则",
+      "表格贴近页边界 + 脚注干扰",
+      "表格贴近页面底部，并附脚注：测试底部线条是否被裁切及脚注干扰。",
+      "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>指标</th><th>定义</th><th>评分规则</th><th>权重</th></tr></thead><tbody><tr><td>目标达成率</td><td>实际/目标（按月滚动）</td><td>≥110%：5分；100~110%：4分；90~100%：3分；80~90%：2分；&lt;80%：1分</td><td>35%</td></tr><tr><td>关键项目交付</td><td>里程碑按时交付与质量</td><td>按期+无P1缺陷：5分；延期≤1周：4分；延期≤2周：3分；延期&gt;2周：1~2分</td><td>30%</td></tr><tr><td>协作与影响力</td><td>跨团队协作与知识沉淀</td><td>360评估+文档/分享记录综合评定（1~5分）</td><td>20%</td></tr><tr><td>合规与风险</td><td>流程合规、风险事件</td><td>零重大违规：5分；一般违规：3~4分；重大违规：1分</td><td>15%</td></tr></tbody></table>",
+      "脚注：权重可按岗位调整；评分建议季度末由直属主管与HRBP联合校准，减少主观偏差。"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "6": 1
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "Case 1: 紧贴文本 + 分段多线表（纯白无外框）",
+          "page_num": 1
+        },
+        {
+          "text": "段落与表格几乎零间距，测试高密度版式",
+          "page_num": 1
+        },
+        {
+          "text": "下表列出本季度亚太及北美市场供应链稳定性审查结果。注意：表格紧贴此段文字以模拟高信息密度版式。",
+          "page_num": 1
+        },
+        {
+          "text": "Case 2: 图文混排 + 密集参数表（纯白无外框）",
+          "page_num": 2
+        },
+        {
+          "text": "左表右图：测试并列布局与边界识别",
+          "page_num": 2
+        },
+        {
+          "text": "左侧为技术矩阵与成熟度评估；右侧为研发场景示意与注释。",
+          "page_num": 2
+        },
+        {
+          "text": "注：评估口径基于年度研发审计；成熟度分级参考行业曲线",
+          "page_num": 2
+        },
+        {
+          "text": "Case 3: 超长单元格 + 多级分隔（纯白无外框）",
+          "page_num": 3
+        },
+        {
+          "text": "长段落撑高行高：测试换行与线条保持",
+          "page_num": 3
+        },
+        {
+          "text": "争议解决与仲裁机制",
+          "page_num": 3
+        },
+        {
+          "text": "以下条款作为员工手册附件，具有法律效力，请务必逐行阅读（长文本撑高行高）。",
+          "page_num": 3
+        },
+        {
+          "text": "Case 4: 上下双表 + 细分分段（纯白无外框）",
+          "page_num": 4
+        },
+        {
+          "text": "同页多表：测试表格之间近距离干扰",
+          "page_num": 4
+        },
+        {
+          "text": "同页上下两张多线表：上表为关键指标，下表为偏差归因。两表间距极小。",
+          "page_num": 4
+        },
+        {
+          "text": "Case 5: 表格 + 侧边注释面板（纯白无外框）",
+          "page_num": 5
+        },
+        {
+          "text": "右侧边栏说明与表格紧贴：测试误检",
+          "page_num": 5
+        },
+        {
+          "text": "表格与右侧注释面板紧贴，且注释含多行文本，模拟报告页常见“边栏说明”。",
+          "page_num": 5
+        },
+        {
+          "text": "边栏注释",
+          "page_num": 5
+        },
+        {
+          "text": "· 分层以“生命周期价值 + 交付复杂度”综合判定。",
+          "page_num": 5
+        },
+        {
+          "text": "· A类以共创为主，避免低价标准包。",
+          "page_num": 5
+        },
+        {
+          "text": "· C类重点优化获客成本与自助化转化",
+          "page_num": 5
+        },
+        {
+          "text": "· 指标口径需与财务对齐（季度复核）。",
+          "page_num": 5
+        },
+        {
+          "text": "Case 6: 流程条 + 多线表（纯白无外框）",
+          "page_num": 6
+        },
+        {
+          "text": "顶部里程碑条 + 下方表格混排",
+          "page_num": 6
+        },
+        {
+          "text": "顶部为里程碑条，下面为风险台账多线表（无外框）。",
+          "page_num": 6
+        },
+        {
+          "text": "Case 7: 中英双语表头 + 长字段（纯白无外框）",
+          "page_num": 7
+        },
+        {
+          "text": "双语混排：测试字符宽度与断行",
+          "page_num": 7
+        },
+        {
+          "text": "双语表头 + 复杂字段：适合测试英文单词、中文换行与列宽稳定性。",
+          "page_num": 7
+        },
+        {
+          "text": "备注：Result 建议使用（通过/待整改/不适用）三态；Evidence 以编号与链接便于追溯。",
+          "page_num": 7
+        },
+        {
+          "text": "Case 8: 高密数值表 + 对齐（纯白无外框）",
+          "page_num": 8
+        },
+        {
+          "text": "大量数字符号：测试列宽与对齐",
+          "page_num": 8
+        },
+        {
+          "text": "数值表强调对齐：建议在同列内使用统一格式（%、pp、×）。",
+          "page_num": 8
+        },
+        {
+          "text": "Case 9: 单元格内项目符号 + 多段落（纯白无外框）",
+          "page_num": 9
+        },
+        {
+          "text": "同一单元格多段落：测试层次保真",
+          "page_num": 9
+        },
+        {
+          "text": "单元格内多段落/项目符号：常见于审计发现与整改建议汇总。",
+          "page_num": 9
+        },
+        {
+          "text": "Case 10: 表格贴底 + 脚注（纯白无外框）",
+          "page_num": 10
+        },
+        {
+          "text": "表格贴近页边界 + 脚注干扰",
+          "page_num": 10
+        },
+        {
+          "text": "表格贴近页面底部，并附脚注：测试底部线条是否被裁切及脚注干扰。",
+          "page_num": 10
+        },
+        {
+          "text": "脚注：权重可按岗位调整；评分建议季度末由直属主管与HRBP联合校准，减少主观偏差。",
+          "page_num": 10
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>风险维度</th><th>定性深度分析（含长文本描述）</th><th>风险等级</th><th>对冲策略建议</th></tr><tr><td colspan=\"4\">第一阶段：上游原材料供应风险</td></tr><tr><td>核心矿产</td><td>受地缘政治波动影响，稀有金属开采成本近6个月上涨约24.5%。依赖度仍高（约68%），替代供应商认证尚未完成。若不建立二级储备体系，主产区政策收紧将导致Q3停工风险。</td><td>极高</td><td>启动备选供应商B方案，建立90天战略库存缓冲。</td></tr><tr><td>半成品加工</td><td>东南亚加工基地电力成本上涨，外包成本微调。当前未触及协议调价阈值，但需警惕汇率波动带来间接溢价。</td><td>中等</td><td>锁定固定汇率结算，分批签署远期合约。</td></tr><tr><td colspan=\"4\">第二阶段：物流运输与跨境合规</td></tr><tr><td>海运物流</td><td>主要港口吞吐量受限，集装箱周转下降，平均滞港时间由4.2天延长至7.8天。需重新评估“准时化生产（JIT）”容错能力。</td><td>高</td><td>增加多式联运选项与替代港口；建立安全库存。</td></tr></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>技术领域</th><th>技术成熟度与长效影响评估</th><th>年度投入</th></tr></thead><tbody><tr><td>神经网络算法</td><td>重点优化低功耗芯片执行效率。通过剪枝在保持98%精度下将推理延迟降低35ms；已应用于第三代智能传感器。</td><td>$4.2M</td></tr><tr><td>量子通信加密</td><td>实验室原型阶段：完成光子纠缠源稳定性测试。商业化路径尚不清晰，但作为未来10年战略储备具高壁垒。</td><td>$1.8M</td></tr><tr><td>分布式算力</td><td>面向超大规模数据集的调度逻辑，支持动态扩展至10,000节点，故障自愈速度提升200%。</td><td>$3.5M</td></tr></tbody></table>"
+        },
+        {
+          "html": "<table><tr><th>序号</th><th>核心准则类别</th><th>准则详述与执行标准（含大量文本）</th></tr><tr><td>01</td><td>劳动权益保护</td><td>企业承诺尊重员工合法劳动权益：① 严禁强迫劳动/非法加班；② 薪酬福利不低于当地法定最低工资的1.5倍；③ 特殊工种提供防护器具与定期体检；④ 招聘禁止基于性别、年龄、宗教、种族歧视；⑤ 提供匿名热线申诉渠道并在10个工作日内反馈。</td></tr><tr><td>02</td><td>环境合规承诺</td><td>所有生产设施须符合 ISO 14001。废水处理达到国家一级排放标准方可进入市政管网；年度至少三次突发环境事故演练；碳排放数据聘请第三方审计并向社会公开。</td></tr><tr><td colspan=\"3\">争议解决与仲裁机制</td></tr><tr><td>03</td><td>投诉响应程序</td><td>收到书面投诉24小时内完成立案；72小时内组建含独立第三方成员的调查小组；10个工作日内出具调查报告与处理建议，确保透明与可追溯。</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>指标</th><th>本季</th><th>上季</th><th>同比</th><th>备注</th></tr><tr><td>营收（Revenue）</td><td>¥1.26B</td><td>¥1.18B</td><td>+12.4%</td><td>渠道结构改善</td></tr><tr><td>毛利率（GM%）</td><td>38.7%</td><td>37.2%</td><td>+1.5pp</td><td>采购与产品组合</td></tr><tr><td>经营现金流</td><td>¥210M</td><td>¥165M</td><td>+27.3%</td><td>应收周转提升</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>偏差项</th><th>影响方向</th><th>影响幅度</th><th>主要原因（摘要）</th><th>建议动作</th></tr><tr><td>价格因素</td><td>↑</td><td>+3.1pp</td><td>核心品类提价与折扣收敛。</td><td>建立分层定价策略；强化折扣审批。</td></tr><tr><td>成本因素</td><td>↓</td><td>-1.4pp</td><td>原材料波动与运费上升。</td><td>锁价/替代料；多式联运。</td></tr><tr><td>结构因素</td><td>↑</td><td>+2.0pp</td><td>高毛利产品占比提升。</td><td>加大高毛利品类供给与曝光。</td></tr></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>客户层级</th><th>典型特征</th><th>核心动作</th><th>成功指标</th></tr></thead><tbody><tr><td>A（战略）</td><td>高客单、长周期、强定制</td><td>联合规划/共创方案</td><td>续约率、NPS、联合收入</td></tr><tr><td>B（成长）</td><td>中高频需求、可复制场景</td><td>标准化交付/模板化</td><td>转化率、扩张率</td></tr><tr><td>C（长尾）</td><td>需求零散、价格敏感</td><td>自动化运营/自助化</td><td>CAC回收期、留存</td></tr></tbody></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>立项</th><th>方案</th><th>试点</th><th>推广</th><th>复盘</th></tr></thead><tbody><tr><td>里程碑</td><td>风险描述（摘要）</td><td>影响</td><td>负责人</td><td>缓解动作</td></tr><tr><td>立项</td><td>需求边界不清晰导致范围蔓延。</td><td>中</td><td>PMO</td><td>建立范围冻结点与变更流程。</td></tr><tr><td>方案</td><td>关键依赖系统接口延期。</td><td>高</td><td>架构组</td><td>提前接口对齐与Mock方案。</td></tr><tr><td>试点</td><td>试点城市数据质量波动。</td><td>中</td><td>数据组</td><td>引入数据校验与回滚机制。</td></tr><tr><td>推广</td><td>一线培训不足影响 adoption。</td><td>中</td><td>运营</td><td>分层培训+自助文档。</td></tr></tbody></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><thead><tr><th>检查项 Item</th><th>要求 Requirement</th><th>证据 Evidence</th><th>结论 Result</th></tr></thead><tbody><tr><td>数据跨境 Data Transfer</td><td>评估数据类型、目的地与处理者；确保符合地区法规与合同条款。</td><td>传输清单、DPA、SCC/合同、访问日志（抽样）。</td><td>待整改</td></tr><tr><td>加密 Encryption</td><td>传输与存储均需加密；密钥轮换周期≤90天。</td><td>KMS配置、密钥轮换记录、渗透测试摘要。</td><td>通过</td></tr><tr><td>最小权限 Least Privilege</td><td>按岗位授权，季度复核；离职24小时内回收权限。</td><td>IAM策略、审计报表、离职流程记录。</td><td>通过</td></tr></tbody></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse;\"><thead><tr><th>指标</th><th>本期</th><th>上期</th><th>同比</th><th>环比</th><th>说明</th></tr></thead><tbody><tr><td>ROE</td><td>14.8%</td><td>13.2%</td><td>+1.6pp</td><td>+0.4pp</td><td>权益回报改善</td></tr><tr><td>资产周转率</td><td>0.86×</td><td>0.82×</td><td>+0.04×</td><td>+0.01×</td><td>存货周转上升</td></tr><tr><td>流动比率</td><td>1.72</td><td>1.65</td><td>+0.07</td><td>+0.02</td><td>短期偿债能力提升</td></tr><tr><td>净利率</td><td>9.3%</td><td>8.7%</td><td>+0.6pp</td><td>+0.2pp</td><td>费用率下降</td></tr><tr><td>经营现金流/净利</td><td>1.21</td><td>1.05</td><td>+0.16</td><td>+0.08</td><td>回款改善</td></tr></tbody></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>控制域</th><th>发现摘要（含项目符号）</th><th>风险等级</th><th>整改动作</th></tr></thead><tbody><tr><td>身份与访问</td><td>• 管理员账号未强制MFA（抽样3/20）。<br/>• 部分服务账号共享使用，责任不可追溯。<br/>• 权限季度复核未形成闭环记录。</td><td>高</td><td>1) 全量开启MFA；2) 服务账号实名化与密钥轮换；3) 建立复核工单闭环。</td></tr><tr><td>日志与监控</td><td>• 核心系统日志保留期不足（&lt;90天）。<br/>• 告警阈值未区分环境（Prod/Stage）。</td><td>中</td><td>延长保留期至180天；分环境阈值与降噪规则。</td></tr><tr><td>漏洞管理</td><td>• 高危漏洞修复SLA未达标。<br/>• 扫描覆盖率不完整（部分容器镜像缺失）。</td><td>中</td><td>统一SLA与例外审批；补齐镜像扫描与阻断策略。</td></tr></tbody></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"8\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr><th>指标</th><th>定义</th><th>评分规则</th><th>权重</th></tr></thead><tbody><tr><td>目标达成率</td><td>实际/目标（按月滚动）</td><td>≥110%：5分；100~110%：4分；90~100%：3分；80~90%：2分；&lt;80%：1分</td><td>35%</td></tr><tr><td>关键项目交付</td><td>里程碑按时交付与质量</td><td>按期+无P1缺陷：5分；延期≤1周：4分；延期≤2周：3分；延期&gt;2周：1~2分</td><td>30%</td></tr><tr><td>协作与影响力</td><td>跨团队协作与知识沉淀</td><td>360评估+文档/分享记录综合评定（1~5分）</td><td>20%</td></tr><tr><td>合规与风险</td><td>流程合规、风险事件</td><td>零重大违规：5分；一般违规：3~4分；重大违规：1分</td><td>15%</td></tr></tbody></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

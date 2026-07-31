@@ -1,0 +1,52 @@
+{
+    "pdf_info": [
+        {
+            "para_blocks": [
+                {
+                    "type": "table",
+                    "blocks": [
+                        {
+                            "lines": [
+                                {
+                                    "spans": [
+                                        {
+                                            "type": "table",
+                                            "html": "<table><tr><td><p>OmnOrb</p></td><td><p>N/A</p></td><td><p>N/A</p></td><td><p>N/A</p></td></tr><tr><td><p>Oracle Client</p><p>（64 bit）</p></td><td><p>OCI 11g</p><p>R2</p><p>OCI 12c</p><p>OCI 12c</p><p>R2</p></td><td><p>OCI 11g</p><p>R2</p><p>OCI 12c</p><p>OCI 12c</p><p>R2</p></td><td><p>OCI 11g</p><p>R2</p><p>OCI 12c</p><p>OCI 12c</p><p>R2</p></td></tr></table>"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "table",
+                    "blocks": [
+                        {
+                            "lines": [
+                                {
+                                    "spans": [
+                                        {
+                                            "type": "table",
+                                            "html": "<table><tr><td><p>flow chart</p></td><td><p>Responsibility</p></td><td><p>description</p></td></tr><tr><td><p>Start</p><p>sum = 0</p><p>count = 0</p><p>Enter n</p><p>sum=sum+n</p><p>count = count+1</p><p>End</p></td><td><p>初始化运行环境，为后续累加与计数操作做好准备。</p><p>将累加器 sum 归零，保证后续累加结果从 0 开始</p><p>将计数器 count 归零，确保后续统计从 0 开始</p><p>获取外部输入值 n，为累加与计数提供原始数据</p><p>标志流程正常结束，释放资源并返回控制权</p></td><td><ul><li>在程序或脚本最顶端放置起始标记；</li><li>确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；</li></ul><p>执行赋值语句 sum ← 0；</p><p>该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；</p><p>若使用浮点型，注意 0 的精度与类型一致性（int/float）。</p><p>通过标准输入、文件或 UI 读取一个数值；</p><p>需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；</p><p>执行算术更新 sum ← sum + n；</p><p>在程序底部放置结束标记或返回语句；</p></td></tr></table>"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 1
+                }
+            ],
+            "discarded_blocks": [],
+            "page_idx": 0
+        }
+    ],
+    "_backend": "office",
+    "_version_name": "3.4.3"
+}

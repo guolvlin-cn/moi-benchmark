@@ -1,0 +1,3 @@
+## Support ending
+
+<table><tr><td colspan="2">APF releases that are scheduled to no longer support specific platforms or database integrations are described in the table below.</td></tr><tr><td>Support ending for: operation systems</td><td>No longer supported in:</td></tr><tr><td>Windows Server 2012</td><td>APF 2025.1</td></tr><tr><td>CentOS 7</td><td>APF 2025.2</td></tr><tr><td>MySQL 5.6</td><td>APF 2026.1</td></tr></table>

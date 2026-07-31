@@ -1,0 +1,166 @@
+[
+    {
+        "type": "text",
+        "text": "YMS\\_mock",
+        "text_level": 2,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "MatrixOne Intelligence",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备 44030402004672号 | 粤ICP备2021044820号",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "P14: 正态分布",
+        "text_level": 2,
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。",
+            "    - 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。",
+            "    - 正态分布的概率密度函数（Probability Density Function, PDF） 的数学表达式为:1. 当 x=μ 时，指数部分为0，函数取到最大值。2. 当 x 远离 μ 时，(x−μ)^2增大，指数部分迅速衰减为0，导致概率密度急剧下降。",
+            "- 正态曲线下",
+            "    - 横轴区间(μ-σ,μ+σ) 内的面积为 68.268949%",
+            "        - P{|X-μ|<σ}=2Φ（1）-1=0.6826",
+            "    - 横轴区间（μ-1.96σ,μ+1.96σ）内的面积为95.449974%",
+            "        - P{|X-μ|<2σ}=2Φ（2）-1=0.9544",
+            "    - 横轴区间（μ-2.58σ,μ+2.58σ）内的面积为99.730020%",
+            "        - P{|X-μ|<3σ}=2Φ（3）-1=0.9974"
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/4da4f6bb0881b978fba33a38a1515daaa646c7089ab5fcc44c560ae2a888d3f0.jpg",
+        "image_caption": [],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能."
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "MatrixOne Intelligence",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备 44030402004672号 | 粤ICP备2021044820号",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "**IMP MCI Tune Beam-AMU Out Of Tange Error**",
+        "text_level": 2,
+        "page_idx": 2
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- Issue Description:",
+            "    - Pie inform 18ums 03YB S4H154/159 WAT VBG fail",
+            "- Impact:",
+            "    - VBG&GOI scrap",
+            "- Evidence & Analysis:",
+            "    - tile 1 desc",
+            "    - tile 2 desc",
+            "    - tile 3 desc",
+            "    - tile 4 desc",
+            "    - tile 5 desc",
+            "- Root Cause:",
+            "    - Dry pump含金属成分的密封镀层再高温下附着不稳定",
+            "- Actions:",
+            "    - Dry pump维修不是用密封镀层或使用不含金属成分的密封镀层",
+            "    - 值班手册更新：Asher太极更换dry pump constraint LDD loop"
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "11、15",
+        "page_idx": 2
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- Lot Disposition",
+            "    - scrap 3xxx xxx xxx"
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/4da4f6bb0881b978fba33a38a1515daaa646c7089ab5fcc44c560ae2a888d3f0.jpg",
+        "image_caption": [],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/9c668afbba0d959c0c8d625682cc788789d0458b08977d9533d2678fb29595ca.png",
+        "image_caption": [],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "table_caption": [],
+        "table_body": "<table>\n  <tr>\n    <th>xx</th>\n    <th>xx</th>\n    <th>xx</th>\n  </tr>\n  <tr>\n    <td>a</td>\n    <td>a</td>\n    <td>q</td>\n  </tr>\n  <tr>\n    <td>b</td>\n    <td>b</td>\n    <td>w</td>\n  </tr>\n  <tr>\n    <td>c</td>\n    <td>c</td>\n    <td>e</td>\n  </tr>\n  <tr>\n    <td>d</td>\n    <td>d</td>\n    <td>r</td>\n  </tr>\n</table>",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "P14: 正态分布",
+        "text_level": 2,
+        "page_idx": 3
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。",
+            "    - 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。",
+            "    - 正态分布的概率密度函数（Probability Density Function, PDF） 的数学表达式为:1. 当 x=μ 时，指数部分为0，函数取到最大值。2. 当 x 远离 μ 时，(x−μ)^2增大，指数部分迅速衰减为0，导致概率密度急剧下降。",
+            "- 正态曲线下",
+            "    - 横轴区间(μ-σ,μ+σ) 内的面积为 68.268949%",
+            "        - P{|X-μ|<σ}=2Φ（1）-1=0.6826",
+            "    - 横轴区间（μ-1.96σ,μ+1.96σ）内的面积为95.449974%",
+            "        - P{|X-μ|<2σ}=2Φ（2）-1=0.9544",
+            "    - 横轴区间（μ-2.58σ,μ+2.58σ）内的面积为99.730020%",
+            "        - P{|X-μ|<3σ}=2Φ（3）-1=0.9974"
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/4da4f6bb0881b978fba33a38a1515daaa646c7089ab5fcc44c560ae2a888d3f0.jpg",
+        "image_caption": [],
+        "page_idx": 3
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能."
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "MatrixOne Intelligence",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备 44030402004672号 | 粤ICP备2021044820号",
+        "page_idx": 3
+    }
+]

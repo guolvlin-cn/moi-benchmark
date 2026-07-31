@@ -1,0 +1,79 @@
+{
+  "filename": "80表格多行被识别成多行单元格.docx",
+  "filetype": "DOCX",
+  "block_count": 2,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>OmnOrb</td><td>N/A</td><td>N/A</td><td>N/A</td></tr><tr><td rowspan=\"5\">Oracle Client\\n( 64 bit )</td><td>OCI 11g</td><td>OCI 11g</td><td>OCI 11g</td></tr><tr><td>R2</td><td>R2</td><td>R2</td></tr><tr><td>OCI 12c</td><td>OCI 12c</td><td>OCI 12c</td></tr><tr><td>OCI 12c</td><td>OCI 12c</td><td>OCI 12c</td></tr><tr><td>R2</td><td>R2</td><td>R2</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          83.0,
+          71.0,
+          499.0,
+          178.0
+        ],
+        "polygon": [
+          [
+            83,
+            71
+          ],
+          [
+            499,
+            71
+          ],
+          [
+            499,
+            178
+          ],
+          [
+            83,
+            178
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>flow chart</td><td>Responsibility</td><td>description</td></tr><tr><td>Start</td><td>初始化运行环境，为后续累加与计数操作做好准备。</td><td>● 在程序或脚本最顶端放置起始标记；\\n● 确保所有变量（sum、count 等）处于未定义或待赋值状态，避免残留值干扰；</td></tr><tr><td>sum = 0\\ncount = 0</td><td>将累加器 sum 归零，保证后续累加结果从 0 开始</td><td>执行赋值语句 sum ← 0；\\n该操作必须在第一次读取输入 n 之前完成，否则会把旧值带入计算；\\n若使用浮点型，注意 0 的精度与类型一致性（int/float）。</td></tr><tr><td>Enter n</td><td>将计数器 count 归零，确保后续统计从 0 开始</td><td>通过标准输入、文件或 UI 读取一个数值；\\n需做合法性检查（类型、范围、EOF 等），防止非数值导致程序异常；</td></tr><tr><td>sum=sum+n\\ncount = count+1</td><td>获取外部输入值 n，为累加与计数提供原始数据</td><td>执行算术更新 sum ← sum + n；</td></tr><tr><td>End</td><td>标志流程正常结束，释放资源并返回控制权</td><td>在程序底部放置结束标记或返回语句；</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          83.0,
+          237.0,
+          511.0,
+          679.0
+        ],
+        "polygon": [
+          [
+            83,
+            237
+          ],
+          [
+            511,
+            237
+          ],
+          [
+            511,
+            680
+          ],
+          [
+            83,
+            680
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "doc_id": "APFP-Description-Document1_4a2fab45d9",
+  "_generated_at": "2026-07-30T10:22:01+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Applied ARF RTD 9.4.0 Release Notes",
+        "count": 1
+      },
+      {
+        "text": "About Release 9.4.0",
+        "count": 1
+      },
+      {
+        "text": "Applied ARF RTD 9.4.0 Release Notes About Release 9.4.0",
+        "count": 3
+      },
+      {
+        "text": "Applied APF RTD 9.4.0 Dispatch API Guide",
+        "count": 7
+      },
+      {
+        "text": "Chapter 1. Using the Dispatch API",
+        "count": 7
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "Applied Materials Confidential | {page_number}",
+        "count": 1
+      },
+      {
+        "text": "Applied Materials Confidential",
+        "count": 11
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 9,
+    "table_html_summaries": [
+      "<table><tr><th>operating system</th><th>Database</th><th>Oracle Dynamic Adapter</th><th>Oracle Dynamic Extractor</th><th>MSSQL Server Adapter</th><th>MSSQL Server Extractor</th><th>MySQL Adapter</th><th>MySQL Extractor</th><th>DB2 Trigger Adapter</th><th>DB2 Extractor</th><th>APF IGT</th><th>Transform Editor</th><th>Server IDK</th><th>Dispatch API (C#)</th><th>Dispatch API (C++)</th><th>Status Tool API</th></tr><tr><td colspan=\"2\">Windows2012/2016-Standard(64bit)</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td></td><td></td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2012</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2016</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MySQL 5.6</td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">Linux RHEL 6.2 or 7.2 (64 bit)</td><td>√</td><td>√</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2012</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2016</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">HP-UX 11.31 (64-bit itanium)</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">Solaris 2.10 (64-bit SPABC)</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>AIX 7.1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>DB2 (10.1,10.5)</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>AIX 7.2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>DB2 (11.1)</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+      "<table><tr><th></th><th>HP</th><th>Solaris</th><th>RHEL</th><th>AIX</th><th>Microsoft<br>Windows</th></tr><tr><th colspan=\"6\">Server software</th></tr><tr><td>Operating<br>System<br>Version(s)</td><td>HP-UX<br>11.31<br>(Itanium<br>64-bit<br>only)</td><td>Solaris<br>2.10(64-bit)<br>(SPARC<br>environment<br>s only)</td><td>RHEL<br>6.2<br>64 bit<br>RHEL<br>7.2<br>64-bit</td><td>AIX<br>6.1<br>64-bit<br>AIX<br>7.1<br>64-bit</td><td>Windows<br>Server 2008 R2<br>SP1 *<br>Windows<br>Server 2012 R2<br>Standard</td></tr><tr><th colspan=\"6\">Related software</th></tr><tr><td>CoinMP<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>1.7.6</td></tr><tr><td>CPLEX<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>12.6.1</td></tr><tr><td>Gurobi<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>7.0.2</td></tr><tr><td>Java (64-bit)</td><td>8.0.08<br>(HP)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>N/A</td><td>6u45 (Oracle)<br>7u9 (Oracle)<br>8u102 (Oracle)</td></tr><tr><td>IBM XL C/C++<br>Runtime</td><td>N/A</td><td>N/A</td><td>N/A</td><td>13.1.2</td><td>N/A</td></tr><tr><td>Microsoft<br>Message<br>Queueing<br>(MSMQ)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>5.0 or later</td></tr><tr><td>Microsoft .NET<br>Framework</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>4.5</td></tr></table>",
+      "<table><tr><th></th><th>HP</th><th>Solaris</th><th>RHEL</th><th>AIX</th><th>Microsoft<br>Windows</th></tr><tr><th colspan=\"6\">Server software</th></tr><tr><td>Operating<br>System<br>Version(s)</td><td>HP-UX<br>11.31<br>(Itanium<br>64-bit<br>only)</td><td>Solaris<br>2.10(64-bit)<br>(SPARC<br>environment<br>s only)</td><td>RHEL<br>6.2<br>64 bit<br>RHEL<br>7.2<br>64-bit</td><td>AIX<br>6.1<br>64-bit<br>AIX<br>7.1<br>64-bit</td><td>Windows<br>Server 2008 R2<br>SP1 *<br>Windows<br>Server 2012 R2<br>Standard</td></tr><tr><th colspan=\"6\">Related software</th></tr><tr><td>CoinMP<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>1.7.6</td></tr><tr><td>CPLEX<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>12.6.1</td></tr><tr><td>Gurobi<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>7.0.2</td></tr><tr><td>Java (64-bit)</td><td>8.0.08<br>(HP)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>N/A</td><td>6u45 (Oracle)<br>7u9 (Oracle)<br>8u102 (Oracle)</td></tr><tr><td>IBM XL C/C++<br>Runtime</td><td>N/A</td><td>N/A</td><td>N/A</td><td>13.1.2</td><td>N/A</td></tr><tr><td>Microsoft<br>Message<br>Queueing<br>(MSMQ)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>5.0 or later</td></tr><tr><td>Microsoft .NET<br>Framework</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>4.5</td></tr></table>",
+      "<table><tr><th>ID</th><th>Progress</th><th>Priority</th><th>Short Description</th></tr><tr><td>PROJ-001</td><td>Not Started</td><td>Urgent</td><td>Essential Project Test</td></tr><tr><td>PROJ-002</td><td>Rejected</td><td>Deferred</td><td>Critical System Review</td></tr><tr><td>BUG-003</td><td>Approved</td><td>Critical</td><td>Backup All Task Items</td></tr><tr><td>BUG-004</td><td>Testing</td><td>Urgent</td><td>Complete Critical Process Migrate</td></tr><tr><td rowspan=\"2\">FEAT-005</td><td rowspan=\"2\">Pending Review</td><td rowspan=\"2\">Low</td><td rowspan=\"2\">Implement All Feature Items</td></tr><tr></tr><tr><td>PROJ-006</td><td>Cancelled</td><td>Normal</td><td>Final Report Review Check</td></tr><tr><td>PROJ-007</td><td>Delayed</td><td>High</td><td>Complete Final Analysis Schedule</td></tr><tr><td>BUG-008</td><td>In Progress</td><td>Critical</td><td>Essential Analysis Review</td></tr><tr><td>PROJ-009</td><td>Delayed</td><td>Urgent</td><td>Complete Secondary Update Deploy</td></tr><tr><td>ISSUE-010</td><td>Completed</td><td>Urgent</td><td>Urgent Documentation Fix Required</td></tr><tr><td rowspan=\"2\">BUG-011</td><td rowspan=\"2\">Pending Review</td><td rowspan=\"2\">Optional</td><td rowspan=\"2\">Primary Report Review</td></tr><tr></tr><tr><td>ISSUE-012</td><td>Not Started</td><td>Low</td><td>Prepare Review for Upgrade</td></tr><tr><td>PROJ-013</td><td>Completed</td><td>Normal</td><td>Final Optimization Upgrade Check</td></tr><tr><td>REQ-014</td><td>On Hold</td><td>Medium</td><td>Prepare Support for Backup</td></tr><tr><td>ITEM-015</td><td>Rejected</td><td>Deferred</td><td>Urgent Project Fix Required</td></tr><tr><td>WORK-016</td><td>In Progress</td><td>Critical</td><td>Deploy All Function Items</td></tr><tr><td>PROJ-017</td><td>Delayed</td><td>Deferred</td><td>Prepare Configuration for Monitor</td></tr><tr><td>TASK-018</td><td>In Progress</td><td>Urgent</td><td>Fix All Feature Items</td></tr><tr><td>REQ-019</td><td>Testing</td><td>Critical</td><td>Urgent Maintenance Fix Required</td></tr><tr><td>PROJ-020</td><td>On Hold</td><td>Low</td><td>Urgent Update Fix Required</td></tr><tr><td>TASK-021</td><td>Rejected</td><td>Normal</td><td>Complete Secondary System Develop</td></tr><tr><td>FEAT-022</td><td>Completed</td><td>Critical</td><td>Essential Training Implement</td></tr><tr><td>WORK-023</td><td>In Progress</td><td>Medium</td><td>Backup and Validate Optimization</td></tr><tr><td>FEAT-024</td><td>Approved</td><td>Deferred</td><td>Prepare Support for Configure</td></tr><tr><td>ITEM-025</td><td>Cancelled</td><td>Optional</td><td>Final Configuration Review</td></tr><tr><td>BUG-026</td><td>In Progress</td><td>Normal</td><td>Critical Training Review</td></tr><tr><td>BUG-027</td><td>Not Started</td><td>High</td><td>Implement the Critical Project</td></tr><tr><td>ISSUE-028</td><td>In Progress</td><td>Low</td><td>Urgent Optimization Fix Required</td></tr><tr><td>REQ-029</td><td>Rejected</td><td>Optional</td><td>Essential Optimization Review</td></tr><tr><td>PROJ-030</td><td>In Progress</td><td>Deferred</td><td>Final Deployment Migrate Check</td></tr><tr><td>TASK-031</td><td>In Progress</td><td>Critical</td><td>Primary Review Review</td></tr><tr><td>BUG-032</td><td>Completed</td><td>Optional</td><td>Prepare Deployment for Deploy</td></tr><tr><td>WORK-033</td><td>Completed</td><td>High</td><td>Develop the Secondary Support</td></tr><tr><td>TASK-034</td><td>In Progress</td><td>Low</td><td>Final Deployment Validate Check</td></tr><tr><td>BUG-035</td><td>Delayed</td><td>Critical</td><td>Update All Integration Items</td></tr><tr><td>FEAT-036</td><td>Testing</td><td>Urgent</td><td>Validate and Validate Support</td></tr><tr><td>BUG-037</td><td>On Hold</td><td>Low</td><td>Backup the Critical Training</td></tr><tr><td>ISSUE-038</td><td>Not Started</td><td>Critical</td><td>Urgent Optimization Fix Required</td></tr><tr><td>REQ-039</td><td>Not Started</td><td>High</td><td>Urgent Component Schedule</td></tr><tr><td>BUG-040</td><td>Delayed</td><td>High</td><td>Schedule Initial Project Meeting</td></tr><tr><td>TASK-041</td><td>Rejected</td><td>High</td><td>Urgent Training Fix Required</td></tr><tr><td>ISSUE-042</td><td>On Hold</td><td>Low</td><td>Analyze All Project Items</td></tr><tr><td>REQ-043</td><td>On Hold</td><td>Optional</td><td>Final Component Update Check</td></tr><tr><td>PROJ-044</td><td>In Progress</td><td>Low</td><td>Complete Final Report Test</td></tr><tr><td>PROJ-045</td><td>Completed</td><td>Normal</td><td>Urgent Process Fix Required</td></tr><tr><td>FEAT-046</td><td>Rejected</td><td>Critical</td><td>Develop and Validate Analysis</td></tr><tr><td>FEAT-047</td><td>In Progress</td><td>High</td><td>Prepare Function for Analyze</td></tr><tr><td>BUG-048</td><td>Cancelled</td><td>Low</td><td>Prepare Maintenance for Validate</td></tr><tr><td>TASK-049</td><td>In Progress</td><td>Deferred</td><td>Complete Major Module Update</td></tr><tr><td>REQ-050</td><td>On Hold</td><td>Medium</td><td>Urgent Support Fix Required</td></tr><tr><td>TASK-051</td><td>In Progress</td><td>High</td><td>Complete Urgent Support Review</td></tr></table>",
+      "<table><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0</td><td></td><td></td><td></td></tr></table>",
+      "<table><tr><th>Tracking numbers</th><th>Description</th></tr><tr><td>(451763)</td><td>Writing a formal paper on the semiconductor industry (chip industry)<br><br>requires a balance of technical insight, economic analysis, and geopolitical context.<br>[image:efd2bc27-8e87-4634-b7c7-e76dbcbce427]<br><br>Below is a structured academic essay</td></tr><tr><td>SR00320423<br>(450597,<br>45490)</td><td>The semiconductor industry serves as the nervous system of the modern global economy. From the simplest household appliances to the most sophisticated Artificial Intelligence (AI) clusters, \"chips\" are the fundamental building (blocks of digital) transformation.<br><br>● As we move further into the decade, the industry is transitioning from a period of globalization:<br><br>● The industry is not a monolith but a highly fragmented and specialized ecosystem. It is generally divided into three primary business models:<br><br>Semiconductors have become a tool of foreign policy. Export controls and domestic subsidy programs (like the U.S. CHIPS Act and .</td></tr><tr><td>(502677)</td><td>Moore's Law\"—the observation that the number of transistors on a<br><br>chip doubles approximately every two years—is slowing down. To maintain performance gains, the industry is turning to Advanced Packaging (3D stacking) and architectures.Semiconductors have become a tool of foreign policy.<br><br>■ The future of the chip industry will likely be defined by the \"AI-First\" hardware paradigm. As AI models grow in complexity, the bottleneck is shifting from raw processing</td></tr></table>",
+      "<table><tr><td>Tracking numbers</td><td>Description</td></tr><tr><td>(450022)</td><td> The semiconductor industry remains the most critical sector for 21st-century sovereignty. While the challenges of escalating costs and geopolitical tensions are significant, the relentless pace of innovation ensures that semiconductors will continue to dictate the speed of human progress. If this is for a university course, ensure you cite sources like</td></tr></table>",
+      "<table><tr><td>Tracking</td><td>Description<br>numbers</td></tr><tr><td>(452847)</td><td>You can now right-click a Run Report block in the work area,<br>and then<br>click Edit Report on the shortcut menu to automatically launch<br>the<br>Formatter and edit the block's associated report.</td></tr></table>",
+      "<table><tr><th>Tracking<br>numbers</th><th>Description</th></tr><tr><td>(453263)<br>|◄◄</td><td>The settings on the Advanced Settings tab of the Adapter configuration have been reorganized, by removing the Oracle and DB2 groupings. The settings common to all Adapters appear first, and the database type-specific settings appear later on the tab. Also see 451650 for Adapter-side changes.<br>The settings related to the T Log Adapter have been removed because they are no longer supported.</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 1
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "Applied APF Release Notes",
+        "level": 1
+      },
+      {
+        "text": "Content",
+        "level": 1
+      },
+      {
+        "text": "APF Installation Description",
+        "level": 1
+      },
+      {
+        "text": "APF grid for APF integration components",
+        "level": 2
+      },
+      {
+        "text": "APF Server and APF Client compatibility",
+        "level": 2
+      },
+      {
+        "text": "APFP Dispatch API Guide",
+        "level": 1
+      },
+      {
+        "text": "Content",
+        "level": 1
+      },
+      {
+        "text": "Dispatch list format",
+        "level": 2
+      },
+      {
+        "text": "Tag descriptions",
+        "level": 2
+      },
+      {
+        "text": "Parding the dispatch list",
+        "level": 2
+      },
+      {
+        "text": "Items implement or fixed",
+        "level": 2
+      },
+      {
+        "text": "Support coverage",
+        "level": 2
+      },
+      {
+        "text": "Version obsolescence",
+        "level": 2
+      },
+      {
+        "text": "Accessing the distribution site",
+        "level": 2
+      },
+      {
+        "text": "About This Document",
+        "level": 2
+      },
+      {
+        "text": "Tracing Number enhancements",
+        "level": 2
+      },
+      {
+        "text": "Activiy Manager Client enhancements",
+        "level": 2
+      },
+      {
+        "text": "Admin Client enhancements",
+        "level": 2
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "Applied APF Release Notes",
+      "About Release 9.4.0",
+      "Content",
+      "Applied APF Release Notes",
+      "APF Installation Description 3",
+      "APF grid for APF integration components 4",
+      "APF Server and APF Client compatibility 5",
+      "APF Installation Description",
+      "  \"Installing APF Components\" chapter for the appropriate operating system in the Appied APF Installation Guide for your platform.",
+      "  When converting an 8.x repository, you can determine whether the instant values stored in the source repository are converted to UTC format during the conversion, or whether they are retained in indeterminate, non-UTC format in the destination repository.",
+      "  ■ Note As a best practice, Applied Materials recommends using UTC instant values, which re",
+      "  ! Important By default, 9.4 or higher version repositories (including Activity",
+      "  Manager job repositories) are not backward compatible with pre-9.4 Repository Servers or writing clients without setting the <rs_reuse_client_memory> option in the Repository Server's <options> section of the apf.xml file to false prior to upgrading. For more information, see 448885 later in these release notes.",
+      "  ▲ To convert an existing pre-9.0 source repository for use with this release",
+      "  1. If you want to convert non-UTC instant values in the source repository to UTC instant values, edit the apf.xml configuration of your existing (pre-9.0) source repository, and define the <time-zone> parameter in the repository's configuration; set this parameter to the time zone in which instants are expressed in the repository. (For information about the <time-zone> parameter and its supported values, see the \"apf.xml File Reference\" appendix of the Applied APF System Administration Guide included with the current release.) If you do not define the <time-zone> parameter in the repository's configuration, then instant values are retained in non-UTC format during the conversion.",
+      "  ■ Note The <time-zone> parameter is ignored by the existing repository; it is read by the Converter to determine how to handle instant values in the repository. If defined, then during the repository conversion, instant values (which where previously expressed in local server time) are converted to UTC instants in the updated repository.",
+      "  2. Configure are new destination repository for the current release.",
+      "  A subset of instants stored in the APF repository (that is, instants that indicate repository object existence and indexed instants) can be stored in a different format than other instants in the repository (either local or UTC, but not a mixture of both). The decision about which format to use for these instants depends on which version of APF repository data, and whether the integrated external systems in your environment support using UTC inst T ts, define the rnal systems in your environment support using define the <objecthood> element in the <format> section of the destination repository's apf.xml configuration, and set the element to one of the following supported values;",
+      "APF grid for APF integration components",
+      "  The following table shows the compatibility grid for APF integration components:",
+      "<table><tr><th>operating system</th><th>Database</th><th>Oracle Dynamic Adapter</th><th>Oracle Dynamic Extractor</th><th>MSSQL Server Adapter</th><th>MSSQL Server Extractor</th><th>MySQL Adapter</th><th>MySQL Extractor</th><th>DB2 Trigger Adapter</th><th>DB2 Extractor</th><th>APF IGT</th><th>Transform Editor</th><th>Server IDK</th><th>Dispatch API (C#)</th><th>Dispatch API (C++)</th><th>Status Tool API</th></tr><tr><td colspan=\"2\">Windows2012/2016-Standard(64bit)</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td></td><td></td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2012</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2016</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MySQL 5.6</td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">Linux RHEL 6.2 or 7.2 (64 bit)</td><td>√</td><td>√</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2012</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2016</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">HP-UX 11.31 (64-bit itanium)</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">Solaris 2.10 (64-bit SPABC)</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>AIX 7.1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>DB2 (10.1,10.5)</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>AIX 7.2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>DB2 (11.1)</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+      "  APF support will also work with customers in resolving issues with both APF integration and server components on RHEL 6.x versions later than 6.2 and RHEL 7.x versions later than 7.2.",
+      "APF Server and APF Client compatibility",
+      "The following table shows the compatibility grid for APF version 9.1.1 server and client software.",
+      "<table><tr><th></th><th>HP</th><th>Solaris</th><th>RHEL</th><th>AIX</th><th>Microsoft<br>Windows</th></tr><tr><th colspan=\"6\">Server software</th></tr><tr><td>Operating<br>System<br>Version(s)</td><td>HP-UX<br>11.31<br>(Itanium<br>64-bit<br>only)</td><td>Solaris<br>2.10(64-bit)<br>(SPARC<br>environment<br>s only)</td><td>RHEL<br>6.2<br>64 bit<br>RHEL<br>7.2<br>64-bit</td><td>AIX<br>6.1<br>64-bit<br>AIX<br>7.1<br>64-bit</td><td>Windows<br>Server 2008 R2<br>SP1 *<br>Windows<br>Server 2012 R2<br>Standard</td></tr><tr><th colspan=\"6\">Related software</th></tr><tr><td>CoinMP<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>1.7.6</td></tr><tr><td>CPLEX<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>12.6.1</td></tr><tr><td>Gurobi<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>7.0.2</td></tr><tr><td>Java (64-bit)</td><td>8.0.08<br>(HP)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>N/A</td><td>6u45 (Oracle)<br>7u9 (Oracle)<br>8u102 (Oracle)</td></tr><tr><td>IBM XL C/C++<br>Runtime</td><td>N/A</td><td>N/A</td><td>N/A</td><td>13.1.2</td><td>N/A</td></tr><tr><td>Microsoft<br>Message<br>Queueing<br>(MSMQ)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>5.0 or later</td></tr><tr><td>Microsoft .NET<br>Framework</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>4.5</td></tr></table>",
+      "APFP Dispatch API Guide",
+      "Applied APF RTD 9.4.0",
+      "Content",
+      "APFP Dispatch API Guide",
+      "Dispatch list format 3",
+      "Tag descriptions 3",
+      "Parding the dispatch list 3",
+      "Items implement or fixed 4",
+      "Support coverage 5",
+      "Version obsolescence 5",
+      "Accessing the distribution site 6",
+      "About This Document 6",
+      "Dispatch list format",
+      "  Although the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful. Pre-defined headers for the dispatch list",
+      "  Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API. Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.",
+      "Tag descriptions",
+      "  The following table provides description for the tages used in a dispatch query result:",
+      "<table><tr><th></th><th>HP</th><th>Solaris</th><th>RHEL</th><th>AIX</th><th>Microsoft<br>Windows</th></tr><tr><th colspan=\"6\">Server software</th></tr><tr><td>Operating<br>System<br>Version(s)</td><td>HP-UX<br>11.31<br>(Itanium<br>64-bit<br>only)</td><td>Solaris<br>2.10(64-bit)<br>(SPARC<br>environment<br>s only)</td><td>RHEL<br>6.2<br>64 bit<br>RHEL<br>7.2<br>64-bit</td><td>AIX<br>6.1<br>64-bit<br>AIX<br>7.1<br>64-bit</td><td>Windows<br>Server 2008 R2<br>SP1 *<br>Windows<br>Server 2012 R2<br>Standard</td></tr><tr><th colspan=\"6\">Related software</th></tr><tr><td>CoinMP<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>1.7.6</td></tr><tr><td>CPLEX<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>12.6.1</td></tr><tr><td>Gurobi<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>7.0.2</td></tr><tr><td>Java (64-bit)</td><td>8.0.08<br>(HP)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>N/A</td><td>6u45 (Oracle)<br>7u9 (Oracle)<br>8u102 (Oracle)</td></tr><tr><td>IBM XL C/C++<br>Runtime</td><td>N/A</td><td>N/A</td><td>N/A</td><td>13.1.2</td><td>N/A</td></tr><tr><td>Microsoft<br>Message<br>Queueing<br>(MSMQ)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>5.0 or later</td></tr><tr><td>Microsoft .NET<br>Framework</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>4.5</td></tr></table>",
+      "Parding the dispatch list",
+      "  The following functions are available for parding and processing the dispatcher result:",
+      "[C++]",
+      "#include \"writerlibx/iss_schedmsg.h\"",
+      "#include \"writerlibx/iss_schedmsg_print.h\"",
+      "/* Parsing of raw dispatch results */",
+      "schedmsg * iss_parserSchedMsg(const char *rawText, u_int text Size);",
+      "Items implement or fixed",
+      "  This study presents a power-function-based peak separation framework for gamma-ray spectroscopy. By introducing a tunable exponent parameter into the peak model, the method enhances discrimination in overlapped spectral regions while maintaining numerical stability.",
+      "<table><tr><th>ID</th><th>Progress</th><th>Priority</th><th>Short Description</th></tr><tr><td>PROJ-001</td><td>Not Started</td><td>Urgent</td><td>Essential Project Test</td></tr><tr><td>PROJ-002</td><td>Rejected</td><td>Deferred</td><td>Critical System Review</td></tr><tr><td>BUG-003</td><td>Approved</td><td>Critical</td><td>Backup All Task Items</td></tr><tr><td>BUG-004</td><td>Testing</td><td>Urgent</td><td>Complete Critical Process Migrate</td></tr><tr><td rowspan=\"2\">FEAT-005</td><td rowspan=\"2\">Pending Review</td><td rowspan=\"2\">Low</td><td rowspan=\"2\">Implement All Feature Items</td></tr><tr></tr><tr><td>PROJ-006</td><td>Cancelled</td><td>Normal</td><td>Final Report Review Check</td></tr><tr><td>PROJ-007</td><td>Delayed</td><td>High</td><td>Complete Final Analysis Schedule</td></tr><tr><td>BUG-008</td><td>In Progress</td><td>Critical</td><td>Essential Analysis Review</td></tr><tr><td>PROJ-009</td><td>Delayed</td><td>Urgent</td><td>Complete Secondary Update Deploy</td></tr><tr><td>ISSUE-010</td><td>Completed</td><td>Urgent</td><td>Urgent Documentation Fix Required</td></tr><tr><td rowspan=\"2\">BUG-011</td><td rowspan=\"2\">Pending Review</td><td rowspan=\"2\">Optional</td><td rowspan=\"2\">Primary Report Review</td></tr><tr></tr><tr><td>ISSUE-012</td><td>Not Started</td><td>Low</td><td>Prepare Review for Upgrade</td></tr><tr><td>PROJ-013</td><td>Completed</td><td>Normal</td><td>Final Optimization Upgrade Check</td></tr><tr><td>REQ-014</td><td>On Hold</td><td>Medium</td><td>Prepare Support for Backup</td></tr><tr><td>ITEM-015</td><td>Rejected</td><td>Deferred</td><td>Urgent Project Fix Required</td></tr><tr><td>WORK-016</td><td>In Progress</td><td>Critical</td><td>Deploy All Function Items</td></tr><tr><td>PROJ-017</td><td>Delayed</td><td>Deferred</td><td>Prepare Configuration for Monitor</td></tr><tr><td>TASK-018</td><td>In Progress</td><td>Urgent</td><td>Fix All Feature Items</td></tr><tr><td>REQ-019</td><td>Testing</td><td>Critical</td><td>Urgent Maintenance Fix Required</td></tr><tr><td>PROJ-020</td><td>On Hold</td><td>Low</td><td>Urgent Update Fix Required</td></tr><tr><td>TASK-021</td><td>Rejected</td><td>Normal</td><td>Complete Secondary System Develop</td></tr><tr><td>FEAT-022</td><td>Completed</td><td>Critical</td><td>Essential Training Implement</td></tr><tr><td>WORK-023</td><td>In Progress</td><td>Medium</td><td>Backup and Validate Optimization</td></tr><tr><td>FEAT-024</td><td>Approved</td><td>Deferred</td><td>Prepare Support for Configure</td></tr><tr><td>ITEM-025</td><td>Cancelled</td><td>Optional</td><td>Final Configuration Review</td></tr><tr><td>BUG-026</td><td>In Progress</td><td>Normal</td><td>Critical Training Review</td></tr><tr><td>BUG-027</td><td>Not Started</td><td>High</td><td>Implement the Critical Project</td></tr><tr><td>ISSUE-028</td><td>In Progress</td><td>Low</td><td>Urgent Optimization Fix Required</td></tr><tr><td>REQ-029</td><td>Rejected</td><td>Optional</td><td>Essential Optimization Review</td></tr><tr><td>PROJ-030</td><td>In Progress</td><td>Deferred</td><td>Final Deployment Migrate Check</td></tr><tr><td>TASK-031</td><td>In Progress</td><td>Critical</td><td>Primary Review Review</td></tr><tr><td>BUG-032</td><td>Completed</td><td>Optional</td><td>Prepare Deployment for Deploy</td></tr><tr><td>WORK-033</td><td>Completed</td><td>High</td><td>Develop the Secondary Support</td></tr><tr><td>TASK-034</td><td>In Progress</td><td>Low</td><td>Final Deployment Validate Check</td></tr><tr><td>BUG-035</td><td>Delayed</td><td>Critical</td><td>Update All Integration Items</td></tr><tr><td>FEAT-036</td><td>Testing</td><td>Urgent</td><td>Validate and Validate Support</td></tr><tr><td>BUG-037</td><td>On Hold</td><td>Low</td><td>Backup the Critical Training</td></tr><tr><td>ISSUE-038</td><td>Not Started</td><td>Critical</td><td>Urgent Optimization Fix Required</td></tr><tr><td>REQ-039</td><td>Not Started</td><td>High</td><td>Urgent Component Schedule</td></tr><tr><td>BUG-040</td><td>Delayed</td><td>High</td><td>Schedule Initial Project Meeting</td></tr><tr><td>TASK-041</td><td>Rejected</td><td>High</td><td>Urgent Training Fix Required</td></tr><tr><td>ISSUE-042</td><td>On Hold</td><td>Low</td><td>Analyze All Project Items</td></tr><tr><td>REQ-043</td><td>On Hold</td><td>Optional</td><td>Final Component Update Check</td></tr><tr><td>PROJ-044</td><td>In Progress</td><td>Low</td><td>Complete Final Report Test</td></tr><tr><td>PROJ-045</td><td>Completed</td><td>Normal</td><td>Urgent Process Fix Required</td></tr><tr><td>FEAT-046</td><td>Rejected</td><td>Critical</td><td>Develop and Validate Analysis</td></tr><tr><td>FEAT-047</td><td>In Progress</td><td>High</td><td>Prepare Function for Analyze</td></tr><tr><td>BUG-048</td><td>Cancelled</td><td>Low</td><td>Prepare Maintenance for Validate</td></tr><tr><td>TASK-049</td><td>In Progress</td><td>Deferred</td><td>Complete Major Module Update</td></tr><tr><td>REQ-050</td><td>On Hold</td><td>Medium</td><td>Urgent Support Fix Required</td></tr><tr><td>TASK-051</td><td>In Progress</td><td>High</td><td>Complete Urgent Support Review</td></tr></table>",
+      "Support coverage",
+      "  This section describes the support coverage provided with the release, including version obsolescence, how to access the distribution site, and how to contact software support.",
+      "Version obsolescence",
+      "  ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).",
+      "  Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.",
+      "  Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+      "<table><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0</td><td></td><td></td><td></td></tr></table>",
+      "Accessing the distribution site",
+      "  Term Breakdown (typical engineering interpretation)",
+      "  1.ISS",
+      "  2.Integrated / Intelligent System Services",
+      "  Refers to the system-level service layer of the equipment software.",
+      "  Device Data / Diagnostic Data Information System",
+      "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "About This Document",
+      "  Term Breakdown (typical engineering interpretation)",
+      "  ● ISS,Integrated / Intelligent System Services",
+      "  Refers to the system-level service layer of the equipment software.",
+      "  ● DDIS,Device Data / Diagnostic Data Information System",
+      "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+      "  ● DIAGS, Diagnostics, Explicitly denotes diagnostic, health, or troubleshooting-related data and functions.",
+      "  ● Combined Meaning,ISS-DDIS-DIAGS",
+      "  ● A system-level diagnostic data module or namespace used for equipment health monitoring, fault diagnosis, and maintenance analysis, rather than for process or recipe control.",
+      "  ● Typical Usage Contexts,Dispatch or query result namespaces",
+      "  ● Equipment diagnostic or service queries",
+      "  ● System logs and traces",
+      "  ● Maintenance / engineering mode data access",
+      "  ● Key Distinction",
+      "  ● Process data → used for wafer processing and recipe control",
+      "  ● ISS-DDIS-DIAGS → used for equipment diagnostics, debugging, and health monitoring, One-sentence summary",
+      "  ● ISS-DDIS-DIAGS refers to a system-level diagnostics module that provides device health and troubleshooting data within the equipment software architecture.",
+      "  ● If you can share the exact query output or field names where this appears, the meaning can be narrowed further (e.g., real-time diagnostics vs. historical logs).",
+      "Tracing Number enhancements",
+      "<table><tr><th>Tracking numbers</th><th>Description</th></tr><tr><td>(451763)</td><td>Writing a formal paper on the semiconductor industry (chip industry)<br><br>requires a balance of technical insight, economic analysis, and geopolitical context.<br>[image:efd2bc27-8e87-4634-b7c7-e76dbcbce427]<br><br>Below is a structured academic essay</td></tr><tr><td>SR00320423<br>(450597,<br>45490)</td><td>The semiconductor industry serves as the nervous system of the modern global economy. From the simplest household appliances to the most sophisticated Artificial Intelligence (AI) clusters, \"chips\" are the fundamental building (blocks of digital) transformation.<br><br>● As we move further into the decade, the industry is transitioning from a period of globalization:<br><br>● The industry is not a monolith but a highly fragmented and specialized ecosystem. It is generally divided into three primary business models:<br><br>Semiconductors have become a tool of foreign policy. Export controls and domestic subsidy programs (like the U.S. CHIPS Act and .</td></tr><tr><td>(502677)</td><td>Moore's Law\"—the observation that the number of transistors on a<br><br>chip doubles approximately every two years—is slowing down. To maintain performance gains, the industry is turning to Advanced Packaging (3D stacking) and architectures.Semiconductors have become a tool of foreign policy.<br><br>■ The future of the chip industry will likely be defined by the \"AI-First\" hardware paradigm. As AI models grow in complexity, the bottleneck is shifting from raw processing</td></tr></table>",
+      "<img>",
+      "Activiy Manager Client enhancements",
+      "This section lists enhancements to the Admin Client",
+      "<table><tr><td>Tracking numbers</td><td>Description</td></tr><tr><td>(450022)</td><td> The semiconductor industry remains the most critical sector for 21st-century sovereignty. While the challenges of escalating costs and geopolitical tensions are significant, the relentless pace of innovation ensures that semiconductors will continue to dictate the speed of human progress. If this is for a university course, ensure you cite sources like</td></tr></table>",
+      "<table><tr><td>Tracking</td><td>Description<br>numbers</td></tr><tr><td>(452847)</td><td>You can now right-click a Run Report block in the work area,<br>and then<br>click Edit Report on the shortcut menu to automatically launch<br>the<br>Formatter and edit the block's associated report.</td></tr></table>",
+      "Admin Client enhancements",
+      "This section lists enhancements to the Admin Client.",
+      "<table><tr><th>Tracking<br>numbers</th><th>Description</th></tr><tr><td>(453263)<br>|◄◄</td><td>The settings on the Advanced Settings tab of the Adapter configuration have been reorganized, by removing the Oracle and DB2 groupings. The settings common to all Adapters appear first, and the database type-specific settings appear later on the tab. Also see 451650 for Adapter-side changes.<br>The settings related to the T Log Adapter have been removed because they are no longer supported.</td></tr></table>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "12": 1
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "About Release 9.4.0",
+          "page_num": 1
+        },
+        {
+          "text": "Applied APF Release Notes",
+          "page_num": 2
+        },
+        {
+          "text": "APF Installation Description 3",
+          "page_num": 2
+        },
+        {
+          "text": "APF grid for APF integration components 4",
+          "page_num": 2
+        },
+        {
+          "text": "APF Server and APF Client compatibility 5",
+          "page_num": 2
+        },
+        {
+          "text": "  \"Installing APF Components\" chapter for the appropriate operating system in the Appied APF Installation Guide for your platform.",
+          "page_num": 3
+        },
+        {
+          "text": "  When converting an 8.x repository, you can determine whether the instant values stored in the source repository are converted to UTC format during the conversion, or whether they are retained in indeterminate, non-UTC format in the destination repository.",
+          "page_num": 3
+        },
+        {
+          "text": "  ■ Note As a best practice, Applied Materials recommends using UTC instant values, which re",
+          "page_num": 3
+        },
+        {
+          "text": "  ! Important By default, 9.4 or higher version repositories (including Activity",
+          "page_num": 3
+        },
+        {
+          "text": "  Manager job repositories) are not backward compatible with pre-9.4 Repository Servers or writing clients without setting the <rs_reuse_client_memory> option in the Repository Server's <options> section of the apf.xml file to false prior to upgrading. For more information, see 448885 later in these release notes.",
+          "page_num": 3
+        },
+        {
+          "text": "  ▲ To convert an existing pre-9.0 source repository for use with this release",
+          "page_num": 3
+        },
+        {
+          "text": "  1. If you want to convert non-UTC instant values in the source repository to UTC instant values, edit the apf.xml configuration of your existing (pre-9.0) source repository, and define the <time-zone> parameter in the repository's configuration; set this parameter to the time zone in which instants are expressed in the repository. (For information about the <time-zone> parameter and its supported values, see the \"apf.xml File Reference\" appendix of the Applied APF System Administration Guide included with the current release.) If you do not define the <time-zone> parameter in the repository's configuration, then instant values are retained in non-UTC format during the conversion.",
+          "page_num": 3
+        },
+        {
+          "text": "  ■ Note The <time-zone> parameter is ignored by the existing repository; it is read by the Converter to determine how to handle instant values in the repository. If defined, then during the repository conversion, instant values (which where previously expressed in local server time) are converted to UTC instants in the updated repository.",
+          "page_num": 3
+        },
+        {
+          "text": "  2. Configure are new destination repository for the current release.",
+          "page_num": 3
+        },
+        {
+          "text": "  A subset of instants stored in the APF repository (that is, instants that indicate repository object existence and indexed instants) can be stored in a different format than other instants in the repository (either local or UTC, but not a mixture of both). The decision about which format to use for these instants depends on which version of APF repository data, and whether the integrated external systems in your environment support using UTC inst T ts, define the rnal systems in your environment support using define the <objecthood> element in the <format> section of the destination repository's apf.xml configuration, and set the element to one of the following supported values;",
+          "page_num": 3
+        },
+        {
+          "text": "  The following table shows the compatibility grid for APF integration components:",
+          "page_num": 4
+        },
+        {
+          "text": "  APF support will also work with customers in resolving issues with both APF integration and server components on RHEL 6.x versions later than 6.2 and RHEL 7.x versions later than 7.2.",
+          "page_num": 4
+        },
+        {
+          "text": "The following table shows the compatibility grid for APF version 9.1.1 server and client software.",
+          "page_num": 5
+        },
+        {
+          "text": "Applied APF RTD 9.4.0",
+          "page_num": 6
+        },
+        {
+          "text": "APFP Dispatch API Guide",
+          "page_num": 7
+        },
+        {
+          "text": "Dispatch list format 3",
+          "page_num": 7
+        },
+        {
+          "text": "Tag descriptions 3",
+          "page_num": 7
+        },
+        {
+          "text": "Parding the dispatch list 3",
+          "page_num": 7
+        },
+        {
+          "text": "Items implement or fixed 4",
+          "page_num": 7
+        },
+        {
+          "text": "Support coverage 5",
+          "page_num": 7
+        },
+        {
+          "text": "Version obsolescence 5",
+          "page_num": 7
+        },
+        {
+          "text": "Accessing the distribution site 6",
+          "page_num": 7
+        },
+        {
+          "text": "About This Document 6",
+          "page_num": 7
+        },
+        {
+          "text": "  Although the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful. Pre-defined headers for the dispatch list",
+          "page_num": 8
+        },
+        {
+          "text": "  Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API. Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.",
+          "page_num": 8
+        },
+        {
+          "text": "  The following table provides description for the tages used in a dispatch query result:",
+          "page_num": 8
+        },
+        {
+          "text": "  The following functions are available for parding and processing the dispatcher result:",
+          "page_num": 8
+        },
+        {
+          "text": "[C++]",
+          "page_num": 8
+        },
+        {
+          "text": "#include \"writerlibx/iss_schedmsg.h\"",
+          "page_num": 8
+        },
+        {
+          "text": "#include \"writerlibx/iss_schedmsg_print.h\"",
+          "page_num": 8
+        },
+        {
+          "text": "/* Parsing of raw dispatch results */",
+          "page_num": 8
+        },
+        {
+          "text": "schedmsg * iss_parserSchedMsg(const char *rawText, u_int text Size);",
+          "page_num": 8
+        },
+        {
+          "text": "  This study presents a power-function-based peak separation framework for gamma-ray spectroscopy. By introducing a tunable exponent parameter into the peak model, the method enhances discrimination in overlapped spectral regions while maintaining numerical stability.",
+          "page_num": 9
+        },
+        {
+          "text": "  This section describes the support coverage provided with the release, including version obsolescence, how to access the distribution site, and how to contact software support.",
+          "page_num": 10
+        },
+        {
+          "text": "  ISS-DDIS-DIAGS is not a generic industry standard term; it is an internal system/module identifier, commonly seen in semiconductor equipment software environments (e.g., Applied Materials systems).",
+          "page_num": 10
+        },
+        {
+          "text": "  Defines the schema of the result set. Each entry describes a column, including column name, data type, unit (if applicable), and optional attributes such as precision or nullability.",
+          "page_num": 10
+        },
+        {
+          "text": "  Contains the actual data records returned by the dispatch query. Each row corresponds to one result entry and follows the order defined in #columns",
+          "page_num": 10
+        },
+        {
+          "text": "  Term Breakdown (typical engineering interpretation)",
+          "page_num": 11
+        },
+        {
+          "text": "  1.ISS",
+          "page_num": 11
+        },
+        {
+          "text": "  2.Integrated / Intelligent System Services",
+          "page_num": 11
+        },
+        {
+          "text": "  Refers to the system-level service layer of the equipment software.",
+          "page_num": 11
+        },
+        {
+          "text": "  Device Data / Diagnostic Data Information System",
+          "page_num": 11
+        },
+        {
+          "text": "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+          "page_num": 11
+        },
+        {
+          "text": "  Term Breakdown (typical engineering interpretation)",
+          "page_num": 11
+        },
+        {
+          "text": "  ● ISS,Integrated / Intelligent System Services",
+          "page_num": 11
+        },
+        {
+          "text": "  Refers to the system-level service layer of the equipment software.",
+          "page_num": 11
+        },
+        {
+          "text": "  ● DDIS,Device Data / Diagnostic Data Information System",
+          "page_num": 11
+        },
+        {
+          "text": "  Indicates a subsystem responsible for collecting, managing, or distributing device diagnostic data.",
+          "page_num": 11
+        },
+        {
+          "text": "  ● DIAGS, Diagnostics, Explicitly denotes diagnostic, health, or troubleshooting-related data and functions.",
+          "page_num": 11
+        },
+        {
+          "text": "  ● Combined Meaning,ISS-DDIS-DIAGS",
+          "page_num": 11
+        },
+        {
+          "text": "  ● A system-level diagnostic data module or namespace used for equipment health monitoring, fault diagnosis, and maintenance analysis, rather than for process or recipe control.",
+          "page_num": 11
+        },
+        {
+          "text": "  ● Typical Usage Contexts,Dispatch or query result namespaces",
+          "page_num": 11
+        },
+        {
+          "text": "  ● Equipment diagnostic or service queries",
+          "page_num": 11
+        },
+        {
+          "text": "  ● System logs and traces",
+          "page_num": 11
+        },
+        {
+          "text": "  ● Maintenance / engineering mode data access",
+          "page_num": 11
+        },
+        {
+          "text": "  ● Key Distinction",
+          "page_num": 11
+        },
+        {
+          "text": "  ● Process data → used for wafer processing and recipe control",
+          "page_num": 11
+        },
+        {
+          "text": "  ● ISS-DDIS-DIAGS → used for equipment diagnostics, debugging, and health monitoring, One-sentence summary",
+          "page_num": 11
+        },
+        {
+          "text": "  ● ISS-DDIS-DIAGS refers to a system-level diagnostics module that provides device health and troubleshooting data within the equipment software architecture.",
+          "page_num": 11
+        },
+        {
+          "text": "  ● If you can share the exact query output or field names where this appears, the meaning can be narrowed further (e.g., real-time diagnostics vs. historical logs).",
+          "page_num": 11
+        },
+        {
+          "text": "This section lists enhancements to the Admin Client",
+          "page_num": 12
+        },
+        {
+          "text": "This section lists enhancements to the Admin Client.",
+          "page_num": 13
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>operating system</th><th>Database</th><th>Oracle Dynamic Adapter</th><th>Oracle Dynamic Extractor</th><th>MSSQL Server Adapter</th><th>MSSQL Server Extractor</th><th>MySQL Adapter</th><th>MySQL Extractor</th><th>DB2 Trigger Adapter</th><th>DB2 Extractor</th><th>APF IGT</th><th>Transform Editor</th><th>Server IDK</th><th>Dispatch API (C#)</th><th>Dispatch API (C++)</th><th>Status Tool API</th></tr><tr><td colspan=\"2\">Windows2012/2016-Standard(64bit)</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td></td><td></td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td><td>√</td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2012</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2016</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MySQL 5.6</td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">Linux RHEL 6.2 or 7.2 (64 bit)</td><td>√</td><td>√</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2012</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>MSSQL Server 2016</td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">HP-UX 11.31 (64-bit itanium)</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">Solaris 2.10 (64-bit SPABC)</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>Oracle 11g R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Oracle 12c R2</td><td>√</td><td>√</td><td></td><td></td><td></td><td></td><td></td><td></td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>AIX 7.1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>DB2 (10.1,10.5)</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>AIX 7.2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td></td><td></td><td>√</td><td></td><td>√</td><td></td></tr><tr><td></td><td>DB2 (11.1)</td><td></td><td></td><td></td><td></td><td></td><td></td><td>√</td><td>√</td><td>*</td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th></th><th>HP</th><th>Solaris</th><th>RHEL</th><th>AIX</th><th>Microsoft<br>Windows</th></tr><tr><th colspan=\"6\">Server software</th></tr><tr><td>Operating<br>System<br>Version(s)</td><td>HP-UX<br>11.31<br>(Itanium<br>64-bit<br>only)</td><td>Solaris<br>2.10(64-bit)<br>(SPARC<br>environment<br>s only)</td><td>RHEL<br>6.2<br>64 bit<br>RHEL<br>7.2<br>64-bit</td><td>AIX<br>6.1<br>64-bit<br>AIX<br>7.1<br>64-bit</td><td>Windows<br>Server 2008 R2<br>SP1 *<br>Windows<br>Server 2012 R2<br>Standard</td></tr><tr><th colspan=\"6\">Related software</th></tr><tr><td>CoinMP<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>1.7.6</td></tr><tr><td>CPLEX<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>12.6.1</td></tr><tr><td>Gurobi<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>7.0.2</td></tr><tr><td>Java (64-bit)</td><td>8.0.08<br>(HP)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>N/A</td><td>6u45 (Oracle)<br>7u9 (Oracle)<br>8u102 (Oracle)</td></tr><tr><td>IBM XL C/C++<br>Runtime</td><td>N/A</td><td>N/A</td><td>N/A</td><td>13.1.2</td><td>N/A</td></tr><tr><td>Microsoft<br>Message<br>Queueing<br>(MSMQ)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>5.0 or later</td></tr><tr><td>Microsoft .NET<br>Framework</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>4.5</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th></th><th>HP</th><th>Solaris</th><th>RHEL</th><th>AIX</th><th>Microsoft<br>Windows</th></tr><tr><th colspan=\"6\">Server software</th></tr><tr><td>Operating<br>System<br>Version(s)</td><td>HP-UX<br>11.31<br>(Itanium<br>64-bit<br>only)</td><td>Solaris<br>2.10(64-bit)<br>(SPARC<br>environment<br>s only)</td><td>RHEL<br>6.2<br>64 bit<br>RHEL<br>7.2<br>64-bit</td><td>AIX<br>6.1<br>64-bit<br>AIX<br>7.1<br>64-bit</td><td>Windows<br>Server 2008 R2<br>SP1 *<br>Windows<br>Server 2012 R2<br>Standard</td></tr><tr><th colspan=\"6\">Related software</th></tr><tr><td>CoinMP<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>1.7.6</td></tr><tr><td>CPLEX<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>12.6.1</td></tr><tr><td>Gurobi<br>Optimizer<br>solver**</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>7.0.2</td></tr><tr><td>Java (64-bit)</td><td>8.0.08<br>(HP)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>6u45<br>(Oracle)<br>7u2<br>(Oracle)<br>8u102<br>(Oracle)</td><td>N/A</td><td>6u45 (Oracle)<br>7u9 (Oracle)<br>8u102 (Oracle)</td></tr><tr><td>IBM XL C/C++<br>Runtime</td><td>N/A</td><td>N/A</td><td>N/A</td><td>13.1.2</td><td>N/A</td></tr><tr><td>Microsoft<br>Message<br>Queueing<br>(MSMQ)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>5.0 or later</td></tr><tr><td>Microsoft .NET<br>Framework</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>4.5</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>ID</th><th>Progress</th><th>Priority</th><th>Short Description</th></tr><tr><td>PROJ-001</td><td>Not Started</td><td>Urgent</td><td>Essential Project Test</td></tr><tr><td>PROJ-002</td><td>Rejected</td><td>Deferred</td><td>Critical System Review</td></tr><tr><td>BUG-003</td><td>Approved</td><td>Critical</td><td>Backup All Task Items</td></tr><tr><td>BUG-004</td><td>Testing</td><td>Urgent</td><td>Complete Critical Process Migrate</td></tr><tr><td rowspan=\"2\">FEAT-005</td><td rowspan=\"2\">Pending Review</td><td rowspan=\"2\">Low</td><td rowspan=\"2\">Implement All Feature Items</td></tr><tr></tr><tr><td>PROJ-006</td><td>Cancelled</td><td>Normal</td><td>Final Report Review Check</td></tr><tr><td>PROJ-007</td><td>Delayed</td><td>High</td><td>Complete Final Analysis Schedule</td></tr><tr><td>BUG-008</td><td>In Progress</td><td>Critical</td><td>Essential Analysis Review</td></tr><tr><td>PROJ-009</td><td>Delayed</td><td>Urgent</td><td>Complete Secondary Update Deploy</td></tr><tr><td>ISSUE-010</td><td>Completed</td><td>Urgent</td><td>Urgent Documentation Fix Required</td></tr><tr><td rowspan=\"2\">BUG-011</td><td rowspan=\"2\">Pending Review</td><td rowspan=\"2\">Optional</td><td rowspan=\"2\">Primary Report Review</td></tr><tr></tr><tr><td>ISSUE-012</td><td>Not Started</td><td>Low</td><td>Prepare Review for Upgrade</td></tr><tr><td>PROJ-013</td><td>Completed</td><td>Normal</td><td>Final Optimization Upgrade Check</td></tr><tr><td>REQ-014</td><td>On Hold</td><td>Medium</td><td>Prepare Support for Backup</td></tr><tr><td>ITEM-015</td><td>Rejected</td><td>Deferred</td><td>Urgent Project Fix Required</td></tr><tr><td>WORK-016</td><td>In Progress</td><td>Critical</td><td>Deploy All Function Items</td></tr><tr><td>PROJ-017</td><td>Delayed</td><td>Deferred</td><td>Prepare Configuration for Monitor</td></tr><tr><td>TASK-018</td><td>In Progress</td><td>Urgent</td><td>Fix All Feature Items</td></tr><tr><td>REQ-019</td><td>Testing</td><td>Critical</td><td>Urgent Maintenance Fix Required</td></tr><tr><td>PROJ-020</td><td>On Hold</td><td>Low</td><td>Urgent Update Fix Required</td></tr><tr><td>TASK-021</td><td>Rejected</td><td>Normal</td><td>Complete Secondary System Develop</td></tr><tr><td>FEAT-022</td><td>Completed</td><td>Critical</td><td>Essential Training Implement</td></tr><tr><td>WORK-023</td><td>In Progress</td><td>Medium</td><td>Backup and Validate Optimization</td></tr><tr><td>FEAT-024</td><td>Approved</td><td>Deferred</td><td>Prepare Support for Configure</td></tr><tr><td>ITEM-025</td><td>Cancelled</td><td>Optional</td><td>Final Configuration Review</td></tr><tr><td>BUG-026</td><td>In Progress</td><td>Normal</td><td>Critical Training Review</td></tr><tr><td>BUG-027</td><td>Not Started</td><td>High</td><td>Implement the Critical Project</td></tr><tr><td>ISSUE-028</td><td>In Progress</td><td>Low</td><td>Urgent Optimization Fix Required</td></tr><tr><td>REQ-029</td><td>Rejected</td><td>Optional</td><td>Essential Optimization Review</td></tr><tr><td>PROJ-030</td><td>In Progress</td><td>Deferred</td><td>Final Deployment Migrate Check</td></tr><tr><td>TASK-031</td><td>In Progress</td><td>Critical</td><td>Primary Review Review</td></tr><tr><td>BUG-032</td><td>Completed</td><td>Optional</td><td>Prepare Deployment for Deploy</td></tr><tr><td>WORK-033</td><td>Completed</td><td>High</td><td>Develop the Secondary Support</td></tr><tr><td>TASK-034</td><td>In Progress</td><td>Low</td><td>Final Deployment Validate Check</td></tr><tr><td>BUG-035</td><td>Delayed</td><td>Critical</td><td>Update All Integration Items</td></tr><tr><td>FEAT-036</td><td>Testing</td><td>Urgent</td><td>Validate and Validate Support</td></tr><tr><td>BUG-037</td><td>On Hold</td><td>Low</td><td>Backup the Critical Training</td></tr><tr><td>ISSUE-038</td><td>Not Started</td><td>Critical</td><td>Urgent Optimization Fix Required</td></tr><tr><td>REQ-039</td><td>Not Started</td><td>High</td><td>Urgent Component Schedule</td></tr><tr><td>BUG-040</td><td>Delayed</td><td>High</td><td>Schedule Initial Project Meeting</td></tr><tr><td>TASK-041</td><td>Rejected</td><td>High</td><td>Urgent Training Fix Required</td></tr><tr><td>ISSUE-042</td><td>On Hold</td><td>Low</td><td>Analyze All Project Items</td></tr><tr><td>REQ-043</td><td>On Hold</td><td>Optional</td><td>Final Component Update Check</td></tr><tr><td>PROJ-044</td><td>In Progress</td><td>Low</td><td>Complete Final Report Test</td></tr><tr><td>PROJ-045</td><td>Completed</td><td>Normal</td><td>Urgent Process Fix Required</td></tr><tr><td>FEAT-046</td><td>Rejected</td><td>Critical</td><td>Develop and Validate Analysis</td></tr><tr><td>FEAT-047</td><td>In Progress</td><td>High</td><td>Prepare Function for Analyze</td></tr><tr><td>BUG-048</td><td>Cancelled</td><td>Low</td><td>Prepare Maintenance for Validate</td></tr><tr><td>TASK-049</td><td>In Progress</td><td>Deferred</td><td>Complete Major Module Update</td></tr><tr><td>REQ-050</td><td>On Hold</td><td>Medium</td><td>Urgent Support Fix Required</td></tr><tr><td>TASK-051</td><td>In Progress</td><td>High</td><td>Complete Urgent Support Review</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>Version</th><th>Released</th><th>Superseded</th><th>Standaed Support Ends</th><th>Extended Support Ends</th></tr><tr><td>Date</td><td>Plan(%)</td><td>Actual(%)</td><td>任务总数</td><td>已完成任务数</td></tr><tr><td>25-05-09</td><td>6.2</td><td>6.2</td><td>15</td><td>15</td></tr><tr><td>25-05-16</td><td>8.3</td><td>8.3</td><td>20</td><td>20</td></tr><tr><td>25-05-23</td><td>10.7</td><td>10.7</td><td>26</td><td>26</td></tr><tr><td>25-05-30</td><td>14.0</td><td>12.8</td><td>34</td><td>31</td></tr><tr><td>25-06-13</td><td>19.0</td><td></td><td></td><td></td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>Tracking numbers</th><th>Description</th></tr><tr><td>(451763)</td><td>Writing a formal paper on the semiconductor industry (chip industry)<br><br>requires a balance of technical insight, economic analysis, and geopolitical context.<br>[image:efd2bc27-8e87-4634-b7c7-e76dbcbce427]<br><br>Below is a structured academic essay</td></tr><tr><td>SR00320423<br>(450597,<br>45490)</td><td>The semiconductor industry serves as the nervous system of the modern global economy. From the simplest household appliances to the most sophisticated Artificial Intelligence (AI) clusters, \"chips\" are the fundamental building (blocks of digital) transformation.<br><br>● As we move further into the decade, the industry is transitioning from a period of globalization:<br><br>● The industry is not a monolith but a highly fragmented and specialized ecosystem. It is generally divided into three primary business models:<br><br>Semiconductors have become a tool of foreign policy. Export controls and domestic subsidy programs (like the U.S. CHIPS Act and .</td></tr><tr><td>(502677)</td><td>Moore's Law\"—the observation that the number of transistors on a<br><br>chip doubles approximately every two years—is slowing down. To maintain performance gains, the industry is turning to Advanced Packaging (3D stacking) and architectures.Semiconductors have become a tool of foreign policy.<br><br>■ The future of the chip industry will likely be defined by the \"AI-First\" hardware paradigm. As AI models grow in complexity, the bottleneck is shifting from raw processing</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><td>Tracking numbers</td><td>Description</td></tr><tr><td>(450022)</td><td> The semiconductor industry remains the most critical sector for 21st-century sovereignty. While the challenges of escalating costs and geopolitical tensions are significant, the relentless pace of innovation ensures that semiconductors will continue to dictate the speed of human progress. If this is for a university course, ensure you cite sources like</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><td>Tracking</td><td>Description<br>numbers</td></tr><tr><td>(452847)</td><td>You can now right-click a Run Report block in the work area,<br>and then<br>click Edit Report on the shortcut menu to automatically launch<br>the<br>Formatter and edit the block's associated report.</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>Tracking<br>numbers</th><th>Description</th></tr><tr><td>(453263)<br>|◄◄</td><td>The settings on the Advanced Settings tab of the Adapter configuration have been reorganized, by removing the Oracle and DB2 groupings. The settings common to all Adapters appear first, and the database type-specific settings appear later on the tab. Also see 451650 for Adapter-side changes.<br>The settings related to the T Log Adapter have been removed because they are no longer supported.</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

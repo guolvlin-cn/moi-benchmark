@@ -1,0 +1,84 @@
+{
+  "doc_id": "83_9a8a0ef637",
+  "_generated_at": "2026-07-30T06:37:08+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "2026.01.05 11:49 01234\n矩阵起源MatrixOne_AI 原生超融合数据库产品\n001\n万物皆可MO\nRev：48\npage No1/3",
+        "count": 1
+      }
+    ],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 2,
+    "table_html_summaries": [
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Task ID</th><th>Task Description</th><th>Priority</th><th>Assigned Department</th><th>Estimated Hours</th><th>Status</th></tr><tr><td>T-001</td><td>Initial Client Consultation</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Requirement Analysis</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Market Competitor Audit</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr></table>",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Task ID</th><th>Task Description</th><th>Priority</th><th>Assigned Department</th><th>Estimated Hours</th><th>Status</th></tr><tr><td>T-004</td><td>UI Wireframe Design</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Database Schema Setup</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "1. 测试表格标题丢失",
+        "level": 1
+      },
+      {
+        "text": "1.1.测试表格标题是否丢失",
+        "level": 2
+      },
+      {
+        "text": "1.1.1. 普通表一的标题",
+        "level": 3
+      },
+      {
+        "text": "1.1.2. 表同表二的标题",
+        "level": 3
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "1. 测试表格标题丢失",
+      "1.1.测试表格标题是否丢失",
+      "1.1.1. 普通表一的标题",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Task ID</th><th>Task Description</th><th>Priority</th><th>Assigned Department</th><th>Estimated Hours</th><th>Status</th></tr><tr><td>T-001</td><td>Initial Client Consultation</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Requirement Analysis</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Market Competitor Audit</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr></table>",
+      "1.1.2. 表同表二的标题",
+      "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Task ID</th><th>Task Description</th><th>Priority</th><th>Assigned Department</th><th>Estimated Hours</th><th>Status</th></tr><tr><td>T-004</td><td>UI Wireframe Design</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Database Schema Setup</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr></table>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": []
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Task ID</th><th>Task Description</th><th>Priority</th><th>Assigned Department</th><th>Estimated Hours</th><th>Status</th></tr><tr><td>T-001</td><td>Initial Client Consultation</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Requirement Analysis</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Market Competitor Audit</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\"><tr><th>Task ID</th><th>Task Description</th><th>Priority</th><th>Assigned Department</th><th>Estimated Hours</th><th>Status</th></tr><tr><td>T-004</td><td>UI Wireframe Design</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Database Schema Setup</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

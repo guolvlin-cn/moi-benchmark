@@ -1,0 +1,125 @@
+{
+  "doc_id": "97TagDes_3770cb523c",
+  "_generated_at": "2026-07-30T09:50:51+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Applied APF RTD 9.4.0 Dispatch API Guide\nChapter 1. Using the Dispatch API",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "Applied Materials Confidential | 13",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 1,
+    "table_html_summaries": [
+      "<table><tr><th>Tag</th><th>Description</th></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formating the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide<br>how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The<br>WorkStram dispatcher interface uses this flag to determine<br>whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-<br>DIAGS</td><td>This is diagnostic information from the dispatcher, relating<br>to the execution time of the rule. Note that it does not follow<br>the same &amp;quot;#tag value&amp;quot; formats as the otheer tags.</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "Dispatch list format",
+        "level": 1
+      },
+      {
+        "text": "Tag descriptions",
+        "level": 1
+      },
+      {
+        "text": "Parding the dispatch list",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "Dispatch list format",
+      "  Although the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful. Pre-defined headers for the dispatch list",
+      "  Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API. Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.",
+      "Tag descriptions",
+      "  The following table provides description for the tages used in a dispatch query result:",
+      "<table><tr><th>Tag</th><th>Description</th></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formating the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide<br>how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The<br>WorkStram dispatcher interface uses this flag to determine<br>whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-<br>DIAGS</td><td>This is diagnostic information from the dispatcher, relating<br>to the execution time of the rule. Note that it does not follow<br>the same &amp;quot;#tag value&amp;quot; formats as the otheer tags.</td></tr></table>",
+      "Parding the dispatch list",
+      "  The following functions are available for parding and processing the dispatcher result:",
+      "[C++]",
+      "#include \"writerlibx/iss_schedmsg.h\"",
+      "#include \"writerlibx/iss_schedmsg_print.h\"",
+      "/* Parsing of raw dispatch results */",
+      "schedmsg * iss_parserSchedMsg(const char *rawText, u_int text Size);"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "  Although the Dispatch API provides functions for parsing and accessing the dispatch result, you may want to handle the response yourself. In that case, this description of the returned dispatch list may be helpful. Pre-defined headers for the dispatch list",
+          "page_num": 1
+        },
+        {
+          "text": "  Designed for ZLink IoT Cloud (version 3.2+), enables gateways and edge devices to exchange batch control or data acquisition tasks using a compact and extensible TLV (Type-Length-Value) binary encoding. This approach ensures compatibility across vendors #rows, supports dynamic task type extensions, and performs reliably even under constrained network conditions. The following sections outline the technical specification and usage guidelines for this fictional API. Also, note that there is one key, #ISS_SLIS_DIAGS, which does not confirmed.",
+          "page_num": 1
+        },
+        {
+          "text": "  The following table provides description for the tages used in a dispatch query result:",
+          "page_num": 1
+        },
+        {
+          "text": "  The following functions are available for parding and processing the dispatcher result:",
+          "page_num": 1
+        },
+        {
+          "text": "[C++]",
+          "page_num": 1
+        },
+        {
+          "text": "#include \"writerlibx/iss_schedmsg.h\"",
+          "page_num": 1
+        },
+        {
+          "text": "#include \"writerlibx/iss_schedmsg_print.h\"",
+          "page_num": 1
+        },
+        {
+          "text": "/* Parsing of raw dispatch results */",
+          "page_num": 1
+        },
+        {
+          "text": "schedmsg * iss_parserSchedMsg(const char *rawText, u_int text Size);",
+          "page_num": 1
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>Tag</th><th>Description</th></tr><tr><td>#headers</td><td>Pre-defined headers for the dispatch list.</td></tr><tr><td>#columns</td><td>The column heading names for the list.</td></tr><tr><td>#widths</td><td>The widths for each column, used in formating the data.</td></tr><tr><td>#types</td><td>The data types for each column. Normally used to decide<br>how to justify a column by default.</td></tr><tr><td>#lotcol</td><td>Which column contains the lot names.</td></tr><tr><td>#rows</td><td>The query data table in row-major form.</td></tr><tr><td>#blocked</td><td>A flag for each lot that indicates if it is blocked. The<br>WorkStram dispatcher interface uses this flag to determine<br>whether that lot is selectable by the operator.</td></tr><tr><td>#ISS-DDIS-<br>DIAGS</td><td>This is diagnostic information from the dispatcher, relating<br>to the execution time of the rule. Note that it does not follow<br>the same &amp;quot;#tag value&amp;quot; formats as the otheer tags.</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

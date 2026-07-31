@@ -1,0 +1,189 @@
+{
+  "doc_id": "165_c1a8b04492",
+  "_generated_at": "2026-07-30T07:18:36+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Semiconfuctor Manufaceturing International Corporation\nDoc.No.:QR-IQCS-01-3010\nDoc.Title: SMIC Raw Material Abnormal Handing O.I.\nRev.:1\nPage No.:1/5",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC\nAccording to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 4,
+    "table_html_summaries": [
+      "<table><tr><th>Material Group</th><th>Sub-Group</th></tr><tr><td rowspan=\"3\">Wafer</td><td>200mm wafer</td></tr><tr><td>300mm wafer</td></tr><tr><td>Control wafer</td></tr><tr><td>Gas</td><td>——</td></tr><tr><td rowspan=\"3\">Chemical</td><td>Bulk Chemical</td></tr><tr><td>Formula Chemical</td></tr><tr><td>Precursor and others</td></tr><tr><td rowspan=\"2\">Photo Resst</td><td>Photo Resist</td></tr><tr><td>Photo Chermical</td></tr><tr><td>Pad</td><td>——</td></tr><tr><td>Disk</td><td>——</td></tr><tr><td>Slurry</td><td>——</td></tr><tr><td>Quartz</td><td>——</td></tr><tr><td>Target</td><td>——</td></tr><tr><td>Mask Blank</td><td>——</td></tr><tr><td>Pellicle</td><td>——</td></tr></table>",
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. 触发 OOS 或其他检验异常\n2. 隔离 OSS 物料\n3. 发送 CAR 给供应商\n4. 供应商调查原因并回复 CAR\n5. MQE 审核报告\n6. MQE 触发 IQND\n7. 基于 IOND 结论进行物料处置\n\n**总结：** 该图展示了一个包含多个步骤的线性处理流程，从异常触发开始，经过一系列处理和审核环节，最终得出结论。</td><td>MQE<br/><br/>MQE/WH<br/><br/>MQE<br/><br/>供应商<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE/WH</td><td>新批次触发 OOS 或其他检验异常<br/><br/>隔离异常批次<br/><br/>MQE 发送 CAR 给供应商<br/><br/>供应商确认异常原因并回复 CAR<br/><br/>MQE 审核报告<br/><br/>MQE 触发 IQND<br/><br/>基于 IQND 结论处置物料</td></tr></table>",
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. 使用前发现异常\n2. 隔离异常物料\n3. MQE 工程师现场确认\n4. 如需供应商可现场确认\n5. 物料异常（判断节点）\n   - 条件分支：否 → Fab/FAC 处置\n   - 条件分支：是 → 发送 CAR 给供应商并 IQND 退货\n6. 发送 CAR 给供应商并 IQND 退货\n7. MQE 审核 CAR\n8. 事件关闭\n\n**总结：** 该图展示了一个包含起始、处理步骤、决策分支及终止状态的线性流程结构。</td><td>Fab/FAC<br/><br/>MQE/FAC/Fab<br/><br/>MQE<br/><br/>供应商<br/><br/>Fab/FAC<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE</td><td>使用前发现异常<br/><br/>隔离异常批次<br/><br/>MQE 工程师现场确认<br/><br/>如有必要，供应商可现场确认异常情况<br/><br/>如异常与原料无关，Fab/FAC 自行处置<br/><br/>如确为原物料异常，MQE 发送 CAR 给供应商并 IQND 退货<br/><br/>MQE 审核报告<br/><br/>事件关闭</td></tr></table>",
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. MQE 工程师触发 IOND\n2. MQE 四级确认是否特\n   - 条件分支：否 → MC 评估库存确认是\n   - 条件分支：是 → User 司机评估风险确认是否可以特采\n3. MC 评估库存确认是\n   - 条件分支：是 → User 司机评估风险确认是否可以特采\n   - 条件分支：否 → PUR 确认退货\n4. User 司机评估风险确认是否可以特采\n5. MQE 和 User 三级判断\n   - 条件分支：否 → PUR 确认退货\n   - 条件分支：是 → 厂长判断是否\n6. PUR 确认退货\n   - 条件分支：（向下）→ MQE 审核\n   - 条件分支：（向右下）→ 事件关闭\n7. 厂长判断是否\n   - 条件分支：否 → MQE 审核\n   - 条件分支：（向下）→ MQE 审核 CAR\n8. MQE 审核\n9. MQE 审核 CAR\n10. MQE 审核 CAR\n11. 事件关闭\n\n**总结：** 该图展示了一个包含多个决策节点、评估步骤及审核流程的业务处理流程图。</td><td>Fab/FAC<br/><br/>MQE/FAC/Fab<br/><br/>MQE<br/><br/>供应商<br/><br/>Fab/FAC<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE</td><td>使用前发现异常<br/><br/>隔离异常批次<br/><br/>MQE 工程师现场确认<br/><br/>如有必要，供应商可现场确认异常情况<br/><br/>如异常与原料无关，Fab/FAC 自行处置<br/><br/>如确为原物料异常，MQE 发送 CAR 给供应商并 IQND 退货<br/><br/>MQE 审核报告<br/><br/>事件关闭</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "1. Title: SMIC Raw Material Abnormal Handing O.I.",
+        "level": 1
+      },
+      {
+        "text": "2. Purpose:",
+        "level": 1
+      },
+      {
+        "text": "2.1. To establish SMIC internal procedure for periodic performance evaluation and communication on with Class-I",
+        "level": 2
+      },
+      {
+        "text": "2.2. This document defines QCDESE evaluation procedures including scoring rules, internal review process, approval of final report, publication, and communication post-publication for SMIC Class-I",
+        "level": 2
+      },
+      {
+        "text": "3. Scope: Applies to all SMIC group company and all SMIC Class-I Suppliers(Raw Material).",
+        "level": 1
+      },
+      {
+        "text": "4. Nomenclature:",
+        "level": 1
+      },
+      {
+        "text": "4.1. CSL: Chemical Safety Label.",
+        "level": 2
+      },
+      {
+        "text": "4.2. MSDS: Meterial Safety Data Sheet.",
+        "level": 2
+      },
+      {
+        "text": "4.3. CSL: Chemical Safety Label.",
+        "level": 2
+      },
+      {
+        "text": "4.4. MSDS: Meterial Safety Data Sheet.",
+        "level": 2
+      },
+      {
+        "text": "4.5. CSL: Chemical Safety Label.",
+        "level": 2
+      },
+      {
+        "text": "4.6. MSDS: Meterial Safety Data Sheet.",
+        "level": 2
+      },
+      {
+        "text": "4.7. CSL: Chemical Safety Label.",
+        "level": 2
+      },
+      {
+        "text": "4.8. MSDS: Meterial Safety Data Sheet.",
+        "level": 2
+      },
+      {
+        "text": "5. 异常事件处理流程：",
+        "level": 1
+      },
+      {
+        "text": "5.1. 原材料检验过程中出发 OOS 或其他检验异常处理流程",
+        "level": 2
+      },
+      {
+        "text": "5.2. IQND流程：",
+        "level": 2
+      },
+      {
+        "text": "5.3. IQND流程：",
+        "level": 2
+      },
+      {
+        "text": "6. Project background",
+        "level": 1
+      },
+      {
+        "text": "6.1. DCC: Document Control Center",
+        "level": 2
+      },
+      {
+        "text": "6.2. DCN: Document Change Notice(for Company Rules and Regulations)",
+        "level": 2
+      },
+      {
+        "text": "6.3. DMS: Document Management System",
+        "level": 2
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "1. Title: SMIC Raw Material Abnormal Handing O.I.",
+      "2. Purpose:",
+      "2.1. To establish SMIC internal procedure for periodic performance evaluation and communication on with Class-I",
+      "2.2. This document defines QCDESE evaluation procedures including scoring rules, internal review process, approval of final report, publication, and communication post-publication for SMIC Class-I",
+      "3. Scope: Applies to all SMIC group company and all SMIC Class-I Suppliers(Raw Material).",
+      "<table><tr><th>Material Group</th><th>Sub-Group</th></tr><tr><td rowspan=\"3\">Wafer</td><td>200mm wafer</td></tr><tr><td>300mm wafer</td></tr><tr><td>Control wafer</td></tr><tr><td>Gas</td><td>——</td></tr><tr><td rowspan=\"3\">Chemical</td><td>Bulk Chemical</td></tr><tr><td>Formula Chemical</td></tr><tr><td>Precursor and others</td></tr><tr><td rowspan=\"2\">Photo Resst</td><td>Photo Resist</td></tr><tr><td>Photo Chermical</td></tr><tr><td>Pad</td><td>——</td></tr><tr><td>Disk</td><td>——</td></tr><tr><td>Slurry</td><td>——</td></tr><tr><td>Quartz</td><td>——</td></tr><tr><td>Target</td><td>——</td></tr><tr><td>Mask Blank</td><td>——</td></tr><tr><td>Pellicle</td><td>——</td></tr></table>",
+      "4. Nomenclature:",
+      "4.1. CSL: Chemical Safety Label.",
+      "4.2. MSDS: Meterial Safety Data Sheet.",
+      "4.3. CSL: Chemical Safety Label.",
+      "4.4. MSDS: Meterial Safety Data Sheet.",
+      "4.5. CSL: Chemical Safety Label.",
+      "4.6. MSDS: Meterial Safety Data Sheet.",
+      "4.7. CSL: Chemical Safety Label.",
+      "4.8. MSDS: Meterial Safety Data Sheet.",
+      "5. 异常事件处理流程：",
+      "5.1. 原材料检验过程中出发 OOS 或其他检验异常处理流程",
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. 触发 OOS 或其他检验异常\n2. 隔离 OSS 物料\n3. 发送 CAR 给供应商\n4. 供应商调查原因并回复 CAR\n5. MQE 审核报告\n6. MQE 触发 IQND\n7. 基于 IOND 结论进行物料处置\n\n**总结：** 该图展示了一个包含多个步骤的线性处理流程，从异常触发开始，经过一系列处理和审核环节，最终得出结论。</td><td>MQE<br/><br/>MQE/WH<br/><br/>MQE<br/><br/>供应商<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE/WH</td><td>新批次触发 OOS 或其他检验异常<br/><br/>隔离异常批次<br/><br/>MQE 发送 CAR 给供应商<br/><br/>供应商确认异常原因并回复 CAR<br/><br/>MQE 审核报告<br/><br/>MQE 触发 IQND<br/><br/>基于 IQND 结论处置物料</td></tr></table>",
+      "5.2. IQND流程：",
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. 使用前发现异常\n2. 隔离异常物料\n3. MQE 工程师现场确认\n4. 如需供应商可现场确认\n5. 物料异常（判断节点）\n   - 条件分支：否 → Fab/FAC 处置\n   - 条件分支：是 → 发送 CAR 给供应商并 IQND 退货\n6. 发送 CAR 给供应商并 IQND 退货\n7. MQE 审核 CAR\n8. 事件关闭\n\n**总结：** 该图展示了一个包含起始、处理步骤、决策分支及终止状态的线性流程结构。</td><td>Fab/FAC<br/><br/>MQE/FAC/Fab<br/><br/>MQE<br/><br/>供应商<br/><br/>Fab/FAC<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE</td><td>使用前发现异常<br/><br/>隔离异常批次<br/><br/>MQE 工程师现场确认<br/><br/>如有必要，供应商可现场确认异常情况<br/><br/>如异常与原料无关，Fab/FAC 自行处置<br/><br/>如确为原物料异常，MQE 发送 CAR 给供应商并 IQND 退货<br/><br/>MQE 审核报告<br/><br/>事件关闭</td></tr></table>",
+      "5.3. IQND流程：",
+      "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. MQE 工程师触发 IOND\n2. MQE 四级确认是否特\n   - 条件分支：否 → MC 评估库存确认是\n   - 条件分支：是 → User 司机评估风险确认是否可以特采\n3. MC 评估库存确认是\n   - 条件分支：是 → User 司机评估风险确认是否可以特采\n   - 条件分支：否 → PUR 确认退货\n4. User 司机评估风险确认是否可以特采\n5. MQE 和 User 三级判断\n   - 条件分支：否 → PUR 确认退货\n   - 条件分支：是 → 厂长判断是否\n6. PUR 确认退货\n   - 条件分支：（向下）→ MQE 审核\n   - 条件分支：（向右下）→ 事件关闭\n7. 厂长判断是否\n   - 条件分支：否 → MQE 审核\n   - 条件分支：（向下）→ MQE 审核 CAR\n8. MQE 审核\n9. MQE 审核 CAR\n10. MQE 审核 CAR\n11. 事件关闭\n\n**总结：** 该图展示了一个包含多个决策节点、评估步骤及审核流程的业务处理流程图。</td><td>Fab/FAC<br/><br/>MQE/FAC/Fab<br/><br/>MQE<br/><br/>供应商<br/><br/>Fab/FAC<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE</td><td>使用前发现异常<br/><br/>隔离异常批次<br/><br/>MQE 工程师现场确认<br/><br/>如有必要，供应商可现场确认异常情况<br/><br/>如异常与原料无关，Fab/FAC 自行处置<br/><br/>如确为原物料异常，MQE 发送 CAR 给供应商并 IQND 退货<br/><br/>MQE 审核报告<br/><br/>事件关闭</td></tr></table>",
+      "6. Project background",
+      "6.1. DCC: Document Control Center",
+      "6.2. DCN: Document Change Notice(for Company Rules and Regulations)",
+      "6.3. DMS: Document Management System"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {}
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": []
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>Material Group</th><th>Sub-Group</th></tr><tr><td rowspan=\"3\">Wafer</td><td>200mm wafer</td></tr><tr><td>300mm wafer</td></tr><tr><td>Control wafer</td></tr><tr><td>Gas</td><td>——</td></tr><tr><td rowspan=\"3\">Chemical</td><td>Bulk Chemical</td></tr><tr><td>Formula Chemical</td></tr><tr><td>Precursor and others</td></tr><tr><td rowspan=\"2\">Photo Resst</td><td>Photo Resist</td></tr><tr><td>Photo Chermical</td></tr><tr><td>Pad</td><td>——</td></tr><tr><td>Disk</td><td>——</td></tr><tr><td>Slurry</td><td>——</td></tr><tr><td>Quartz</td><td>——</td></tr><tr><td>Target</td><td>——</td></tr><tr><td>Mask Blank</td><td>——</td></tr><tr><td>Pellicle</td><td>——</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. 触发 OOS 或其他检验异常\n2. 隔离 OSS 物料\n3. 发送 CAR 给供应商\n4. 供应商调查原因并回复 CAR\n5. MQE 审核报告\n6. MQE 触发 IQND\n7. 基于 IOND 结论进行物料处置\n\n**总结：** 该图展示了一个包含多个步骤的线性处理流程，从异常触发开始，经过一系列处理和审核环节，最终得出结论。</td><td>MQE<br/><br/>MQE/WH<br/><br/>MQE<br/><br/>供应商<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE/WH</td><td>新批次触发 OOS 或其他检验异常<br/><br/>隔离异常批次<br/><br/>MQE 发送 CAR 给供应商<br/><br/>供应商确认异常原因并回复 CAR<br/><br/>MQE 审核报告<br/><br/>MQE 触发 IQND<br/><br/>基于 IQND 结论处置物料</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. 使用前发现异常\n2. 隔离异常物料\n3. MQE 工程师现场确认\n4. 如需供应商可现场确认\n5. 物料异常（判断节点）\n   - 条件分支：否 → Fab/FAC 处置\n   - 条件分支：是 → 发送 CAR 给供应商并 IQND 退货\n6. 发送 CAR 给供应商并 IQND 退货\n7. MQE 审核 CAR\n8. 事件关闭\n\n**总结：** 该图展示了一个包含起始、处理步骤、决策分支及终止状态的线性流程结构。</td><td>Fab/FAC<br/><br/>MQE/FAC/Fab<br/><br/>MQE<br/><br/>供应商<br/><br/>Fab/FAC<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE</td><td>使用前发现异常<br/><br/>隔离异常批次<br/><br/>MQE 工程师现场确认<br/><br/>如有必要，供应商可现场确认异常情况<br/><br/>如异常与原料无关，Fab/FAC 自行处置<br/><br/>如确为原物料异常，MQE 发送 CAR 给供应商并 IQND 退货<br/><br/>MQE 审核报告<br/><br/>事件关闭</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>作业流程</th><th>负责单位/人员</th><th>作业说明</th></tr><tr><td>**类型：** 流程图\n\n**节点和流程：**\n1. MQE 工程师触发 IOND\n2. MQE 四级确认是否特\n   - 条件分支：否 → MC 评估库存确认是\n   - 条件分支：是 → User 司机评估风险确认是否可以特采\n3. MC 评估库存确认是\n   - 条件分支：是 → User 司机评估风险确认是否可以特采\n   - 条件分支：否 → PUR 确认退货\n4. User 司机评估风险确认是否可以特采\n5. MQE 和 User 三级判断\n   - 条件分支：否 → PUR 确认退货\n   - 条件分支：是 → 厂长判断是否\n6. PUR 确认退货\n   - 条件分支：（向下）→ MQE 审核\n   - 条件分支：（向右下）→ 事件关闭\n7. 厂长判断是否\n   - 条件分支：否 → MQE 审核\n   - 条件分支：（向下）→ MQE 审核 CAR\n8. MQE 审核\n9. MQE 审核 CAR\n10. MQE 审核 CAR\n11. 事件关闭\n\n**总结：** 该图展示了一个包含多个决策节点、评估步骤及审核流程的业务处理流程图。</td><td>Fab/FAC<br/><br/>MQE/FAC/Fab<br/><br/>MQE<br/><br/>供应商<br/><br/>Fab/FAC<br/><br/>MQE<br/><br/>MQE<br/><br/>MQE</td><td>使用前发现异常<br/><br/>隔离异常批次<br/><br/>MQE 工程师现场确认<br/><br/>如有必要，供应商可现场确认异常情况<br/><br/>如异常与原料无关，Fab/FAC 自行处置<br/><br/>如确为原物料异常，MQE 发送 CAR 给供应商并 IQND 退货<br/><br/>MQE 审核报告<br/><br/>事件关闭</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

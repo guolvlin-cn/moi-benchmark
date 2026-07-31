@@ -1,0 +1,333 @@
+{
+  "filename": "213流程图表被识别为一张图片.docx",
+  "filetype": "DOCX",
+  "block_count": 9,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          39.0,
+          29.0,
+          114.0,
+          73.0
+        ],
+        "polygon": [
+          [
+            39,
+            29
+          ],
+          [
+            114,
+            29
+          ],
+          [
+            114,
+            73
+          ],
+          [
+            39,
+            73
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          122.0,
+          45.0,
+          539.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            122,
+            45
+          ],
+          [
+            540,
+            45
+          ],
+          [
+            540,
+            66
+          ],
+          [
+            122,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.: CR-WHMS-01-2005</td><td>Doc.Title:SMIC Raw Materials Warehouse Management Procedure</td><td>Rec.:1</td><td>Page No.:1/1</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          42.0,
+          82.0,
+          550.0,
+          113.0
+        ],
+        "polygon": [
+          [
+            42,
+            82
+          ],
+          [
+            550,
+            82
+          ],
+          [
+            550,
+            113
+          ],
+          [
+            42,
+            113
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "1. 仓管系统功能之维护 SAP System",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          60.0,
+          127.0,
+          272.0,
+          143.0
+        ],
+        "polygon": [
+          [
+            60,
+            127
+          ],
+          [
+            272,
+            127
+          ],
+          [
+            272,
+            143
+          ],
+          [
+            60,
+            143
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "1.1. 仓管作业流程图：",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          101.0,
+          159.0,
+          236.0,
+          174.0
+        ],
+        "polygon": [
+          [
+            101,
+            159
+          ],
+          [
+            236,
+            159
+          ],
+          [
+            236,
+            174
+          ],
+          [
+            101,
+            174
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          34.0,
+          190.0,
+          559.0,
+          660.0
+        ],
+        "polygon": [
+          [
+            34,
+            190
+          ],
+          [
+            559,
+            190
+          ],
+          [
+            559,
+            661
+          ],
+          [
+            34,
+            661
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          38.0,
+          770.0,
+          538.0,
+          792.0
+        ],
+        "polygon": [
+          [
+            38,
+            770
+          ],
+          [
+            539,
+            770
+          ],
+          [
+            539,
+            793
+          ],
+          [
+            38,
+            793
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-8",
+      "index": 7,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          38.0,
+          803.0,
+          398.0,
+          814.0
+        ],
+        "polygon": [
+          [
+            38,
+            803
+          ],
+          [
+            395,
+            803
+          ],
+          [
+            395,
+            813
+          ],
+          [
+            38,
+            813
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-9",
+      "index": 8,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          434.0,
+          803.0,
+          474.0,
+          813.0
+        ],
+        "polygon": [
+          [
+            434,
+            803
+          ],
+          [
+            474,
+            803
+          ],
+          [
+            474,
+            813
+          ],
+          [
+            434,
+            813
+          ]
+        ]
+      }
+    }
+  ]
+}

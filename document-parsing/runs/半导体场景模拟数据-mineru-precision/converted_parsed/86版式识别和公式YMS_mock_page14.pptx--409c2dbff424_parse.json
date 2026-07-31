@@ -1,0 +1,187 @@
+{
+  "filename": "132d80ef-6133-4429-ba00-d37ec618e81b_content_list.json",
+  "filetype": "JSON",
+  "block_count": 22,
+  "blocks": [
+    {
+      "id": "5b6bce1c-28b8-4e83-a12b-33d2020f31e0",
+      "index": 0,
+      "type": "title",
+      "level": "2",
+      "content": "YMS\\_mock",
+      "page_num": 1
+    },
+    {
+      "id": "a2926c9f-9f4f-4def-8021-097705f8ba16",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "MatrixOne Intelligence",
+      "page_num": 1
+    },
+    {
+      "id": "23f7a7d8-aa86-4577-88f8-ac60acae48e5",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备 44030402004672号 | 粤ICP备2021044820号",
+      "page_num": 1
+    },
+    {
+      "id": "b13999a5-90e2-455f-84b0-47efb635ce86",
+      "index": 3,
+      "type": "title",
+      "level": "2",
+      "content": "P14: 正态分布",
+      "page_num": 2
+    },
+    {
+      "id": "9d1801cb-f5f8-41ea-82b2-38125dfe58e5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "- 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。\n- 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。\n- 正态分布的概率密度函数（Probability Density Function, PDF） 的数学表达式为:1. 当 x=μ 时，指数部分为0，函数取到最大值。2. 当 x 远离 μ 时，(x−μ)^2增大，指数部分迅速衰减为0，导致概率密度急剧下降。\n- 正态曲线下\n- 横轴区间(μ-σ,μ+σ) 内的面积为 68.268949%\n- P{|X-μ|<σ}=2Φ（1）-1=0.6826\n- 横轴区间（μ-1.96σ,μ+1.96σ）内的面积为95.449974%\n- P{|X-μ|<2σ}=2Φ（2）-1=0.9544\n- 横轴区间（μ-2.58σ,μ+2.58σ）内的面积为99.730020%\n- P{|X-μ|<3σ}=2Φ（3）-1=0.9974",
+      "page_num": 2
+    },
+    {
+      "id": "1e19ef54-4eb7-4846-8fa9-faf958592732",
+      "index": 5,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/4da4f6bb0881b978fba33a38a1515daaa646c7089ab5fcc44c560ae2a888d3f0.jpg",
+      "page_num": 2
+    },
+    {
+      "id": "49f4fd55-844f-4ded-8987-d3f193e242ae",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "- “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能.",
+      "page_num": 2
+    },
+    {
+      "id": "aeb8e9de-7eda-41fa-b04f-1b5863fc68fa",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "MatrixOne Intelligence",
+      "page_num": 2
+    },
+    {
+      "id": "e08bfc3f-9337-494c-830f-d639fb772486",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备 44030402004672号 | 粤ICP备2021044820号",
+      "page_num": 2
+    },
+    {
+      "id": "4718cdff-f98c-4df7-96e3-558ff289ff05",
+      "index": 9,
+      "type": "title",
+      "level": "2",
+      "content": "**IMP MCI Tune Beam-AMU Out Of Tange Error**",
+      "page_num": 3
+    },
+    {
+      "id": "56cb72df-d7da-42a8-90c1-c7e87e00455f",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "- Issue Description:\n- Pie inform 18ums 03YB S4H154/159 WAT VBG fail\n- Impact:\n- VBG&GOI scrap\n- Evidence & Analysis:\n- tile 1 desc\n- tile 2 desc\n- tile 3 desc\n- tile 4 desc\n- tile 5 desc\n- Root Cause:\n- Dry pump含金属成分的密封镀层再高温下附着不稳定\n- Actions:\n- Dry pump维修不是用密封镀层或使用不含金属成分的密封镀层\n- 值班手册更新：Asher太极更换dry pump constraint LDD loop",
+      "page_num": 3
+    },
+    {
+      "id": "2262aea9-781b-4f4e-a77f-fe04d11c0176",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "11、15",
+      "page_num": 3
+    },
+    {
+      "id": "742adf1b-685c-48ab-b59c-ad850d671c1d",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "- Lot Disposition\n- scrap 3xxx xxx xxx",
+      "page_num": 3
+    },
+    {
+      "id": "df336499-105a-4736-852e-587076551834",
+      "index": 13,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/4da4f6bb0881b978fba33a38a1515daaa646c7089ab5fcc44c560ae2a888d3f0.jpg",
+      "page_num": 3
+    },
+    {
+      "id": "a25fc71d-d360-4b54-b9d6-4ec3ce3390bf",
+      "index": 14,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/9c668afbba0d959c0c8d625682cc788789d0458b08977d9533d2678fb29595ca.png",
+      "page_num": 3
+    },
+    {
+      "id": "9336d176-f945-4863-8a1a-8b16985b71a8",
+      "index": 15,
+      "type": "table",
+      "level": null,
+      "content": "<table>\n  <tr>\n    <th>xx</th>\n    <th>xx</th>\n    <th>xx</th>\n  </tr>\n  <tr>\n    <td>a</td>\n    <td>a</td>\n    <td>q</td>\n  </tr>\n  <tr>\n    <td>b</td>\n    <td>b</td>\n    <td>w</td>\n  </tr>\n  <tr>\n    <td>c</td>\n    <td>c</td>\n    <td>e</td>\n  </tr>\n  <tr>\n    <td>d</td>\n    <td>d</td>\n    <td>r</td>\n  </tr>\n</table>",
+      "page_num": 3
+    },
+    {
+      "id": "1486710c-ae3d-47d5-869c-cf552cb5c973",
+      "index": 16,
+      "type": "title",
+      "level": "2",
+      "content": "P14: 正态分布",
+      "page_num": 4
+    },
+    {
+      "id": "9a688709-f933-4ff7-8d27-4b8afd584918",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "- 正态分布（又称高斯分布）是统计学中最重要、最常见的连续概率分布。其曲线呈对称的“钟形”，完美描述了自然界、社会及测量中大量随机变量的分布规律。高斯是首位将这一分布与误差理论深刻结合，并赋予其强大实际应用价值的科学家。正是由于他在天文学和测量学领域的权威影响，这个分布才在欧洲科学界被广泛知晓和应用，因此得名“高斯分布”。\n- 正态曲线（钟形曲线）的核心特征是：以均值为中心完全对称，形状由均值(μ)和标准差(σ)唯一决定，并服从“68-95-99.7”经验法则。\n- 正态分布的概率密度函数（Probability Density Function, PDF） 的数学表达式为:1. 当 x=μ 时，指数部分为0，函数取到最大值。2. 当 x 远离 μ 时，(x−μ)^2增大，指数部分迅速衰减为0，导致概率密度急剧下降。\n- 正态曲线下\n- 横轴区间(μ-σ,μ+σ) 内的面积为 68.268949%\n- P{|X-μ|<σ}=2Φ（1）-1=0.6826\n- 横轴区间（μ-1.96σ,μ+1.96σ）内的面积为95.449974%\n- P{|X-μ|<2σ}=2Φ（2）-1=0.9544\n- 横轴区间（μ-2.58σ,μ+2.58σ）内的面积为99.730020%\n- P{|X-μ|<3σ}=2Φ（3）-1=0.9974",
+      "page_num": 4
+    },
+    {
+      "id": "0de322de-0a02-4ec2-970f-91732a04f098",
+      "index": 18,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "images/4da4f6bb0881b978fba33a38a1515daaa646c7089ab5fcc44c560ae2a888d3f0.jpg",
+      "page_num": 4
+    },
+    {
+      "id": "f529e0df-cfa3-441c-a48b-c3f5d51b5d90",
+      "index": 19,
+      "type": "text",
+      "level": null,
+      "content": "- “小概率事件”通常指发生的概率小于5%的事件,认为在一次试验中该事件是几乎不可能发生的.这种认识便是进行推断的出发点.关于这一点我们要有以下两个方面的认识:一是这里的“几乎不可能发生”是针对“一次试验”来说的,因为试验次数多了,该事件当然是很可能发生的;二是当我们运用“小概率事件几乎不可能发生的原理”进行推断时,我们也有5%的犯错误的可能.",
+      "page_num": 4
+    },
+    {
+      "id": "d1c3506c-9682-4366-b46a-da975c2ada2d",
+      "index": 20,
+      "type": "text",
+      "level": null,
+      "content": "MatrixOne Intelligence",
+      "page_num": 4
+    },
+    {
+      "id": "aa9bbd53-2c73-47e3-bb89-ab73100fcd3b",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "Copyright © 2026 矩阵起源（深圳）信息科技有限公司粤公安网备 44030402004672号 | 粤ICP备2021044820号",
+      "page_num": 4
+    }
+  ]
+}

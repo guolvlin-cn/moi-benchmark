@@ -1,0 +1,549 @@
+{
+  "filename": "6a436884-714f-4839-9af0-eab197349b2c_content_list.json",
+  "filetype": "JSON",
+  "block_count": 66,
+  "blocks": [
+    {
+      "id": "57c07782-0e6c-4882-a53b-0cabae97c972",
+      "index": 0,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DoclNo.:xx-xxxx-xx-xxxx</td><td>Doc.Title:SMIC200mmxxxxx xxxx xxxx xxxxxxxx xxxx xxxx xxxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:1/3</td></tr></table>",
+      "page_num": 1,
+      "table_image_url": "images/295f7c3770738a3b14d074a215c8a44c24f6005b93e233e81c02b6dc5b5e119a.jpg",
+      "table_image_urls": [
+        "images/295f7c3770738a3b14d074a215c8a44c24f6005b93e233e81c02b6dc5b5e119a.jpg"
+      ]
+    },
+    {
+      "id": "49ab9fd0-6d07-4142-914b-1adf26dd8854",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "1. Project background and objectives",
+      "page_num": 1
+    },
+    {
+      "id": "230cb219-9ee2-415a-a96e-a87ee026f159",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "1.1. DCC：Document Control Center",
+      "page_num": 1
+    },
+    {
+      "id": "a99ec2b1-5e03-4292-be66-add6ec89da63",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "1.2. DCN：Document Change Notice(for Company Rules and Regulations)",
+      "page_num": 1
+    },
+    {
+      "id": "ea03a19e-7a64-4721-85d2-f9de3d4be75c",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "1.3. DMS：Document Management System",
+      "page_num": 1
+    },
+    {
+      "id": "6f43f6e3-02ae-4110-a946-286bcf65707d",
+      "index": 5,
+      "type": "title",
+      "level": "2",
+      "content": "1.4. Background description",
+      "page_num": 1
+    },
+    {
+      "id": "75f6c380-feb1-4445-b16b-427d510a20d7",
+      "index": 6,
+      "type": "text",
+      "level": null,
+      "content": "With the continuous evolution of artificial intelligence technology, large language models (LLM) and multimodal models have demonstrated remarkable capabilities in comprehension, generation, and reasoning. An increasing number of enterprises are beginning to experiment with integrating AI technology into their actual business processes, aiming to enhance information processing efficiency, optimize decision-making quality, and reduce reliance on human experience. Against this backdrop。",
+      "page_num": 1
+    },
+    {
+      "id": "b37682f7-3fe2-40c9-8170-afcf509e90b7",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "1.4.1. Industry prospects",
+      "page_num": 1
+    },
+    {
+      "id": "93a51828-bdff-49ee-9f5c-2503e3d66879",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "A. The current industry as a whole exhibits the following characteristics：",
+      "page_num": 1
+    },
+    {
+      "id": "913cee6e-a13e-4d05-a67d-39ba387bdb8c",
+      "index": 9,
+      "type": "text",
+      "level": null,
+      "content": "B. The capabilities of pre-trained models have rapidly improved, but there are still differences in scenario generalization",
+      "page_num": 1
+    },
+    {
+      "id": "9e297538-07a0-4ecd-b112-55c8c82789a1",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "C. The scale of internal data within the enterprise continues to grow, leading to a strong demand for intelligent retrieval and analysis",
+      "page_num": 1
+    },
+    {
+      "id": "889fa59b-dbd3-4217-a6c9-3d04edbe72d6",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "D. AI systems are gradually evolving from single-point applications towards platformization and servitization",
+      "page_num": 1
+    },
+    {
+      "id": "b6ebf349-a6ff-4a4a-b563-67be4d141284",
+      "index": 12,
+      "type": "text",
+      "level": null,
+      "content": "E. Main pain points",
+      "page_num": 1
+    },
+    {
+      "id": "6861ce63-022b-4243-bcaa-8d91998d24cf",
+      "index": 13,
+      "type": "text",
+      "level": null,
+      "content": "F. In the actual implementation process, common issues include but are not limited to：",
+      "page_num": 1
+    },
+    {
+      "id": "386abb11-8458-450a-b66c-0aaa33ee1a11",
+      "index": 14,
+      "type": "text",
+      "level": null,
+      "content": "G. The data sources are complex, with a coexistence of structured, semi-structured, and unstructured data",
+      "page_num": 1
+    },
+    {
+      "id": "dc223ac3-0f2a-4e1d-a191-dc403be1d64b",
+      "index": 15,
+      "type": "text",
+      "level": null,
+      "content": "H. The coupling between model services and business logic is too high, resulting in poor system maintainability",
+      "page_num": 1
+    },
+    {
+      "id": "53d4515b-f08c-44b6-b906-9f6b53fec751",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "I. Without a unified evaluation and monitoring mechanism, it is difficult to continuously ensure the effectiveness of the model",
+      "page_num": 1
+    },
+    {
+      "id": "c7672b03-4326-4a7e-b6f5-a6d4a08bfde2",
+      "index": 17,
+      "type": "text",
+      "level": null,
+      "content": "a. 为了能使 Reticle Stocker 讷讷够正确快速的读取光照条码，光照 MA 必须使用BarcodeReader扫描自光照厂所送出的Barcode（以有效防止人为之输入错误），之后再利用光照室旁的 Barcode Printer 打印 Reticle ID，并贴雨 Reticle POD 之上。",
+      "page_num": 1
+    },
+    {
+      "id": "bd0e485f-3442-47c5-98f3-bac40eceae57",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "b. Barcode使用9cmX3cm标签打印，它的形式如下（图四）：",
+      "page_num": 1
+    },
+    {
+      "id": "8b6d5b5c-ed08-4be3-9d7c-e57a911a86e5",
+      "index": 19,
+      "type": "image",
+      "ocr": "",
+      "caption": "0 0 1 8 0 0 l 1 1 A A . I D A\n\n图四 Barcode 打印实例",
+      "image_url": "images/cfca66815ebed7b427184099009358b456291c46578cbf8a575985fd136a21de.jpg",
+      "page_num": 1
+    },
+    {
+      "id": "b9c3cc5b-afb4-42f4-8074-7a35152f6520",
+      "index": 20,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC",
+      "page_num": 1
+    },
+    {
+      "id": "b51a9d18-4242-4762-9e48-3f1aa510b5e0",
+      "index": 21,
+      "type": "header",
+      "level": null,
+      "content": "SMIC",
+      "page_num": 1
+    },
+    {
+      "id": "473dafa8-ea24-4959-9b97-85a93c0bb804",
+      "index": 22,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufaceturing International Corporation",
+      "page_num": 1
+    },
+    {
+      "id": "c344a012-daa4-443f-b3a0-911469895625",
+      "index": 23,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 1
+    },
+    {
+      "id": "a2b2f868-838a-46a3-b912-32a7b5a7e9b3",
+      "index": 24,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 1
+    },
+    {
+      "id": "6da4b403-fe5f-48b4-8e49-dfc113209d7c",
+      "index": 25,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DoclNo.:xx-xxxx-xx-xxxx</td><td>Doc.Title:SMIC200mmxxxxx xxxx xxxx xxxxxxxx xxxx xxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:2/3</td></tr></table>",
+      "page_num": 2,
+      "table_image_url": "images/b3e16b9a8780f8f2c4546230fb7e2fdbecb09d4eb16ba74eabf41c9c17a4aa0c.jpg",
+      "table_image_urls": [
+        "images/b3e16b9a8780f8f2c4546230fb7e2fdbecb09d4eb16ba74eabf41c9c17a4aa0c.jpg"
+      ]
+    },
+    {
+      "id": "69ea1b3d-8832-4e4c-b036-ec0ca2931693",
+      "index": 26,
+      "type": "text",
+      "level": null,
+      "content": "c. Recicle POD Size： $2 2 7 . 3 3 \\mathrm { W } \\times 2 3 0 \\mathrm { L } \\times 9 2 . 2 \\mathrm { H } ( \\mathrm { m m } )$ 。Barcode打印完毕后，要贴在Reticle POD 的适当位置上，才能被 Reticle Stock 顺利地读出。Barcode 贴在 POD上的位置如下（图五）所示：",
+      "page_num": 2
+    },
+    {
+      "id": "72e683aa-9887-4586-bbd3-bdb2e36c43a9",
+      "index": 27,
+      "type": "image",
+      "ocr": "",
+      "caption": "图五 Barcode 位置及贴法",
+      "image_url": "images/f8724ab4fff66db44facc78a2f462e799ae6ef722016c844625d6d42b3570d0d.jpg",
+      "page_num": 2
+    },
+    {
+      "id": "f93b1475-4e01-49f2-a08a-e607ac011a2e",
+      "index": 28,
+      "type": "title",
+      "level": "2",
+      "content": "1.5. 技术选型说明",
+      "page_num": 2
+    },
+    {
+      "id": "74ec8ee4-3040-4be0-a31a-be43a4210163",
+      "index": 29,
+      "type": "text",
+      "level": null,
+      "content": "1.5.1. 后端与基础设施",
+      "page_num": 2
+    },
+    {
+      "id": "474173f5-f69d-4dcc-8331-bd446205334d",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": " 编程语言：Python",
+      "page_num": 2
+    },
+    {
+      "id": "2da952e8-3fcb-4acb-aa44-68dd5f558a88",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": " 服务框架：FastAPI",
+      "page_num": 2
+    },
+    {
+      "id": "3b48deb9-627a-4bd9-a534-435df280fa70",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": " 模型部署：vLLM / Triton",
+      "page_num": 2
+    },
+    {
+      "id": "e4cbc5ac-2af4-479a-bf93-d9674c8691ae",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": " 容器与编排：Docker + Kubernetes",
+      "page_num": 2
+    },
+    {
+      "id": "ca2bbf60-284e-42bf-a5d4-afe8cc4e4bda",
+      "index": 34,
+      "type": "title",
+      "level": "2",
+      "content": "1.5.2. 模型相关",
+      "page_num": 2
+    },
+    {
+      "id": "974b97a6-c14b-46ce-b5e2-f3d5e69b29a6",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": " 大语言模型（LLM）",
+      "page_num": 2
+    },
+    {
+      "id": "d0190df1-ebd4-4e74-9c21-f3e060588b2c",
+      "index": 36,
+      "type": "text",
+      "level": null,
+      "content": " 向量模型（Embedding）",
+      "page_num": 2
+    },
+    {
+      "id": "c59a1fe0-7cd7-43d2-9157-044d21d2fa90",
+      "index": 37,
+      "type": "text",
+      "level": null,
+      "content": " RAG 检索增强生成",
+      "page_num": 2
+    },
+    {
+      "id": "31c880da-9b82-41cd-b9e4-9ae4cf478641",
+      "index": 38,
+      "type": "title",
+      "level": "2",
+      "content": "1.5.3. 其他模型相关",
+      "page_num": 2
+    },
+    {
+      "id": "a9ffff45-6df1-49c7-b0fc-0e506b0f18d4",
+      "index": 39,
+      "type": "text",
+      "level": null,
+      "content": " 视觉大模型（VLM）",
+      "page_num": 2
+    },
+    {
+      "id": "4b8a4bfa-3a8b-48a7-8467-bd678685f067",
+      "index": 40,
+      "type": "text",
+      "level": null,
+      "content": " 向量模型（Embedding）",
+      "page_num": 2
+    },
+    {
+      "id": "d58970a2-b8cb-43bd-b657-0a4a45eff937",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": " RAG 检索增强生成",
+      "page_num": 2
+    },
+    {
+      "id": "e91ec638-75e5-4f2e-978c-7b941cd0fd6e",
+      "index": 42,
+      "type": "text",
+      "level": null,
+      "content": "1.6. Technical selection description",
+      "page_num": 2
+    },
+    {
+      "id": "f5507902-0a34-4c24-953e-481774e2502b",
+      "index": 43,
+      "type": "text",
+      "level": null,
+      "content": "1.6.1. Backend and Infrastructure",
+      "page_num": 2
+    },
+    {
+      "id": "025e3d30-0a04-49d0-bd8d-01f99ccd890c",
+      "index": 44,
+      "type": "text",
+      "level": null,
+      "content": " Programming language: Python",
+      "page_num": 2
+    },
+    {
+      "id": "11d1e0e9-e4cf-46ab-8535-4c1abff7d5bb",
+      "index": 45,
+      "type": "text",
+      "level": null,
+      "content": " Service framework: FastAPI",
+      "page_num": 2
+    },
+    {
+      "id": "a086f9ed-3ee7-4a4a-86c0-b8209081af99",
+      "index": 46,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC",
+      "page_num": 2
+    },
+    {
+      "id": "0e8e48f2-f568-4d9d-bd23-8737c00c572a",
+      "index": 47,
+      "type": "header",
+      "level": null,
+      "content": "SMIC",
+      "page_num": 2
+    },
+    {
+      "id": "aed6c130-3c4b-4bc9-a9a2-a2764c11ed90",
+      "index": 48,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufaceturing International Corporation",
+      "page_num": 2
+    },
+    {
+      "id": "de0b6dfa-fb2f-4f23-b15a-2046f60efb40",
+      "index": 49,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 2
+    },
+    {
+      "id": "496369b0-7c1b-4ab8-886d-c60708ec0add",
+      "index": 50,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 2
+    },
+    {
+      "id": "ef572ac7-cf20-4b3f-b227-a58d803f0aba",
+      "index": 51,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>DoclNo.:xx-xxxx-xx-xxxx</td><td>Doc. Title:SMIC200mmxxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx</td><td>Rec.:1</td><td>Page No.:3/3</td></tr></table>",
+      "page_num": 3,
+      "table_image_url": "images/1728b52c42bd0d3d8e29e3d71eef5d895db16740b2b02eb23843a85defd69fa0.jpg",
+      "table_image_urls": [
+        "images/1728b52c42bd0d3d8e29e3d71eef5d895db16740b2b02eb23843a85defd69fa0.jpg"
+      ]
+    },
+    {
+      "id": "c70c0634-1a93-48b1-bac7-5a5c6c4bc8ea",
+      "index": 52,
+      "type": "text",
+      "level": null,
+      "content": " Model deployment: vLLM / Triton",
+      "page_num": 3
+    },
+    {
+      "id": "afe7b50e-ef2b-4097-81ea-e4b92e841ad9",
+      "index": 53,
+      "type": "text",
+      "level": null,
+      "content": " Containers and orchestration: Docker + Kubernetes",
+      "page_num": 3
+    },
+    {
+      "id": "a2a704b7-4d64-43a0-b080-f898b38a230e",
+      "index": 54,
+      "type": "title",
+      "level": "2",
+      "content": "1.6.2. Model-related",
+      "page_num": 3
+    },
+    {
+      "id": "0abd8d24-5e7c-4287-a386-c0405d1fc903",
+      "index": 55,
+      "type": "text",
+      "level": null,
+      "content": " Large Language Model (LLM)",
+      "page_num": 3
+    },
+    {
+      "id": "6f55d79e-86db-48ad-b43d-4c6d50ffdde1",
+      "index": 56,
+      "type": "text",
+      "level": null,
+      "content": " Vector model (Embedding)",
+      "page_num": 3
+    },
+    {
+      "id": "eb17067a-3876-4c58-9037-84e4ae06cf6b",
+      "index": 57,
+      "type": "text",
+      "level": null,
+      "content": " RAG: Retrieval Augmented Generation",
+      "page_num": 3
+    },
+    {
+      "id": "15a1ab8a-9009-4512-9479-6c7e3a1aea97",
+      "index": 58,
+      "type": "title",
+      "level": "2",
+      "content": "1.6.3. Other model-related",
+      "page_num": 3
+    },
+    {
+      "id": "b1c3a6b3-f9c9-441b-9fed-c5706bc8ce96",
+      "index": 59,
+      "type": "text",
+      "level": null,
+      "content": " Visual Large Model (VLM)",
+      "page_num": 3
+    },
+    {
+      "id": "7b2c57fb-1e32-47b7-b544-b8dd7b7ab72c",
+      "index": 60,
+      "type": "text",
+      "level": null,
+      "content": " Vector model (Embedding)",
+      "page_num": 3
+    },
+    {
+      "id": "1416128b-4d87-448f-81c1-1eb5d8cc9e1a",
+      "index": 61,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 3
+    },
+    {
+      "id": "acbc55e6-3a68-4b98-a4dc-1a6273ac26ca",
+      "index": 62,
+      "type": "header",
+      "level": null,
+      "content": "SMIC",
+      "page_num": 3
+    },
+    {
+      "id": "1d75e9f9-53ca-422c-aeb5-5ed5ffa0deb7",
+      "index": 63,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufaceturing International Corporation",
+      "page_num": 3
+    },
+    {
+      "id": "ed345de9-fa92-4563-a808-a81f5d6e5409",
+      "index": 64,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 3
+    },
+    {
+      "id": "a61c9180-b1d7-4f83-bf7e-32c7625114e0",
+      "index": 65,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC",
+      "page_num": 3
+    }
+  ]
+}

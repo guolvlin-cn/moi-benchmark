@@ -1,0 +1,611 @@
+{
+  "doc_id": "22_80b4ec1c1b",
+  "_generated_at": "2026-07-29T09:48:35+00:00",
+  "header_footer": {
+    "expected_headers": [],
+    "expected_footers": []
+  },
+  "table": {
+    "expected_table_count": 2,
+    "table_html_summaries": [
+      "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><tr><td>7nm制程</td><td>栅极长度 $L_g \\approx 18\\text{nm}$</td><td>$R = k_1 \\lambda / NA$</td></tr><tr><td>5nm制程</td><td>栅极长度 $L_g \\approx 12\\text{nm}$，使用EUV光刻 $\\lambda = 13.5\\text{nm}$</td><td>$CD = k_1 \\times \\lambda / NA$</td></tr><tr><td>3nm制程</td><td>栅极长度 $L_g \\approx 10\\text{nm}$，$NA$提升至0.55</td><td>$R = k_1 \\lambda / NA$</td></tr><tr><td>未来1nm</td><td>量子效应主导，需要新材料</td><td>$P \\propto e^{-2\\int_{x_1}^{x_2} \\sqrt{\\frac{2m}{\\hbar^2}(V(x)-E)}\\,dx}$</td></tr></table>",
+      "<table border=\"1\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><th style=\"padding: 8px; text-align: left;\">设计阶段</th><th style=\"padding: 8px; text-align: left;\">时间占比</th><th style=\"padding: 8px; text-align: left;\">算法复杂度</th></tr></thead><tbody><tr style=\"background-color: #0d0d0d; color: #e0e0e0;\"><td style=\"padding: 8px;\">规格定义 (T_spec)</td><td style=\"padding: 8px;\">15%.</td><td style=\"padding: 8px;\">O(N)</td></tr><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><td style=\"padding: 8px;\">RTL设计 (T_RTL)</td><td style=\"padding: 8px;\">25%</td><td style=\"padding: 8px;\">O(N log N)</td></tr><tr style=\"background-color: #0d0d0d; color: #e0e0e0;\"><td style=\"padding: 8px;\">验证 (T_verify)</td><td style=\"padding: 8px;\">40%</td><td style=\"padding: 8px;\">O(N²) - O(N³)</td></tr><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><td style=\"padding: 8px;\">布局布线 (T_layout)</td><td style=\"padding: 8px;\">20%</td><td style=\"padding: 8px;\">NP完全</td></tr></tbody></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "芯片技术：从硅晶到智能未来",
+        "level": 1
+      },
+      {
+        "text": "摩尔定律的奇迹",
+        "level": 1
+      },
+      {
+        "text": "纳米制程的极限挑战",
+        "level": 1
+      },
+      {
+        "text": "晶体管的量子隧道效应",
+        "level": 1
+      },
+      {
+        "text": "芯片设计的复杂性爆炸",
+        "level": 1
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "芯片技术：从硅晶到智能未来",
+      "    Chip Technology: From Silicon Crystal to Intelligent Future",
+      "芯片技术作为现代信息社会的核心，其重要性不言而喻。自摩尔定律提出以来，我们见证了芯片上晶体管数量大约每18个月翻倍的惊人发展。制程工艺从最初的微米级不断突破，如今已迈入先进的纳米级，例如5nm甚至3nm。这使得单个芯片的集成度达到了惊人的$10^{10}$量级，驱动着人工智能、物联网、高性能计算等领域的飞速发展。",
+      "<img>",
+      "<img>",
+      "晶体管数量增长：从 $10^3$ 到 $10^{10}$",
+      "制程演进：从微米（\\mu m）到纳米（nm）级别",
+      "频率提升: 从兆赫兹 (MHz) 到吉赫兹 (GHz)",
+      "$$Performance\\propto N \\times f$$",
+      "其中 N 是晶体管数量, f 是工作频率。",
+      "摩尔定律的奇迹",
+      "摩尔定律是半导体产业发展的核心驱动力，深刻影响着数字时代的进程。",
+      "<img>",
+      "      $$N (t) = N _ {0} \\times 2 ^ {(t / 1 8 \\text{个 月})}$$",
+      "    该公式描述了集成电路上晶体管数量的增长趋势，其中 $N(t)$ 表示在时间 $t$ 后的晶体管数量，$N_0$ 是初始数量，而指数部分 $(t/18\\text{个月})$ 则反映了晶体管数量大约每18个月翻一番的规律。",
+      "    这一趋势导致性能指数级提升，推动了计算机和数字设备的快速发展，深刻改变了现代社会，成为技术进步的基石。具体细节包括：",
+      "    · 1971年，首款微处理器Intel 4004仅集成2,300个晶体管。",
+      "    · 至2020年，Apple M1芯片已包含高达160亿个晶体管。",
+      "    晶体管密度 $D$ 与特征尺寸 $L$ 的平方呈反比关系，即 $D \\propto 1/L^2$。",
+      "    芯片性能提升 $P(t)$ 大致与晶体管数量的 $\\alpha$ 次方成正比，即 $P(t) \\approx N(t)^\\alpha$，其中 $\\alpha$ 值通常在 0.5 到 0.7 之间。",
+      "纳米制程的极限挑战",
+      "        $$C D = k _ {1} \\times \\lambda / N A$$",
+      "    其中 $\\lambda$ 是光刻波长，$NA$ 是数值孔径，$k_1 \\approx 0.25$ 是工艺因子",
+      "      纳米制程关键参数对比",
+      "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><tr><td>7nm制程</td><td>栅极长度 $L_g \\approx 18\\text{nm}$</td><td>$R = k_1 \\lambda / NA$</td></tr><tr><td>5nm制程</td><td>栅极长度 $L_g \\approx 12\\text{nm}$，使用EUV光刻 $\\lambda = 13.5\\text{nm}$</td><td>$CD = k_1 \\times \\lambda / NA$</td></tr><tr><td>3nm制程</td><td>栅极长度 $L_g \\approx 10\\text{nm}$，$NA$提升至0.55</td><td>$R = k_1 \\lambda / NA$</td></tr><tr><td>未来1nm</td><td>量子效应主导，需要新材料</td><td>$P \\propto e^{-2\\int_{x_1}^{x_2} \\sqrt{\\frac{2m}{\\hbar^2}(V(x)-E)}\\,dx}$</td></tr></table>",
+      "随着半导体制造工艺向纳米级推进，我们正面临着前所未有的极限挑战。在光刻技术中，关键尺寸 $CD$ 的减小受限于瑞利判据：分辨率极限 $R = k_1 \\lambda / NA$。其中，$k_1$ 是一个依赖于工艺的因子，$\\lambda$ 是光波波长，$NA$ 是数值孔径。为了实现更小的 $CD$，传统方法是减小 $\\lambda$ 和增大 $NA$。例如，极紫外（EUV）光刻技术采用了 $\\lambda = 13.5\\,\\text{nm}$ 的极短波长，带来了巨大的突破。然而，数值孔径 $NA$ 的提升面临物理限制（当前最高约 $0.55$），且 $k_1$ 因子也难以进一步优化。",
+      "当制程节点达到 $5\\,\\text{nm}$ 以下时，栅极长度 $L_G$ 已接近 $10\\,\\text{nm}$，此时量子效应（如隧穿效应）开始主导器件行为。隧穿概率 $T \\propto e^{-\\sqrt{2m^* (V(x)-E)} \\cdot L_G / \\hbar}$，对材料科学和器件物理提出了更严峻的挑战。每一次制程缩小都要求创新解决方案和巨大研发投入，例如使用环绕栅极晶体管（GAA）等新结构和新材料来应对。与此同时，EUV光刻技术的复杂性也带来了良率和成本的双重挑战，预示着摩尔定律的持续发展正接近物理极限。",
+      "晶体管的量子隧道效应",
+      "  $i\\hbar \\frac{\\partial \\psi}{\\partial t} = \\hat{H} \\psi$",
+      "  描述电子的量子状态演化",
+      "<img>",
+      "量子隧穿的物理机制",
+      "在纳米级晶体管中，电子的量子特性尤为重要。量子隧道效应使电子在能量不足时也能穿透势垒，这显著影响了晶体管的漏电流、功耗和性能。",
+      "隧穿概率通常表示为 $T \\sim e^{-2\\kappa d}$，其中 $d$ 是势垒宽度，$\\kappa$ 是衰减常数。当栅极氧化层厚度 $t_{\\text{ox}}$ 小于 $2\\,\\text{nm}$ 时，隧穿电流密度 $J$ 会呈指数级增长，对器件稳定性提出严峻挑战。",
+      "隧穿电流的公式可以表示为 $J \\propto E^2 e^{-B/E}$，其中 $E$ 是电场强度。",
+      "□ 关键参数",
+      "  亚阈值摆幅：$SS = (kT/q)\\ln 10 \\approx 60\\,\\text{mV/decade}$",
+      "  漏电流：$I_{\\text{leak}}$ 与 $t_{\\text{ox}}$ 呈指数关系",
+      "  静态功耗：$P = I_{\\text{leak}} \\times V_{\\text{dd}}$",
+      "解决方案",
+      "为了有效控制晶体管的开关行为，同时抑制量子隧道效应和短沟道效应带来的不利影响，业界引入了多种创新技术：",
+      "FinFET结构：通过三面栅极对沟道进行更精细的控制，有效降低漏电流。",
+      "GAA 晶体管：采用全环绕栅极设计，提供极致的静电控制，进一步减小亚阈值摆幅。",
+      "高 $k$ 介质材料：替代传统的二氧化硅栅氧，在保持相同电容的同时能大幅减小等效氧化层厚度（EOT），从而有效抑制隧穿电流。",
+      "这些新型技术为突破传统CMOS技术的物理极限铺平了道路，确保摩尔定律能够继续发展。",
+      "芯片设计的复杂性爆炸",
+      "Cost = Base \\times 2^{(\\text{Complexity} / \\text{Moore}_{\\text{constant}})}",
+      "    设计成本随复杂度呈指数增长",
+      "<img>",
+      "复杂度的多维挑战",
+      "设计规模：$N_{\\text{gates}} > 10^{10}$ 个晶体管",
+      "验证复杂度：从 $O(N^2)$ 跃升至 $O(N^3)$",
+      "设计周期：7nm芯片需24-36个月",
+      "掩模成本：$C_{\\text{mask}} > 15\\,\\text{M}$",
+      "团队规模：$N_{\\text{engineers}} \\propto \\sqrt{\\text{Complexity}}$",
+      "设计流程各阶段分析",
+      "<table border=\"1\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><th style=\"padding: 8px; text-align: left;\">设计阶段</th><th style=\"padding: 8px; text-align: left;\">时间占比</th><th style=\"padding: 8px; text-align: left;\">算法复杂度</th></tr></thead><tbody><tr style=\"background-color: #0d0d0d; color: #e0e0e0;\"><td style=\"padding: 8px;\">规格定义 (T_spec)</td><td style=\"padding: 8px;\">15%.</td><td style=\"padding: 8px;\">O(N)</td></tr><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><td style=\"padding: 8px;\">RTL设计 (T_RTL)</td><td style=\"padding: 8px;\">25%</td><td style=\"padding: 8px;\">O(N log N)</td></tr><tr style=\"background-color: #0d0d0d; color: #e0e0e0;\"><td style=\"padding: 8px;\">验证 (T_verify)</td><td style=\"padding: 8px;\">40%</td><td style=\"padding: 8px;\">O(N²) - O(N³)</td></tr><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><td style=\"padding: 8px;\">布局布线 (T_layout)</td><td style=\"padding: 8px;\">20%</td><td style=\"padding: 8px;\">NP完全</td></tr></tbody></table>",
+      "EDA工具的挑战",
+      "布局布线：NP完全问题",
+      "时序收敛：$T_{\\text{closure}} \\propto N^\\alpha$, $\\alpha > 1$",
+      "功耗优化：$P_{\\text{total}} = P_{\\text{dynamic}} + P_{\\text{static}}$",
+      "AI辅助：AI辅助EDA工具正在兴起",
+      "成本与风险",
+      "流片成功率：$Y_{\\text{first}} < 50\\%$",
+      "总开发成本：$C_{\\text{total}} = C_{\\text{design}} + C_{\\text{mask}} + C_{\\text{tape-out}} + C_{\\text{test}}$",
+      "投资回报：投资回报周期延长",
+      "行业整合，加速半导体行业整合趋势"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "1": 2,
+      "2": 1,
+      "4": 1,
+      "5": 1
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "    Chip Technology: From Silicon Crystal to Intelligent Future",
+          "page_num": 1
+        },
+        {
+          "text": "芯片技术作为现代信息社会的核心，其重要性不言而喻。自摩尔定律提出以来，我们见证了芯片上晶体管数量大约每18个月翻倍的惊人发展。制程工艺从最初的微米级不断突破，如今已迈入先进的纳米级，例如5nm甚至3nm。这使得单个芯片的集成度达到了惊人的$10^{10}$量级，驱动着人工智能、物联网、高性能计算等领域的飞速发展。",
+          "page_num": 1
+        },
+        {
+          "text": "晶体管数量增长：从 $10^3$ 到 $10^{10}$",
+          "page_num": 1
+        },
+        {
+          "text": "制程演进：从微米（\\mu m）到纳米（nm）级别",
+          "page_num": 1
+        },
+        {
+          "text": "频率提升: 从兆赫兹 (MHz) 到吉赫兹 (GHz)",
+          "page_num": 1
+        },
+        {
+          "text": "$$Performance\\propto N \\times f$$",
+          "page_num": 1
+        },
+        {
+          "text": "其中 N 是晶体管数量, f 是工作频率。",
+          "page_num": 1
+        },
+        {
+          "text": "摩尔定律是半导体产业发展的核心驱动力，深刻影响着数字时代的进程。",
+          "page_num": 2
+        },
+        {
+          "text": "      $$N (t) = N _ {0} \\times 2 ^ {(t / 1 8 \\text{个 月})}$$",
+          "page_num": 2
+        },
+        {
+          "text": "    该公式描述了集成电路上晶体管数量的增长趋势，其中 $N(t)$ 表示在时间 $t$ 后的晶体管数量，$N_0$ 是初始数量，而指数部分 $(t/18\\text{个月})$ 则反映了晶体管数量大约每18个月翻一番的规律。",
+          "page_num": 2
+        },
+        {
+          "text": "    这一趋势导致性能指数级提升，推动了计算机和数字设备的快速发展，深刻改变了现代社会，成为技术进步的基石。具体细节包括：",
+          "page_num": 2
+        },
+        {
+          "text": "    · 1971年，首款微处理器Intel 4004仅集成2,300个晶体管。",
+          "page_num": 2
+        },
+        {
+          "text": "    · 至2020年，Apple M1芯片已包含高达160亿个晶体管。",
+          "page_num": 2
+        },
+        {
+          "text": "    晶体管密度 $D$ 与特征尺寸 $L$ 的平方呈反比关系，即 $D \\propto 1/L^2$。",
+          "page_num": 2
+        },
+        {
+          "text": "    芯片性能提升 $P(t)$ 大致与晶体管数量的 $\\alpha$ 次方成正比，即 $P(t) \\approx N(t)^\\alpha$，其中 $\\alpha$ 值通常在 0.5 到 0.7 之间。",
+          "page_num": 2
+        },
+        {
+          "text": "        $$C D = k _ {1} \\times \\lambda / N A$$",
+          "page_num": 3
+        },
+        {
+          "text": "    其中 $\\lambda$ 是光刻波长，$NA$ 是数值孔径，$k_1 \\approx 0.25$ 是工艺因子",
+          "page_num": 3
+        },
+        {
+          "text": "      纳米制程关键参数对比",
+          "page_num": 3
+        },
+        {
+          "text": "随着半导体制造工艺向纳米级推进，我们正面临着前所未有的极限挑战。在光刻技术中，关键尺寸 $CD$ 的减小受限于瑞利判据：分辨率极限 $R = k_1 \\lambda / NA$。其中，$k_1$ 是一个依赖于工艺的因子，$\\lambda$ 是光波波长，$NA$ 是数值孔径。为了实现更小的 $CD$，传统方法是减小 $\\lambda$ 和增大 $NA$。例如，极紫外（EUV）光刻技术采用了 $\\lambda = 13.5\\,\\text{nm}$ 的极短波长，带来了巨大的突破。然而，数值孔径 $NA$ 的提升面临物理限制（当前最高约 $0.55$），且 $k_1$ 因子也难以进一步优化。",
+          "page_num": 3
+        },
+        {
+          "text": "当制程节点达到 $5\\,\\text{nm}$ 以下时，栅极长度 $L_G$ 已接近 $10\\,\\text{nm}$，此时量子效应（如隧穿效应）开始主导器件行为。隧穿概率 $T \\propto e^{-\\sqrt{2m^* (V(x)-E)} \\cdot L_G / \\hbar}$，对材料科学和器件物理提出了更严峻的挑战。每一次制程缩小都要求创新解决方案和巨大研发投入，例如使用环绕栅极晶体管（GAA）等新结构和新材料来应对。与此同时，EUV光刻技术的复杂性也带来了良率和成本的双重挑战，预示着摩尔定律的持续发展正接近物理极限。",
+          "page_num": 3
+        },
+        {
+          "text": "  $i\\hbar \\frac{\\partial \\psi}{\\partial t} = \\hat{H} \\psi$",
+          "page_num": 4
+        },
+        {
+          "text": "  描述电子的量子状态演化",
+          "page_num": 4
+        },
+        {
+          "text": "量子隧穿的物理机制",
+          "page_num": 4
+        },
+        {
+          "text": "在纳米级晶体管中，电子的量子特性尤为重要。量子隧道效应使电子在能量不足时也能穿透势垒，这显著影响了晶体管的漏电流、功耗和性能。",
+          "page_num": 4
+        },
+        {
+          "text": "隧穿概率通常表示为 $T \\sim e^{-2\\kappa d}$，其中 $d$ 是势垒宽度，$\\kappa$ 是衰减常数。当栅极氧化层厚度 $t_{\\text{ox}}$ 小于 $2\\,\\text{nm}$ 时，隧穿电流密度 $J$ 会呈指数级增长，对器件稳定性提出严峻挑战。",
+          "page_num": 4
+        },
+        {
+          "text": "隧穿电流的公式可以表示为 $J \\propto E^2 e^{-B/E}$，其中 $E$ 是电场强度。",
+          "page_num": 4
+        },
+        {
+          "text": "□ 关键参数",
+          "page_num": 4
+        },
+        {
+          "text": "  亚阈值摆幅：$SS = (kT/q)\\ln 10 \\approx 60\\,\\text{mV/decade}$",
+          "page_num": 4
+        },
+        {
+          "text": "  漏电流：$I_{\\text{leak}}$ 与 $t_{\\text{ox}}$ 呈指数关系",
+          "page_num": 4
+        },
+        {
+          "text": "  静态功耗：$P = I_{\\text{leak}} \\times V_{\\text{dd}}$",
+          "page_num": 4
+        },
+        {
+          "text": "解决方案",
+          "page_num": 4
+        },
+        {
+          "text": "为了有效控制晶体管的开关行为，同时抑制量子隧道效应和短沟道效应带来的不利影响，业界引入了多种创新技术：",
+          "page_num": 4
+        },
+        {
+          "text": "FinFET结构：通过三面栅极对沟道进行更精细的控制，有效降低漏电流。",
+          "page_num": 4
+        },
+        {
+          "text": "GAA 晶体管：采用全环绕栅极设计，提供极致的静电控制，进一步减小亚阈值摆幅。",
+          "page_num": 4
+        },
+        {
+          "text": "高 $k$ 介质材料：替代传统的二氧化硅栅氧，在保持相同电容的同时能大幅减小等效氧化层厚度（EOT），从而有效抑制隧穿电流。",
+          "page_num": 4
+        },
+        {
+          "text": "这些新型技术为突破传统CMOS技术的物理极限铺平了道路，确保摩尔定律能够继续发展。",
+          "page_num": 4
+        },
+        {
+          "text": "Cost = Base \\times 2^{(\\text{Complexity} / \\text{Moore}_{\\text{constant}})}",
+          "page_num": 5
+        },
+        {
+          "text": "    设计成本随复杂度呈指数增长",
+          "page_num": 5
+        },
+        {
+          "text": "复杂度的多维挑战",
+          "page_num": 5
+        },
+        {
+          "text": "设计规模：$N_{\\text{gates}} > 10^{10}$ 个晶体管",
+          "page_num": 5
+        },
+        {
+          "text": "验证复杂度：从 $O(N^2)$ 跃升至 $O(N^3)$",
+          "page_num": 5
+        },
+        {
+          "text": "设计周期：7nm芯片需24-36个月",
+          "page_num": 5
+        },
+        {
+          "text": "掩模成本：$C_{\\text{mask}} > 15\\,\\text{M}$",
+          "page_num": 5
+        },
+        {
+          "text": "团队规模：$N_{\\text{engineers}} \\propto \\sqrt{\\text{Complexity}}$",
+          "page_num": 5
+        },
+        {
+          "text": "设计流程各阶段分析",
+          "page_num": 5
+        },
+        {
+          "text": "EDA工具的挑战",
+          "page_num": 5
+        },
+        {
+          "text": "布局布线：NP完全问题",
+          "page_num": 5
+        },
+        {
+          "text": "时序收敛：$T_{\\text{closure}} \\propto N^\\alpha$, $\\alpha > 1$",
+          "page_num": 5
+        },
+        {
+          "text": "功耗优化：$P_{\\text{total}} = P_{\\text{dynamic}} + P_{\\text{static}}$",
+          "page_num": 5
+        },
+        {
+          "text": "AI辅助：AI辅助EDA工具正在兴起",
+          "page_num": 5
+        },
+        {
+          "text": "成本与风险",
+          "page_num": 5
+        },
+        {
+          "text": "流片成功率：$Y_{\\text{first}} < 50\\%$",
+          "page_num": 5
+        },
+        {
+          "text": "总开发成本：$C_{\\text{total}} = C_{\\text{design}} + C_{\\text{mask}} + C_{\\text{tape-out}} + C_{\\text{test}}$",
+          "page_num": 5
+        },
+        {
+          "text": "投资回报：投资回报周期延长",
+          "page_num": 5
+        },
+        {
+          "text": "行业整合，加速半导体行业整合趋势",
+          "page_num": 5
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><tr><td>7nm制程</td><td>栅极长度 $L_g \\approx 18\\text{nm}$</td><td>$R = k_1 \\lambda / NA$</td></tr><tr><td>5nm制程</td><td>栅极长度 $L_g \\approx 12\\text{nm}$，使用EUV光刻 $\\lambda = 13.5\\text{nm}$</td><td>$CD = k_1 \\times \\lambda / NA$</td></tr><tr><td>3nm制程</td><td>栅极长度 $L_g \\approx 10\\text{nm}$，$NA$提升至0.55</td><td>$R = k_1 \\lambda / NA$</td></tr><tr><td>未来1nm</td><td>量子效应主导，需要新材料</td><td>$P \\propto e^{-2\\int_{x_1}^{x_2} \\sqrt{\\frac{2m}{\\hbar^2}(V(x)-E)}\\,dx}$</td></tr></table>"
+        },
+        {
+          "html": "<table border=\"1\" cellpadding=\"4\" cellspacing=\"0\" style=\"border-collapse: collapse; width: 100%;\"><thead><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><th style=\"padding: 8px; text-align: left;\">设计阶段</th><th style=\"padding: 8px; text-align: left;\">时间占比</th><th style=\"padding: 8px; text-align: left;\">算法复杂度</th></tr></thead><tbody><tr style=\"background-color: #0d0d0d; color: #e0e0e0;\"><td style=\"padding: 8px;\">规格定义 (T_spec)</td><td style=\"padding: 8px;\">15%.</td><td style=\"padding: 8px;\">O(N)</td></tr><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><td style=\"padding: 8px;\">RTL设计 (T_RTL)</td><td style=\"padding: 8px;\">25%</td><td style=\"padding: 8px;\">O(N log N)</td></tr><tr style=\"background-color: #0d0d0d; color: #e0e0e0;\"><td style=\"padding: 8px;\">验证 (T_verify)</td><td style=\"padding: 8px;\">40%</td><td style=\"padding: 8px;\">O(N²) - O(N³)</td></tr><tr style=\"background-color: #1a1a1a; color: #f0f0f0;\"><td style=\"padding: 8px;\">布局布线 (T_layout)</td><td style=\"padding: 8px;\">20%</td><td style=\"padding: 8px;\">NP完全</td></tr></tbody></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [
+        {
+          "text": "10^{10}",
+          "source": "inline"
+        },
+        {
+          "text": "10^3",
+          "source": "inline"
+        },
+        {
+          "text": "10^{10}",
+          "source": "inline"
+        },
+        {
+          "text": "Performance\\propto N \\times f",
+          "source": "inline"
+        },
+        {
+          "text": "N (t) = N _ {0} \\times 2 ^ {(t / 1 8 \\text{个 月})}",
+          "source": "inline"
+        },
+        {
+          "text": "N(t)",
+          "source": "inline"
+        },
+        {
+          "text": "t",
+          "source": "inline"
+        },
+        {
+          "text": "N_0",
+          "source": "inline"
+        },
+        {
+          "text": "(t/18\\text{个月})",
+          "source": "inline"
+        },
+        {
+          "text": "D",
+          "source": "inline"
+        },
+        {
+          "text": "L",
+          "source": "inline"
+        },
+        {
+          "text": "D \\propto 1/L^2",
+          "source": "inline"
+        },
+        {
+          "text": "P(t)",
+          "source": "inline"
+        },
+        {
+          "text": "\\alpha",
+          "source": "inline"
+        },
+        {
+          "text": "P(t) \\approx N(t)^\\alpha",
+          "source": "inline"
+        },
+        {
+          "text": "\\alpha",
+          "source": "inline"
+        },
+        {
+          "text": "C D = k _ {1} \\times \\lambda / N A",
+          "source": "inline"
+        },
+        {
+          "text": "\\lambda",
+          "source": "inline"
+        },
+        {
+          "text": "NA",
+          "source": "inline"
+        },
+        {
+          "text": "k_1 \\approx 0.25",
+          "source": "inline"
+        },
+        {
+          "text": "CD",
+          "source": "inline"
+        },
+        {
+          "text": "R = k_1 \\lambda / NA",
+          "source": "inline"
+        },
+        {
+          "text": "k_1",
+          "source": "inline"
+        },
+        {
+          "text": "\\lambda",
+          "source": "inline"
+        },
+        {
+          "text": "NA",
+          "source": "inline"
+        },
+        {
+          "text": "CD",
+          "source": "inline"
+        },
+        {
+          "text": "\\lambda",
+          "source": "inline"
+        },
+        {
+          "text": "NA",
+          "source": "inline"
+        },
+        {
+          "text": "\\lambda = 13.5\\,\\text{nm}",
+          "source": "inline"
+        },
+        {
+          "text": "NA",
+          "source": "inline"
+        },
+        {
+          "text": "0.55",
+          "source": "inline"
+        },
+        {
+          "text": "k_1",
+          "source": "inline"
+        },
+        {
+          "text": "5\\,\\text{nm}",
+          "source": "inline"
+        },
+        {
+          "text": "L_G",
+          "source": "inline"
+        },
+        {
+          "text": "10\\,\\text{nm}",
+          "source": "inline"
+        },
+        {
+          "text": "T \\propto e^{-\\sqrt{2m^* (V(x)-E)} \\cdot L_G / \\hbar}",
+          "source": "inline"
+        },
+        {
+          "text": "i\\hbar \\frac{\\partial \\psi}{\\partial t} = \\hat{H} \\psi",
+          "source": "inline"
+        },
+        {
+          "text": "T \\sim e^{-2\\kappa d}",
+          "source": "inline"
+        },
+        {
+          "text": "d",
+          "source": "inline"
+        },
+        {
+          "text": "\\kappa",
+          "source": "inline"
+        },
+        {
+          "text": "t_{\\text{ox}}",
+          "source": "inline"
+        },
+        {
+          "text": "2\\,\\text{nm}",
+          "source": "inline"
+        },
+        {
+          "text": "J",
+          "source": "inline"
+        },
+        {
+          "text": "J \\propto E^2 e^{-B/E}",
+          "source": "inline"
+        },
+        {
+          "text": "E",
+          "source": "inline"
+        },
+        {
+          "text": "SS = (kT/q)\\ln 10 \\approx 60\\,\\text{mV/decade}",
+          "source": "inline"
+        },
+        {
+          "text": "I_{\\text{leak}}",
+          "source": "inline"
+        },
+        {
+          "text": "t_{\\text{ox}}",
+          "source": "inline"
+        },
+        {
+          "text": "P = I_{\\text{leak}} \\times V_{\\text{dd}}",
+          "source": "inline"
+        },
+        {
+          "text": "k",
+          "source": "inline"
+        },
+        {
+          "text": "N_{\\text{gates}} > 10^{10}",
+          "source": "inline"
+        },
+        {
+          "text": "O(N^2)",
+          "source": "inline"
+        },
+        {
+          "text": "O(N^3)",
+          "source": "inline"
+        },
+        {
+          "text": "C_{\\text{mask}} > 15\\,\\text{M}",
+          "source": "inline"
+        },
+        {
+          "text": "N_{\\text{engineers}} \\propto \\sqrt{\\text{Complexity}}",
+          "source": "inline"
+        },
+        {
+          "text": "T_{\\text{closure}} \\propto N^\\alpha",
+          "source": "inline"
+        },
+        {
+          "text": "\\alpha > 1",
+          "source": "inline"
+        },
+        {
+          "text": "P_{\\text{total}} = P_{\\text{dynamic}} + P_{\\text{static}}",
+          "source": "inline"
+        },
+        {
+          "text": "Y_{\\text{first}} < 50\\%",
+          "source": "inline"
+        },
+        {
+          "text": "C_{\\text{total}} = C_{\\text{design}} + C_{\\text{mask}} + C_{\\text{tape-out}} + C_{\\text{test}}",
+          "source": "inline"
+        }
+      ],
+      "formula_count": 60
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

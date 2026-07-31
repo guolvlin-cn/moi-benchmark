@@ -1,0 +1,47 @@
+{
+  "filename": "261ece2b-9f7d-4ab1-977d-0fb081407cca_content_list.json",
+  "filetype": "JSON",
+  "block_count": 5,
+  "blocks": [
+    {
+      "id": "e3ff0b81-2dac-498d-8509-3d325873b594",
+      "index": 0,
+      "type": "text",
+      "level": null,
+      "content": "**SEASF06B+LDD+Stage+WAT+VBG+Fail+8-D+Report**",
+      "page_num": 1
+    },
+    {
+      "id": "efd84abc-fc46-4dda-a8c2-0ea242beeedb",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "**D4:Define and Verify Root Cause**",
+      "page_num": 1
+    },
+    {
+      "id": "82c20083-6ed9-4b32-9527-bde47eaa4f98",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "- Root Cause Evidence",
+      "page_num": 1
+    },
+    {
+      "id": "56aecee3-b746-4c47-ac3b-de59fc1fcb44",
+      "index": 3,
+      "type": "table",
+      "level": null,
+      "content": "<table>\n  <tr>\n    <th colspan=\"2\">Oxidation</th>\n    <th>Avg.</th>\n    <th>STD</th>\n    <th></th>\n    <th>Avg.</th>\n    <th>STD</th>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_A</td>\n    <td>pre</td>\n    <td>6.48</td>\n    <td>0.058</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">8.77</td>\n    <td rowspan=\"2\">0.139</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>15.25</td>\n    <td>0.197</td>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_B</td>\n    <td>pre</td>\n    <td>6.51</td>\n    <td>0.058</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">8.53</td>\n    <td rowspan=\"2\">0.167</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>15.04</td>\n    <td>0.225</td>\n  </tr>\n</table>",
+      "page_num": 1
+    },
+    {
+      "id": "90a060f4-ecc2-4e6e-9f22-36776ce94a2d",
+      "index": 4,
+      "type": "table",
+      "level": null,
+      "content": "<table>\n  <tr>\n    <th colspan=\"2\">Charge</th>\n    <th>Avg.</th>\n    <th></th>\n    <th>Avg.</th>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_A</td>\n    <td>pre</td>\n    <td>0.431</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">0.012</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>0.419</td>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">SEASF06_B</td>\n    <td>pre</td>\n    <td>0.444</td>\n    <td rowspan=\"2\">差值</td>\n    <td rowspan=\"2\">0.03</td>\n  </tr>\n  <tr>\n    <td>post</td>\n    <td>0.474</td>\n  </tr>\n</table>",
+      "page_num": 1
+    }
+  ]
+}

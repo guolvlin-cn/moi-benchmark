@@ -1,0 +1,102 @@
+[
+    {
+        "type": "text",
+        "text": "1 Overall scheme design",
+        "text_level": 1,
+        "page_idx": 0,
+        "anchor": "_Toc662067944"
+    },
+    {
+        "type": "text",
+        "text": "1.1 Overview of system architecture",
+        "text_level": 2,
+        "page_idx": 0,
+        "anchor": "_Toc1263159701"
+    },
+    {
+        "type": "text",
+        "text": "The system is designed with a layered architecture, encompassing a data layer, a model layer, and an application layer. This design ensures the independence between modules and facilitates the addition of new functional modules in the future.",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1.2 技术选型说明",
+        "text_level": 2,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1.2.1 后端与基础设施",
+        "text_level": 3,
+        "page_idx": 0,
+        "anchor": "_Toc303059798"
+    },
+    {
+        "type": "list",
+        "list_items": [
+            "- 编程语言：Python",
+            "- 服务框架：FastAPI",
+            "- 模型部署：vLLM / Triton",
+            "- 容器与编排：Docker + Kubernetes",
+            "- 大语言模型（LLM）",
+            "- 向量模型（Embedding）",
+            "- RAG 检索增强生成",
+            "- 视觉大模型（VLM）",
+            "- 向量模型（Embedding）",
+            "- RAG 检索增强生成"
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1.2.2 模型相关",
+        "text_level": 3,
+        "page_idx": 0,
+        "anchor": "_Toc1842297949"
+    },
+    {
+        "type": "text",
+        "text": "1.2.3 其他模型相关",
+        "text_level": 3,
+        "page_idx": 0,
+        "anchor": "_Toc1082406397"
+    },
+    {
+        "type": "text",
+        "text": "**case1 普通表**",
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "table_caption": [],
+        "table_body": "<table><thead><tr><th><p>Task ID</p></th><th><p>Task Description</p></th><th><p>Priority</p></th><th><p>Assigned Department</p></th><th><p>Estimated Hours</p></th><th><p>Status</p></th></tr></thead><tbody><tr><td><p>T-001</p></td><td><p>Initial Client Consultation</p></td><td><p>High</p></td><td><p>Sales</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-002</p></td><td><p>Requirement Analysis</p></td><td><p>Critical</p></td><td><p>Engineering</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-003</p></td><td><p>Market Competitor Audit</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>8</p></td><td><p>Pending</p></td></tr><tr><td><p>T-004</p></td><td><p>UI Wireframe Design</p></td><td><p>High</p></td><td><p>Design</p></td><td><p>20</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-005</p></td><td><p>Database Schema Setup</p></td><td><p>Critical</p></td><td><p>Backend</p></td><td><p>10</p></td><td><p>Completed</p></td></tr><tr><td><p>T-006</p></td><td><p>API Authentication Layer</p></td><td><p>High</p></td><td><p>Backend</p></td><td><p>16</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-007</p></td><td><p>Frontend Component Library</p></td><td><p>Medium</p></td><td><p>Frontend</p></td><td><p>24</p></td><td><p>Pending</p></td></tr><tr><td><p>T-008</p></td><td><p>User Interview Scripts</p></td><td><p>Low</p></td><td><p>Research</p></td><td><p>6</p></td><td><p>Completed</p></td></tr><tr><td><p>T-009</p></td><td><p>Brand Color Palette Selection</p></td><td><p>Medium</p></td><td><p>Design</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-010</p></td><td><p>Unit Testing Framework</p></td><td><p>High</p></td><td><p>QA</p></td><td><p>14</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-011</p></td><td><p>Cloud Infrastructure Setup</p></td><td><p>Critical</p></td><td><p>DevOps</p></td><td><p>8</p></td><td><p>Completed</p></td></tr><tr><td><p>T-012</p></td><td><p>Social Media Campaign Plan</p></td><td><p>Low</p></td><td><p>Marketing</p></td><td><p>10</p></td><td><p>Pending</p></td></tr><tr><td><p>T-013</p></td><td><p>Security Vulnerability Scan</p></td><td><p>Critical</p></td><td><p>Cyber Security</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-014</p></td><td><p>Mobile Responsive Testing</p></td><td><p>Medium</p></td><td><p>QA</p></td><td><p>18</p></td><td><p>Pending</p></td></tr><tr><td><p>T-015</p></td><td><p>Legal Terms of Service Draft</p></td><td><p>Low</p></td><td><p>Legal</p></td><td><p>5</p></td><td><p>Completed</p></td></tr><tr><td><p>T-016</p></td><td><p>Payment Gateway Integration</p></td><td><p>Critical</p></td><td><p>Backend</p></td><td><p>30</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-017</p></td><td><p>Localization for EN/ES</p></td><td><p>Medium</p></td><td><p>Product</p></td><td><p>15</p></td><td><p>Pending</p></td></tr><tr><td><p>T-018</p></td><td><p>SEO Keyword Optimization</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>7</p></td><td><p>Completed</p></td></tr><tr><td><p>T-019</p></td><td><p>Beta Tester Recruitment</p></td><td><p>High</p></td><td><p>Product</p></td><td><p>9</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-020</p></td><td><p>Error Logging Implementation</p></td><td><p>Medium</p></td><td><p>Backend</p></td><td><p>6</p></td><td><p>Completed</p></td></tr></tbody></table>",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "case2 多线表",
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "table_caption": [],
+        "table_body": "<table><thead><tr><th><p><strong>Task ID</strong></p></th><th><p><strong>Task Description</strong></p></th><th><p><strong>Priority</strong></p></th><th><p><strong>Assigned Department</strong></p></th><th><p><strong>Estimated Hours</strong></p></th><th><p><strong>Status</strong></p></th></tr></thead><tbody><tr><td><p>T-001</p></td><td><p>Initial Client Consultation</p></td><td><p>High</p></td><td><p>Sales</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-002</p></td><td><p>Requirement Analysis</p></td><td><p>Critical</p></td><td><p>Engineering</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-003</p></td><td><p>Market Competitor Audit</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>8</p></td><td><p>Pending</p></td></tr><tr><td><p>T-004</p></td><td><p>UI Wireframe Design</p></td><td><p>High</p></td><td><p>Design</p></td><td><p>20</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-005</p></td><td><p>Database Schema Setup</p></td><td><p>Critical</p></td><td><p>Backend</p></td><td><p>10</p></td><td><p>Completed</p></td></tr><tr><td><p>T-006</p></td><td><p>API Authentication Layer</p></td><td><p>High</p></td><td><p>Backend</p></td><td><p>16</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-007</p></td><td><p>Frontend Component Library</p></td><td><p>Medium</p></td><td><p>Frontend</p></td><td><p>24</p></td><td><p>Pending</p></td></tr><tr><td><p>T-008</p></td><td><p>User Interview Scripts</p></td><td><p>Low</p></td><td><p>Research</p></td><td><p>6</p></td><td><p>Completed</p></td></tr><tr><td><p>T-009</p></td><td><p>Brand Color Palette Selection</p></td><td><p>Medium</p></td><td><p>Design</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-010</p></td><td><p>Unit Testing Framework</p></td><td><p>High</p></td><td><p>QA</p></td><td><p>14</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-011</p></td><td><p>Cloud Infrastructure Setup</p></td><td><p>Critical</p></td><td><p>DevOps</p></td><td><p>8</p></td><td><p>Completed</p></td></tr><tr><td><p>T-012</p></td><td><p>Social Media Campaign Plan</p></td><td><p>Low</p></td><td><p>Marketing</p></td><td><p>10</p></td><td><p>Pending</p></td></tr><tr><td><p>T-013</p></td><td><p>Security Vulnerability Scan</p></td><td><p>Critical</p></td><td><p>Cyber Security</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-014</p></td><td><p>Mobile Responsive Testing</p></td><td><p>Medium</p></td><td><p>QA</p></td><td><p>18</p></td><td><p>Pending</p></td></tr><tr><td><p>T-015</p></td><td><p>Legal Terms of Service Draft</p></td><td><p>Low</p></td><td><p>Legal</p></td><td><p>5</p></td><td><p>Completed</p></td></tr><tr><td><p>T-016</p></td><td><p>Payment Gateway Integration</p></td><td><p>Critical</p></td><td><p>Backend</p></td><td><p>30</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-017</p></td><td><p>Localization for EN/ES</p></td><td><p>Medium</p></td><td><p>Product</p></td><td><p>15</p></td><td><p>Pending</p></td></tr><tr><td><p>T-018</p></td><td><p>SEO Keyword Optimization</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>7</p></td><td><p>Completed</p></td></tr><tr><td><p>T-019</p></td><td><p>Beta Tester Recruitment</p></td><td><p>High</p></td><td><p>Product</p></td><td><p>9</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-020</p></td><td><p>Error Logging Implementation</p></td><td><p>Medium</p></td><td><p>Backend</p></td><td><p>6</p></td><td><p>Completed</p></td></tr><tr><td><p>T-021</p></td><td><p>Weekly Stakeholder Report</p></td><td><p>Low</p></td><td><p>Admin</p></td><td><p>2</p></td><td><p>Completed</p></td></tr><tr><td><p>T-022</p></td><td><p>Performance Bottleneck Audit</p></td><td><p>High</p></td><td><p>Engineering</p></td><td><p>14</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-023</p></td><td><p>Illustration Assets Creation</p></td><td><p>Low</p></td><td><p>Design</p></td><td><p>20</p></td><td><p>Pending</p></td></tr><tr><td><p>T-024</p></td><td><p>Data Migration Script</p></td><td><p>Critical</p></td><td><p>Data Science</p></td><td><p>11</p></td><td><p>Completed</p></td></tr><tr><td><p>T-025</p></td><td><p>Email Notification Template</p></td><td><p>Medium</p></td><td><p>Frontend</p></td><td><p>5</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-026</p></td><td><p>User Onboarding Flow</p></td><td><p>High</p></td><td><p>Design</p></td><td><p>12</p></td><td><p>Pending</p></td></tr><tr><td><p>T-027</p></td><td><p>Help Center Documentation</p></td><td><p>Low</p></td><td><p>Support</p></td><td><p>25</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-028</p></td><td><p>SSL Certificate Renewal</p></td><td><p>Critical</p></td><td><p>DevOps</p></td><td><p>1</p></td><td><p>Completed</p></td></tr><tr><td><p>T-029</p></td><td><p>Landing Page A/B Testing</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>16</p></td><td><p>Pending</p></td></tr><tr><td><p>T-030</p></td><td><p>CRM System Synchronization</p></td><td><p>Medium</p></td><td><p>Sales</p></td><td><p>8</p></td><td><p>Completed</p></td></tr><tr><td><p>T-031</p></td><td><p>Accessibility Compliance Check</p></td><td><p>High</p></td><td><p>QA</p></td><td><p>10</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-032</p></td><td><p>Vector Icon Set Export</p></td><td><p>Low</p></td><td><p>Design</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-033</p></td><td><p>Cache Layer Configuration</p></td><td><p>High</p></td><td><p>Backend</p></td><td><p>7</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-034</p></td><td><p>Bug Triage Meeting</p></td><td><p>Medium</p></td><td><p>Engineering</p></td><td><p>3</p></td><td><p>Completed</p></td></tr><tr><td><p>T-035</p></td><td><p>Investor Pitch Deck Update</p></td><td><p>High</p></td><td><p>Executive</p></td><td><p>10</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-036</p></td><td><p>Server Load Balancing</p></td><td><p>Critical</p></td><td><p>DevOps</p></td><td><p>9</p></td><td><p>Completed</p></td></tr><tr><td><p>T-037</p></td><td><p>Newsletter Subscriber Audit</p></td><td><p>Low</p></td><td><p>Marketing</p></td><td><p>5</p></td><td><p>Pending</p></td></tr><tr><td><p>T-038</p></td><td><p>Dark Mode Theme Implementation</p></td><td><p>Medium</p></td><td><p>Frontend</p></td><td><p>14</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-039</p></td><td><p>Third-party Library Update</p></td><td><p>Low</p></td><td><p>Engineering</p></td><td><p>6</p></td><td><p>Completed</p></td></tr><tr><td><p>T-040</p></td><td><p>Customer Feedback Survey</p></td><td><p>Medium</p></td><td><p>Support</p></td><td><p>8</p></td><td><p>Pending</p></td></tr><tr><td><p>T-041</p></td><td><p>End-to-End Encryption Test</p></td><td><p>Critical</p></td><td><p>Cyber Security</p></td><td><p>20</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-042</p></td><td><p>Content Management System (CMS)</p></td><td><p>High</p></td><td><p>Backend</p></td><td><p>22</p></td><td><p>Pending</p></td></tr><tr><td><p>T-043</p></td><td><p>Employee Training Module</p></td><td><p>Low</p></td><td><p>HR</p></td><td><p>15</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-044</p></td><td><p>Financial Audit Q1</p></td><td><p>High</p></td><td><p>Finance</p></td><td><p>40</p></td><td><p>Completed</p></td></tr><tr><td><p>T-045</p></td><td><p>Backup Restoration Drill</p></td><td><p>Critical</p></td><td><p>DevOps</p></td><td><p>4</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-046</p></td><td><p>Press Release Distribution</p></td><td><p>Medium</p></td><td><p>PR</p></td><td><p>3</p></td><td><p>Pending</p></td></tr><tr><td><p>T-047</p></td><td><p>Mobile Push Notification Logic</p></td><td><p>Medium</p></td><td><p>Backend</p></td><td><p>9</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-048</p></td><td><p>Analytics Dashboard Refresh</p></td><td><p>Low</p></td><td><p>Data Science</p></td><td><p>12</p></td><td><p>Completed</p></td></tr><tr><td><p>T-049</p></td><td><p>Technical Debt Review</p></td><td><p>Medium</p></td><td><p>Engineering</p></td><td><p>10</p></td><td><p>In Progress</p></td></tr></tbody></table>",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "case3 三线表",
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "table_caption": [],
+        "table_body": "<table><thead><tr><th><p>Task ID</p></th><th><p>Task Description</p></th><th><p>Priority</p></th><th><p>Assigned Department</p></th><th><p>Estimated Hours</p></th><th><p>Status</p></th></tr></thead><tbody><tr><td><p>T-001</p></td><td><p>Initial Client Consultation</p></td><td><p>High</p></td><td><p>Sales</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-002</p></td><td><p>Requirement Analysis</p></td><td><p>Critical</p></td><td><p>Engineering</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-003</p></td><td><p>Market Competitor Audit</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>8</p></td><td><p>Pending</p></td></tr><tr><td><p>T-004</p></td><td><p>UI Wireframe Design</p></td><td><p>High</p></td><td><p>Design</p></td><td><p>20</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-005</p></td><td><p>Database Schema Setup</p></td><td><p>Critical</p></td><td><p>Backend</p></td><td><p>10</p></td><td><p>Completed</p></td></tr><tr><td><p>T-006</p></td><td><p>API Authentication Layer</p></td><td><p>High</p></td><td><p>Backend</p></td><td><p>16</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-007</p></td><td><p>Frontend Component Library</p></td><td><p>Medium</p></td><td><p>Frontend</p></td><td><p>24</p></td><td><p>Pending</p></td></tr><tr><td><p>T-008</p></td><td><p>User Interview Scripts</p></td><td><p>Low</p></td><td><p>Research</p></td><td><p>6</p></td><td><p>Completed</p></td></tr><tr><td><p>T-009</p></td><td><p>Brand Color Palette Selection</p></td><td><p>Medium</p></td><td><p>Design</p></td><td><p>4</p></td><td><p>Completed</p></td></tr><tr><td><p>T-010</p></td><td><p>Unit Testing Framework</p></td><td><p>High</p></td><td><p>QA</p></td><td><p>14</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-011</p></td><td><p>Cloud Infrastructure Setup</p></td><td><p>Critical</p></td><td><p>DevOps</p></td><td><p>8</p></td><td><p>Completed</p></td></tr><tr><td><p>T-012</p></td><td><p>Social Media Campaign Plan</p></td><td><p>Low</p></td><td><p>Marketing</p></td><td><p>10</p></td><td><p>Pending</p></td></tr><tr><td><p>T-013</p></td><td><p>Security Vulnerability Scan</p></td><td><p>Critical</p></td><td><p>Cyber Security</p></td><td><p>12</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-014</p></td><td><p>Mobile Responsive Testing</p></td><td><p>Medium</p></td><td><p>QA</p></td><td><p>18</p></td><td><p>Pending</p></td></tr><tr><td><p>T-015</p></td><td><p>Legal Terms of Service Draft</p></td><td><p>Low</p></td><td><p>Legal</p></td><td><p>5</p></td><td><p>Completed</p></td></tr><tr><td><p>T-016</p></td><td><p>Payment Gateway Integration</p></td><td><p>Critical</p></td><td><p>Backend</p></td><td><p>30</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-017</p></td><td><p>Localization for EN/ES</p></td><td><p>Medium</p></td><td><p>Product</p></td><td><p>15</p></td><td><p>Pending</p></td></tr><tr><td><p>T-018</p></td><td><p>SEO Keyword Optimization</p></td><td><p>Medium</p></td><td><p>Marketing</p></td><td><p>7</p></td><td><p>Completed</p></td></tr><tr><td><p>T-019</p></td><td><p>Beta Tester Recruitment</p></td><td><p>High</p></td><td><p>Product</p></td><td><p>9</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-020</p></td><td><p>Error Logging Implementation</p></td><td><p>Medium</p></td><td><p>Backend</p></td><td><p>6</p></td><td><p>Completed</p></td></tr><tr><td><p>T-021</p></td><td><p>Weekly Stakeholder Report</p></td><td><p>Low</p></td><td><p>Admin</p></td><td><p>2</p></td><td><p>Completed</p></td></tr><tr><td><p>T-022</p></td><td><p>Performance Bottleneck Audit</p></td><td><p>High</p></td><td><p>Engineering</p></td><td><p>14</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-023</p></td><td><p>Illustration Assets Creation</p></td><td><p>Low</p></td><td><p>Design</p></td><td><p>20</p></td><td><p>Pending</p></td></tr><tr><td><p>T-024</p></td><td><p>Data Migration Script</p></td><td><p>Critical</p></td><td><p>Data Science</p></td><td><p>11</p></td><td><p>Completed</p></td></tr><tr><td><p>T-025</p></td><td><p>Email Notification Template</p></td><td><p>Medium</p></td><td><p>Frontend</p></td><td><p>5</p></td><td><p>In Progress</p></td></tr><tr><td><p>T-026</p></td><td><p>User Onboarding Flow</p></td><td><p>High</p></td><td><p>Design</p></td><td><p>12</p></td><td><p>Pending</p></td></tr><tr><td><p>T-027</p></td><td><p>Help Center Documentation</p></td><td><p>Low</p></td><td><p>Support</p></td><td><p>25</p></td><td><p>In Progress</p></td></tr></tbody></table>",
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "2026.01.05 11:49 01234 **矩阵起源MatrixOne\\_AI 原生超融合数据库产品**",
+        "page_idx": 0
+    }
+]

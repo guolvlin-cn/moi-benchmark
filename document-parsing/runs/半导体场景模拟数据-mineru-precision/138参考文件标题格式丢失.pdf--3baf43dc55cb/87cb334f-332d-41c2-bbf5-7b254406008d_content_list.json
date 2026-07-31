@@ -1,0 +1,839 @@
+[
+    {
+        "type": "text",
+        "text": "1. Title: SMIC IT Request Management Procedure",
+        "text_level": 2,
+        "bbox": [
+            157,
+            141,
+            500,
+            158
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "2. Purpose: Objective of this procedure is to ensure Completeness & Rationality of IT requests, so as to optimize SMIC management efficiency fastest.",
+        "bbox": [
+            157,
+            162,
+            821,
+            191
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "3. Scope: IT Application Systems",
+        "bbox": [
+            159,
+            196,
+            400,
+            212
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "4. Nomenclature:",
+        "bbox": [
+            159,
+            217,
+            302,
+            231
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 4.1. Fab Related: IT/MIT related",
+        "bbox": [
+            159,
+            231,
+            408,
+            244
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 4.2. Non-Fab Related: IT/CIT related",
+        "bbox": [
+            159,
+            244,
+            431,
+            259
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "5. Reference:",
+        "bbox": [
+            159,
+            263,
+            278,
+            279
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 5.1. IT-CIMS-01-2006: SMIC(SH/TJ/SZ)1 T/CIM Software Control Procedure",
+        "bbox": [
+            157,
+            279,
+            687,
+            293
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 5.2. IT-CIMS-01-2008: SM|C(BJ/SH/SZ)1T/CIM Software Control Procedur",
+        "bbox": [
+            157,
+            292,
+            678,
+            306
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6. Responsibility:",
+        "text_level": 2,
+        "bbox": [
+            159,
+            312,
+            302,
+            326
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 6.1. SMIT IT Development Team",
+        "bbox": [
+            159,
+            326,
+            413,
+            338
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.1.1. Take the responsibility for IT technical solution evaluation;",
+        "bbox": [
+            213,
+            338,
+            642,
+            353
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 6.1.2. Take the responsibility for IT technical solution resource cost evaluation;",
+        "bbox": [
+            159,
+            353,
+            717,
+            368
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.1.3. Take the responsibility for IT development resource planning;",
+        "bbox": [
+            159,
+            369,
+            650,
+            382
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 6.1.4. Take the responsibility for IT service request system maintenance",
+        "bbox": [
+            159,
+            382,
+            673,
+            398
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.2. User",
+        "bbox": [
+            159,
+            413,
+            265,
+            426
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 6.2.1. Take the responsibility for user request document implementation",
+        "bbox": [
+            157,
+            426,
+            673,
+            439
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.2.2. Take the responsibility for user request measurable benefit valuation;",
+        "bbox": [
+            215,
+            441,
+            692,
+            455
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.2.3. Take the responsibility for related org. user request alignment;",
+        "bbox": [
+            159,
+            456,
+            652,
+            470
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "■ 6.3. TBC (Technical Board Coordination) ←",
+        "text_level": 2,
+        "bbox": [
+            159,
+            485,
+            478,
+            499
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.3.1. Take the responsibility for fab user request prioritization if the priority are conflict across function",
+        "bbox": [
+            157,
+            500,
+            820,
+            525
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.4. QRE",
+        "bbox": [
+            159,
+            526,
+            268,
+            539
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6.4.1. Take the responsibility for non-fab user request prioritization if the priority are conflict across function",
+        "bbox": [
+            157,
+            539,
+            821,
+            565
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "SMI Restricted / e024120",
+        "bbox": [
+            23,
+            21,
+            297,
+            40
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Time\\_Now /2026-3-13 10:30",
+        "bbox": [
+            655,
+            21,
+            964,
+            40
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/43da1bf6f5f8dc1e93023ed1fb2200d11002515d5c17e677d7f43d4e771d6bf8.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            379,
+            123,
+            608,
+            717
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "SMI Restricted / e024120",
+        "bbox": [
+            25,
+            21,
+            297,
+            40
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "Time\\_Now /2026-3-13 10:30",
+        "bbox": [
+            655,
+            21,
+            963,
+            40
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "■ 7.2. Request Preparation",
+        "text_level": 2,
+        "bbox": [
+            159,
+            85,
+            361,
+            98
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "\\- Usershould provide below information for management change to issue change request and apply in IT service request system for signoff",
+        "bbox": [
+            223,
+            97,
+            823,
+            123
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Background(Current management, pain point)",
+        "bbox": [
+            248,
+            123,
+            557,
+            135
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Management Change(Improvement Idea)",
+        "bbox": [
+            248,
+            134,
+            527,
+            147
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Benefit",
+        "bbox": [
+            248,
+            146,
+            324,
+            158
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "7.3. Request Valuation(Benefit)",
+        "text_level": 2,
+        "bbox": [
+            159,
+            159,
+            403,
+            172
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For Fab related:",
+        "bbox": [
+            184,
+            172,
+            344,
+            185
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Based on management change, user should provide request benefit in \\$",
+        "bbox": [
+            223,
+            185,
+            690,
+            198
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Benefit Approval Procedure",
+        "bbox": [
+            250,
+            197,
+            450,
+            209
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Benefit' <=\\$100,000(100K)",
+        "bbox": [
+            265,
+            209,
+            457,
+            222
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need direct manager approval",
+        "bbox": [
+            561,
+            209,
+            779,
+            222
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ \\$100,000(100K) < Benefit < \\$1,000,000(1M)",
+        "bbox": [
+            265,
+            221,
+            547,
+            234
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need module head approval",
+        "bbox": [
+            563,
+            221,
+            768,
+            234
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Benefit >= \\$1,000,000(1M)",
+        "bbox": [
+            265,
+            233,
+            455,
+            247
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need fab head approval",
+        "bbox": [
+            561,
+            234,
+            742,
+            247
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "✨ Benefit type",
+        "bbox": [
+            225,
+            246,
+            337,
+            258
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Cost saving",
+        "bbox": [
+            250,
+            258,
+            344,
+            271
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need measurable benefit in \\$",
+        "bbox": [
+            458,
+            258,
+            672,
+            269
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Efficiency improvement",
+        "bbox": [
+            248,
+            269,
+            418,
+            282
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need measurable benefit in \\$",
+        "bbox": [
+            458,
+            269,
+            670,
+            282
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Quality improvement",
+        "bbox": [
+            250,
+            282,
+            401,
+            296
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need measurable benefit in \\$",
+        "bbox": [
+            458,
+            282,
+            670,
+            294
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Customer satisfaction",
+        "bbox": [
+            250,
+            294,
+            403,
+            307
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need attach related email",
+        "bbox": [
+            458,
+            294,
+            642,
+            307
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Top management strategy",
+        "bbox": [
+            250,
+            307,
+            426,
+            319
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "→ Need attach related email",
+        "bbox": [
+            458,
+            307,
+            642,
+            319
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For Non-Fab related",
+        "bbox": [
+            184,
+            318,
+            361,
+            331
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "User should provide the qualitative benefit of requests before submitted to IT",
+        "bbox": [
+            220,
+            330,
+            702,
+            351
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "7.4. User Alignment",
+        "text_level": 2,
+        "bbox": [
+            159,
+            356,
+            336,
+            369
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "User contact windows should get approval from his/her organization",
+        "bbox": [
+            223,
+            369,
+            675,
+            382
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "User should get approval from all relative user organization.",
+        "bbox": [
+            223,
+            382,
+            625,
+            394
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For example, Fab1 DIFF operation request need be approved by Fab7 DIFFSecurity",
+        "bbox": [
+            221,
+            394,
+            752,
+            407
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Requirement need be approved by Legal or IT security team.",
+        "bbox": [
+            223,
+            407,
+            603,
+            422
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "7.5. Solution & Resource Cost Evaluation",
+        "text_level": 2,
+        "bbox": [
+            159,
+            436,
+            467,
+            448
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "After user request approved by all relative user contact windows, IT should provide technical solution with resource cost in \\$ for each request.",
+        "bbox": [
+            223,
+            449,
+            823,
+            482
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "7.6. Request Accept Criteria",
+        "text_level": 2,
+        "bbox": [
+            159,
+            486,
+            384,
+            499
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For Fab related(Accept request which meet below all items):",
+        "bbox": [
+            225,
+            499,
+            626,
+            512
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ Benefit approved by all relative user and management team",
+        "bbox": [
+            248,
+            512,
+            636,
+            524
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ IT Solution is feasible",
+        "bbox": [
+            248,
+            524,
+            411,
+            536
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "√ ROI(ROI = Benefit / IT development cost) > 1",
+        "bbox": [
+            248,
+            536,
+            559,
+            548
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "✨ ForNon-Fab related",
+        "bbox": [
+            226,
+            548,
+            381,
+            560
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "IT will negotiate with user to make the decision by benefit, ROI and IT resource.",
+        "bbox": [
+            245,
+            560,
+            756,
+            574
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "■ 7.7. Request Prioritization",
+        "text_level": 2,
+        "bbox": [
+            159,
+            585,
+            371,
+            598
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For Fab related",
+        "bbox": [
+            225,
+            599,
+            354,
+            611
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Priority = Contribution \\* Urgent",
+        "bbox": [
+            248,
+            609,
+            489,
+            624
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "SMI Restricted / e024120",
+        "bbox": [
+            23,
+            22,
+            297,
+            40
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "Time\\_Now /2026-3-13 10:30",
+        "bbox": [
+            657,
+            22,
+            963,
+            40
+        ],
+        "page_idx": 2
+    }
+]

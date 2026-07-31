@@ -1,0 +1,3474 @@
+{
+  "filename": "0625跨页表合并复现case.docx",
+  "filetype": "DOCX",
+  "block_count": 96,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          114.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            114,
+            23
+          ],
+          [
+            114,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          116.0,
+          38.0,
+          531.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            116,
+            38
+          ],
+          [
+            531,
+            38
+          ],
+          [
+            531,
+            60
+          ],
+          [
+            116,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          72.0,
+          555.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            72
+          ],
+          [
+            555,
+            72
+          ],
+          [
+            555,
+            116
+          ],
+          [
+            53,
+            116
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>RISK LEVEL</td><td>WL</td><td>FOR LOGIC PRODUCTS</td></tr><tr><td>1</td><td>100</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>2</td><td>200</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>3</td><td>300</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>4</td><td>400</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>5</td><td>500</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>6</td><td>600</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>7</td><td>700</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          161.0,
+          556.0,
+          756.0
+        ],
+        "polygon": [
+          [
+            39,
+            161
+          ],
+          [
+            556,
+            161
+          ],
+          [
+            556,
+            757
+          ],
+          [
+            39,
+            757
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          798.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          807.0,
+          451.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            42,
+            807
+          ],
+          [
+            452,
+            807
+          ],
+          [
+            452,
+            820
+          ],
+          [
+            42,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            537,
+            808
+          ],
+          [
+            537,
+            819
+          ],
+          [
+            493,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-8",
+      "index": 7,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-9",
+      "index": 8,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          113.0,
+          38.0,
+          532.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            113,
+            38
+          ],
+          [
+            532,
+            38
+          ],
+          [
+            532,
+            60
+          ],
+          [
+            113,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-10",
+      "index": 9,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          72.0,
+          552.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            72
+          ],
+          [
+            553,
+            72
+          ],
+          [
+            553,
+            116
+          ],
+          [
+            53,
+            116
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-11",
+      "index": 10,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td rowspan=\"2\">RISK LEVEL</td><td rowspan=\"2\">WL</td><td>FOR NVM PRODUCTS</td></tr><tr><td>EEPROM</td></tr><tr><td>1</td><td>100</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>2</td><td>200</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>3</td><td>300</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>4</td><td>400</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>5</td><td>500</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>6</td><td>600</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>7</td><td>700</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          130.0,
+          556.0,
+          734.0
+        ],
+        "polygon": [
+          [
+            39,
+            130
+          ],
+          [
+            556,
+            130
+          ],
+          [
+            556,
+            735
+          ],
+          [
+            39,
+            735
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-12",
+      "index": 11,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          798.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-13",
+      "index": 12,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          808.0,
+          452.0,
+          820.0
+        ],
+        "polygon": [
+          [
+            42,
+            808
+          ],
+          [
+            452,
+            808
+          ],
+          [
+            452,
+            820
+          ],
+          [
+            42,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-14",
+      "index": 13,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            537,
+            808
+          ],
+          [
+            537,
+            819
+          ],
+          [
+            493,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-15",
+      "index": 14,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-16",
+      "index": 15,
+      "type": "title",
+      "level": "1",
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "doc_title",
+        "bbox": [
+          115.0,
+          38.0,
+          532.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            115,
+            38
+          ],
+          [
+            532,
+            38
+          ],
+          [
+            532,
+            60
+          ],
+          [
+            115,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-17",
+      "index": 16,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          72.0,
+          555.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            72
+          ],
+          [
+            555,
+            72
+          ],
+          [
+            555,
+            116
+          ],
+          [
+            53,
+            116
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-18",
+      "index": 17,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td rowspan=\"2\">RISK LEVEL</td><td rowspan=\"2\">WL</td><td>FOR NVM PRODUCTS</td></tr><tr><td>NOR FLASH</td></tr><tr><td>1</td><td>100</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>2</td><td>200</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>3</td><td>300</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>4</td><td>400</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>5</td><td>500</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>6</td><td>600</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>7</td><td>700</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          145.0,
+          556.0,
+          751.0
+        ],
+        "polygon": [
+          [
+            39,
+            145
+          ],
+          [
+            556,
+            145
+          ],
+          [
+            556,
+            751
+          ],
+          [
+            39,
+            751
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-19",
+      "index": 18,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          798.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-20",
+      "index": 19,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          808.0,
+          451.0,
+          820.0
+        ],
+        "polygon": [
+          [
+            42,
+            808
+          ],
+          [
+            452,
+            808
+          ],
+          [
+            452,
+            820
+          ],
+          [
+            42,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-21",
+      "index": 20,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            537,
+            808
+          ],
+          [
+            537,
+            819
+          ],
+          [
+            493,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-22",
+      "index": 21,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          114.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            114,
+            23
+          ],
+          [
+            114,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-23",
+      "index": 22,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          117.0,
+          38.0,
+          531.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            117,
+            38
+          ],
+          [
+            531,
+            38
+          ],
+          [
+            531,
+            60
+          ],
+          [
+            117,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-24",
+      "index": 23,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          72.0,
+          555.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            72
+          ],
+          [
+            555,
+            72
+          ],
+          [
+            555,
+            116
+          ],
+          [
+            53,
+            116
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-25",
+      "index": 24,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td rowspan=\"2\">RISK LEVEL</td><td rowspan=\"2\">WL</td><td>FOR NORMAL PRODUCTS</td></tr><tr><td>NAND FLASH</td></tr><tr><td>1</td><td>100</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>2</td><td>200</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>3</td><td>300</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>4</td><td>400</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>5</td><td>500</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>6</td><td>600</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr><tr><td>7</td><td>700</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms. Engineers monitored the production line through digital dashboards, while sensors collected real-time data on temperature, pressure, and machine performance.</td></tr></table>",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          162.0,
+          556.0,
+          765.0
+        ],
+        "polygon": [
+          [
+            39,
+            162
+          ],
+          [
+            556,
+            162
+          ],
+          [
+            556,
+            765
+          ],
+          [
+            39,
+            765
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-26",
+      "index": 25,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "vision_footnote",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          798.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-27",
+      "index": 26,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          807.0,
+          451.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            42,
+            807
+          ],
+          [
+            451,
+            807
+          ],
+          [
+            451,
+            820
+          ],
+          [
+            42,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-28",
+      "index": 27,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          807.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            807
+          ],
+          [
+            537,
+            807
+          ],
+          [
+            537,
+            819
+          ],
+          [
+            493,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-29",
+      "index": 28,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-30",
+      "index": 29,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          116.0,
+          38.0,
+          532.0,
+          59.0
+        ],
+        "polygon": [
+          [
+            116,
+            38
+          ],
+          [
+            532,
+            38
+          ],
+          [
+            532,
+            60
+          ],
+          [
+            116,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-31",
+      "index": 30,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          72.0,
+          555.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            72
+          ],
+          [
+            555,
+            72
+          ],
+          [
+            555,
+            116
+          ],
+          [
+            53,
+            116
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-32",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": "notes:",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          181.0,
+          73.0,
+          191.0
+        ],
+        "polygon": [
+          [
+            43,
+            181
+          ],
+          [
+            72,
+            181
+          ],
+          [
+            72,
+            191
+          ],
+          [
+            43,
+            191
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-33",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "1. The factory floor hummed with a.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          195.0,
+          204.0,
+          208.0
+        ],
+        "polygon": [
+          [
+            43,
+            195
+          ],
+          [
+            204,
+            195
+          ],
+          [
+            204,
+            208
+          ],
+          [
+            43,
+            208
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-34",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": "2. robotic arms.",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          211.0,
+          117.0,
+          223.0
+        ],
+        "polygon": [
+          [
+            43,
+            211
+          ],
+          [
+            117,
+            211
+          ],
+          [
+            117,
+            223
+          ],
+          [
+            43,
+            223
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-35",
+      "index": 34,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>RISK LEVEL</td><td>WL</td><td>FOR OTHER PRODUCT(28nm and above)</td><td>RE COMMENT</td></tr><tr><td>1</td><td>100</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td></td></tr><tr><td>2</td><td>200</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td></td></tr><tr><td>3</td><td>300</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td></td></tr><tr><td>4</td><td>400</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td></td></tr><tr><td>5</td><td>500</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td></td></tr></table>",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          238.0,
+          556.0,
+          744.0
+        ],
+        "polygon": [
+          [
+            39,
+            238
+          ],
+          [
+            556,
+            238
+          ],
+          [
+            556,
+            745
+          ],
+          [
+            39,
+            745
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-36",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          798.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-37",
+      "index": 36,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          808.0,
+          452.0,
+          820.0
+        ],
+        "polygon": [
+          [
+            42,
+            808
+          ],
+          [
+            452,
+            808
+          ],
+          [
+            452,
+            820
+          ],
+          [
+            42,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-38",
+      "index": 37,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            536,
+            808
+          ],
+          [
+            536,
+            819
+          ],
+          [
+            493,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-39",
+      "index": 38,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          114.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            114,
+            23
+          ],
+          [
+            114,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-40",
+      "index": 39,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td></td><td>Doc.No.:QR-IQCS-02-2002</td><td colspan=\"2\">Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:/1/5</td></tr><tr><td>6</td><td colspan=\"2\">600</td><td>The factory floor hummed with the steady rhythm of conveyor belts, hydraulic presses, and robotic arms.</td><td colspan=\"2\"></td></tr></table>",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          40.0,
+          72.0,
+          556.0,
+          210.0
+        ],
+        "polygon": [
+          [
+            40,
+            72
+          ],
+          [
+            556,
+            72
+          ],
+          [
+            556,
+            210
+          ],
+          [
+            40,
+            210
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-41",
+      "index": 40,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>RISK LEVEL</td><td>WL</td><td>FOR AUTOMOTIVERSA COSIGN FLOW</td><td>RE COMMENT</td></tr><tr><td>1</td><td>0</td><td>cnc machines</td><td>improve production efficiency</td></tr><tr><td>2</td><td>0</td><td>turbines</td><td>ensure stable power supply</td></tr></table>",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          302.0,
+          556.0,
+          661.0
+        ],
+        "polygon": [
+          [
+            39,
+            302
+          ],
+          [
+            556,
+            302
+          ],
+          [
+            556,
+            661
+          ],
+          [
+            39,
+            661
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-42",
+      "index": 41,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          798.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-43",
+      "index": 42,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          43.0,
+          808.0,
+          452.0,
+          820.0
+        ],
+        "polygon": [
+          [
+            43,
+            808
+          ],
+          [
+            452,
+            808
+          ],
+          [
+            452,
+            820
+          ],
+          [
+            43,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-44",
+      "index": 43,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            537,
+            808
+          ],
+          [
+            537,
+            819
+          ],
+          [
+            493,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-45",
+      "index": 44,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            66
+          ],
+          [
+            43,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-46",
+      "index": 45,
+      "type": "text",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          117.0,
+          37.0,
+          529.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            117,
+            37
+          ],
+          [
+            529,
+            37
+          ],
+          [
+            529,
+            61
+          ],
+          [
+            117,
+            61
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-47",
+      "index": 46,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td colspan=\"2\">Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr><tr><td>3</td><td>0</td><td>conveyor</td><td colspan=\"2\">speed up material movement</td></tr><tr><td>4</td><td>300</td><td>turbines</td><td colspan=\"2\">ensure stable power supply</td></tr><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          39.0,
+          71.0,
+          556.0,
+          499.0
+        ],
+        "polygon": [
+          [
+            39,
+            71
+          ],
+          [
+            556,
+            71
+          ],
+          [
+            556,
+            499
+          ],
+          [
+            39,
+            499
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-48",
+      "index": 47,
+      "type": "footer",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          798.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-49",
+      "index": 48,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          43.0,
+          808.0,
+          451.0,
+          820.0
+        ],
+        "polygon": [
+          [
+            43,
+            808
+          ],
+          [
+            451,
+            808
+          ],
+          [
+            451,
+            820
+          ],
+          [
+            43,
+            820
+          ]
+        ]
+      }
+    },
+    {
+      "id": "H16wN5-layout-50",
+      "index": 49,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 7,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            537,
+            808
+          ],
+          [
+            537,
+            819
+          ],
+          [
+            493,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-51",
+      "index": 50,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-52",
+      "index": 51,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          116.0,
+          37.0,
+          529.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            116,
+            37
+          ],
+          [
+            530,
+            37
+          ],
+          [
+            530,
+            60
+          ],
+          [
+            116,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-53",
+      "index": 52,
+      "type": "table",
+      "level": null,
+      "content": "",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          73.0,
+          555.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            73
+          ],
+          [
+            555,
+            73
+          ],
+          [
+            555,
+            115
+          ],
+          [
+            53,
+            115
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-54",
+      "index": 53,
+      "type": "text",
+      "level": null,
+      "content": "0626",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          501.0,
+          71.0,
+          514.0
+        ],
+        "polygon": [
+          [
+            42,
+            501
+          ],
+          [
+            70,
+            501
+          ],
+          [
+            70,
+            513
+          ],
+          [
+            42,
+            513
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-55",
+      "index": 54,
+      "type": "text",
+      "level": null,
+      "content": "配置：",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          528.0,
+          73.0,
+          542.0
+        ],
+        "polygon": [
+          [
+            43,
+            528
+          ],
+          [
+            73,
+            528
+          ],
+          [
+            73,
+            542
+          ],
+          [
+            43,
+            542
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-56",
+      "index": 55,
+      "type": "text",
+      "level": null,
+      "content": "enable_table_html_regeneration=1",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          559.0,
+          213.0,
+          572.0
+        ],
+        "polygon": [
+          [
+            43,
+            559
+          ],
+          [
+            213,
+            559
+          ],
+          [
+            213,
+            572
+          ],
+          [
+            43,
+            572
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-57",
+      "index": 56,
+      "type": "text",
+      "level": null,
+      "content": "enable_table_embedded_image_extraction=1",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          586.0,
+          263.0,
+          599.0
+        ],
+        "polygon": [
+          [
+            43,
+            586
+          ],
+          [
+            263,
+            586
+          ],
+          [
+            263,
+            599
+          ],
+          [
+            43,
+            599
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-58",
+      "index": 57,
+      "type": "text",
+      "level": null,
+      "content": "enable_merged_table_split=1",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          614.0,
+          187.0,
+          627.0
+        ],
+        "polygon": [
+          [
+            43,
+            614
+          ],
+          [
+            187,
+            614
+          ],
+          [
+            187,
+            628
+          ],
+          [
+            43,
+            628
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-59",
+      "index": 58,
+      "type": "text",
+      "level": null,
+      "content": "enable_cross_page_table_merge=1",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          642.0,
+          213.0,
+          655.0
+        ],
+        "polygon": [
+          [
+            42,
+            642
+          ],
+          [
+            214,
+            642
+          ],
+          [
+            214,
+            655
+          ],
+          [
+            42,
+            655
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-60",
+      "index": 59,
+      "type": "text",
+      "level": null,
+      "content": "unmerge_table_cells=0",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          670.0,
+          159.0,
+          683.0
+        ],
+        "polygon": [
+          [
+            43,
+            670
+          ],
+          [
+            159,
+            670
+          ],
+          [
+            159,
+            683
+          ],
+          [
+            43,
+            683
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-61",
+      "index": 60,
+      "type": "text",
+      "level": null,
+      "content": "enable_table_inline_image_text=1",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          698.0,
+          212.0,
+          711.0
+        ],
+        "polygon": [
+          [
+            43,
+            698
+          ],
+          [
+            212,
+            698
+          ],
+          [
+            212,
+            711
+          ],
+          [
+            43,
+            711
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-62",
+      "index": 61,
+      "type": "text",
+      "level": null,
+      "content": "cross_page_merge_header_table=1",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          726.0,
+          215.0,
+          738.0
+        ],
+        "polygon": [
+          [
+            43,
+            726
+          ],
+          [
+            215,
+            726
+          ],
+          [
+            215,
+            738
+          ],
+          [
+            43,
+            738
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-63",
+      "index": 62,
+      "type": "text",
+      "level": null,
+      "content": "enable_cross_page_geometric_filter=1",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          753.0,
+          231.0,
+          766.0
+        ],
+        "polygon": [
+          [
+            42,
+            753
+          ],
+          [
+            232,
+            753
+          ],
+          [
+            232,
+            767
+          ],
+          [
+            42,
+            767
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-64",
+      "index": 63,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          797.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            797
+          ],
+          [
+            42,
+            797
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-65",
+      "index": 64,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          808.0,
+          451.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            42,
+            808
+          ],
+          [
+            449,
+            808
+          ],
+          [
+            449,
+            819
+          ],
+          [
+            42,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Mfc9fO-layout-66",
+      "index": 65,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 8,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          818.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            534,
+            808
+          ],
+          [
+            534,
+            818
+          ],
+          [
+            493,
+            818
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-67",
+      "index": 66,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-68",
+      "index": 67,
+      "type": "header",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header",
+        "bbox": [
+          114.0,
+          38.0,
+          532.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            114,
+            38
+          ],
+          [
+            532,
+            38
+          ],
+          [
+            532,
+            60
+          ],
+          [
+            114,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-69",
+      "index": 68,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          72.0,
+          555.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            72
+          ],
+          [
+            556,
+            72
+          ],
+          [
+            556,
+            116
+          ],
+          [
+            53,
+            116
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-70",
+      "index": 69,
+      "type": "text",
+      "level": null,
+      "content": "将前五个表格称为表1-表5，将最后一个表格前半部分称为表6，后半部分称为表7",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          143.0,
+          484.0,
+          159.0
+        ],
+        "polygon": [
+          [
+            42,
+            143
+          ],
+          [
+            484,
+            143
+          ],
+          [
+            484,
+            159
+          ],
+          [
+            42,
+            159
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-71",
+      "index": 70,
+      "type": "title",
+      "level": "1",
+      "content": "1. 不该合并的被合并：",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          42.0,
+          201.0,
+          162.0,
+          216.0
+        ],
+        "polygon": [
+          [
+            42,
+            201
+          ],
+          [
+            162,
+            201
+          ],
+          [
+            162,
+            216
+          ],
+          [
+            42,
+            216
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-72",
+      "index": 71,
+      "type": "text",
+      "level": null,
+      "content": "现象：表1表2合并为一张表；表3表4合并为一张表；表5未被合并，独立存在，表5上方文字被正常识别为文字，且阅读顺序准确，先文本再表5",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          230.0,
+          551.0,
+          261.0
+        ],
+        "polygon": [
+          [
+            42,
+            230
+          ],
+          [
+            551,
+            230
+          ],
+          [
+            551,
+            262
+          ],
+          [
+            42,
+            262
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-73",
+      "index": 72,
+      "type": "text",
+      "level": null,
+      "content": "debug 信息：",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          276.0,
+          107.0,
+          291.0
+        ],
+        "polygon": [
+          [
+            42,
+            276
+          ],
+          [
+            108,
+            276
+          ],
+          [
+            108,
+            291
+          ],
+          [
+            42,
+            291
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-74",
+      "index": 73,
+      "type": "text",
+      "level": null,
+      "content": "docx 转 pdf 无误；paddle 识别无误；",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          41.0,
+          305.0,
+          230.0,
+          321.0
+        ],
+        "polygon": [
+          [
+            41,
+            305
+          ],
+          [
+            231,
+            305
+          ],
+          [
+            231,
+            321
+          ],
+          [
+            41,
+            321
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-75",
+      "index": 74,
+      "type": "text",
+      "level": null,
+      "content": "cross_page_table_match/下有 4 次 vlm 调用",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          41.0,
+          335.0,
+          264.0,
+          351.0
+        ],
+        "polygon": [
+          [
+            41,
+            335
+          ],
+          [
+            264,
+            335
+          ],
+          [
+            264,
+            351
+          ],
+          [
+            41,
+            351
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-76",
+      "index": 75,
+      "type": "text",
+      "level": null,
+      "content": "md_1:判断表1和表2是否属于同一个跨页表，返回“true，两个表格具有完全一致的列结构(risk level，wl，产品类别)，且内容属于同一主题范畴，都是关于不同风险等级（risk level）和晶圆数量（wl）下的可行性验证要求，表a针对logic products，表b针对nvm products，这属于同一分类表格下的不同产品条目。两个表格的行号和wl值完全对应，说明它们是并列展示不同产品线的同一套标准，而非跨页延续，因此，它们属于同一个跨页表格的不同部分。”",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          41.0,
+          364.0,
+          558.0,
+          442.0
+        ],
+        "polygon": [
+          [
+            41,
+            364
+          ],
+          [
+            558,
+            364
+          ],
+          [
+            558,
+            443
+          ],
+          [
+            41,
+            443
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-77",
+      "index": 76,
+      "type": "text",
+      "level": null,
+      "content": "md_2:判断表2和表3是否属于同一个跨页表，返回“false，这两个表格虽然列结构完全一致（risk level，wl，for nvm products），但他们是针对不同产品类别的独立表格，表b拥有完整的表头，且内容从risk level 1开始重新列举，属于同一文档中并列的两个独立分类表，并非一个表格跨页延续。”",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          41.0,
+          456.0,
+          562.0,
+          502.0
+        ],
+        "polygon": [
+          [
+            41,
+            460
+          ],
+          [
+            562,
+            456
+          ],
+          [
+            562,
+            498
+          ],
+          [
+            41,
+            502
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-78",
+      "index": 77,
+      "type": "text",
+      "level": null,
+      "content": "md_3:判断表3和表4是否属于同一个跨页表，返回“true，两者拥有完全一致的列结构，表a针对nor flash，表b针对nand flash，两者是同一分类表格下的不同产品类别条目，符合跨页表格的特征。”",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          517.0,
+          553.0,
+          563.0
+        ],
+        "polygon": [
+          [
+            42,
+            517
+          ],
+          [
+            553,
+            517
+          ],
+          [
+            553,
+            563
+          ],
+          [
+            42,
+            563
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-79",
+      "index": 78,
+      "type": "text",
+      "level": null,
+      "content": "md_4:判断表5和表6是否属于同一个跨页表，返回“false，虽然两个表格的列结构相似，且主题都涉及可靠性风险评估，但它们是描述两个不同产品类别的独立表格，表a针对for other products（28nm and above），表b针对for automotive rsa cosign flow，此外两个表都有各自完整的表头，且风险等级都是从1开始重新计数，因此是两个独立的表格”",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          578.0,
+          553.0,
+          640.0
+        ],
+        "polygon": [
+          [
+            42,
+            578
+          ],
+          [
+            553,
+            578
+          ],
+          [
+            553,
+            640
+          ],
+          [
+            42,
+            640
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-80",
+      "index": 79,
+      "type": "text",
+      "level": null,
+      "content": "表6和表7未进入 vlm 判断跨页表流程",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          654.0,
+          252.0,
+          668.0
+        ],
+        "polygon": [
+          [
+            42,
+            654
+          ],
+          [
+            252,
+            654
+          ],
+          [
+            252,
+            668
+          ],
+          [
+            42,
+            668
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-81",
+      "index": 80,
+      "type": "text",
+      "level": null,
+      "content": "tableprocess-cross_page_append-page2/下有两次 vlm 记录，为 vlm 生成续表",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          712.0,
+          433.0,
+          727.0
+        ],
+        "polygon": [
+          [
+            42,
+            712
+          ],
+          [
+            433,
+            712
+          ],
+          [
+            433,
+            727
+          ],
+          [
+            42,
+            727
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-82",
+      "index": 81,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          797.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            798
+          ],
+          [
+            42,
+            798
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-83",
+      "index": 82,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          808.0,
+          455.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            42,
+            808
+          ],
+          [
+            449,
+            808
+          ],
+          [
+            449,
+            819
+          ],
+          [
+            42,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "XfgxSv-layout-84",
+      "index": 83,
+      "type": "footer",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 9,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            537,
+            808
+          ],
+          [
+            537,
+            818
+          ],
+          [
+            493,
+            818
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-85",
+      "index": 84,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          43.0,
+          23.0,
+          113.0,
+          65.0
+        ],
+        "polygon": [
+          [
+            43,
+            23
+          ],
+          [
+            113,
+            23
+          ],
+          [
+            113,
+            65
+          ],
+          [
+            43,
+            65
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-86",
+      "index": 85,
+      "type": "text",
+      "level": null,
+      "content": "Semiconfuctor Manufactcuturing International Corporation",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          114.0,
+          38.0,
+          531.0,
+          60.0
+        ],
+        "polygon": [
+          [
+            114,
+            38
+          ],
+          [
+            532,
+            38
+          ],
+          [
+            532,
+            60
+          ],
+          [
+            114,
+            60
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-87",
+      "index": 86,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc.No.:QR-IQCS-02-2002</td><td>Doc.Title: SMIC Class-I Supplier (Raw Material)Vendor Performance (QCDSE)Evaluation Procedure</td><td>Rev.: 40</td><td>Page No.:1/5</td></tr></table>",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          53.0,
+          72.0,
+          555.0,
+          115.0
+        ],
+        "polygon": [
+          [
+            53,
+            72
+          ],
+          [
+            555,
+            72
+          ],
+          [
+            555,
+            115
+          ],
+          [
+            53,
+            115
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-88",
+      "index": 87,
+      "type": "text",
+      "level": null,
+      "content": "2. 该合并的未合并：",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          116.0,
+          150.0,
+          130.0
+        ],
+        "polygon": [
+          [
+            42,
+            116
+          ],
+          [
+            151,
+            116
+          ],
+          [
+            151,
+            130
+          ],
+          [
+            42,
+            130
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-89",
+      "index": 88,
+      "type": "text",
+      "level": null,
+      "content": "现象：仍然未合并",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          145.0,
+          142.0,
+          159.0
+        ],
+        "polygon": [
+          [
+            42,
+            145
+          ],
+          [
+            143,
+            145
+          ],
+          [
+            143,
+            160
+          ],
+          [
+            42,
+            160
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-90",
+      "index": 89,
+      "type": "text",
+      "level": null,
+      "content": "debug 信息：",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          175.0,
+          107.0,
+          190.0
+        ],
+        "polygon": [
+          [
+            42,
+            175
+          ],
+          [
+            107,
+            175
+          ],
+          [
+            107,
+            190
+          ],
+          [
+            42,
+            190
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-91",
+      "index": 90,
+      "type": "text",
+      "level": null,
+      "content": "docx 转 pdf 无误，格式保留；paddle 识别无误；",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          205.0,
+          290.0,
+          220.0
+        ],
+        "polygon": [
+          [
+            42,
+            205
+          ],
+          [
+            290,
+            205
+          ],
+          [
+            290,
+            220
+          ],
+          [
+            42,
+            220
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-92",
+      "index": 91,
+      "type": "text",
+      "level": null,
+      "content": "从 pdf 上来看，满足：两个表在相邻页，上表底边超过 50%，下表上边在 50% 内，宽度几乎一样，表中间没有文本，页眉页脚已被剔除干净",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          234.0,
+          555.0,
+          265.0
+        ],
+        "polygon": [
+          [
+            42,
+            234
+          ],
+          [
+            555,
+            234
+          ],
+          [
+            555,
+            265
+          ],
+          [
+            42,
+            265
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-93",
+      "index": 92,
+      "type": "text",
+      "level": null,
+      "content": "无其他思路",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          43.0,
+          279.0,
+          107.0,
+          294.0
+        ],
+        "polygon": [
+          [
+            43,
+            279
+          ],
+          [
+            107,
+            279
+          ],
+          [
+            107,
+            294
+          ],
+          [
+            43,
+            294
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-94",
+      "index": 93,
+      "type": "text",
+      "level": null,
+      "content": "The information contained herein is exclusive property of SIMC, and shall not be distributed, reproduced, or disclosed in whole or in part without prior written permission of SMIC",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          773.0,
+          530.0,
+          797.0
+        ],
+        "polygon": [
+          [
+            42,
+            773
+          ],
+          [
+            530,
+            773
+          ],
+          [
+            530,
+            797
+          ],
+          [
+            42,
+            797
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-95",
+      "index": 94,
+      "type": "footer",
+      "level": null,
+      "content": "According to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          42.0,
+          808.0,
+          451.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            42,
+            808
+          ],
+          [
+            449,
+            808
+          ],
+          [
+            449,
+            819
+          ],
+          [
+            42,
+            819
+          ]
+        ]
+      }
+    },
+    {
+      "id": "93ax7t-layout-96",
+      "index": 95,
+      "type": "text",
+      "level": null,
+      "content": "2026-1-30",
+      "page_num": 10,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "number",
+        "bbox": [
+          493.0,
+          808.0,
+          537.0,
+          819.0
+        ],
+        "polygon": [
+          [
+            493,
+            808
+          ],
+          [
+            536,
+            808
+          ],
+          [
+            536,
+            818
+          ],
+          [
+            493,
+            818
+          ]
+        ]
+      }
+    }
+  ]
+}

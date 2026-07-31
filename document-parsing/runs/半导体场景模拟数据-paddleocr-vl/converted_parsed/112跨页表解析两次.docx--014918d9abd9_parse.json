@@ -1,0 +1,385 @@
+{
+  "filename": "112跨页表解析两次.docx",
+  "filetype": "DOCX",
+  "block_count": 10,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          34.0,
+          44.0,
+          110.0,
+          85.0
+        ],
+        "polygon": [
+          [
+            34,
+            44
+          ],
+          [
+            110,
+            44
+          ],
+          [
+            110,
+            85
+          ],
+          [
+            34,
+            85
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "text",
+      "level": null,
+      "content": "Semiconductor Manufacturing International Corporation",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          110.0,
+          70.0,
+          522.0,
+          88.0
+        ],
+        "polygon": [
+          [
+            110,
+            70
+          ],
+          [
+            522,
+            70
+          ],
+          [
+            522,
+            89
+          ],
+          [
+            110,
+            89
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>Doc No.:QR-QUSM-02-2001</td><td>Doc Title:SMIC Document Control Procedure</td><td>Rev.:1</td><td>Page No.:1/2</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          37.0,
+          90.0,
+          552.0,
+          119.0
+        ],
+        "polygon": [
+          [
+            37,
+            90
+          ],
+          [
+            552,
+            90
+          ],
+          [
+            552,
+            119
+          ],
+          [
+            37,
+            119
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-4",
+      "index": 3,
+      "type": "text",
+      "level": null,
+      "content": "中芯国际（证券代码：00981.HK/688981.SH）是世界领先的集成电路晶圆代工企业之一，也是中国大陆集成电路制造业领导者，拥有领先的工艺制造能力、产能优势、服务配套，向全球客户提供0.35微米到FinFET不同技术节点的晶圆代工与技术服务。中芯国际总部位于中国上海，拥有全球化的制造和服务基地，在上海、北京、天津、深圳建有三座8英寸晶圆厂和四座12英寸晶圆厂；在上海、北京、天津各有一座12英寸晶圆厂在建中。中芯国际还在美国、欧洲、日本和中国台湾设立营销办事处、提供客户服务，同时在中国香港设立了代表处。详细资讯请参考中芯国际网站www.smics.com",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "vision_footnote",
+        "bbox": [
+          33.0,
+          132.0,
+          562.0,
+          226.0
+        ],
+        "polygon": [
+          [
+            33,
+            132
+          ],
+          [
+            562,
+            132
+          ],
+          [
+            562,
+            227
+          ],
+          [
+            33,
+            227
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "Semiconductor Manufacturing International Corp is an investment holding company principally engaged in integrated circuit foundry business. The Company is engaged in the manufacturing and testing of silicon wafers and types of compound semiconductor integrated circuit wafers. The Company also provides integrated circuit-related development, design and technical services, photomask manufacturing, testing and sales of self-produced products as well as other services. The Company provides foundry and technical services to domestic and foreign customers.",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          33.0,
+          242.0,
+          557.0,
+          335.0
+        ],
+        "polygon": [
+          [
+            33,
+            242
+          ],
+          [
+            558,
+            242
+          ],
+          [
+            558,
+            335
+          ],
+          [
+            33,
+            335
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-6",
+      "index": 5,
+      "type": "text",
+      "level": null,
+      "content": "表一 中英文对应",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          249.0,
+          429.0,
+          346.0,
+          443.0
+        ],
+        "polygon": [
+          [
+            249,
+            429
+          ],
+          [
+            346,
+            429
+          ],
+          [
+            346,
+            443
+          ],
+          [
+            249,
+            443
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-7",
+      "index": 6,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>No.</td><td>英文单字</td><td></td><td>中文批注</td><td>说明</td></tr><tr><td>1.</td><td>data</td><td></td><td>数据</td><td>用于分析、计算或建模的原始信息</td></tr><tr><td>2.</td><td>model</td><td></td><td>模型</td><td>对现实问题的数学或逻辑抽象</td></tr><tr><td>3.</td><td>signal</td><td></td><td>信号</td><td>随时间或空间变化的物理量</td></tr><tr><td>4.</td><td>noise</td><td></td><td>噪声</td><td>干扰有效信号的随机成分</td></tr><tr><td>5.</td><td>peak</td><td></td><td>峰</td><td>数据或谱线中的局部最大值</td></tr><tr><td>6.</td><td>width</td><td></td><td>宽度</td><td>描述峰或分布的展宽程度</td></tr><tr><td>7.</td><td>energy</td><td></td><td>能量</td><td>物理系统中的基本量</td></tr><tr><td>8.</td><td>channel</td><td></td><td>道址</td><td>能谱中对应的离散编号</td></tr><tr><td>9.</td><td>count</td><td></td><td>计数</td><td>探测器记录到的事件数量</td></tr><tr><td>10.</td><td>spectrum</td><td></td><td>能谱</td><td>能量分布的统计结果</td></tr><tr><td>11.</td><td>background</td><td></td><td>本底</td><td>非目标信号产生的背景计数</td></tr><tr><td>12.</td><td>calibration</td><td></td><td>标定</td><td>将测量值映射到真实物理量</td></tr><tr><td>13.</td><td>resolution</td><td></td><td>分辨率</td><td>区分相邻峰的能力</td></tr><tr><td>14.</td><td>algorithm</td><td></td><td>算法</td><td>解决问题的计算步骤集合</td></tr><tr><td>15.</td><td>iteration</td><td></td><td>迭代</td><td>重复执行计算以逼近结果</td></tr><tr><td>16.</td><td>convergence</td><td></td><td>收敛</td><td>迭代结果趋于稳定的过程</td></tr><tr><td>17.</td><td>threshold</td><td></td><td>阈值</td><td>用于判断或筛选的界限值</td></tr><tr><td>18.</td><td>region</td><td></td><td>区域</td><td>数据分析中的选定范围</td></tr><tr><td>19.</td><td>matrix</td><td></td><td>矩阵</td><td>用于线性运算的二维数组</td></tr><tr><td>20.</td><td>vector</td><td></td><td>向量</td><td>具有方向和大小的数据结构</td></tr><tr><td>21.</td><td>ESD 效应</td><td></td><td>静电效应</td><td>静电放电（ESD）是由于物体之间存在静电场的描述</td></tr></table>",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          30.0,
+          443.0,
+          565.0,
+          797.0
+        ],
+        "polygon": [
+          [
+            30,
+            443
+          ],
+          [
+            30,
+            797
+          ],
+          [
+            564,
+            797
+          ],
+          [
+            564,
+            443
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-8",
+      "index": 7,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          34.0,
+          44.0,
+          109.0,
+          85.0
+        ],
+        "polygon": [
+          [
+            34,
+            44
+          ],
+          [
+            109,
+            44
+          ],
+          [
+            109,
+            85
+          ],
+          [
+            34,
+            85
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "Semiconductor Manufacturing International Corporation",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          111.0,
+          70.0,
+          521.0,
+          88.0
+        ],
+        "polygon": [
+          [
+            111,
+            70
+          ],
+          [
+            521,
+            70
+          ],
+          [
+            521,
+            89
+          ],
+          [
+            111,
+            89
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-10",
+      "index": 9,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td colspan=\"2\">Doc No.:QR-QUSM-02-2001</td><td colspan=\"2\">Doc Title:SMIC Document Control Procedure</td><td>Rev.:1</td><td>Page No.:2/2</td></tr><tr><td></td><td>(Electro-Static Discharge)</td><td></td><td></td><td colspan=\"2\">在静电电位差，在接触或接近时，电荷瞬间释放并产生电流的现象。</td></tr><tr><td>22.</td><td>estimate</td><td></td><td>估计</td><td colspan=\"2\">对未知量进行近似求值</td></tr><tr><td>23.</td><td>parameter</td><td></td><td>参数</td><td colspan=\"2\">控制模型行为的变量</td></tr><tr><td>24.</td><td>function</td><td></td><td>函数</td><td colspan=\"2\">输入与输出之间的映射关系</td></tr><tr><td>25.</td><td>distribution</td><td></td><td>分布</td><td colspan=\"2\">数据在区间内的统计特性</td></tr><tr><td>26.</td><td>sample</td><td></td><td>样本</td><td colspan=\"2\">从总体中抽取的数据</td></tr><tr><td>27.</td><td>accuracy</td><td></td><td>准确度</td><td colspan=\"2\">结果接近真实值的程度</td></tr><tr><td>28.</td><td>error</td><td></td><td>误差</td><td colspan=\"2\">测量或计算的偏差</td></tr><tr><td>29.</td><td>analysis</td><td></td><td>分析</td><td colspan=\"2\">对数据或现象的系统研究</td></tr></table>",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          30.0,
+          89.0,
+          565.0,
+          294.0
+        ],
+        "polygon": [
+          [
+            39,
+            94
+          ],
+          [
+            36,
+            122
+          ],
+          [
+            30,
+            131
+          ],
+          [
+            30,
+            294
+          ],
+          [
+            565,
+            294
+          ],
+          [
+            565,
+            131
+          ],
+          [
+            550,
+            118
+          ],
+          [
+            550,
+            94
+          ]
+        ]
+      }
+    }
+  ]
+}

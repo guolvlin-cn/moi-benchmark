@@ -1,0 +1,261 @@
+{
+  "doc_id": "145_b2ca7bd18e",
+  "_generated_at": "2026-07-29T08:39:24+00:00",
+  "header_footer": {
+    "expected_headers": [
+      {
+        "text": "Semiconfuctor Manufaceturing International Corporation\nDoclNo.: MF-S1PH-99-3007\nDoc.Title:SMIC 200mm Litho Reticle Managment O.I.\nRec.:1\nPage No.:1/5",
+        "count": 1
+      }
+    ],
+    "expected_footers": [
+      {
+        "text": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priornwrittrn permission of SMIC\nAccording to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30",
+        "count": 1
+      }
+    ]
+  },
+  "table": {
+    "expected_table_count": 3,
+    "table_html_summaries": [
+      "<table><tr><th>流程图</th><th>文本 1</th><th>文本 2</th></tr><tr><td rowspan=\"10\">**类型：** 流程图<br><br>**节点和流程：**<br>1. START: Employee Submits Leave Request  <br>2. Manager Reviews Request  <br>3. Approve Request?  <br>   - 条件分支：No → Notify Employee of Rejection with Reason  <br>   - 条件分支：Yes → HR Processes Request  <br>4. Notify Employee of Rejection with Reason  <br>5. HR Processes Request  <br>6. Update Leave System  <br>7. Notify Employee of Approval  <br>8. END  <br><br>**总结：** 该流程图描述了一个从申请提交到最终处理结束的审批与通知过程。</td><td rowspan=\"10\">test1<br><br>test2、差分式放大电路<br><br>FET 差分式放大电路</td><td>文本 21<br></td></tr><tr><td>文本22</td></tr><tr><td>文本23</td></tr><tr><td>文本24</td></tr><tr><td>文本25</td></tr><tr><td>文本26</td></tr><tr><td>文本27</td></tr><tr><td>文本28</td></tr><tr><td>文本29</td></tr><tr><td>文本20</td></tr></table>",
+      "<table><tr><th>Name</th><th>Purpose</th></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF1</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF2</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF3</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.</td></tr><tr><td>APF4</td><td>●  Activity Manager Help<br>●  Diagnostic Tool Help<br>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●  Activity Manager Help<br>●  Diagnostic Tool Help</td></tr><tr><td>APF5</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●  Activity Manager Help<br>●  Diagnostic Tool Help</td></tr><tr><td>APF6</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr></table>",
+      "<table><tr><th>Acronyms</th><th>Meanings</th></tr><tr><td>Bootloader</td><td>Software that loads and runs some other software, typically an operating system.</td></tr><tr><td>Boot ROM</td><td>Boot firmware stored in Cortex®-M55 ROM, also named ROM code</td></tr><tr><td>BSEC</td><td>Boot and security block: it is used to manipulate OTP fuse words</td></tr><tr><td>CRYP</td><td>Cryptography</td></tr></table>"
+    ],
+    "expected_embedded_image_count": 0
+  },
+  "title": {
+    "expected_titles": [
+      {
+        "text": "1. 绪论",
+        "level": 1
+      },
+      {
+        "text": "2. 运算放大器",
+        "level": 1
+      },
+      {
+        "text": "3. 二极管及其基本电路",
+        "level": 1
+      },
+      {
+        "text": "4. 场效应三极管及其放大电路",
+        "level": 1
+      },
+      {
+        "text": "5. 双极结型三极管及其放大电路",
+        "level": 1
+      },
+      {
+        "text": "6. 频率响应",
+        "level": 1
+      },
+      {
+        "text": "7. 模拟集成电路",
+        "level": 1
+      },
+      {
+        "text": "7.1. 模拟集成电路中的直流偏置技术",
+        "level": 1
+      },
+      {
+        "text": "7.1.1. FET电流源电路",
+        "level": 1
+      },
+      {
+        "text": "7.1.2. BJT电流源电路",
+        "level": 1
+      },
+      {
+        "text": "8. 差分式放大电路",
+        "level": 1
+      },
+      {
+        "text": "9. 差分式放大电路的传输特性",
+        "level": 1
+      },
+      {
+        "text": "10. 反馈放大电路",
+        "level": 1
+      },
+      {
+        "text": "1.1.1.1. 准确性",
+        "level": 4
+      },
+      {
+        "text": "1.1.1.2. 散点图",
+        "level": 4
+      },
+      {
+        "text": "1.1.1.3. 三线表",
+        "level": 4
+      }
+    ]
+  },
+  "layout": {
+    "expected_reading_order": [
+      "1. 绪论",
+      "2. 运算放大器",
+      "3. 二极管及其基本电路",
+      "4. 场效应三极管及其放大电路",
+      "5. 双极结型三极管及其放大电路",
+      "6. 频率响应",
+      "7. 模拟集成电路",
+      "7.1. 模拟集成电路中的直流偏置技术",
+      "7.1.1. FET电流源电路",
+      "7.1.2. BJT电流源电路",
+      "8. 差分式放大电路",
+      "9. 差分式放大电路的传输特性",
+      "10. 反馈放大电路",
+      "测试表格",
+      "<table><tr><th>流程图</th><th>文本 1</th><th>文本 2</th></tr><tr><td rowspan=\"10\">**类型：** 流程图<br><br>**节点和流程：**<br>1. START: Employee Submits Leave Request  <br>2. Manager Reviews Request  <br>3. Approve Request?  <br>   - 条件分支：No → Notify Employee of Rejection with Reason  <br>   - 条件分支：Yes → HR Processes Request  <br>4. Notify Employee of Rejection with Reason  <br>5. HR Processes Request  <br>6. Update Leave System  <br>7. Notify Employee of Approval  <br>8. END  <br><br>**总结：** 该流程图描述了一个从申请提交到最终处理结束的审批与通知过程。</td><td rowspan=\"10\">test1<br><br>test2、差分式放大电路<br><br>FET 差分式放大电路</td><td>文本 21<br></td></tr><tr><td>文本22</td></tr><tr><td>文本23</td></tr><tr><td>文本24</td></tr><tr><td>文本25</td></tr><tr><td>文本26</td></tr><tr><td>文本27</td></tr><tr><td>文本28</td></tr><tr><td>文本29</td></tr><tr><td>文本20</td></tr></table>",
+      "解析效果",
+      "<img>",
+      "图一、光照正面外观",
+      "1.1.1 广超反面外观",
+      "<img>",
+      "图二、光照反面外观",
+      "1.1.1.1. 准确性",
+      "◆ 案例 1:",
+      "https://github.com/matrixorigin/MO-Cloud/issues/7018",
+      "闵可夫斯基",
+      "闵可夫•J•斯基",
+      "■ 测试记录：",
+      "1. 2026-01-07 30B 模型 QA 环境验证未复现",
+      "图片类型",
+      "1.1.1.2. 散点图",
+      "https://github.com/matrixorigin/MO-Cloud/issues/6999",
+      "■ 预期结果：",
+      "必须作为整体进行 Caption 和 OCR 解析，不能被拆分",
+      "■ 测试记录：",
+      "2. 2026-01-07 30B 模型 QA 环境验证未复现",
+      "<img>",
+      "表格类型",
+      "1.1.1.3. 三线表",
+      "The rapid advancement of semiconductor technology has fundamentally transformed the landscape of modern embedded systems. In today's industrial environment, the integration of high-performance microcontrollers, such as the STM32 series or ARM-based processors, is no longer just about raw clock speed. Instead, the focus has shifted toward power efficiency, hardware-level security, and seamless peripheral integration.",
+      "Systems must now handle complex tasks ranging from real-time sensor fusion to high-speed data transmission via encrypted network protocols.",
+      "<table><tr><th>Name</th><th>Purpose</th></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF1</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF2</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF3</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.</td></tr><tr><td>APF4</td><td>●  Activity Manager Help<br>●  Diagnostic Tool Help<br>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●  Activity Manager Help<br>●  Diagnostic Tool Help</td></tr><tr><td>APF5</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●  Activity Manager Help<br>●  Diagnostic Tool Help</td></tr><tr><td>APF6</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr></table>",
+      "<table><tr><th>Acronyms</th><th>Meanings</th></tr><tr><td>Bootloader</td><td>Software that loads and runs some other software, typically an operating system.</td></tr><tr><td>Boot ROM</td><td>Boot firmware stored in Cortex®-M55 ROM, also named ROM code</td></tr><tr><td>BSEC</td><td>Boot and security block: it is used to manipulate OTP fuse words</td></tr><tr><td>CRYP</td><td>Cryptography</td></tr></table>"
+    ],
+    "expected_no_split_texts": []
+  },
+  "caption": {
+    "expected_domain_keywords": [],
+    "hallucination_keywords": [],
+    "expected_image_types": []
+  },
+  "image": {
+    "expected_images_per_page": {
+      "2": 2,
+      "3": 1
+    }
+  },
+  "extra_dimensions": {
+    "text_content": {
+      "expected_text_blocks": [
+        {
+          "text": "测试表格",
+          "page_num": 1
+        },
+        {
+          "text": "解析效果",
+          "page_num": 1
+        },
+        {
+          "text": "图一、光照正面外观",
+          "page_num": 2
+        },
+        {
+          "text": "1.1.1 广超反面外观",
+          "page_num": 2
+        },
+        {
+          "text": "图二、光照反面外观",
+          "page_num": 2
+        },
+        {
+          "text": "◆ 案例 1:",
+          "page_num": 3
+        },
+        {
+          "text": "https://github.com/matrixorigin/MO-Cloud/issues/7018",
+          "page_num": 3
+        },
+        {
+          "text": "闵可夫斯基",
+          "page_num": 3
+        },
+        {
+          "text": "闵可夫•J•斯基",
+          "page_num": 3
+        },
+        {
+          "text": "■ 测试记录：",
+          "page_num": 3
+        },
+        {
+          "text": "1. 2026-01-07 30B 模型 QA 环境验证未复现",
+          "page_num": 3
+        },
+        {
+          "text": "图片类型",
+          "page_num": 3
+        },
+        {
+          "text": "https://github.com/matrixorigin/MO-Cloud/issues/6999",
+          "page_num": 3
+        },
+        {
+          "text": "■ 预期结果：",
+          "page_num": 3
+        },
+        {
+          "text": "必须作为整体进行 Caption 和 OCR 解析，不能被拆分",
+          "page_num": 3
+        },
+        {
+          "text": "■ 测试记录：",
+          "page_num": 3
+        },
+        {
+          "text": "2. 2026-01-07 30B 模型 QA 环境验证未复现",
+          "page_num": 3
+        },
+        {
+          "text": "表格类型",
+          "page_num": 4
+        },
+        {
+          "text": "The rapid advancement of semiconductor technology has fundamentally transformed the landscape of modern embedded systems. In today's industrial environment, the integration of high-performance microcontrollers, such as the STM32 series or ARM-based processors, is no longer just about raw clock speed. Instead, the focus has shifted toward power efficiency, hardware-level security, and seamless peripheral integration.",
+          "page_num": 4
+        },
+        {
+          "text": "Systems must now handle complex tasks ranging from real-time sensor fusion to high-speed data transmission via encrypted network protocols.",
+          "page_num": 4
+        }
+      ]
+    },
+    "table_teds": {
+      "expected_tables": [
+        {
+          "html": "<table><tr><th>流程图</th><th>文本 1</th><th>文本 2</th></tr><tr><td rowspan=\"10\">**类型：** 流程图<br><br>**节点和流程：**<br>1. START: Employee Submits Leave Request  <br>2. Manager Reviews Request  <br>3. Approve Request?  <br>   - 条件分支：No → Notify Employee of Rejection with Reason  <br>   - 条件分支：Yes → HR Processes Request  <br>4. Notify Employee of Rejection with Reason  <br>5. HR Processes Request  <br>6. Update Leave System  <br>7. Notify Employee of Approval  <br>8. END  <br><br>**总结：** 该流程图描述了一个从申请提交到最终处理结束的审批与通知过程。</td><td rowspan=\"10\">test1<br><br>test2、差分式放大电路<br><br>FET 差分式放大电路</td><td>文本 21<br></td></tr><tr><td>文本22</td></tr><tr><td>文本23</td></tr><tr><td>文本24</td></tr><tr><td>文本25</td></tr><tr><td>文本26</td></tr><tr><td>文本27</td></tr><tr><td>文本28</td></tr><tr><td>文本29</td></tr><tr><td>文本20</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>Name</th><th>Purpose</th></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF1</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF2</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●　Activity Manager Help<br>●　Diagnostic Tool Help</td></tr><tr><td>APF3</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.</td></tr><tr><td>APF4</td><td>●  Activity Manager Help<br>●  Diagnostic Tool Help<br>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●  Activity Manager Help<br>●  Diagnostic Tool Help</td></tr><tr><td>APF5</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>APF Help</td><td>Accessible from the APF Help Shortcut in the windows start menu<br>Initial Setup: Verify system environment variables.<br>●  Activity Manager Help<br>●  Diagnostic Tool Help</td></tr><tr><td>APF6</td><td>Standard interface for application framework and logic.<br>Process management and background task scheduling.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr><tr><td>Storage</td><td>High-speed data caching and persistent storage.<br>Redundant array of independent disks configuration.</td></tr></table>"
+        },
+        {
+          "html": "<table><tr><th>Acronyms</th><th>Meanings</th></tr><tr><td>Bootloader</td><td>Software that loads and runs some other software, typically an operating system.</td></tr><tr><td>Boot ROM</td><td>Boot firmware stored in Cortex®-M55 ROM, also named ROM code</td></tr><tr><td>BSEC</td><td>Boot and security block: it is used to manipulate OTP fuse words</td></tr><tr><td>CRYP</td><td>Cryptography</td></tr></table>"
+        }
+      ]
+    },
+    "formula": {
+      "expected_formulas": [],
+      "formula_count": 0
+    },
+    "reading_order": {
+      "expected_order": []
+    }
+  },
+  "_generated_from": "annotation.json",
+  "_reviewed": true
+}

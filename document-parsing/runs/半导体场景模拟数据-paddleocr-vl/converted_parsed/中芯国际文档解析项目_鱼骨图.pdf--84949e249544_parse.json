@@ -1,0 +1,1643 @@
+{
+  "filename": "中芯国际文档解析项目_鱼骨图.pdf",
+  "filetype": "PDF",
+  "block_count": 43,
+  "blocks": [
+    {
+      "id": "ZbE2yu-layout-1",
+      "index": 0,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          769.0,
+          22.0,
+          926.0,
+          68.0
+        ],
+        "polygon": [
+          [
+            769,
+            22
+          ],
+          [
+            927,
+            22
+          ],
+          [
+            927,
+            69
+          ],
+          [
+            769,
+            69
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-2",
+      "index": 1,
+      "type": "title",
+      "level": "1",
+      "content": "中芯国际文档解析项目\n开工会",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "doc_title",
+        "bbox": [
+          180.0,
+          166.0,
+          774.0,
+          305.0
+        ],
+        "polygon": [
+          [
+            180,
+            166
+          ],
+          [
+            774,
+            166
+          ],
+          [
+            774,
+            306
+          ],
+          [
+            180,
+            306
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ZbE2yu-layout-3",
+      "index": 2,
+      "type": "text",
+      "level": null,
+      "content": "2025年12月26日",
+      "page_num": 1,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          659.0,
+          421.0,
+          821.0,
+          441.0
+        ],
+        "polygon": [
+          [
+            659,
+            421
+          ],
+          [
+            821,
+            421
+          ],
+          [
+            821,
+            442
+          ],
+          [
+            659,
+            442
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-4",
+      "index": 3,
+      "type": "title",
+      "level": "1",
+      "content": "会议议程",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_1",
+        "bbox": [
+          35.0,
+          235.0,
+          231.0,
+          288.0
+        ],
+        "polygon": [
+          [
+            35,
+            235
+          ],
+          [
+            232,
+            235
+          ],
+          [
+            232,
+            289
+          ],
+          [
+            35,
+            289
+          ]
+        ]
+      }
+    },
+    {
+      "id": "1Y3HgC-layout-5",
+      "index": 4,
+      "type": "text",
+      "level": null,
+      "content": "01 项目背景  \n02 需求分析  \n03 项目计划  \n04 项目协作  \n05 风险应对",
+      "page_num": 2,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "content",
+        "bbox": [
+          508.0,
+          126.0,
+          697.0,
+          396.0
+        ],
+        "polygon": [
+          [
+            508,
+            126
+          ],
+          [
+            697,
+            126
+          ],
+          [
+            697,
+            396
+          ],
+          [
+            508,
+            396
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-6",
+      "index": 5,
+      "type": "title",
+      "level": "2",
+      "content": "项目背景介绍",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          71.0,
+          52.0,
+          242.0,
+          82.0
+        ],
+        "polygon": [
+          [
+            71,
+            52
+          ],
+          [
+            242,
+            52
+          ],
+          [
+            242,
+            82
+          ],
+          [
+            71,
+            82
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-7",
+      "index": 6,
+      "type": "title",
+      "level": "4",
+      "content": "中芯国际 SMIC 文档解析开发项目",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_4",
+        "bbox": [
+          42.0,
+          121.0,
+          256.0,
+          138.0
+        ],
+        "polygon": [
+          [
+            42,
+            121
+          ],
+          [
+            256,
+            121
+          ],
+          [
+            256,
+            138
+          ],
+          [
+            42,
+            138
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-8",
+      "index": 7,
+      "type": "text",
+      "level": null,
+      "content": "主要是为了对PDF、PPT、Word、Excel等多种格式文件以及图片、表格、流程图等内容进行解析，将非结构化数据转化为结构化数据并利用。",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          42.0,
+          145.0,
+          293.0,
+          229.0
+        ],
+        "polygon": [
+          [
+            42,
+            145
+          ],
+          [
+            293,
+            145
+          ],
+          [
+            293,
+            229
+          ],
+          [
+            42,
+            229
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-9",
+      "index": 8,
+      "type": "text",
+      "level": null,
+      "content": "基于大模型算法构建文档要素抽取引擎，实现对PDF、PPT、Word、Excel等文档以及文档内图片、表格、流程图等复杂数据的解析分析，最终形成可支持智能问答系统、AI数字员工、光刻机异常分析助手、PDE培训数字员工、QE/CE稽核数字员工等应用的功能模块。",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          41.0,
+          253.0,
+          290.0,
+          404.0
+        ],
+        "polygon": [
+          [
+            41,
+            253
+          ],
+          [
+            291,
+            253
+          ],
+          [
+            291,
+            404
+          ],
+          [
+            41,
+            404
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-10",
+      "index": 9,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          306.0,
+          114.0,
+          943.0,
+          454.0
+        ],
+        "polygon": [
+          [
+            306,
+            114
+          ],
+          [
+            943,
+            114
+          ],
+          [
+            943,
+            454
+          ],
+          [
+            306,
+            454
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-11",
+      "index": 10,
+      "type": "text",
+      "level": null,
+      "content": "智能问答系统\nAI 数字员工\nPDE 培训数字员工\nQE/CE稽核数字员工",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "content",
+        "bbox": [
+          735.0,
+          173.0,
+          941.0,
+          403.0
+        ],
+        "polygon": [
+          [
+            735,
+            173
+          ],
+          [
+            740,
+            227
+          ],
+          [
+            754,
+            241
+          ],
+          [
+            740,
+            268
+          ],
+          [
+            740,
+            271
+          ],
+          [
+            740,
+            289
+          ],
+          [
+            740,
+            295
+          ],
+          [
+            735,
+            403
+          ],
+          [
+            941,
+            398
+          ],
+          [
+            941,
+            303
+          ],
+          [
+            941,
+            179
+          ],
+          [
+            932,
+            173
+          ]
+        ]
+      }
+    },
+    {
+      "id": "Gx9ZUZ-layout-12",
+      "index": 11,
+      "type": "footer",
+      "level": null,
+      "content": "底部贴边文本样例，button text sample，button text sample，button text sample",
+      "page_num": 3,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "footer",
+        "bbox": [
+          97.0,
+          516.0,
+          742.0,
+          537.0
+        ],
+        "polygon": [
+          [
+            97,
+            516
+          ],
+          [
+            743,
+            516
+          ],
+          [
+            743,
+            538
+          ],
+          [
+            97,
+            538
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-13",
+      "index": 12,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          40.0,
+          19.0,
+          195.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            40,
+            19
+          ],
+          [
+            195,
+            19
+          ],
+          [
+            195,
+            64
+          ],
+          [
+            40,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-14",
+      "index": 13,
+      "type": "title",
+      "level": "2",
+      "content": "产品需求分析",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          219.0,
+          28.0,
+          390.0,
+          58.0
+        ],
+        "polygon": [
+          [
+            219,
+            28
+          ],
+          [
+            390,
+            28
+          ],
+          [
+            390,
+            58
+          ],
+          [
+            219,
+            58
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-15",
+      "index": 14,
+      "type": "text",
+      "level": null,
+      "content": "需求示例1如下图",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          156.0,
+          112.0,
+          295.0,
+          133.0
+        ],
+        "polygon": [
+          [
+            156,
+            112
+          ],
+          [
+            296,
+            112
+          ],
+          [
+            296,
+            133
+          ],
+          [
+            156,
+            133
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-16",
+      "index": 15,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          87.0,
+          141.0,
+          401.0,
+          380.0
+        ],
+        "polygon": [
+          [
+            87,
+            141
+          ],
+          [
+            401,
+            141
+          ],
+          [
+            401,
+            380
+          ],
+          [
+            87,
+            380
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-17",
+      "index": 16,
+      "type": "text",
+      "level": null,
+      "content": "需求示例1如下图",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "figure_title",
+        "bbox": [
+          559.0,
+          111.0,
+          697.0,
+          132.0
+        ],
+        "polygon": [
+          [
+            559,
+            111
+          ],
+          [
+            698,
+            111
+          ],
+          [
+            698,
+            133
+          ],
+          [
+            559,
+            133
+          ]
+        ]
+      }
+    },
+    {
+      "id": "TxyYgT-layout-18",
+      "index": 17,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 4,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "image",
+        "bbox": [
+          540.0,
+          150.0,
+          782.0,
+          385.0
+        ],
+        "polygon": [
+          [
+            540,
+            150
+          ],
+          [
+            782,
+            150
+          ],
+          [
+            782,
+            385
+          ],
+          [
+            540,
+            385
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-19",
+      "index": 18,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          39.0,
+          17.0,
+          195.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            194,
+            22
+          ],
+          [
+            185,
+            17
+          ],
+          [
+            143,
+            17
+          ],
+          [
+            128,
+            17
+          ],
+          [
+            119,
+            17
+          ],
+          [
+            39,
+            20
+          ],
+          [
+            39,
+            61
+          ],
+          [
+            194,
+            64
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-20",
+      "index": 19,
+      "type": "title",
+      "level": "2",
+      "content": "产品需求分析鱼骨图",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          218.0,
+          13.0,
+          473.0,
+          43.0
+        ],
+        "polygon": [
+          [
+            218,
+            13
+          ],
+          [
+            473,
+            13
+          ],
+          [
+            473,
+            44
+          ],
+          [
+            218,
+            44
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-21",
+      "index": 20,
+      "type": "title",
+      "level": "3",
+      "content": "文字公式解析",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          73.0,
+          131.0,
+          185.0,
+          153.0
+        ],
+        "polygon": [
+          [
+            73,
+            131
+          ],
+          [
+            185,
+            131
+          ],
+          [
+            185,
+            153
+          ],
+          [
+            73,
+            153
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-22",
+      "index": 21,
+      "type": "text",
+      "level": null,
+      "content": "标题层级关系",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          77.0,
+          182.0,
+          153.0,
+          198.0
+        ],
+        "polygon": [
+          [
+            77,
+            182
+          ],
+          [
+            153,
+            182
+          ],
+          [
+            153,
+            198
+          ],
+          [
+            77,
+            198
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-23",
+      "index": 22,
+      "type": "text",
+      "level": null,
+      "content": "块级和行级公式",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          81.0,
+          209.0,
+          171.0,
+          225.0
+        ],
+        "polygon": [
+          [
+            81,
+            209
+          ],
+          [
+            171,
+            209
+          ],
+          [
+            171,
+            226
+          ],
+          [
+            81,
+            226
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-24",
+      "index": 23,
+      "type": "text",
+      "level": null,
+      "content": "中英文混合",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          126.0,
+          236.0,
+          189.0,
+          252.0
+        ],
+        "polygon": [
+          [
+            126,
+            236
+          ],
+          [
+            190,
+            236
+          ],
+          [
+            190,
+            252
+          ],
+          [
+            126,
+            252
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-25",
+      "index": 24,
+      "type": "title",
+      "level": "3",
+      "content": "高可用",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          330.0,
+          132.0,
+          387.0,
+          154.0
+        ],
+        "polygon": [
+          [
+            330,
+            132
+          ],
+          [
+            388,
+            132
+          ],
+          [
+            388,
+            154
+          ],
+          [
+            330,
+            154
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-26",
+      "index": 25,
+      "type": "text",
+      "level": null,
+      "content": "宕机自动回复",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          304.0,
+          180.0,
+          379.0,
+          196.0
+        ],
+        "polygon": [
+          [
+            304,
+            180
+          ],
+          [
+            379,
+            180
+          ],
+          [
+            379,
+            196
+          ],
+          [
+            304,
+            196
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-27",
+      "index": 26,
+      "type": "text",
+      "level": null,
+      "content": "多节点部署",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          332.0,
+          207.0,
+          396.0,
+          223.0
+        ],
+        "polygon": [
+          [
+            332,
+            207
+          ],
+          [
+            396,
+            207
+          ],
+          [
+            396,
+            223
+          ],
+          [
+            332,
+            223
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-28",
+      "index": 27,
+      "type": "text",
+      "level": null,
+      "content": "文档优先解析策略",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          316.0,
+          233.0,
+          416.0,
+          249.0
+        ],
+        "polygon": [
+          [
+            316,
+            236
+          ],
+          [
+            416,
+            236
+          ],
+          [
+            416,
+            249
+          ],
+          [
+            316,
+            249
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-29",
+      "index": 28,
+      "type": "text",
+      "level": null,
+      "content": "多种文件统一接口",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          507.0,
+          177.0,
+          605.0,
+          193.0
+        ],
+        "polygon": [
+          [
+            507,
+            177
+          ],
+          [
+            605,
+            177
+          ],
+          [
+            605,
+            193
+          ],
+          [
+            507,
+            193
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-30",
+      "index": 29,
+      "type": "title",
+      "level": "3",
+      "content": "接口对接",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_3",
+        "bbox": [
+          546.0,
+          131.0,
+          624.0,
+          154.0
+        ],
+        "polygon": [
+          [
+            546,
+            131
+          ],
+          [
+            625,
+            131
+          ],
+          [
+            625,
+            154
+          ],
+          [
+            546,
+            154
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-31",
+      "index": 30,
+      "type": "text",
+      "level": null,
+      "content": "API可调试",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          564.0,
+          203.0,
+          666.0,
+          220.0
+        ],
+        "polygon": [
+          [
+            564,
+            203
+          ],
+          [
+            564,
+            220
+          ],
+          [
+            661,
+            220
+          ],
+          [
+            665,
+            218
+          ],
+          [
+            665,
+            206
+          ],
+          [
+            661,
+            203
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-32",
+      "index": 31,
+      "type": "text",
+      "level": null,
+      "content": "API可配置",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          584.0,
+          230.0,
+          683.0,
+          246.0
+        ],
+        "polygon": [
+          [
+            584,
+            230
+          ],
+          [
+            683,
+            230
+          ],
+          [
+            683,
+            247
+          ],
+          [
+            584,
+            247
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-33",
+      "index": 32,
+      "type": "text",
+      "level": null,
+      "content": "多场景流程图识别解析",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          186.0,
+          347.0,
+          311.0,
+          363.0
+        ],
+        "polygon": [
+          [
+            186,
+            347
+          ],
+          [
+            311,
+            347
+          ],
+          [
+            311,
+            363
+          ],
+          [
+            186,
+            363
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-34",
+      "index": 33,
+      "type": "text",
+      "level": null,
+      "content": "跨页表和多线表解析",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          187.0,
+          373.0,
+          301.0,
+          390.0
+        ],
+        "polygon": [
+          [
+            187,
+            373
+          ],
+          [
+            301,
+            373
+          ],
+          [
+            301,
+            390
+          ],
+          [
+            187,
+            390
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-35",
+      "index": 34,
+      "type": "text",
+      "level": null,
+      "content": "表格和图片混合解析",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          164.0,
+          398.0,
+          277.0,
+          415.0
+        ],
+        "polygon": [
+          [
+            164,
+            398
+          ],
+          [
+            278,
+            398
+          ],
+          [
+            278,
+            415
+          ],
+          [
+            164,
+            415
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-36",
+      "index": 35,
+      "type": "text",
+      "level": null,
+      "content": "图片理解表格解析",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          184.0,
+          447.0,
+          333.0,
+          469.0
+        ],
+        "polygon": [
+          [
+            184,
+            447
+          ],
+          [
+            333,
+            447
+          ],
+          [
+            333,
+            470
+          ],
+          [
+            184,
+            470
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-37",
+      "index": 36,
+      "type": "text",
+      "level": null,
+      "content": "资源可监控",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          473.0,
+          345.0,
+          537.0,
+          361.0
+        ],
+        "polygon": [
+          [
+            473,
+            345
+          ],
+          [
+            537,
+            345
+          ],
+          [
+            537,
+            361
+          ],
+          [
+            473,
+            361
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-38",
+      "index": 37,
+      "type": "text",
+      "level": null,
+      "content": "计算资源扩展",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          450.0,
+          370.0,
+          527.0,
+          386.0
+        ],
+        "polygon": [
+          [
+            450,
+            370
+          ],
+          [
+            527,
+            370
+          ],
+          [
+            527,
+            387
+          ],
+          [
+            450,
+            387
+          ]
+        ]
+      }
+    },
+    {
+      "id": "V3iZyg-layout-39",
+      "index": 38,
+      "type": "text",
+      "level": null,
+      "content": "可扩展/高并发",
+      "page_num": 5,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "text",
+        "bbox": [
+          423.0,
+          443.0,
+          549.0,
+          466.0
+        ],
+        "polygon": [
+          [
+            423,
+            443
+          ],
+          [
+            550,
+            443
+          ],
+          [
+            550,
+            466
+          ],
+          [
+            423,
+            466
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-40",
+      "index": 39,
+      "type": "image",
+      "ocr": "",
+      "caption": "",
+      "image_url": "",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "header_image",
+        "bbox": [
+          38.0,
+          17.0,
+          197.0,
+          64.0
+        ],
+        "polygon": [
+          [
+            38,
+            17
+          ],
+          [
+            38,
+            63
+          ],
+          [
+            71,
+            63
+          ],
+          [
+            81,
+            63
+          ],
+          [
+            196,
+            63
+          ],
+          [
+            196,
+            17
+          ],
+          [
+            91,
+            17
+          ],
+          [
+            76,
+            17
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-41",
+      "index": 40,
+      "type": "title",
+      "level": "2",
+      "content": "产品需求分析计划",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "paragraph_title",
+        "sub_type": "title_2",
+        "bbox": [
+          218.0,
+          12.0,
+          448.0,
+          45.0
+        ],
+        "polygon": [
+          [
+            218,
+            12
+          ],
+          [
+            448,
+            12
+          ],
+          [
+            448,
+            45
+          ],
+          [
+            218,
+            45
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-42",
+      "index": 41,
+      "type": "text",
+      "level": null,
+      "content": "最终交付目标为 100%，时间 2025/1/19",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "vision_footnote",
+        "bbox": [
+          606.0,
+          63.0,
+          928.0,
+          86.0
+        ],
+        "polygon": [
+          [
+            606,
+            63
+          ],
+          [
+            928,
+            63
+          ],
+          [
+            928,
+            86
+          ],
+          [
+            606,
+            86
+          ]
+        ]
+      }
+    },
+    {
+      "id": "AjBECV-layout-43",
+      "index": 42,
+      "type": "table",
+      "level": null,
+      "content": "<table><tr><td>需求类别</td><td>子类别</td><td>需求概要</td><td>MOI 满足情况</td><td>MOI 满足度</td></tr><tr><td rowspan=\"4\">解析</td><td>文字解析</td><td>能够正确识别全字符集，对文档中的标题、正文及其层级内容可以正确区别，识别中日英等混合语言的文档。</td><td>不支持页眉页脚解析</td><td>95%</td></tr><tr><td>图片理解</td><td>对流程图、图表、图文混合图像等图片类型进行正确的文字提取和语义理解，提供必要的跨页合并和结构化数据输出，支持多中图片文件类型的解析。</td><td>Caption 理解效果需要提升\\n不支持图表解析为结构化数据</td><td>70%</td></tr><tr><td>表格解析</td><td>能够正确按照表格拓普输出结构化数据，对表格中的嵌入图片正确理解，支持跨页表格以及 excel 中的离散表格识别提取</td><td>不支持跨页表格拼接\\n不支持是否合并单元格输出控制</td><td>80%</td></tr><tr><td>公式解析</td><td>正确识别 Office 文档中各个位置的公式，并输出为 markdown 公式语法</td><td>行级、表格内公式无法识别</td><td>70%</td></tr><tr><td rowspan=\"2\">性能</td><td>可扩展 / 高并发</td><td>支持计算资源的横向扩展，支持 500 人高并发访问</td><td>支持计算资源扩展，支持任务并发配置及文件内图片解析并发</td><td>100%</td></tr><tr><td>高可用</td><td>支持系统宕机自动恢复，高负载持续运行，并在多节点部署，支持文档优先解析策略。</td><td>计算节点为无状态服务节点</td><td>100%</td></tr><tr><td>可视化</td><td>可观测</td><td>对系统的监控状态检测，提供任务监控及审计日志，具有自动清理数据的能力。</td><td>基础的信息都有记录，待信息整合\\n不支持 API 调用后自动清理数据</td><td>70%</td></tr><tr><td>API</td><td>接口对接</td><td>支持单一 API 对各种类型文档解析，API 可配置是否返回原始文件、数据清除、批量解析、状态推送等</td><td>已支持基础的 API 接口，待支持若干可配置功能</td><td>80%</td></tr></table>",
+      "page_num": 6,
+      "meta": {
+        "source": "paddleocr_vl",
+        "paddle_type": "table",
+        "bbox": [
+          25.0,
+          90.0,
+          935.0,
+          539.0
+        ],
+        "polygon": [
+          [
+            25,
+            90
+          ],
+          [
+            935,
+            90
+          ],
+          [
+            935,
+            539
+          ],
+          [
+            25,
+            539
+          ]
+        ]
+      }
+    }
+  ]
+}

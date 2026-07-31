@@ -1,0 +1,299 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.002,
+                0.0,
+                0.103,
+                0.107
+            ],
+            "angle": 0,
+            "content": ""
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.106,
+                0.042,
+                0.308,
+                0.081
+            ],
+            "angle": 0,
+            "content": "WPH introduction"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.915,
+                0.021,
+                0.988,
+                0.085
+            ],
+            "angle": 0,
+            "content": "SMIC"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.068,
+                0.135,
+                0.581,
+                0.203
+            ],
+            "angle": 0,
+            "content": "1 WPH(Water Per Hour): Theoretical unit throughput by recipe Peak WPH: The throughput under continuous run status",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.521,
+                0.243,
+                0.543,
+                0.277
+            ],
+            "angle": 0,
+            "content": "2",
+            "merge_prev": false
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.018,
+                0.218,
+                0.956,
+                0.53
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.403,
+                0.541,
+                0.617,
+                0.575
+            ],
+            "angle": 0,
+            "content": "Average Peak WPH",
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.356,
+                0.573,
+                0.929,
+                0.657
+            ],
+            "angle": 0,
+            "content": "\\[\n4 = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\text {Theoretical production time by recipei}} = \\frac {\\sum_ {i = 1} ^ {n} \\text {Move of recipei}}{\\sum_ {i = 1} ^ {n} \\frac {\\text {Move of recipei}}{\\text {Peak WPH by recipei}}}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.112,
+                0.753,
+                0.211,
+                0.79
+            ],
+            "angle": 0,
+            "content": "30m@6m/s",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.405,
+                0.755,
+                0.504,
+                0.789
+            ],
+            "angle": 0,
+            "content": "30m@6m/s",
+            "merge_prev": false
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.614,
+                0.71,
+                0.75,
+                0.803
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.034,
+                0.827,
+                0.678,
+                0.862
+            ],
+            "angle": 0,
+            "content": "The average speed?  \\( (6+3)/2=4.5\\text{m/s} \\) ? ✗  \\( (30+60)/(20/6+60/3)=3.6\\text{m/s} \\) ? √",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.035,
+                0.87,
+                0.376,
+                0.903
+            ],
+            "angle": 0,
+            "content": "Recipe 1: PWPH 1=20, move 1=1000",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.035,
+                0.902,
+                0.377,
+                0.933
+            ],
+            "angle": 0,
+            "content": "Recipe 2: PWPH 2=25, move 2=1500",
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.035,
+                0.933,
+                0.514,
+                0.967
+            ],
+            "angle": 0,
+            "content": "Average PWPH: 1000+1500)/(1000/20+1500/25)=22.7",
+            "merge_prev": false
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.224,
+                0.827,
+                0.675,
+                0.861
+            ],
+            "latex": "",
+            "score": 0.6826
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.066,
+                0.143,
+                0.093,
+                0.193
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.115,
+                0.137,
+                0.579,
+                0.203
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.518,
+                0.241,
+                0.545,
+                0.279
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.403,
+                0.544,
+                0.615,
+                0.572
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.111,
+                0.753,
+                0.212,
+                0.791
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.403,
+                0.751,
+                0.506,
+                0.791
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.038,
+                0.829,
+                0.216,
+                0.861
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.04,
+                0.875,
+                0.37,
+                0.902
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.04,
+                0.905,
+                0.37,
+                0.934
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.036,
+                0.934,
+                0.51,
+                0.975
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]
