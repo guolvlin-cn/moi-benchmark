@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
 from typing import Any
 
 from .config import Config
@@ -37,6 +38,7 @@ def run_dataset(
 def _run_one(
     client: DifyClient, case: dict[str, Any], repeat: int
 ) -> dict[str, Any]:
+    started_at = datetime.now(timezone.utc).isoformat()
     started = time.perf_counter()
     try:
         response = client.query(
@@ -48,6 +50,10 @@ def _run_one(
         return {
             "case": case,
             "repeat": repeat,
+            "attempt_id": f"{case['id']}-r{repeat}",
+            "started_at": started_at,
+            "ended_at": datetime.now(timezone.utc).isoformat(),
+            "status": "terminal_success",
             "answer": response.answer,
             "contexts": response.contexts,
             "usage": response.usage,
@@ -60,6 +66,10 @@ def _run_one(
         return {
             "case": case,
             "repeat": repeat,
+            "attempt_id": f"{case['id']}-r{repeat}",
+            "started_at": started_at,
+            "ended_at": datetime.now(timezone.utc).isoformat(),
+            "status": "terminal_error",
             "answer": "",
             "contexts": [],
             "usage": {},
@@ -68,4 +78,3 @@ def _run_one(
             "latency_seconds": time.perf_counter() - started,
             "error": f"{type(exc).__name__}: {exc}",
         }
-

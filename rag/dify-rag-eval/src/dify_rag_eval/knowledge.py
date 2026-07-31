@@ -28,11 +28,15 @@ class KnowledgeClient:
         *,
         timeout_seconds: float = 120,
         max_retries: int = 4,
+        segment_max_tokens: int | None = None,
+        indexing_technique: str = "high_quality",
     ):
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
         self.timeout_seconds = timeout_seconds
         self.max_retries = max_retries
+        self.segment_max_tokens = segment_max_tokens
+        self.indexing_technique = indexing_technique
 
     def available_embedding_models(self) -> list[EmbeddingModel]:
         raw = self._request_json(
@@ -110,11 +114,27 @@ class KnowledgeClient:
             page += 1
 
     def upload_document(self, dataset_id: str, path: Path) -> dict[str, Any]:
+        process_rule: dict[str, Any] = {"mode": "automatic"}
+        if self.segment_max_tokens is not None:
+            process_rule = {
+                "mode": "custom",
+                "rules": {
+                    "pre_processing_rules": [
+                        {"id": "remove_extra_spaces", "enabled": False},
+                        {"id": "remove_urls_emails", "enabled": False},
+                    ],
+                    "segmentation": {
+                        "separator": "\n\n",
+                        "max_tokens": self.segment_max_tokens,
+                        "chunk_overlap": min(200, self.segment_max_tokens // 10),
+                    },
+                },
+            }
         data = {
-            "indexing_technique": "high_quality",
+            "indexing_technique": self.indexing_technique,
             "doc_form": "text_model",
             "doc_language": "English",
-            "process_rule": {"mode": "automatic"},
+            "process_rule": process_rule,
         }
         body, content_type = _multipart_body(path, data)
         return self._request_json(

@@ -1,70 +1,245 @@
-# Local Matrixflow RAG benchmark smoke pipeline
+# Local MatrixFlow product RAG benchmark
 
-This is a runnable pipeline smoke test for the local RAG service deployed in
-`matrixflow/poc-hub/rag-local`. It is deliberately not the v0.4 formal pilot:
-it does not create Golden claims, citations, PDF page provenance, or Judge
-scores.
+This benchmark runs MatrixFlow's native
+`moi-core/agent-tools/knowledge/service.NewSearchRAGChunks` implementation
+locally. It does not call the old `poc-hub/rag-local` service and does not
+reimplement retrieval in Python.
 
-## Contract
+The local stack is intentionally small:
 
-The adapter calls only these public endpoints:
-
-- `POST /ingest` with `{ "text": "..." }`
-- `POST /chat` with `{ "message": "..." }`
-
-Input documents are `.md` and `.txt`. They are parsed locally as UTF-8 text,
-then recorded with path and SHA-256 in `ingest-state.json`. A repeat `ingest`
-skips unchanged content; use `--force` to intentionally send every document
-again. The current target service has no delete/upsert API, so forced ingestion
-creates duplicate vectors by design.
-
-## Start the local RAG target
-
-From the Matrixflow checkout:
-
-```sh
-cd /Users/muuushroom/gitrepos/matrixflow/poc-hub/rag-local
-python3 mock_ai.py
-
-RAG_MODE=mock \
-EMBEDDING_BASE_URL=http://127.0.0.1:8001 \
-LLM_BASE_URL=http://127.0.0.1:8001 \
-DB_PATH=/tmp/matrixflow-rag-local/rag.db \
-python3 app.py
+```text
+benchmark CLI
+  ├── MatrixFlow SearchRAGChunks
+  ├── MatrixOne vector/full-text table
+  └── embedding adapter
 ```
 
-## Run the full smoke pipeline
+It does not require `moi-frontend`, `moi-backend`, Catalog, Mowl, workers, or
+Agent Runtime. When `--documents` is supplied, ingestion directly executes
+MatrixFlow's `SplitDocumentsLength` and `MultiLevelIndex` WorkItems before
+writing the same essential table contract as
+`moi:data.retrieval.vector.write`. All retrieval, candidate merging, ranking,
+and evidence expansion are executed by the product RAG module.
+
+The parser-document ingestion defaults match `standard_rag`: chunk size 512,
+overlap 50, and five chunks per section.
+
+## What this measures
+
+Primary retrieval metrics:
+
+- source recall and source recall@1/3/5/10;
+- evidence substring recall;
+- mean reciprocal rank;
+- answerability accuracy for cases labeled `expected_answerable`;
+- mean, P50, and P95 retrieval latency;
+- embedding, schema inspection, full-text, vector, and evidence-expansion
+  stage latency;
+- raw routes, chunks, scores, and content for every attempt.
+
+Optional controlled generation adds answer keyword recall and generation
+latency. It uses the retrieved product chunks but deliberately does not claim
+to reproduce the `explore` A2A Agent. This keeps Agent planning and browser
+rendering outside the RAG benchmark.
+
+## Repository layout requirement
+
+The Go module imports the local MatrixFlow checkout through `replace`
+directives. The default layout is:
+
+```text
+gitrepos/
+├── matrixflow/
+└── moi-benchmark/
+    └── rag/prototypes/local-matrixflow-rag/
+```
+
+This makes the tested MatrixFlow source explicit: changing the sibling
+`matrixflow` checkout changes the implementation under test.
+
+## 1. Start only MatrixOne
+
+Docker Compose uses the same MatrixOne image pinned by the MatrixFlow
+repository:
 
 ```sh
 cd /Users/muuushroom/gitrepos/moi-benchmark/rag/prototypes/local-matrixflow-rag
-python3 local_matrixflow_rag.py pipeline \
-  --source data/documents \
-  --dataset data/questions.jsonl \
-  --run runs/smoke-001 \
-  --repeats 2
+docker compose up -d
 ```
 
-Artifacts:
+MatrixOne listens on `127.0.0.1:6001` with the default local credentials in
+`config.example.json`.
 
-```text
-runs/smoke-001/
-├── ingest-state.json  # parser/ingest state, hashes, service IDs and errors
-├── results.jsonl      # one raw answer/source record per question × repeat
-├── summary.json       # request success, answer/source keyword recall, mean/P95 latency
-└── report.md          # short human-readable summary
-```
+## 2. Configure MatrixOrigin TaaS
 
-Re-run only document ingestion or evaluation:
+Copy the example without committing local credentials:
 
 ```sh
-python3 local_matrixflow_rag.py ingest --source data/documents --run runs/smoke-001
-python3 local_matrixflow_rag.py run --dataset data/questions.jsonl --run runs/smoke-001 --repeats 2
-python3 local_matrixflow_rag.py report --run runs/smoke-001
+cp config.example.json config.local.json
+cp .env.example .env
 ```
 
-The target URL defaults to `http://127.0.0.1:8000`; override it with
-`--base-url` for another local deployment.
+The Python launcher automatically loads `.env` from this directory without
+overriding an explicitly exported environment variable.
 
-`answer_keyword_recall` and `source_keyword_recall` are intentionally separate:
-the latter proves that the RAG target retrieved the expected document fact,
-while the former exposes whether the configured generator actually used it.
+The default configuration uses MatrixOrigin Genesis TaaS:
+
+- Base URL: `https://api-taas.moi.matrixorigin.cn/v1`
+- embedding endpoint: `/embeddings`
+- chat endpoint: `/chat/completions`
+- authentication: `Authorization: Bearer $TAAS_API_KEY`
+
+The example model IDs follow the
+[TaaS documentation](https://taas.moi.matrixorigin.cn/taas/docs):
+`bge-m3` (the MatrixFlow knowledge-base default) for embeddings and
+`qwen3.6-flash` for optional generation. A key may restrict which models it can call, so replace either
+model ID with one enabled for your key when necessary. Keep
+`embedding.dimension` equal to the selected embedding model's output
+dimension; changing the embedding model requires re-ingesting the corpus.
+
+`mode: "taas"` fills in the TaaS Base URL and `TAAS_API_KEY` environment
+variable when either field is omitted. The underlying request and response
+format remains OpenAI-compatible.
+
+Existing SiliconFlow or other OpenAI-compatible configurations remain
+supported: keep `embedding.mode` as `"openai"` and retain their existing
+`base_url`, model, and `api_key_env`. This migration changes the active example
+configuration without deleting the previous provider path.
+
+For an offline wiring smoke test, use:
+
+```json
+{
+  "mode": "hash",
+  "model": "deterministic-hash-smoke",
+  "dimension": 256
+}
+```
+
+Hash mode is deterministic and useful for tests, but its quality numbers are
+not representative of the MatrixFlow product model.
+
+`config.offline.example.json` is a ready-to-copy hash-mode configuration for
+an offline wiring smoke test.
+
+## 3. Check dependencies
+
+```sh
+python3 local_matrixflow_rag.py check --config config.local.json
+```
+
+The check verifies the embedding adapter, MatrixOne connection, benchmark
+database, and product-compatible vector table.
+
+## 4. Run the complete benchmark
+
+```sh
+python3 local_matrixflow_rag.py pipeline \
+  --config config.local.json \
+  --source data/documents \
+  --dataset data/questions.jsonl \
+  --run runs/product-rag-001 \
+  --max-hits 10 \
+  --repeats 3 \
+  --force
+```
+
+`--run` specifies an artifact root. Every `ingest`, `run`, or `pipeline`
+invocation creates a new timestamped child directory and prints its exact
+path, so a later execution never overwrites an earlier result.
+
+Individual stages:
+
+```sh
+python3 local_matrixflow_rag.py ingest \
+  --config config.local.json \
+  --source data/documents \
+  --run runs/product-rag-001 \
+  --force
+
+python3 local_matrixflow_rag.py run \
+  --config config.local.json \
+  --dataset data/questions.jsonl \
+  --run runs/product-rag-001 \
+  --max-hits 10 \
+  --repeats 3
+```
+
+To ingest the standalone parser output:
+
+```sh
+python3 local_matrixflow_rag.py ingest \
+  --config config.local.json \
+  --documents /path/to/parser-run/documents.jsonl \
+  --run runs/product-rag-001 \
+  --force
+```
+
+## Explore-compatible knowledge question
+
+`ask` loads the checked-out MatrixFlow Knowledge Explore system prompt and
+exposes the real `FindRAGFiles` and `SearchRAGChunks` implementations as model
+tools:
+
+```sh
+python3 local_matrixflow_rag.py ask \
+  --config config.local.json \
+  --question "What does the document say about retrieval?" \
+  --run runs/product-rag-001
+```
+
+This requires `generation.enabled=true` and an OpenAI-compatible chat endpoint
+with tool-call support. It does not deploy the frontend or A2A transport; the
+prompt, tool order, source-selection contract, ingestion transforms, and
+retrieval implementations are taken from the checked-out product.
+
+`--force` truncates only the configured benchmark vector table. Without it,
+the indexer replaces rows for documents present in the current source
+directory. Use `--force` whenever documents were removed from the corpus so
+their old rows cannot remain in the table.
+
+## Dataset contract
+
+Each JSONL row has this shape:
+
+```json
+{
+  "id": "q-001",
+  "question": "Which retrieval routes are combined?",
+  "retrieval_keywords": ["full-text", "vector", "routes"],
+  "relevant_documents": ["guide.md"],
+  "relevant_evidence": ["full-text and vector routes"],
+  "expected_answer_keywords": ["full-text", "vector"],
+  "expected_answerable": true
+}
+```
+
+`retrieval_keywords` are supplied directly to the same product tool interface
+used by Agent Runtime. Curated keywords isolate retrieval quality from Agent
+query planning. If omitted, the full question is used as one keyword.
+
+Gold source identities are filenames and evidence text, not generated chunk
+IDs. This keeps the dataset stable when chunking changes.
+
+## Artifacts
+
+```text
+runs/product-rag-001/
+└── 20260731-123456.789/
+    ├── ingest-state.json  # source hashes, stable file/chunk IDs, offsets, model
+    ├── results.jsonl      # raw product retrieval output and per-case metrics
+    ├── summary.json       # aggregate quality and latency
+    └── report.md          # human-readable summary
+```
+
+## Optional controlled generation
+
+Set `generation.enabled=true`. With `generation.provider` set to `"taas"`, the
+Base URL and API key environment variable default to the same TaaS values used
+for embeddings. The generator receives only the chunks returned by MatrixFlow
+RAG and is instructed to cite source filenames.
+
+This mode measures a controlled retrieve-then-generate pipeline. Testing the
+exact dev webpage experience remains a separate black-box A2A benchmark because
+the product `explore` Agent adds planning, retries, source selection, and
+session state beyond the RAG retriever.

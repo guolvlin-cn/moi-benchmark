@@ -181,6 +181,7 @@ def summarize(results: list[dict[str, Any]]) -> dict[str, Any]:
         },
         "latency_seconds": {
             "mean": finite_mean(latencies),
+            "p50": percentile(latencies, 0.50),
             "p95": percentile(latencies, 0.95),
         },
     }

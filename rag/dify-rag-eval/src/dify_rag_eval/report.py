@@ -15,6 +15,7 @@ def render_markdown(summary: dict[str, Any]) -> str:
         f"- Attempts: {summary.get('attempts', 0)}",
         f"- Distinct questions: {summary.get('distinct_questions', 0)}",
         f"- Mean latency: {_format(latency.get('mean'))} s",
+        f"- P50 latency: {_format(latency.get('p50'))} s",
         f"- P95 latency: {_format(latency.get('p95'))} s",
         "",
         "| Metric | Macro mean |",
@@ -40,4 +41,3 @@ def write_report(path: str | Path, summary: dict[str, Any]) -> None:
 
 def _format(value: Any) -> str:
     return "N/A" if value is None else f"{float(value):.4f}"
-
