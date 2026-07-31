@@ -1,2 +1,2 @@
-{"id":"local-rag-001","question":"Where does the local Matrixflow RAG service store ingested documents?","expected_keywords":["SQLite"],"expected_source_keywords":["SQLite"]}
-{"id":"local-rag-002","question":"Which endpoint ingests document text?","expected_keywords":["/ingest"],"expected_source_keywords":["/ingest"]}
+{"id":"local-rag-001","question":"Which MatrixFlow module implements product RAG retrieval?","retrieval_keywords":["MatrixFlow","product RAG","SearchRAGChunks"],"relevant_documents":["matrixflow-local-rag.md"],"relevant_evidence":["SearchRAGChunks"],"expected_answer_keywords":["SearchRAGChunks"],"expected_answerable":true}
+{"id":"local-rag-002","question":"Which retrieval routes does MatrixFlow product RAG combine?","retrieval_keywords":["full-text","vector","routes"],"relevant_documents":["matrixflow-local-rag.md"],"relevant_evidence":["full-text and vector routes"],"expected_answer_keywords":["full-text","vector"],"expected_answerable":true}

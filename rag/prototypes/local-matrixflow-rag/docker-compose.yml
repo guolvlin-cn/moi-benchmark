@@ -1,0 +1,11 @@
+services:
+  matrixone:
+    image: registry.cn-shanghai.aliyuncs.com/matrixorigin/matrixone:4.1.2
+    ports:
+      - "6001:6001"
+    volumes:
+      - matrixone-data:/mo-data
+    restart: unless-stopped
+
+volumes:
+  matrixone-data:
