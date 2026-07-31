@@ -14,6 +14,27 @@ from .report import write_report
 from .runner import run_dataset
 
 
+def load_dotenv(path: Path, environ: dict[str, str] | None = None) -> None:
+    """Load simple KEY=VALUE entries without overriding explicit environment values."""
+    target = os.environ if environ is None else environ
+    if not path.is_file():
+        return
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[7:].lstrip()
+        key, separator, value = line.partition("=")
+        key = key.strip()
+        if not separator or not key or not key.replace("_", "").isalnum():
+            continue
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1]
+        target.setdefault(key, value)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="dify-rag-eval")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -56,10 +77,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     ingest.add_argument("--chunk-size", type=int, default=2000)
     ingest.add_argument("--chunk-overlap", type=int, default=200)
+    ingest.add_argument(
+        "--segment-max-tokens",
+        type=int,
+        help="use Dify custom segmentation with this maximum token count",
+    )
+    ingest.add_argument(
+        "--indexing-technique",
+        choices=("high_quality", "economy"),
+        default="high_quality",
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env")
     args = build_parser().parse_args(argv)
     if args.command == "validate":
         rows = read_jsonl(args.dataset)
@@ -79,7 +111,12 @@ def main(argv: list[str] | None = None) -> int:
         if not args.source.is_dir():
             raise SystemExit(f"source is not a directory: {args.source}")
         ingest_directory(
-            KnowledgeClient(args.base_url, api_key),
+            KnowledgeClient(
+                args.base_url,
+                api_key,
+                segment_max_tokens=args.segment_max_tokens,
+                indexing_technique=args.indexing_technique,
+            ),
             source=args.source,
             knowledge_name=args.knowledge_name,
             output=args.output,

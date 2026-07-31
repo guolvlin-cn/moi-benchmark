@@ -66,6 +66,7 @@ cp config.example.json config.local.json
 |---|---|---|
 | `DIFY_DATASET_API_KEY` | 创建知识库、上传文档、查询索引和直接检索 | Dify → 知识库 → API/知识库 API |
 | `DIFY_API_KEY` | 调用已经发布的 Chatflow | Dify → 工作室 → 当前应用 → 访问 API |
+| `TAAS_API_KEY` | 本地保存 MatrixOrigin TaaS 凭证 | TaaS → API Key 管理 |
 
 `.env` 示例：
 
@@ -73,9 +74,13 @@ cp config.example.json config.local.json
 DIFY_API_BASE_URL=https://api.dify.ai/v1
 DIFY_DATASET_API_KEY=dataset-your-key
 DIFY_API_KEY=app-your-key
+TAAS_API_KEY=sk-mo-your-key
 ```
 
 真实 Key 只能保存在本地 `.env`，不要写入 README、JSON 配置、结果文件或 Git。
+`dify-rag-eval` 每次启动时会自动加载项目根目录的 `.env`，但不会覆盖调用前
+已经显式导出的环境变量。请注意，本地保存 `TAAS_API_KEY` 不会自动配置
+Dify Cloud；仍需在 Dify 的 OpenAI-compatible Model Provider 中保存同一凭证。
 
 ### 0.3 准备 RAGBench 数据
 
