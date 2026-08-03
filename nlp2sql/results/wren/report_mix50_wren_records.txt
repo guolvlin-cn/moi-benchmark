@@ -1,0 +1,392 @@
+==========================================================================================
+  Wren AI Spider mix50 — Gold SQL vs Wren SQL 查询结果逐题对比
+==========================================================================================
+
+#01 [easy  ] [pets_1         ] ✓
+  问题: What type of pet is the youngest animal, and how much does it weigh?
+  Gold SQL: SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1
+  Wren SQL: SELECT pettype, weight FROM Pets ORDER BY pet_age ASC, petid ASC LIMIT 1
+  Gold结果 (1行): [('dog', 9.3)]
+  Wren结果 (1行): [('dog', 9.3)]
+
+#02 [easy  ] [concert_singer ] ✓
+  问题: What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?
+  Gold SQL: SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'
+  Wren SQL: SELECT name, country FROM singer WHERE LOWER(song_name) LIKE '%hey%' ORDER BY name
+  Gold结果 (1行): [('Justin Brown', 'France')]
+  Wren结果 (1行): [('Justin Brown', 'France')]
+
+#03 [easy  ] [car_1          ] ✓
+  问题: In 1980, how many cars were made?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;
+  Wren SQL: SELECT COUNT(*) AS car_count FROM cars_data WHERE year = 1980
+  Gold结果 (1行): [(29,)]
+  Wren结果 (1行): [(29,)]
+
+#04 [easy  ] [concert_singer ] ✓
+  问题: What is the average, minimum, and maximum age for all French singers?
+  Gold SQL: SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'
+  Wren SQL: SELECT AVG(age) AS avg_age, MIN(age) AS min_age, MAX(age) AS max_age FROM singer WHERE LOWER(country) = 'france'
+  Gold结果 (1行): [(34.5, 25, 43)]
+  Wren结果 (1行): [(34.5, 25, 43)]
+
+#05 [easy  ] [pets_1         ] ✓
+  问题: How many different types of pet are there?
+  Gold SQL: SELECT count(DISTINCT pettype) FROM pets
+  Wren SQL: SELECT COUNT(DISTINCT pettype) AS pet_type_count FROM Pets
+  Gold结果 (1行): [(2,)]
+  Wren结果 (1行): [(2,)]
+
+#06 [easy  ] [car_1          ] ✗
+  问题: What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980 ?
+  Gold SQL: select max(mpg) from cars_data where cylinders  =  8 or year  <  1980
+  Wren SQL: SELECT MAX(CAST(mpg AS REAL)) AS max_mpg FROM cars_data WHERE cylinders = 8 OR year < 1980
+  Gold结果 (1行): [('null',)]
+  Wren结果 (1行): [(43.1,)]
+  ← 结果内容不同(行数相同但值不同)
+
+#07 [easy  ] [pets_1         ] ✓
+  问题: How many pets have a greater weight than 10?
+  Gold SQL: SELECT count(*) FROM pets WHERE weight  >  10
+  Wren SQL: SELECT COUNT(*) AS pet_count FROM Pets WHERE weight > 10
+  Gold结果 (1行): [(2,)]
+  Wren结果 (1行): [(2,)]
+
+#08 [easy  ] [car_1          ] ✓
+  问题: What is the horsepower of the car with the greatest accelerate?
+  Gold SQL: SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1;
+  Wren SQL: SELECT horsepower FROM cars_data ORDER BY accelerate DESC, id ASC LIMIT 1
+  Gold结果 (1行): [('71',)]
+  Wren结果 (1行): [('71',)]
+
+#09 [easy  ] [concert_singer ] ✓
+  问题: What is the name and capacity for the stadium with the highest average attendance?
+  Gold SQL: SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1
+  Wren SQL: SELECT name, capacity FROM stadium ORDER BY average DESC, stadium_id ASC LIMIT 1
+  Gold结果 (1行): [("Stark's Park", 10104)]
+  Wren结果 (1行): [("Stark's Park", 10104)]
+
+#10 [easy  ] [concert_singer ] ✓
+  问题: What is the average, minimum, and maximum age for all French singers?
+  Gold SQL: SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'
+  Wren SQL: SELECT AVG(age) AS avg_age, MIN(age) AS min_age, MAX(age) AS max_age FROM singer WHERE LOWER(country) = 'france'
+  Gold结果 (1行): [(34.5, 25, 43)]
+  Wren结果 (1行): [(34.5, 25, 43)]
+
+#11 [easy  ] [pets_1         ] ✓
+  问题: How much does the youngest dog weigh?
+  Gold SQL: SELECT weight FROM pets ORDER BY pet_age LIMIT 1
+  Wren SQL: SELECT weight FROM Pets WHERE LOWER(pettype) = 'dog' ORDER BY pet_age ASC, petid ASC LIMIT 1
+  Gold结果 (1行): [(9.3,)]
+  Wren结果 (1行): [(9.3,)]
+
+#12 [easy  ] [car_1          ] ✓
+  问题: In 1980, how many cars were made?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980;
+  Wren SQL: SELECT COUNT(*) AS car_count FROM cars_data WHERE year = 1980
+  Gold结果 (1行): [(29,)]
+  Wren结果 (1行): [(29,)]
+
+#13 [easy  ] [pets_1         ] ✓
+  问题: How many different types of pet are there?
+  Gold SQL: SELECT count(DISTINCT pettype) FROM pets
+  Wren SQL: SELECT COUNT(DISTINCT pettype) AS pet_type_count FROM Pets
+  Gold结果 (1行): [(2,)]
+  Wren结果 (1行): [(2,)]
+
+#14 [easy  ] [car_1          ] ✓
+  问题: What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?
+  Gold SQL: select distinct year from cars_data where weight between 3000 and 4000;
+  Wren SQL: SELECT year FROM cars_data GROUP BY year HAVING MIN(weight) < 4000 AND MAX(weight) > 3000 ORDER BY year
+  Gold结果 (13行): [(1970,), (1971,), (1972,)] ... 共13行
+  Wren结果 (13行): [(1970,), (1971,), (1972,)] ... 共13行
+
+#15 [easy  ] [concert_singer ] ✓
+  问题: What are  the different countries with singers above age 20?
+  Gold SQL: SELECT DISTINCT country FROM singer WHERE age  >  20
+  Wren SQL: SELECT DISTINCT country FROM singer WHERE age > 20 ORDER BY country
+  Gold结果 (3行): [('Netherlands',)
+          ('United States',)
+          ('France',)]
+  Wren结果 (3行): [('France',)
+          ('Netherlands',)
+          ('United States',)]
+
+#16 [easy  ] [pets_1         ] ✓
+  问题: What is the id and weight of every pet who is older than 1?
+  Gold SQL: SELECT petid ,  weight FROM pets WHERE pet_age  >  1
+  Wren SQL: SELECT petid, weight FROM Pets WHERE pet_age > 1 ORDER BY petid
+  Gold结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+  Wren结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+
+#17 [easy  ] [concert_singer ] ✓
+  问题: What is the average and maximum capacities for all stadiums ?
+  Gold SQL: select avg(capacity) ,  max(capacity) from stadium
+  Wren SQL: SELECT AVG(capacity) AS avg_capacity, MAX(capacity) AS max_capacity FROM stadium
+  Gold结果 (1行): [(10621.666666666666, 52500)]
+  Wren结果 (1行): [(10621.666666666666, 52500)]
+
+#18 [easy  ] [car_1          ] ✗
+  问题: What is the number of cars with a horsepower greater than 150?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE horsepower  >  150;
+  Wren SQL: SELECT COUNT(*) AS car_count FROM cars_data WHERE CAST(horsepower AS REAL) > 150
+  Gold结果 (1行): [(281,)]
+  Wren结果 (1行): [(49,)]
+  ← 结果内容不同(行数相同但值不同)
+
+#19 [easy  ] [pets_1         ] ✓
+  问题: How many pets have a greater weight than 10?
+  Gold SQL: SELECT count(*) FROM pets WHERE weight  >  10
+  Wren SQL: SELECT COUNT(*) AS pet_count FROM Pets WHERE weight > 10
+  Gold结果 (1行): [(2,)]
+  Wren结果 (1行): [(2,)]
+
+#20 [easy  ] [car_1          ] ✓
+  问题: What is the number of cars with more than 4 cylinders?
+  Gold SQL: SELECT count(*) FROM CARS_DATA WHERE Cylinders  >  4;
+  Wren SQL: SELECT COUNT(*) AS car_count FROM cars_data WHERE cylinders > 4
+  Gold结果 (1行): [(195,)]
+  Wren结果 (1行): [(195,)]
+
+#21 [easy  ] [concert_singer ] ✓
+  问题: What is the name and capacity for the stadium with the highest average attendance?
+  Gold SQL: SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1
+  Wren SQL: SELECT name, capacity FROM stadium ORDER BY average DESC, stadium_id ASC LIMIT 1
+  Gold结果 (1行): [("Stark's Park", 10104)]
+  Wren结果 (1行): [("Stark's Park", 10104)]
+
+#22 [easy  ] [concert_singer ] ✓
+  问题: What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?
+  Gold SQL: SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'
+  Wren SQL: SELECT name, country FROM singer WHERE LOWER(song_name) LIKE '%hey%' ORDER BY name
+  Gold结果 (1行): [('Justin Brown', 'France')]
+  Wren结果 (1行): [('Justin Brown', 'France')]
+
+#23 [easy  ] [car_1          ] ✓
+  问题: What is the number of continents?
+  Gold SQL: SELECT count(*) FROM CONTINENTS;
+  Wren SQL: SELECT COUNT(*) AS continent_count FROM continents
+  Gold结果 (1行): [(5,)]
+  Wren结果 (1行): [(5,)]
+
+#24 [easy  ] [pets_1         ] ✓
+  问题: What type of pet is the youngest animal, and how much does it weigh?
+  Gold SQL: SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1
+  Wren SQL: SELECT pettype, weight FROM Pets ORDER BY pet_age ASC, petid ASC LIMIT 1
+  Gold结果 (1行): [('dog', 9.3)]
+  Wren结果 (1行): [('dog', 9.3)]
+
+#25 [easy  ] [pets_1         ] ✓
+  问题: How much does the youngest dog weigh?
+  Gold SQL: SELECT weight FROM pets ORDER BY pet_age LIMIT 1
+  Wren SQL: SELECT weight FROM Pets WHERE LOWER(pettype) = 'dog' ORDER BY pet_age ASC, petid ASC LIMIT 1
+  Gold结果 (1行): [(9.3,)]
+  Wren结果 (1行): [(9.3,)]
+
+#26 [easy  ] [concert_singer ] ✗
+  问题: What are the names and release years for all the songs of the youngest singer?
+  Gold SQL: SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1
+  Wren SQL: SELECT name, song_release_year FROM singer ORDER BY age ASC, singer_id ASC LIMIT 1
+  Gold结果 (1行): [('Love', '2016')]
+  Wren结果 (1行): [('Tribal King', '2016')]
+  ← 结果内容不同(行数相同但值不同)
+
+#27 [easy  ] [car_1          ] ✓
+  问题: What is the minimum weight of the car with 8 cylinders produced in 1974 ?
+  Gold SQL: select min(weight) from cars_data where cylinders  =  8 and year  =  1974
+  Wren SQL: SELECT MIN(weight) AS min_weight FROM cars_data WHERE cylinders = 8 AND year = 1974
+  Gold结果 (1行): [(4141,)]
+  Wren结果 (1行): [(4141,)]
+
+#28 [easy  ] [pets_1         ] ✓
+  问题: What is the id and weight of every pet who is older than 1?
+  Gold SQL: SELECT petid ,  weight FROM pets WHERE pet_age  >  1
+  Wren SQL: SELECT petid, weight FROM Pets WHERE pet_age > 1 ORDER BY petid
+  Gold结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+  Wren结果 (2行): [(2001, 12.0)
+          (2002, 13.4)]
+
+#29 [easy  ] [concert_singer ] ✗
+  问题: What is the maximum capacity and the average of all stadiums ?
+  Gold SQL: select max(capacity), average from stadium
+  Wren SQL: SELECT AVG(capacity) AS avg_capacity, MAX(capacity) AS max_capacity FROM stadium
+  Gold结果 (1行): [(52500, 730)]
+  Wren结果 (1行): [(10621.666666666666, 52500)]
+  ← 结果内容不同(行数相同但值不同)
+
+#30 [easy  ] [car_1          ] ✓
+  问题: What is the number of continents?
+  Gold SQL: SELECT count(*) FROM CONTINENTS;
+  Wren SQL: SELECT COUNT(*) AS continent_count FROM continents
+  Gold结果 (1行): [(5,)]
+  Wren结果 (1行): [(5,)]
+
+#31 [medium] [pets_1         ] ✓
+  问题: What is the id of the pet owned by the student whose last name is 'Smith'?
+  Gold SQL: SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'
+  Wren SQL: SELECT DISTINCT hp.petid FROM Student s JOIN Has_Pet hp ON s.stuid = hp.stuid WHERE LOWER(s.lname) = 'smith' ORDER BY hp.petid
+  Gold结果 (1行): [(2001,)]
+  Wren结果 (1行): [(2001,)]
+
+#32 [medium] [car_1          ] ✓
+  问题: What is the number of makers of care in France?
+  Gold SQL: SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france';
+  Wren SQL: SELECT COUNT(*) AS maker_count FROM car_makers cm JOIN countries c ON cm.country = c.countryid WHERE LOWER(c.countryname) = 'france'
+  Gold结果 (1行): [(3,)]
+  Wren结果 (1行): [(3,)]
+
+#33 [medium] [concert_singer ] ✗
+  问题: What is the year that had the most concerts?
+  Gold SQL: SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1
+  Wren SQL: SELECT year, COUNT(*) AS concert_count FROM concert GROUP BY year ORDER BY concert_count DESC, year ASC LIMIT 1
+  Gold结果 (1行): [('2015',)]
+  Wren结果 (1行): [('2014', 3)]
+  ← 结果内容不同(行数相同但值不同)
+
+#34 [medium] [pets_1         ] ✓
+  问题: What is the average and maximum age for each pet type?
+  Gold SQL: SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype
+  Wren SQL: SELECT pettype, AVG(pet_age) AS avg_age, MAX(pet_age) AS max_age FROM Pets GROUP BY pettype ORDER BY pettype
+  Gold结果 (2行): [(3.0, 3, 'cat')
+          (1.5, 2, 'dog')]
+  Wren结果 (2行): [('cat', 3.0, 3)
+          ('dog', 1.5, 2)]
+
+#35 [medium] [car_1          ] ✓
+  问题: What is the count of the car models produced in the United States?
+  Gold SQL: SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';
+  Wren SQL: SELECT COUNT(*) AS model_count FROM model_list ml JOIN car_makers cm ON ml.maker = cm.id JOIN countries c ON cm.country = c.countryid WHERE LOWER(c.countryname) = 'usa'
+  Gold结果 (1行): [(13,)]
+  Wren结果 (1行): [(13,)]
+
+#36 [medium] [concert_singer ] ✓
+  问题: How many singers are from each country?
+  Gold SQL: SELECT country ,  count(*) FROM singer GROUP BY country
+  Wren SQL: SELECT country, COUNT(*) AS singer_count FROM singer GROUP BY country ORDER BY country
+  Gold结果 (3行): [('France', 4)
+          ('Netherlands', 1)
+          ('United States', 1)]
+  Wren结果 (3行): [('France', 4)
+          ('Netherlands', 1)
+          ('United States', 1)]
+
+#37 [medium] [concert_singer ] ✗
+  问题: Show the stadium name and capacity with most number of concerts in year 2014 or after.
+  Gold SQL: SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1
+  Wren SQL: SELECT s.name, s.capacity, COUNT(*) AS concert_count FROM concert c JOIN stadium s ON c.stadium_id = s.stadium_id WHERE c.year >= 2014 GROUP BY s.stadium_id, s.name, s.capacity ORDER BY concert_count DESC, s.stadium_id ASC LIMIT 1
+  Gold结果 (1行): [('Somerset Park', 11998)]
+  Wren结果 (1行): [('Somerset Park', 11998, 2)]
+  ← 结果内容不同(行数相同但值不同)
+
+#38 [medium] [pets_1         ] ✓
+  问题: List the maximum weight and type for each type of pet.
+  Gold SQL: SELECT max(weight) ,  petType FROM pets GROUP BY petType
+  Wren SQL: SELECT pettype, MAX(weight) AS max_weight FROM Pets GROUP BY pettype ORDER BY pettype
+  Gold结果 (2行): [(12.0, 'cat')
+          (13.4, 'dog')]
+  Wren结果 (2行): [('cat', 12.0)
+          ('dog', 13.4)]
+
+#39 [medium] [car_1          ] ✗
+  问题: What is the largest amount of horsepower for the models with 3 cylinders and what make is it?
+  Gold SQL: SELECT T2.horsepower ,  T1.Make FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.cylinders  =  3 ORDER BY T2.horsepower DESC LIMIT 1;
+  Wren SQL: SELECT cn.make, MAX(SAFE_CAST(cd.horsepower AS FLOAT64)) AS max_horsepower FROM cars_data cd JOIN car_names cn ON cd.id = cn.makeid WHERE cd.cylinders = 3 GROUP BY cn.make ORDER BY max_horsepower DESC, cn.make ASC LIMIT 1
+  Gold结果 (1行): [('97', 'mazda rx2 coupe')]
+  Wren结果 (0行): []
+  ← Wren SQL执行报错: near "AS": syntax error
+
+#40 [medium] [car_1          ] ✓
+  问题: What is the number of car models that are produced by each maker and what is the id and full name of each maker?
+  Gold SQL: SELECT Count(*) ,  T2.FullName ,  T2.id FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id GROUP BY T2.id;
+  Wren SQL: SELECT cm.id, cm.fullname, COUNT(ml.modelid) AS model_count FROM car_makers cm LEFT JOIN model_list ml ON cm.id = ml.maker GROUP BY cm.id, cm.fullname ORDER BY cm.id
+  Gold结果 (22行): [(1, 'American Motor Company', 1), (2, 'Volkswagen', 2), (1, 'BMW', 3)] ... 共22行
+  Wren结果 (22行): [(1, 'American Motor Company', 1), (2, 'Volkswagen', 2), (3, 'BMW', 1)] ... 共22行
+
+#41 [medium] [pets_1         ] ✓
+  问题: How many pets are owned by students that have an age greater than 20?
+  Gold SQL: SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20
+  Wren SQL: SELECT COUNT(*) AS pet_count FROM Student s JOIN Has_Pet hp ON s.stuid = hp.stuid WHERE s.age > 20
+  Gold结果 (1行): [(0,)]
+  Wren结果 (1行): [(0,)]
+
+#42 [medium] [concert_singer ] ✓
+  问题: What are the names , themes , and number of singers for every concert ?
+  Gold SQL: SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id
+  Wren SQL: SELECT c.concert_name, c.theme, COUNT(sic.singer_id) AS singer_count FROM concert c LEFT JOIN singer_in_concert sic ON c.concert_id = sic.concert_id GROUP BY c.concert_id, c.concert_name, c.theme ORDER BY c.concert_id
+  Gold结果 (6行): [('Auditions', 'Free choice', 3), ('Super bootcamp', 'Free choice 2', 2), ('Home Visits', 'Bleeding Love', 1)] ... 共6行
+  Wren结果 (6行): [('Auditions', 'Free choice', 3), ('Super bootcamp', 'Free choice 2', 2), ('Home Visits', 'Bleeding Love', 1)] ... 共6行
+
+#43 [medium] [concert_singer ] ✗
+  问题: What is the name and capacity of the stadium with the most concerts after 2013 ?
+  Gold SQL: select t2.name ,  t2.capacity from concert as t1 join stadium as t2 on t1.stadium_id  =  t2.stadium_id where t1.year  >  2013 group by t2.stadium_id order by count(*) desc limit 1
+  Wren SQL: SELECT s.name, s.capacity, COUNT(*) AS concert_count FROM concert c JOIN stadium s ON c.stadium_id = s.stadium_id WHERE c.year > 2013 GROUP BY s.stadium_id, s.name, s.capacity ORDER BY concert_count DESC, s.stadium_id ASC LIMIT 1
+  Gold结果 (1行): [('Somerset Park', 11998)]
+  Wren结果 (1行): [('Somerset Park', 11998, 2)]
+  ← 结果内容不同(行数相同但值不同)
+
+#44 [medium] [car_1          ] ✗
+  问题: What are the names of all European countries with at least 3 manufacturers?
+  Gold SQL: SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;
+  Wren SQL: SELECT c.countryname, COUNT(cm.id) AS maker_count FROM countries c JOIN continents ct ON c.continent = ct.contid JOIN car_makers cm ON cm.country = c.countryid WHERE LOWER(ct.continent) = 'europe' GROUP BY c.countryid, c.countryname HAVING COUNT(cm.id) >= 3 ORDER BY c.countryname
+  Gold结果 (2行): [('france',)
+          ('germany',)]
+  Wren结果 (2行): [('france', 3)
+          ('germany', 4)]
+  ← 结果内容不同(行数相同但值不同)
+
+#45 [medium] [pets_1         ] ✓
+  问题: What are the different first names and ages of the students who do have pets?
+  Gold SQL: SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid
+  Wren SQL: SELECT DISTINCT s.fname, s.age FROM Student s JOIN Has_Pet hp ON s.stuid = hp.stuid ORDER BY s.fname, s.age
+  Gold结果 (2行): [('Linda', 18)
+          ('Tracy', 19)]
+  Wren结果 (2行): [('Linda', 18)
+          ('Tracy', 19)]
+
+#46 [hard  ] [pets_1         ] ✓
+  问题: What are the ids of the students who do not own cats as pets?
+  Gold SQL: SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'
+  Wren SQL: SELECT s.stuid FROM Student s WHERE NOT EXISTS (SELECT 1 FROM Has_Pet hp JOIN Pets p ON hp.petid = p.petid WHERE hp.stuid = s.stuid AND LOWER(p.pettype) = 'cat') ORDER BY s.stuid
+  Gold结果 (33行): [(1002,), (1003,), (1004,)] ... 共33行
+  Wren结果 (33行): [(1002,), (1003,), (1004,)] ... 共33行
+
+#47 [hard  ] [concert_singer ] ✓
+  问题: What are the names of the stadiums without any concerts?
+  Gold SQL: SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)
+  Wren SQL: SELECT s.name FROM stadium s WHERE NOT EXISTS (SELECT 1 FROM concert c WHERE c.stadium_id = s.stadium_id) ORDER BY s.name
+  Gold结果 (4行): [('Bayview Stadium',)
+          ('Hampden Park',)
+          ('Forthbank Stadium',)
+          ('Gayfield Park',)]
+  Wren结果 (4行): [('Bayview Stadium',)
+          ('Forthbank Stadium',)
+          ('Gayfield Park',)
+          ('Hampden Park',)]
+
+#48 [hard  ] [car_1          ] ✓
+  问题: What is the maker of the carr produced in the earliest year and what year was it?
+  Gold SQL: SELECT T2.Make ,  T1.Year FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Year  =  (SELECT min(YEAR) FROM CARS_DATA);
+  Wren SQL: SELECT cn.make, cd.year FROM cars_data cd JOIN car_names cn ON cd.id = cn.makeid WHERE cd.year = (SELECT MIN(year) FROM cars_data) ORDER BY cn.makeid
+  Gold结果 (35行): [('chevrolet chevelle malibu', 1970), ('buick skylark 320', 1970), ('plymouth satellite', 1970)] ... 共35行
+  Wren结果 (35行): [('chevrolet chevelle malibu', 1970), ('buick skylark 320', 1970), ('plymouth satellite', 1970)] ... 共35行
+
+#49 [hard  ] [concert_singer ] ✓
+  问题: What are the names of all stadiums that did not have a concert in 2014?
+  Gold SQL: SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014
+  Wren SQL: SELECT s.name FROM stadium s WHERE NOT EXISTS (SELECT 1 FROM concert c WHERE c.stadium_id = s.stadium_id AND c.year = 2014) ORDER BY s.name
+  Gold结果 (6行): [('Balmoor',), ('Bayview Stadium',), ('Forthbank Stadium',)] ... 共6行
+  Wren结果 (6行): [('Balmoor',), ('Bayview Stadium',), ('Forthbank Stadium',)] ... 共6行
+
+#50 [hard  ] [pets_1         ] ✓
+  问题: What are the students' first names who have both cats and dogs as pets?
+  Gold SQL: select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'cat' intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'dog'
+  Wren SQL: SELECT s.fname FROM Student s JOIN Has_Pet hp ON s.stuid = hp.stuid JOIN Pets p ON hp.petid = p.petid WHERE LOWER(p.pettype) IN ('cat', 'dog') GROUP BY s.stuid, s.fname HAVING COUNT(DISTINCT LOWER(p.pettype)) = 2 ORDER BY s.fname
+  Gold结果 (0行): []
+  Wren结果 (0行): []
+
+==========================================================================================
+  总计: 41通过 / 9失败 = 82.0%
+==========================================================================================

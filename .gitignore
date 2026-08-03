@@ -1,38 +1,27 @@
-# Local third-party source checkout used by the document-parsing Track.
-/document-parsing/OmniDocBench/
-
-# Secrets and machine-local configuration.
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-
-# OS, editors and language caches.
+__pycache__/
+*.pyc
 .DS_Store
 .idea/
 .vscode/
-__pycache__/
-*.py[cod]
 .pytest_cache/
 .ruff_cache/
 .venv/
 node_modules/
 target/
-
-# Downloaded, private or generated Track dataset payloads.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+/document-parsing/OmniDocBench/
 /*/datasets/downloads/
 /*/datasets/private/
 /*/datasets/generated/
 /*/datasets/**/raw/
-
-# Raw Track run artifacts stay in controlled artifact storage. Commit manifests and summaries.
 /*/runs/**/raw/
 /*/runs/**/logs/
 /*/runs/**/traces/
 /*/artifacts/
 /.cache/
-
-# Local RAG source data.
 /rag/corpus/
 /rag/refs/
