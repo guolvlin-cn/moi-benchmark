@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"os"
@@ -140,6 +141,41 @@ func TestAllocateRunDirNeverReusesAnExistingDirectory(t *testing.T) {
 		if statErr != nil || !info.IsDir() {
 			t.Fatalf("run directory %s was not created", path)
 		}
+	}
+}
+
+func TestForceRebuildsVectorTableWhenEmbeddingDimensionChanges(t *testing.T) {
+	dsn := os.Getenv("MATRIXONE_INTEGRATION_DSN")
+	if dsn == "" {
+		t.Skip("set MATRIXONE_INTEGRATION_DSN to run MatrixOne integration tests")
+	}
+	table := fmt.Sprintf("embedding_dimension_test_%d", time.Now().UnixNano())
+	cfg := Config{MatrixOne: MatrixOneConfig{
+		DSN: dsn, Database: "matrixflow_rag_benchmark", VectorTable: table,
+	}}
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
+	db, err := openBenchmarkDB(ctx, cfg, 256, true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := db.Close(); err != nil {
+		t.Fatal(err)
+	}
+	db, err = openBenchmarkDB(ctx, cfg, 1024, true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	defer db.ExecContext(context.Background(), "DROP TABLE IF EXISTS `"+table+"`")
+
+	var tableName, createSQL string
+	if err := db.QueryRowContext(ctx, "SHOW CREATE TABLE `"+table+"`").Scan(&tableName, &createSQL); err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(strings.ToLower(createSQL), "vecf64(1024)") {
+		t.Fatalf("force kept the old vector dimension; SHOW CREATE TABLE = %s", createSQL)
 	}
 }
 

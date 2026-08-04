@@ -85,7 +85,11 @@ func (s *localFileStore) Upload(ctx context.Context, data []byte, filename strin
 }
 
 type localClientProvider struct {
-	files *localFileStore
+	files         *localFileStore
+	openXML       clients.OpenXMLClient
+	openXMLLayout clients.OpenXMLLayoutClient
+	vlm           clients.VLMClient
+	converter     clients.ConverterClient
 }
 
 func (p *localClientProvider) FileService(context.Context) (clients.FileServiceClient, error) {
@@ -101,15 +105,24 @@ func (p *localClientProvider) Paddle(context.Context) (clients.PaddleClient, err
 }
 
 func (p *localClientProvider) VLM(context.Context) (clients.VLMClient, error) {
-	return nil, backendUnavailable("VLM")
+	if p.vlm == nil {
+		return nil, backendUnavailable("VLM")
+	}
+	return p.vlm, nil
 }
 
 func (p *localClientProvider) OpenXML(context.Context) (clients.OpenXMLClient, error) {
-	return nil, backendUnavailable("OpenXML")
+	if p.openXML == nil {
+		return nil, backendUnavailable("OpenXML")
+	}
+	return p.openXML, nil
 }
 
 func (p *localClientProvider) OpenXMLLayout(context.Context) (clients.OpenXMLLayoutClient, error) {
-	return nil, backendUnavailable("OpenXML layout")
+	if p.openXMLLayout == nil {
+		return nil, backendUnavailable("OpenXML layout")
+	}
+	return p.openXMLLayout, nil
 }
 
 func (p *localClientProvider) UnoServer(context.Context) (clients.UnoServerClient, error) {
@@ -117,7 +130,10 @@ func (p *localClientProvider) UnoServer(context.Context) (clients.UnoServerClien
 }
 
 func (p *localClientProvider) Converter(context.Context) (clients.ConverterClient, error) {
-	return nil, backendUnavailable("converter")
+	if p.converter == nil {
+		return nil, backendUnavailable("converter")
+	}
+	return p.converter, nil
 }
 
 func (p *localClientProvider) WPSConverter(context.Context) (clients.ConverterClient, error) {
@@ -125,7 +141,10 @@ func (p *localClientProvider) WPSConverter(context.Context) (clients.ConverterCl
 }
 
 func (p *localClientProvider) SofficeConverter(context.Context) (clients.ConverterClient, error) {
-	return nil, backendUnavailable("LibreOffice converter")
+	if p.converter == nil {
+		return nil, backendUnavailable("LibreOffice converter")
+	}
+	return p.converter, nil
 }
 
 func (p *localClientProvider) AudioService(context.Context) (clients.AudioServiceClient, error) {

@@ -8,16 +8,27 @@ type ParsePlan struct {
 	Dependencies []ExternalDependency `json:"external_dependencies,omitempty"`
 }
 
-// PlanFor mirrors the standard_rag parser boundary. Backends intentionally
-// remain unconfigured in localClientProvider; this plan makes every missing
+// PlanFor mirrors the standard_rag parser boundary and makes every required
 // product service explicit instead of silently substituting another parser.
 func PlanFor(fileType, profile string, additional map[string]any) ParsePlan {
 	fileType = normalizeFileType(fileType)
 	if profile == ProfileV3Native {
-		return ParsePlan{Conformance: Conformance{
+		plan := ParsePlan{Conformance: Conformance{
 			Profile: profile, WebEquivalent: false, Route: "moi:parse/v3/native",
 			Reason: "explicit local-only parser profile; the web standard_rag node is V2",
 		}}
+		switch fileType {
+		case "docx", "pptx", "xlsx":
+			plan.Dependencies = append(plan.Dependencies, ExternalDependency{
+				Name: "openxml", Required: true, Status: "not_configured", UsedFor: "native Office parsing",
+			})
+		case "doc", "ppt", "xls":
+			plan.Dependencies = append(plan.Dependencies,
+				ExternalDependency{Name: "soffice", Required: true, Status: "not_configured", UsedFor: "legacy Office up-conversion"},
+				ExternalDependency{Name: "openxml", Required: true, Status: "not_configured", UsedFor: "converted Office parsing"},
+			)
+		}
+		return plan
 	}
 
 	plan := ParsePlan{Conformance: Conformance{

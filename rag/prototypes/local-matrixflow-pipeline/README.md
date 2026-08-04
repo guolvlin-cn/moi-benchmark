@@ -24,8 +24,10 @@ embedding/chat endpoints, then run:
 
 ```sh
 python3 pipeline.py \
-  --input ../local-matrixflow-parser/data/sample.md \
+  --input /absolute/path/document.pdf \
   --config ../local-matrixflow-rag/config.local.json \
+  --parser-pipeline precision \
+  --env-file /Users/muuushroom/gitrepos/moi-benchmark/rag/.env \
   --question "这个文档说明了什么？" \
   --run runs/e2e
 ```
@@ -33,27 +35,26 @@ python3 pipeline.py \
 Use `--dataset FILE.jsonl` instead of, or together with, `--question` for the
 retrieval benchmark.
 
-## Intentionally empty parser backends
+## Parser pipelines
 
-The parser's `web-default` profile exposes the same V2 routing decision as the
-web `standard_rag` template. These product-owned backends are not configured:
+The orchestrator supports three explicit parser routes:
 
-- **MinerU**: required for PDF layout/OCR and for Office documents after PDF
-  conversion.
-- **Paddle**: optional; only used when `enable_paddle_preprocess=true` for
-  table-region detection and PDF whitening. The web default is `false`.
-- **document converter**: required before MinerU for DOC/DOCX/PPT/PPTX.
-- **OpenXML**: required for XLS/XLSX.
-- **VLM**: required for standalone images and optional V2 enrichments.
+- `precision`: official MinerU V4 precision parsing; requires
+  `MINERU_API_TOKEN` and returns rich ZIP/Markdown output.
+- `agent`: official token-free Agent lightweight parsing; lower limits and
+  Markdown-only output.
+- `local`: the original MatrixFlow local parser route controlled by
+  `--parser-profile web-default|v3-native`.
 
-Run the parser's dependency planner before a corpus run:
+The shared environment file defaults to the repository RAG root and is loaded
+without overriding explicitly exported variables. It supplies both
+`MINERU_API_TOKEN` to parsing and `TAAS_API_KEY` to embedding/generation.
+
+Inspect a route before a corpus run:
 
 ```sh
 cd ../local-matrixflow-parser
-go run ./cmd/local-matrixflow-parser plan --input /path/to/document.pdf
+go run ./cmd/local-matrixflow-parser plan \
+  --input /path/to/document.pdf \
+  --pipeline precision
 ```
-
-PDF and Office runs therefore stop with an explicit `not_configured` backend
-error today. Markdown/plain/HTML use a clearly reported product V3 Native
-compatibility route because the web V2 legacy pre-dispatch helper is not an
-exported MatrixFlow package boundary.

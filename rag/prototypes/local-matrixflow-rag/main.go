@@ -767,7 +767,7 @@ func tokenize(text string) []string {
 	return tokens
 }
 
-func openBenchmarkDB(ctx context.Context, cfg Config, dimension int, truncate bool) (*sql.DB, error) {
+func openBenchmarkDB(ctx context.Context, cfg Config, dimension int, rebuild bool) (*sql.DB, error) {
 	if dimension <= 0 {
 		return nil, fmt.Errorf("embedding dimension must be positive, got %d", dimension)
 	}
@@ -799,6 +799,12 @@ func openBenchmarkDB(ctx context.Context, cfg Config, dimension int, truncate bo
 		return nil, fmt.Errorf("connect benchmark database: %w", err)
 	}
 	table := "`" + cfg.MatrixOne.VectorTable + "`"
+	if rebuild {
+		if _, err := db.ExecContext(ctx, "DROP TABLE IF EXISTS "+table); err != nil {
+			db.Close()
+			return nil, fmt.Errorf("rebuild vector table: %w", err)
+		}
+	}
 	createSQL := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s (
   id VARCHAR(128) PRIMARY KEY,
   embedding VECF64(%d),
@@ -827,12 +833,6 @@ func openBenchmarkDB(ctx context.Context, cfg Config, dimension int, truncate bo
 	if err := ensureVectorIndex(ctx, db, cfg.MatrixOne.VectorTable); err != nil {
 		db.Close()
 		return nil, err
-	}
-	if truncate {
-		if _, err := db.ExecContext(ctx, "TRUNCATE TABLE "+table); err != nil {
-			db.Close()
-			return nil, fmt.Errorf("truncate vector table: %w", err)
-		}
 	}
 	return db, nil
 }

@@ -13,16 +13,38 @@ import (
 
 	"github.com/matrixflow/moi-core/workers/go-worker/pkg/runtime"
 	productparser "github.com/matrixflow/moi-core/workers/go-worker/pkg/workitems/parser"
+	"github.com/matrixflow/moi-core/workers/go-worker/pkg/workitems/parser/clients"
 	"github.com/matrixflow/moi-core/workers/go-worker/pkg/workitems/parser/types"
 )
 
 const (
-	SchemaVersion      = "matrixflow-product-parser-local-v2"
-	EngineV3Native     = "matrixflow-parse-v3-native"
-	EngineWebDefaultV2 = "matrixflow-standard-rag-v2"
-	ProfileWebDefault  = "web-default"
-	ProfileV3Native    = "v3-native"
+	SchemaVersion         = "matrixflow-product-parser-local-v2"
+	EngineV3Native        = "matrixflow-parse-v3-native"
+	EngineWebDefaultV2    = "matrixflow-standard-rag-v2"
+	EngineMinerUPrecision = "mineru-official-precision"
+	EngineMinerUAgent     = "mineru-official-agent"
+	EngineTaaSVLM         = "taas-vlm"
+	ProfileWebDefault     = "web-default"
+	ProfileV3Native       = "v3-native"
+	PipelineLocal         = "local"
+	PipelinePrecision     = "precision"
+	PipelineAgent         = "agent"
+	PipelineVLM           = "vlm"
 )
+
+type OpenXMLOptions struct {
+	BaseURL string
+}
+
+type VLMOptions struct {
+	APIKey  string
+	BaseURL string
+	Model   string
+}
+
+type SofficeOptions struct {
+	Binary string
+}
 
 type Options struct {
 	FileType     string
@@ -33,6 +55,11 @@ type Options struct {
 	UserID       string
 	ArtifactDir  string
 	Additional   map[string]any
+	Pipeline     string
+	MinerU       MinerUOptions
+	OpenXML      OpenXMLOptions
+	VLM          VLMOptions
+	Soffice      SofficeOptions
 }
 
 type Result struct {
@@ -49,6 +76,8 @@ type Result struct {
 	Metadata      productparser.ParseMetadata `json:"metadata"`
 	Conformance   Conformance                 `json:"conformance"`
 	Dependencies  []ExternalDependency        `json:"external_dependencies,omitempty"`
+	Remote        *MinerURunMetadata          `json:"mineru,omitempty"`
+	VLM           *VLMRunMetadata             `json:"vlm,omitempty"`
 }
 
 type Conformance struct {
@@ -93,6 +122,19 @@ func (p *Parser) ParseFile(ctx context.Context, sourcePath string, opts Options)
 	if fileType == "" {
 		return nil, errors.New("cannot determine file type; provide Options.FileType")
 	}
+	pipeline := strings.ToLower(strings.TrimSpace(opts.Pipeline))
+	if pipeline == "" {
+		pipeline = PipelineLocal
+	}
+	if pipeline != PipelineLocal && pipeline != PipelinePrecision && pipeline != PipelineAgent && pipeline != PipelineVLM {
+		return nil, fmt.Errorf("unknown parser pipeline %q", pipeline)
+	}
+	if pipeline == PipelineVLM {
+		return p.parseTaaSVLM(ctx, absolutePath, fileType, opts)
+	}
+	if pipeline != PipelineLocal {
+		return p.parseMinerU(ctx, absolutePath, fileType, pipeline, opts)
+	}
 	profile := strings.ToLower(strings.TrimSpace(opts.Profile))
 	if profile == "" {
 		profile = ProfileWebDefault
@@ -100,7 +142,7 @@ func (p *Parser) ParseFile(ctx context.Context, sourcePath string, opts Options)
 	if profile != ProfileWebDefault && profile != ProfileV3Native {
 		return nil, fmt.Errorf("unknown parser profile %q", profile)
 	}
-	plan := PlanFor(fileType, profile, opts.Additional)
+	plan := configuredPlan(PlanFor(fileType, profile, opts.Additional), opts)
 	if profile == ProfileWebDefault && plan.DirectV2 {
 		var missing []string
 		for _, dependency := range plan.Dependencies {
@@ -124,13 +166,23 @@ func (p *Parser) ParseFile(ctx context.Context, sourcePath string, opts Options)
 		return nil, err
 	}
 	provider := &localClientProvider{files: store}
+	if baseURL := strings.TrimSpace(opts.OpenXML.BaseURL); baseURL != "" {
+		provider.openXML = clients.NewDirectOpenXMLServiceClient(baseURL)
+		provider.openXMLLayout = clients.NewDirectOpenXMLLayoutClient(baseURL)
+	}
+	if strings.TrimSpace(opts.VLM.BaseURL) != "" && strings.TrimSpace(opts.VLM.APIKey) != "" && strings.TrimSpace(opts.VLM.Model) != "" {
+		provider.vlm = clients.NewOpenAICompatibleVLMClient(opts.VLM.BaseURL, opts.VLM.APIKey, opts.VLM.Model)
+	}
+	if binary := strings.TrimSpace(opts.Soffice.Binary); binary != "" {
+		provider.converter = clients.NewSofficeTaggedPDFConverterWithBinary(binary)
+	}
 	parserVersion := "v3"
 	engine := EngineV3Native
 	if profile == ProfileWebDefault && plan.DirectV2 {
 		parserVersion = "v2"
 		engine = EngineWebDefaultV2
 	}
-	if parserVersion == "v3" && !isLocalNativeType(fileType) {
+	if parserVersion == "v3" && !isLocalNativeType(fileType, opts) {
 		return nil, unsupportedLocalTypeError(fileType)
 	}
 	versionRouter := productparser.NewVersionRouter(productparser.VersionRoutingConfig{
@@ -153,15 +205,16 @@ func (p *Parser) ParseFile(ctx context.Context, sourcePath string, opts Options)
 		execCtx,
 		productparser.WithClientProvider(provider),
 	)
-	parseOptions := defaultWebOptions(opts.Debug)
+	parseOptions := defaultWebOptions(opts.Debug, opts.VLM.Model)
 	if parserVersion == "v3" {
 		parseOptions = map[string]any{
-			"parse_tier":    "native",
-			"debug_enabled": opts.Debug,
-			"image_caption": false,
-			"image_ocr":     false,
-			"complex_table": false,
-			"formula":       false,
+			"parse_tier":          "native",
+			"debug_enabled":       opts.Debug,
+			"docx_openxml_strict": true,
+			"image_caption":       false,
+			"image_ocr":           false,
+			"complex_table":       false,
+			"formula":             false,
 		}
 	}
 	if opts.PageSelector != "" {
@@ -186,17 +239,7 @@ func (p *Parser) ParseFile(ctx context.Context, sourcePath string, opts Options)
 	if output == nil {
 		return nil, errors.New("MatrixFlow product parser returned nil output")
 	}
-	localFileID := stableLocalFileID(absolutePath)
-	for index := range output.Documents {
-		if output.Documents[index].Metadata == nil {
-			output.Documents[index].Metadata = map[string]any{}
-		}
-		output.Documents[index].Metadata["file_id"] = localFileID
-		output.Documents[index].Metadata["raw_file_id"] = localFileID
-		output.Documents[index].Metadata["file_name"] = filepath.Base(absolutePath)
-		output.Documents[index].Metadata["source_path"] = absolutePath
-		output.Documents[index].Metadata["document_index"] = index
-	}
+	annotateDocuments(output.Documents, absolutePath)
 	return &Result{
 		SchemaVersion: SchemaVersion,
 		Engine:        engine,
@@ -214,15 +257,32 @@ func (p *Parser) ParseFile(ctx context.Context, sourcePath string, opts Options)
 	}, nil
 }
 
+func annotateDocuments(documents []types.Document, sourcePath string) {
+	localFileID := stableLocalFileID(sourcePath)
+	for index := range documents {
+		if documents[index].Metadata == nil {
+			documents[index].Metadata = map[string]any{}
+		}
+		documents[index].Metadata["file_id"] = localFileID
+		documents[index].Metadata["raw_file_id"] = localFileID
+		documents[index].Metadata["file_name"] = filepath.Base(sourcePath)
+		documents[index].Metadata["source_path"] = sourcePath
+		documents[index].Metadata["document_index"] = index
+	}
+}
+
 func stableLocalFileID(path string) string {
 	digest := sha256.Sum256([]byte(filepath.Clean(path)))
 	return "local_" + hex.EncodeToString(digest[:12])
 }
 
-func defaultWebOptions(debug bool) map[string]any {
+func defaultWebOptions(debug bool, vlmModel string) map[string]any {
+	if strings.TrimSpace(vlmModel) == "" {
+		vlmModel = "qwen3-vl-plus"
+	}
 	return map[string]any{
 		"enable_parser_pipeline":                 true,
-		"vlm_ocr_model":                          "qwen3-vl-plus",
+		"vlm_ocr_model":                          vlmModel,
 		"enable_cross_page_table_merge":          false,
 		"enable_formula_repair":                  false,
 		"cast_table_as_image":                    false,
@@ -244,13 +304,37 @@ func normalizeFileType(value string) string {
 	return strings.ToLower(strings.TrimPrefix(strings.TrimSpace(value), "."))
 }
 
-func isLocalNativeType(fileType string) bool {
+func isLocalNativeType(fileType string, opts Options) bool {
 	switch fileType {
 	case "txt", "text", "csv", "json", "jsonl", "md", "markdown", "html", "htm", "pdf":
 		return true
+	case "docx", "pptx", "xlsx":
+		return strings.TrimSpace(opts.OpenXML.BaseURL) != ""
+	case "doc", "ppt", "xls":
+		return strings.TrimSpace(opts.OpenXML.BaseURL) != "" && strings.TrimSpace(opts.Soffice.Binary) != ""
 	default:
 		return false
 	}
+}
+
+func configuredPlan(plan ParsePlan, opts Options) ParsePlan {
+	for index := range plan.Dependencies {
+		switch plan.Dependencies[index].Name {
+		case "openxml":
+			if strings.TrimSpace(opts.OpenXML.BaseURL) != "" {
+				plan.Dependencies[index].Status = "online"
+			}
+		case "vlm":
+			if strings.TrimSpace(opts.VLM.BaseURL) != "" && strings.TrimSpace(opts.VLM.APIKey) != "" && strings.TrimSpace(opts.VLM.Model) != "" {
+				plan.Dependencies[index].Status = "online"
+			}
+		case "soffice":
+			if strings.TrimSpace(opts.Soffice.Binary) != "" {
+				plan.Dependencies[index].Status = "online"
+			}
+		}
+	}
+	return plan
 }
 
 func unsupportedLocalTypeError(fileType string) error {
