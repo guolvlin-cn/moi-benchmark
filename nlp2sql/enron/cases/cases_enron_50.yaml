@@ -1,0 +1,325 @@
+# Enron 邮件数据集 NL2SQL 评测集 — 50 题
+# 难度：easy(20) / medium(20) / hard(10)
+# 类别：单表过滤/聚合/排序/JOIN/子查询/复杂查询
+
+database: enron
+tables:
+  - enron_email
+  - enron_emailinfo
+  - enron_emailto
+  - enron_emailxto
+  - enron_emailorig
+  - enron_source
+
+cases:
+  # ============================================================
+  # EASY (20题) — 单表查询、基本过滤、聚合、排序、去重
+  # ============================================================
+
+  - case_id: e01_sender_count
+    difficulty: easy
+    category: aggregation
+    question: 邮件数据集中一共有多少个不同的发件人？
+    gold_sql: SELECT COUNT(DISTINCT "from") FROM enron_emailinfo WHERE "from" != ''
+
+  - case_id: e02_total_emails
+    difficulty: easy
+    category: aggregation
+    question: 总共有多少封邮件？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo
+
+  - case_id: e03_empty_subject
+    difficulty: easy
+    category: filter
+    question: 哪些邮件的主题为空？列出它们的ID和发件人。
+    gold_sql: SELECT id, "from" FROM enron_emailinfo WHERE subject IS NULL OR subject = '' ORDER BY id
+
+  - case_id: e04_reply_emails
+    difficulty: easy
+    category: filter
+    question: 有多少封邮件的主题以"Re:"开头？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE subject LIKE 'Re:%'
+
+  - case_id: e05_phillip_emails
+    difficulty: easy
+    category: filter
+    question: phillip.allen@enron.com 发送了多少封邮件？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE "from" = 'phillip.allen@enron.com'
+
+  - case_id: e06_top10_mailboxes
+    difficulty: easy
+    category: sort
+    question: 哪个邮箱文件夹包含的邮件最多？列出前10个文件夹名及其邮件数量，按数量降序排列。
+    gold_sql: SELECT mailbox, SUM(nnn) AS total FROM enron_email GROUP BY mailbox ORDER BY total DESC LIMIT 10
+
+  - case_id: e07_sent_mail_count
+    difficulty: easy
+    category: filter
+    question: 有多少封邮件保存在 sent 文件夹中？
+    gold_sql: SELECT SUM(nnn) FROM enron_email WHERE mailbox = 'sent'
+
+  - case_id: e08_california_emails
+    difficulty: easy
+    category: text_search
+    question: 有多少封邮件的正文中包含 "California" 这个词？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE body LIKE '%California%'
+
+  - case_id: e09_energy_emails
+    difficulty: easy
+    category: text_search
+    question: 有多少封邮件的正文中提到了 "energy"？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE body LIKE '%energy%'
+
+  - case_id: e10_distinct_mailboxes
+    difficulty: easy
+    category: distinct
+    question: 列出所有不重复的邮箱文件夹名称，按字母顺序排列。
+    gold_sql: SELECT DISTINCT mailbox FROM enron_email ORDER BY mailbox
+
+  - case_id: e11_latest_emails
+    difficulty: easy
+    category: sort
+    question: 列出最近发送的10封邮件的ID、主题和发件人，按日期从近到远排列。
+    gold_sql: SELECT id, subject, "from" FROM enron_emailinfo WHERE date != '' ORDER BY date DESC LIMIT 10
+
+  - case_id: e12_2001_email_count
+    difficulty: easy
+    category: filter
+    question: 2001年一共有多少封邮件？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE date LIKE '%2001%'
+
+  - case_id: e13_enron_mention
+    difficulty: easy
+    category: text_search
+    question: 有多少封邮件的正文中提到了 "Enron"？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE body LIKE '%Enron%'
+
+  - case_id: e14_people_list
+    difficulty: easy
+    category: distinct
+    question: 数据集中有哪些人员（people）？列出所有不重复的人员名。
+    gold_sql: SELECT DISTINCT people FROM enron_email
+
+  - case_id: e15_campbell_mailboxes
+    difficulty: easy
+    category: filter
+    question: campbell-l 有多少个不同的邮箱文件夹？
+    gold_sql: SELECT COUNT(DISTINCT mailbox) FROM enron_email WHERE people = 'campbell-l'
+
+  - case_id: e16_max_mail_count
+    difficulty: easy
+    category: aggregation
+    question: 单个文件夹中包含邮件数量最多的是多少封？
+    gold_sql: SELECT MAX(nnn) FROM enron_email
+
+  - case_id: e17_subject_keyword_meeting
+    difficulty: easy
+    category: text_search
+    question: 有多少封邮件的主题中包含 "meeting" 这个词？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE subject LIKE '%meeting%'
+
+  - case_id: e18_senders_more_than_100
+    difficulty: easy
+    category: groupby
+    question: 哪些发件人发送了超过100封邮件？列出邮箱地址和发送数量，按数量降序排列。
+    gold_sql: SELECT "from", COUNT(*) AS cnt FROM enron_emailinfo WHERE "from" != '' GROUP BY "from" HAVING COUNT(*) > 100 ORDER BY cnt DESC
+
+  - case_id: e19_financial_emails
+    difficulty: easy
+    category: text_search
+    question: 有多少封邮件的正文中提到了 "financial"？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE body LIKE '%financial%'
+
+  - case_id: e20_unique_senders_campbell
+    difficulty: easy
+    category: filter
+    question: campbell-l 这个人的邮件记录中，nnn（邮件数量）的平均值是多少？
+    gold_sql: SELECT AVG(nnn) FROM enron_email WHERE people = 'campbell-l'
+
+  # ============================================================
+  # MEDIUM (20题) — 多表JOIN、GROUP BY+HAVING、子查询、NULL处理
+  # ============================================================
+
+  - case_id: m01_sender_folder_distribution
+    difficulty: medium
+    category: join
+    question: 哪些人发送的邮件最多？列出人员名、邮箱文件夹和邮件数量，按邮件数量降序排列。
+    gold_sql: SELECT e.people, em.mailbox, SUM(em.nnn) AS total FROM enron_email em JOIN enron_email e ON em.id = e.id GROUP BY e.people, em.mailbox ORDER BY total DESC
+
+  - case_id: m02_phillip_recipients
+    difficulty: medium
+    category: join
+    question: 哪些收件人收到来自 phillip.allen@enron.com 的邮件最多？列出收件人邮箱和收到的邮件数量，按数量降序排列，取前10名。
+    gold_sql: SELECT t."to", COUNT(*) AS cnt FROM enron_emailinfo e JOIN enron_emailto t ON e.id = t.id WHERE e."from" = 'phillip.allen@enron.com' GROUP BY t."to" ORDER BY cnt DESC LIMIT 10
+
+  - case_id: m03_california_senders
+    difficulty: medium
+    category: text_search_join
+    question: 哪些发件人在正文中提到 California 的次数最多？列出前5个发件人及其提及次数。
+    gold_sql: SELECT "from", COUNT(*) AS cnt FROM enron_emailinfo WHERE body LIKE '%California%' GROUP BY "from" ORDER BY cnt DESC LIMIT 5
+
+  - case_id: m04_employee_folders
+    difficulty: medium
+    category: join
+    question: 每位员工（xorigin）各有多少个不同的邮件文件夹？列出员工名和文件夹数量。
+    gold_sql: SELECT s.xorigin, COUNT(DISTINCT em.mailbox) AS folder_count FROM enron_email em JOIN enron_source s ON em.id = s.id WHERE s.xorigin IS NOT NULL AND s.xorigin != '' GROUP BY s.xorigin ORDER BY folder_count DESC
+
+  - case_id: m05_avg_recipients_per_email
+    difficulty: medium
+    category: join_aggregation
+    question: 每个发件人的邮件平均有多少个收件人？只列出平均收件人数大于3的发件人，按平均值降序排列。
+    gold_sql: SELECT e."from", COUNT(t."to") * 1.0 / COUNT(DISTINCT e.id) AS avg_recipients FROM enron_emailinfo e JOIN enron_emailto t ON e.id = t.id WHERE e."from" != '' GROUP BY e."from" HAVING avg_recipients > 3 ORDER BY avg_recipients DESC
+
+  - case_id: m06_sent_vs_total
+    difficulty: medium
+    category: subquery
+    question: sent 文件夹中的邮件数量占总邮件数量的百分比是多少？
+    gold_sql: SELECT ROUND(SUM(CASE WHEN mailbox = 'sent' THEN nnn ELSE 0 END) * 100.0 / SUM(nnn), 1) AS pct FROM enron_email
+
+  - case_id: m07_most_common_recipient
+    difficulty: medium
+    category: join_groupby
+    question: 整个数据集中，哪个邮箱地址作为收件人出现的次数最多？一共出现了多少次？
+    gold_sql: SELECT "to", COUNT(*) AS cnt FROM enron_emailto WHERE "to" != '' GROUP BY "to" ORDER BY cnt DESC LIMIT 1
+
+  - case_id: m08_2001_monthly_trend
+    difficulty: medium
+    category: groupby
+    question: 2001年每个月的邮件数量是多少？按月统计，列出发送数量。
+    gold_sql: SELECT SUBSTR(date, 9, 3) AS month, COUNT(*) AS cnt FROM enron_emailinfo WHERE date LIKE '%2001%' AND date != '' GROUP BY month ORDER BY cnt DESC
+
+  - case_id: m09_allen_folder_emails
+    difficulty: medium
+    category: join
+    question: allen-p 这个人的邮件分布在哪些文件夹中？每个文件夹各有多少封邮件？按数量降序排列。
+    gold_sql: SELECT em.mailbox, SUM(em.nnn) AS total FROM enron_email em WHERE em.people = 'allen-p' GROUP BY em.mailbox ORDER BY total DESC
+
+  - case_id: m10_reply_to_phillip
+    difficulty: medium
+    category: join_filter
+    question: 在 phillip.allen@enron.com 收到的回复邮件（主题以Re:开头）中，他最常回复哪些人的邮件？列出原始发件人和回复次数，取前5名。
+    gold_sql: SELECT oe."from" AS original_sender, COUNT(*) AS reply_count FROM enron_emailinfo e JOIN enron_emailorig oe ON e.id = oe.id WHERE e.subject LIKE 'Re:%' AND e."from" = 'phillip.allen@enron.com' GROUP BY oe."from" ORDER BY reply_count DESC LIMIT 5
+
+  - case_id: m11_multi_keyword_body
+    difficulty: medium
+    category: text_search
+    question: 有多少封邮件的正文中同时包含 "Enron" 和 "energy"？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo WHERE body LIKE '%Enron%' AND body LIKE '%energy%'
+
+  - case_id: m12_enron_announcements
+    difficulty: medium
+    category: join_groupby
+    question: enron.announcements@enron.com 发送的邮件被哪些收件人收到的次数最多？列出前5个收件人。
+    gold_sql: SELECT t."to", COUNT(*) AS cnt FROM enron_emailinfo e JOIN enron_emailto t ON e.id = t.id WHERE e."from" = 'enron.announcements@enron.com' GROUP BY t."to" ORDER BY cnt DESC LIMIT 5
+
+  - case_id: m13_source_file_stats
+    difficulty: medium
+    category: join_aggregation
+    question: 每个源文件（xfilename）关联了多少封邮件？列出文件名和邮件数，按邮件数降序排列，取前5名。
+    gold_sql: SELECT xfilename, COUNT(*) AS email_count FROM enron_source GROUP BY xfilename ORDER BY email_count DESC LIMIT 5
+
+  - case_id: m14_empty_body_emails
+    difficulty: medium
+    category: null_handling
+    question: 有多少封邮件的正文（body）为空或NULL？这些邮件是谁发送的？按发件人分组统计数量。
+    gold_sql: SELECT "from", COUNT(*) AS cnt FROM enron_emailinfo WHERE body IS NULL OR body = '' GROUP BY "from" ORDER BY cnt DESC
+
+  - case_id: m15_sender_with_most_recipients
+    difficulty: medium
+    category: join_subquery
+    question: 哪个发件人的邮件总共涉及的不重复收件人数量最多？列出邮箱地址和不同收件人数。
+    gold_sql: SELECT e."from", COUNT(DISTINCT t."to") AS unique_recipients FROM enron_emailinfo e JOIN enron_emailto t ON e.id = t.id WHERE e."from" != '' GROUP BY e."from" ORDER BY unique_recipients DESC LIMIT 1
+
+  - case_id: m16_deleted_items_senders
+    difficulty: medium
+    category: join
+    question: 哪些人在 deleted_items 文件夹中有邮件？列出他们的邮件数量。
+    gold_sql: SELECT e.people, SUM(em.nnn) AS total FROM enron_email em JOIN enron_email e ON em.id = e.id WHERE em.mailbox = 'deleted_items' GROUP BY e.people ORDER BY total DESC
+
+  - case_id: m17_thread_participants
+    difficulty: medium
+    category: join
+    question: 哪些邮件主题中包含 "Re:" 的回复邮件，它们的原始发件人是谁？列出邮件ID、主题和原始发件人。
+    gold_sql: SELECT e.id, e.subject, oe."from" AS original_from FROM enron_emailinfo e JOIN enron_emailorig oe ON e.id = oe.id WHERE e.subject LIKE 'Re:%' ORDER BY e.id LIMIT 20
+
+  - case_id: m18_october_2001_emails
+    difficulty: medium
+    category: filter_join
+    question: 2001年10月发送的邮件中，哪些收件人收到的邮件最多？列出前5名。
+    gold_sql: SELECT t."to", COUNT(*) AS cnt FROM enron_emailinfo e JOIN enron_emailto t ON e.id = t.id WHERE e.date LIKE '%Oct 2001%' GROUP BY t."to" ORDER BY cnt DESC LIMIT 5
+
+  - case_id: m19_larry_inbox_count
+    difficulty: medium
+    category: join
+    question: larry.campbell@enron.com 发送的邮件中，有多少封保存在 inbox 文件夹中？
+    gold_sql: SELECT COUNT(*) FROM enron_emailinfo ei JOIN enron_email em ON ei.id = em.id WHERE ei."from" = 'larry.campbell@enron.com' AND em.mailbox = 'inbox'
+
+  - case_id: m20_top_source_origins
+    difficulty: medium
+    category: groupby
+    question: 哪些来源（xorigin）的邮件最多？列出前5个来源及其邮件数量。
+    gold_sql: SELECT xorigin, COUNT(*) AS cnt FROM enron_source WHERE xorigin IS NOT NULL AND xorigin != '' GROUP BY xorigin ORDER BY cnt DESC LIMIT 5
+
+  # ============================================================
+  # HARD (10题) — 复杂JOIN、嵌套子查询、INTERSECT/EXCEPT、窗口函数
+  # ============================================================
+
+  - case_id: h01_two_way_communication
+    difficulty: hard
+    category: intersect
+    question: 在整个邮件数据集中，有多少个不同的邮箱地址既发送过邮件也收到过邮件？
+    gold_sql: SELECT COUNT(DISTINCT addr) FROM (SELECT DISTINCT "from" AS addr FROM enron_emailinfo WHERE "from" != '' AND "from" IS NOT NULL INTERSECT SELECT DISTINCT "to" AS addr FROM enron_emailto WHERE "to" != '' AND "to" IS NOT NULL)
+
+  - case_id: h02_sender_no_receiver
+    difficulty: hard
+    category: except
+    question: 哪些发件人只发过邮件但没有收到过任何邮件？
+    gold_sql: SELECT DISTINCT "from" FROM enron_emailinfo WHERE "from" != '' AND "from" IS NOT NULL AND "from" NOT IN (SELECT DISTINCT "to" FROM enron_emailto WHERE "to" != '' AND "to" IS NOT NULL)
+
+  - case_id: h03_most_active_email_thread
+    difficulty: hard
+    category: nested_subquery
+    question: 哪个邮件主题被回复的次数最多（即同主题出现次数最多）？列出主题和回复次数，取前3名。
+    gold_sql: SELECT subject, COUNT(*) AS cnt FROM enron_emailinfo WHERE subject != '' AND subject IS NOT NULL GROUP BY subject ORDER BY cnt DESC LIMIT 3
+
+  - case_id: h04_person_email_ratio
+    difficulty: hard
+    category: multi_join
+    question: 对于每个人（people），统计他们发送的邮件占总邮件的百分比，按百分比降序排列。
+    gold_sql: SELECT e.people, COUNT(DISTINCT ei.id) * 100.0 / (SELECT COUNT(*) FROM enron_emailinfo) AS pct FROM enron_email e JOIN enron_emailinfo ei ON e.id = ei.id WHERE e.people IS NOT NULL GROUP BY e.people ORDER BY pct DESC
+
+  - case_id: h05_busiest_day
+    difficulty: hard
+    category: groupby_subquery
+    question: 哪一天发送的邮件最多？列出日期和邮件数量。
+    gold_sql: SELECT SUBSTR(date, 1, INSTR(date, ' 0') - 1) AS day, COUNT(*) AS cnt FROM enron_emailinfo WHERE date != '' AND date IS NOT NULL GROUP BY day ORDER BY cnt DESC LIMIT 1
+
+  - case_id: h06_internal_vs_external
+    difficulty: hard
+    category: case_expression
+    question: 发件人中 enron.com 域名的邮件和外部域名的邮件各有多少？按内外部分类统计。
+    gold_sql: SELECT CASE WHEN "from" LIKE '%@enron.com' THEN 'internal' ELSE 'external' END AS category, COUNT(*) AS cnt FROM enron_emailinfo WHERE "from" != '' AND "from" IS NOT NULL GROUP BY category ORDER BY cnt DESC
+
+  - case_id: h07_sender_receiver_overlap_people
+    difficulty: hard
+    category: multi_join_intersect
+    question: 在三个人（campbell-l, allen-p, badeer-r）中，哪些邮箱地址同时出现在至少两个人的通信中（无论是作为发件人还是收件人）？
+    gold_sql: SELECT addr, COUNT(DISTINCT people) AS person_count FROM (SELECT ei."from" AS addr, e.people FROM enron_emailinfo ei JOIN enron_email e ON ei.id = e.id WHERE ei."from" != '' AND e.people IN ('campbell-l', 'allen-p', 'badeer-r') UNION SELECT t."to" AS addr, e.people FROM enron_emailto t JOIN enron_email e ON t.id = e.id WHERE t."to" != '' AND e.people IN ('campbell-l', 'allen-p', 'badeer-r')) GROUP BY addr HAVING COUNT(DISTINCT people) >= 2 ORDER BY person_count DESC
+
+  - case_id: h08_campbell_allen_shared_recipients
+    difficulty: hard
+    category: intersect
+    question: 哪些收件人同时收到过 larry.campbell@enron.com 和 phillip.allen@enron.com 的邮件？列出这些共同收件人。
+    gold_sql: SELECT DISTINCT t1."to" FROM enron_emailinfo e1 JOIN enron_emailto t1 ON e1.id = t1.id WHERE e1."from" = 'larry.campbell@enron.com' AND t1."to" IN (SELECT DISTINCT t2."to" FROM enron_emailinfo e2 JOIN enron_emailto t2 ON e2.id = t2.id WHERE e2."from" = 'phillip.allen@enron.com') ORDER BY t1."to"
+
+  - case_id: h09_email_chain_depth
+    difficulty: hard
+    category: multi_join
+    question: 对于有原始邮件记录的邮件（enron_emailorig表中有记录），每封原始邮件平均被回复了多少次？
+    gold_sql: SELECT AVG(reply_count) FROM (SELECT oe.id, COUNT(ei.id) AS reply_count FROM enron_emailorig oe LEFT JOIN enron_emailinfo ei ON oe.id = ei.id AND ei.subject LIKE 'Re:%' GROUP BY oe.id)
+
+  - case_id: h10_top_folder_per_person
+    difficulty: hard
+    category: window_function
+    question: 每个人（people）的哪个邮箱文件夹邮件最多？列出人名、文件夹名和邮件数量。
+    gold_sql: SELECT people, mailbox, total FROM (SELECT people, mailbox, SUM(nnn) AS total, ROW_NUMBER() OVER (PARTITION BY people ORDER BY SUM(nnn) DESC) AS rn FROM enron_email GROUP BY people, mailbox) WHERE rn = 1 ORDER BY people
