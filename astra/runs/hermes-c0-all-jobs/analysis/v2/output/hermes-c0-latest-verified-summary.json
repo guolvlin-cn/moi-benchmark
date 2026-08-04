@@ -1,0 +1,825 @@
+{
+  "schema_version": 2,
+  "selection_policy": {
+    "latest_attempt": "Maximum batch directory timestamp YYYY-MM-DD__HH-MM-SS per task_id; result finished_at and path are fallbacks only for malformed batch names.",
+    "excluded_tasks": [
+      "tune-mjcf"
+    ],
+    "included_trials": "Only latest trials with a numeric verifier reward of 0 or 1."
+  },
+  "scope": {
+    "discovered_valid_attempts": 106,
+    "unique_tasks_before_exclusion": 89,
+    "repeated_task_count": 11,
+    "excluded_tasks_present": [
+      "tune-mjcf"
+    ],
+    "excluded_tasks_with_verifier_reward": [],
+    "latest_tasks_without_verifier_reward_after_exclusion": [],
+    "included_latest_verified_tasks": 88
+  },
+  "completion": {
+    "verify_pass": 50,
+    "verify_no_pass": 38,
+    "timeout": 10,
+    "non_timeout": 78,
+    "normal_e2e_pass": 47,
+    "outcome_bucket": {
+      "completed_no_pass": 31,
+      "normal_e2e_pass": 47,
+      "timeout_no_pass": 7,
+      "verifier_pass_after_timeout": 3
+    },
+    "product_terminal_status": {
+      "completed": 78,
+      "timeout": 10
+    },
+    "trajectory_capture_status": {
+      "failed": 9,
+      "saved": 79
+    }
+  },
+  "metrics_by_group": {
+    "all_included": {
+      "n": 88,
+      "time": {
+        "e2e_s": {
+          "n": 88,
+          "sum": 118786.13447200003,
+          "mean": 1349.8424371818185,
+          "median": 811.106779,
+          "p90": 2423.7474661,
+          "min": 102.720353,
+          "max": 15934.248624
+        },
+        "environment_setup_s": {
+          "n": 88,
+          "sum": 147.28042299999996,
+          "mean": 1.6736411704545449,
+          "median": 1.359155,
+          "p90": 2.2526466999999997,
+          "min": 1.143432,
+          "max": 7.690237
+        },
+        "agent_setup_s": {
+          "n": 88,
+          "sum": 532.303421,
+          "mean": 6.048902511363636,
+          "median": 5.2252495,
+          "p90": 7.000504799999998,
+          "min": 4.61949,
+          "max": 21.744774
+        },
+        "agent_execution_s": {
+          "n": 88,
+          "sum": 110544.58988099999,
+          "mean": 1256.188521375,
+          "median": 727.172061,
+          "p90": 2323.7254273999997,
+          "min": 47.710653,
+          "max": 15908.02056
+        },
+        "verifier_s": {
+          "n": 88,
+          "sum": 6423.732322000001,
+          "mean": 72.99695820454546,
+          "median": 28.290958500000002,
+          "p90": 117.7245046999999,
+          "min": 4.225474,
+          "max": 1374.294081
+        },
+        "run_duration_s": {
+          "n": 88,
+          "sum": 110263.97694945335,
+          "mean": 1252.99973806197,
+          "median": 724.393322467804,
+          "p90": 2319.5739268302914,
+          "min": 45.03438353538513,
+          "max": 15905.286302566528
+        }
+      },
+      "tools": {
+        "tool_calls": {
+          "n": 88,
+          "sum": 3101.0,
+          "mean": 35.23863636363637,
+          "median": 20.0,
+          "p90": 90.0,
+          "min": 0.0,
+          "max": 143.0
+        },
+        "tool_calls_failed": {
+          "n": 88,
+          "sum": 275.0,
+          "mean": 3.125,
+          "median": 2.0,
+          "p90": 8.0,
+          "min": 0.0,
+          "max": 14.0
+        },
+        "tool_duration_s": {
+          "n": 88,
+          "sum": 39021.648000000016,
+          "mean": 443.42781818181834,
+          "median": 95.95499999999998,
+          "p90": 979.3313999999999,
+          "min": 0.0,
+          "max": 6454.759000000002
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "missing_after_model_activity": 10,
+          "reported": 76,
+          "suspect_zero_after_model_activity": 2
+        },
+        "usable_reported_trials": 76,
+        "input_tokens": {
+          "n": 76,
+          "sum": 88169676.0,
+          "mean": 1160127.3157894737,
+          "median": 349783.5,
+          "p90": 3361002.5,
+          "min": 15603.0,
+          "max": 7908487.0
+        },
+        "output_tokens": {
+          "n": 76,
+          "sum": 1945545.0,
+          "mean": 25599.276315789473,
+          "median": 13924.5,
+          "p90": 65106.5,
+          "min": 48.0,
+          "max": 202669.0
+        },
+        "total_tokens": {
+          "n": 76,
+          "sum": 90115221.0,
+          "mean": 1185726.5921052631,
+          "median": 378155.0,
+          "p90": 3403995.0,
+          "min": 15651.0,
+          "max": 7933483.0
+        },
+        "source_mismatch_count": 0
+      }
+    },
+    "verify_pass": {
+      "n": 50,
+      "time": {
+        "e2e_s": {
+          "n": 50,
+          "sum": 60884.40400599999,
+          "mean": 1217.6880801199998,
+          "median": 646.916255,
+          "p90": 1907.2620313000007,
+          "min": 102.720353,
+          "max": 15934.248624
+        },
+        "environment_setup_s": {
+          "n": 50,
+          "sum": 73.20003499999999,
+          "mean": 1.4640006999999997,
+          "median": 1.3411054999999998,
+          "p90": 2.1736856999999996,
+          "min": 1.143432,
+          "max": 2.416552
+        },
+        "agent_setup_s": {
+          "n": 50,
+          "sum": 281.63564400000007,
+          "mean": 5.6327128800000015,
+          "median": 5.139832999999999,
+          "p90": 6.5481789,
+          "min": 4.61949,
+          "max": 14.125622
+        },
+        "agent_execution_s": {
+          "n": 50,
+          "sum": 55716.940174,
+          "mean": 1114.33880348,
+          "median": 592.197751,
+          "p90": 1846.2677032000006,
+          "min": 47.710653,
+          "max": 15908.02056
+        },
+        "verifier_s": {
+          "n": 50,
+          "sum": 4183.012815,
+          "mean": 83.6602563,
+          "median": 29.241977499999997,
+          "p90": 120.74483610000021,
+          "min": 4.225474,
+          "max": 1374.294081
+        },
+        "run_duration_s": {
+          "n": 50,
+          "sum": 55570.983755111694,
+          "mean": 1111.419675102234,
+          "median": 589.1909170150757,
+          "p90": 1843.4245213747029,
+          "min": 45.03438353538513,
+          "max": 15905.286302566528
+        }
+      },
+      "tools": {
+        "tool_calls": {
+          "n": 50,
+          "sum": 1489.0,
+          "mean": 29.78,
+          "median": 18.0,
+          "p90": 72.30000000000001,
+          "min": 3.0,
+          "max": 132.0
+        },
+        "tool_calls_failed": {
+          "n": 50,
+          "sum": 143.0,
+          "mean": 2.86,
+          "median": 2.0,
+          "p90": 7.100000000000001,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tool_duration_s": {
+          "n": 50,
+          "sum": 14474.153999999997,
+          "mean": 289.4830799999999,
+          "median": 76.734,
+          "p90": 736.2795000000002,
+          "min": 2.737,
+          "max": 2739.395000000001
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "missing_after_model_activity": 3,
+          "reported": 47
+        },
+        "usable_reported_trials": 47,
+        "input_tokens": {
+          "n": 47,
+          "sum": 41884413.0,
+          "mean": 891157.7234042553,
+          "median": 334948.0,
+          "p90": 3265157.4,
+          "min": 69266.0,
+          "max": 7230656.0
+        },
+        "output_tokens": {
+          "n": 47,
+          "sum": 1305362.0,
+          "mean": 27773.659574468085,
+          "median": 18625.0,
+          "p90": 61877.399999999994,
+          "min": 505.0,
+          "max": 202669.0
+        },
+        "total_tokens": {
+          "n": 47,
+          "sum": 43189775.0,
+          "mean": 918931.3829787234,
+          "median": 363077.0,
+          "p90": 3296337.0,
+          "min": 83081.0,
+          "max": 7433325.0
+        },
+        "source_mismatch_count": 0
+      }
+    },
+    "verify_no_pass": {
+      "n": 38,
+      "time": {
+        "e2e_s": {
+          "n": 38,
+          "sum": 57901.730466,
+          "mean": 1523.7297491052632,
+          "median": 1248.1342325,
+          "p90": 2800.9656059000054,
+          "min": 122.695403,
+          "max": 7294.599601
+        },
+        "environment_setup_s": {
+          "n": 38,
+          "sum": 74.08038800000001,
+          "mean": 1.9494838947368425,
+          "median": 1.4206735,
+          "p90": 2.9657479000000024,
+          "min": 1.176961,
+          "max": 7.690237
+        },
+        "agent_setup_s": {
+          "n": 38,
+          "sum": 250.667777,
+          "mean": 6.596520447368421,
+          "median": 5.450818,
+          "p90": 8.428676200000005,
+          "min": 4.689481,
+          "max": 21.744774
+        },
+        "agent_execution_s": {
+          "n": 38,
+          "sum": 54827.64970699999,
+          "mean": 1442.8328870263156,
+          "median": 1154.1684785,
+          "p90": 2758.933012500005,
+          "min": 95.627764,
+          "max": 7216.424715
+        },
+        "verifier_s": {
+          "n": 38,
+          "sum": 2240.7195069999993,
+          "mean": 58.966302815789454,
+          "median": 24.9330125,
+          "p90": 99.90452770000027,
+          "min": 7.0392,
+          "max": 571.276028
+        },
+        "run_duration_s": {
+          "n": 38,
+          "sum": 54692.99319434166,
+          "mean": 1439.2892945879385,
+          "median": 1151.2417410612106,
+          "p90": 2754.3454424619727,
+          "min": 92.95816707611084,
+          "max": 7210.916226863861
+        }
+      },
+      "tools": {
+        "tool_calls": {
+          "n": 38,
+          "sum": 1612.0,
+          "mean": 42.421052631578945,
+          "median": 27.5,
+          "p90": 105.60000000000001,
+          "min": 0.0,
+          "max": 143.0
+        },
+        "tool_calls_failed": {
+          "n": 38,
+          "sum": 132.0,
+          "mean": 3.473684210526316,
+          "median": 2.0,
+          "p90": 8.300000000000004,
+          "min": 0.0,
+          "max": 14.0
+        },
+        "tool_duration_s": {
+          "n": 38,
+          "sum": 24547.494000000006,
+          "mean": 645.9866842105265,
+          "median": 110.65699999999998,
+          "p90": 1563.7207000000071,
+          "min": 0.0,
+          "max": 6454.759000000002
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "missing_after_model_activity": 7,
+          "reported": 29,
+          "suspect_zero_after_model_activity": 2
+        },
+        "usable_reported_trials": 29,
+        "input_tokens": {
+          "n": 29,
+          "sum": 46285263.0,
+          "mean": 1596043.551724138,
+          "median": 642791.0,
+          "p90": 4807661.199999998,
+          "min": 15603.0,
+          "max": 7908487.0
+        },
+        "output_tokens": {
+          "n": 29,
+          "sum": 640183.0,
+          "mean": 22075.275862068964,
+          "median": 10446.0,
+          "p90": 69823.2,
+          "min": 48.0,
+          "max": 152539.0
+        },
+        "total_tokens": {
+          "n": 29,
+          "sum": 46925446.0,
+          "mean": 1618118.8275862068,
+          "median": 654168.0,
+          "p90": 4884011.199999998,
+          "min": 15651.0,
+          "max": 7933483.0
+        },
+        "source_mismatch_count": 0
+      }
+    },
+    "timeout": {
+      "n": 10,
+      "time": {
+        "e2e_s": {
+          "n": 10,
+          "sum": 44655.72752400001,
+          "mean": 4465.572752400001,
+          "median": 2754.996541,
+          "p90": 8158.564503299996,
+          "min": 1841.295264,
+          "max": 15934.248624
+        },
+        "environment_setup_s": {
+          "n": 10,
+          "sum": 16.664493,
+          "mean": 1.6664493,
+          "median": 1.5820645,
+          "p90": 1.9911633999999996,
+          "min": 1.229248,
+          "max": 2.794147
+        },
+        "agent_setup_s": {
+          "n": 10,
+          "sum": 54.087542,
+          "mean": 5.4087542,
+          "median": 5.10547,
+          "p90": 6.5156991,
+          "min": 4.682437,
+          "max": 6.721899
+        },
+        "agent_execution_s": {
+          "n": 10,
+          "sum": 44222.545210000004,
+          "mean": 4422.254521000001,
+          "median": 2709.4479595,
+          "p90": 8085.584299499997,
+          "min": 1812.810204,
+          "max": 15908.02056
+        },
+        "verifier_s": {
+          "n": 10,
+          "sum": 227.297608,
+          "mean": 22.7297608,
+          "median": 21.245554,
+          "p90": 36.659534599999986,
+          "min": 7.227774,
+          "max": 56.78534
+        },
+        "run_duration_s": {
+          "n": 10,
+          "sum": 44188.75425028801,
+          "mean": 4418.875425028801,
+          "median": 2705.938765525818,
+          "p90": 8080.353234434125,
+          "min": 1809.9877247810364,
+          "max": 15905.286302566528
+        }
+      },
+      "tools": {
+        "tool_calls": {
+          "n": 10,
+          "sum": 651.0,
+          "mean": 65.1,
+          "median": 65.0,
+          "p90": 95.29999999999998,
+          "min": 21.0,
+          "max": 143.0
+        },
+        "tool_calls_failed": {
+          "n": 10,
+          "sum": 52.0,
+          "mean": 5.2,
+          "median": 5.0,
+          "p90": 7.499999999999998,
+          "min": 0.0,
+          "max": 12.0
+        },
+        "tool_duration_s": {
+          "n": 10,
+          "sum": 18024.385000000002,
+          "mean": 1802.4385000000002,
+          "median": 919.9185000000001,
+          "p90": 4771.003,
+          "min": 52.929,
+          "max": 6454.759000000002
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "missing_after_model_activity": 10
+        },
+        "usable_reported_trials": 0,
+        "input_tokens": {
+          "n": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "min": null,
+          "max": null
+        },
+        "output_tokens": {
+          "n": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "min": null,
+          "max": null
+        },
+        "total_tokens": {
+          "n": 0,
+          "sum": null,
+          "mean": null,
+          "median": null,
+          "p90": null,
+          "min": null,
+          "max": null
+        },
+        "source_mismatch_count": 0
+      }
+    },
+    "non_timeout": {
+      "n": 78,
+      "time": {
+        "e2e_s": {
+          "n": 78,
+          "sum": 74130.40694799999,
+          "mean": 950.3898326666665,
+          "median": 744.9258769999999,
+          "p90": 1878.039082199999,
+          "min": 102.720353,
+          "max": 4598.047229
+        },
+        "environment_setup_s": {
+          "n": 78,
+          "sum": 130.61592999999993,
+          "mean": 1.6745632051282042,
+          "median": 1.3421075,
+          "p90": 2.2526466999999997,
+          "min": 1.143432,
+          "max": 7.690237
+        },
+        "agent_setup_s": {
+          "n": 78,
+          "sum": 478.21587900000003,
+          "mean": 6.1309728076923085,
+          "median": 5.2322665,
+          "p90": 7.653426199999998,
+          "min": 4.61949,
+          "max": 21.744774
+        },
+        "agent_execution_s": {
+          "n": 78,
+          "sum": 66322.04467100001,
+          "mean": 850.2826239871796,
+          "median": 672.28927,
+          "p90": 1804.937220999999,
+          "min": 47.710653,
+          "max": 4029.988712
+        },
+        "verifier_s": {
+          "n": 78,
+          "sum": 6196.434714000002,
+          "mean": 79.44147069230772,
+          "median": 29.072829,
+          "p90": 175.74998459999972,
+          "min": 4.225474,
+          "max": 1374.294081
+        },
+        "run_duration_s": {
+          "n": 78,
+          "sum": 66075.22269916534,
+          "mean": 847.118239732889,
+          "median": 669.282518863678,
+          "p90": 1801.371716618537,
+          "min": 45.03438353538513,
+          "max": 4026.4761703014374
+        }
+      },
+      "tools": {
+        "tool_calls": {
+          "n": 78,
+          "sum": 2450.0,
+          "mean": 31.41025641025641,
+          "median": 18.0,
+          "p90": 89.3,
+          "min": 0.0,
+          "max": 132.0
+        },
+        "tool_calls_failed": {
+          "n": 78,
+          "sum": 223.0,
+          "mean": 2.858974358974359,
+          "median": 2.0,
+          "p90": 8.0,
+          "min": 0.0,
+          "max": 14.0
+        },
+        "tool_duration_s": {
+          "n": 78,
+          "sum": 20997.263000000003,
+          "mean": 269.1956794871795,
+          "median": 64.071,
+          "p90": 667.5343999999999,
+          "min": 0.0,
+          "max": 3551.007000000001
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "reported": 76,
+          "suspect_zero_after_model_activity": 2
+        },
+        "usable_reported_trials": 76,
+        "input_tokens": {
+          "n": 76,
+          "sum": 88169676.0,
+          "mean": 1160127.3157894737,
+          "median": 349783.5,
+          "p90": 3361002.5,
+          "min": 15603.0,
+          "max": 7908487.0
+        },
+        "output_tokens": {
+          "n": 76,
+          "sum": 1945545.0,
+          "mean": 25599.276315789473,
+          "median": 13924.5,
+          "p90": 65106.5,
+          "min": 48.0,
+          "max": 202669.0
+        },
+        "total_tokens": {
+          "n": 76,
+          "sum": 90115221.0,
+          "mean": 1185726.5921052631,
+          "median": 378155.0,
+          "p90": 3403995.0,
+          "min": 15651.0,
+          "max": 7933483.0
+        },
+        "source_mismatch_count": 0
+      }
+    },
+    "normal_e2e_pass": {
+      "n": 47,
+      "time": {
+        "e2e_s": {
+          "n": 47,
+          "sum": 39432.47834000001,
+          "mean": 838.988900851064,
+          "median": 604.616546,
+          "p90": 1495.3325327999999,
+          "min": 102.720353,
+          "max": 4598.047229
+        },
+        "environment_setup_s": {
+          "n": 47,
+          "sum": 68.750693,
+          "mean": 1.4627807021276595,
+          "median": 1.342029,
+          "p90": 2.1740328,
+          "min": 1.143432,
+          "max": 2.416552
+        },
+        "agent_setup_s": {
+          "n": 47,
+          "sum": 266.43727700000005,
+          "mean": 5.6688782340425545,
+          "median": 5.141088,
+          "p90": 6.6043506,
+          "min": 4.61949,
+          "max": 14.125622
+        },
+        "agent_execution_s": {
+          "n": 47,
+          "sum": 34383.226685,
+          "mean": 731.5580145744681,
+          "median": 536.628207,
+          "p90": 1303.8771112,
+          "min": 47.710653,
+          "max": 3557.791733
+        },
+        "verifier_s": {
+          "n": 47,
+          "sum": 4121.605227,
+          "mean": 87.69372823404255,
+          "median": 29.818685,
+          "p90": 163.7043203999998,
+          "min": 4.225474,
+          "max": 1374.294081
+        },
+        "run_duration_s": {
+          "n": 47,
+          "sum": 34245.55722594261,
+          "mean": 728.6288771477151,
+          "median": 533.8995175361633,
+          "p90": 1300.7034325599668,
+          "min": 45.03438353538513,
+          "max": 3554.9655027389526
+        }
+      },
+      "tools": {
+        "tool_calls": {
+          "n": 47,
+          "sum": 1284.0,
+          "mean": 27.319148936170212,
+          "median": 18.0,
+          "p90": 65.99999999999999,
+          "min": 3.0,
+          "max": 132.0
+        },
+        "tool_calls_failed": {
+          "n": 47,
+          "sum": 132.0,
+          "mean": 2.8085106382978724,
+          "median": 2.0,
+          "p90": 7.399999999999999,
+          "min": 0.0,
+          "max": 10.0
+        },
+        "tool_duration_s": {
+          "n": 47,
+          "sum": 12376.814999999997,
+          "mean": 263.33648936170204,
+          "median": 56.854,
+          "p90": 673.5551999999999,
+          "min": 2.737,
+          "max": 2739.395000000001
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "reported": 47
+        },
+        "usable_reported_trials": 47,
+        "input_tokens": {
+          "n": 47,
+          "sum": 41884413.0,
+          "mean": 891157.7234042553,
+          "median": 334948.0,
+          "p90": 3265157.4,
+          "min": 69266.0,
+          "max": 7230656.0
+        },
+        "output_tokens": {
+          "n": 47,
+          "sum": 1305362.0,
+          "mean": 27773.659574468085,
+          "median": 18625.0,
+          "p90": 61877.399999999994,
+          "min": 505.0,
+          "max": 202669.0
+        },
+        "total_tokens": {
+          "n": 47,
+          "sum": 43189775.0,
+          "mean": 918931.3829787234,
+          "median": 363077.0,
+          "p90": 3296337.0,
+          "min": 83081.0,
+          "max": 7433325.0
+        },
+        "source_mismatch_count": 0
+      }
+    }
+  },
+  "tool_breakdown": {
+    "terminal": 2124,
+    "write_file": 213,
+    "read_file": 204,
+    "vision_analyze": 170,
+    "process": 132,
+    "patch": 90,
+    "todo": 55,
+    "search_files": 48,
+    "execute_code": 39,
+    "browser_snapshot": 6,
+    "browser_navigate": 5,
+    "browser_vision": 4,
+    "browser_click": 4,
+    "skill_view": 2,
+    "browser_console": 2,
+    "browser_type": 1,
+    "delegate_task": 1,
+    "skills_list": 1
+  },
+  "failed_tool_breakdown": {
+    "terminal": 214,
+    "execute_code": 39,
+    "vision_analyze": 9,
+    "browser_vision": 4,
+    "write_file": 4,
+    "read_file": 3,
+    "search_files": 1,
+    "patch": 1
+  },
+  "token_definition": {
+    "canonical_source": "hermes-run.json.usage, cross-checked against result.json agent_result n_input_tokens/n_output_tokens when both are present",
+    "total_formula": "token_total = token_input + token_output only when both terminal usage fields are present",
+    "not_used_as_total": "hermes-session.jsonl input_tokens/cache fields are retained only as activity evidence because their values do not consistently match terminal runner aggregates",
+    "excluded_from_token_totals": "missing usage and 0/0 records with observed model activity are not interpreted as zero-cost calls",
+    "cost_usd": "No aggregate USD cost is produced when cost_usd is unavailable; token counts are not converted to cost"
+  },
+  "limitations": [
+    "This is an exploratory C0 snapshot: formal_score_eligible and lifecycle trigger fields are not a validity gate for ordinary verifier-based baseline reporting.",
+    "Timeout is reported separately from verifier outcome. It is retained as an observed task outcome and is not automatically recategorized as infrastructure failure.",
+    "CPU, RAM, GPU, disk, network bytes, and provider billing are not present in the source artifacts and are intentionally not estimated.",
+    "Gateway balance-error line counts are diagnostics from logs, not a count of provider requests or a causal label for the final task outcome."
+  ]
+}

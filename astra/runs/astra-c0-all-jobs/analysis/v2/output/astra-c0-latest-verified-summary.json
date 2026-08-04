@@ -1,0 +1,2715 @@
+{
+  "schema_version": 4,
+  "generated_at": "2026-08-04T03:53:06Z",
+  "input_roots": [
+    "/Users/chenyuwei/Documents/MOI benchmark/work/astra-c0-all-jobs",
+    "/Users/chenyuwei/Documents/MOI benchmark/work/astra-c0-rerun-from-scratch-33/jobs"
+  ],
+  "selection_policy": {
+    "order": [
+      "discover all valid attempts across every input root",
+      "select one deterministic latest attempt per task_id",
+      "exclude configured task ids",
+      "include only latest attempts whose verifier reward is numeric 0 or 1"
+    ],
+    "latest_key": "nearest batch directory timestamp YYYY-MM-DD__HH-MM-SS, then result.started_at, result.finished_at, and absolute result path",
+    "no_verified_fallback": "If the latest attempt has no numeric reward, the task is excluded; an older verified attempt is never substituted.",
+    "excluded_tasks": [
+      "tune-mjcf"
+    ]
+  },
+  "scope": {
+    "discovered_result_files": 154,
+    "discovered_valid_attempts": 121,
+    "unique_tasks_before_exclusion": 89,
+    "repeated_task_count": 32,
+    "repeated_attempt_excess": 32,
+    "excluded_tasks_present": [
+      "tune-mjcf"
+    ],
+    "excluded_tasks_with_numeric_verifier": [
+      "tune-mjcf"
+    ],
+    "latest_without_numeric_verifier_after_exclusion": [
+      {
+        "task_id": "torch-tensor-parallelism",
+        "trial_path": "/Users/chenyuwei/Documents/MOI benchmark/work/astra-c0-rerun-from-scratch-33/jobs/2026-08-03__16-52-58/torch-tensor-parallelism__dptG8QM",
+        "finished_at": "2026-08-03T09:45:55.756365Z"
+      },
+      {
+        "task_id": "train-fasttext",
+        "trial_path": "/Users/chenyuwei/Documents/MOI benchmark/work/astra-c0-rerun-from-scratch-33/jobs/2026-08-03__13-15-00/train-fasttext__DmjqdTq",
+        "finished_at": "2026-08-03T07:19:06.582581Z"
+      }
+    ],
+    "included_latest_verified_tasks": 86
+  },
+  "completion": {
+    "verify_pass": 44,
+    "verify_no_pass": 42,
+    "verify_pass_rate": 0.5116279069767442,
+    "timeout": 37,
+    "non_timeout": 49,
+    "timeout_rate": 0.43023255813953487,
+    "timeout_observed": 34,
+    "timeout_inferred": 3,
+    "controller_deadline_suspected": 3,
+    "timeout_or_deadline_suspected": 37,
+    "neither_timeout_nor_deadline_suspected": 49,
+    "timeout_type": {
+      "controller_deadline_suspected": 3,
+      "llm_request_timeout": 34
+    },
+    "verify_by_timeout": {
+      "pass_timeout": 3,
+      "pass_non_timeout": 41,
+      "no_pass_timeout": 34,
+      "no_pass_non_timeout": 8
+    },
+    "normal_e2e_pass": 36,
+    "clean_e2e_pass": 35,
+    "harbor_exception": 0,
+    "outcome_bucket": {
+      "completed_no_pass": 6,
+      "deadline_suspected_no_pass": 2,
+      "failed_no_pass": 2,
+      "normal_e2e_pass": 35,
+      "timeout_no_pass": 32,
+      "verifier_pass_after_timeout": 2,
+      "verifier_pass_with_abnormal_lifecycle": 6,
+      "verifier_pass_with_deadline_suspected": 1
+    },
+    "product_terminal_status": {
+      "adapter_infra_error": 11,
+      "completed": 45,
+      "failed": 30
+    },
+    "trajectory_capture_status": {
+      "complete": 40,
+      "partial": 46
+    },
+    "formal_score_eligible": {
+      "False": 56,
+      "True": 30
+    }
+  },
+  "metrics_by_group": {
+    "all_included": {
+      "n": 86,
+      "time": {
+        "e2e_s": {
+          "n": 86,
+          "sum": 146675.70320699998,
+          "mean": 1705.5314326395346,
+          "median": 1008.722669,
+          "p90": 3616.2362350000003,
+          "min": 75.881797,
+          "max": 15157.057219
+        },
+        "environment_setup_s": {
+          "n": 86,
+          "sum": 6319.30612,
+          "mean": 73.48030372093024,
+          "median": 5.8205975,
+          "p90": 20.3838905,
+          "min": 1.063857,
+          "max": 5632.835338
+        },
+        "agent_setup_s": {
+          "n": 86,
+          "sum": 1863.5681260000003,
+          "mean": 21.669396813953494,
+          "median": 3.955466,
+          "p90": 74.7166545,
+          "min": 2.600833,
+          "max": 99.572653
+        },
+        "agent_execution_s": {
+          "n": 86,
+          "sum": 116250.32407100002,
+          "mean": 1351.7479543139539,
+          "median": 903.241537,
+          "p90": 2971.3403630000003,
+          "min": 43.137264,
+          "max": 6158.056407
+        },
+        "verifier_s": {
+          "n": 86,
+          "sum": 20222.487161999994,
+          "mean": 235.14519955813947,
+          "median": 28.416736999999998,
+          "p90": 144.598647,
+          "min": 4.903303,
+          "max": 14639.924272
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 27,
+          "sum": 30987.070999999996,
+          "mean": 1147.6692962962961,
+          "median": 1130.8980000000001,
+          "p90": 2181.103600000001,
+          "min": 43.047,
+          "max": 2667.241
+        },
+        "llm_call_duration_sum_s": {
+          "n": 84,
+          "sum": 56620.57599999998,
+          "mean": 674.054476190476,
+          "median": 507.32450000000006,
+          "p90": 1626.944600000001,
+          "min": 7.594,
+          "max": 2546.999
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 86,
+          "sum": 1674.0,
+          "mean": 19.46511627906977,
+          "median": 15.5,
+          "p90": 40.5,
+          "min": 2.0,
+          "max": 60.0
+        },
+        "tool_calls_started": {
+          "n": 86,
+          "sum": 2253.0,
+          "mean": 26.197674418604652,
+          "median": 18.0,
+          "p90": 59.0,
+          "min": 1.0,
+          "max": 85.0
+        },
+        "tool_calls_completed": {
+          "n": 86,
+          "sum": 2096.0,
+          "mean": 24.372093023255815,
+          "median": 18.0,
+          "p90": 54.0,
+          "min": 1.0,
+          "max": 80.0
+        },
+        "tool_calls_failed": {
+          "n": 86,
+          "sum": 155.0,
+          "mean": 1.802325581395349,
+          "median": 1.0,
+          "p90": 5.0,
+          "min": 0.0,
+          "max": 24.0
+        },
+        "tool_calls_skipped": {
+          "n": 86,
+          "sum": 2.0,
+          "mean": 0.023255813953488372,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 86,
+          "sum": 2253.0,
+          "mean": 26.197674418604652,
+          "median": 18.0,
+          "p90": 59.0,
+          "min": 1.0,
+          "max": 85.0
+        },
+        "tool_calls_unpaired": {
+          "n": 86,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 86,
+          "sum": 16653.749999999996,
+          "mean": 193.64825581395345,
+          "median": 9.9265,
+          "p90": 306.2205,
+          "min": 0.034,
+          "max": 3518.569
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_no_trace_crosscheck": 1,
+          "complete_terminal_no_trace": 1,
+          "server_reconciled": 9,
+          "session_input_only": 1,
+          "session_reconciled": 74
+        },
+        "metrics": {
+          "token_input": {
+            "n": 86,
+            "sum": 31119204.0,
+            "mean": 361851.20930232556,
+            "median": 213510.5,
+            "p90": 928243.0,
+            "min": 9329.0,
+            "max": 2107163.0
+          },
+          "token_fresh_input": {
+            "n": 85,
+            "sum": 4555848.0,
+            "mean": 53598.211764705884,
+            "median": 37410.0,
+            "p90": 117777.8,
+            "min": 1201.0,
+            "max": 182043.0
+          },
+          "token_cache_read": {
+            "n": 85,
+            "sum": 26067392.0,
+            "mean": 306675.2,
+            "median": 169856.0,
+            "p90": 841100.8000000009,
+            "min": 8128.0,
+            "max": 1925120.0
+          },
+          "token_cache_creation": {
+            "n": 85,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 85,
+            "sum": 3515722.0,
+            "mean": 41361.43529411765,
+            "median": 25396.0,
+            "p90": 99112.40000000005,
+            "min": 209.0,
+            "max": 185183.0
+          },
+          "token_total": {
+            "n": 85,
+            "sum": 34138962.0,
+            "mean": 401634.8470588235,
+            "median": 238214.0,
+            "p90": 1030025.8000000011,
+            "min": 14226.0,
+            "max": 2223554.0
+          },
+          "token_known_minimum": {
+            "n": 86,
+            "sum": 34634926.0,
+            "mean": 402731.6976744186,
+            "median": 241113.0,
+            "p90": 1016953.5,
+            "min": 14226.0,
+            "max": 2223554.0
+          }
+        },
+        "complete_total_coverage": 85,
+        "input_coverage": 86,
+        "detail_coverage": 85,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "verify_pass": {
+      "n": 44,
+      "time": {
+        "e2e_s": {
+          "n": 44,
+          "sum": 72743.87183100003,
+          "mean": 1653.2698143409098,
+          "median": 718.0468985,
+          "p90": 2955.7020601000004,
+          "min": 75.881797,
+          "max": 15157.057219
+        },
+        "environment_setup_s": {
+          "n": 44,
+          "sum": 5935.329834000003,
+          "mean": 134.89385986363644,
+          "median": 5.6653815000000005,
+          "p90": 16.535205700000006,
+          "min": 1.102385,
+          "max": 5632.835338
+        },
+        "agent_setup_s": {
+          "n": 44,
+          "sum": 820.7733119999999,
+          "mean": 18.653938909090908,
+          "median": 3.7089285,
+          "p90": 69.14459270000002,
+          "min": 2.600833,
+          "max": 87.594723
+        },
+        "agent_execution_s": {
+          "n": 44,
+          "sum": 47861.466656,
+          "mean": 1087.7606058181818,
+          "median": 620.7957395,
+          "p90": 2753.0463797,
+          "min": 43.137264,
+          "max": 6158.056407
+        },
+        "verifier_s": {
+          "n": 44,
+          "sum": 17560.785847,
+          "mean": 399.10876924999997,
+          "median": 23.713914000000003,
+          "p90": 90.6309516000001,
+          "min": 4.903303,
+          "max": 14639.924272
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 12,
+          "sum": 11418.099,
+          "mean": 951.50825,
+          "median": 755.242,
+          "p90": 1695.6598,
+          "min": 43.047,
+          "max": 2667.241
+        },
+        "llm_call_duration_sum_s": {
+          "n": 43,
+          "sum": 28506.185,
+          "mean": 662.934534883721,
+          "median": 436.96199999999993,
+          "p90": 1724.7166000000016,
+          "min": 38.468,
+          "max": 2546.999
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 44,
+          "sum": 845.0,
+          "mean": 19.204545454545453,
+          "median": 15.0,
+          "p90": 40.10000000000001,
+          "min": 4.0,
+          "max": 60.0
+        },
+        "tool_calls_started": {
+          "n": 44,
+          "sum": 1091.0,
+          "mean": 24.795454545454547,
+          "median": 16.5,
+          "p90": 58.20000000000002,
+          "min": 4.0,
+          "max": 84.0
+        },
+        "tool_calls_completed": {
+          "n": 44,
+          "sum": 1003.0,
+          "mean": 22.795454545454547,
+          "median": 15.0,
+          "p90": 50.7,
+          "min": 4.0,
+          "max": 78.0
+        },
+        "tool_calls_failed": {
+          "n": 44,
+          "sum": 87.0,
+          "mean": 1.9772727272727273,
+          "median": 1.0,
+          "p90": 4.700000000000003,
+          "min": 0.0,
+          "max": 24.0
+        },
+        "tool_calls_skipped": {
+          "n": 44,
+          "sum": 1.0,
+          "mean": 0.022727272727272728,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 44,
+          "sum": 1091.0,
+          "mean": 24.795454545454547,
+          "median": 16.5,
+          "p90": 58.20000000000002,
+          "min": 4.0,
+          "max": 84.0
+        },
+        "tool_calls_unpaired": {
+          "n": 44,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 44,
+          "sum": 11243.536999999997,
+          "mean": 255.53493181818175,
+          "median": 15.869000000000002,
+          "p90": 308.6695,
+          "min": 0.052,
+          "max": 3518.569
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_terminal_no_trace": 1,
+          "server_reconciled": 2,
+          "session_input_only": 1,
+          "session_reconciled": 40
+        },
+        "metrics": {
+          "token_input": {
+            "n": 44,
+            "sum": 15753002.0,
+            "mean": 358022.7727272727,
+            "median": 206751.0,
+            "p90": 949358.2000000003,
+            "min": 38415.0,
+            "max": 2107163.0
+          },
+          "token_fresh_input": {
+            "n": 43,
+            "sum": 2168270.0,
+            "mean": 50424.88372093023,
+            "median": 33250.0,
+            "p90": 112379.8,
+            "min": 7678.0,
+            "max": 182043.0
+          },
+          "token_cache_read": {
+            "n": 43,
+            "sum": 13088768.0,
+            "mean": 304389.9534883721,
+            "median": 161664.0,
+            "p90": 865100.8000000004,
+            "min": 25088.0,
+            "max": 1925120.0
+          },
+          "token_cache_creation": {
+            "n": 43,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 43,
+            "sum": 1821360.0,
+            "mean": 42357.20930232558,
+            "median": 30154.0,
+            "p90": 96505.8000000001,
+            "min": 919.0,
+            "max": 185183.0
+          },
+          "token_total": {
+            "n": 43,
+            "sum": 17078398.0,
+            "mean": 397172.0465116279,
+            "median": 227753.0,
+            "p90": 1056170.4000000006,
+            "min": 47660.0,
+            "max": 2223554.0
+          },
+          "token_known_minimum": {
+            "n": 44,
+            "sum": 17574362.0,
+            "mean": 399417.3181818182,
+            "median": 232983.5,
+            "p90": 1043098.1000000003,
+            "min": 47660.0,
+            "max": 2223554.0
+          }
+        },
+        "complete_total_coverage": 43,
+        "input_coverage": 44,
+        "detail_coverage": 43,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "verify_no_pass": {
+      "n": 42,
+      "time": {
+        "e2e_s": {
+          "n": 42,
+          "sum": 73931.83137599999,
+          "mean": 1760.281699428571,
+          "median": 1493.868903,
+          "p90": 3715.081659,
+          "min": 238.308585,
+          "max": 5146.776169
+        },
+        "environment_setup_s": {
+          "n": 42,
+          "sum": 383.9762859999999,
+          "mean": 9.142292523809521,
+          "median": 5.9725269999999995,
+          "p90": 23.965684799999995,
+          "min": 1.063857,
+          "max": 57.231725
+        },
+        "agent_setup_s": {
+          "n": 42,
+          "sum": 1042.794814,
+          "mean": 24.828447952380955,
+          "median": 4.5917855,
+          "p90": 75.0206553,
+          "min": 2.657709,
+          "max": 99.572653
+        },
+        "agent_execution_s": {
+          "n": 42,
+          "sum": 68388.85741499998,
+          "mean": 1628.3061289285708,
+          "median": 1417.3096165,
+          "p90": 3602.370596399999,
+          "min": 191.912692,
+          "max": 4686.957328
+        },
+        "verifier_s": {
+          "n": 42,
+          "sum": 2661.701315,
+          "mean": 63.373840833333325,
+          "median": 35.494298,
+          "p90": 157.11356139999995,
+          "min": 9.190976,
+          "max": 371.860015
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 15,
+          "sum": 19568.971999999998,
+          "mean": 1304.5981333333332,
+          "median": 1389.113,
+          "p90": 2277.2003999999997,
+          "min": 188.986,
+          "max": 2663.003
+        },
+        "llm_call_duration_sum_s": {
+          "n": 41,
+          "sum": 28114.391000000003,
+          "mean": 685.7168536585367,
+          "median": 535.02,
+          "p90": 1464.385,
+          "min": 7.594,
+          "max": 2012.6430000000003
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 42,
+          "sum": 829.0,
+          "mean": 19.738095238095237,
+          "median": 17.5,
+          "p90": 39.49999999999999,
+          "min": 2.0,
+          "max": 56.0
+        },
+        "tool_calls_started": {
+          "n": 42,
+          "sum": 1162.0,
+          "mean": 27.666666666666668,
+          "median": 24.5,
+          "p90": 58.0,
+          "min": 1.0,
+          "max": 85.0
+        },
+        "tool_calls_completed": {
+          "n": 42,
+          "sum": 1093.0,
+          "mean": 26.023809523809526,
+          "median": 23.5,
+          "p90": 54.8,
+          "min": 1.0,
+          "max": 80.0
+        },
+        "tool_calls_failed": {
+          "n": 42,
+          "sum": 68.0,
+          "mean": 1.619047619047619,
+          "median": 1.0,
+          "p90": 5.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "tool_calls_skipped": {
+          "n": 42,
+          "sum": 1.0,
+          "mean": 0.023809523809523808,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 42,
+          "sum": 1162.0,
+          "mean": 27.666666666666668,
+          "median": 24.5,
+          "p90": 58.0,
+          "min": 1.0,
+          "max": 85.0
+        },
+        "tool_calls_unpaired": {
+          "n": 42,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 42,
+          "sum": 5410.212999999999,
+          "mean": 128.81459523809522,
+          "median": 7.924999999999999,
+          "p90": 256.97069999999997,
+          "min": 0.034,
+          "max": 1608.1389999999997
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_no_trace_crosscheck": 1,
+          "server_reconciled": 7,
+          "session_reconciled": 34
+        },
+        "metrics": {
+          "token_input": {
+            "n": 42,
+            "sum": 15366202.0,
+            "mean": 365861.95238095237,
+            "median": 240147.5,
+            "p90": 791294.4,
+            "min": 9329.0,
+            "max": 1765187.0
+          },
+          "token_fresh_input": {
+            "n": 42,
+            "sum": 2387578.0,
+            "mean": 56847.09523809524,
+            "median": 43960.0,
+            "p90": 121174.2,
+            "min": 1201.0,
+            "max": 168579.0
+          },
+          "token_cache_read": {
+            "n": 42,
+            "sum": 12978624.0,
+            "mean": 309014.85714285716,
+            "median": 187680.0,
+            "p90": 705612.7999999999,
+            "min": 8128.0,
+            "max": 1596608.0
+          },
+          "token_cache_creation": {
+            "n": 42,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 42,
+            "sum": 1694362.0,
+            "mean": 40341.95238095238,
+            "median": 25326.5,
+            "p90": 95560.2,
+            "min": 209.0,
+            "max": 162757.0
+          },
+          "token_total": {
+            "n": 42,
+            "sum": 17060564.0,
+            "mean": 406203.90476190473,
+            "median": 270482.0,
+            "p90": 860977.5,
+            "min": 14226.0,
+            "max": 1810961.0
+          },
+          "token_known_minimum": {
+            "n": 42,
+            "sum": 17060564.0,
+            "mean": 406203.90476190473,
+            "median": 270482.0,
+            "p90": 860977.5,
+            "min": 14226.0,
+            "max": 1810961.0
+          }
+        },
+        "complete_total_coverage": 42,
+        "input_coverage": 42,
+        "detail_coverage": 42,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "observed_timeout": {
+      "n": 34,
+      "time": {
+        "e2e_s": {
+          "n": 34,
+          "sum": 63137.832098,
+          "mean": 1856.9950617058823,
+          "median": 1493.868903,
+          "p90": 3988.950035,
+          "min": 503.404942,
+          "max": 5146.776169
+        },
+        "environment_setup_s": {
+          "n": 34,
+          "sum": 353.315186,
+          "mean": 10.391623117647057,
+          "median": 6.914733,
+          "p90": 25.3260752,
+          "min": 1.063857,
+          "max": 57.231725
+        },
+        "agent_setup_s": {
+          "n": 34,
+          "sum": 885.374711,
+          "mean": 26.04043267647059,
+          "median": 4.2083365,
+          "p90": 79.7467937,
+          "min": 2.657709,
+          "max": 99.572653
+        },
+        "agent_execution_s": {
+          "n": 34,
+          "sum": 58538.194869,
+          "mean": 1721.7116137941175,
+          "median": 1417.3096165,
+          "p90": 3928.5941248999998,
+          "min": 360.001758,
+          "max": 4686.957328
+        },
+        "verifier_s": {
+          "n": 34,
+          "sum": 2012.946452,
+          "mean": 59.2043074117647,
+          "median": 31.977293500000002,
+          "p90": 150.85610419999998,
+          "min": 11.025017,
+          "max": 339.593147
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 11,
+          "sum": 18382.765,
+          "mean": 1671.1604545454545,
+          "median": 1545.991,
+          "p90": 2469.394,
+          "min": 1081.9370000000001,
+          "max": 2663.003
+        },
+        "llm_call_duration_sum_s": {
+          "n": 34,
+          "sum": 20562.486999999997,
+          "mean": 604.7790294117647,
+          "median": 511.2065,
+          "p90": 1309.9221,
+          "min": 7.594,
+          "max": 2012.6430000000003
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 34,
+          "sum": 579.0,
+          "mean": 17.029411764705884,
+          "median": 16.5,
+          "p90": 34.0,
+          "min": 2.0,
+          "max": 43.0
+        },
+        "tool_calls_started": {
+          "n": 34,
+          "sum": 806.0,
+          "mean": 23.705882352941178,
+          "median": 22.5,
+          "p90": 43.7,
+          "min": 1.0,
+          "max": 72.0
+        },
+        "tool_calls_completed": {
+          "n": 34,
+          "sum": 759.0,
+          "mean": 22.323529411764707,
+          "median": 21.0,
+          "p90": 41.0,
+          "min": 1.0,
+          "max": 67.0
+        },
+        "tool_calls_failed": {
+          "n": 34,
+          "sum": 47.0,
+          "mean": 1.3823529411764706,
+          "median": 1.0,
+          "p90": 4.0,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "tool_calls_skipped": {
+          "n": 34,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_calls_terminal": {
+          "n": 34,
+          "sum": 806.0,
+          "mean": 23.705882352941178,
+          "median": 22.5,
+          "p90": 43.7,
+          "min": 1.0,
+          "max": 72.0
+        },
+        "tool_calls_unpaired": {
+          "n": 34,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 34,
+          "sum": 1696.2740000000008,
+          "mean": 49.8904117647059,
+          "median": 3.9269999999999996,
+          "p90": 85.3138,
+          "min": 0.034,
+          "max": 803.9050000000003
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "server_reconciled": 4,
+          "session_reconciled": 30
+        },
+        "metrics": {
+          "token_input": {
+            "n": 34,
+            "sum": 8953566.0,
+            "mean": 263340.17647058825,
+            "median": 210547.5,
+            "p90": 559689.1,
+            "min": 9329.0,
+            "max": 1000681.0
+          },
+          "token_fresh_input": {
+            "n": 34,
+            "sum": 1579806.0,
+            "mean": 46464.882352941175,
+            "median": 39750.0,
+            "p90": 105711.09999999999,
+            "min": 1201.0,
+            "max": 136824.0
+          },
+          "token_cache_read": {
+            "n": 34,
+            "sum": 7373760.0,
+            "mean": 216875.29411764705,
+            "median": 168224.0,
+            "p90": 470022.39999999997,
+            "min": 8128.0,
+            "max": 879168.0
+          },
+          "token_cache_creation": {
+            "n": 34,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 34,
+            "sum": 1209789.0,
+            "mean": 35582.029411764706,
+            "median": 24288.5,
+            "p90": 90849.9,
+            "min": 209.0,
+            "max": 115323.0
+          },
+          "token_total": {
+            "n": 34,
+            "sum": 10163355.0,
+            "mean": 298922.20588235295,
+            "median": 228441.0,
+            "p90": 626413.6,
+            "min": 14226.0,
+            "max": 1086731.0
+          },
+          "token_known_minimum": {
+            "n": 34,
+            "sum": 10163355.0,
+            "mean": 298922.20588235295,
+            "median": 228441.0,
+            "p90": 626413.6,
+            "min": 14226.0,
+            "max": 1086731.0
+          }
+        },
+        "complete_total_coverage": 34,
+        "input_coverage": 34,
+        "detail_coverage": 34,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "no_observed_timeout": {
+      "n": 52,
+      "time": {
+        "e2e_s": {
+          "n": 52,
+          "sum": 83537.87110900001,
+          "mean": 1606.4975213269233,
+          "median": 750.6079935,
+          "p90": 2973.0513055,
+          "min": 75.881797,
+          "max": 15157.057219
+        },
+        "environment_setup_s": {
+          "n": 52,
+          "sum": 5965.990934000002,
+          "mean": 114.73059488461543,
+          "median": 4.751736,
+          "p90": 17.010015899999996,
+          "min": 1.102385,
+          "max": 5632.835338
+        },
+        "agent_setup_s": {
+          "n": 52,
+          "sum": 978.193415,
+          "mean": 18.811411826923077,
+          "median": 3.8697904999999997,
+          "p90": 69.9365849,
+          "min": 2.600833,
+          "max": 93.093998
+        },
+        "agent_execution_s": {
+          "n": 52,
+          "sum": 57712.12920199998,
+          "mean": 1109.8486384999997,
+          "median": 655.4587745,
+          "p90": 2775.7827878999997,
+          "min": 43.137264,
+          "max": 6158.056407
+        },
+        "verifier_s": {
+          "n": 52,
+          "sum": 18209.540709999997,
+          "mean": 350.18347519230764,
+          "median": 27.99597,
+          "p90": 98.64226719999996,
+          "min": 4.903303,
+          "max": 14639.924272
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 16,
+          "sum": 12604.306000000002,
+          "mean": 787.7691250000001,
+          "median": 546.0105,
+          "p90": 1539.603,
+          "min": 43.047,
+          "max": 2667.241
+        },
+        "llm_call_duration_sum_s": {
+          "n": 50,
+          "sum": 36058.08900000001,
+          "mean": 721.1617800000001,
+          "median": 482.1089999999999,
+          "p90": 1805.1428,
+          "min": 38.468,
+          "max": 2546.999
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 52,
+          "sum": 1095.0,
+          "mean": 21.057692307692307,
+          "median": 15.0,
+          "p90": 49.19999999999999,
+          "min": 4.0,
+          "max": 60.0
+        },
+        "tool_calls_started": {
+          "n": 52,
+          "sum": 1447.0,
+          "mean": 27.826923076923077,
+          "median": 18.0,
+          "p90": 61.8,
+          "min": 4.0,
+          "max": 85.0
+        },
+        "tool_calls_completed": {
+          "n": 52,
+          "sum": 1337.0,
+          "mean": 25.71153846153846,
+          "median": 16.5,
+          "p90": 60.599999999999994,
+          "min": 4.0,
+          "max": 80.0
+        },
+        "tool_calls_failed": {
+          "n": 52,
+          "sum": 108.0,
+          "mean": 2.076923076923077,
+          "median": 1.0,
+          "p90": 5.0,
+          "min": 0.0,
+          "max": 24.0
+        },
+        "tool_calls_skipped": {
+          "n": 52,
+          "sum": 2.0,
+          "mean": 0.038461538461538464,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 52,
+          "sum": 1447.0,
+          "mean": 27.826923076923077,
+          "median": 18.0,
+          "p90": 61.8,
+          "min": 4.0,
+          "max": 85.0
+        },
+        "tool_calls_unpaired": {
+          "n": 52,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 52,
+          "sum": 14957.475999999993,
+          "mean": 287.6437692307691,
+          "median": 27.542,
+          "p90": 805.3456999999992,
+          "min": 0.052,
+          "max": 3518.569
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_no_trace_crosscheck": 1,
+          "complete_terminal_no_trace": 1,
+          "server_reconciled": 5,
+          "session_input_only": 1,
+          "session_reconciled": 44
+        },
+        "metrics": {
+          "token_input": {
+            "n": 52,
+            "sum": 22165638.0,
+            "mean": 426262.26923076925,
+            "median": 213510.5,
+            "p90": 1121924.5,
+            "min": 38415.0,
+            "max": 2107163.0
+          },
+          "token_fresh_input": {
+            "n": 51,
+            "sum": 2976042.0,
+            "mean": 58353.76470588235,
+            "median": 34698.0,
+            "p90": 123593.0,
+            "min": 7678.0,
+            "max": 182043.0
+          },
+          "token_cache_read": {
+            "n": 51,
+            "sum": 18693632.0,
+            "mean": 366541.8039215686,
+            "median": 169856.0,
+            "p90": 1005248.0,
+            "min": 25088.0,
+            "max": 1925120.0
+          },
+          "token_cache_creation": {
+            "n": 51,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 51,
+            "sum": 2305933.0,
+            "mean": 45214.37254901961,
+            "median": 31036.0,
+            "p90": 116391.0,
+            "min": 919.0,
+            "max": 185183.0
+          },
+          "token_total": {
+            "n": 51,
+            "sum": 23975607.0,
+            "mean": 470109.9411764706,
+            "median": 244012.0,
+            "p90": 1253735.0,
+            "min": 47660.0,
+            "max": 2223554.0
+          },
+          "token_known_minimum": {
+            "n": 52,
+            "sum": 24471571.0,
+            "mean": 470607.1346153846,
+            "median": 248146.0,
+            "p90": 1244963.5999999999,
+            "min": 47660.0,
+            "max": 2223554.0
+          }
+        },
+        "complete_total_coverage": 51,
+        "input_coverage": 52,
+        "detail_coverage": 51,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "timeout": {
+      "n": 37,
+      "time": {
+        "e2e_s": {
+          "n": 37,
+          "sum": 69441.045126,
+          "mean": 1876.7850034054054,
+          "median": 1623.415486,
+          "p90": 3882.1684549999995,
+          "min": 503.404942,
+          "max": 5146.776169
+        },
+        "environment_setup_s": {
+          "n": 37,
+          "sum": 357.14106499999997,
+          "mean": 9.652461216216215,
+          "median": 5.983099,
+          "p90": 24.907048399999997,
+          "min": 1.063857,
+          "max": 57.231725
+        },
+        "agent_setup_s": {
+          "n": 37,
+          "sum": 895.985186,
+          "mean": 24.215815837837837,
+          "median": 3.992151,
+          "p90": 77.7402164,
+          "min": 2.657709,
+          "max": 99.572653
+        },
+        "agent_execution_s": {
+          "n": 37,
+          "sum": 64626.90067599999,
+          "mean": 1746.672991243243,
+          "median": 1493.651589,
+          "p90": 3813.5197387999992,
+          "min": 360.001758,
+          "max": 4686.957328
+        },
+        "verifier_s": {
+          "n": 37,
+          "sum": 2173.8084269999995,
+          "mean": 58.751579108108096,
+          "median": 35.218245,
+          "p90": 141.46991839999995,
+          "min": 8.301691,
+          "max": 339.593147
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 11,
+          "sum": 18382.765,
+          "mean": 1671.1604545454545,
+          "median": 1545.991,
+          "p90": 2469.394,
+          "min": 1081.9370000000001,
+          "max": 2663.003
+        },
+        "llm_call_duration_sum_s": {
+          "n": 37,
+          "sum": 26228.650999999998,
+          "mean": 708.8824594594594,
+          "median": 546.384,
+          "p90": 1735.3214,
+          "min": 7.594,
+          "max": 2012.6430000000003
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 37,
+          "sum": 656.0,
+          "mean": 17.72972972972973,
+          "median": 18.0,
+          "p90": 34.0,
+          "min": 2.0,
+          "max": 43.0
+        },
+        "tool_calls_started": {
+          "n": 37,
+          "sum": 932.0,
+          "mean": 25.18918918918919,
+          "median": 26.0,
+          "p90": 44.8,
+          "min": 1.0,
+          "max": 72.0
+        },
+        "tool_calls_completed": {
+          "n": 37,
+          "sum": 876.0,
+          "mean": 23.675675675675677,
+          "median": 25.0,
+          "p90": 42.599999999999994,
+          "min": 1.0,
+          "max": 67.0
+        },
+        "tool_calls_failed": {
+          "n": 37,
+          "sum": 56.0,
+          "mean": 1.5135135135135136,
+          "median": 1.0,
+          "p90": 4.399999999999999,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "tool_calls_skipped": {
+          "n": 37,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_calls_terminal": {
+          "n": 37,
+          "sum": 932.0,
+          "mean": 25.18918918918919,
+          "median": 26.0,
+          "p90": 44.8,
+          "min": 1.0,
+          "max": 72.0
+        },
+        "tool_calls_unpaired": {
+          "n": 37,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 37,
+          "sum": 1869.2550000000008,
+          "mean": 50.52040540540543,
+          "median": 4.614,
+          "p90": 96.7844,
+          "min": 0.034,
+          "max": 803.9050000000003
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "server_reconciled": 6,
+          "session_input_only": 1,
+          "session_reconciled": 30
+        },
+        "metrics": {
+          "token_input": {
+            "n": 37,
+            "sum": 10987788.0,
+            "mean": 296967.24324324325,
+            "median": 245320.0,
+            "p90": 642953.3999999998,
+            "min": 9329.0,
+            "max": 1123373.0
+          },
+          "token_fresh_input": {
+            "n": 36,
+            "sum": 1827184.0,
+            "mean": 50755.11111111111,
+            "median": 40011.5,
+            "p90": 114705.5,
+            "min": 1201.0,
+            "max": 136824.0
+          },
+          "token_cache_read": {
+            "n": 36,
+            "sum": 8664640.0,
+            "mean": 240684.44444444444,
+            "median": 179872.0,
+            "p90": 555264.0,
+            "min": 8128.0,
+            "max": 1005248.0
+          },
+          "token_cache_creation": {
+            "n": 36,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 36,
+            "sum": 1491163.0,
+            "mean": 41421.194444444445,
+            "median": 25326.5,
+            "p90": 103910.0,
+            "min": 209.0,
+            "max": 162757.0
+          },
+          "token_total": {
+            "n": 36,
+            "sum": 11982987.0,
+            "mean": 332860.75,
+            "median": 245354.0,
+            "p90": 742331.0,
+            "min": 14226.0,
+            "max": 1286130.0
+          },
+          "token_known_minimum": {
+            "n": 37,
+            "sum": 12478951.0,
+            "mean": 337268.9459459459,
+            "median": 254624.0,
+            "p90": 720640.1999999997,
+            "min": 14226.0,
+            "max": 1286130.0
+          }
+        },
+        "complete_total_coverage": 36,
+        "input_coverage": 37,
+        "detail_coverage": 36,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "non_timeout": {
+      "n": 49,
+      "time": {
+        "e2e_s": {
+          "n": 49,
+          "sum": 77234.65808100002,
+          "mean": 1576.217511857143,
+          "median": 705.078365,
+          "p90": 3079.892951800002,
+          "min": 75.881797,
+          "max": 15157.057219
+        },
+        "environment_setup_s": {
+          "n": 49,
+          "sum": 5962.165055000002,
+          "mean": 121.6768378571429,
+          "median": 5.651523,
+          "p90": 17.3480742,
+          "min": 1.102385,
+          "max": 5632.835338
+        },
+        "agent_setup_s": {
+          "n": 49,
+          "sum": 967.5829399999999,
+          "mean": 19.746590612244894,
+          "median": 3.937192,
+          "p90": 71.19077140000002,
+          "min": 2.600833,
+          "max": 93.093998
+        },
+        "agent_execution_s": {
+          "n": 49,
+          "sum": 51623.42339499998,
+          "mean": 1053.5392529591834,
+          "median": 570.167256,
+          "p90": 2801.6727492,
+          "min": 43.137264,
+          "max": 6158.056407
+        },
+        "verifier_s": {
+          "n": 49,
+          "sum": 18048.678734999998,
+          "mean": 368.3403823469387,
+          "median": 27.894808,
+          "p90": 120.37361640000027,
+          "min": 4.903303,
+          "max": 14639.924272
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 16,
+          "sum": 12604.306000000002,
+          "mean": 787.7691250000001,
+          "median": 546.0105,
+          "p90": 1539.603,
+          "min": 43.047,
+          "max": 2667.241
+        },
+        "llm_call_duration_sum_s": {
+          "n": 47,
+          "sum": 30391.925,
+          "mean": 646.6367021276595,
+          "median": 406.75,
+          "p90": 1461.0526,
+          "min": 38.468,
+          "max": 2546.999
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 49,
+          "sum": 1018.0,
+          "mean": 20.775510204081634,
+          "median": 15.0,
+          "p90": 50.0,
+          "min": 4.0,
+          "max": 60.0
+        },
+        "tool_calls_started": {
+          "n": 49,
+          "sum": 1321.0,
+          "mean": 26.959183673469386,
+          "median": 17.0,
+          "p90": 62.60000000000001,
+          "min": 4.0,
+          "max": 85.0
+        },
+        "tool_calls_completed": {
+          "n": 49,
+          "sum": 1220.0,
+          "mean": 24.897959183673468,
+          "median": 15.0,
+          "p90": 61.80000000000001,
+          "min": 4.0,
+          "max": 80.0
+        },
+        "tool_calls_failed": {
+          "n": 49,
+          "sum": 99.0,
+          "mean": 2.020408163265306,
+          "median": 1.0,
+          "p90": 5.0,
+          "min": 0.0,
+          "max": 24.0
+        },
+        "tool_calls_skipped": {
+          "n": 49,
+          "sum": 2.0,
+          "mean": 0.04081632653061224,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 49,
+          "sum": 1321.0,
+          "mean": 26.959183673469386,
+          "median": 17.0,
+          "p90": 62.60000000000001,
+          "min": 4.0,
+          "max": 85.0
+        },
+        "tool_calls_unpaired": {
+          "n": 49,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 49,
+          "sum": 14784.494999999995,
+          "mean": 301.72438775510193,
+          "median": 18.047,
+          "p90": 1004.5032000000019,
+          "min": 0.052,
+          "max": 3518.569
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_no_trace_crosscheck": 1,
+          "complete_terminal_no_trace": 1,
+          "server_reconciled": 3,
+          "session_reconciled": 44
+        },
+        "metrics": {
+          "token_input": {
+            "n": 49,
+            "sum": 20131416.0,
+            "mean": 410845.2244897959,
+            "median": 209634.0,
+            "p90": 1114107.4000000001,
+            "min": 38415.0,
+            "max": 2107163.0
+          },
+          "token_fresh_input": {
+            "n": 49,
+            "sum": 2728664.0,
+            "mean": 55687.02040816326,
+            "median": 34012.0,
+            "p90": 118524.20000000001,
+            "min": 7678.0,
+            "max": 182043.0
+          },
+          "token_cache_read": {
+            "n": 49,
+            "sum": 17402752.0,
+            "mean": 355158.20408163266,
+            "median": 162880.0,
+            "p90": 952345.6000000002,
+            "min": 25088.0,
+            "max": 1925120.0
+          },
+          "token_cache_creation": {
+            "n": 49,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 49,
+            "sum": 2024559.0,
+            "mean": 41317.5306122449,
+            "median": 30154.0,
+            "p90": 80444.00000000007,
+            "min": 919.0,
+            "max": 185183.0
+          },
+          "token_total": {
+            "n": 49,
+            "sum": 22155975.0,
+            "mean": 452162.7551020408,
+            "median": 238214.0,
+            "p90": 1183563.8000000003,
+            "min": 47660.0,
+            "max": 2223554.0
+          },
+          "token_known_minimum": {
+            "n": 49,
+            "sum": 22155975.0,
+            "mean": 452162.7551020408,
+            "median": 238214.0,
+            "p90": 1183563.8000000003,
+            "min": 47660.0,
+            "max": 2223554.0
+          }
+        },
+        "complete_total_coverage": 49,
+        "input_coverage": 49,
+        "detail_coverage": 49,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "timeout_or_deadline_suspected": {
+      "n": 37,
+      "time": {
+        "e2e_s": {
+          "n": 37,
+          "sum": 69441.045126,
+          "mean": 1876.7850034054054,
+          "median": 1623.415486,
+          "p90": 3882.1684549999995,
+          "min": 503.404942,
+          "max": 5146.776169
+        },
+        "environment_setup_s": {
+          "n": 37,
+          "sum": 357.14106499999997,
+          "mean": 9.652461216216215,
+          "median": 5.983099,
+          "p90": 24.907048399999997,
+          "min": 1.063857,
+          "max": 57.231725
+        },
+        "agent_setup_s": {
+          "n": 37,
+          "sum": 895.985186,
+          "mean": 24.215815837837837,
+          "median": 3.992151,
+          "p90": 77.7402164,
+          "min": 2.657709,
+          "max": 99.572653
+        },
+        "agent_execution_s": {
+          "n": 37,
+          "sum": 64626.90067599999,
+          "mean": 1746.672991243243,
+          "median": 1493.651589,
+          "p90": 3813.5197387999992,
+          "min": 360.001758,
+          "max": 4686.957328
+        },
+        "verifier_s": {
+          "n": 37,
+          "sum": 2173.8084269999995,
+          "mean": 58.751579108108096,
+          "median": 35.218245,
+          "p90": 141.46991839999995,
+          "min": 8.301691,
+          "max": 339.593147
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 11,
+          "sum": 18382.765,
+          "mean": 1671.1604545454545,
+          "median": 1545.991,
+          "p90": 2469.394,
+          "min": 1081.9370000000001,
+          "max": 2663.003
+        },
+        "llm_call_duration_sum_s": {
+          "n": 37,
+          "sum": 26228.650999999998,
+          "mean": 708.8824594594594,
+          "median": 546.384,
+          "p90": 1735.3214,
+          "min": 7.594,
+          "max": 2012.6430000000003
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 37,
+          "sum": 656.0,
+          "mean": 17.72972972972973,
+          "median": 18.0,
+          "p90": 34.0,
+          "min": 2.0,
+          "max": 43.0
+        },
+        "tool_calls_started": {
+          "n": 37,
+          "sum": 932.0,
+          "mean": 25.18918918918919,
+          "median": 26.0,
+          "p90": 44.8,
+          "min": 1.0,
+          "max": 72.0
+        },
+        "tool_calls_completed": {
+          "n": 37,
+          "sum": 876.0,
+          "mean": 23.675675675675677,
+          "median": 25.0,
+          "p90": 42.599999999999994,
+          "min": 1.0,
+          "max": 67.0
+        },
+        "tool_calls_failed": {
+          "n": 37,
+          "sum": 56.0,
+          "mean": 1.5135135135135136,
+          "median": 1.0,
+          "p90": 4.399999999999999,
+          "min": 0.0,
+          "max": 7.0
+        },
+        "tool_calls_skipped": {
+          "n": 37,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_calls_terminal": {
+          "n": 37,
+          "sum": 932.0,
+          "mean": 25.18918918918919,
+          "median": 26.0,
+          "p90": 44.8,
+          "min": 1.0,
+          "max": 72.0
+        },
+        "tool_calls_unpaired": {
+          "n": 37,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 37,
+          "sum": 1869.2550000000008,
+          "mean": 50.52040540540543,
+          "median": 4.614,
+          "p90": 96.7844,
+          "min": 0.034,
+          "max": 803.9050000000003
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "server_reconciled": 6,
+          "session_input_only": 1,
+          "session_reconciled": 30
+        },
+        "metrics": {
+          "token_input": {
+            "n": 37,
+            "sum": 10987788.0,
+            "mean": 296967.24324324325,
+            "median": 245320.0,
+            "p90": 642953.3999999998,
+            "min": 9329.0,
+            "max": 1123373.0
+          },
+          "token_fresh_input": {
+            "n": 36,
+            "sum": 1827184.0,
+            "mean": 50755.11111111111,
+            "median": 40011.5,
+            "p90": 114705.5,
+            "min": 1201.0,
+            "max": 136824.0
+          },
+          "token_cache_read": {
+            "n": 36,
+            "sum": 8664640.0,
+            "mean": 240684.44444444444,
+            "median": 179872.0,
+            "p90": 555264.0,
+            "min": 8128.0,
+            "max": 1005248.0
+          },
+          "token_cache_creation": {
+            "n": 36,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 36,
+            "sum": 1491163.0,
+            "mean": 41421.194444444445,
+            "median": 25326.5,
+            "p90": 103910.0,
+            "min": 209.0,
+            "max": 162757.0
+          },
+          "token_total": {
+            "n": 36,
+            "sum": 11982987.0,
+            "mean": 332860.75,
+            "median": 245354.0,
+            "p90": 742331.0,
+            "min": 14226.0,
+            "max": 1286130.0
+          },
+          "token_known_minimum": {
+            "n": 37,
+            "sum": 12478951.0,
+            "mean": 337268.9459459459,
+            "median": 254624.0,
+            "p90": 720640.1999999997,
+            "min": 14226.0,
+            "max": 1286130.0
+          }
+        },
+        "complete_total_coverage": 36,
+        "input_coverage": 37,
+        "detail_coverage": 36,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "neither_timeout_nor_deadline_suspected": {
+      "n": 49,
+      "time": {
+        "e2e_s": {
+          "n": 49,
+          "sum": 77234.65808100002,
+          "mean": 1576.217511857143,
+          "median": 705.078365,
+          "p90": 3079.892951800002,
+          "min": 75.881797,
+          "max": 15157.057219
+        },
+        "environment_setup_s": {
+          "n": 49,
+          "sum": 5962.165055000002,
+          "mean": 121.6768378571429,
+          "median": 5.651523,
+          "p90": 17.3480742,
+          "min": 1.102385,
+          "max": 5632.835338
+        },
+        "agent_setup_s": {
+          "n": 49,
+          "sum": 967.5829399999999,
+          "mean": 19.746590612244894,
+          "median": 3.937192,
+          "p90": 71.19077140000002,
+          "min": 2.600833,
+          "max": 93.093998
+        },
+        "agent_execution_s": {
+          "n": 49,
+          "sum": 51623.42339499998,
+          "mean": 1053.5392529591834,
+          "median": 570.167256,
+          "p90": 2801.6727492,
+          "min": 43.137264,
+          "max": 6158.056407
+        },
+        "verifier_s": {
+          "n": 49,
+          "sum": 18048.678734999998,
+          "mean": 368.3403823469387,
+          "median": 27.894808,
+          "p90": 120.37361640000027,
+          "min": 4.903303,
+          "max": 14639.924272
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 16,
+          "sum": 12604.306000000002,
+          "mean": 787.7691250000001,
+          "median": 546.0105,
+          "p90": 1539.603,
+          "min": 43.047,
+          "max": 2667.241
+        },
+        "llm_call_duration_sum_s": {
+          "n": 47,
+          "sum": 30391.925,
+          "mean": 646.6367021276595,
+          "median": 406.75,
+          "p90": 1461.0526,
+          "min": 38.468,
+          "max": 2546.999
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 49,
+          "sum": 1018.0,
+          "mean": 20.775510204081634,
+          "median": 15.0,
+          "p90": 50.0,
+          "min": 4.0,
+          "max": 60.0
+        },
+        "tool_calls_started": {
+          "n": 49,
+          "sum": 1321.0,
+          "mean": 26.959183673469386,
+          "median": 17.0,
+          "p90": 62.60000000000001,
+          "min": 4.0,
+          "max": 85.0
+        },
+        "tool_calls_completed": {
+          "n": 49,
+          "sum": 1220.0,
+          "mean": 24.897959183673468,
+          "median": 15.0,
+          "p90": 61.80000000000001,
+          "min": 4.0,
+          "max": 80.0
+        },
+        "tool_calls_failed": {
+          "n": 49,
+          "sum": 99.0,
+          "mean": 2.020408163265306,
+          "median": 1.0,
+          "p90": 5.0,
+          "min": 0.0,
+          "max": 24.0
+        },
+        "tool_calls_skipped": {
+          "n": 49,
+          "sum": 2.0,
+          "mean": 0.04081632653061224,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 49,
+          "sum": 1321.0,
+          "mean": 26.959183673469386,
+          "median": 17.0,
+          "p90": 62.60000000000001,
+          "min": 4.0,
+          "max": 85.0
+        },
+        "tool_calls_unpaired": {
+          "n": 49,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 49,
+          "sum": 14784.494999999995,
+          "mean": 301.72438775510193,
+          "median": 18.047,
+          "p90": 1004.5032000000019,
+          "min": 0.052,
+          "max": 3518.569
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_no_trace_crosscheck": 1,
+          "complete_terminal_no_trace": 1,
+          "server_reconciled": 3,
+          "session_reconciled": 44
+        },
+        "metrics": {
+          "token_input": {
+            "n": 49,
+            "sum": 20131416.0,
+            "mean": 410845.2244897959,
+            "median": 209634.0,
+            "p90": 1114107.4000000001,
+            "min": 38415.0,
+            "max": 2107163.0
+          },
+          "token_fresh_input": {
+            "n": 49,
+            "sum": 2728664.0,
+            "mean": 55687.02040816326,
+            "median": 34012.0,
+            "p90": 118524.20000000001,
+            "min": 7678.0,
+            "max": 182043.0
+          },
+          "token_cache_read": {
+            "n": 49,
+            "sum": 17402752.0,
+            "mean": 355158.20408163266,
+            "median": 162880.0,
+            "p90": 952345.6000000002,
+            "min": 25088.0,
+            "max": 1925120.0
+          },
+          "token_cache_creation": {
+            "n": 49,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 49,
+            "sum": 2024559.0,
+            "mean": 41317.5306122449,
+            "median": 30154.0,
+            "p90": 80444.00000000007,
+            "min": 919.0,
+            "max": 185183.0
+          },
+          "token_total": {
+            "n": 49,
+            "sum": 22155975.0,
+            "mean": 452162.7551020408,
+            "median": 238214.0,
+            "p90": 1183563.8000000003,
+            "min": 47660.0,
+            "max": 2223554.0
+          },
+          "token_known_minimum": {
+            "n": 49,
+            "sum": 22155975.0,
+            "mean": 452162.7551020408,
+            "median": 238214.0,
+            "p90": 1183563.8000000003,
+            "min": 47660.0,
+            "max": 2223554.0
+          }
+        },
+        "complete_total_coverage": 49,
+        "input_coverage": 49,
+        "detail_coverage": 49,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "normal_e2e_pass": {
+      "n": 36,
+      "time": {
+        "e2e_s": {
+          "n": 36,
+          "sum": 59321.27820800002,
+          "mean": 1647.8132835555562,
+          "median": 620.061054,
+          "p90": 2857.9535805,
+          "min": 75.881797,
+          "max": 15157.057219
+        },
+        "environment_setup_s": {
+          "n": 36,
+          "sum": 5890.716465000001,
+          "mean": 163.6310129166667,
+          "median": 5.8753615,
+          "p90": 18.746734,
+          "min": 1.102385,
+          "max": 5632.835338
+        },
+        "agent_setup_s": {
+          "n": 36,
+          "sum": 644.478262,
+          "mean": 17.902173944444442,
+          "median": 3.7089285,
+          "p90": 68.3526005,
+          "min": 2.600833,
+          "max": 87.594723
+        },
+        "agent_execution_s": {
+          "n": 36,
+          "sum": 34942.476223,
+          "mean": 970.6243395277777,
+          "median": 536.1738815,
+          "p90": 2658.7730215,
+          "min": 43.137264,
+          "max": 6158.056407
+        },
+        "verifier_s": {
+          "n": 36,
+          "sum": 17378.96083,
+          "mean": 482.74891194444444,
+          "median": 27.99597,
+          "p90": 149.841816,
+          "min": 4.903303,
+          "max": 14639.924272
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 11,
+          "sum": 9952.836000000001,
+          "mean": 904.8032727272729,
+          "median": 684.115,
+          "p90": 1709.444,
+          "min": 43.047,
+          "max": 2667.241
+        },
+        "llm_call_duration_sum_s": {
+          "n": 35,
+          "sum": 21997.609,
+          "mean": 628.5031142857143,
+          "median": 386.776,
+          "p90": 1658.2452000000005,
+          "min": 38.468,
+          "max": 2546.999
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 36,
+          "sum": 619.0,
+          "mean": 17.194444444444443,
+          "median": 12.5,
+          "p90": 37.5,
+          "min": 4.0,
+          "max": 60.0
+        },
+        "tool_calls_started": {
+          "n": 36,
+          "sum": 801.0,
+          "mean": 22.25,
+          "median": 15.0,
+          "p90": 53.5,
+          "min": 4.0,
+          "max": 84.0
+        },
+        "tool_calls_completed": {
+          "n": 36,
+          "sum": 764.0,
+          "mean": 21.22222222222222,
+          "median": 13.0,
+          "p90": 50.5,
+          "min": 4.0,
+          "max": 78.0
+        },
+        "tool_calls_failed": {
+          "n": 36,
+          "sum": 36.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 3.0,
+          "min": 0.0,
+          "max": 6.0
+        },
+        "tool_calls_skipped": {
+          "n": 36,
+          "sum": 1.0,
+          "mean": 0.027777777777777776,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 36,
+          "sum": 801.0,
+          "mean": 22.25,
+          "median": 15.0,
+          "p90": 53.5,
+          "min": 4.0,
+          "max": 84.0
+        },
+        "tool_calls_unpaired": {
+          "n": 36,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 36,
+          "sum": 7061.13,
+          "mean": 196.1425,
+          "median": 9.231500000000002,
+          "p90": 295.9215,
+          "min": 0.052,
+          "max": 2167.9540000000006
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_terminal_no_trace": 1,
+          "server_reconciled": 1,
+          "session_reconciled": 34
+        },
+        "metrics": {
+          "token_input": {
+            "n": 36,
+            "sum": 11963833.0,
+            "mean": 332328.69444444444,
+            "median": 177909.0,
+            "p90": 873720.0,
+            "min": 38415.0,
+            "max": 2107163.0
+          },
+          "token_fresh_input": {
+            "n": 36,
+            "sum": 1721209.0,
+            "mean": 47811.36111111111,
+            "median": 31235.0,
+            "p90": 106628.0,
+            "min": 7678.0,
+            "max": 182043.0
+          },
+          "token_cache_read": {
+            "n": 36,
+            "sum": 10242624.0,
+            "mean": 284517.3333333333,
+            "median": 127168.0,
+            "p90": 764096.0,
+            "min": 25088.0,
+            "max": 1925120.0
+          },
+          "token_cache_creation": {
+            "n": 36,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 36,
+            "sum": 1517679.0,
+            "mean": 42157.75,
+            "median": 21433.0,
+            "p90": 108837.5,
+            "min": 919.0,
+            "max": 185183.0
+          },
+          "token_total": {
+            "n": 36,
+            "sum": 13481512.0,
+            "mean": 374486.44444444444,
+            "median": 196863.5,
+            "p90": 1016953.5,
+            "min": 47660.0,
+            "max": 2223554.0
+          },
+          "token_known_minimum": {
+            "n": 36,
+            "sum": 13481512.0,
+            "mean": 374486.44444444444,
+            "median": 196863.5,
+            "p90": 1016953.5,
+            "min": 47660.0,
+            "max": 2223554.0
+          }
+        },
+        "complete_total_coverage": 36,
+        "input_coverage": 36,
+        "detail_coverage": 36,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "clean_e2e_pass": {
+      "n": 35,
+      "time": {
+        "e2e_s": {
+          "n": 35,
+          "sum": 57572.44961700002,
+          "mean": 1644.9271319142863,
+          "median": 608.188098,
+          "p90": 2874.4120886,
+          "min": 75.881797,
+          "max": 15157.057219
+        },
+        "environment_setup_s": {
+          "n": 35,
+          "sum": 5889.499592000001,
+          "mean": 168.27141691428574,
+          "median": 6.071483,
+          "p90": 19.046596600000004,
+          "min": 1.102385,
+          "max": 5632.835338
+        },
+        "agent_setup_s": {
+          "n": 35,
+          "sum": 640.977833,
+          "mean": 18.31365237142857,
+          "median": 3.748041,
+          "p90": 68.74859660000001,
+          "min": 2.600833,
+          "max": 87.594723
+        },
+        "agent_execution_s": {
+          "n": 35,
+          "sum": 33229.04419,
+          "mean": 949.4012625714286,
+          "median": 528.720806,
+          "p90": 2661.7122074,
+          "min": 43.137264,
+          "max": 6158.056407
+        },
+        "verifier_s": {
+          "n": 35,
+          "sum": 17360.577075999998,
+          "mean": 496.01648788571424,
+          "median": 28.097132,
+          "p90": 159.66454920000012,
+          "min": 4.903303,
+          "max": 14639.924272
+        },
+        "product_attempt_duration_sum_s": {
+          "n": 10,
+          "sum": 8243.392,
+          "mean": 824.3392,
+          "median": 570.287,
+          "p90": 1681.1658999999997,
+          "min": 43.047,
+          "max": 2667.241
+        },
+        "llm_call_duration_sum_s": {
+          "n": 34,
+          "sum": 21165.143000000004,
+          "mean": 622.5042058823531,
+          "median": 369.395,
+          "p90": 1691.4808999999998,
+          "min": 38.468,
+          "max": 2546.999
+        }
+      },
+      "tools": {
+        "agentic_steps": {
+          "n": 35,
+          "sum": 595.0,
+          "mean": 17.0,
+          "median": 12.0,
+          "p90": 37.6,
+          "min": 4.0,
+          "max": 60.0
+        },
+        "tool_calls_started": {
+          "n": 35,
+          "sum": 763.0,
+          "mean": 21.8,
+          "median": 15.0,
+          "p90": 53.6,
+          "min": 4.0,
+          "max": 84.0
+        },
+        "tool_calls_completed": {
+          "n": 35,
+          "sum": 727.0,
+          "mean": 20.771428571428572,
+          "median": 13.0,
+          "p90": 50.6,
+          "min": 4.0,
+          "max": 78.0
+        },
+        "tool_calls_failed": {
+          "n": 35,
+          "sum": 35.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 3.0,
+          "min": 0.0,
+          "max": 6.0
+        },
+        "tool_calls_skipped": {
+          "n": 35,
+          "sum": 1.0,
+          "mean": 0.02857142857142857,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 1.0
+        },
+        "tool_calls_terminal": {
+          "n": 35,
+          "sum": 763.0,
+          "mean": 21.8,
+          "median": 15.0,
+          "p90": 53.6,
+          "min": 4.0,
+          "max": 84.0
+        },
+        "tool_calls_unpaired": {
+          "n": 35,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "tool_call_duration_sum_s": {
+          "n": 35,
+          "sum": 7051.39,
+          "mean": 201.4682857142857,
+          "median": 8.723000000000003,
+          "p90": 299.2058,
+          "min": 0.052,
+          "max": 2167.9540000000006
+        }
+      },
+      "token": {
+        "accounting_status": {
+          "complete_terminal_no_trace": 1,
+          "server_reconciled": 1,
+          "session_reconciled": 33
+        },
+        "metrics": {
+          "token_input": {
+            "n": 35,
+            "sum": 11666264.0,
+            "mean": 333321.82857142854,
+            "median": 160424.0,
+            "p90": 895182.2000000003,
+            "min": 38415.0,
+            "max": 2107163.0
+          },
+          "token_fresh_input": {
+            "n": 35,
+            "sum": 1677912.0,
+            "mean": 47940.34285714286,
+            "median": 30467.0,
+            "p90": 107637.40000000001,
+            "min": 7678.0,
+            "max": 182043.0
+          },
+          "token_cache_read": {
+            "n": 35,
+            "sum": 9988352.0,
+            "mean": 285381.4857142857,
+            "median": 117056.0,
+            "p90": 788352.0000000003,
+            "min": 25088.0,
+            "max": 1925120.0
+          },
+          "token_cache_creation": {
+            "n": 35,
+            "sum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "p90": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "token_output": {
+            "n": 35,
+            "sum": 1440286.0,
+            "mean": 41151.02857142857,
+            "median": 21306.0,
+            "p90": 110348.20000000003,
+            "min": 919.0,
+            "max": 185183.0
+          },
+          "token_total": {
+            "n": 35,
+            "sum": 13106550.0,
+            "mean": 374472.85714285716,
+            "median": 177491.0,
+            "p90": 1030025.8000000002,
+            "min": 47660.0,
+            "max": 2223554.0
+          },
+          "token_known_minimum": {
+            "n": 35,
+            "sum": 13106550.0,
+            "mean": 374472.85714285716,
+            "median": 177491.0,
+            "p90": 1030025.8000000002,
+            "min": 47660.0,
+            "max": 2223554.0
+          }
+        },
+        "complete_total_coverage": 35,
+        "input_coverage": 35,
+        "detail_coverage": 35,
+        "source_mismatch_count": 0
+      },
+      "cost_usd": {
+        "n": 0,
+        "sum": null,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "min": null,
+        "max": null
+      }
+    }
+  },
+  "tools": {
+    "telemetry_status": {
+      "ledger_internally_complete": 86
+    },
+    "started": 2253,
+    "completed": 2096,
+    "failed": 155,
+    "skipped": 2,
+    "terminal": 2253,
+    "unpaired": 0,
+    "orphan_terminal": 0,
+    "weighted_failure_rate": 0.06885828520657486,
+    "weighted_terminal_coverage": 1.0,
+    "tool_breakdown": {
+      "bash": 1546,
+      "read_file": 258,
+      "task_board": 104,
+      "write_file": 98,
+      "grep": 74,
+      "introspect": 40,
+      "list_dir": 35,
+      "reflect": 28,
+      "str_replace": 23,
+      "git": 18,
+      "tool_search": 7,
+      "web_search": 7,
+      "web_fetch": 5,
+      "glob": 4,
+      "session": 4,
+      "display_sixel": 2
+    },
+    "failed_tool_breakdown": {
+      "bash": 125,
+      "git": 11,
+      "write_file": 7,
+      "web_fetch": 5,
+      "read_file": 5,
+      "str_replace": 1,
+      "grep": 1
+    }
+  },
+  "verifier_detail": {
+    "ctrf_coverage": 85,
+    "reward_ctrf_consistent": 85,
+    "reward_ctrf_mismatch": 0
+  },
+  "timeout_definition": {
+    "timeout_observed": "Explicit LLM fallback timeout, product timeout, verifier timeout, or Harbor adapter timeout evidence.",
+    "controller_deadline_suspected": "Inference only: retry report is still running/incomplete and agent duration reached at least 95% of the configured product deadline.",
+    "timeout_or_deadline_suspected": "Union of timeout_observed and controller_deadline_suspected.",
+    "compatibility_alias": "The trial-level timeout field and summary timeout/non_timeout groups currently use timeout_or_deadline_suspected; use timeout_observed when only literal timeout evidence is acceptable."
+  },
+  "token_definition": {
+    "source_kind": "Provider-reported usage persisted by Astra; no local tokenizer is used.",
+    "canonical_priority": "When a selected session is retained in MatrixOne astra_runtime.agent_events with event_type=llm_response, its aggregate is canonical. Otherwise the local session artifacts below are used.",
+    "matrixone_lookup": {
+      "mode": "required",
+      "status": "queried",
+      "requested_session_count": 86,
+      "found_session_count": 9,
+      "database": "astra_runtime",
+      "table": "agent_events",
+      "event_type": "llm_response"
+    },
+    "input_formula": "token_input = token_fresh_input + token_cache_read + token_cache_creation",
+    "total_formula": "token_total = token_input + token_output; cache is a subset of input and is never added twice",
+    "session_input": "Local fallback: sum deduplicated server-events.jsonl context_trace_signal metadata.budget.total_used values across the selected Astra session, including resumed outer retries.",
+    "detail_reconstruction": "Use final astra.stdout.json plus pipeline_feedback events timestamped before the final successful retry; without successful stdout, use all returned pipeline_feedback usage.",
+    "harbor_role": "result.json n_input/n_cache/n_output is a terminal-attempt cross-check only, not the canonical session-wide retry total.",
+    "missing_rule": "Missing usage remains null, never zero. token_total is null unless both canonical input and reconciled output are available.",
+    "known_minimum": "token_known_minimum is the sum of components actually observed; an in-flight request that never returned usage can be absent.",
+    "billing_caveat": "Observed telemetry is not a provider invoice. No USD estimate is made without reliable billing and model pricing data."
+  },
+  "resource_metric_availability": {
+    "time": "available as task/phase durations; sums are task-seconds, not batch wall-clock",
+    "provider_reported_tokens": "available with per-field coverage in metrics_by_group",
+    "tool_calls": "available from local step-event ledgers with telemetry status and terminal coverage",
+    "cpu": "unavailable",
+    "ram": "unavailable",
+    "gpu": "unavailable",
+    "disk_io": "unavailable",
+    "network_bytes": "unavailable",
+    "provider_billing": "unavailable"
+  },
+  "data_quality": {
+    "parse_diagnostics": {
+      "result_files_seen": 154,
+      "non_trial_result_files": 33,
+      "json_files_read": 355,
+      "json_parse_error_count": 0,
+      "jsonl_files_read": 256,
+      "jsonl_lines_read": 26292,
+      "jsonl_bad_line_count": 0
+    },
+    "issue_count": 21,
+    "issue_by_code": {
+      "controller_deadline_inferred": 3,
+      "fallback_timeout_config_mismatch": 11,
+      "matrixone_local_trace_delta": 2,
+      "missing_ctrf": 1,
+      "retry_report_incomplete": 3,
+      "token_input_only": 1
+    },
+    "issue_by_severity": {
+      "warning": 21
+    }
+  },
+  "limitations": [
+    "Verifier reward is the inclusion and pass/no-pass authority. CTRF is independent diagnostic detail and may be missing.",
+    "timeout is orthogonal to verifier outcome: recovered request timeouts and deadline termination can still leave passing artifacts.",
+    "controller_deadline_suspected is explicitly an inference, requiring an incomplete running retry report and observed agent duration near the configured deadline; it is not presented as a literal timeout log event.",
+    "Cumulative LLM and tool-call latency can overlap and must not be added to phase wall times as a resource decomposition.",
+    "CPU, RAM, GPU, disk, network bytes, and actual provider billing are absent and intentionally not estimated."
+  ]
+}
