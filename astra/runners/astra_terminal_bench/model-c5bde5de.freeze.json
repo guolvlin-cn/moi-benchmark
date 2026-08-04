@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-07-31T05:29:39Z",
+  "source": "astra model list",
+  "model": {
+    "model_id": "c5bde5de-9805-48d4-a016-1db6e6018fc4",
+    "name": "glm-5.2",
+    "provider": "openai",
+    "description": "GLM-5.2 via BigModel",
+    "is_active": true,
+    "context_window": 1000000,
+    "max_completion_tokens": 131072,
+    "architecture": null,
+    "thinking_capability": "both"
+  },
+  "secrets_included": false
+}

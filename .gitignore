@@ -26,3 +26,11 @@ target/
 /rag/corpus/
 /rag/refs/
 /nlp2sql/enron/data/*.sqlite
+
+# Local Astra source checkout, raw benchmark jobs, generated analysis outputs,
+# and session scratch files are not repository evidence.
+/external/
+/work/
+/outputs/
+/session-events.txt
+/tmpt.txt

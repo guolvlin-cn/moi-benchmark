@@ -1,0 +1,40 @@
+model:
+  default: glm-5.2
+  provider: zai
+toolsets:
+  - hermes-cli
+agent:
+  max_turns: 90
+  gateway_timeout: 24000
+memory:
+  memory_enabled: false
+  user_profile_enabled: false
+compression:
+  enabled: true
+  threshold: 0.85
+terminal:
+  backend: local
+  cwd: /app
+  timeout: 180
+delegation:
+  max_iterations: 50
+approvals:
+  mode: smart
+  timeout: 60
+  cron_mode: deny
+  deny: []
+  mcp_reload_confirm: true
+  destructive_slash_confirm: true
+command_allowlist: []
+quick_commands: false
+hooks: false
+hooks_auto_accept: false
+mcp_servers: false
+mcp:
+  auto_reload_on_config_change: false
+security:
+  redact_secrets: true
+  tirith_enabled: true
+  tirith_fail_open: true
+checkpoints:
+  enabled: false

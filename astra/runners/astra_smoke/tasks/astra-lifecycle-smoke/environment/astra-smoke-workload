@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+progress_path=/app/progress.log
+recovery_path=/app/recovery.json
+result_path=/app/result.txt
+trigger_path=/tmp/astra-smoke/trigger
+
+if [[ ! -e "$progress_path" ]]; then
+    attempt=1
+    printf 'phase-1\n' > "${progress_path}.tmp"
+    mv "${progress_path}.tmp" "$progress_path"
+else
+    attempt=2
+fi
+
+printf '%s\n' \
+    "{\"attempt\":${attempt},\"expected_result\":\"astra-lifecycle-smoke:complete\",\"resume_command\":\"/usr/local/bin/astra-smoke-workload\",\"status\":\"resume-required\"}" \
+    > "${recovery_path}.tmp"
+mv "${recovery_path}.tmp" "$recovery_path"
+
+mkdir -p "$(dirname "$trigger_path")"
+printf 'phase-1-complete\n' > "${trigger_path}.tmp"
+mv "${trigger_path}.tmp" "$trigger_path"
+
+sleep 8
+
+printf 'astra-lifecycle-smoke:complete\n' > "${result_path}.tmp"
+mv "${result_path}.tmp" "$result_path"
+
+printf '%s\n' \
+    "{\"attempt\":${attempt},\"expected_result\":\"astra-lifecycle-smoke:complete\",\"resume_command\":\"/usr/local/bin/astra-smoke-workload\",\"status\":\"complete\"}" \
+    > "${recovery_path}.tmp"
+mv "${recovery_path}.tmp" "$recovery_path"

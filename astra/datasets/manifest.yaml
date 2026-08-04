@@ -1,6 +1,6 @@
 schema_version: 1
 track: astra
-snapshot_date: "2026-07-22"
+snapshot_date: "2026-07-31"
 frozen: false
 
 audited_candidates:
@@ -37,49 +37,77 @@ audited_candidates:
       - Travel language variants share the same 120 underlying tasks and require paired analysis.
       - The official harness is model-oriented; MOI product runners are a derived implementation.
   - id: terminal-bench-2.1
-    role: p1_terminal_external_comparability
-    decision: include_in_pilot_after_freeze
+    role: primary_full_clean_and_sampled_fault_track
+    decision: selected_for_v0_5_after_freeze
     source: https://github.com/harbor-framework/terminal-bench-2-1
-    source_revision: null
+    source_revision: 5c8eadf1f393183288fa08b8f73ca9a469cc5e00
     official_dataset: terminal-bench/terminal-bench-2-1
     official_version: "2.1"
     license_declared: Apache-2.0
     task_count: 89
     evaluator: task_specific_programmatic_tests
     primary_dimensions: [terminal_execution, artifact_correctness, task_completion]
-    excluded_from: [p0_state_control_score, security_score, recovery_score]
+    excluded_from: [p0_state_control_score, security_score]
     freeze_blockers:
-      - Pin the task repository commit and Harbor dataset revision instead of using latest.
+      - Confirm the candidate task repository commit and pin the Harbor dataset revision instead of using latest.
       - Pin every environment image digest and record network policy and hardware limits.
-      - Validate the selected eight Pilot tasks with oracle and frontier-agent replays.
+      - Validate all 89 tasks for the lifecycle-clean full-set run.
+      - Freeze the final fault-compatible base-task, reserve, and smoke counts before any formal product results exist; the current planning values are 12, 4, and 2.
       - Complete equivalent Astra, Hermes, and Goose Harbor adapter smoke tests.
     notes:
       - The official release article says 28 of 89 tasks changed from 2.0, while the repository README says 26; freeze the exact artifacts rather than relying on either count.
-      - The MOI three-trial Pilot is not an official leaderboard submission; the official repository requires at least five trials per task for submission.
+      - The v0.5 repetition count is not frozen, and lifecycle-wrapper results are MOI product-level results rather than an official leaderboard submission.
   - id: swe-bench-live
-    role: p1_repository_issue_resolution
-    decision: include_in_pilot_after_split_freeze
+    role: secondary_dataset_direction_protocol_unfrozen
+    decision: selected_as_direction_execution_plan_deferred
     source: https://github.com/microsoft/SWE-bench-Live
     source_revision: null
-    candidate_release: v1.0-multi-language-multi-os-benchmarking
-    candidate_split: null
+    dataset_source: https://huggingface.co/datasets/SWE-bench-Live/SWE-bench-Live
+    dataset_revision: a637bd46829f3132e12938c8a0ca93173a977b8e
+    candidate_release: python
+    candidate_split: verified
     license_declared: MIT
     published_snapshots:
       initial_python: 1319
       initial_python_lite: 300
+      python_verified_rows: 500
+      python_verified_unique_instance_ids: 499
       multilingual_linux: 743
       windows: 61
     evaluator: dockerized_fail_to_pass_and_pass_to_pass_tests
     primary_dimensions: [repository_navigation, code_editing, regression_avoidance]
     excluded_from: [p0_state_control_score, security_score, multi_tenant_isolation]
+    planned_task_count: null
+    planned_conditions: null
+    execution_milestone: null
     freeze_blockers:
-      - Choose one frozen release and split; do not sample from the moving full split.
-      - Pin repository base commits, test patches, environment images, and evaluator code.
-      - Select four Pilot tasks with explicit repository, language, and difficulty strata.
+      - Pin the Python evaluation harness commit and do not sample from the moving full split.
+      - Pin repository base commits, test patches, environment image digests, and evaluator code.
+      - Gold-replay every candidate task three times on the experiment machine.
       - Complete equivalent runner smoke tests and verify patch extraction.
     notes:
       - Python, multilingual Linux, and Windows releases use different evaluation paths and must not be merged into one score without a declared design.
       - This benchmark measures issue resolution, not durable session ownership or crash recovery.
+      - The current decision only records SWE-bench-Live Python verified as the preferred second-dataset direction; task selection, conditions, repetitions, and schedule remain undefined.
+  - id: gdpval-v2
+    role: deferred_professional_artifact_quality_track
+    decision: defer_from_v0_5_after_swe_bench_selection
+    source: https://huggingface.co/datasets/openai/gdpval
+    source_revision: 11e7900cdcac61bc4daf59e65feb238acda98fbf
+    public_task_count: 220
+    public_deliverable_missing_task_count: 35
+    license_declared: null
+    evaluator: occupation_expert_pairwise_preference_with_noncanonical_local_rubric_options
+    primary_dimensions: [professional_artifact_quality, multimodal_file_generation, instruction_following]
+    excluded_from: [v0_5_scored_runs, official_local_leaderboard_score, crash_recovery]
+    freeze_blockers:
+      - Resolve dataset and third-party artifact license boundaries.
+      - Freeze the full attachment snapshot and file-level hashes.
+      - Build deterministic artifact checks plus a versioned rubric judge.
+      - Calibrate the local judge against occupation experts before cross-product scoring.
+    notes:
+      - The hosted grader and leaderboard are no longer available, and the local rubric path is not canonical.
+      - GDPval broadens occupational and artifact coverage but is deferred so scoring uncertainty does not confound the v0.5 lifecycle study.
   - id: mcp-universe
     role: p1_mcp_specialist_gate
     decision: conditional_include_as_separate_specialist_module

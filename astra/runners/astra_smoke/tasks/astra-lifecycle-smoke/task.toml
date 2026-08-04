@@ -1,0 +1,42 @@
+schema_version = "1.1"
+artifacts = []
+
+[task]
+name = "local/astra-lifecycle-smoke"
+description = "Deterministic execution-plane smoke task for Astra C0/F1 lifecycle checks."
+keywords = ["astra", "smoke", "lifecycle", "recovery"]
+
+[[task.authors]]
+name = "Astra smoke runner"
+email = "noreply@example.com"
+
+[metadata]
+difficulty = "easy"
+category = "infrastructure"
+tags = ["astra", "harbor", "controller"]
+expert_time_estimate_min = 1.0
+junior_time_estimate_min = 2.0
+
+[verifier]
+timeout_sec = 30.0
+# Harbor's Docker provider cannot enforce no-network/allowlist policies on
+# Docker Desktop for macOS. This task is a local infrastructure smoke only.
+network_mode = "public"
+
+[agent]
+timeout_sec = 300.0
+
+[environment]
+build_timeout_sec = 600.0
+network_mode = "public"
+cpus = 1
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]
