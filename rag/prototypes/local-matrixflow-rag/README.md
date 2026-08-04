@@ -193,7 +193,8 @@ with tool-call support. It does not deploy the frontend or A2A transport; the
 prompt, tool order, source-selection contract, ingestion transforms, and
 retrieval implementations are taken from the checked-out product.
 
-`--force` truncates only the configured benchmark vector table. Without it,
+`--force` drops and recreates only the configured benchmark vector table, so
+embedding-dimension changes are applied. Without it,
 the indexer replaces rows for documents present in the current source
 directory. Use `--force` whenever documents were removed from the corpus so
 their old rows cannot remain in the table.

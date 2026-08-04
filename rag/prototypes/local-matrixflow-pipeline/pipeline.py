@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -30,8 +31,32 @@ def allocate_run(root: Path) -> Path:
     raise RuntimeError("could not allocate a unique run directory")
 
 
-def run_command(command: list[str], cwd: Path, log_path: Path) -> str:
-    completed = subprocess.run(command, cwd=cwd, text=True, capture_output=True)
+def load_dotenv(path: Path, environ: dict[str, str]) -> None:
+    """Load simple KEY=VALUE entries without overriding exported values."""
+    if not path.is_file():
+        return
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[7:].lstrip()
+        key, separator, value = line.partition("=")
+        key = key.strip()
+        if not separator or not key or not key.replace("_", "").isalnum():
+            continue
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1]
+        environ.setdefault(key, value)
+
+
+def run_command(
+    command: list[str], cwd: Path, log_path: Path, environment: dict[str, str]
+) -> str:
+    completed = subprocess.run(
+        command, cwd=cwd, env=environment, text=True, capture_output=True
+    )
     log_path.parent.mkdir(parents=True, exist_ok=True)
     log_path.write_text(
         "$ " + " ".join(command) + "\n\nSTDOUT\n" + completed.stdout
@@ -67,16 +92,32 @@ def main() -> int:
     parser.add_argument("--question", help="single interactive knowledge question")
     parser.add_argument("--dataset", help="optional benchmark questions JSONL")
     parser.add_argument("--parser-profile", default="web-default", choices=["web-default", "v3-native"])
+    parser.add_argument(
+        "--parser-pipeline",
+        default="local",
+        choices=["local", "precision", "agent"],
+        help="local MatrixFlow parser or an official MinerU cloud pipeline",
+    )
+    parser.add_argument(
+        "--env-file",
+        default=str((ROOT.parent / ".env").resolve()),
+        help="shared .env containing MINERU_API_TOKEN and TAAS_API_KEY",
+    )
     parser.add_argument("--run", default="runs/end-to-end", help="artifact root")
     parser.add_argument("--max-hits", type=int, default=10)
     args = parser.parse_args()
 
     run_dir = allocate_run(Path(args.run).resolve())
     print(f"run_dir={run_dir}")
+    env_file = Path(args.env_file).resolve()
+    environment = os.environ.copy()
+    load_dotenv(env_file, environment)
     combined = run_dir / "parsed-documents.jsonl"
     manifest: dict[str, object] = {
         "schema_version": "matrixflow-local-e2e-v1",
         "parser_profile": args.parser_profile,
+        "parser_pipeline": args.parser_pipeline,
+        "env_file": str(env_file),
         "inputs": [],
         "status": "running",
     }
@@ -89,10 +130,13 @@ def main() -> int:
                         "go", "run", "./cmd/local-matrixflow-parser", "parse",
                         "--input", str(source),
                         "--profile", args.parser_profile,
+                        "--pipeline", args.parser_pipeline,
+                        "--env-file", str(env_file),
                         "--run", str(child_root),
                     ],
                     PARSER,
                     run_dir / "logs" / f"parse-{index:04d}.log",
+                    environment,
                 )
                 child = emitted_run_dir(output)
                 documents = child / "documents.jsonl"
@@ -112,6 +156,7 @@ def main() -> int:
             ],
             RAG,
             run_dir / "logs" / "rag-ingest.log",
+            environment,
         )
         manifest["rag_ingest_run"] = str(emitted_run_dir(ingest_output))
 
@@ -125,6 +170,7 @@ def main() -> int:
                 ],
                 RAG,
                 run_dir / "logs" / "qa.log",
+                environment,
             )
             qa_run = emitted_run_dir(ask_output)
             manifest["qa_run"] = str(qa_run)
@@ -141,6 +187,7 @@ def main() -> int:
                 ],
                 RAG,
                 run_dir / "logs" / "benchmark.log",
+                environment,
             )
             manifest["benchmark_run"] = str(emitted_run_dir(benchmark_output))
         manifest["status"] = "succeeded"

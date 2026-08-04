@@ -28,21 +28,18 @@ product artifacts
 {"id":"...","content":"...","type":"text","metadata":{"file_id":"...","file_name":"..."}}
 ```
 
-The default profile represents the web `standard_rag` node
-`moi:document.parse`, pinned to V2. Backends that cannot run locally are
-explicit slots, never simulated:
+The orchestration layer selects one explicit parser pipeline:
 
-| Route | Dependency | Local status |
+| Pipeline | Route | Authentication |
 | --- | --- | --- |
-| PDF | MinerU | `not_configured` |
-| PDF table preprocessing | Paddle | optional, `not_configured` |
-| DOC/DOCX/PPT/PPTX | converter, then MinerU | `not_configured` |
-| XLS/XLSX | OpenXML | `not_configured` |
-| image OCR/caption | VLM | `not_configured` |
+| `precision` | official MinerU V4 | `MINERU_API_TOKEN` |
+| `agent` | official MinerU Agent V1 | none |
+| `local` | MatrixFlow V3 Native or V2 boundary | none for native formats |
 
-Text, Markdown, and HTML use MatrixFlow V3 Native only as an explicit
-compatibility route because the web V2 legacy pre-dispatch implementation is
-package-private. Its summary records `web_equivalent=false`.
+Official MinerU output is normalized through MatrixFlow Markdown blocks. The
+run records the provider, model, remote task IDs, stage timings, and download
+transport. It remains marked `web_equivalent=false` because it is not the
+MatrixFlow-pinned MinerU deployment.
 
 ### Stage 2 — index and knowledge QA
 

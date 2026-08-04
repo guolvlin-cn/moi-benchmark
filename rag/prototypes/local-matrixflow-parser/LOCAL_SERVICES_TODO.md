@@ -1,5 +1,10 @@
 # MatrixFlow API-only 本地测试配置 TODO
 
+> 2026-08-03 更新：解析器已经改为直接调用 MinerU 官方服务，不再使用 302.AI。
+> `--pipeline precision` 使用官方精准解析 API 和 `MINERU_API_TOKEN`；
+> `--pipeline agent` 使用无需 Token 的官方 Agent 轻量解析 API。本文后续涉及
+> 302.AI 的内容仅保留为历史方案，不再是当前实现说明；实际用法以 README 为准。
+
 目标：本机不部署 MinerU、VLM、Embedding、Rerank 或问答模型。本机只保留：
 
 - `local-matrixflow-parser` 适配器；
