@@ -4,14 +4,93 @@
 
 评分范围为 SROIE 100份、VRDU 97份、Kleister-NDA 100份，每个产品共297份文档。
 
-## 1. 总体结论
+## 1. 实验配置
+
+本节记录实际 run 产物和运行脚本能够验证的配置。`run config` 未保存的值不会根据当前环境反推，以避免把评测后的配置误写成当时配置。六组实验均对同一数据集使用一套固定业务 Schema，但双方 Schema 描述并非逐字相同，因此本实验属于产品原生配置对比，不是同提示词、同模型对照。
+
+### 1.1 六组实验与输入
+
+| 数据集 | 产品 | 提交输入 | 原始数 | 评分数 | 运行时间 | 配置证据 |
+|---|---|---|---|---|---|---|
+| SROIE | MOI | 由 JPG 等尺寸绘制生成的单页 PDF | 100 | 100 | 2026-07-27T17:24:15+08:00 | [config](../../runs/matrixflow-sroie2019-workflow-2b084712/config.json) |
+| SROIE | LandingAI | 原始 JPG | 100 | 100 | 2026-07-24T06:32:34.228404+00:00 | [config](../../runs/landingai-sroie-batch-20260724T063234Z/config.json) |
+| VRDU Registration | MOI | PDF | 100 | 97 | 2026-07-28T12:03:39+08:00 | [config](../../runs/matrixflow-vrdu-registration-schema-fixed/config.json) |
+| VRDU Registration | LandingAI | PDF | 100 | 97 | 2026-07-24T05:58:42.411371+00:00 | [config](../../runs/landingai-vrdu-batch-20260724T055842Z/config.json) |
+| Kleister-NDA | MOI | PDF | 100 | 100 | 2026-07-28T11:36:54+08:00 | [config](../../runs/matrixflow-kleister-nda-schema-fixed/config.json) |
+| Kleister-NDA | LandingAI | PDF | 100 | 100 | 2026-07-24T07:23:22.398227+00:00 | [config](../../runs/landingai-kleister-batch-20260724T072322Z/config.json) |
+
+VRDU 的3个内容安全失败 case 从双方共同评分集合中排除；它们仍保留在原始 run 中用于审计。
+
+### 1.2 LandingAI 配置
+
+| 配置项 | 实际值 |
+|---|---|
+| API Base URL | `https://api.va.landing.ai/v1/ade` |
+| Parse 模型 | `dpt-2-20260410` |
+| Extract 模型 | `extract-20260314` |
+| 并发数 | 5 |
+| 轮询间隔 | 3.0 秒 |
+| 单次 HTTP 超时 | 120 秒 |
+| 提交重试 | 脚本默认最多5次；指数退避上限30秒并加入随机抖动 |
+| 认证 | `Authorization: Bearer <API_KEY>`；密钥不写入 run 产物 |
+
+LandingAI 调用链路：
+
+| 阶段 | 方法与 API | 主要参数/产物 |
+|---|---|---|
+| 提交解析 | `POST /parse/jobs` | multipart `document`；`model=dpt-2-20260410` |
+| 查询解析 | `GET /parse/jobs/{job_id}` | 轮询至完成，保存 Markdown、metadata 和 credits |
+| 提交提取 | `POST /extract/jobs` | multipart `markdown`；`schema`、`model=extract-20260314`、`strict=true` |
+| 查询提取 | `GET /extract/jobs/{job_id}` | 轮询至完成，保存 extraction、metadata 和 credits |
+| 下载异步结果 | `GET {output_url}` | 仅在完成响应通过 `output_url` 返回结果时调用 |
+
+三个 LandingAI runner 使用相同模型和运行参数，仅输入文件类型及 Schema 不同。精确 Schema 分别保存在 [SROIE](../../runs/landingai-sroie-batch-20260724T063234Z/schema.json)、[VRDU](../../runs/landingai-vrdu-batch-20260724T055842Z/schema.json) 和 [Kleister-NDA](../../runs/landingai-kleister-batch-20260724T072322Z/schema.json)；字段描述包含 `x-alternativeNames`。
+
+### 1.3 MOI 配置
+
+| 配置项 | 实际值或证据边界 |
+|---|---|
+| Backend API | `http://127.0.0.1:18000`（本地部署） |
+| Catalog API | `http://127.0.0.1:18081`（本地部署） |
+| Workspace ID | `abe9f340-ab88-0d9c-5773-837e70c25c48` |
+| Workflow | `解析信息提取` / `2b084712-3ed2-4034-965b-8e2657693359` |
+| 执行方式 | 逐文件串行；单个 case 失败后默认继续 |
+| 轮询/请求超时 | 脚本默认5秒轮询；HTTP 60秒；上传/下载300秒；单任务3600秒 |
+| Schema 传递 | SROIE 使用工作流存储默认值；VRDU、Kleister-NDA 通过 `values.extract_schema` 显式覆盖 |
+| 提取模型 | 工作流默认值未写入 run config；SROIE 一条运行错误可验证 `qwen3.7-max`，不能据此确认所有成功 case |
+| OCR/VLM 模型 | 工作流存在 `vlm_ocr_model` 默认字段，但其具体值未持久化，报告不作推断 |
+
+MOI 调用链路：
+
+| 阶段 | 方法与 API | 主要参数/产物 |
+|---|---|---|
+| 登录 | `POST /newmoi/login` | 获得 backend access token 和 catalog API key |
+| 读取工作流 | `GET /newmoi/workflow/v2/workflow-apps/2b084712-3ed2-4034-965b-8e2657693359` | 校验工作流默认值和运行时字段 |
+| 上传文件 | `POST /api/v1/workspaces/abe9f340-ab88-0d9c-5773-837e70c25c48/files` | multipart `file`，返回 `file_id` |
+| 创建执行 | `POST /newmoi/workflow/v2/workflow-apps/2b084712-3ed2-4034-965b-8e2657693359/executions` | `values`、`trigger_now=true` |
+| 轮询结果 | `GET /newmoi/workflow/v2/workflow-apps/2b084712-3ed2-4034-965b-8e2657693359/executions/{execution_id}/result` | 等待 completed/failed/cancelled |
+| 下载产物 | `GET /api/v1/workspaces/abe9f340-ab88-0d9c-5773-837e70c25c48/files/{file_id}/download` | 保存包含 parse、Markdown 和 extract JSON 的 ZIP |
+
+MOI 工作流的实际节点链路为文件读取、文档解析、`LLM Advanced Structured Extraction`、结果保存。Backend 使用 Bearer token 与 `X-Workspace-ID`，Catalog 使用 `X-API-Key`；认证值均未写入报告。
+
+### 1.4 Schema 与字段约束
+
+| 数据集 | 字段与类型 | 主要约束 |
+|---|---|---|
+| SROIE | `company/date/address/total: string` | 收据商户、交易日期、多行商户地址、最终应付总额 |
+| VRDU | `file_date/foreign_principle_name/registrant_name/registration_num/signer_name/signer_title: string` | 保留 `foreign_principle_name` 的数据集字段拼写；registration number 按文本处理 |
+| Kleister-NDA | `effective_date/jurisdiction/term: string`; `party: array<string>` | 日期归一到 YYYY-MM-DD；term 归一为 `number_unit`；party 可多值 |
+
+MOI 的 VRDU/Kleister Schema 设置 `additionalProperties=false` 且所有字段必填，缺失标量返回空字符串、缺失 party 返回空数组。LandingAI 使用 `strict=true`，并提供字段别名。双方业务字段集合一致，但描述与约束表达不同；这部分配置差异可能影响结果，应与准确率一起解读。
+
+## 2. 总体结论
 
 | 产品 | 三数据集平均 F1 | 平均文档全对率 | 完成数 | 总体成功率 |
 |---|---|---|---|---|
 | MOI | 64.57% | 20.81% | 297/297 | 100.00% |
 | LandingAI | 69.77% | 27.10% | 297/297 | 100.00% |
 
-## 2. 数据集级结果
+## 3. 数据集级结果
 
 | 数据集 | 产品 | 评分数 | P | R | Micro F1 | Macro F1 | 文档全对率 | Strict F1 | 成功率 | Schema 合规 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -22,7 +101,7 @@
 | kleister | moi | 100 | 41.93% | 50.25% | 45.71% | 52.48% | 5.00% | 24.23% | 100.00% | 100.00% |
 | kleister | landingai | 100 | 45.30% | 52.01% | 48.42% | 54.19% | 2.00% | 25.73% | 100.00% | 100.00% |
 
-## 3. 字段级 F1
+## 4. 字段级 F1
 
 | 数据集 | 字段 | MOI F1 | LandingAI F1 | 差值（MOI-LandingAI） |
 |---|---|---|---|---|
@@ -41,7 +120,7 @@
 | kleister | party | 39.38% | 43.88% | -4.50pp |
 | kleister | term | 62.75% | 63.64% | -0.89pp |
 
-## 4. 空字段与非空字段
+## 5. 空字段与非空字段
 
 空字段误提率衡量 Gold 为空时产品仍返回值的比例；非空漏提率衡量 Gold 有值但产品返回空的比例。
 
@@ -54,7 +133,7 @@
 | kleister | moi | 95 | 67.37% | 32.63% | 305 | 41.64% | 5.90% | 52.46% |
 | kleister | landingai | 95 | 80.00% | 20.00% | 305 | 42.95% | 2.30% | 54.75% |
 
-## 5. 文档级正面对比
+## 6. 文档级正面对比
 
 | 数据集 | 评分数 | 双方全对 | 仅 MOI 全对 | 仅 LandingAI 全对 | 双方均未全对 |
 |---|---|---|---|---|---|
@@ -62,7 +141,7 @@
 | vrdu | 97 | 5 | 9 | 5 | 78 |
 | kleister | 100 | 2 | 3 | 0 | 95 |
 
-## 6. 错误类型
+## 7. 错误类型
 
 | 数据集 | 产品 | 正确 | 错值 | 漏字段 | 空字段误提 | 数组混合错误 | 系统失败字段 |
 |---|---|---|---|---|---|---|---|
@@ -73,7 +152,7 @@
 | kleister | moi | 191 | 76 | 18 | 31 | 84 | 0 |
 | kleister | landingai | 207 | 86 | 7 | 19 | 81 | 0 |
 
-## 7. 耗时与成本
+## 8. 耗时与成本
 
 | 数据集 | 产品 | 平均耗时 | P95 | 总 Credits | 平均 Credits/Case |
 |---|---|---|---|---|---|
@@ -86,7 +165,7 @@
 
 耗时口径并非完全一致：MOI 使用每个任务从开始到完成的墙钟时间；LandingAI 使用 Parse 与 Extract 响应中报告的服务耗时之和。因此耗时只用于观察当前运行表现，不作为严格同硬件性能结论。MOI 当前没有可比的 credits 数据。
 
-## 8. 综合评测分析
+## 9. 综合评测分析
 
 - LandingAI 的三数据集平均 F1 为69.77%，比 MOI 的64.57%高5.20个百分点；平均文档全对率高6.29个百分点，整体开箱准确率领先。
 - SROIE 是差距最大的场景，LandingAI F1 高10.66个百分点，并在 company、date、address、total 四个字段上全部领先；MOI 的主要短板是多行地址。
@@ -97,7 +176,7 @@
 - MOI Kleister 的 `party` 序列化为单字段对象数组。评测将其视为字符串数组的等价表示，语义评分和 Schema 合规统计均不因此判错。
 - Strict 与标准化分数差距较大，说明日期格式、标点、空白、地址换行和数组表示会产生明显落库清洗成本。
 
-## 9. 产品选择建议
+## 10. 产品选择建议
 
 - 标准收据和快速 API 接入场景：当前更推荐 LandingAI，其 SROIE 准确率和文档全对率有明确优势。按本次兼容口径，双方三个数据集的 Schema 合规率均为100%。
 - 监管表单或错误填值代价较高的场景：MOI 在 VRDU 上具有竞争力。其 Precision、空字段判断和文档全对率更好，适合宁可返回空值、也不希望写入错误值的策略。
@@ -105,7 +184,7 @@
 - NDA/合同场景：双方都不应直接用于无人审核入库，应采用自动提取后人工复核。LandingAI 在 effective_date 和 party 上稍好，MOI 在 jurisdiction 和文档全对率上稍好。
 - 本次评测没有测试私有部署、工作流编排、模型替换、提示词调优、权限治理或系统集成，这些能力不能作为本报告验证出的产品优势。
 
-## 10. 评测局限
+## 11. 评测局限
 
 - 每个产品只运行一次，没有通过重复运行评估随机波动和结果稳定性。
 - 数据来自三个公开英文数据集，不能直接代表中文文档或公司真实业务文档。
