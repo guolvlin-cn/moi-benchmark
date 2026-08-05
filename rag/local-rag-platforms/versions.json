@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-08-05",
+  "host": {
+    "os": "macOS",
+    "host_arch": "arm64",
+    "container_runtime": "colima",
+    "container_platform": "linux/arm64",
+    "memory_gib": 16,
+    "compose_required": ">=2.24"
+  },
+  "model_egress": "external",
+  "services": {
+    "dify_local": {
+      "repo": "https://github.com/langgenius/dify.git",
+      "tag": "1.16.1",
+      "compose_locator": "docker/docker-compose.yaml",
+      "base_url": "http://127.0.0.1:8010/v1",
+      "web_url": "http://127.0.0.1:8010",
+      "planned_port": 8000,
+      "port": 8010,
+      "port_note": "Host 8000 was already occupied by an unrelated uvicorn process; Dify remains on the planned container port with host mapping 8010.",
+      "platform_policy": "native_then_emulated",
+      "resolved_source_commit": "6f8ed69ee15f9a2e7189ca066275e973d091d1e9",
+      "status": "partial_ready_missing_local_keys"
+    },
+    "fastgpt_local": {
+      "repo": "https://github.com/labring/FastGPT.git",
+      "tag": "v4.15.6",
+      "compose_locator": "document/public/deploy/docker/v4.15/global/docker-compose.pg.yml",
+      "base_url": "http://127.0.0.1:3000",
+      "port": 3000,
+      "deployment_image_version": "v4.15.4",
+      "deployment_image_note": "The checked-in v4.15 PgVector compose currently references v4.15.4 images while the source checkout is v4.15.6.",
+      "platform_policy": "native_then_emulated",
+      "resolved_source_commit": "3db33e93b78e75b37c93f7a6e3d0fafeafbfd256",
+      "status": "partial_ready_missing_local_keys"
+    },
+    "ragflow_local": {
+      "repo": "https://github.com/infiniflow/ragflow.git",
+      "tag": "v0.26.4",
+      "compose_locator": "docker/docker-compose.yml",
+      "base_url": "http://127.0.0.1:9380",
+      "port": 9380,
+      "platform_policy": "native_then_emulated",
+      "known_arch_note": "Official prebuilt images are primarily x86; verify manifest before pull.",
+      "resolved_source_commit": "cb93883f3f8c975eecb2fed81210effeb3bdb06f",
+      "status": "image_ready_amd64_emulation_pending"
+    },
+    "maxkb_local": {
+      "repo": "https://github.com/1Panel-dev/maxkb.git",
+      "tag": "v2.10.4-lts",
+      "compose_locator": "official Docker image / repository deployment docs",
+      "base_url": "http://127.0.0.1:8090",
+      "port": 8090,
+      "platform_policy": "native_then_emulated",
+      "resolved_source_commit": "fd6141e662582e88a41edbb7f6f89f4539e3e5dd",
+      "status": "image_ready_arm64_service_not_started"
+    }
+  }
+}
