@@ -95,8 +95,8 @@ def main() -> int:
     parser.add_argument(
         "--parser-pipeline",
         default="local",
-        choices=["local", "precision", "agent"],
-        help="local MatrixFlow parser or an official MinerU cloud pipeline",
+        choices=["local", "precision", "agent", "vlm"],
+        help="local MatrixFlow parser, official MinerU cloud pipeline, or TaaS VLM",
     )
     parser.add_argument(
         "--env-file",
@@ -105,6 +105,11 @@ def main() -> int:
     )
     parser.add_argument("--run", default="runs/end-to-end", help="artifact root")
     parser.add_argument("--max-hits", type=int, default=10)
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="drop and recreate the local vector table before ingesting",
+    )
     args = parser.parse_args()
 
     run_dir = allocate_run(Path(args.run).resolve())
@@ -146,14 +151,16 @@ def main() -> int:
                     {"source": str(source), "run_dir": str(child), "summary": summary}
                 )
 
+        ingest_command = [
+            "go", "run", ".", "ingest",
+            "--config", str(Path(args.config).resolve()),
+            "--documents", str(combined),
+            "--run", str(run_dir / "rag-ingest"),
+        ]
+        if args.force:
+            ingest_command.append("--force")
         ingest_output = run_command(
-            [
-                "go", "run", ".", "ingest",
-                "--config", str(Path(args.config).resolve()),
-                "--documents", str(combined),
-                "--run", str(run_dir / "rag-ingest"),
-                "--force",
-            ],
+            ingest_command,
             RAG,
             run_dir / "logs" / "rag-ingest.log",
             environment,

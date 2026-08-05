@@ -72,6 +72,7 @@ class PipelineCLITest(unittest.TestCase):
                 parser_invocation["args"][parser_invocation["args"].index("--env-file") + 1],
                 str(env_file.resolve()),
             )
+            self.assertNotIn("--force", invocations[1]["args"])
             for invocation in invocations:
                 self.assertEqual(invocation["mineru_token"], "fake-mineru-token")
                 self.assertEqual(invocation["taas_key"], "fake-taas-token")

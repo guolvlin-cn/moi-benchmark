@@ -7,7 +7,7 @@
   "workspace_id": "local-rag-smoke",
   "matrixflow_root": "../../../../matrixflow",
   "chunk_size": 512,
-  "chunk_overlap": 50,
+  "chunk_overlap": 64,
   "section_size": 5,
   "embedding": {
     "mode": "hash",

@@ -214,7 +214,10 @@ func callExploreModel(ctx context.Context, cfg GenerationConfig, messages []expl
 			Message exploreMessage `json:"message"`
 		} `json:"choices"`
 	}
-	client := &http.Client{Timeout: time.Duration(cfg.TimeoutSeconds) * time.Second}
+	client := &http.Client{
+		Timeout:   time.Duration(cfg.TimeoutSeconds) * time.Second,
+		Transport: newHTTPTransport(strings.EqualFold(strings.TrimSpace(cfg.Provider), "taas")),
+	}
 	if err := postOpenAIJSON(ctx, client, cfg.BaseURL, "/chat/completions", cfg.APIKeyEnv, payload, &response); err != nil {
 		return exploreMessage{}, err
 	}

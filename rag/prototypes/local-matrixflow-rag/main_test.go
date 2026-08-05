@@ -9,11 +9,13 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync/atomic"
 	"testing"
 	"time"
 
 	"github.com/matrixflow/moi-core/agent-tools/knowledge"
 	knowledgeservice "github.com/matrixflow/moi-core/agent-tools/knowledge/service"
+	"github.com/matrixflow/moi-core/workers/go-worker/pkg/workitems"
 )
 
 func TestLoadConfigAppliesTaaSDefaults(t *testing.T) {
@@ -49,8 +51,22 @@ func TestLoadConfigAppliesTaaSDefaults(t *testing.T) {
 	if cfg.Embedding.APIKeyEnv != taasAPIKeyEnvName || cfg.Generation.APIKeyEnv != taasAPIKeyEnvName {
 		t.Fatalf("TaaS key envs = embedding %q, generation %q", cfg.Embedding.APIKeyEnv, cfg.Generation.APIKeyEnv)
 	}
+	if cfg.Overlap != 64 || cfg.EmbeddingBatchSize != 64 || cfg.InsertBatchSize != 50 {
+		t.Fatalf("production defaults = overlap %d, embedding batch %d, insert batch %d", cfg.Overlap, cfg.EmbeddingBatchSize, cfg.InsertBatchSize)
+	}
 	if _, err := newEmbedder(cfg.Embedding); err != nil {
 		t.Fatalf("newEmbedder() rejected TaaS mode: %v", err)
+	}
+}
+
+func TestTaaSTransportBypassesEnvironmentProxy(t *testing.T) {
+	direct := newHTTPTransport(true)
+	if direct.Proxy != nil {
+		t.Fatal("TaaS direct transport still has an environment proxy")
+	}
+	defaultRoute := newHTTPTransport(false)
+	if defaultRoute.Proxy == nil {
+		t.Fatal("default provider transport lost environment proxy support")
 	}
 }
 
@@ -103,16 +119,74 @@ func TestPostOpenAIJSONRejectsMissingConfiguredAPIKey(t *testing.T) {
 	}
 }
 
-func TestChunkTextUsesDeterministicOverlap(t *testing.T) {
-	chunks := chunkText("abcdefghij", 6, 2)
-	if len(chunks) != 2 {
-		t.Fatalf("chunk count = %d, want 2", len(chunks))
+func TestPostOpenAIJSONRetriesTransient405(t *testing.T) {
+	t.Setenv(taasAPIKeyEnvName, "test-taas-key")
+	var calls atomic.Int32
+	server := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if calls.Add(1) == 1 {
+			writer.Header().Set("Retry-After", "0")
+			writer.WriteHeader(http.StatusMethodNotAllowed)
+			_, _ = writer.Write([]byte("temporary WAF response"))
+			return
+		}
+		writer.Header().Set("Content-Type", "application/json")
+		_, _ = writer.Write([]byte(`{"data":[]}`))
+	}))
+	defer server.Close()
+
+	var response map[string]any
+	err := postOpenAIJSONWithRetry(
+		context.Background(),
+		server.Client(),
+		server.URL,
+		"/embeddings",
+		taasAPIKeyEnvName,
+		map[string]any{"model": "bge-m3", "input": []string{"hello"}},
+		&response,
+		requestRetryPolicy{MaxAttempts: 2, BaseDelay: time.Millisecond},
+	)
+	if err != nil {
+		t.Fatal(err)
 	}
-	if got, want := chunks[0], (textChunk{Start: 0, End: 6, Content: "abcdef"}); got != want {
-		t.Fatalf("first chunk = %+v, want %+v", got, want)
+	if got := calls.Load(); got != 2 {
+		t.Fatalf("request attempts = %d, want 2", got)
 	}
-	if got, want := chunks[1], (textChunk{Start: 4, End: 10, Content: "efghij"}); got != want {
-		t.Fatalf("second chunk = %+v, want %+v", got, want)
+}
+
+func TestProductEmbeddingContractTruncatesAndBatches(t *testing.T) {
+	docs := make([]workitems.Document, 0, 65)
+	for i := 0; i < 65; i++ {
+		docs = append(docs, workitems.Document{
+			Content:  strings.Repeat("界", 5000),
+			Metadata: map[string]interface{}{"file_id": "file-1", "chunk_index": i},
+		})
+	}
+	indexes, inputs := workitems.CollectEmbeddingInputsForLocalRAG(docs)
+	if len(indexes) != len(docs) || len(inputs) != len(docs) {
+		t.Fatalf("embedding inputs = %d/%d, want %d/%d", len(indexes), len(inputs), len(docs), len(docs))
+	}
+	if got := len(inputs[0]); got > 8192 {
+		t.Fatalf("embedding input bytes = %d, want <= 8192", got)
+	}
+	batches := workitems.SplitEmbeddingInputsForLocalRAG(inputs)
+	if len(batches) != 3 || len(batches[0].Inputs) != 32 || len(batches[1].Inputs) != 32 || len(batches[2].Inputs) != 1 {
+		t.Fatalf("embedding batches = %#v, want 32+32+1 due to 256 KiB cap", batches)
+	}
+}
+
+func TestLocalTaaSEmbeddingBatchSizePreservesByteLimit(t *testing.T) {
+	inputs := make([]string, 0, 1025)
+	for i := 0; i < 1025; i++ {
+		inputs = append(inputs, fmt.Sprintf("item-%d", i))
+	}
+	batches := splitEmbeddingInputsForLocalRAG(inputs, 1024)
+	if len(batches) != 2 || len(batches[0].Inputs) != 1024 || len(batches[1].Inputs) != 1 {
+		t.Fatalf("batches = %#v, want 1024+1", batches)
+	}
+	for _, batch := range batches {
+		if batch.Bytes > 256*1024 {
+			t.Fatalf("batch bytes = %d, want <= 256 KiB", batch.Bytes)
+		}
 	}
 }
 

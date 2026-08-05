@@ -40,6 +40,14 @@ func PlanFor(fileType, profile string, additional map[string]any) ParsePlan {
 		})
 	}
 	switch fileType {
+	case "txt", "text", "csv", "json", "jsonl", "md", "markdown", "html", "htm":
+		// RichConverter's V2 plain/HTML/Markdown pre-dispatch is package-private
+		// and also owns Catalog markdown artifacts. The local adapter deliberately
+		// uses the product V3 native source for these offline formats instead of
+		// claiming a byte-for-byte V2 execution.
+		plan.Conformance.WebEquivalent = false
+		plan.Conformance.Route = "legacy-local-format-adapter/v3-native"
+		plan.Conformance.Reason = "web V2 rich-converter pre-dispatch is package-private; product V3 native source is used locally"
 	case "pdf":
 		plan.DirectV2 = true
 		add("mineru", "PDF layout/OCR parsing", true)
