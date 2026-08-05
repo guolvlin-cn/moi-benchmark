@@ -1,209 +1,419 @@
-# MOI OmniDocBench 当前跑分、模型版本与低分原因记录
+# MOI OmniDocBench 全量评测分析
 
-更新时间：2026-08-03
+更新时间：2026-08-05
 
-## 1. 评测口径
+## 1. 结论
 
-- 数据集：OmniDocBench v1.6，共 1651 页。
-- 评分方式：官方 `end2end`、`quick_match`。
-- Overall 公式：
+MOI IDC 4.1.14 在 OmniDocBench v1.6 全量 1651 页上的正式 Overall 为
+**90.23**。这是本报告唯一采用的测试结果。
 
-  ```text
-  ((1 - Text Edit Distance) * 100 + Formula CDM + Table TEDS) / 3
-  ```
+| 指标 | 结果 | 趋势 | 是否进入 Overall |
+|---|---:|---|---|
+| Overall | **90.23** | 越高越好 | — |
+| Text Edit Distance | 0.1002 | 越低越好 | 是，以 `1 - Edit` 计入 |
+| Formula CDM | 94.04 | 越高越好 | 是 |
+| Table TEDS | 86.66 | 越高越好 | 是 |
+| Table TEDS-S | 89.78 | 越高越好 | 否，辅助观察表格结构 |
+| Reading Order Edit Distance | 0.3135 | 越低越好 | 否，单独报告 |
 
-- MOI 输出由 `_parse.json` 无损转换为官方评分所需的逐页 Markdown：保留
-  `text/title/table/code`，过滤 `header/footer/image`，不修复 OCR、公式、
-  表格内容、标题层级或阅读顺序。
-- 表格分数只对 5 个输出中被双重引用的纯数字 `rowspan/colspan` 属性做了
-  序列化还原。这些 span 属性语义合法，归一化不改变表格内容和结构。
+从 Overall 的失分构成看，当前最大扣分项是表格，其次是文本，公式相对最好：
 
-## 2. MOI 全量及分批实测分数
+| 主指标 | 距离满分 | 对 Overall 的扣分 | 占 Overall 总失分 |
+|---|---:|---:|---:|
+| Table TEDS | 13.34 | **4.45** | 45.5% |
+| Text | 10.02 | **3.34** | 34.2% |
+| Formula CDM | 5.96 | **1.99** | 20.3% |
 
-最早对 1651 页混合结果直接评分得到 Overall **87.07**。后续发现这 1651 页
-并非使用同一 MinerU 接口和后端完成，因此该数字只能作为历史全量结果，不能
-作为当前 MOI 的代表分数。
+因此，MOI 当前最值得关注的不是公式，而是表格区域检测、表格结构恢复及复杂
+页面中的正文保留和阅读顺序。
 
-| 结果口径 | 页数 | Overall↑ | Text Edit↓ | Formula CDM↑ | Table TEDS↑ | TEDS-S↑ | Reading Order Edit↓ |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| 历史全量混合结果 | 1651 | **87.07** | 0.1083 | 86.47 | 85.58 | 88.83 | 0.3212 |
-| 第一批：老 MinerU 接口、VLM 后端 | 1239 | **90.04** | 0.1099 | 95.91 | 85.21 | 88.64 | 0.3293 |
-| 第二批：新 MinerU 接口、误用 Pipeline 后端 | 412 | **78.14** | 0.1034 | 57.95 | 86.81 | 89.45 | 0.2967 |
+## 2. 测试对象与实际配置
 
-当前暂以第一批正常 VLM 链路的 1239 页均值 **90.04** 作为 MOI 全量表现的
-近似值，但它不是完整 1651 页同配置重跑所得的正式全量分数。
+### 2.1 解析链路
 
-两批拆分后，最显著的差异集中在公式：第一批 Formula CDM 为 **95.91**，
-第二批只有 **57.95**。第二批 585 个公式样本中有 106 个预测为空；第一批
-1767 个公式样本中只有 12 个预测为空。因此，异常 Pipeline 批次和低分存在
-很强的相关性。
+本次评测对象为 **MOI IDC 4.1.14**，实际链路为：
 
-需要保留的主要限制是：两批页面不是同一批页面的严格 A/B。第二批运行期间
-虽然遇到火山云欠费、远程 Paddle 服务无法访问，但该服务只用于图片后处理的
-OCR；表格区域检测调用的是本地 CPU 上的 Paddle，不受此次服务不可用影响。
-因此，火山云问题预计对 OmniDocBench 主要分数影响很小，不能解释第二批明显
-偏低的 Overall 和 Formula CDM；当前差异主要仍与 MinerU 后端从 VLM 变为
-`pipeline` 及其输出适配问题相关。不过，由于不是同页 A/B，仍不能据此精确
-量化单独切换后端带来的分数变化。
+1. 本地 Paddle `PP-DocLayout_plus-L` 检测表格区域；
+2. 将表格区域从 MinerU 输入中涂白或替换为占位符，避免重复识别；
+3. MinerU 2.7.4 使用 `vlm-vllm-async-engine` 解析处理后的 PDF；
+4. 当前运行口径下，MinerU VLM 对应 `MinerU2.5-2509-1.2B`；
+5. MOI V2 Pipeline 合并 MinerU 文本块与 Paddle 表格块；
+6. 使用 `qwen3.5-27b` 执行标题、页眉页脚、表格 HTML、多表判断等 VLM
+   后处理。
 
-## 3. MOI 实际使用的模型和链路
+Paddle 在这里承担的是表格区域检测，不是完整的 PaddleOCR-VL 文档解析模型。
+`use_remote_paddle_layout=false`，说明表格版面检测使用本地 Paddle，而不是远程
+Paddle 服务。
 
-本次被评测的产品版本为 IDC 4.1.14。核心链路为：
+| MOI 内部组件 | 实际版本/模型 | 在 MOI 中的作用 | 与公开榜单模型的关系 |
+|---|---|---|---|
+| MinerU | 软件/镜像版本 `2.7.4`；backend `vlm-vllm-async-engine`；VLM 权重口径为 `MinerU2.5-2509-1.2B`（1.2B） | 解析表格区域被遮盖或占位后的 PDF，主要提供正文、标题和公式块 | 使用了 MinerU-2.5 权重，但输入已被 MOI 预处理，之后还会经过 MOI 合并和后处理，因此不等同于榜单中的独立 MinerU-2.5 完整流程 |
+| Paddle | `PP-DocLayout_plus-L`，本地运行 | 检测表格等版面区域，为 MOI 表格抽取和占位提供区域 | 只是版面检测模型，不是 PaddleOCR-VL、PaddleOCR-VL-1.5 或 1.6 的完整端到端解析流程 |
+| MOI 后处理 VLM | `qwen3.5-27b` | 标题、页眉页脚、多表判断、表格 HTML 等后处理 | MOI 自有组合链路的一部分，不对应 OmniDocBench 榜单中的独立解析器 |
 
-1. Paddle `PP-DocLayout_plus-L` 检测表格区域；
-2. 将检测到的表格区域涂白或插入占位符；
-3. MinerU 解析处理后的 PDF；
-4. MOI V2 Pipeline 合并 MinerU 文本块和 Paddle 表格块，并执行表格 HTML、
-   多表拆分、跨页表、标题、页眉页脚、排序等后处理。
+因此，MOI 的 90.23 不能理解为 MinerU-2.5 分数与 PaddleOCR-VL 分数的组合或
+加权。MOI 实际上是“MinerU-2.5 VLM + Paddle 版面检测 + MOI/Qwen 后处理”的
+完整系统分数。
 
-| 批次 | MinerU 软件/接口 | MinerU 后端 | 对应模型 | 页数 |
-|---|---|---|---|---:|
-| 第一批 | MinerU 2.7.4 老接口 | `vlm-vllm-async-engine` | `MinerU2.5-2509-1.2B`，1.2B | 1239 |
-| 第二批 | 新 MinerU API | `pipeline` | MinerU Pipeline，不是 MinerU2.5 VLM | 412 |
+### 2.2 关键配置解释
 
-MinerU 2.7.4 官方默认 VLM 权重是
-`OpenDataLab/MinerU2.5-2509-1.2B`，因此当前将第一批记作 MinerU2.5。
-但尚未进入 MOCloud 私有镜像核实其 `mineru.json` 和实际权重是否被替换过，
-这一对应关系仍保留镜像侧未核验的限制。
+1651 个最终 ZIP 均包含配置快照。审计结果为：**1651/1651 配置一致**。
 
-MOI 使用的 Paddle 模型是表格区域检测模型 `PP-DocLayout_plus-L`，不是公开
-榜单中的完整 PaddleOCR-VL 文档解析流程，两者不能直接视为同一个模型。
+| 配置维度 | 实际值 | 含义 |
+|---|---|---|
+| Parser Pipeline | `enable_parser_pipeline=true` | 启用 MOI V2 后处理链路 |
+| MinerU backend | `vlm-vllm-async-engine` | 使用 MinerU VLM 后端 |
+| 后处理 VLM | `qwen3.5-27b` | 标题、页眉页脚、表格等后处理模型 |
+| Paddle Layout | `use_remote_paddle_layout=false` | 本地 `PP-DocLayout_plus-L` |
+| 并发 | `max_workers=16` | 解析内部最大 worker 数 |
+| 页眉页脚输入 | `enable_header_footer_as_text=true` | MinerU 的 header/footer 先按正文进入后续链路 |
+| 页眉页脚检测 | `enable_vlm_header_footer_detection=true` | MOI 仍会重新判断页眉页脚 |
+| 标题检测 | `enable_vlm_title_detection=true` | 启用 VLM 标题检测 |
+| PPT 标题模式 | `ppt_title_detection_mode=block` | 按块进行 PPT 标题检测 |
+| 表格 HTML 重建 | `enable_table_html_regeneration=true` | 启用表格 HTML 重建 |
+| 多表/合并表处理 | `enable_merged_table_split=true` | 启用合并表拆分判断 |
+| 跨页表 | `enable_cross_page_table_merge=true` | 启用跨页表合并 |
+| 表格存图 | `save_table_image_file=true` | 保存表格区域图片 |
+| 表格转图片 | `cast_table_as_image=false` | 最终表格不降级为图片 |
+| Markdown 表格图片 | `enable_table_image_in_markdown=false` | Markdown 不插入表格图片 |
+| 公式修复 | `enable_formula_repair=true` | 启用公式后处理修复 |
+| 列表/缩进修复 | `enable_list_marker_repair=true`、`enable_indent_detection=true` | 启用列表符号与缩进检测 |
+| 碎片合并 | `enable_fragment_merge=false`、`enable_image_fragment_merge=false` | 本次未启用两类碎片合并 |
+| 图片 OCR | `enable_image_ocr=false` | 批处理请求未启用图片 OCR |
 
-## 4. 公开 MinerU 与 Paddle 分数
+完整 ParserConfig options 如下；这是从最终 ZIP 中读取的实际值，不是示例配置：
 
-### 4.1 OmniDocBench v1.6 同口径结果
+```yaml
+enable_parser_pipeline: true
+debug_enabled: true
+max_workers: 16
+pptx_normalize_before_pdf: false
+save_table_image_file: true
+cast_table_as_image: false
+enable_table_html_regeneration: true
+enable_table_embedded_image_extraction: true
+enable_merged_table_split: true
+enable_cross_page_table_merge: true
+unmerge_table_cells: false
+enable_table_inline_image_text: false
+enable_table_image_in_markdown: false
+enable_vlm_title_detection: true
+enable_vlm_header_footer_detection: true
+enable_formula_repair: true
+enable_list_marker_repair: true
+enable_indent_detection: true
+enable_fragment_merge: false
+enable_image_fragment_merge: false
+enable_strikethrough_detection: false
+ppt_title_detection_mode: block
+enable_image_annotation_text: false
+enable_decorative_icon_detection: true
+flowchart_table_strategy: table
+indent_spaces_per_level: 2
+vlm_model: qwen3.5-27b
+header_footer_similarity_threshold: 0.6
+header_footer_short_text_threshold: 0.8
+header_footer_min_text_threshold: 0.95
+header_footer_block_coverage_threshold: 0.7
+cross_page_merge_header_table: true
+cross_page_table_vlm_timeout: 120.0
+wps_file_type_detection_mode: null
+title_detection_enable_reasoning: true
+table_multi_table_judge_timeout: 30.0
+table_multi_table_judge_retries: 2
+table_multi_table_generate_timeout: 120.0
+table_multi_table_generate_retries: 1
+table_regenerate_timeout: 120.0
+table_regenerate_retries: 1
+l1_html_generation_timeout: 120.0
+l1_html_generation_retries: 1
+flowchart_detect_future_timeout: 60.0
+l1_html_generation_future_timeout: 120.0
+decorative_icon_ecc_threshold: 0.8
+decorative_icon_max_dimension: 200
+enable_cross_page_geometric_filter: true
+enable_openxml_header_footer: true
+enable_doc_libreoffice_openxml: true
+enable_doc_uno_hf: false
+enable_paddle_hf_geometric_filter: false
+enable_header_footer_as_text: true
+use_remote_paddle_layout: false
+flowchart_table_ignore_judge: true
+image_section_heading_level: bold
+prompt_overrides: {}
+save_ppt_page_as_image: false
+```
 
-以下数字来自 OmniDocBench 官方仓库当前 v1.6_full End-to-End 榜单，与本次
-本地 v1.6 评测最接近。公开结果包含各项目自己的完整推理和后处理流程，并非
-只评单一权重，因此只能作为公开基线，不能视为严格复现实验。
+## 3. 数据与评分输入
 
-| 系列 | 公开模型/流程 | 参数量或版本 | Overall↑ | Text Edit↓ | Formula CDM↑ | Table TEDS↑ | TEDS-S↑ | Reading Order Edit↓ |
+- 数据集：OmniDocBench v1.6，全量 1651 页；
+- 原始解析输出：1651 个 ZIP，均可正常解压且各包含一个正式 `_parse.json`；
+- Golden：官方 `OmniDocBench.json`；
+- 预测：由结构化 `_parse.json` 转成与 Golden 一一对应的 1651 个 Markdown；
+- 评分：官方 `end2end`，匹配方式为 `quick_match`；
+- 有效样本：文本 1557 页、公式 2352 个（313 页）、表格 665 个（458 页）、
+  阅读顺序 1638 页。
+
+### 3.1 适配规则
+
+适配器只解决 IDC 输出与官方评分输入之间的格式差异：
+
+- 按最终块顺序保留 `text`、`title`、`table`、`code`；
+- `title.level=1~6` 原样转成对应数量的 Markdown `#`；
+- 过滤 `header`、`footer` 和 `image`；
+- 只把被重复转义的数字型 `rowspan/colspan` 还原为合法 HTML 属性；
+- 不修改 OCR 内容、公式、表格内容、标题层级或阅读顺序；
+- 不对缺失块、错分块或空预测做人工补全。
+
+标题层级没有单独的排行榜指标。适配器会保留 Markdown 标题层级，但官方最终
+主指标仍以文本、公式、表格和阅读顺序为核心。页眉页脚和图片也不直接计入
+Overall；但如果正文被错误标成 header/footer，适配时会被过滤，正文会按缺失
+扣分。
+
+## 4. 评分工具与复现环境
+
+本次计分使用 [OmniDocBench 官方评测工具](https://github.com/opendatalab/OmniDocBench)
+的 `end2end` 流程，而非自建文本相似度脚本。评分工具和实际执行环境记录如下：
+
+| 项目 | 本次使用值 |
+|---|---|
+| 官方评测仓库 | `opendatalab/OmniDocBench` |
+| 本地归档的评测源码版本 | commit `2b161d010d2e3aff77a0edef359ea3a6411d23cd` |
+| 评分流程 | `pdf_validation.py` / `end2end_eval` |
+| 匹配方式 | `quick_match` |
+| Docker 镜像 | `ghcr.io/zeng-weijun/omnidocbench-eval:repro-ubuntu2204` |
+| 评分配置 | `evaluate/moi-omnidocbench-final/end2end.docker.yaml` |
+| 评分结果 | `evaluate/moi-omnidocbench-final/result/` |
+| 环境快照 | `evaluate/moi-omnidocbench-final/result/omnidocbench-idc-4.1.14-official-md_quick_match_runtime_environment.json` |
+
+评分配置中明确启用了文本 `Edit_dist`、公式 `Edit_dist + CDM`、
+表格 `TEDS + Edit_dist` 和阅读顺序 `Edit_dist`；并发数为 13，单页匹配
+超时为 420 秒，`quick_match` 截断超时为 300 秒。
+
+容器内实际运行时依赖已随评分结果归档，关键版本为：
+
+| 运行时依赖 | 版本 |
+|---|---|
+| 操作系统 | Ubuntu 22.04.5 LTS，glibc 2.35 |
+| Python | 3.10.16，Conda 环境 `omnidocbench_v16_smoke_20260408_py310` |
+| TeX | TeX Live 2025，pdfTeX `1.40.28` |
+| CJK | `CJK.sty` 4.8.5，`c70gkai.fd` 4.8.5，字体族 `gkai` |
+| ImageMagick | 7.1.1-47 Q16-HDRI |
+| Ghostscript | 9.55.0 |
+| 核心 Python 包 | Levenshtein 0.25.1，apted 1.0.3，lxml 4.9.1，numpy 1.24.4，pandas 2.0.3，Pillow 10.4.0，PyYAML 6.0.2，scipy 1.10.1 |
+
+在 `document-parsing` 目录下可用以下命令复现评分。为避免覆盖归档结果，
+复现输出单独写入 `reproduced-result`：
+
+```bash
+cd /Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-parsing
+mkdir -p evaluate/moi-omnidocbench-final/reproduced-result
+
+docker run --rm \
+  --entrypoint /opt/miniconda310/envs/omnidocbench_v16_smoke_20260408_py310/bin/python \
+  -v "$PWD/datasets/omnidocbench/OmniDocBench.json:/workspace/gt/OmniDocBench.json:ro" \
+  -v "$PWD/runs/omnidocbench-idc-4.1.14-vlm-final-1651-official-md:/workspace/data_md/omnidocbench-idc-4.1.14-vlm-final-1651-official-md:ro" \
+  -v "$PWD/evaluate/moi-omnidocbench-final/end2end.docker.yaml:/workspace/configs/moi-omnidocbench-final.yaml:ro" \
+  -v "$PWD/evaluate/moi-omnidocbench-final/reproduced-result:/workspace/result" \
+  ghcr.io/zeng-weijun/omnidocbench-eval:repro-ubuntu2204 \
+  pdf_validation.py --config configs/moi-omnidocbench-final.yaml
+```
+
+镜像 tag、本地官方源码 commit、评分配置和容器环境快照均已记录；
+本次归档没有额外保存镜像 digest，因此长期严格复现时还应确认该 tag
+仍指向同一镜像内容。
+
+## 5. 评分细则
+
+### 5.1 Text Edit Distance
+
+官方匹配 Golden 与预测的文本块并计算归一化编辑距离，越低越好：
+
+- `0` 表示文本完全一致；
+- `1` 表示对应文本基本缺失或完全不匹配；
+- Overall 使用 `1 - Text Edit Distance` 作为文本得分。
+
+本次 Text Edit 为 `0.1002196469`，对应文本得分 `89.9780`。
+
+### 5.2 Formula CDM
+
+CDM 用于评价展示公式识别，越高越好。最终报告采用按页聚合的 `ALL`：
+
+- 公式样本数：2352；
+- 公式计分页：313；
+- Formula CDM：`0.9403592033`，即 **94.04**。
+
+### 5.3 Table TEDS 与 TEDS-S
+
+TEDS 根据预测 HTML 与 Golden HTML 的树编辑相似度评价表格内容和结构，越高
+越好；TEDS-S 只关注结构，不把单元格文本作为主要比较对象。
+
+- 表格样本数：665；
+- 表格计分页：458；
+- TEDS：`0.8666337555`，即 **86.66**；
+- TEDS-S：`0.8977578027`，即 **89.78**。
+
+TEDS 进入 Overall，TEDS-S 仅作辅助分析。TEDS-S 比 TEDS 高 3.11 分，说明
+除行列和合并单元格结构外，单元格文字识别、内容遗漏与内容错位也是重要失分
+来源。
+
+### 5.4 Reading Order Edit Distance
+
+该指标比较块阅读顺序，越低越好。本次结果为 `0.3134844644`。它不进入
+Overall，但反映复杂布局、块丢失、块类型错误和排序后处理带来的实际影响。
+
+### 5.5 Overall
+
+本报告延续官方结果中的 page-level `ALL` 聚合口径：
+
+```text
+Overall = ((1 - Text Edit) + Formula CDM + Table TEDS) / 3 × 100
+
+        = ((1 - 0.100219646925)
+           + 0.940359203319
+           + 0.866633755480) / 3 × 100
+
+        = 90.2257770625
+```
+
+Reading Order 和 TEDS-S 不进入 Overall。
+
+## 6. MinerU 与 Paddle 公开模型对照
+
+下表补充 OmniDocBench 官方 `v1.6_full` End-to-End 榜单中 MinerU、Paddle
+系列的公开结果，并与本地 MOI 全量结果放在一起。公开分数是各项目自己的
+**完整推理与后处理流程**，不是单个权重或 MOI 内部组件的消融分数。
+
+| 系列 | 模型/流程 | 版本或参数量 | Overall↑ | Text Edit↓ | Formula CDM↑ | Table TEDS↑ | TEDS-S↑ | Reading Order Edit↓ |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| MinerU | MinerU-Pipeline | MinerU 3.4.0 | 86.47 | 0.055 | 83.07 | 81.88 | 88.68 | 0.153 |
-| MinerU | MinerU-2.5 | 1.2B | 93.04 | 0.045 | 95.77 | 87.88 | 91.47 | 0.130 |
-| MinerU | MinerU2.5-Pro | 1.2B | 95.75 | 0.036 | 97.45 | 93.42 | 95.92 | 0.120 |
+| **MOI（本地实测）** | **IDC 4.1.14 最终配置** | MinerU-2.5 + PP-DocLayout_plus-L + Qwen3.5-27B | **90.23** | 0.1002 | 94.04 | 86.66 | 89.78 | 0.3135 |
+| MinerU | MinerU-Pipeline | 3.4.0 | 86.47 | 0.055 | 83.07 | 81.88 | 88.68 | 0.153 |
+| MinerU | MinerU-2.5 | `MinerU2.5-2509-1.2B` | 93.04 | 0.045 | 95.77 | 87.88 | 91.47 | 0.130 |
+| MinerU | MinerU2.5-Pro | `MinerU2.5-Pro-2605-1.2B` | 95.75 | 0.036 | 97.45 | 93.42 | 95.92 | 0.120 |
 | Paddle | PaddleOCR-VL | 0.9B | 94.18 | 0.040 | 95.91 | 90.65 | 93.74 | 0.135 |
 | Paddle | PaddleOCR-VL-1.5 | 0.9B | 94.93 | 0.038 | 96.89 | 91.67 | 94.37 | 0.130 |
 | Paddle | PaddleOCR-VL-1.6 | 0.9B | 96.34 | 0.0326 | 97.5304 | 94.7619 | 97.1002 | 0.1278 |
 
-来源：[OmniDocBench 官方 v1.6 End-to-End 榜单](https://github.com/opendatalab/OmniDocBench#end-to-end-evaluation)。
-榜单同时标注 MinerU-2.5 权重为 `MinerU2.5-2509-1.2B`，MinerU-Pipeline
-评测版本为 3.4.0。
+来源：[OmniDocBench 官方 v1.6_full End-to-End 榜单与模型版本说明](https://github.com/opendatalab/OmniDocBench#end-to-end-evaluation)。
 
-### 4.2 之前查到的 v1.5 历史数字
+对照时需要注意：
 
-这些数字来自较早的 v1.5 公开材料，不应和上面的 v1.6 分数直接横向排序：
+1. **MOI 使用的是 MinerU-2.5 权重，不是 MinerU2.5-Pro。** MinerU 软件/镜像
+   版本为 2.7.4，VLM backend 为 `vlm-vllm-async-engine`；
+2. **MOI 没有调用 PaddleOCR-VL 系列端到端解析器。** `PP-DocLayout_plus-L`
+   只负责本地版面/表格区域检测，所以 PaddleOCR-VL 的 94.18～96.34 不能当作
+   MOI 内部 Paddle 环节的分数；
+3. MOI 的输入预处理会遮盖 MinerU 所见的表格区域，随后再由 Paddle 表格结果
+   和 MOI 后处理回填，因此其错误传播方式与独立 MinerU-2.5 不同；
+4. MOI 的公式分数接近 MinerU-2.5，但 Text 和 Reading Order 差距更明显；
+   表格分数也略低于独立 MinerU-2.5，和前文识别出的表格检测、拆分及回填问题
+   一致；
+5. 这些公开结果可用于定位量级，但不是相同服务环境、相同推理参数下的严格
+   A/B 复现。
 
-| 模型/流程 | OmniDocBench 版本 | 公开 Overall |
-|---|---|---:|
-| MinerU 3.0 Pipeline | v1.5 | 86.2 |
-| MinerU2.5 | v1.5 | 90.67 |
-| PaddleOCR-VL | v1.5 | 92.86 |
-| PaddleOCR-VL-1.5 | v1.5 | 94.5 |
+## 7. 主要扣分点
 
-来源：
+### 7.1 表格是 Overall 最大扣分来源
 
-- [MinerU 官方 README](https://github.com/opendatalab/MinerU/blob/master/README_zh-CN.md)：记录 MinerU 3.0 Pipeline 在 v1.5 上为 86.2。
-- [MinerU2.5 论文](https://openreview.net/pdf/f7e33cc67eec3a7907d32d5b5ba389a28e3c9e0d.pdf)：记录 MinerU2.5 在当时口径下为 90.67。
-- [PaddleOCR-VL 论文](https://arxiv.org/abs/2510.14528)：对应初代 0.9B PaddleOCR-VL 的公开评测。
-- [PaddleOCR-VL 官方文档](https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/version3.x/pipeline_usage/PaddleOCR-VL.md)：记录 PaddleOCR-VL-1.5 在 v1.5 上为 94.5，并说明完整 PaddleOCR-VL 包含版面分析和 VLM 识别两个阶段。
+Table TEDS 距离满分 13.34 分，对 Overall 造成 **4.45 分**损失，占 Overall
+全部失分的 45.5%。665 个表格中有 11 个 TEDS 为 0，56 个低于 0.5。
 
-## 5. 两批 MinerU 接口差异及其影响
+主要问题包括：
 
-全量运行到后 412 页时切换了 MinerU API。切换时没有注意后端参数，新接口
-调用成了 `backend=pipeline`，而不是第一批使用的 VLM 后端。
+1. **表格区域检测过大或错误**：多个独立表格被 Paddle 识别为一个大区域；
+2. **缺少 MinerU 兜底**：表格区域被涂白后，Paddle 误检会同时屏蔽 MinerU
+   对该区域正文或表格的识别；
+3. **多表拆分失败**：一个大区域没有恢复成 Golden 中的多张独立表格；
+4. **HTML 重建损失**：出现空行、内容截断、单元格错位或下半张表缺失；
+5. **表格类型漏判**：视觉表格被输出成列表或普通文本，文字可能可读，但
+   Table TEDS 仍为 0；
+6. **后续排序丢块**：表格已在中间阶段生成，最终排序后消失。
 
-这不仅改变了底层解析能力，也可能改变中间 JSON 的结构和 block 类型。当前
-MOI 适配链路最初按 VLM 输出设计，Pipeline 可能输出此前未完整适配的类型或
-字段，例如 `index` 类 block，造成内容没有进入公式、正文或最终 Markdown。
-这一点目前是基于输出差异提出的机制假设，尚未对 412 页所有中间 block 做完
-逐类型统计。
+按官方属性分组，`layout_hard` 的 TEDS 为 80.94，`table_hard` 为 82.37；
+新闻、笔记、传统中文和学术文献类表格也相对偏低。由于属性组样本量不同，
+这些分组只用于定位方向，不应直接解释为稳定的文档类型排名。
 
-分批计分结果支持“第二批链路异常”的判断：第二批 Overall 比第一批低
-**11.90** 分，Formula CDM 低 **37.96** 分；将其混入全量后，Overall 从第一批
-近似值 90.04 降到 87.07。火山云上的远程 Paddle 不可用只影响图片后处理
-OCR，表格检测使用本地 CPU Paddle，预计对这些官方主指标影响很小。因此，
-第二批的显著低分主要指向 MinerU `pipeline` 后端及其 block 输出适配差异；
-但由于两批不是同页 A/B，现阶段仍不把 11.90 分直接等同于切换后端的净影响。
+### 7.2 文本失分包含识别错误和块类型错误
 
-## 6. 第一批仍低于公开 MinerU-2.5 的原因分析
+Text Edit 对 Overall 造成 **3.34 分**损失。1557 个文本计分页中：
 
-排除第二批后，第一批 Overall 为 90.04，仍低于公开 v1.6 榜单中
-MinerU-2.5 的 93.04。逐页检查已确认 MOI 组合与后处理链路会在部分页面上
-新增错误，主要包括以下问题。
+- 14 页 Edit Distance 为 1；
+- 24 页不低于 0.9；
+- 4 页适配后为空，其中 2 页最终只有 image，2 页最终只有 header。
 
-### 6.1 表格区域检测和涂白会放大 Paddle 错误
+主要问题包括：
 
-- Paddle 把多个独立表格检测成一个大区域；对应区域随后从 MinerU 输入中
-  被涂白，MinerU 无法再提供独立表格或正文作为兜底。
-- Paddle 表格区域漏检、误检或覆盖范围过大时，错误会直接传递到最终合并结果。
+1. MinerU 或 Paddle 将正文整体识别为表格，导致文本指标找不到正文块；
+2. 正文或标题被 MOI 后续页眉页脚检测重新标成 header/footer；
+3. 图片页没有开启图片 OCR，最终只有 image block；
+4. 表格占位和合并链路中正文被覆盖或没有回填；
+5. 手写、历史文档、模糊内容、复杂环绕文字等场景 OCR 误差较高。
 
-### 6.2 多表拆分失败
+`enable_header_footer_as_text=true` 只保证 MinerU 已标成 header/footer 的内容先以
+正文进入 MOI；它不能阻止 MOI 后续 VLM 页眉页脚检测再次把正确正文改成
+header/footer。因此，最终结果中仍存在正文被过滤的情况。
 
-- 页面实际包含多张独立表格，但 Paddle 只返回一个大区域。
-- MOI 的 `multi_table_split` 后处理没有将大区域恢复为多张表，最终多个 Golden
-  表格只能匹配到一张输出，其余表格直接得到 0 分。
-- 已确认案例包括 Character Sheet 页面 6 张表合成 1 张，以及两个年度财务表
-  合成 1 张残缺表。
+### 7.3 公式总体较好，但复杂公式页仍有集中失分
 
-### 6.3 表格 HTML 重建产生结构损失
+Formula CDM 对 Overall 造成 **1.99 分**损失，是三个主指标中最小的一项。
+2352 个公式中有 59 个 CDM 为 0，132 个低于 0.5。
 
-- 表格重建后出现大量空行、内容截断、下半张表丢失或单元格结构变化。
-- 这类错误不是 `rowspan/colspan` 序列化引号导致；完成无损 span 归一化后，
-  对应表格仍然低分或为 0。
+主要问题包括：
 
-### 6.4 后续排序阶段丢失已经生成的表格
+- MinerU 漏掉公式，或把公式内容识别成正文、页脚等其他类型；
+- 多栏、环绕文字、模糊扫描和笔记类页面的公式匹配较弱；
+- 公式密集页面中的局部漏识别会产生多个低分样本；
+- 公式修复无法恢复上游完全缺失的公式块。
 
-- 有效表格在前序合并阶段已经存在，但经过最终排序阶段后消失。
-- 已在两个 KET 页面复现；最终 Markdown 可能只剩被过滤的 header/footer，
-  从而形成整页空预测。
+按属性分组，三栏布局 CDM 为 51.29，O 型文字环绕为 46.55，模糊扫描为
+65.95，是目前较明确的困难场景。
 
-### 6.5 正确正文或标题被页眉页脚后处理改错
+### 7.4 阅读顺序是独立的明显弱项
 
-- MinerU 原始结果是正确的 `text/title`，MOI 后续页眉页脚检测将其改成
-  `header/footer`，最终在评分适配时被过滤。
-- 已确认 PPT 首页作者与单位信息被改为 footer。
-- 已确认教材顶部导航和正文主标题文字相同，页眉相似度规则将正文主标题一起
-  归为 header，造成主标题丢失。
+Reading Order Edit 为 0.3135，1638 个计分页中有 87 页为 1，132 页不低于
+0.9。虽然该指标不进入 Overall，但会直接影响最终 Markdown 的可读性。
 
-### 6.6 页眉页脚产品语义与 Golden 口径不一致
+主要原因包括：
 
-- 部分位于页边的考试提示语从产品语义看可以视作 footer，但 OmniDocBench
-  Golden 将其标成正文。
-- 这类页面会形成实际产品策略与 benchmark 标注口径之间的分数损失，和明显的
-  正文误删需要分开理解。
+- 多栏、三栏和报纸布局的跨栏排序错误；
+- 表格标题、表格块与正文块的相对顺序错误；
+- 块丢失或块类型变化导致阅读序列无法正确匹配；
+- 历史文档、手写和复杂几何变形页面的布局恢复不稳定。
 
-上述问题只记录当前已经观察到的现象。MinerU 自身把正文识别为表格、把表格
-识别为列表、漏识别公式或误识别页脚等上游问题也存在，但这些问题理论上也会
-影响公开 MinerU，不足以单独解释 MOI 和 MinerU-2.5 公开分数之间的差距。
+## 8. 评分器异常及结果边界
 
-详细 case 和中间阶段证据见：
+本次官方评分完整处理 1651 页，但存在少量评分器边界情况：
 
-- [低分样本初步分析](./omnidocbench-idc-4.1.14-official/low-score-cases.md)
-- [后处理导致的低分样本](./omnidocbench-idc-4.1.14-official/postprocessing-low-score-cases.md)
+- 2 页 `quick_match` 达到 300 秒后使用官方截断匹配回退，没有页面硬超时；
+- 3 个公式样本因 CDM 临时目录清理异常被记为 0；
+- 3 个超长表格达到 TEDS 120 秒上限，被按超时记为 0。
 
-## 7. 412 页重跑计划与待验证问题
+这 6 个样本对 Overall 的理论最大影响为 **0.239 分**：
 
-当前计划重跑之前使用新 MinerU 接口的 412 页，做两项关键调整：
+- 3 个公式最多影响 Overall `0.021` 分；
+- 3 个表格最多影响 Overall `0.218` 分；
+- 即使全部按满分修正，Overall 上限也约为 `90.47`。
 
-1. MinerU 后端从误用的 `pipeline` 改为 `vlm`；
-2. `enable_header_footer_as_text` 从 `false` 改为 `true`。
+因此，正式结果仍采用官方实际输出 **90.23**；评分器异常不会改变“表格是最大
+扣分项、文本其次、公式相对最好”的总体判断。
 
-`enable_header_footer_as_text=true` 会把 MinerU 原始输出中已经标成
-`header/footer` 的块先按普通正文送入 MOI 后续链路，避免 MinerU 把正文、
-标题附近内容等误标成页眉页脚后被直接过滤。本次重跑用于观察正确 VLM 后端
-和该配置下，这 412 页的 Overall、Text Edit、Formula CDM、Table TEDS、
-Reading Order 以及空预测页数是否明显改善。
+## 9. 最终评价
 
-该配置不能覆盖所有已发现的页眉页脚问题：如果 MinerU 原始结果是正确的
-`text/title`，但 MOI 后续 VLM 页眉页脚检测又将其改成 `header/footer`，错误
-仍可能发生。同时，开启该参数也可能让真实页眉页脚作为正文进入评分。因此，
-重跑结果应被记录为“412 页新配置结果”，不能在未完成同页 A/B 前把全部变化
-只归因于这一参数。
+MOI 在本次统一配置下已经取得较高的公式和整体解析分数，但组合链路会放大
+表格区域检测错误：表格区域一旦涂白，MinerU 无法再对该区域提供兜底，后续
+多表拆分和 HTML 重建若继续失败，就会同时造成表格、正文和阅读顺序失分。
 
-重跑完成前，当前正式记录保持为：
+从最终全量结果看，当前质量瓶颈依次是：
 
-- 历史 1651 页混合分：**87.07**，不作为代表分；
-- 当前代表分：第一批 1239 页正常 VLM 链路 **90.04**；
-- 第二批旧异常结果：412 页 Pipeline 链路 **78.14**，仅用于原因定位；
-- 412 页 VLM + `enable_header_footer_as_text=true`：待完成后补充。
+1. 表格检测、拆分和 HTML 结构恢复；
+2. 复杂布局中的正文保留与阅读顺序；
+3. 页眉页脚后处理对正文和标题的误分类；
+4. 图片页在关闭图片 OCR 时形成的内容缺失；
+5. 多栏、模糊和公式密集页面中的局部公式漏识别。
+
+最终原始输出、评分输入、评分配置和完整指标分别位于：
+
+- `runs/omnidocbench-idc-4.1.14-vlm-final-1651/`
+- `runs/omnidocbench-idc-4.1.14-vlm-final-1651-official-md/`
+- `evaluate/moi-omnidocbench-final/end2end.yaml`
+- `evaluate/moi-omnidocbench-final/result/`

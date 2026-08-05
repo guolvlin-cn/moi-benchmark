@@ -1,0 +1,5 @@
+#   HELP + NOUN + to V
+
+<table><tr><td>SECTION</td><td>1920s</td><td>1930s</td><td>1940s</td><td>1950s</td><td>1960s</td><td>1970s</td><td>1980s</td><td>1990s</td><td>2000s</td></tr><tr><td>FREQ</td><td>12</td><td>11</td><td>29</td><td>29</td><td>39</td><td>34</td><td>12</td><td>12</td><td>3</td></tr><tr><td>PER MIL</td><td>1.57</td><td>0.87</td><td>1.88</td><td>1.73</td><td>2.43</td><td>2.50</td><td>1.06</td><td>1.23</td><td>0.47</td></tr><tr><td>SEE ALL<br/>YEARS<br/>AT ONCE</td><td>[image:7282f5bc-66eb-4c06-afe4-e4c413b6d123]</td><td>[image:9c88c65e-759e-4048-8c6d-755e38f4153b]</td><td>[image:4841921a-8918-4bb5-8a1d-e6e521ce5361]</td><td>[image:df1a3d55-704f-4c36-84c2-db7dd28ace36]</td><td>[image:1fccafdb-1310-4ce8-8cbb-75572c4e93c4]</td><td>[image:fbc4b68f-c4bb-4db3-bc6d-4423aba3a0af]</td><td>[image:9cd967f1-68f2-4e21-960c-19da40265bdc]</td><td>[image:3a78965c-b5f2-4e89-aa21-48153835bed4]</td><td>[image:eac7c859-b41d-4436-8c76-7156f368fb8d]</td></tr></table>
+
+[help].[vv*] [n*] to [v*i]

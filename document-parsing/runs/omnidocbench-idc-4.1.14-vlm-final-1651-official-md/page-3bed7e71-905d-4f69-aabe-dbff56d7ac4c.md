@@ -1,0 +1,9 @@
+# 第三章 公司治理
+
+#### 3.6.1.2 董事在股东单位任职情况
+
+<table><tr><th>姓名</th><th>任职股东单位</th><th>职务</th><th>任期</th></tr><tr><td rowspan="5">方合英</td><td>中国中信集团有限公司</td><td>副总经理</td><td>2020年12月起至今</td></tr><tr><td></td><td>党委委员</td><td>2020年11月起至今</td></tr><tr><td>中国中信股份有限公司</td><td>副总经理</td><td>2020年12月起至今</td></tr><tr><td></td><td>执行委员会成员</td><td></td></tr><tr><td>中国中信有限公司</td><td>副总经理</td><td>2020年12月起至今</td></tr><tr><td rowspan="2">曹国强</td><td>中国中信金融控股有限公司</td><td>董事</td><td>2022年3月起至今</td></tr><tr><td></td><td>总经理(财务负责人)</td><td>2023年5月起至今</td></tr><tr><td rowspan="2">黄芳</td><td>浙江新湖集团股份有限公司</td><td>董事</td><td>2013年8月起至今</td></tr><tr><td></td><td>副总裁</td><td>2011年7月起至今</td></tr><tr><td rowspan="2">王彦康</td><td>国家烟草专卖局</td><td>财务管理与监督司(审计司)</td><td>2016年8月起至今</td></tr><tr><td></td><td>国有资产管理处处长</td><td></td></tr></table>
+
+#### 3.6.1.3 董事在除股东单位外的其他单位任职、兼职情况
+
+<table><tr><th>姓名</th><th>其他单位名称</th><th>职务</th></tr><tr><td rowspan="2">方合英</td><td>中信国际金融控股有限公司</td><td>董事</td></tr><tr><td>中信银行(国际)有限公司</td><td>董事</td></tr><tr><td rowspan="4">刘成</td><td>中信国际金融控股有限公司</td><td>董事</td></tr><tr><td>中信银行(国际)有限公司</td><td>董事</td></tr><tr><td>信银(香港)投资有限公司</td><td>董事</td></tr><tr><td>亚洲金融合作协会</td><td>理事</td></tr><tr><td rowspan="4">廖子彬</td><td>香港商界会计师协会</td><td>荣誉顾问</td></tr><tr><td>深圳前海微众银行股份有限公司</td><td>独立董事</td></tr><tr><td>中国平安人寿保险股份有限公司</td><td>独立董事</td></tr><tr><td>万科企业股份有限公司</td><td>独立董事</td></tr><tr><td rowspan="2">周伯文</td><td>清华大学</td><td>电子工程系长聘教授<br/>惠妍讲席教授</td></tr><tr><td></td><td></td></tr><tr><td rowspan="8">王化成</td><td>中国人民大学</td><td>商学院财务与金融系教授</td></tr><tr><td>全国会计专业学位研究生<br/>教育指导委员会</td><td>副主任</td></tr><tr><td>中国会计学会</td><td>副会长</td></tr><tr><td>中国成本研究会</td><td>副会长</td></tr><tr><td>同方股份有限公司</td><td>独立董事</td></tr><tr><td>万华化学集团股份有限公司</td><td>独立董事</td></tr><tr><td>北京首都国际机场股份有限公司</td><td>独立董事</td></tr><tr><td></td><td></td></tr><tr><td rowspan="2">宋芳秀</td><td>北京大学</td><td>经济学院党委副书记、金融学系教授<br/>中国金融与投资研究中心主任</td></tr></table>
