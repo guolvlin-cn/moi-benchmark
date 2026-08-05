@@ -14,9 +14,11 @@ result, err := localparser.New().ParseFile(ctx, path, options)
 ```
 
 Behind that interface it constructs MatrixFlow
-`parser.UnifiedParseService`, pins `parser_version=v3` and
-`parse_tier=native`, provides a bounded local-file adapter, runs the product
-`SourceRouter`, and returns MatrixFlow standard documents.
+`parser.UnifiedParseService` and provides a bounded local-file adapter. The
+default `web-default` profile follows the RAG rich-converter boundary
+(`parser_version=v2`, `workflow_parser=true`, and OCR+caption intent); the
+explicit `v3-native` profile pins `parser_version=v3` and `parse_tier=native`.
+Both routes return MatrixFlow standard documents.
 
 Use `Profile: "v3-native"` for that strictly local behavior. The CLI defaults
 to `--profile web-default`.
@@ -25,7 +27,7 @@ The CLI also exposes two official MinerU cloud pipelines:
 
 | Pipeline | Official route | Token | Output consumed locally |
 | --- | --- | --- | --- |
-| `precision` | `/api/v4/file-urls/batch` | `MINERU_API_TOKEN` | ZIP `full.md` |
+| `precision` | `/api/v4/file-urls/batch` | `MINERU_API_TOKEN` | ZIP `full.md` plus `images/` assets |
 | `agent` | `/api/v1/agent/parse/file` | none | Markdown CDN URL |
 
 Both routes upload the local file using the signed URL returned by MinerU,

@@ -52,7 +52,7 @@ documents.jsonl + embedding/chat configuration + MatrixOne
 Ingestion:
 
 ```text
-MatrixFlow SplitDocumentsLength(512, 50)
+MatrixFlow SplitDocumentsLength(512, 64)
   -> MatrixFlow MultiLevelIndex(section_size=5)
   -> embedding
   -> product-compatible MatrixOne table

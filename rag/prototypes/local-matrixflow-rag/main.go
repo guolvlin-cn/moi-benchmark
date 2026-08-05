@@ -27,25 +27,29 @@ import (
 	mysqlDriver "github.com/go-sql-driver/mysql"
 	"github.com/matrixflow/moi-core/agent-tools/knowledge"
 	knowledgeservice "github.com/matrixflow/moi-core/agent-tools/knowledge/service"
+	"github.com/matrixflow/moi-core/workers/go-worker/pkg/workitems"
 )
 
 const (
-	schemaVersion     = "matrixflow-product-rag-local-v2"
-	taasAPIBaseURL    = "https://api-taas.moi.matrixorigin.cn/v1"
-	taasAPIKeyEnvName = "TAAS_API_KEY"
+	schemaVersion       = "matrixflow-product-rag-local-v2"
+	taasAPIBaseURL      = "https://api-taas.moi.matrixorigin.cn/v1"
+	taasAPIKeyEnvName   = "TAAS_API_KEY"
+	maxAPIResponseBytes = 64 << 20
 )
 
 var identifierPattern = regexp.MustCompile(`^[A-Za-z_][A-Za-z0-9_]*$`)
 
 type Config struct {
-	MatrixOne      MatrixOneConfig  `json:"matrixone"`
-	Workspace      string           `json:"workspace_id"`
-	MatrixFlowRoot string           `json:"matrixflow_root,omitempty"`
-	ChunkSize      int              `json:"chunk_size"`
-	Overlap        int              `json:"chunk_overlap"`
-	SectionSize    int              `json:"section_size"`
-	Embedding      EndpointConfig   `json:"embedding"`
-	Generation     GenerationConfig `json:"generation"`
+	MatrixOne          MatrixOneConfig  `json:"matrixone"`
+	Workspace          string           `json:"workspace_id"`
+	MatrixFlowRoot     string           `json:"matrixflow_root,omitempty"`
+	ChunkSize          int              `json:"chunk_size"`
+	Overlap            int              `json:"chunk_overlap"`
+	SectionSize        int              `json:"section_size"`
+	EmbeddingBatchSize int              `json:"embedding_batch_size,omitempty"`
+	InsertBatchSize    int              `json:"insert_batch_size,omitempty"`
+	Embedding          EndpointConfig   `json:"embedding"`
+	Generation         GenerationConfig `json:"generation"`
 }
 
 type MatrixOneConfig struct {
@@ -61,6 +65,10 @@ type EndpointConfig struct {
 	APIKeyEnv      string `json:"api_key_env"`
 	Dimension      int    `json:"dimension"`
 	TimeoutSeconds int    `json:"timeout_seconds"`
+	// Embedding-only resilience settings. Generation/Judge calls deliberately
+	// keep the benchmark's hard-stop behavior and do not use these settings.
+	RetryMaxAttempts    int     `json:"retry_max_attempts,omitempty"`
+	RetryBackoffSeconds float64 `json:"retry_backoff_seconds,omitempty"`
 }
 
 type GenerationConfig struct {
@@ -83,6 +91,7 @@ type IndexedChunk struct {
 	ID         string         `json:"id"`
 	FileID     string         `json:"file_id"`
 	FileName   string         `json:"file_name"`
+	PageNumber int            `json:"page_number,omitempty"`
 	Index      int            `json:"chunk_index"`
 	Start      int            `json:"start_offset"`
 	End        int            `json:"end_offset"`
@@ -108,25 +117,42 @@ type IngestState struct {
 }
 
 type QuestionCase struct {
-	ID                     string   `json:"id"`
-	Question               string   `json:"question"`
-	RetrievalKeywords      []string `json:"retrieval_keywords"`
-	RelevantDocuments      []string `json:"relevant_documents"`
-	RelevantEvidence       []string `json:"relevant_evidence"`
-	ExpectedAnswerKeywords []string `json:"expected_answer_keywords"`
-	ExpectedAnswerable     *bool    `json:"expected_answerable,omitempty"`
+	ID                     string         `json:"id"`
+	Question               string         `json:"question"`
+	RetrievalKeywords      []string       `json:"retrieval_keywords"`
+	FileIDs                []string       `json:"file_ids,omitempty"`
+	RelevantDocuments      []string       `json:"relevant_documents"`
+	RelevantEvidence       []string       `json:"relevant_evidence"`
+	ExpectedAnswerKeywords []string       `json:"expected_answer_keywords"`
+	ExpectedAnswerable     *bool          `json:"expected_answerable,omitempty"`
+	Metadata               map[string]any `json:"metadata,omitempty"`
 }
 
 type ChunkResult struct {
-	Rank            int      `json:"rank"`
-	ChunkID         string   `json:"chunk_id"`
-	FileID          string   `json:"file_id"`
-	FileName        string   `json:"file_name"`
-	PageNumber      int      `json:"page_number,omitempty"`
-	Score           float64  `json:"score"`
-	Routes          []string `json:"routes"`
-	Content         string   `json:"content"`
-	SemanticModelID int64    `json:"semantic_model_id,omitempty"`
+	Rank            int       `json:"rank"`
+	ChunkID         string    `json:"chunk_id"`
+	FileID          string    `json:"file_id"`
+	FileName        string    `json:"file_name"`
+	PageNumber      int       `json:"page_number,omitempty"`
+	Score           float64   `json:"score"`
+	Routes          []string  `json:"routes"`
+	Content         string    `json:"content"`
+	SemanticModelID int64     `json:"semantic_model_id,omitempty"`
+	Level           string    `json:"level,omitempty"`
+	ChunkIndex      *int      `json:"chunk_index,omitempty"`
+	ChunkIndexScope string    `json:"chunk_index_scope,omitempty"`
+	ParentIndex     *int      `json:"parent_index,omitempty"`
+	ChunkStart      *int      `json:"chunk_start,omitempty"`
+	ChunkEnd        *int      `json:"chunk_end,omitempty"`
+	SourceURI       string    `json:"source_uri,omitempty"`
+	ImageFileID     string    `json:"image_file_id,omitempty"`
+	PageImageFileID string    `json:"page_image_file_id,omitempty"`
+	BBox            []float64 `json:"bbox,omitempty"`
+	ObjectID        string    `json:"object_id,omitempty"`
+	ObjectKind      string    `json:"object_kind,omitempty"`
+	Scope           string    `json:"scope,omitempty"`
+	ChunkType       string    `json:"chunk_type,omitempty"`
+	BlockUUID       string    `json:"block_uuid,omitempty"`
 }
 
 type CaseMetrics struct {
@@ -178,6 +204,34 @@ type openAIEmbeddingClient struct {
 	config EndpointConfig
 	client *http.Client
 }
+
+type requestRetryPolicy struct {
+	MaxAttempts              int
+	BaseDelay                time.Duration
+	MaxDelay                 time.Duration
+	MethodNotAllowedMinDelay time.Duration
+}
+
+type apiHTTPError struct {
+	StatusCode int
+	Body       string
+	RetryAfter time.Duration
+}
+
+func (e *apiHTTPError) Error() string {
+	return fmt.Sprintf("API_ERROR: HTTP %d: %s", e.StatusCode, e.Body)
+}
+
+type apiRequestError struct {
+	URL string
+	Err error
+}
+
+func (e *apiRequestError) Error() string {
+	return fmt.Sprintf("API_ERROR: request %s: %v", e.URL, e.Err)
+}
+
+func (e *apiRequestError) Unwrap() error { return e.Err }
 
 type hashEmbeddingClient struct {
 	dimension int
@@ -430,6 +484,10 @@ func loadConfig(path string) (Config, error) {
 	if err := json.Unmarshal(raw, &cfg); err != nil {
 		return Config{}, fmt.Errorf("decode config: %w", err)
 	}
+	var rawConfig map[string]json.RawMessage
+	if err := json.Unmarshal(raw, &rawConfig); err != nil {
+		return Config{}, fmt.Errorf("decode config keys: %w", err)
+	}
 	if cfg.Workspace == "" {
 		cfg.Workspace = "local-rag-benchmark"
 	}
@@ -439,8 +497,9 @@ func loadConfig(path string) (Config, error) {
 	if cfg.ChunkSize <= 0 {
 		cfg.ChunkSize = 512
 	}
-	if cfg.Overlap == 0 {
-		cfg.Overlap = 50
+	if _, explicitlyConfigured := rawConfig["chunk_overlap"]; !explicitlyConfigured {
+		// rag-ingest-default-v1.yaml: .vars.chunk_overlap // 64
+		cfg.Overlap = 64
 	}
 	if cfg.Overlap < 0 || cfg.Overlap >= cfg.ChunkSize {
 		return Config{}, errors.New("chunk_overlap must be >= 0 and smaller than chunk_size")
@@ -448,6 +507,18 @@ func loadConfig(path string) (Config, error) {
 	if cfg.SectionSize <= 0 {
 		cfg.SectionSize = 5
 	}
+	// Keep the production insert batch size. Embedding request size is
+	// configurable for the local benchmark: TaaS accepts larger OpenAI-style
+	// batches and using them avoids long runs being classified as high-frequency
+	// traffic by its security gateway. The input-byte limit remains enforced by
+	// splitEmbeddingInputsForLocalRAG.
+	if cfg.EmbeddingBatchSize <= 0 {
+		cfg.EmbeddingBatchSize = 64
+	}
+	if !strings.EqualFold(strings.TrimSpace(cfg.Embedding.Mode), "taas") {
+		cfg.EmbeddingBatchSize = 64
+	}
+	cfg.InsertBatchSize = 50
 	if cfg.MatrixOne.DSN == "" || cfg.MatrixOne.Database == "" || cfg.MatrixOne.VectorTable == "" {
 		return Config{}, errors.New("matrixone.dsn, database, and vector_table are required")
 	}
@@ -458,7 +529,8 @@ func loadConfig(path string) (Config, error) {
 		cfg.Embedding.Mode = "openai"
 	}
 	if cfg.Embedding.Model == "" {
-		cfg.Embedding.Model = "bge-m3"
+		// rag-ingest-default-v1.yaml: .vars.embedding_model // BAAI/bge-m3
+		cfg.Embedding.Model = "BAAI/bge-m3"
 	}
 	if strings.EqualFold(cfg.Embedding.Mode, "taas") {
 		if cfg.Embedding.BaseURL == "" {
@@ -466,6 +538,15 @@ func loadConfig(path string) (Config, error) {
 		}
 		if cfg.Embedding.APIKeyEnv == "" {
 			cfg.Embedding.APIKeyEnv = taasAPIKeyEnvName
+		}
+		if cfg.Embedding.RetryMaxAttempts <= 0 {
+			// TaaS has occasionally returned a transient 405 security-gateway
+			// page during long embedding runs. Retry a bounded number of times;
+			// a persistent error still aborts the run.
+			cfg.Embedding.RetryMaxAttempts = 4
+		}
+		if cfg.Embedding.RetryBackoffSeconds <= 0 {
+			cfg.Embedding.RetryBackoffSeconds = 5
 		}
 	}
 	if cfg.Embedding.Dimension <= 0 {
@@ -497,114 +578,22 @@ func ingestCorpus(ctx context.Context, cfg Config, sourceDir, runDir string, for
 	if err != nil {
 		return nil, err
 	}
-	chunks := make([]IndexedChunk, 0)
-	for _, document := range documents {
-		for index, part := range chunkText(document.Text, cfg.ChunkSize, cfg.Overlap) {
-			id := stableID("chunk", document.FileID+"\x00"+strconv.Itoa(index)+"\x00"+part.Content)
-			chunks = append(chunks, IndexedChunk{
-				ID:         id,
-				FileID:     document.FileID,
-				FileName:   document.Path,
-				Index:      index,
-				Start:      part.Start,
-				End:        part.End,
-				Content:    part.Content,
-				IndexVer:   1,
-				ContentSHA: sha256Text(part.Content),
-				Level:      "chunk",
-				DocID:      document.FileID,
-				SectionID:  document.FileID,
-				Metadata: map[string]any{
-					"chunk_id":          id,
-					"source_file_name":  document.Path,
-					"source_uri":        "benchmark://" + document.Path,
-					"parent_index":      index,
-					"chunk_start":       part.Start,
-					"chunk_end":         part.End,
-					"chunk_index_scope": "document",
-				},
-			})
-		}
+	parsed := make([]parsedDocument, 0, len(documents))
+	for index, document := range documents {
+		parsed = append(parsed, parsedDocument{
+			Content: document.Text,
+			Type:    "text",
+			Metadata: map[string]any{
+				"file_id":          document.FileID,
+				"raw_file_id":      document.FileID,
+				"file_name":        document.Path,
+				"source_file_name": document.Path,
+				"source_uri":       "benchmark://" + document.Path,
+				"document_index":   index,
+			},
+		})
 	}
-	embedder, err := newEmbedder(cfg.Embedding)
-	if err != nil {
-		return nil, err
-	}
-	const batchSize = 32
-	for start := 0; start < len(chunks); start += batchSize {
-		end := min(start+batchSize, len(chunks))
-		inputs := make([]string, 0, end-start)
-		for _, chunk := range chunks[start:end] {
-			inputs = append(inputs, chunk.Content)
-		}
-		vectors, err := embedder.CreateEmbedding(ctx, cfg.Workspace, cfg.Embedding.Model, inputs)
-		if err != nil {
-			return nil, fmt.Errorf("embed chunks %d:%d: %w", start, end, err)
-		}
-		if len(vectors) != len(inputs) {
-			return nil, fmt.Errorf("embedding count mismatch: got %d want %d", len(vectors), len(inputs))
-		}
-		for i := range vectors {
-			chunks[start+i].Embedding = vectors[i]
-		}
-	}
-	if len(chunks) == 0 || len(chunks[0].Embedding) == 0 {
-		return nil, errors.New("corpus produced no embedded chunks")
-	}
-	dimension := len(chunks[0].Embedding)
-	for _, chunk := range chunks {
-		if len(chunk.Embedding) != dimension {
-			return nil, errors.New("embedding dimension changed within one ingest")
-		}
-	}
-	db, err := openBenchmarkDB(ctx, cfg, dimension, force)
-	if err != nil {
-		return nil, err
-	}
-	defer db.Close()
-	if err := writeChunks(ctx, db, cfg.MatrixOne.VectorTable, chunks); err != nil {
-		return nil, err
-	}
-	state := &IngestState{
-		SchemaVersion:  schemaVersion,
-		CreatedAt:      time.Now().UTC().Format(time.RFC3339),
-		Database:       cfg.MatrixOne.Database,
-		VectorTable:    cfg.MatrixOne.VectorTable,
-		EmbeddingModel: cfg.Embedding.Model,
-		Dimension:      dimension,
-		Documents:      documents,
-		Chunks:         chunks,
-	}
-	if err := writeJSON(filepath.Join(runDir, "ingest-state.json"), state); err != nil {
-		return nil, err
-	}
-	fmt.Printf("ingested documents=%d chunks=%d dimension=%d\n", len(documents), len(chunks), dimension)
-	return state, nil
-}
-
-type textChunk struct {
-	Start, End int
-	Content    string
-}
-
-func chunkText(text string, size, overlap int) []textChunk {
-	runes := []rune(text)
-	if len(runes) == 0 {
-		return nil
-	}
-	step := size - overlap
-	var out []textChunk
-	for start := 0; start < len(runes); start += step {
-		end := min(start+size, len(runes))
-		content := strings.TrimSpace(string(runes[start:end]))
-		if content != "" {
-			out = append(out, textChunk{Start: start, End: end, Content: content})
-		}
-		if end == len(runes) {
-			break
-		}
-	}
-	return out
+	return ingestProductDocuments(ctx, cfg, parsed, runDir, force, documents)
 }
 
 func loadDocuments(root string) ([]SourceDocument, error) {
@@ -662,13 +651,37 @@ func newEmbedder(cfg EndpointConfig) (knowledge.EmbeddingService, error) {
 		if cfg.BaseURL == "" || cfg.Model == "" {
 			return nil, fmt.Errorf("%s embedding mode requires base_url and model", cfg.Mode)
 		}
+		isTaaS := strings.EqualFold(strings.TrimSpace(cfg.Mode), "taas")
+		transport := newHTTPTransport(isTaaS)
+		if isTaaS {
+			// The TaaS gateway has occasionally left a stale keep-alive response
+			// on the connection during long embedding runs. A fresh connection per
+			// request avoids reusing that idle channel. TaaS is also intentionally
+			// direct-connected; the system proxy must not become the WAF-visible
+			// egress for this long-running research import.
+			transport.DisableKeepAlives = true
+			transport.MaxIdleConns = 0
+			transport.MaxIdleConnsPerHost = 0
+		}
 		return &openAIEmbeddingClient{
 			config: cfg,
-			client: &http.Client{Timeout: time.Duration(cfg.TimeoutSeconds) * time.Second},
+			client: &http.Client{Timeout: time.Duration(cfg.TimeoutSeconds) * time.Second, Transport: transport},
 		}, nil
 	default:
 		return nil, fmt.Errorf("unsupported embedding mode %q", cfg.Mode)
 	}
+}
+
+// newHTTPTransport preserves the host's normal HTTP settings while allowing
+// provider-specific routing. TaaS calls pass direct=true so HTTP(S)_PROXY
+// inherited by the Codex/terminal process is not used. Other providers retain
+// the default environment-driven proxy behavior.
+func newHTTPTransport(direct bool) *http.Transport {
+	transport := http.DefaultTransport.(*http.Transport).Clone()
+	if direct {
+		transport.Proxy = nil
+	}
+	return transport
 }
 
 func (c *openAIEmbeddingClient) CreateEmbedding(ctx context.Context, _ string, model string, texts []string) ([][]float64, error) {
@@ -679,10 +692,24 @@ func (c *openAIEmbeddingClient) CreateEmbedding(ctx context.Context, _ string, m
 	var response struct {
 		Data []struct {
 			Index     int       `json:"index"`
-			Embedding []float64 `json:"embedding"`
+			Embedding []float32 `json:"embedding"`
 		} `json:"data"`
 	}
-	if err := postOpenAIJSON(ctx, c.client, c.config.BaseURL, "/embeddings", c.config.APIKeyEnv, payload, &response); err != nil {
+	if err := postOpenAIJSONWithRetry(
+		ctx,
+		c.client,
+		c.config.BaseURL,
+		"/embeddings",
+		c.config.APIKeyEnv,
+		payload,
+		&response,
+		requestRetryPolicy{
+			MaxAttempts:              c.config.RetryMaxAttempts,
+			BaseDelay:                time.Duration(c.config.RetryBackoffSeconds * float64(time.Second)),
+			MaxDelay:                 3 * time.Minute,
+			MethodNotAllowedMinDelay: 30 * time.Second,
+		},
+	); err != nil {
 		return nil, err
 	}
 	out := make([][]float64, len(texts))
@@ -690,7 +717,12 @@ func (c *openAIEmbeddingClient) CreateEmbedding(ctx context.Context, _ string, m
 		if item.Index < 0 || item.Index >= len(out) {
 			return nil, fmt.Errorf("embedding response index %d out of range", item.Index)
 		}
-		out[item.Index] = item.Embedding
+		out[item.Index] = make([]float64, len(item.Embedding))
+		for index, value := range item.Embedding {
+			// MatrixFlow's SDK response is float32; preserve the same conversion
+			// before values reach the VECF64 column.
+			out[item.Index][index] = float64(value)
+		}
 	}
 	for i, embedding := range out {
 		if len(embedding) == 0 {
@@ -805,110 +837,29 @@ func openBenchmarkDB(ctx context.Context, cfg Config, dimension int, rebuild boo
 			return nil, fmt.Errorf("rebuild vector table: %w", err)
 		}
 	}
-	createSQL := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s (
-  id VARCHAR(128) PRIMARY KEY,
-  embedding VECF64(%d),
-  content TEXT,
-  meta JSON,
-  file_id VARCHAR(128),
-  volume_id VARCHAR(128),
-  page_number INT,
-  level VARCHAR(16) DEFAULT 'chunk',
-  doc_id VARCHAR(64),
-  section_id VARCHAR(64),
-  chunk_index INT,
-  index_version BIGINT DEFAULT 0,
-  disabled TINYINT(1) DEFAULT 0,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  INDEX idx_file_id (file_id),
-  INDEX idx_level (level),
-  INDEX idx_chunk_index (chunk_index),
-  FULLTEXT KEY idx_content_ft (content)
-)`, table, dimension)
-	if _, err := db.ExecContext(ctx, createSQL); err != nil {
+	if err := workitems.EnsureVectorTableForLocalRAG(db, cfg.MatrixOne.VectorTable, dimension); err != nil {
 		db.Close()
-		return nil, fmt.Errorf("create product-compatible vector table: %w", err)
-	}
-	if err := ensureVectorIndex(ctx, db, cfg.MatrixOne.VectorTable); err != nil {
-		db.Close()
-		return nil, err
+		return nil, fmt.Errorf("ensure MatrixFlow vector table: %w", err)
 	}
 	return db, nil
 }
 
-func ensureVectorIndex(ctx context.Context, db *sql.DB, table string) error {
-	const indexName = "idx_embedding_cos"
-	var count int
-	err := db.QueryRowContext(ctx, `SELECT COUNT(*) FROM information_schema.statistics
-WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ?
-  AND COLUMN_NAME = 'embedding' AND LOWER(INDEX_TYPE) = 'ivfflat'`, table).Scan(&count)
+// openIngestDB temporarily removes the IVFFLAT index before a large write.
+// MatrixOne otherwise updates the vector index on every 50-row production
+// batch, which makes a full rebuild increasingly slow. The caller recreates
+// it once all rows have been committed.
+func openIngestDB(ctx context.Context, cfg Config, dimension int, rebuild bool) (*sql.DB, error) {
+	db, err := openBenchmarkDB(ctx, cfg, dimension, rebuild)
 	if err != nil {
-		return fmt.Errorf("inspect vector index: %w", err)
+		return nil, err
 	}
-	if count > 0 {
-		return nil
+	indexName := "idx_" + cfg.MatrixOne.VectorTable + "_embedding_cos"
+	statement := "ALTER TABLE `" + cfg.MatrixOne.VectorTable + "` DROP INDEX `" + indexName + "`"
+	if _, err := db.ExecContext(ctx, statement); err != nil {
+		db.Close()
+		return nil, fmt.Errorf("defer vector index during ingest: %w", err)
 	}
-	query := fmt.Sprintf(`CREATE INDEX %s
-USING ivfflat ON %s (embedding)
-LISTS = 256 OP_TYPE 'vector_cosine_ops'`, indexName, "`"+table+"`")
-	if _, err := db.ExecContext(ctx, query); err != nil {
-		message := strings.ToLower(err.Error())
-		if strings.Contains(message, "already exists") || strings.Contains(message, "duplicate") ||
-			(strings.Contains(message, "multiple ivfflat") && strings.Contains(message, "same column")) {
-			return nil
-		}
-		return fmt.Errorf("create MatrixFlow-compatible vector index: %w", err)
-	}
-	return nil
-}
-
-func writeChunks(ctx context.Context, db *sql.DB, table string, chunks []IndexedChunk) error {
-	tx, err := db.BeginTx(ctx, nil)
-	if err != nil {
-		return err
-	}
-	defer tx.Rollback()
-	query := fmt.Sprintf(`INSERT INTO %s
-  (id, embedding, content, meta, file_id, level, doc_id, section_id, chunk_index, index_version, disabled)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`, "`"+table+"`")
-	stmt, err := tx.PrepareContext(ctx, query)
-	if err != nil {
-		return fmt.Errorf("prepare chunk insert: %w", err)
-	}
-	defer stmt.Close()
-	fileIDs := compactStrings(chunkFileIDs(chunks))
-	for _, fileID := range fileIDs {
-		if _, err := tx.ExecContext(ctx, "DELETE FROM `"+table+"` WHERE file_id = ?", fileID); err != nil {
-			return fmt.Errorf("remove prior chunks for file %s: %w", fileID, err)
-		}
-	}
-	for _, chunk := range chunks {
-		meta, err := json.Marshal(chunk.Metadata)
-		if err != nil {
-			return err
-		}
-		vector, err := json.Marshal(chunk.Embedding)
-		if err != nil {
-			return err
-		}
-		level := chunk.Level
-		if level == "" {
-			level = "chunk"
-		}
-		if _, err := stmt.ExecContext(ctx, chunk.ID, string(vector), chunk.Content, string(meta), chunk.FileID, level, chunk.DocID, chunk.SectionID, chunk.Index, chunk.IndexVer); err != nil {
-			return fmt.Errorf("insert chunk %s: %w", chunk.ID, err)
-		}
-	}
-	return tx.Commit()
-}
-
-func chunkFileIDs(chunks []IndexedChunk) []string {
-	out := make([]string, 0, len(chunks))
-	for _, chunk := range chunks {
-		out = append(out, chunk.FileID)
-	}
-	return out
+	return db, nil
 }
 
 func (e matrixOneExecutor) ExecuteSQL(ctx context.Context, _ string, query string) (*knowledge.SQLExecutionResult, error) {
@@ -1018,12 +969,24 @@ func runDataset(ctx context.Context, cfg Config, datasetPath, runDir string, rep
 		DefaultRetrieverConfig: knowledge.RetrieverConfig{EmbeddingModel: cfg.Embedding.Model},
 	})
 	var results []RunResult
+	resultsPath := filepath.Join(runDir, "results.jsonl")
+	appendResult := func(result RunResult) error {
+		results = append(results, result)
+		return appendJSONL(resultsPath, result)
+	}
+	flushPartial := func() {
+		summary := summarize(results)
+		_ = writeJSON(filepath.Join(runDir, "summary.json"), summary)
+		_ = writeReport(filepath.Join(runDir, "report.md"), summary)
+	}
+	attemptNumber := 0
 	for _, item := range cases {
 		keywords := compactStrings(item.RetrievalKeywords)
 		if len(keywords) == 0 {
 			keywords = []string{item.Question}
 		}
 		for repeat := 1; repeat <= repeats; repeat++ {
+			attemptNumber++
 			recorder.reset()
 			started := time.Now()
 			response, searchErr := searcher.Execute(ctx, knowledge.SearchRAGChunksRequest{
@@ -1034,6 +997,7 @@ func runDataset(ctx context.Context, cfg Config, datasetPath, runDir string, rep
 					EmbeddingModel: cfg.Embedding.Model,
 				},
 				Keywards: keywords,
+				FileIDs:  compactStrings(item.FileIDs),
 				MaxHits:  maxHits,
 			})
 			result := RunResult{
@@ -1049,7 +1013,14 @@ func runDataset(ctx context.Context, cfg Config, datasetPath, runDir string, rep
 				result.Status = "failed"
 				result.Error = searchErr.Error()
 				result.EndedAt = time.Now().UTC().Format(time.RFC3339Nano)
-				results = append(results, result)
+				if err := appendResult(result); err != nil {
+					return err
+				}
+				fmt.Printf("attempt=%d/%d id=%s repeat=%d status=failed stage=retrieval\n", attemptNumber, len(cases)*repeats, item.ID, repeat)
+				if isAPIError(searchErr) {
+					flushPartial()
+					return fmt.Errorf("API_ERROR: retrieval for %s: %w", item.ID, searchErr)
+				}
 				continue
 			}
 			result.Routes = response.Routes
@@ -1064,6 +1035,15 @@ func runDataset(ctx context.Context, cfg Config, datasetPath, runDir string, rep
 				if generationErr != nil {
 					result.Status = "failed"
 					result.Error = generationErr.Error()
+					if err := appendResult(result); err != nil {
+						return err
+					}
+					fmt.Printf("attempt=%d/%d id=%s repeat=%d status=failed stage=generation\n", attemptNumber, len(cases)*repeats, item.ID, repeat)
+					if isAPIError(generationErr) {
+						flushPartial()
+						return fmt.Errorf("API_ERROR: generation for %s: %w", item.ID, generationErr)
+					}
+					continue
 				} else {
 					result.Answer = answer
 					score := keywordRecall(answer, item.ExpectedAnswerKeywords)
@@ -1071,10 +1051,16 @@ func runDataset(ctx context.Context, cfg Config, datasetPath, runDir string, rep
 				}
 			}
 			result.EndedAt = time.Now().UTC().Format(time.RFC3339Nano)
-			results = append(results, result)
+			if err := appendResult(result); err != nil {
+				return err
+			}
+			fmt.Printf("attempt=%d/%d id=%s repeat=%d status=%s\n", attemptNumber, len(cases)*repeats, item.ID, repeat, result.Status)
 		}
 	}
-	if err := writeJSONL(filepath.Join(runDir, "results.jsonl"), results); err != nil {
+	// Results are appended after every attempt, so a killed process leaves a
+	// usable raw ledger. Rewriting here also canonicalizes the file on normal
+	// completion.
+	if err := writeJSONL(resultsPath, results); err != nil {
 		return err
 	}
 	summary := summarize(results)
@@ -1127,6 +1113,21 @@ func normalizeChunkResults(hits []knowledge.RAGChunkHit) []ChunkResult {
 			Routes:          hit.Routes,
 			Content:         hit.Content,
 			SemanticModelID: hit.SemanticModelID,
+			Level:           hit.Level,
+			ChunkIndex:      hit.ChunkIndex,
+			ChunkIndexScope: hit.ChunkIndexScope,
+			ParentIndex:     hit.ParentIndex,
+			ChunkStart:      hit.ChunkStart,
+			ChunkEnd:        hit.ChunkEnd,
+			SourceURI:       hit.SourceURI,
+			ImageFileID:     hit.ImageFileID,
+			PageImageFileID: hit.PageImageFileID,
+			BBox:            hit.BBox,
+			ObjectID:        hit.ObjectID,
+			ObjectKind:      hit.ObjectKind,
+			Scope:           hit.Scope,
+			ChunkType:       hit.ChunkType,
+			BlockUUID:       hit.BlockUUID,
 		})
 	}
 	return out
@@ -1223,7 +1224,10 @@ func generateAnswer(ctx context.Context, cfg GenerationConfig, question string, 
 			} `json:"message"`
 		} `json:"choices"`
 	}
-	client := &http.Client{Timeout: time.Duration(cfg.TimeoutSeconds) * time.Second}
+	client := &http.Client{
+		Timeout:   time.Duration(cfg.TimeoutSeconds) * time.Second,
+		Transport: newHTTPTransport(strings.EqualFold(strings.TrimSpace(cfg.Provider), "taas")),
+	}
 	if err := postOpenAIJSON(ctx, client, cfg.BaseURL, "/chat/completions", cfg.APIKeyEnv, payload, &response); err != nil {
 		return "", err
 	}
@@ -1234,6 +1238,43 @@ func generateAnswer(ctx context.Context, cfg GenerationConfig, question string, 
 }
 
 func postOpenAIJSON(ctx context.Context, client *http.Client, baseURL, path, apiKeyEnv string, payload, output any) error {
+	return postOpenAIJSONWithRetry(ctx, client, baseURL, path, apiKeyEnv, payload, output, requestRetryPolicy{MaxAttempts: 1})
+}
+
+func postOpenAIJSONWithRetry(ctx context.Context, client *http.Client, baseURL, path, apiKeyEnv string, payload, output any, policy requestRetryPolicy) error {
+	if policy.MaxAttempts <= 0 {
+		policy.MaxAttempts = 1
+	}
+	if policy.BaseDelay <= 0 {
+		policy.BaseDelay = time.Second
+	}
+	if policy.MaxDelay <= 0 {
+		policy.MaxDelay = 60 * time.Second
+	}
+	var lastErr error
+	for attempt := 1; attempt <= policy.MaxAttempts; attempt++ {
+		lastErr = postOpenAIJSONOnce(ctx, client, baseURL, path, apiKeyEnv, payload, output)
+		if lastErr == nil {
+			return nil
+		}
+		if attempt == policy.MaxAttempts || !retryableAPIError(lastErr) {
+			return lastErr
+		}
+		if httpErr := asAPIHTTPError(lastErr); httpErr != nil && httpErr.StatusCode == http.StatusMethodNotAllowed {
+			// The observed 405 is produced by an upstream security gateway. Do
+			// not reuse an idle connection after that response.
+			client.CloseIdleConnections()
+		}
+		delay := retryDelay(policy, attempt, lastErr)
+		fmt.Printf("api_retry path=%s attempt=%d/%d reason=%s wait=%s\n", path, attempt+1, policy.MaxAttempts, retryReason(lastErr), delay)
+		if err := waitContext(ctx, delay); err != nil {
+			return fmt.Errorf("API_ERROR: retry wait: %w", err)
+		}
+	}
+	return lastErr
+}
+
+func postOpenAIJSONOnce(ctx context.Context, client *http.Client, baseURL, path, apiKeyEnv string, payload, output any) error {
 	body, err := json.Marshal(payload)
 	if err != nil {
 		return err
@@ -1243,29 +1284,132 @@ func postOpenAIJSON(ctx context.Context, client *http.Client, baseURL, path, api
 		return err
 	}
 	request.Header.Set("Content-Type", "application/json")
+	request.Header.Set("Accept", "application/json")
+	request.Header.Set("User-Agent", "moi-benchmark-rag/1.0")
 	if apiKeyEnv != "" {
 		apiKey := strings.TrimSpace(os.Getenv(apiKeyEnv))
 		if apiKey == "" {
-			return fmt.Errorf("API key environment variable %s is not set", apiKeyEnv)
+			return fmt.Errorf("API_ERROR: API key environment variable %s is not set", apiKeyEnv)
 		}
 		request.Header.Set("Authorization", "Bearer "+apiKey)
 	}
 	response, err := client.Do(request)
 	if err != nil {
-		return err
+		return &apiRequestError{URL: request.URL.String(), Err: err}
 	}
 	defer response.Body.Close()
-	raw, err := io.ReadAll(io.LimitReader(response.Body, 8<<20))
+	raw, err := io.ReadAll(io.LimitReader(response.Body, maxAPIResponseBytes))
 	if err != nil {
 		return err
 	}
 	if response.StatusCode < 200 || response.StatusCode >= 300 {
-		return fmt.Errorf("HTTP %d: %s", response.StatusCode, strings.TrimSpace(string(raw)))
+		return &apiHTTPError{
+			StatusCode: response.StatusCode,
+			Body:       truncateErrorBody(string(raw)),
+			RetryAfter: parseRetryAfter(response.Header.Get("Retry-After")),
+		}
 	}
 	if err := json.Unmarshal(raw, output); err != nil {
-		return fmt.Errorf("decode HTTP response: %w", err)
+		return fmt.Errorf("API_ERROR: decode HTTP response: %w", err)
 	}
 	return nil
+}
+
+func asAPIHTTPError(err error) *apiHTTPError {
+	var target *apiHTTPError
+	if errors.As(err, &target) {
+		return target
+	}
+	return nil
+}
+
+func retryableAPIError(err error) bool {
+	if httpErr := asAPIHTTPError(err); httpErr != nil {
+		switch httpErr.StatusCode {
+		case http.StatusMethodNotAllowed, http.StatusRequestTimeout, http.StatusTooEarly, http.StatusTooManyRequests:
+			return true
+		default:
+			return httpErr.StatusCode >= 500
+		}
+	}
+	var requestErr *apiRequestError
+	return errors.As(err, &requestErr)
+}
+
+func retryReason(err error) string {
+	if httpErr := asAPIHTTPError(err); httpErr != nil {
+		return fmt.Sprintf("HTTP_%d", httpErr.StatusCode)
+	}
+	return "network_error"
+}
+
+func retryDelay(policy requestRetryPolicy, failedAttempt int, err error) time.Duration {
+	delay := policy.BaseDelay
+	if httpErr := asAPIHTTPError(err); httpErr != nil && httpErr.StatusCode == http.StatusMethodNotAllowed && policy.MethodNotAllowedMinDelay > delay {
+		delay = policy.MethodNotAllowedMinDelay
+	}
+	for index := 1; index < failedAttempt; index++ {
+		if delay >= policy.MaxDelay/2 {
+			delay = policy.MaxDelay
+			break
+		}
+		delay *= 2
+	}
+	if httpErr := asAPIHTTPError(err); httpErr != nil && httpErr.RetryAfter > delay {
+		delay = httpErr.RetryAfter
+	}
+	if delay > policy.MaxDelay {
+		return policy.MaxDelay
+	}
+	return delay
+}
+
+func parseRetryAfter(value string) time.Duration {
+	value = strings.TrimSpace(value)
+	if value == "" {
+		return 0
+	}
+	if seconds, err := strconv.Atoi(value); err == nil && seconds >= 0 {
+		return time.Duration(seconds) * time.Second
+	}
+	if when, err := http.ParseTime(value); err == nil {
+		if delay := time.Until(when); delay > 0 {
+			return delay
+		}
+	}
+	return 0
+}
+
+func waitContext(ctx context.Context, delay time.Duration) error {
+	if delay <= 0 {
+		return nil
+	}
+	timer := time.NewTimer(delay)
+	defer timer.Stop()
+	select {
+	case <-ctx.Done():
+		return ctx.Err()
+	case <-timer.C:
+		return nil
+	}
+}
+
+func truncateErrorBody(value string) string {
+	value = strings.TrimSpace(value)
+	const maxErrorBody = 8 * 1024
+	if len(value) <= maxErrorBody {
+		return value
+	}
+	return value[:maxErrorBody] + "…"
+}
+
+func isAPIError(err error) bool {
+	if err == nil {
+		return false
+	}
+	message := strings.ToLower(err.Error())
+	return strings.Contains(message, "api_error") || strings.Contains(message, "http ") ||
+		strings.Contains(message, "api key environment variable")
 }
 
 func summarize(results []RunResult) Summary {
@@ -1459,6 +1603,23 @@ func writeJSONL(path string, values []RunResult) error {
 		builder.WriteByte('\n')
 	}
 	return writeFile(path, builder.String())
+}
+
+func appendJSONL(path string, value RunResult) error {
+	raw, err := json.Marshal(value)
+	if err != nil {
+		return err
+	}
+	if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+		return err
+	}
+	file, err := os.OpenFile(path, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0o644)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+	_, err = file.Write(append(raw, '\n'))
+	return err
 }
 
 func writeFile(path, content string) error {

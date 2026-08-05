@@ -14,15 +14,17 @@ benchmark CLI
   └── embedding adapter
 ```
 
-It does not require `moi-frontend`, `moi-backend`, Catalog, Mowl, workers, or
-Agent Runtime. When `--documents` is supplied, ingestion directly executes
-MatrixFlow's `SplitDocumentsLength` and `MultiLevelIndex` WorkItems before
-writing the same essential table contract as
+It does not require `moi-frontend`, `moi-backend`, Catalog, or a running
+Worker. Ingestion executes MatrixFlow's `SplitDocumentsLength` and
+`MultiLevelIndex` WorkItems, then reuses the production vector preparation,
+table-schema/index, stable-ID, and upsert functions from
 `moi:data.retrieval.vector.write`. All retrieval, candidate merging, ranking,
 and evidence expansion are executed by the product RAG module.
 
-The parser-document ingestion defaults match `standard_rag`: chunk size 512,
-overlap 50, and five chunks per section.
+The ingestion defaults match `rag-ingest-default-v1`: chunk size 512, overlap
+64, five chunks per section. Embedding input truncation and batching are also
+the production limits: UTF-8 8192 bytes per input, at most 64 inputs and 256
+KiB per request. Vector upserts use the product writer's fixed 50-row batches.
 
 ## What this measures
 
@@ -91,8 +93,8 @@ The default configuration uses MatrixOrigin Genesis TaaS:
 
 The example model IDs follow the
 [TaaS documentation](https://taas.moi.matrixorigin.cn/taas/docs):
-`bge-m3` (the MatrixFlow knowledge-base default) for embeddings and
-`qwen3.6-flash` for optional generation. A key may restrict which models it can call, so replace either
+`BAAI/bge-m3` (the `rag-ingest-default-v1` workflow default) for embeddings
+and `qwen3.6-flash` for optional generation. A key may restrict which models it can call, so replace either
 model ID with one enabled for your key when necessary. Keep
 `embedding.dimension` equal to the selected embedding model's output
 dimension; changing the embedding model requires re-ingesting the corpus.
@@ -194,10 +196,39 @@ prompt, tool order, source-selection contract, ingestion transforms, and
 retrieval implementations are taken from the checked-out product.
 
 `--force` drops and recreates only the configured benchmark vector table, so
-embedding-dimension changes are applied. Without it,
-the indexer replaces rows for documents present in the current source
-directory. Use `--force` whenever documents were removed from the corpus so
-their old rows cannot remain in the table.
+embedding-dimension changes are applied. Without it, the product
+`OVERWRITE` policy deletes and rewrites only the IDs present in the current
+batch; stale rows for removed source documents can remain, matching the
+MatrixFlow workflow semantics.
+
+The local embedding adapter still calls the configured OpenAI-compatible
+endpoint directly because this benchmark has no running MatrixFlow workspace
+Embedding API. To compare retrieval quality, use the same model/backend as
+the product workflow; the local adapter shares the product's input shaping,
+float32-to-float64 conversion, and vector-write contract. For long TaaS
+imports, `embedding_batch_size` may be raised (the request is still capped at
+256 KiB of input text) to avoid high-frequency gateway throttling; the default
+64-input setting remains suitable for other providers.
+
+### Local BGE-M3 embedding service
+
+For a fully local embedding path, start
+`../local-bge-m3-embedding/start_local_bge_m3.command`. That service wraps the
+official FlagEmbedding `BGEM3FlagModel` and exposes the same OpenAI-compatible
+`/v1/embeddings` contract, so no Go adapter change is required. Copy
+`config.local-bge-m3.example.json` to a local config and run the normal
+`check`/`ingest` commands with it:
+
+```sh
+cp config.local-bge-m3.example.json config.local-bge-m3.json
+python3 local_matrixflow_rag.py check --config config.local-bge-m3.json
+```
+
+The local config uses `mode: "openai"`,
+`base_url: "http://127.0.0.1:8081/v1"`, an empty `api_key_env`, and dimension
+1024. Model weights are loaded on the first request by default; run the
+service's `/readyz` check before a long import. The service README contains
+the device, cache, offline-model, and optional local API-key settings.
 
 ## Dataset contract
 

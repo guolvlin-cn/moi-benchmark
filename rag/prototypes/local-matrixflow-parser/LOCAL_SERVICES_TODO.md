@@ -898,7 +898,7 @@ python3 pipeline.py \
 
 - [ ] parser 使用 302 MinerU。
 - [ ] PDF 产生 documents。
-- [ ] chunking 使用 MatrixFlow 512/50 配置。
+- [ ] chunking 使用 MatrixFlow 512/64 配置。
 - [ ] embedding 通过 TaaS 使用 `bge-m3`。
 - [ ] 向量维度是 1024。
 - [ ] 数据写入 MatrixOne。

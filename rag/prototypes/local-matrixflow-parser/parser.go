@@ -281,22 +281,14 @@ func defaultWebOptions(debug bool, vlmModel string) map[string]any {
 		vlmModel = "qwen3-vl-plus"
 	}
 	return map[string]any{
-		"enable_parser_pipeline":                 true,
-		"vlm_ocr_model":                          vlmModel,
-		"enable_cross_page_table_merge":          false,
-		"enable_formula_repair":                  false,
-		"cast_table_as_image":                    false,
-		"enable_table_html_regeneration":         true,
-		"enable_table_embedded_image_extraction": true,
-		"unmerge_table_cells":                    false,
-		"enable_vlm_title_detection":             false,
-		"enable_vlm_header_footer_detection":     false,
-		"enable_fragment_merge":                  true,
-		"enable_paddle_preprocess":               false,
-		"image_process_type":                     []string{"ocr", "caption"},
-		"max_workers":                            16,
-		"parser_concurrency":                     16,
-		"debug_enabled":                          debug,
+		// Keep these options identical to rag-ingest-default-v1.yaml's
+		// moi:parser.convert.document.rich invocation. The local adapter adds
+		// only vlm_ocr_model because the standalone UnifiedParseService does not
+		// receive the worker's injected runtime-config default.
+		"workflow_parser":    true,
+		"vlm_ocr_model":      vlmModel,
+		"image_process_type": []string{"ocr", "caption"},
+		"debug_enabled":      debug,
 	}
 }
 

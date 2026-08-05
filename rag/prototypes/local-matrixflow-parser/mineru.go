@@ -13,6 +13,7 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
+	"path"
 	"path/filepath"
 	"strings"
 	"time"
@@ -62,6 +63,16 @@ type minerUClient struct {
 	maxArchiveBytes  int64
 	maxMarkdownBytes int64
 	wgetPath         string
+}
+
+type minerUAsset struct {
+	Path string
+	Data []byte
+}
+
+type minerUArchive struct {
+	Markdown []byte
+	Assets   []minerUAsset
 }
 
 type minerUEnvelope[T any] struct {
@@ -161,9 +172,10 @@ func (p *Parser) parseMinerU(ctx context.Context, sourcePath, fileType, pipeline
 	started := time.Now()
 
 	var markdown []byte
+	var assets []minerUAsset
 	var remote MinerURunMetadata
 	if pipeline == PipelinePrecision {
-		markdown, remote, err = client.parsePrecision(runCtx, sourcePath, fileType, opts)
+		markdown, assets, remote, err = client.parsePrecision(runCtx, sourcePath, fileType, opts)
 	} else {
 		markdown, remote, err = client.parseAgent(runCtx, sourcePath, opts)
 	}
@@ -181,6 +193,9 @@ func (p *Parser) parseMinerU(ctx context.Context, sourcePath, fileType, pipeline
 	markdownPath := filepath.Join(artifactDir, "mineru-full.md")
 	if err := os.WriteFile(markdownPath, markdown, 0o644); err != nil {
 		return nil, fmt.Errorf("write MinerU markdown: %w", err)
+	}
+	if err := writeMinerUAssets(artifactDir, assets); err != nil {
+		return nil, fmt.Errorf("write MinerU image assets: %w", err)
 	}
 
 	result, err := p.ParseFile(runCtx, markdownPath, Options{
@@ -227,7 +242,7 @@ func (p *Parser) parseMinerU(ctx context.Context, sourcePath, fileType, pipeline
 	return result, nil
 }
 
-func (c *minerUClient) parsePrecision(ctx context.Context, sourcePath, fileType string, opts Options) ([]byte, MinerURunMetadata, error) {
+func (c *minerUClient) parsePrecision(ctx context.Context, sourcePath, fileType string, opts Options) ([]byte, []minerUAsset, MinerURunMetadata, error) {
 	remote := MinerURunMetadata{Provider: "mineru-official", Pipeline: PipelinePrecision, Model: "vlm"}
 	if fileType == "html" || fileType == "htm" {
 		remote.Model = "MinerU-HTML"
@@ -252,24 +267,24 @@ func (c *minerUClient) parsePrecision(ctx context.Context, sourcePath, fileType 
 	uploadStarted := time.Now()
 	var created minerUEnvelope[precisionCreateData]
 	if err := c.doJSON(ctx, http.MethodPost, "/api/v4/file-urls/batch", payload, true, &created); err != nil {
-		return nil, remote, fmt.Errorf("create MinerU precision upload: %w", err)
+		return nil, nil, remote, fmt.Errorf("create MinerU precision upload: %w", err)
 	}
 	if err := validateEnvelope(created.Code, created.Msg); err != nil {
-		return nil, remote, err
+		return nil, nil, remote, err
 	}
 	if created.Data.BatchID == "" || len(created.Data.FileURLs) != 1 {
-		return nil, remote, errors.New("MinerU precision response missing batch_id or upload URL")
+		return nil, nil, remote, errors.New("MinerU precision response missing batch_id or upload URL")
 	}
 	remote.BatchID, remote.TraceID = created.Data.BatchID, created.TraceID
 	if err := c.uploadFile(ctx, created.Data.FileURLs[0], sourcePath); err != nil {
-		return nil, remote, fmt.Errorf("upload file to MinerU precision storage: %w", err)
+		return nil, nil, remote, fmt.Errorf("upload file to MinerU precision storage: %w", err)
 	}
 	remote.UploadMS = milliseconds(time.Since(uploadStarted))
 
 	processingStarted := time.Now()
 	zipURL, traceID, err := c.pollPrecision(ctx, created.Data.BatchID)
 	if err != nil {
-		return nil, remote, err
+		return nil, nil, remote, err
 	}
 	remote.ProcessingMS = milliseconds(time.Since(processingStarted))
 	if traceID != "" {
@@ -278,15 +293,15 @@ func (c *minerUClient) parsePrecision(ctx context.Context, sourcePath, fileType 
 	downloadStarted := time.Now()
 	archive, downloadVia, err := c.download(ctx, zipURL, c.maxArchiveBytes)
 	if err != nil {
-		return nil, remote, fmt.Errorf("download MinerU precision result: %w", err)
+		return nil, nil, remote, fmt.Errorf("download MinerU precision result: %w", err)
 	}
-	markdown, err := markdownFromZIP(archive, c.maxMarkdownBytes)
+	contents, err := minerUArchiveFromZIP(archive, c.maxMarkdownBytes, c.maxArchiveBytes)
 	if err != nil {
-		return nil, remote, err
+		return nil, nil, remote, err
 	}
 	remote.DownloadMS = milliseconds(time.Since(downloadStarted))
 	remote.DownloadVia = downloadVia
-	return markdown, remote, nil
+	return contents.Markdown, contents.Assets, remote, nil
 }
 
 func (c *minerUClient) pollPrecision(ctx context.Context, batchID string) (string, string, error) {
@@ -574,40 +589,181 @@ func safeHTTPClient(base *http.Client) *http.Client {
 }
 
 func markdownFromZIP(raw []byte, limit int64) ([]byte, error) {
+	contents, err := minerUArchiveFromZIP(raw, limit, defaultMinerUArchiveLimit)
+	if err != nil {
+		return nil, err
+	}
+	return contents.Markdown, nil
+}
+
+func minerUArchiveFromZIP(raw []byte, markdownLimit, assetLimit int64) (minerUArchive, error) {
+	if markdownLimit <= 0 {
+		return minerUArchive{}, errors.New("MinerU Markdown limit must be positive")
+	}
+	if assetLimit <= 0 {
+		return minerUArchive{}, errors.New("MinerU asset limit must be positive")
+	}
 	reader, err := zip.NewReader(bytes.NewReader(raw), int64(len(raw)))
 	if err != nil {
-		return nil, fmt.Errorf("open MinerU result ZIP: %w", err)
+		return minerUArchive{}, fmt.Errorf("open MinerU result ZIP: %w", err)
 	}
+	var contents minerUArchive
+	var markdownName string
+	var foundMarkdown bool
+	var imageEntries []minerUAsset
+	var imageBytes int64
 	for _, file := range reader.File {
-		archiveName := strings.ReplaceAll(file.Name, "\\", "/")
-		clean := filepath.ToSlash(filepath.Clean(archiveName))
-		if clean == ".." || strings.HasPrefix(clean, "../") || filepath.IsAbs(file.Name) {
-			return nil, fmt.Errorf("unsafe path in MinerU ZIP: %q", file.Name)
+		clean, err := cleanMinerUZIPPath(file.Name)
+		if err != nil {
+			return minerUArchive{}, err
 		}
-		if filepath.Base(clean) != "full.md" {
+		if file.FileInfo().IsDir() {
 			continue
 		}
-		if int64(file.UncompressedSize64) > limit {
-			return nil, fmt.Errorf("MinerU Markdown exceeds %d-byte limit", limit)
+		if file.Mode()&os.ModeSymlink != 0 {
+			return minerUArchive{}, fmt.Errorf("unsafe symlink in MinerU ZIP: %q", file.Name)
 		}
-		stream, err := file.Open()
+		if path.Base(clean) == "full.md" && !foundMarkdown {
+			content, err := readMinerUZIPEntry(file, markdownLimit, "MinerU Markdown")
+			if err != nil {
+				return minerUArchive{}, err
+			}
+			contents.Markdown = content
+			markdownName = clean
+			foundMarkdown = true
+			continue
+		}
+		if !isMinerUImagePath(clean) {
+			continue
+		}
+		if file.UncompressedSize64 > uint64(assetLimit) || imageBytes > assetLimit-int64(file.UncompressedSize64) {
+			return minerUArchive{}, fmt.Errorf("MinerU image assets exceed %d-byte limit", assetLimit)
+		}
+		content, err := readMinerUZIPEntry(file, assetLimit-imageBytes, "MinerU image asset")
 		if err != nil {
-			return nil, err
+			return minerUArchive{}, err
 		}
-		content, readErr := io.ReadAll(io.LimitReader(stream, limit+1))
-		closeErr := stream.Close()
-		if readErr != nil {
-			return nil, readErr
-		}
-		if closeErr != nil {
-			return nil, closeErr
-		}
-		if int64(len(content)) > limit {
-			return nil, fmt.Errorf("MinerU Markdown exceeds %d-byte limit", limit)
-		}
-		return content, nil
+		imageBytes += int64(len(content))
+		imageEntries = append(imageEntries, minerUAsset{Path: clean, Data: content})
 	}
-	return nil, errors.New("MinerU result ZIP does not contain full.md")
+	if !foundMarkdown {
+		return minerUArchive{}, errors.New("MinerU result ZIP does not contain full.md")
+	}
+
+	assets := make(map[string][]byte, len(imageEntries))
+	for _, entry := range imageEntries {
+		assetPath, ok := minerUAssetOutputPath(markdownName, entry.Path)
+		if !ok {
+			continue
+		}
+		if previous, exists := assets[assetPath]; exists && !bytes.Equal(previous, entry.Data) {
+			return minerUArchive{}, fmt.Errorf("conflicting MinerU image asset path %q", assetPath)
+		}
+		assets[assetPath] = entry.Data
+	}
+	for assetPath, data := range assets {
+		contents.Assets = append(contents.Assets, minerUAsset{Path: assetPath, Data: data})
+	}
+	return contents, nil
+}
+
+func cleanMinerUZIPPath(raw string) (string, error) {
+	archiveName := strings.ReplaceAll(raw, "\\", "/")
+	clean := path.Clean(archiveName)
+	if clean == "." || clean == ".." || strings.HasPrefix(clean, "../") || strings.HasPrefix(clean, "/") || filepath.IsAbs(raw) {
+		return "", fmt.Errorf("unsafe path in MinerU ZIP: %q", raw)
+	}
+	return clean, nil
+}
+
+func readMinerUZIPEntry(file *zip.File, limit int64, label string) ([]byte, error) {
+	if limit <= 0 {
+		return nil, fmt.Errorf("%s limit must be positive", label)
+	}
+	if file.UncompressedSize64 > uint64(limit) {
+		return nil, fmt.Errorf("%s exceeds %d-byte limit", label, limit)
+	}
+	stream, err := file.Open()
+	if err != nil {
+		return nil, err
+	}
+	content, readErr := io.ReadAll(io.LimitReader(stream, limit+1))
+	closeErr := stream.Close()
+	if readErr != nil {
+		return nil, readErr
+	}
+	if closeErr != nil {
+		return nil, closeErr
+	}
+	if int64(len(content)) > limit {
+		return nil, fmt.Errorf("%s exceeds %d-byte limit", label, limit)
+	}
+	return content, nil
+}
+
+func isMinerUImagePath(name string) bool {
+	parts := strings.Split(name, "/")
+	for index, part := range parts {
+		if part == "images" && index < len(parts)-1 {
+			return true
+		}
+	}
+	return false
+}
+
+func minerUAssetOutputPath(markdownName, archiveName string) (string, bool) {
+	markdownDir := path.Dir(markdownName)
+	assetName := archiveName
+	if markdownDir != "." {
+		prefix := markdownDir + "/"
+		if strings.HasPrefix(assetName, prefix) {
+			assetName = strings.TrimPrefix(assetName, prefix)
+		}
+	}
+	if imageIndex := strings.Index(assetName, "images/"); imageIndex >= 0 {
+		assetName = assetName[imageIndex:]
+	}
+	assetName = path.Clean(assetName)
+	if assetName == "images" || !strings.HasPrefix(assetName, "images/") || strings.HasPrefix(assetName, "../") || path.IsAbs(assetName) {
+		return "", false
+	}
+	return assetName, true
+}
+
+func writeMinerUAssets(artifactDir string, assets []minerUAsset) error {
+	if len(assets) == 0 {
+		return nil
+	}
+	root, err := filepath.Abs(artifactDir)
+	if err != nil {
+		return fmt.Errorf("resolve artifact directory: %w", err)
+	}
+	for _, asset := range assets {
+		clean, err := cleanMinerUZIPPath(asset.Path)
+		if err != nil || !strings.HasPrefix(clean, "images/") {
+			if err == nil {
+				err = errors.New("asset path must be under images/")
+			}
+			return fmt.Errorf("unsafe image asset path %q: %w", asset.Path, err)
+		}
+		destination := filepath.Join(root, filepath.FromSlash(clean))
+		relative, err := filepath.Rel(root, destination)
+		if err != nil || relative == ".." || strings.HasPrefix(relative, ".."+string(filepath.Separator)) {
+			return fmt.Errorf("image asset escapes artifact directory: %q", asset.Path)
+		}
+		if err := os.MkdirAll(filepath.Dir(destination), 0o755); err != nil {
+			return err
+		}
+		if info, err := os.Lstat(destination); err == nil && info.Mode()&os.ModeSymlink != 0 {
+			return fmt.Errorf("refusing to overwrite symlink %q", destination)
+		} else if err != nil && !errors.Is(err, os.ErrNotExist) {
+			return err
+		}
+		if err := os.WriteFile(destination, asset.Data, 0o644); err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 func validateBaseURL(raw string) (string, error) {

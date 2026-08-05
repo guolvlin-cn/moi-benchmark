@@ -1,0 +1,23 @@
+[project]
+name = "local-bge-m3-embedding"
+version = "0.1.0"
+description = "Local OpenAI-compatible BGE-M3 embedding service for the MOI RAG benchmark"
+requires-python = ">=3.9"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.30,<1",
+  "FlagEmbedding>=1.3.5,<2",
+]
+
+[project.optional-dependencies]
+test = [
+  "httpx>=0.27,<1",
+  "pytest>=8,<9",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["app", "engine"]

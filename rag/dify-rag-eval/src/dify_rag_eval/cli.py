@@ -9,6 +9,7 @@ from .config import load_config
 from .dify import DifyClient
 from .io import read_jsonl, read_result_jsonl, write_jsonl
 from .knowledge import KnowledgeClient, ingest_directory, validate_chunk_options
+from .local_smoke import SmokeContext, run_local_smoke
 from .metrics import score_result, summarize
 from .report import write_report
 from .runner import run_dataset
@@ -87,6 +88,47 @@ def build_parser() -> argparse.ArgumentParser:
         choices=("high_quality", "economy"),
         default="high_quality",
     )
+
+    local_smoke = subparsers.add_parser(
+        "local-smoke", help="run the initial self-hosted competitor API smoke"
+    )
+    local_smoke.add_argument(
+        "--system",
+        required=True,
+        choices=("dify_local", "fastgpt_local", "ragflow_local", "maxkb_local"),
+    )
+    local_smoke.add_argument("--base-url")
+    local_smoke.add_argument("--output", required=True, type=Path)
+    local_smoke.add_argument(
+        "--source",
+        type=Path,
+        default=Path("local-rag-platforms/fixtures/smoke"),
+    )
+    local_smoke.add_argument("--api-key-env", default="LOCAL_RAG_API_KEY")
+    local_smoke.add_argument("--dataset-api-key-env", default="DIFY_LOCAL_DATASET_API_KEY")
+    local_smoke.add_argument("--app-api-key-env", default="DIFY_LOCAL_API_KEY")
+    local_smoke.add_argument("--app-id-env", default="FASTGPT_APP_ID")
+    local_smoke.add_argument("--question", default="Where must the RAG service under test run, and what external dependency is allowed?")
+    local_smoke.add_argument("--retrieval-probe", default="Colima machine")
+    local_smoke.add_argument("--wait-seconds", type=int, default=120)
+    local_smoke.add_argument("--platform", default="linux/arm64")
+    local_smoke.add_argument(
+        "--blocked-reason",
+        choices=(
+            "BLOCKED_LOCAL_ARCH",
+            "BLOCKED_LOCAL_RESOURCES",
+            "BLOCKED_LOCAL_DEPENDENCY",
+        ),
+        help="override the deployment gate reason while preserving the failed smoke calls",
+    )
+    local_smoke.add_argument("--embedding-model", default=os.getenv("DIFY_EMBEDDING_MODEL"))
+    local_smoke.add_argument("--embedding-provider", default=os.getenv("DIFY_EMBEDDING_PROVIDER"))
+    local_smoke.add_argument("--vector-model", default=os.getenv("FASTGPT_VECTOR_MODEL"))
+    local_smoke.add_argument("--agent-model", default=os.getenv("FASTGPT_AGENT_MODEL"))
+    local_smoke.add_argument("--chat-id", default=os.getenv("RAGFLOW_CHAT_ID"))
+    local_smoke.add_argument("--native-base-url", default=os.getenv("MAXKB_OPENAI_BASE_URL"))
+    local_smoke.add_argument("--native-path", default=os.getenv("MAXKB_OPENAI_PATH"))
+    local_smoke.add_argument("--model", default=os.getenv("MAXKB_MODEL", "default"))
     return parser
 
 
@@ -132,6 +174,46 @@ def main(argv: list[str] | None = None) -> int:
             chunk_overlap=args.chunk_overlap,
         )
         print(f"ingest artifacts: {args.output.resolve()}")
+        return 0
+
+    if args.command == "local-smoke":
+        base_urls = {
+            "dify_local": "http://127.0.0.1:8010/v1",
+            "fastgpt_local": "http://127.0.0.1:3000",
+            "ragflow_local": "http://127.0.0.1:9380",
+            "maxkb_local": "http://127.0.0.1:8090",
+        }
+        api_key = os.getenv(args.api_key_env)
+        dataset_api_key = os.getenv(args.dataset_api_key_env)
+        app_api_key = os.getenv(args.app_api_key_env)
+        app_id = os.getenv(args.app_id_env)
+        context = SmokeContext(
+            system_id=args.system,
+            base_url=args.base_url or base_urls[args.system],
+            output=args.output,
+            api_key=api_key,
+            dataset_api_key=dataset_api_key,
+            app_api_key=app_api_key,
+            app_id=app_id,
+            source_dir=args.source,
+            question=args.question,
+            retrieval_probe=args.retrieval_probe,
+            wait_seconds=args.wait_seconds,
+            platform=args.platform,
+            options={
+                "embedding_model": args.embedding_model,
+                "embedding_provider": args.embedding_provider,
+                "vector_model": args.vector_model,
+                "agent_model": args.agent_model,
+                "chat_id": args.chat_id,
+                "native_base_url": args.native_base_url,
+                "native_path": args.native_path,
+                "model": args.model,
+                "blocked_reason": args.blocked_reason,
+            },
+        )
+        result = run_local_smoke(context)
+        print(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True))
         return 0
 
     if args.command == "run":

@@ -17,7 +17,9 @@ import (
 )
 
 func TestParseFileMinerUPrecisionPipeline(t *testing.T) {
-	archive := testMarkdownZIP(t, "# Precision title\n\nPrecision body.\n")
+	archive := testMarkdownZIPWithImages(t, "# Precision title\n\nPrecision body.\n\n![](images/figure.jpg)\n", map[string][]byte{
+		"images/figure.jpg": []byte("fake-image-bytes"),
+	})
 	var server *httptest.Server
 	server = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		switch {
@@ -65,9 +67,10 @@ func TestParseFileMinerUPrecisionPipeline(t *testing.T) {
 	if err := os.WriteFile(source, []byte("fake pdf"), 0o644); err != nil {
 		t.Fatal(err)
 	}
+	artifactDir := t.TempDir()
 	result, err := New().ParseFile(context.Background(), source, Options{
 		Pipeline:    PipelinePrecision,
-		ArtifactDir: t.TempDir(),
+		ArtifactDir: artifactDir,
 		MinerU: MinerUOptions{
 			Token: "precision-token", BaseURL: server.URL, HTTPClient: server.Client(),
 			PollInterval: time.Millisecond, Timeout: time.Second,
@@ -87,6 +90,24 @@ func TestParseFileMinerUPrecisionPipeline(t *testing.T) {
 	}
 	if result.Documents[0].Metadata["source_path"] != source {
 		t.Fatalf("source metadata = %v", result.Documents[0].Metadata["source_path"])
+	}
+	imagePath := filepath.Join(artifactDir, "images", "figure.jpg")
+	image, err := os.ReadFile(imagePath)
+	if err != nil {
+		t.Fatalf("read extracted MinerU image %s: %v", imagePath, err)
+	}
+	if string(image) != "fake-image-bytes" {
+		t.Fatalf("extracted image = %q", image)
+	}
+	foundImageBlock := false
+	for _, document := range result.Documents {
+		if document.Type == "image" && document.Metadata["image_url"] == "images/figure.jpg" {
+			foundImageBlock = true
+			break
+		}
+	}
+	if !foundImageBlock {
+		t.Fatalf("image block was not returned: %+v", result.Documents)
 	}
 }
 
@@ -311,6 +332,10 @@ func (function roundTripperFunc) RoundTrip(request *http.Request) (*http.Respons
 }
 
 func testMarkdownZIP(t *testing.T, markdown string) []byte {
+	return testMarkdownZIPWithImages(t, markdown, nil)
+}
+
+func testMarkdownZIPWithImages(t *testing.T, markdown string, images map[string][]byte) []byte {
 	t.Helper()
 	var buffer bytes.Buffer
 	writer := zip.NewWriter(&buffer)
@@ -320,6 +345,15 @@ func testMarkdownZIP(t *testing.T, markdown string) []byte {
 	}
 	if _, err := entry.Write([]byte(markdown)); err != nil {
 		t.Fatal(err)
+	}
+	for name, content := range images {
+		entry, err := writer.Create(name)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if _, err := entry.Write(content); err != nil {
+			t.Fatal(err)
+		}
 	}
 	if err := writer.Close(); err != nil {
 		t.Fatal(err)
