@@ -108,6 +108,22 @@ supported: keep `embedding.mode` as `"openai"` and retain their existing
 `base_url`, model, and `api_key_env`. This migration changes the active example
 configuration without deleting the previous provider path.
 
+### Baidu Qianfan V2 fallback
+
+`config.qianfan.example.json` uses Qianfan's OpenAI-compatible V2 endpoint,
+`qwen3-embedding-8b` at 4096 dimensions, and batch size 16. Generation is
+configured for the requested candidate ID `deepseek-v4-flash`. It uses a
+separate MatrixOne database/table because Qianfan and TaaS/BGE-M3 vectors are
+not interchangeable:
+
+```sh
+export QIANFAN_API_KEY='<local-secret>'
+python3 local_matrixflow_rag.py check --config config.qianfan.example.json
+```
+
+Copy the example before a real run. Never repoint an existing TaaS index at
+Qianfan.
+
 For an offline wiring smoke test, use:
 
 ```json
@@ -176,6 +192,22 @@ python3 local_matrixflow_rag.py ingest \
   --run runs/product-rag-001 \
   --force
 ```
+
+To resume a batch-committed ingest without re-embedding the existing prefix,
+pass the prior child run's progress file and omit `--force`:
+
+```sh
+python3 local_matrixflow_rag.py ingest \
+  --config config.mmdocir.local-bge-m3.json \
+  --documents /path/to/moi-documents.jsonl \
+  --run runs/product-rag-001 \
+  --resume-progress /path/to/prior-run/ingest-progress.json
+```
+
+Resume validates the parsed, expanded, embedded, committed, and database row
+counts before making an embedding request. It starts after the prior
+`batch_end`, keeps the existing rows, and rebuilds IVFFLAT only after the full
+corpus is committed. `--resume-progress` and `--force` are mutually exclusive.
 
 ## Explore-compatible knowledge question
 

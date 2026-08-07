@@ -59,6 +59,35 @@ func TestLoadConfigAppliesTaaSDefaults(t *testing.T) {
 	}
 }
 
+func TestLoadConfigPreservesOpenAIEmbeddingBatchSize(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "config.json")
+	raw := `{
+		"matrixone": {
+			"dsn": "root:111@tcp(127.0.0.1:6001)/",
+			"database": "benchmark",
+			"vector_table": "embedding_results"
+		},
+		"embedding_batch_size": 128,
+		"embedding": {
+			"mode": "openai",
+			"base_url": "http://127.0.0.1:8081/v1",
+			"model": "BAAI/bge-m3",
+			"dimension": 1024
+		}
+	}`
+	if err := os.WriteFile(path, []byte(raw), 0o600); err != nil {
+		t.Fatal(err)
+	}
+
+	cfg, err := loadConfig(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if cfg.EmbeddingBatchSize != 128 {
+		t.Fatalf("OpenAI embedding batch = %d, want 128", cfg.EmbeddingBatchSize)
+	}
+}
+
 func TestTaaSTransportBypassesEnvironmentProxy(t *testing.T) {
 	direct := newHTTPTransport(true)
 	if direct.Proxy != nil {
@@ -153,6 +182,55 @@ func TestPostOpenAIJSONRetriesTransient405(t *testing.T) {
 	}
 }
 
+func TestGenerateAnswerFallsBackToQianfanAfterTaaSTimeout(t *testing.T) {
+	t.Setenv(taasAPIKeyEnvName, "test-taas-key")
+	t.Setenv("QIANFAN_API_KEY", "test-qianfan-key")
+	primary := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		writer.WriteHeader(http.StatusGatewayTimeout)
+		_, _ = writer.Write([]byte("gateway timeout"))
+	}))
+	defer primary.Close()
+	fallback := httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		if got := request.Header.Get("Authorization"); got != "Bearer test-qianfan-key" {
+			t.Errorf("Qianfan Authorization = %q", got)
+		}
+		writer.Header().Set("Content-Type", "application/json")
+		_, _ = writer.Write([]byte(`{"choices":[{"message":{"content":"fallback answer"}}]}`))
+	}))
+	defer fallback.Close()
+
+	answer, provider, model, err := generateAnswer(
+		context.Background(),
+		GenerationConfig{
+			Enabled:          true,
+			Provider:         "taas",
+			BaseURL:          primary.URL,
+			Model:            "qwen3.6-flash",
+			APIKeyEnv:        taasAPIKeyEnvName,
+			TimeoutSeconds:   2,
+			RetryMaxAttempts: 1,
+			Fallback: &GenerationFallbackConfig{
+				Enabled:             true,
+				Provider:            "qianfan",
+				BaseURL:             fallback.URL,
+				Model:               "deepseek-v4-flash",
+				APIKeyEnv:           "QIANFAN_API_KEY",
+				TimeoutSeconds:      2,
+				RetryMaxAttempts:    1,
+				RetryBackoffSeconds: 0,
+			},
+		},
+		"question",
+		[]ChunkResult{{FileName: "doc.pdf", ChunkID: "chunk-1", Content: "evidence"}},
+	)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if answer != "fallback answer" || provider != "qianfan" || model != "deepseek-v4-flash" {
+		t.Fatalf("fallback result = (%q, %q, %q)", answer, provider, model)
+	}
+}
+
 func TestProductEmbeddingContractTruncatesAndBatches(t *testing.T) {
 	docs := make([]workitems.Document, 0, 65)
 	for i := 0; i < 65; i++ {
@@ -187,6 +265,48 @@ func TestLocalTaaSEmbeddingBatchSizePreservesByteLimit(t *testing.T) {
 		if batch.Bytes > 256*1024 {
 			t.Fatalf("batch bytes = %d, want <= 256 KiB", batch.Bytes)
 		}
+	}
+}
+
+func TestLoadIngestResumeProgressAcceptsCommittedBoundary(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "ingest-progress.json")
+	raw := `{
+		"stage":"writing",
+		"parsed_documents":205978,
+		"expanded_entries":311644,
+		"embedded_entries":60617,
+		"committed_entries":60617,
+		"total_entries":311644,
+		"batch_end":60617
+	}`
+	if err := os.WriteFile(path, []byte(raw), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	resumeFrom, err := loadIngestResumeProgress(path, 205978, 311644, 311644)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if resumeFrom != 60617 {
+		t.Fatalf("resume offset = %d, want 60617", resumeFrom)
+	}
+}
+
+func TestLoadIngestResumeProgressRejectsUncommittedBoundary(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "ingest-progress.json")
+	raw := `{
+		"stage":"writing",
+		"parsed_documents":2,
+		"expanded_entries":4,
+		"embedded_entries":3,
+		"committed_entries":2,
+		"total_entries":4,
+		"batch_end":3
+	}`
+	if err := os.WriteFile(path, []byte(raw), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := loadIngestResumeProgress(path, 2, 4, 4); err == nil || !strings.Contains(err.Error(), "committed batch boundary") {
+		t.Fatalf("uncommitted resume error = %v", err)
 	}
 }
 
