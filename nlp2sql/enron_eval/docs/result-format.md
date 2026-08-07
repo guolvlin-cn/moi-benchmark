@@ -51,3 +51,5 @@ runs/<product>/<run_id>/
 - `metadata`：产品特有的模型、token或追踪信息
 
 不要把Golden SQL、执行评分或预期结果写进产品预测文件。
+
+下一版 timing、Token、成本、模型调用、修复和稳定性字段见：[v0.4多维指标计划](../../plans/drafts/v0.4.md)。现有字段继续兼容，平台不可观测的指标必须写为 `null` 并记录原因，不能用0代替。

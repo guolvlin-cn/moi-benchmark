@@ -219,7 +219,7 @@ nlp2sql/
 │   └── scripts/                   # 导入、生成和评测脚本
 ├── plans/                         # 评测计划版本
 │   ├── README.md
-│   └── drafts/                    # v0.1、v0.2、v0.3
+│   └── drafts/                    # v0.1至v0.4
 ├── refs/                          # 通用NL2SQL参考资料
 │   ├── deep-research-report-5.md
 │   └── deep-research-report-6.md

@@ -133,7 +133,7 @@ nlp2sql/
 ├── NL2SQL评测汇总报告.md          # 本报告
 ├── spider/                       # Spider Mix50完整评测包
 ├── enron_eval/                   # Enron Eval 50完整评测包
-├── plans/                        # v0.1、v0.2、v0.3计划
+├── plans/                        # v0.1至v0.4计划
 ├── refs/                         # 通用研究资料
 └── systems/                      # 跨阶段参评系统清单
 ```
@@ -143,11 +143,12 @@ nlp2sql/
 - [v0.1：私有业务数据通用草案](plans/drafts/v0.1.md)；
 - [v0.2：Spider Mix50执行方案](plans/drafts/v0.2.md)；
 - [v0.3：Enron Eval 50执行方案](plans/drafts/v0.3.md)。
+- [v0.4：多维指标与可观测性扩展](plans/drafts/v0.4.md)。
 
 ## 9. 后续建议
 
 1. 保持 Spider 和 Enron 两套回归集独立版本化；
 2. 对 MOI 继续优化复杂日期、线程归一化和多阶段聚合；
-3. 新增多次运行稳定性、P50/P95时延、Token和成本统计；
+3. 按 [v0.4多维指标计划](plans/drafts/v0.4.md) 新增多次运行稳定性、P50/P95时延、Token、成本和端到端回答质量统计；
 4. 建立新的中文财务业务数据评测时发布 v0.4，不覆盖 v0.3；
 5. 每次产品升级后新增运行批次，保留历史结果，不直接改写旧报告。
