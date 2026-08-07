@@ -1,0 +1,114 @@
+{
+  "source_tag": "v4.15.6",
+  "source_commit": "3db33e93b78e75b37c93f7a6e3d0fafeafbfd256",
+  "deployment_images": {
+    "fastgpt": "ghcr.io/labring/fastgpt:v4.15.4",
+    "code_sandbox": "ghcr.io/labring/fastgpt-code-sandbox:v4.15.4"
+  },
+  "model_provider": {
+    "kind": "AI Proxy OpenAI channel",
+    "base_url": "https://api-taas.moi.matrixorigin.cn/v1",
+    "authentication": "Authorization: Bearer ${TAAS_API_KEY}",
+    "language_model": "qwen3.6-flash",
+    "embedding_model": "bge-m3",
+    "model_egress": "external"
+  },
+  "provider_channel_api": {
+    "fastgpt_proxy_base": "/api/aiproxy/api",
+    "authentication": {
+      "fastgpt_proxy": "root browser session",
+      "aiproxy_direct": "Authorization: Bearer ${AIPROXY_ADMIN_KEY}",
+      "upstream_taas": "channel payload key=${TAAS_API_KEY}"
+    },
+    "create": {
+      "method": "POST",
+      "fastgpt_path": "/api/aiproxy/api/createChannel",
+      "aiproxy_path": "/api/channel/",
+      "payload": {
+        "type": 1,
+        "name": "MatrixOrigin TaaS",
+        "base_url": "https://api-taas.moi.matrixorigin.cn/v1",
+        "models": ["qwen3.6-flash", "bge-m3"],
+        "model_mapping": {},
+        "key": "${TAAS_API_KEY}",
+        "priority": 1
+      }
+    },
+    "list": {
+      "method": "GET",
+      "fastgpt_path": "/api/aiproxy/api/channels/all",
+      "aiproxy_path": "/api/channels/all"
+    },
+    "test": {
+      "fastgpt_method": "GET",
+      "fastgpt_path": "/api/core/ai/model/test",
+      "fastgpt_query": ["model", "channelId"],
+      "aiproxy_saved_method": "GET",
+      "aiproxy_saved_path": "/api/channel/{id}/test",
+      "aiproxy_preview_single_method": "POST",
+      "aiproxy_preview_single_path": "/api/channel/test",
+      "aiproxy_preview_single_required": ["key", "model", "type"],
+      "aiproxy_preview_all_method": "POST",
+      "aiproxy_preview_all_path": "/api/channel/test-all",
+      "aiproxy_preview_all_required": ["key", "type"]
+    },
+    "version_evidence": {
+      "fastgpt_v4.15.6": "projects/app/src/web/core/ai/channel.ts and pages/api/core/ai/model/test.ts",
+      "fastgpt_v4.15.4_image": "compiled UI/API routes preserve create/list/model-test contracts",
+      "aiproxy_v0.6.5": "official image Swagger at revision aebeb5ec60415093db37c49dfda3fb6aa7ffd01e"
+    }
+  },
+  "api": [
+    {
+      "operation": "create_dataset",
+      "method": "POST",
+      "path": "/api/core/dataset/create",
+      "content_type": "application/json",
+      "required": ["type", "name", "intro"],
+      "response_data": "dataset id"
+    },
+    {
+      "operation": "upload_local_file",
+      "method": "POST",
+      "path": "/api/core/dataset/collection/create/localFile",
+      "content_type": "multipart/form-data",
+      "required": ["file", "data"],
+      "data_json_required": ["datasetId", "trainingType"],
+      "response_data": "{collectionId,results}"
+    },
+    {
+      "operation": "collection_readiness",
+      "method": "POST",
+      "path": "/api/core/dataset/collection/listV2",
+      "content_type": "application/json",
+      "required": ["datasetId", "offset", "pageSize"],
+      "ready_condition": "every item has trainingAmount=0, activeTrainingAmount=0, finalErrorAmount=0, hasError=false"
+    },
+    {
+      "operation": "direct_retrieval",
+      "method": "POST",
+      "path": "/api/core/dataset/searchTest",
+      "content_type": "application/json",
+      "required": ["datasetId", "text"],
+      "response_data": "{list,duration,limit,searchMode,usingReRank}"
+    },
+    {
+      "operation": "native_qa",
+      "method": "POST",
+      "path": "/api/v1/chat/completions",
+      "content_type": "application/json",
+      "required": ["appId", "chatId", "stream", "detail", "messages"],
+      "response": "OpenAI-compatible choices plus responseData when detail=true"
+    }
+  ],
+  "evidence": [
+    ".local-services/fastgpt_local/source/FastGPT/packages/global/openapi/core/dataset/api.ts",
+    ".local-services/fastgpt_local/source/FastGPT/packages/global/openapi/core/dataset/collection/createApi.ts",
+    ".local-services/fastgpt_local/source/FastGPT/projects/app/src/pages/api/core/dataset/collection/listV2.ts",
+    ".local-services/fastgpt_local/source/FastGPT/document/content/openapi/chat.en.mdx",
+    ".local-services/fastgpt_local/source/FastGPT/document/content/self-host/config/model/intro.en.mdx",
+    ".local-services/fastgpt_local/source/FastGPT/projects/app/src/web/core/ai/channel.ts",
+    ".local-services/fastgpt_local/source/FastGPT/projects/app/src/pages/api/core/ai/model/test.ts",
+    "ghcr.io/labring/aiproxy:v0.6.5 embedded Swagger/OpenAPI"
+  ]
+}

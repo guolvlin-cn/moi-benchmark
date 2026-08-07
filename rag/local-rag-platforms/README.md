@@ -5,6 +5,11 @@ sanitized configuration guidance, and the three-document smoke fixture. The
 vendor checkouts, compose files, volumes, logs, API keys, and raw smoke
 responses belong under the ignored `.local-services/` directory.
 
+External model providers are independent from the self-hosted services.
+MatrixOrigin TaaS remains available; Baidu Qianfan V2 is added as a separate
+OpenAI-compatible fallback. Shared templates, probe tooling and re-index rules
+are in `local-rag-platforms/providers/`.
+
 The current host is macOS/Apple Silicon with Colima `linux/arm64` and 16 GiB
 memory. Competitor services must run on this host. MatrixOrigin TaaS may be
 used by the service as an external OpenAI-compatible LLM/Embedding provider;

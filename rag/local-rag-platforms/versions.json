@@ -22,7 +22,8 @@
       "port_note": "Host 8000 was already occupied by an unrelated uvicorn process; Dify remains on the planned container port with host mapping 8010.",
       "platform_policy": "native_then_emulated",
       "resolved_source_commit": "6f8ed69ee15f9a2e7189ca066275e973d091d1e9",
-      "status": "partial_ready_missing_local_keys"
+      "status": "LOCAL_VARIANT",
+      "execution_result": "smoke_ready_44_document_readiness_2026_08_06"
     },
     "fastgpt_local": {
       "repo": "https://github.com/labring/FastGPT.git",
@@ -34,7 +35,10 @@
       "deployment_image_note": "The checked-in v4.15 PgVector compose currently references v4.15.4 images while the source checkout is v4.15.6.",
       "platform_policy": "native_then_emulated",
       "resolved_source_commit": "3db33e93b78e75b37c93f7a6e3d0fafeafbfd256",
-      "status": "partial_ready_missing_local_keys"
+      "status": "BLOCKED_LOCAL",
+      "execution_result": "partial_smoke_native_timeout_2026_08_06",
+      "smoke_artifact": ".local-services/fastgpt_local/logs/smoke-partial-20260806-114747/smoke-result.json",
+      "blocked_reason": "NATIVE_QA_TIMEOUT_NO_RESPONSE_SINCE_2026-08-06T03:44:03Z"
     },
     "ragflow_local": {
       "repo": "https://github.com/infiniflow/ragflow.git",
@@ -45,7 +49,9 @@
       "platform_policy": "native_then_emulated",
       "known_arch_note": "Official prebuilt images are primarily x86; verify manifest before pull.",
       "resolved_source_commit": "cb93883f3f8c975eecb2fed81210effeb3bdb06f",
-      "status": "image_ready_amd64_emulation_pending"
+      "status": "BLOCKED_LOCAL",
+      "execution_result": "blocked_local_resources_2026_08_06",
+      "blocked_reason": "BLOCKED_LOCAL_RESOURCES"
     },
     "maxkb_local": {
       "repo": "https://github.com/1Panel-dev/maxkb.git",
@@ -55,7 +61,8 @@
       "port": 8090,
       "platform_policy": "native_then_emulated",
       "resolved_source_commit": "fd6141e662582e88a41edbb7f6f89f4539e3e5dd",
-      "status": "image_ready_arm64_service_not_started"
+      "status": "LOCAL_VARIANT",
+      "execution_result": "partial_ingest_native_partial_retrieval_unsupported_2026_08_06"
     }
   }
 }

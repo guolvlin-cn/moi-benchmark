@@ -1,0 +1,144 @@
+name: moi_ragflow_local
+
+# v0.26.4 local constrained variant. The RAGFlow service is the only
+# emulated service; dependencies select their native arm64 manifests.
+services:
+  ragflow:
+    image: infiniflow/ragflow@sha256:16d24d1968ab59e2715a85d2590f1569c9539e0362344a42f3a23e8be06a655b
+    platform: linux/amd64
+    command:
+      - --enable-adminserver
+      - --init-model-provider-tables
+      - --workers=1
+    depends_on:
+      mysql:
+        condition: service_healthy
+      es01:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      API_PROXY_SCHEME: python
+      DOC_ENGINE: elasticsearch
+      DEVICE: cpu
+      ES_HOST: es01
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-infini_rag_flow}
+      MYSQL_HOST: mysql
+      MYSQL_PORT: "3306"
+      MYSQL_DBNAME: rag_flow
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-infini_rag_flow}
+      MINIO_HOST: minio
+      MINIO_USER: ${MINIO_USER:-rag_flow}
+      MINIO_PASSWORD: ${MINIO_PASSWORD:-infini_rag_flow}
+      REDIS_HOST: redis
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-infini_rag_flow}
+      TZ: Asia/Shanghai
+      MACOS: "1"
+      DOC_BULK_SIZE: ${DOC_BULK_SIZE:-1}
+      EMBEDDING_BATCH_SIZE: ${EMBEDDING_BATCH_SIZE:-4}
+    ports:
+      - 127.0.0.1:${RAGFLOW_HTTP_PORT:-9380}:80
+      - 127.0.0.1:${RAGFLOW_ADMIN_PORT:-9381}:9381
+    volumes:
+      - ragflow_logs:/ragflow/logs
+    networks: [ragflow]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost/api/v1/system/healthz >/dev/null"]
+      interval: 15s
+      timeout: 10s
+      retries: 80
+      start_period: 120s
+
+  es01:
+    image: elasticsearch@sha256:58a3a280935d830215802322e9a0373faaacdfd646477aa7e718939c2f29292a
+    platform: linux/arm64
+    environment:
+      node.name: es01
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-infini_rag_flow}
+      discovery.type: single-node
+      bootstrap.memory_lock: "false"
+      xpack.security.enabled: "true"
+      xpack.security.http.ssl.enabled: "false"
+      xpack.security.transport.ssl.enabled: "false"
+      cluster.routing.allocation.disk.watermark.low: 5gb
+      cluster.routing.allocation.disk.watermark.high: 3gb
+      cluster.routing.allocation.disk.watermark.flood_stage: 2gb
+    mem_limit: ${ES_MEM_LIMIT:-4294967296}
+    tmpfs:
+      - /tmp:mode=1777,size=512m
+    volumes:
+      - esdata01:/usr/share/elasticsearch/data
+    networks: [ragflow]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl http://localhost:9200 >/dev/null"]
+      interval: 10s
+      timeout: 10s
+      retries: 120
+
+  mysql:
+    image: mysql@sha256:ccb8f749bb5e59f9f8f03bf7282c7ef27a93a1814a24f0a8a926fb4e19b7fb97
+    platform: linux/arm64
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD:-infini_rag_flow}
+      MYSQL_DATABASE: rag_flow
+    command:
+      - --max_connections=1000
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+      - --max_allowed_packet=1073741824
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks: [ragflow]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-uroot", "-p${MYSQL_PASSWORD:-infini_rag_flow}"]
+      interval: 10s
+      timeout: 10s
+      retries: 120
+
+  minio:
+    image: pgsty/minio@sha256:a72bf37c235a83a73890d2a46c5b36801fed61c335175e0396070bf84a8bbb98
+    platform: linux/arm64
+    command: ["server", "--console-address", ":9001", "/data"]
+    environment:
+      MINIO_ROOT_USER: ${MINIO_USER:-rag_flow}
+      MINIO_ROOT_PASSWORD: ${MINIO_PASSWORD:-infini_rag_flow}
+    volumes:
+      - minio_data:/data
+    networks: [ragflow]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 10s
+      retries: 120
+
+  redis:
+    image: valkey/valkey@sha256:495e4fecdc98ee48a20b207726caa5ab6451e0fac3642a9be10d9e70b3068df6
+    platform: linux/arm64
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD:-infini_rag_flow}", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+    volumes:
+      - redis_data:/data
+    networks: [ragflow]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-infini_rag_flow}", "ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 120
+
+volumes:
+  ragflow_logs:
+  esdata01:
+  mysql_data:
+  minio_data:
+  redis_data:
+
+networks:
+  ragflow:
+    driver: bridge

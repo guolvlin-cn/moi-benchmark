@@ -12,7 +12,9 @@ import argparse
 import json
 import os
 import platform
+import secrets
 import subprocess
+import sys
 import time
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlparse
@@ -55,6 +57,82 @@ def service_dir(system_id: str) -> Path:
     for name in ("source", "compose", "data", "logs"):
         (target / name).mkdir(parents=True, exist_ok=True)
     return target
+
+
+def _credentials_path(system_id: str) -> Path:
+    return service_dir(system_id) / "credentials.env"
+
+
+def _read_credentials(system_id: str) -> dict[str, str]:
+    path = _credentials_path(system_id)
+    values: dict[str, str] = {}
+    if not path.exists():
+        return values
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        values[key] = value
+    return values
+
+
+def _write_credentials(system_id: str, values: dict[str, str]) -> Path:
+    path = _credentials_path(system_id)
+    payload = "".join(f"{key}={values[key]}\n" for key in sorted(values))
+    descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
+    with os.fdopen(descriptor, "w", encoding="utf-8") as stream:
+        stream.write(payload)
+    path.chmod(0o600)
+    return path
+
+
+def ensure_credentials(system_id: str) -> dict[str, Any]:
+    """Create non-committed bootstrap credentials without printing values."""
+
+    prefix = system_id.removesuffix("_local").upper()
+    values = _read_credentials(system_id)
+    defaults = {
+        f"{prefix}_LOCAL_ADMIN_EMAIL": f"{prefix.lower()}-local@localhost.invalid",
+        f"{prefix}_LOCAL_ADMIN_NAME": "MOI_Benchmark",
+        f"{prefix}_LOCAL_ADMIN_PASSWORD": secrets.token_urlsafe(24),
+    }
+    created: list[str] = []
+    for key, value in defaults.items():
+        if key not in values:
+            values[key] = value
+            created.append(key)
+    path = _write_credentials(system_id, values)
+    result = {
+        "system_id": system_id,
+        "path": str(path.relative_to(REPO_ROOT)),
+        "mode": oct(path.stat().st_mode & 0o777),
+        "created_names": created,
+        "stored_names": sorted(values),
+    }
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return result
+
+
+def set_secret(system_id: str, name: str) -> dict[str, Any]:
+    """Store one secret read from stdin without echoing it."""
+
+    if not name or not name.replace("_", "A").isalnum() or not name[0].isalpha():
+        raise SystemExit("secret name must be an environment variable identifier")
+    value = sys.stdin.read().strip()
+    if not value:
+        raise SystemExit("refusing to store an empty secret")
+    values = _read_credentials(system_id)
+    values[name] = value
+    path = _write_credentials(system_id, values)
+    result = {
+        "system_id": system_id,
+        "path": str(path.relative_to(REPO_ROOT)),
+        "mode": oct(path.stat().st_mode & 0o777),
+        "stored_name": name,
+    }
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return result
 
 
 def preflight() -> dict[str, Any]:
@@ -335,6 +413,15 @@ def main() -> int:
     event_parser.add_argument("status")
     event_parser.add_argument("--reason")
     event_parser.add_argument("--details", required=True)
+    credentials_parser = sub.add_parser(
+        "ensure-credentials", help="create ignored local bootstrap credentials without printing values"
+    )
+    credentials_parser.add_argument(
+        "system", choices=("dify_local", "fastgpt_local", "ragflow_local", "maxkb_local")
+    )
+    secret_parser = sub.add_parser("set-secret", help="store a secret read from stdin in the ignored credential file")
+    secret_parser.add_argument("system", choices=("dify_local", "fastgpt_local", "ragflow_local", "maxkb_local"))
+    secret_parser.add_argument("name")
     args = parser.parse_args()
     if args.command == "preflight":
         preflight()
@@ -346,6 +433,10 @@ def main() -> int:
         inspect_image(args.system, args.image, args.record_name)
     elif args.command == "record-event":
         record_event(args.system, args.event, args.status, args.reason, args.details)
+    elif args.command == "ensure-credentials":
+        ensure_credentials(args.system)
+    elif args.command == "set-secret":
+        set_secret(args.system, args.name)
     return 0
 
 

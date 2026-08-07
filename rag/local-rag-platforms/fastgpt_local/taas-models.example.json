@@ -1,0 +1,36 @@
+[
+  {
+    "model": "qwen3.6-flash",
+    "metadata": {
+      "isCustom": true,
+      "isActive": true,
+      "provider": "OpenAI",
+      "model": "qwen3.6-flash",
+      "name": "MatrixOrigin TaaS qwen3.6-flash",
+      "maxContext": 32768,
+      "maxResponse": 8192,
+      "quoteMaxToken": 24000,
+      "maxTemperature": 1,
+      "charsPointsPrice": 0,
+      "censor": false,
+      "vision": false,
+      "toolChoice": true,
+      "functionCall": false,
+      "defaultConfig": {},
+      "fieldMap": {}
+    }
+  },
+  {
+    "model": "bge-m3",
+    "metadata": {
+      "isCustom": true,
+      "isActive": true,
+      "provider": "OpenAI",
+      "model": "bge-m3",
+      "name": "MatrixOrigin TaaS bge-m3",
+      "charsPointsPrice": 0,
+      "defaultToken": 512,
+      "maxToken": 8192
+    }
+  }
+]
