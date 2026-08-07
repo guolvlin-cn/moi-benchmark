@@ -419,14 +419,22 @@ class DifyLocalAdapter(BaseAdapter):
         )
         dataset_key = self._step("dataset-credential", lambda: self._require_key(self.context.dataset_api_key, "DIFY_LOCAL_DATASET_API_KEY"))
         if dataset_key:
-            created = self._step("create-dataset", lambda: self.dataset_client.request(
-                "POST",
-                "/datasets",
-                json_body=self._dataset_payload(),
-                api_key=dataset_key,
-                operation="create-dataset",
-            ))
-            self.dataset_id = _first_value(created, ("id", "dataset_id")) if created else None
+            self.dataset_id = self.context.options.get("dataset_id")
+            if self.dataset_id:
+                self.store.record(
+                    "reuse-dataset",
+                    {"dataset_id": self.dataset_id},
+                    {"reused": True},
+                )
+            else:
+                created = self._step("create-dataset", lambda: self.dataset_client.request(
+                    "POST",
+                    "/datasets",
+                    json_body=self._dataset_payload(),
+                    api_key=dataset_key,
+                    operation="create-dataset",
+                ))
+                self.dataset_id = _first_value(created, ("id", "dataset_id")) if created else None
             if self.dataset_id and self.context.source_dir:
                 uploaded = True
                 for path in sorted(self.context.source_dir.iterdir()):

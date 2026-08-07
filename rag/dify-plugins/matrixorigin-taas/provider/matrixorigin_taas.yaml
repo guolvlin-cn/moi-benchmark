@@ -3,8 +3,8 @@ label:
   en_US: MatrixOrigin TaaS
   zh_Hans: MatrixOrigin TaaS
 description:
-  en_US: MatrixOrigin TaaS embedding and rerank models.
-  zh_Hans: MatrixOrigin TaaS 嵌入与重排模型。
+  en_US: MatrixOrigin TaaS chat, embedding, and rerank models.
+  zh_Hans: MatrixOrigin TaaS 对话、嵌入与重排模型。
 icon_small:
   en_US: icon.svg
   zh_Hans: icon.svg
@@ -20,6 +20,7 @@ help:
     en_US: https://taas.moi.matrixorigin.cn/taas/docs
     zh_Hans: https://taas.moi.matrixorigin.cn/taas/docs
 supported_model_types:
+  - llm
   - text-embedding
   - rerank
 configurate_methods:
@@ -95,6 +96,10 @@ model_credential_schema:
             zh_Hans: 支持
           value: support
 models:
+  llm:
+    predefined:
+      - models/llm/*.yaml
+    position: models/llm/_position.yaml
   text_embedding:
     predefined:
       - models/text_embedding/*.yaml
@@ -107,5 +112,6 @@ extra:
   python:
     provider_source: provider/matrixorigin_taas.py
     model_sources:
+      - models/llm/llm.py
       - models/text_embedding/text_embedding.py
       - models/rerank/rerank.py

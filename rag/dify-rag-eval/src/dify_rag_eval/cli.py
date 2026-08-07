@@ -106,6 +106,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     local_smoke.add_argument("--api-key-env", default="LOCAL_RAG_API_KEY")
     local_smoke.add_argument("--dataset-api-key-env", default="DIFY_LOCAL_DATASET_API_KEY")
+    local_smoke.add_argument(
+        "--dataset-id-env",
+        default="DIFY_LOCAL_DATASET_ID",
+        help="reuse an existing Dify dataset so the native app and retrieval smoke share one corpus",
+    )
     local_smoke.add_argument("--app-api-key-env", default="DIFY_LOCAL_API_KEY")
     local_smoke.add_argument("--app-id-env", default="FASTGPT_APP_ID")
     local_smoke.add_argument("--question", default="Where must the RAG service under test run, and what external dependency is allowed?")
@@ -185,6 +190,7 @@ def main(argv: list[str] | None = None) -> int:
         }
         api_key = os.getenv(args.api_key_env)
         dataset_api_key = os.getenv(args.dataset_api_key_env)
+        dataset_id = os.getenv(args.dataset_id_env)
         app_api_key = os.getenv(args.app_api_key_env)
         app_id = os.getenv(args.app_id_env)
         context = SmokeContext(
@@ -203,6 +209,7 @@ def main(argv: list[str] | None = None) -> int:
             options={
                 "embedding_model": args.embedding_model,
                 "embedding_provider": args.embedding_provider,
+                "dataset_id": dataset_id,
                 "vector_model": args.vector_model,
                 "agent_model": args.agent_model,
                 "chat_id": args.chat_id,

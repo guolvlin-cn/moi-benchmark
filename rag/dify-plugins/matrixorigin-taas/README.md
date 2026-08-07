@@ -4,6 +4,7 @@ This private Dify model-provider plugin connects Dify to MatrixOrigin TaaS.
 
 Supported predefined models:
 
+- `deepseek-v4-flash` — chat completion
 - `bge-m3` — text embedding
 - `qwen3-vl-embedding` — text and image embedding
 - `qwen3-rerank` — text rerank
