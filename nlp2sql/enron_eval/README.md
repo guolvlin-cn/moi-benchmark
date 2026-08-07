@@ -8,6 +8,8 @@ nlp2sql/enron_eval/
 
 项目使用同一份 Enron 邮件数据库、同一组 50 道中文问题和同一套 Golden SQL，对 MOI、Wren AI 和 Chat2DB 的最终 NL2SQL 产品能力进行比较。
 
+对应执行方案见：[评测计划v0.3](../plans/drafts/v0.3.md)。
+
 与 `nlp2sql/` 中既有的 Spider mix50 公开数据集评测不同，本项目强调中文自然语言、真实邮件 Schema、字段注释、产品语义配置和本地部署环境。原始六张 CSV 属于私有评测数据，不提交 GitHub。
 
 ## 正式评测集

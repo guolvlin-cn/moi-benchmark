@@ -29,6 +29,7 @@ GitHub 目标仓库：<https://github.com/matrixorigin/moi-benchmark/tree/main/n
 ```text
 nlp2sql/
 ├── README.md                       # Track总览，列出公开和私有两个阶段
+├── NL2SQL评测汇总报告.md            # Spider与Enron跨阶段汇总
 ├── spider/                         # Spider mix50公开集完整评测包
 │   ├── README.md
 │   ├── NL2SQL评测汇总报告.md

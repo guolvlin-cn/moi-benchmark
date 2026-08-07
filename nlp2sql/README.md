@@ -4,6 +4,8 @@
 
 MOI 平台与竞品（Wren AI、Chat2DB）的 NL2SQL 能力对比评测。本 Track 同时保留公开数据集阶段和私有数据集阶段。Spider mix50 的完整材料集中在 [`spider/`](spider/README.md)；Enron Eval 50 的完整材料集中在 [`enron_eval/`](enron_eval/README.md)。
 
+跨阶段结论见：[NL2SQL评测汇总报告](NL2SQL评测汇总报告.md)。评测方案版本见：[plans/](plans/README.md)。
+
 ## 阶段一：Spider mix50 三平台横评（已完成）
 
 ### 数据集
@@ -202,6 +204,7 @@ MOI（被评测）、Wren AI、Chat2DB；优先使用各产品原生界面，保
 ```
 nlp2sql/
 ├── README.md                      # 本文档
+├── NL2SQL评测汇总报告.md           # Spider与Enron跨阶段汇总
 ├── spider/                        # Spider mix50公开数据集评测
 │   ├── README.md                  # Spider阶段入口
 │   ├── NL2SQL评测汇总报告.md       # Spider详细评测报告
@@ -214,8 +217,9 @@ nlp2sql/
 │   ├── products/                  # 三款产品配置与原始输出
 │   ├── results/                   # 统一结果与横向对比
 │   └── scripts/                   # 导入、生成和评测脚本
-├── plans/                         # 后续私有业务评测方案
-│   └── drafts/v0.1.md
+├── plans/                         # 评测计划版本
+│   ├── README.md
+│   └── drafts/                    # v0.1、v0.2、v0.3
 ├── refs/                          # 通用NL2SQL参考资料
 │   ├── deep-research-report-5.md
 │   └── deep-research-report-6.md
