@@ -1,0 +1,12 @@
+product: moi
+enabled: true
+source_revision: 75018903911da5712cb0c6763267d42e430fcfcf
+model: deepseek-v4-flash
+deployment: local
+workspace: local_project
+knowledge_base: 邮件问答
+semantic_rules: products/moi/semantic/moi_email_qa_semantic_config.json
+credentials_env:
+  email: MOI_EMAIL
+  password: MOI_PASSWORD
+notes: "本文件不保存真实账号、密码、Cookie或Token。"

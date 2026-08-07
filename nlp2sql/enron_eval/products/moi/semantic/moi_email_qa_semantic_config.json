@@ -1,0 +1,164 @@
+{
+  "entries": [
+    {
+      "kind": "logic_text",
+      "key": "enron_schema_and_table_contract",
+      "tables": [
+        "enron_email",
+        "enron_emailinfo",
+        "enron_emailorig",
+        "enron_emailto",
+        "enron_emailxto",
+        "enron_source"
+      ],
+      "spec": {
+        "content": "Use this Enron schema contract for every plan and SQL statement. enron_emailinfo has one row per current message id and contains the current Message-ID, Date, Subject, From, aggregate To header, X-From, aggregate X-To header, and Body. enron_email records archive placement: id links to the logical message, people is the mailbox-owner code and is never the sender, mailbox is the exact archive folder name, and nnn is the original ordinal within that folder, not a count. enron_emailto contains normalized recipient-detail rows (id, nthto, to). enron_emailxto contains original recipient display values (id, nthxto, xto). enron_emailorig contains historical headers parsed from quoted Original Message blocks inside the current email body; id identifies the current outer email and nth is the extracted historical-header occurrence or nesting order. enron_source contains source/provenance data: id, source_file_id, source_name, xfilename, xfolder, and xorigin. Join these tables by id. Do not invent physical keys or relationships and do not substitute one table's meaning for another.",
+        "injection_stages": [
+          "planner_policy",
+          "sql_generation",
+          "sql_regenerate",
+          "renderer_rule"
+        ],
+        "priority": 500
+      }
+    },
+    {
+      "kind": "logic_text",
+      "key": "enron_user_terms_and_identity_mapping",
+      "tables": [
+        "enron_email",
+        "enron_emailinfo",
+        "enron_emailorig",
+        "enron_emailto",
+        "enron_emailxto",
+        "enron_source"
+      ],
+      "spec": {
+        "content": "Resolve ordinary user wording as follows. Sender, sender address, sender mailbox, who sent an email, and emails sent by someone refer to normalized enron_emailinfo.from, not enron_email.people or enron_source.xorigin. Recipient, receiving address, who received an email, and whom someone wrote to refer to normalized enron_emailto.to. Original display sender/recipient explicitly means xfrom or xto. A person's archived folders, employee mail directory, mailbox owner, or whose mailbox refers to enron_email.people plus enron_email.mailbox. Data source employee, source owner, or source identity refers to enron_source.xorigin or other enron_source provenance fields as requested, not enron_email.people. In this benchmark Phillip Allen maps to phillip.allen@enron.com, Larry Campbell maps to larry.campbell@enron.com, the Enron announcement mailbox maps exactly to enron.announcements@enron.com, Allen's archived mailbox context maps to people = allen-p, and Campbell's maps to people = campbell-l. Do not broaden an explicitly named email address to similar addresses unless the user asks for fuzzy or family matching.",
+        "injection_stages": [
+          "planner_policy",
+          "sql_generation",
+          "sql_regenerate",
+          "renderer_rule"
+        ],
+        "priority": 495
+      }
+    },
+    {
+      "kind": "logic_text",
+      "key": "enron_message_grain_and_recipient_counting",
+      "tables": [
+        "enron_emailinfo",
+        "enron_emailto",
+        "enron_emailxto"
+      ],
+      "spec": {
+        "content": "The default email grain is one distinct current message id. Count emails with COUNT(DISTINCT id), especially after one-to-many joins. Normalize standard sender and recipient addresses with LOWER(TRIM(address)) and exclude null, empty, and whitespace-only values. A recipient repeated in the same message counts once for message-frequency and distinct-recipient questions. For average recipient count per email, first build the complete requested message population, LEFT JOIN recipient rows so messages with no parsed recipient remain present with zero recipients, count distinct normalized recipients per message, and then average those per-message counts. For intersections, overlaps, shared recipients, anti-joins, sender-recipient pairs, and unique-recipient rankings, compare normalized addresses. enron_emailto.to and enron_emailxto.xto are different representations: to is a standard address detail while xto may be a display name, group, alias, or raw value. Count them independently unless ordinal pairing is explicitly requested. If pairing is requested, join on id and nthto = nthxto, but do not claim that this proves a unique natural person.",
+        "injection_stages": [
+          "planner_policy",
+          "sql_generation",
+          "sql_regenerate",
+          "executor_rule"
+        ],
+        "priority": 490
+      }
+    },
+    {
+      "kind": "logic_text",
+      "key": "enron_text_empty_and_folder_semantics",
+      "tables": [
+        "enron_email",
+        "enron_emailinfo"
+      ],
+      "spec": {
+        "content": "When the user asks for non-empty values, require the field to be non-null and TRIM(field) <> ''. When the user asks for blank or missing values, treat null, empty string, and whitespace-only text as empty. Return the statistics the user requested; do not reverse non-empty questions into null/empty diagnostics. For user-supplied terms in Subject or Body, default to case-insensitive substring matching unless exact word, regular expression, wildcard, or fuzzy matching is explicitly requested. Count each matching message once even when the term appears multiple times. Combine terms with AND when all must occur and OR when any may occur, then de-duplicate message ids. Folder values are exact by default: sent means only mailbox = 'sent' and does not include '_sent_mail' or 'sent_items'; inbox means only mailbox = 'inbox'; deleted_items means only that exact folder. Preserve mailbox = 'inbox' or any other explicitly stated folder filter throughout all joins and aggregations. Aggregate folder names globally only when requested; retain people in grouping for per-employee or per-mailbox-owner questions.",
+        "injection_stages": [
+          "planner_policy",
+          "sql_generation",
+          "sql_regenerate"
+        ],
+        "priority": 485
+      }
+    },
+    {
+      "kind": "logic_text",
+      "key": "enron_rfc_date_handling",
+      "tables": [
+        "enron_emailinfo"
+      ],
+      "spec": {
+        "content": "enron_emailinfo.date is an RFC-style text header, not a native DATE or DATETIME column. Before chronological sorting or extracting year, month, or day, isolate and parse the displayed day, month, four-digit year, and clock time with a native date parser such as STR_TO_DATE; do not sort raw date strings and do not construct fragile month-order expressions with SUBSTRING_INDEX. Calendar-year, calendar-month, calendar-day, busiest-day, earliest, and latest questions use the local calendar values displayed in the header, without UTC conversion. Latest-message ordering is parsed local datetime DESC, then message id DESC for deterministic ties. Monthly output uses zero-padded 01 through 12 and includes only months present unless a complete calendar series is requested. Never hardcode a busiest date, latest date, or other value discovered from the data: compute it in the SQL and return the requested date column together with its metric when both are requested.",
+        "injection_stages": [
+          "planner_policy",
+          "sql_generation",
+          "sql_regenerate"
+        ],
+        "priority": 480
+      }
+    },
+    {
+      "kind": "logic_text",
+      "key": "enron_reply_thread_and_history_semantics",
+      "tables": [
+        "enron_emailinfo",
+        "enron_emailorig"
+      ],
+      "spec": {
+        "content": "A current email is a reply only when TRIM(current Subject) begins with 'Re:' case-insensitively. Never invert this condition. For subject-inferred thread analysis, repeatedly remove every consecutive leading Re: marker case-insensitively, including whitespace after each marker, then trim the remaining topic. Do not remove Fwd: or other prefixes unless requested. Group the current reply emails from enron_emailinfo by this fully normalized topic; do not use enron_emailorig as a replacement for current reply messages. Describe this as subject-inferred threading, not verified Message-ID threading. enron_emailorig stores historical headers quoted inside the current email body, not current-message headers. For whom a sender replied to, filter current enron_emailinfo rows by the current from address and reply subject, join enron_emailorig on id, restrict nth = 1 for the immediately quoted or outermost prior header, and group by the historical from value. Historical chain-depth questions count enron_emailorig rows per current outer id and do not treat every historical row as a separately verified reply event.",
+        "injection_stages": [
+          "planner_policy",
+          "sql_generation",
+          "sql_regenerate",
+          "renderer_rule"
+        ],
+        "priority": 492
+      }
+    },
+    {
+      "kind": "logic_text",
+      "key": "enron_ranking_aggregation_and_output_contract",
+      "tables": [
+        "enron_email",
+        "enron_emailinfo",
+        "enron_emailorig",
+        "enron_emailto",
+        "enron_emailxto",
+        "enron_source"
+      ],
+      "spec": {
+        "content": "Compute all filters, joins, de-duplication, aggregates, ratios, percentages, intersections, averages, and rankings in SQL before applying the display limit. If the user asks which single item is highest or lowest, return exactly one row with LIMIT 1 unless ties are explicitly requested. A requested top N returns exactly N rows when at least N qualifying groups exist. Order the requested metric in the requested direction and add the displayed normalized address, folder, topic, date, or id ascending as a deterministic secondary key unless another tie-break rule is specified. If ties are explicitly included, use dense ranking and return every group tied at rank N. Percentages must be calculated in SQL as values from 0 to 100, guarded against division by zero, and rounded to the requested precision, normally two decimal places; do not return only numerator and denominator. Return exactly the requested result columns, including requested dates or labels, and do not add unrelated diagnostic columns. Every reported number and example must come from the final successful executed SQL with identical filters.",
+        "injection_stages": [
+          "planner_policy",
+          "sql_generation",
+          "sql_regenerate",
+          "executor_rule",
+          "renderer_rule"
+        ],
+        "priority": 475
+      }
+    },
+    {
+      "kind": "logic_text",
+      "key": "enron_sql_dialect_and_recovery_rules",
+      "tables": [
+        "enron_email",
+        "enron_emailinfo",
+        "enron_emailorig",
+        "enron_emailto",
+        "enron_emailxto",
+        "enron_source"
+      ],
+      "spec": {
+        "content": "Generate MySQL 8 compatible SQL for the connected enron_eval database. The column names from and to are reserved identifiers: always reference them with backticks as `from` and `to`, including inside CTEs, subqueries, GROUP BY, ORDER BY, joins, and regenerated SQL. Use simple ASCII English aliases for result columns and CTE names so downstream SQL wrappers can parse them reliably. Qualify ambiguous id and other shared columns with table aliases. Prefer explicit CTEs for message-grain de-duplication and multi-stage aggregation. Do not hardcode any date, count, address, topic, folder, or ranking result that should be derived from the data. If execution or parsing fails, regenerate a corrected query while preserving all semantic filters, output columns, grouping grain, and ordering requirements. The final answer must be based only on the last successful query and must not silently use an earlier failed query or an unexecuted estimate.",
+        "injection_stages": [
+          "sql_generation",
+          "sql_regenerate",
+          "sql_followup",
+          "sql_decomposition",
+          "executor_rule"
+        ],
+        "priority": 505
+      }
+    }
+  ]
+}

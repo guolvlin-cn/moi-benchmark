@@ -1,0 +1,15 @@
+{
+  "question_count": 50,
+  "sql_generated": 47,
+  "failed": 3,
+  "total_run_seconds": 100.78,
+  "total_generation_seconds": 999.598,
+  "average_generation_seconds": 19.992,
+  "min_generation_seconds": 11.149,
+  "max_generation_seconds": 34.733,
+  "failed_case_ids": [
+    "e18_senders_more_than_100",
+    "e19_top_xfrom",
+    "m15_sender_with_most_recipients"
+  ]
+}

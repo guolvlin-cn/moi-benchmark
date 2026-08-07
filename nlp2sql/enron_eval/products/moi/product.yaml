@@ -1,0 +1,34 @@
+name: MOI
+vendor: MatrixOrigin
+product_type: locally_deployed_nl2sql_platform
+
+source:
+  repository: https://github.com/matrixorigin/matrixflow
+  branch: dev
+  branch_url: https://github.com/matrixorigin/matrixflow/tree/dev
+  evaluated_commit: 75018903911da5712cb0c6763267d42e430fcfcf
+  vendored_in_this_repository: false
+
+deployment:
+  mode: local
+  application_url: http://localhost:18002
+  workspace: local_project
+  knowledge_base: 邮件问答
+  knowledge_base_id: 2
+  database: enron_eval
+  evaluated_model: deepseek-v4-flash
+  evaluated_model_backend_id: -4
+  credentials_in_repository: false
+
+evaluation:
+  benchmark_id: enron_golden50_v1
+  question_count: 50
+  protocol: one isolated fixed-knowledge session per question; one attempt
+  baseline_run: results/baseline_no_semantic/run.json
+  semantic_run: results/with_semantic/run.json
+  semantic_config: semantic/moi_email_qa_semantic_config.json
+
+provenance_notes:
+  - The Matrixflow source tree is linked by repository, branch, and commit instead of being copied here.
+  - The evaluated local Matrixflow checkout contained uncommitted local changes; see README.md.
+  - Login credentials, cookies, tokens, and raw database data are intentionally excluded.

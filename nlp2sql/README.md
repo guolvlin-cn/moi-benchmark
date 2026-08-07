@@ -1,8 +1,8 @@
 # NLP2SQL Benchmark Track
 
-状态：第一阶段完成（Spider mix50 三平台横评），第二阶段启动中（中文财务数据评测）。
+状态：Spider mix50 公开集横评和 Enron Eval 50 私有集横评均已完成，中文财务数据评测处于规划阶段。
 
-MOI 平台与竞品（Wren AI、Chat2DB）的 NL2SQL 能力对比评测。本 Track 的全部材料保存在本目录：`datasets/`、`results/`、`scripts/`、`plans/`、`refs/`。
+MOI 平台与竞品（Wren AI、Chat2DB）的 NL2SQL 能力对比评测。本 Track 同时保留公开数据集阶段和私有数据集阶段。Spider mix50 的共用材料位于 `datasets/`、`results/` 和 `scripts/`；Enron Eval 50 的完整材料集中在 [`enron_eval/`](enron_eval/README.md)。
 
 ## 阶段一：Spider mix50 三平台横评（已完成）
 
@@ -97,13 +97,33 @@ Spider 是学术界标准基准，但用它测 MOI 存在根本性不匹配：
 
 **核心矛盾**：Spider 测的是「给定完整 schema，一次生成正确 SQL」的学术能力；MOI 卖的是「用户用自然语言问业务问题，Agent 自己探索、生成、验证、呈现答案」的产品体验。
 
+## 阶段二：Enron Eval 50 私有数据集横评（已完成）
+
+为补充 Spider 公开集的局限，本阶段使用固定的 Enron 邮件数据库快照开展中文 NL2SQL 评测：
+
+- **数据结构**：6 张邮件相关表，原始 CSV 不提交到公开仓库；
+- **问题构成**：50 道中文问题，其中 25 道采用更接近真实用户的口语化表达，另外 25 道保留较明确的查询条件；
+- **评测对象**：MOI 本地部署、Wren AI 本地 Docker 部署、Chat2DB 会员桌面版；
+- **主指标**：在同一 MySQL 8 数据快照上执行预测 SQL，与 Golden SQL 的结果集进行比较；
+- **语义实验**：MOI 同时保留无语义配置基线和加入邮件领域语义配置后的结果。
+
+| 平台与配置 | 通过数 | Execution Accuracy |
+|-----------|:------:|:------------------:|
+| Chat2DB 会员桌面版 | 42/50 | **84%** |
+| MOI 本地部署（有语义配置） | 41/50 | **82%** |
+| MOI 本地部署（无语义配置） | 35/50 | **70%** |
+| Wren AI 本地 Docker | 24/50 | **48%** |
+
+完整问题、Golden SQL、数据库定义、语义配置、产品原始输出、统一评测脚本和失败记录见 [`enron_eval/README.md`](enron_eval/README.md)。原始 CSV、产品账号、密码、Cookie、Token、License 和商业软件安装包均不进入仓库。
+
 ## 评测历程
 
-### 第一阶段：Enron 邮件数据集（已弃用）
+### 早期探索：Enron 邮件 9 题（已归档）
 
 - 数据集：Enron 邮件数据，6 表 53 万行，9 道自建题目
 - 评测工具：agent-eval-tools（MOI 自研）
-- 弃用原因：评测集闭合性差（9 题太少）、MOI Explore Agent 大结果集频繁 ConnectionError、无变体库校验
+- 归档原因：评测集闭合性差（9 题太少）、MOI Explore Agent 大结果集频繁 ConnectionError、无变体库校验
+- 后续版本：已由本目录中的 `enron_eval/` 50 题正式评测替代，旧文件通过 Git 历史保留
 
 ### 第二阶段：Spider easy50（单表简单题）
 
@@ -127,7 +147,7 @@ Spider 是学术界标准基准，但用它测 MOI 存在根本性不匹配：
 | **端到端分析** | SQL → 表格 → 图表 → 解读一条龙 | 只出 SQL/表格 |
 | **多返列是加分** | 用户获得额外信息维度 | — |
 
-## 阶段二：中文财务数据评测（进行中）
+## 后续计划：中文财务数据评测
 
 ### 评测目标
 
@@ -198,6 +218,12 @@ nlp2sql/
 │       └── report_mix50_chat2db_records.txt
 ├── scripts/                       # 评测脚本
 │   └── README.md
+├── enron_eval/                    # Enron私有快照50题正式评测
+│   ├── benchmark/                 # 问题、口径、案例和Golden SQL
+│   ├── database/                  # 建库及字段注释SQL
+│   ├── products/                  # 三款产品配置与原始输出
+│   ├── results/                   # 统一结果与横向对比
+│   └── scripts/                   # 导入、生成和评测脚本
 ├── plans/                         # 评测方案
 │   └── drafts/v0.1.md
 └── refs/                          # 参考资料
@@ -216,7 +242,8 @@ nlp2sql/
 ## 工作量与资源
 
 - 第一阶段（Spider mix50）：已完成，约 5 人天 + ¥200 API 调用
-- 第二阶段（中文财务评测）：计划中，预计 7 人天 + ¥900–1,600 预算
+- 第二阶段（Enron Eval 50）：已完成，详细过程与结果见 `enron_eval/`
+- 后续中文财务评测：计划中，预计 7 人天 + ¥900–1,600 预算
 - 环境：MOI 本地部署（MatrixOne 6001 + catalog 18081）、SQLite、macOS/Linux
 - GPU：不需要（MOI 和竞品均使用外部 LLM API）
 

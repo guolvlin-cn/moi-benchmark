@@ -1,0 +1,411 @@
+以下是为您整理的 50 个问题的完整 SQL 语句：
+
+Easy (e01 - e20)
+-- e01: 这个邮件库里一共有多少个不同的发件邮箱？
+SELECT COUNT(DISTINCT TRIM(LOWER(`from`))) AS distinct_senders
+FROM enron_emailinfo
+WHERE `from` IS NOT NULL AND TRIM(`from`) != '';
+
+-- e02: 这个库总共有多少封邮件？
+SELECT COUNT(DISTINCT id) AS total_emails FROM enron_emailinfo;
+
+-- e03: 哪些邮件的主题为空？列出邮件ID、messageid和发件地址，按邮件ID升序排列。
+SELECT id, messageid, `from`
+FROM enron_emailinfo
+WHERE subject IS NULL OR TRIM(subject) = ''
+ORDER BY id ASC;
+
+-- e04: 有多少封邮件是回复邮件？
+SELECT COUNT(DISTINCT id) AS reply_count
+FROM enron_emailinfo
+WHERE TRIM(subject) LIKE 'Re:%' OR TRIM(subject) LIKE 'RE:%';
+
+-- e05: Phillip Allen一共发了多少封邮件？
+SELECT COUNT(DISTINCT id) AS phillip_count
+FROM enron_emailinfo
+WHERE TRIM(LOWER(`from`)) = 'phillip.allen@enron.com';
+
+-- e06: 邮件最多的10个邮箱文件夹是哪些？
+SELECT mailbox, COUNT(DISTINCT id) AS email_count
+FROM enron_email
+GROUP BY mailbox
+ORDER BY email_count DESC
+LIMIT 10;
+
+-- e07: sent文件夹里有多少封邮件？
+SELECT COUNT(DISTINCT e.id) AS sent_count
+FROM enron_email e
+WHERE e.mailbox = 'sent';
+
+-- e08: 有多少封邮件的正文提到了California？
+SELECT COUNT(DISTINCT id) AS california_count
+FROM enron_emailinfo
+WHERE body LIKE '%California%';
+
+-- e09: 列出邮件ID最小的10条来源记录。
+SELECT id, source_file_id, source_name
+FROM enron_source
+ORDER BY id ASC
+LIMIT 10;
+
+-- e10: 列出所有非NULL且非空的不重复邮箱文件夹名称，按文件夹名升序排列。
+SELECT DISTINCT mailbox
+FROM enron_email
+WHERE mailbox IS NOT NULL AND TRIM(mailbox) != ''
+ORDER BY mailbox ASC;
+
+-- e11: 最近发出的10封邮件是什么？给我日期、主题和发件人。
+SELECT `date`, subject, `from`
+FROM enron_emailinfo
+WHERE `date` IS NOT NULL AND TRIM(`date`) != ''
+ORDER BY STR_TO_DATE(SUBSTRING_INDEX(`date`, ' ', 5), '%a, %d %b %Y') DESC
+LIMIT 10;
+
+-- e12: 原始Date邮件头显示年份为2001年的邮件共有多少封？
+SELECT COUNT(DISTINCT id) AS count_2001
+FROM enron_emailinfo
+WHERE `date` LIKE '%2001%';
+
+-- e13: 在正文引用的历史邮件头中，分别有多少行包含非空xfrom和非空xto？
+SELECT
+  SUM(CASE WHEN xfrom IS NOT NULL AND TRIM(xfrom) != '' THEN 1 ELSE 0 END) AS xfrom_nonempty_count,
+  SUM(CASE WHEN xto IS NOT NULL AND TRIM(xto) != '' THEN 1 ELSE 0 END) AS xto_nonempty_count
+FROM enron_emailorig;
+
+-- e14: 这个邮件库包含哪些员工的邮件目录？
+SELECT DISTINCT people
+FROM enron_email
+WHERE people IS NOT NULL AND TRIM(people) != ''
+ORDER BY people;
+
+-- e15: campbell-l员工目录中有多少个不同的非空邮箱文件夹？
+SELECT COUNT(DISTINCT mailbox) AS campbell_mailboxes
+FROM enron_email
+WHERE people = 'campbell-l' AND mailbox IS NOT NULL AND TRIM(mailbox) != '';
+
+-- e16: 将所有员工目录合并后，单个mailbox名称保存的不同邮件ID数量最大是多少？
+SELECT MAX(cnt) AS max_mail_count
+FROM (SELECT mailbox, COUNT(DISTINCT id) AS cnt FROM enron_email GROUP BY mailbox) t;
+
+-- e17: 有多少封邮件的主题提到了meeting？
+SELECT COUNT(DISTINCT id) AS meeting_count
+FROM enron_emailinfo
+WHERE subject LIKE '%meeting%';
+
+-- e18: 哪些有效发件地址发送了超过100封邮件？
+SELECT TRIM(LOWER(`from`)) AS sender, COUNT(DISTINCT id) AS cnt
+FROM enron_emailinfo
+WHERE `from` IS NOT NULL AND TRIM(`from`) != ''
+GROUP BY sender
+HAVING cnt > 100
+ORDER BY cnt DESC, sender ASC;
+
+-- e19: 当前邮件中最常见的10个非空X-From原始发件人显示值是什么？
+SELECT TRIM(xfrom) AS xfrom_display, COUNT(DISTINCT id) AS cnt
+FROM enron_emailinfo
+WHERE xfrom IS NOT NULL AND TRIM(xfrom) != ''
+GROUP BY xfrom_display
+ORDER BY cnt DESC, xfrom_display ASC
+LIMIT 10;
+
+-- e20: 列出campbell-l员工目录中all_documents文件夹里原始序号nnn最大的10封邮件。
+SELECT e.id, e.nnn, ei.subject, ei.`from`
+FROM enron_email e
+JOIN enron_emailinfo ei ON e.id = ei.id
+WHERE e.people = 'campbell-l' AND e.mailbox = 'all_documents'
+ORDER BY e.nnn DESC, e.id DESC
+LIMIT 10;
+Medium (m01 - m20)
+-- m01: 各员工的邮件都分布在哪些文件夹？按邮件量从多到少列出来。
+SELECT e.people, e.mailbox, COUNT(DISTINCT e.id) AS email_count
+FROM enron_email e
+GROUP BY e.people, e.mailbox
+ORDER BY email_count DESC;
+
+-- m02: Phillip Allen最常给哪些邮箱发邮件？列出前10个。
+SELECT et.`to`, COUNT(DISTINCT et.id) AS cnt
+FROM enron_emailto et
+JOIN enron_emailinfo ei ON et.id = ei.id
+WHERE TRIM(LOWER(ei.`from`)) = 'phillip.allen@enron.com'
+GROUP BY et.`to`
+ORDER BY cnt DESC
+LIMIT 10;
+
+-- m03: 哪些人发的邮件正文最常提到California？列出前5名。
+SELECT `from`, COUNT(DISTINCT id) AS cnt
+FROM enron_emailinfo
+WHERE body LIKE '%California%'
+GROUP BY `from`
+ORDER BY cnt DESC
+LIMIT 5;
+
+-- m04: 每个非空来源员工标识xorigin关联了多少个不同的非空原始Lotus Notes文件夹描述xfolder？
+SELECT xorigin, COUNT(DISTINCT xfolder) AS folder_count
+FROM enron_source
+WHERE xorigin IS NOT NULL AND TRIM(xorigin) != ''
+  AND xfolder IS NOT NULL AND TRIM(xfolder) != ''
+GROUP BY xorigin
+ORDER BY folder_count DESC, xorigin ASC;
+
+-- m05: 哪些发件人的邮件平均会发给3个人以上？
+SELECT sender, avg_recipients
+FROM (
+  SELECT TRIM(LOWER(ei.`from`)) AS sender,
+    AVG(COALESCE(rc.recipient_count, 0)) AS avg_recipients
+  FROM enron_emailinfo ei
+  LEFT JOIN (
+    SELECT id, COUNT(nthto) AS recipient_count FROM enron_emailto GROUP BY id
+  ) rc ON ei.id = rc.id
+  WHERE ei.`from` IS NOT NULL AND TRIM(ei.`from`) != ''
+  GROUP BY sender
+) sub
+WHERE avg_recipients > 3
+ORDER BY avg_recipients DESC;
+
+-- m06: 名称恰好为sent的文件夹中，不同邮件ID数量占全库不同邮件ID总数的百分比是多少？
+SELECT ROUND(
+  (SELECT COUNT(DISTINCT id) FROM enron_email WHERE mailbox = 'sent') * 100.0
+  / (SELECT COUNT(DISTINCT id) FROM enron_email), 2) AS sent_percentage;
+
+-- m07: 整个邮件库里，哪个邮箱收到的邮件最多？
+SELECT et.`to`, COUNT(DISTINCT et.id) AS cnt
+FROM enron_emailto et
+GROUP BY et.`to`
+ORDER BY cnt DESC
+LIMIT 1;
+
+-- m08: 按原始Date邮件头显示的月份统计2001年每个月的不同邮件数。
+SELECT LPAD(MONTH(STR_TO_DATE(SUBSTRING_INDEX(`date`, ' ', 5), '%a, %d %b %Y')), 2, '0') AS month_num,
+  COUNT(DISTINCT id) AS cnt
+FROM enron_emailinfo
+WHERE `date` LIKE '%2001%'
+GROUP BY month_num
+ORDER BY month_num ASC;
+
+-- m09: Allen的邮件都放在哪些文件夹？每个文件夹有多少封？
+SELECT e.mailbox, COUNT(DISTINCT e.id) AS cnt
+FROM enron_email e
+WHERE e.people = 'allen-p'
+GROUP BY e.mailbox
+ORDER BY cnt DESC;
+
+-- m10: Phillip Allen回复过谁的邮件最多？列出前5名。
+SELECT eo.`from` AS original_sender, COUNT(DISTINCT eo.id) AS reply_count
+FROM enron_emailinfo ei
+JOIN enron_emailorig eo ON ei.id = eo.id
+WHERE TRIM(LOWER(ei.`from`)) = 'phillip.allen@enron.com'
+  AND (ei.subject LIKE 'Re:%' OR ei.subject LIKE 'RE:%')
+GROUP BY eo.`from`
+ORDER BY reply_count DESC
+LIMIT 5;
+
+-- m11: 哪些邮件的收件人序号范围最大？
+SELECT ei.id, ei.subject,
+  COALESCE((SELECT MAX(nthto) FROM enron_emailto et WHERE et.id = ei.id), 0) AS max_nthto,
+  COALESCE((SELECT MAX(nthxto) FROM enron_emailxto xt WHERE xt.id = ei.id), 0) AS max_nthxto
+FROM enron_emailinfo ei
+ORDER BY GREATEST(
+  COALESCE((SELECT MAX(nthto) FROM enron_emailto et WHERE et.id = ei.id), 0),
+  COALESCE((SELECT MAX(nthxto) FROM enron_emailxto xt WHERE xt.id = ei.id), 0)
+) DESC, ei.id ASC
+LIMIT 10;
+
+-- m12: Enron公告邮箱最常把邮件发给哪些地址？列出前5个。
+SELECT et.`to`, COUNT(DISTINCT et.id) AS cnt
+FROM enron_emailto et
+JOIN enron_emailinfo ei ON et.id = ei.id
+WHERE TRIM(LOWER(ei.`from`)) = 'enron.announcements@enron.com'
+GROUP BY et.`to`
+ORDER BY cnt DESC
+LIMIT 5;
+
+-- m13: 每个非空原始源文件名xfilename关联了多少封不同邮件？列出前5个。
+SELECT xfilename, COUNT(DISTINCT id) AS cnt
+FROM enron_source
+WHERE xfilename IS NOT NULL AND TRIM(xfilename) != ''
+GROUP BY xfilename
+ORDER BY cnt DESC, xfilename ASC
+LIMIT 5;
+
+-- m14: 哪些邮件的标准To收件地址数量与X-To原始收件人显示值数量差异最大？
+SELECT ei.id,
+  COALESCE((SELECT COUNT(DISTINCT et.`to`) FROM enron_emailto et WHERE et.id = ei.id), 0) AS to_count,
+  COALESCE((SELECT COUNT(DISTINCT TRIM(xt.xto)) FROM enron_emailxto xt WHERE xt.id = ei.id AND xt.xto IS NOT NULL AND TRIM(xt.xto) != ''), 0) AS xto_count,
+  ABS(COALESCE((SELECT COUNT(DISTINCT et.`to`) FROM enron_emailto et WHERE et.id = ei.id), 0)
+    - COALESCE((SELECT COUNT(DISTINCT TRIM(xt.xto)) FROM enron_emailxto xt WHERE xt.id = ei.id AND xt.xto IS NOT NULL AND TRIM(xt.xto) != ''), 0)) AS abs_diff,
+  LEFT(ei.`to`, 200) AS to_preview,
+  LEFT(ei.xto, 200) AS xto_preview
+FROM enron_emailinfo ei
+ORDER BY abs_diff DESC, ei.id ASC
+LIMIT 10;
+
+-- m15: 哪个有效发件地址的邮件总共涉及最多不同收件地址？
+SELECT TRIM(LOWER(ei.`from`)) AS sender, COUNT(DISTINCT TRIM(LOWER(et.`to`))) AS unique_recipients
+FROM enron_emailinfo ei
+JOIN enron_emailto et ON ei.id = et.id
+WHERE ei.`from` IS NOT NULL AND TRIM(ei.`from`) != ''
+  AND et.`to` IS NOT NULL AND TRIM(et.`to`) != ''
+GROUP BY sender
+ORDER BY unique_recipients DESC, sender ASC
+LIMIT 1;
+
+-- m16: 哪些人的deleted_items文件夹里有邮件？分别有多少封？
+SELECT e.people, COUNT(DISTINCT e.id) AS cnt
+FROM enron_email e
+WHERE e.mailbox = 'deleted_items'
+GROUP BY e.people
+ORDER BY cnt DESC;
+
+-- m17: 列出主题以“Re:”开头、且存在nth=1历史邮件头的当前邮件。
+SELECT ei.id, ei.subject,
+  eo.subject AS orig_subject, eo.`from` AS orig_from,
+  eo.`to` AS orig_to, eo.xfrom AS orig_xfrom, eo.xto AS orig_xto
+FROM enron_emailinfo ei
+JOIN enron_emailorig eo ON ei.id = eo.id
+WHERE TRIM(ei.subject) LIKE 'Re:%' AND eo.nth = 1
+ORDER BY ei.id ASC;
+
+-- m18: 在原始Date邮件头显示为2001年10月的邮件中，哪些规范化收件地址收到的不同邮件最多？
+SELECT et.`to`, COUNT(DISTINCT et.id) AS cnt
+FROM enron_emailto et
+JOIN enron_emailinfo ei ON et.id = ei.id
+WHERE ei.`date` LIKE '%2001%' AND ei.`date` LIKE '%Oct%'
+GROUP BY et.`to`
+ORDER BY cnt DESC, et.`to` ASC
+LIMIT 5;
+
+-- m19: larry.campbell@enron.com发送的邮件中，有多少封保存在名称恰好为inbox的文件夹？
+SELECT COUNT(DISTINCT e.id) AS cnt
+FROM enron_email e
+JOIN enron_emailinfo ei ON e.id = ei.id
+WHERE TRIM(LOWER(ei.`from`)) = 'larry.campbell@enron.com'
+  AND e.mailbox = 'inbox';
+
+-- m20: 这个数据集主要来自哪些员工的邮箱？列出邮件最多的前5个来源。
+SELECT xorigin, COUNT(DISTINCT id) AS cnt
+FROM enron_source
+GROUP BY xorigin
+ORDER BY cnt DESC
+LIMIT 5;
+Hard (h01 - h10)
+-- h01: 有多少个邮箱既发过邮件，也收过邮件？
+SELECT COUNT(DISTINCT TRIM(LOWER(ei.`from`))) AS both_count
+FROM enron_emailinfo ei
+WHERE ei.`from` IS NOT NULL AND TRIM(ei.`from`) != ''
+  AND TRIM(LOWER(ei.`from`)) IN (
+    SELECT TRIM(LOWER(et.`to`)) FROM enron_emailto et
+    WHERE et.`to` IS NOT NULL AND TRIM(et.`to`) != ''
+  );
+
+-- h02: 哪些规范化发件地址发送过邮件、但从未作为规范化标准收件地址出现？
+SELECT TRIM(LOWER(ei.`from`)) AS sender, COUNT(DISTINCT ei.id) AS sent_count
+FROM enron_emailinfo ei
+WHERE ei.`from` IS NOT NULL AND TRIM(ei.`from`) != ''
+  AND TRIM(LOWER(ei.`from`)) NOT IN (
+    SELECT TRIM(LOWER(et.`to`)) FROM enron_emailto et
+    WHERE et.`to` IS NOT NULL AND TRIM(et.`to`) != ''
+  )
+GROUP BY sender
+ORDER BY sent_count DESC, sender ASC;
+
+-- h03: 哪些邮件主题引发的回复讨论最多？列出前3个。
+SELECT subject, COUNT(DISTINCT id) AS reply_count
+FROM enron_emailinfo
+WHERE subject LIKE 'Re:%' OR subject LIKE 'RE:%'
+GROUP BY subject
+ORDER BY reply_count DESC
+LIMIT 3;
+
+-- h04: 对每个非空归档员工目录people，列出每个people的前3个发件地址、邮件数和名次。
+SELECT people, sender, cnt, rn
+FROM (
+  SELECT e.people, TRIM(LOWER(ei.`from`)) AS sender,
+    COUNT(DISTINCT e.id) AS cnt,
+    ROW_NUMBER() OVER (PARTITION BY e.people
+      ORDER BY COUNT(DISTINCT e.id) DESC, TRIM(LOWER(ei.`from`)) ASC) AS rn
+  FROM enron_email e
+  JOIN enron_emailinfo ei ON e.id = ei.id
+  WHERE e.people IS NOT NULL AND TRIM(e.people) != ''
+    AND ei.`from` IS NOT NULL AND TRIM(ei.`from`) != ''
+  GROUP BY e.people, sender
+) t
+WHERE rn <= 3
+ORDER BY people ASC, rn ASC;
+
+-- h05: 邮件往来最忙的是哪一天？那天发邮件最多的5个邮箱是谁？
+WITH busiest_day AS (
+  SELECT DATE(STR_TO_DATE(SUBSTRING_INDEX(`date`, ' ', 5), '%a, %d %b %Y')) AS send_date
+  FROM enron_emailinfo WHERE `date` IS NOT NULL AND `date` != ''
+  GROUP BY send_date ORDER BY COUNT(DISTINCT id) DESC LIMIT 1
+)
+SELECT TRIM(LOWER(`from`)) AS sender, COUNT(DISTINCT id) AS cnt
+FROM enron_emailinfo
+WHERE `date` IS NOT NULL AND `date` != ''
+  AND DATE(STR_TO_DATE(SUBSTRING_INDEX(`date`, ' ', 5), '%a, %d %b %Y')) = (SELECT send_date FROM busiest_day)
+  AND `from` IS NOT NULL AND TRIM(`from`) != ''
+GROUP BY sender ORDER BY cnt DESC LIMIT 5;
+
+-- h06: 将每封邮件按规范化发件地址分类internal和external，统计不同邮件数及其百分比。
+SELECT type, cnt,
+  ROUND(cnt * 100.0 / (
+    SELECT COUNT(DISTINCT id) FROM enron_emailinfo
+    WHERE `from` IS NOT NULL AND TRIM(`from`) != ''
+  ), 2) AS pct
+FROM (
+  SELECT CASE WHEN TRIM(LOWER(`from`)) LIKE '%@enron.com' THEN 'internal' ELSE 'external' END AS type,
+    COUNT(DISTINCT id) AS cnt
+  FROM enron_emailinfo
+  WHERE `from` IS NOT NULL AND TRIM(`from`) != ''
+  GROUP BY CASE WHEN TRIM(LOWER(`from`)) LIKE '%@enron.com' THEN 'internal' ELSE 'external' END
+) t
+ORDER BY type ASC;
+
+-- h07: 仅考虑campbell-l、allen-p和badeer-r，找出至少出现在其中两个不同people集合中的地址。
+SELECT email, COUNT(DISTINCT people) AS people_count
+FROM (
+  SELECT DISTINCT TRIM(LOWER(ei.`from`)) AS email, e.people
+  FROM enron_emailinfo ei JOIN enron_email e ON ei.id = e.id
+  WHERE e.people IN ('campbell-l','allen-p','badeer-r')
+    AND ei.`from` IS NOT NULL AND TRIM(ei.`from`) != ''
+  UNION
+  SELECT DISTINCT TRIM(LOWER(et.`to`)) AS email, e.people
+  FROM enron_emailto et JOIN enron_email e ON et.id = e.id
+  WHERE e.people IN ('campbell-l','allen-p','badeer-r')
+    AND et.`to` IS NOT NULL AND TRIM(et.`to`) != ''
+) t
+GROUP BY email
+HAVING people_count >= 2
+ORDER BY people_count DESC, email ASC;
+
+-- h08: Larry Campbell和Phillip Allen都给哪些邮箱发过邮件？分别发了多少封？
+SELECT et.`to`,
+  SUM(CASE WHEN ei.`from` = 'larry.campbell@enron.com' THEN 1 ELSE 0 END) AS campbell_count,
+  SUM(CASE WHEN ei.`from` = 'phillip.allen@enron.com' THEN 1 ELSE 0 END) AS allen_count
+FROM enron_emailto et
+JOIN enron_emailinfo ei ON et.id = ei.id
+WHERE ei.`from` IN ('larry.campbell@enron.com', 'phillip.allen@enron.com')
+GROUP BY et.`to`
+HAVING campbell_count > 0 AND allen_count > 0
+ORDER BY campbell_count DESC, allen_count DESC;
+
+-- h09: 对enron_emailorig中存在记录的每封当前邮件，统计历史邮件头数量指标。
+SELECT
+  ROUND(AVG(orig_count), 4) AS avg_orig_count,
+  MAX(orig_count) AS max_orig_count,
+  SUM(CASE WHEN orig_count >= 3 THEN 1 ELSE 0 END) AS ge3_count
+FROM (
+  SELECT eo.id, COUNT(*) AS orig_count
+  FROM enron_emailorig eo
+  GROUP BY eo.id
+) t;
+
+-- h10: 每个人邮件最多的文件夹是哪个？并列的也都列出来。
+SELECT people, mailbox, cnt
+FROM (
+  SELECT people, mailbox, COUNT(DISTINCT id) AS cnt,
+    RANK() OVER (PARTITION BY people ORDER BY COUNT(DISTINCT id) DESC) AS rn
+  FROM enron_email
+  GROUP BY people, mailbox
+) t
+WHERE rn = 1
+ORDER BY people ASC;

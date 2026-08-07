@@ -1,0 +1,23 @@
+{
+  "run_id": "2026-08-06_moi_baseline_no_semantic_01",
+  "product": "moi",
+  "product_version": "local",
+  "model": "deepseek-v4-flash",
+  "model_backend_id": -4,
+  "benchmark_id": "enron_golden50_v1",
+  "database_snapshot": "expected_counts_v1",
+  "semantic_rules": null,
+  "knowledge_base": {
+    "id": 2,
+    "name": "邮件问答"
+  },
+  "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+  "questions_file": "benchmark/questions/user/questions_enron_50_user_mix.txt",
+  "started_at": "2026-08-06T17:46:31+08:00",
+  "finished_at": "2026-08-06T18:15:28+08:00",
+  "question_count": 50,
+  "protocol": "one isolated fixed-knowledge MOI session per question; one attempt",
+  "notes": "Baseline run without configured semantic information.",
+  "completed_count": 50,
+  "ok_count": 29
+}

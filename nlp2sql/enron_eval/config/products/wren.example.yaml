@@ -1,0 +1,9 @@
+product: wren
+enabled: true
+version: "0.29.1"
+model: qwen-plus-2025-12-01
+deployment: local_docker
+connection_profile: "Wren本机项目中的私有数据库连接"
+semantic_rules: "Wren项目语义模型中的六表关系与字段说明"
+credentials_env: DASHSCOPE_API_KEY
+notes: "真实.env和数据库密码不进入Git；部署模板见products/wren/deployment。"

@@ -1,0 +1,580 @@
+{
+  "platform": "wren",
+  "total": 50,
+  "passed": 24,
+  "failed": 26,
+  "pass_rate": 48.0,
+  "fail_reasons": {
+    "值不同": 4,
+    "列数不一致": 8,
+    "行数不一致": 10,
+    "no_sql": 3,
+    "pred_sql_error": 1
+  },
+  "results": [
+    {
+      "case_id": "e01",
+      "difficulty": "easy",
+      "question": "这个邮件库里一共有多少个不同的发件邮箱？",
+      "gold_sql": "SELECT COUNT(DISTINCT LOWER(TRIM(`from`))) AS sender_count\nFROM `enron_emailinfo`\nWHERE `from` IS NOT NULL AND TRIM(`from`) <> ''",
+      "pred_sql": "SELECT COUNT(DISTINCT enron_eval_enron_emailinfo.`from`) FROM (SELECT enron_eval_enron_emailinfo.`from` FROM (SELECT __source.`from` AS `from` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e02",
+      "difficulty": "easy",
+      "question": "这个库总共有多少封邮件？",
+      "gold_sql": "SELECT COUNT(DISTINCT `id`) AS total_emails\nFROM `enron_emailinfo`",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT __source.body AS body, __source.`date` AS `date`, __source.`from` AS `from`, __source.`id` AS `id`, __source.messageid AS messageid, __source.subject AS subject, __source.`to` AS `to`, __source.xfrom AS xfrom, __source.xto AS xto FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e03",
+      "difficulty": "easy",
+      "question": "哪些邮件的主题为空？空主题定义为subject为NULL或去除首尾空格后为空字符串；列出邮件ID、messageid和发件地址，按邮件ID升序排列。",
+      "gold_sql": "SELECT `id`, `messageid`, `from` AS sender\nFROM `enron_emailinfo`\nWHERE `subject` IS NULL OR TRIM(`subject`) = ''\nORDER BY `id` ASC",
+      "pred_sql": "SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.messageid, enron_eval_enron_emailinfo.`from` FROM (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.messageid, enron_eval_enron_emailinfo.subject FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id`, __source.messageid AS messageid, __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE enron_eval_enron_emailinfo.subject IS NULL OR TRIM(enron_eval_enron_emailinfo.subject) = '' ORDER BY CASE WHEN enron_eval_enron_emailinfo.`id` IS NULL THEN 1 ELSE 0 END, enron_eval_enron_emailinfo.`id` ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1091,
+      "pred_rows": 1091
+    },
+    {
+      "case_id": "e04",
+      "difficulty": "easy",
+      "question": "有多少封邮件是回复邮件？",
+      "gold_sql": "SELECT COUNT(DISTINCT `id`) AS reply_email_count\nFROM `enron_emailinfo`\nWHERE LOWER(TRIM(`subject`)) LIKE 're:%'",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT enron_eval_enron_emailinfo.subject FROM (SELECT __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE LOWER(enron_eval_enron_emailinfo.subject) LIKE 're:%' AND NOT enron_eval_enron_emailinfo.subject IS NULL AND enron_eval_enron_emailinfo.subject <> ''",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e05",
+      "difficulty": "easy",
+      "question": "Phillip Allen一共发了多少封邮件？",
+      "gold_sql": "SELECT COUNT(DISTINCT `id`) AS email_count\nFROM `enron_emailinfo`\nWHERE LOWER(TRIM(`from`)) = 'phillip.allen@enron.com'",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT enron_eval_enron_emailinfo.xfrom FROM (SELECT __source.xfrom AS xfrom FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE LOWER(enron_eval_enron_emailinfo.xfrom) = LOWER('Phillip Allen')",
+      "passed": false,
+      "reason": "值不同: gold=((2125,),) pred=((0,),)",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e06",
+      "difficulty": "easy",
+      "question": "邮件最多的10个邮箱文件夹是哪些？",
+      "gold_sql": "SELECT TRIM(`mailbox`) AS mailbox, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_email`\nWHERE `mailbox` IS NOT NULL AND TRIM(`mailbox`) <> ''\nGROUP BY TRIM(`mailbox`)\nORDER BY email_count DESC, mailbox ASC\nLIMIT 10",
+      "pred_sql": "SELECT ranked_mailboxes.mailbox, ranked_mailboxes.`count`, ranked_mailboxes.`rank` FROM (SELECT enron_eval_enron_email.mailbox, COUNT(1) AS `count`, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS `rank` FROM (SELECT enron_eval_enron_email.mailbox FROM (SELECT __source.mailbox AS mailbox FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email GROUP BY enron_eval_enron_email.mailbox) AS ranked_mailboxes WHERE ranked_mailboxes.`rank` <= 10",
+      "passed": false,
+      "reason": "列数不一致: gold=2 pred=3",
+      "gold_rows": 10,
+      "pred_rows": 10
+    },
+    {
+      "case_id": "e07",
+      "difficulty": "easy",
+      "question": "sent文件夹里有多少封邮件？",
+      "gold_sql": "SELECT COUNT(DISTINCT `id`) AS sent_email_count\nFROM `enron_email`\nWHERE `mailbox` = 'sent'",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT enron_eval_enron_email.mailbox FROM (SELECT __source.mailbox AS mailbox FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email WHERE enron_eval_enron_email.mailbox = 'sent'",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e08",
+      "difficulty": "easy",
+      "question": "有多少封邮件的正文提到了California？",
+      "gold_sql": "SELECT COUNT(DISTINCT `id`) AS email_count\nFROM `enron_emailinfo`\nWHERE LOWER(`body`) LIKE '%california%'",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT enron_eval_enron_emailinfo.body FROM (SELECT __source.body AS body FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE LOWER(enron_eval_enron_emailinfo.body) LIKE '%california%'",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e09",
+      "difficulty": "easy",
+      "question": "列出邮件ID最小的10条来源记录，返回邮件ID、source_file_id和source_name，按邮件ID升序排列；source_file_id是源记录唯一标识，source_name是由邮件归档位置组成的源名称。",
+      "gold_sql": "SELECT `id`, `source_file_id`, `source_name`\nFROM `enron_source`\nORDER BY `id` ASC\nLIMIT 10",
+      "pred_sql": "SELECT ranked_source.`id`, ranked_source.source_file_id, ranked_source.source_name, ranked_source.`rank` FROM (SELECT enron_eval_enron_source.`id`, enron_eval_enron_source.source_file_id, enron_eval_enron_source.source_name, DENSE_RANK() OVER (ORDER BY CASE WHEN enron_eval_enron_source.`id` IS NULL THEN 1 ELSE 0 END, enron_eval_enron_source.`id` ASC) AS `rank` FROM (SELECT enron_eval_enron_source.`id`, enron_eval_enron_source.source_file_id, enron_eval_enron_source.source_name FROM (SELECT __source.`id` AS `id`, __source.source_file_id AS source_file_id, __source.source_name AS source_name FROM enron_eval.enron_source AS __source) AS enron_eval_enron_source) AS enron_eval_enron_source) AS ranked_source WHERE ranked_source.`rank` <= 10",
+      "passed": false,
+      "reason": "列数不一致: gold=3 pred=4",
+      "gold_rows": 10,
+      "pred_rows": 10
+    },
+    {
+      "case_id": "e10",
+      "difficulty": "easy",
+      "question": "列出所有非NULL且非空的不重复邮箱文件夹名称，按文件夹名升序排列。",
+      "gold_sql": "SELECT DISTINCT TRIM(`mailbox`) AS mailbox\nFROM `enron_email`\nWHERE `mailbox` IS NOT NULL AND TRIM(`mailbox`) <> ''\nORDER BY mailbox ASC",
+      "pred_sql": "SELECT DISTINCT enron_eval_enron_email.mailbox FROM (SELECT enron_eval_enron_email.mailbox FROM (SELECT __source.mailbox AS mailbox FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email WHERE NOT enron_eval_enron_email.mailbox IS NULL AND TRIM(enron_eval_enron_email.mailbox) <> '' ORDER BY CASE WHEN enron_eval_enron_email.mailbox IS NULL THEN 1 ELSE 0 END, enron_eval_enron_email.mailbox ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 63,
+      "pred_rows": 63
+    },
+    {
+      "case_id": "e11",
+      "difficulty": "easy",
+      "question": "最近发出的10封邮件是什么？给我日期、主题和发件人。",
+      "gold_sql": "WITH parsed AS (\n  SELECT\n    `id`, `date`, `subject`, `from`,\n    STR_TO_DATE(\n      REGEXP_SUBSTR(`date`, '^[A-Za-z]{3}, [0-9]{1,2} [A-Za-z]{3} [0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}'),\n      '%a, %e %b %Y %H:%i:%s'\n    ) AS parsed_datetime\n  FROM `enron_emailinfo`\n)\nSELECT `id`, `date`, `subject`, `from` AS sender\nFROM parsed\nORDER BY parsed_datetime DESC, `id` DESC\nLIMIT 10",
+      "pred_sql": "SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.subject, enron_eval_enron_emailinfo.`from`, DENSE_RANK() OVER (ORDER BY enron_eval_enron_emailinfo.`date` DESC) AS `rank` FROM (SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.subject FROM (SELECT __source.`date` AS `date`, __source.`from` AS `from`, __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo INNER JOIN (SELECT DISTINCT enron_eval_enron_emailinfo.`date` FROM (SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.subject FROM (SELECT __source.`date` AS `date`, __source.`from` AS `from`, __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo ORDER BY enron_eval_enron_emailinfo.`date` DESC LIMIT 10) AS top_dates ON enron_eval_enron_emailinfo.`date` = top_dates.`date`",
+      "passed": false,
+      "reason": "行数不一致: gold=10 pred=27",
+      "gold_rows": 10,
+      "pred_rows": 27
+    },
+    {
+      "case_id": "e12",
+      "difficulty": "easy",
+      "question": "原始Date邮件头显示年份为2001年的邮件共有多少封？按不同邮件ID计数。",
+      "gold_sql": "WITH parsed AS (\n  SELECT\n    `id`,\n    STR_TO_DATE(\n      REGEXP_SUBSTR(`date`, '^[A-Za-z]{3}, [0-9]{1,2} [A-Za-z]{3} [0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}'),\n      '%a, %e %b %Y %H:%i:%s'\n    ) AS parsed_datetime\n  FROM `enron_emailinfo`\n)\nSELECT COUNT(DISTINCT `id`) AS email_count\nFROM parsed\nWHERE YEAR(parsed_datetime) = 2001",
+      "pred_sql": "SELECT COUNT(DISTINCT enron_eval_enron_emailinfo.`id`) FROM (SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`date` AS `date`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE SUBSTRING(enron_eval_enron_emailinfo.`date`, 1, 4) = '2001'",
+      "passed": false,
+      "reason": "值不同: gold=((5609,),) pred=((0,),)",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e13",
+      "difficulty": "easy",
+      "question": "在正文引用的历史邮件头中，分别有多少行包含非空xfrom和非空xto？返回xfrom非空行数和xto非空行数；这里使用enron_emailorig中的字段，而不是当前邮件的enron_emailinfo字段。",
+      "gold_sql": "SELECT\n  SUM(CASE WHEN `xfrom` IS NOT NULL AND TRIM(`xfrom`) <> '' THEN 1 ELSE 0 END) AS nonempty_xfrom_rows,\n  SUM(CASE WHEN `xto` IS NOT NULL AND TRIM(`xto`) <> '' THEN 1 ELSE 0 END) AS nonempty_xto_rows\nFROM `enron_emailorig`",
+      "pred_sql": "SELECT COUNT(CASE WHEN (NOT enron_eval_enron_emailorig.xfrom IS NULL AND (enron_eval_enron_emailorig.xfrom <> '')) THEN 1 END) AS xfrom_non_empty_count, COUNT(CASE WHEN (NOT enron_eval_enron_emailorig.xto IS NULL AND (enron_eval_enron_emailorig.xto <> '')) THEN 1 END) AS xto_non_empty_count FROM (SELECT enron_eval_enron_emailorig.xfrom, enron_eval_enron_emailorig.xto FROM (SELECT __source.xfrom AS xfrom, __source.xto AS xto FROM enron_eval.enron_emailorig AS __source) AS enron_eval_enron_emailorig) AS enron_eval_enron_emailorig",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e14",
+      "difficulty": "easy",
+      "question": "这个邮件库包含哪些员工的邮件目录？",
+      "gold_sql": "SELECT DISTINCT TRIM(`people`) AS people\nFROM `enron_email`\nWHERE `people` IS NOT NULL AND TRIM(`people`) <> ''\nORDER BY people ASC",
+      "pred_sql": "SELECT DISTINCT enron_eval_enron_source.xorigin FROM (SELECT enron_eval_enron_source.xorigin FROM (SELECT __source.xorigin AS xorigin FROM enron_eval.enron_source AS __source) AS enron_eval_enron_source) AS enron_eval_enron_source WHERE NOT enron_eval_enron_source.xorigin IS NULL AND enron_eval_enron_source.xorigin <> ''",
+      "passed": false,
+      "reason": "值不同: gold=(('allen-p',), ('badeer-r',), ('campbell-l',)) pred=(('Campbell-L',), ('Allen-P',), ('Badeer-R',))",
+      "gold_rows": 3,
+      "pred_rows": 3
+    },
+    {
+      "case_id": "e15",
+      "difficulty": "easy",
+      "question": "campbell-l员工目录中有多少个不同的非空邮箱文件夹？",
+      "gold_sql": "SELECT COUNT(DISTINCT TRIM(`mailbox`)) AS mailbox_count\nFROM `enron_email`\nWHERE `people` = 'campbell-l'\n  AND `mailbox` IS NOT NULL\n  AND TRIM(`mailbox`) <> ''",
+      "pred_sql": "SELECT COUNT(DISTINCT enron_eval_enron_email.mailbox) FROM (SELECT enron_eval_enron_email.mailbox, enron_eval_enron_email.people FROM (SELECT __source.mailbox AS mailbox, __source.people AS people FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email WHERE enron_eval_enron_email.people = 'campbell-l' AND NOT enron_eval_enron_email.mailbox IS NULL AND TRIM(enron_eval_enron_email.mailbox) <> ''",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e16",
+      "difficulty": "easy",
+      "question": "将所有员工目录合并后，单个mailbox名称保存的不同邮件ID数量最大是多少？只返回最大数量。",
+      "gold_sql": "SELECT MAX(email_count) AS max_email_count\nFROM (\n  SELECT TRIM(`mailbox`) AS mailbox, COUNT(DISTINCT `id`) AS email_count\n  FROM `enron_email`\n  WHERE `mailbox` IS NOT NULL AND TRIM(`mailbox`) <> ''\n  GROUP BY TRIM(`mailbox`)\n) AS mailbox_counts",
+      "pred_sql": "SELECT MAX(subquery.count_per_mailbox) FROM (SELECT COUNT(1) AS count_per_mailbox FROM (SELECT enron_eval_enron_email.mailbox FROM (SELECT __source.mailbox AS mailbox FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email GROUP BY enron_eval_enron_email.mailbox) AS subquery",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e17",
+      "difficulty": "easy",
+      "question": "有多少封邮件的主题提到了meeting？",
+      "gold_sql": "SELECT COUNT(DISTINCT `id`) AS email_count\nFROM `enron_emailinfo`\nWHERE LOWER(`subject`) LIKE '%meeting%'",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT enron_eval_enron_emailinfo.subject FROM (SELECT __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE LOWER(enron_eval_enron_emailinfo.subject) LIKE '%meeting%'",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "e18",
+      "difficulty": "easy",
+      "question": "哪些有效发件地址发送了超过100封邮件？发件地址先去除首尾空格并转为小写，忽略NULL和空字符串；列出发件地址和不同邮件ID数量，先按数量降序、再按地址升序排列。",
+      "gold_sql": "SELECT LOWER(TRIM(`from`)) AS sender, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_emailinfo`\nWHERE `from` IS NOT NULL AND TRIM(`from`) <> ''\nGROUP BY LOWER(TRIM(`from`))\nHAVING COUNT(DISTINCT `id`) > 100\nORDER BY email_count DESC, sender ASC",
+      "pred_sql": "",
+      "passed": false,
+      "reason": "no_sql",
+      "gold_rows": 0,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "e19",
+      "difficulty": "easy",
+      "question": "当前邮件中最常见的10个非空X-From原始发件人显示值是什么？对xfrom去除首尾空格后分组，列出显示值和不同邮件ID数量，先按数量降序、再按显示值升序排列。",
+      "gold_sql": "SELECT TRIM(`xfrom`) AS xfrom, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_emailinfo`\nWHERE `xfrom` IS NOT NULL AND TRIM(`xfrom`) <> ''\nGROUP BY TRIM(`xfrom`)\nORDER BY email_count DESC, xfrom ASC\nLIMIT 10",
+      "pred_sql": "",
+      "passed": false,
+      "reason": "no_sql",
+      "gold_rows": 0,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "e20",
+      "difficulty": "easy",
+      "question": "列出campbell-l员工目录中all_documents文件夹里原始序号nnn最大的10封邮件，返回邮件ID、nnn、主题和标准发件地址，按nnn降序、邮件ID降序排列；nnn表示原始序号，不是邮件数量。",
+      "gold_sql": "SELECT e.`id`, e.`nnn`, i.`subject`, i.`from` AS sender\nFROM `enron_email` AS e\nJOIN `enron_emailinfo` AS i ON i.`id` = e.`id`\nWHERE e.`people` = 'campbell-l'\n  AND e.`mailbox` = 'all_documents'\nORDER BY e.`nnn` DESC, e.`id` DESC\nLIMIT 10",
+      "pred_sql": "SELECT ranked_emails.`id`, ranked_emails.nnn, ranked_emails.subject, ranked_emails.`from`, ranked_emails.`rank` FROM (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.nnn, enron_eval_enron_emailinfo.subject, enron_eval_enron_emailinfo.`from`, DENSE_RANK() OVER (ORDER BY enron_eval_enron_email.nnn DESC, enron_eval_enron_email.`id` DESC) AS `rank` FROM (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.mailbox, enron_eval_enron_email.nnn, enron_eval_enron_email.people FROM (SELECT __source.`id` AS `id`, __source.mailbox AS mailbox, __source.nnn AS nnn, __source.people AS people FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email INNER JOIN (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.subject FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id`, __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo ON enron_eval_enron_email.`id` = enron_eval_enron_emailinfo.`id` WHERE LOWER(enron_eval_enron_email.people) = LOWER('campbell-l') AND LOWER(enron_eval_enron_email.mailbox) = LOWER('all_documents')) AS ranked_emails WHERE ranked_emails.`rank` <= 10 ORDER BY ranked_emails.nnn DESC, ranked_emails.`id` DESC",
+      "passed": false,
+      "reason": "列数不一致: gold=4 pred=5",
+      "gold_rows": 10,
+      "pred_rows": 10
+    },
+    {
+      "case_id": "m01",
+      "difficulty": "medium",
+      "question": "各员工的邮件都分布在哪些文件夹？按邮件量从多到少列出来。",
+      "gold_sql": "SELECT TRIM(`people`) AS people, TRIM(`mailbox`) AS mailbox,\n       COUNT(DISTINCT `id`) AS email_count\nFROM `enron_email`\nWHERE `people` IS NOT NULL AND TRIM(`people`) <> ''\n  AND `mailbox` IS NOT NULL AND TRIM(`mailbox`) <> ''\nGROUP BY TRIM(`people`), TRIM(`mailbox`)\nORDER BY email_count DESC, people ASC, mailbox ASC",
+      "pred_sql": "SELECT enron_eval_enron_source.xorigin, enron_eval_enron_source.xfolder, COUNT(1) AS mail_count FROM (SELECT enron_eval_enron_source.xfolder, enron_eval_enron_source.xorigin FROM (SELECT __source.xfolder AS xfolder, __source.xorigin AS xorigin FROM enron_eval.enron_source AS __source) AS enron_eval_enron_source) AS enron_eval_enron_source GROUP BY enron_eval_enron_source.xorigin, enron_eval_enron_source.xfolder ORDER BY mail_count DESC",
+      "passed": false,
+      "reason": "行数不一致: gold=80 pred=116",
+      "gold_rows": 80,
+      "pred_rows": 116
+    },
+    {
+      "case_id": "m02",
+      "difficulty": "medium",
+      "question": "Phillip Allen最常给哪些邮箱发邮件？列出前10个。",
+      "gold_sql": "SELECT LOWER(TRIM(t.`to`)) AS recipient,\n       COUNT(DISTINCT t.`id`) AS email_count\nFROM `enron_emailinfo` AS i\nJOIN `enron_emailto` AS t ON t.`id` = i.`id`\nWHERE LOWER(TRIM(i.`from`)) = 'phillip.allen@enron.com'\n  AND t.`to` IS NOT NULL AND TRIM(t.`to`) <> ''\nGROUP BY LOWER(TRIM(t.`to`))\nORDER BY email_count DESC, recipient ASC\nLIMIT 10",
+      "pred_sql": "SELECT ranked_emails.`to`, ranked_emails.rank_num FROM (SELECT e2.`to`, COUNT(1) AS email_count, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS rank_num FROM (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.xfrom FROM (SELECT __source.`id` AS `id`, __source.xfrom AS xfrom FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS e1 INNER JOIN (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS e2 ON e1.`id` = e2.`id` WHERE LOWER(e1.xfrom) = LOWER('Phillip Allen') GROUP BY e2.`to`) AS ranked_emails WHERE ranked_emails.rank_num <= 10",
+      "passed": false,
+      "reason": "行数不一致: gold=10 pred=0",
+      "gold_rows": 10,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "m03",
+      "difficulty": "medium",
+      "question": "哪些人发的邮件正文最常提到California？列出前5名。",
+      "gold_sql": "SELECT LOWER(TRIM(`from`)) AS sender, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_emailinfo`\nWHERE LOWER(`body`) LIKE '%california%'\n  AND `from` IS NOT NULL AND TRIM(`from`) <> ''\nGROUP BY LOWER(TRIM(`from`))\nORDER BY email_count DESC, sender ASC\nLIMIT 5",
+      "pred_sql": "SELECT email_counts.`from`, email_counts.ranking FROM (SELECT enron_eval_enron_emailinfo.`from`, COUNT(1) AS `count`, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS ranking FROM (SELECT enron_eval_enron_emailinfo.body, enron_eval_enron_emailinfo.`from` FROM (SELECT __source.body AS body, __source.`from` AS `from` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE NOT enron_eval_enron_emailinfo.`from` IS NULL AND enron_eval_enron_emailinfo.`from` <> '' AND LOWER(enron_eval_enron_emailinfo.body) LIKE LOWER('%California%') GROUP BY enron_eval_enron_emailinfo.`from`) AS email_counts WHERE email_counts.ranking <= 5",
+      "passed": false,
+      "reason": "值不同: gold=(('phillip.allen@enron.com', 109), ('larry.campbell@enron.com', 73), ('carla.hoffman@enron.com', 36)) pred=(('phillip.allen@enron.com', 1), ('larry.campbell@enron.com', 2), ('carla.hoffman@enron.com', 3))",
+      "gold_rows": 5,
+      "pred_rows": 5
+    },
+    {
+      "case_id": "m04",
+      "difficulty": "medium",
+      "question": "每个非空来源员工标识xorigin关联了多少个不同的非空原始Lotus Notes文件夹描述xfolder？列出xorigin和文件夹数量，先按数量降序、再按xorigin升序排列。",
+      "gold_sql": "SELECT TRIM(`xorigin`) AS xorigin,\n       COUNT(DISTINCT TRIM(`xfolder`)) AS folder_count\nFROM `enron_source`\nWHERE `xorigin` IS NOT NULL AND TRIM(`xorigin`) <> ''\n  AND `xfolder` IS NOT NULL AND TRIM(`xfolder`) <> ''\nGROUP BY TRIM(`xorigin`)\nORDER BY folder_count DESC, xorigin ASC",
+      "pred_sql": "SELECT enron_eval_enron_source.xorigin, COUNT(DISTINCT enron_eval_enron_source.xfolder) AS folder_count FROM (SELECT enron_eval_enron_source.xfolder, enron_eval_enron_source.xorigin FROM (SELECT __source.xfolder AS xfolder, __source.xorigin AS xorigin FROM enron_eval.enron_source AS __source) AS enron_eval_enron_source) AS enron_eval_enron_source WHERE NOT enron_eval_enron_source.xorigin IS NULL AND TRIM(enron_eval_enron_source.xorigin) <> '' AND NOT enron_eval_enron_source.xfolder IS NULL AND TRIM(enron_eval_enron_source.xfolder) <> '' GROUP BY enron_eval_enron_source.xorigin ORDER BY folder_count DESC, CASE WHEN enron_eval_enron_source.xorigin IS NULL THEN 1 ELSE 0 END, enron_eval_enron_source.xorigin ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 3,
+      "pred_rows": 3
+    },
+    {
+      "case_id": "m05",
+      "difficulty": "medium",
+      "question": "哪些发件人的邮件平均会发给3个人以上？按平均收件人数从高到低排列。",
+      "gold_sql": "WITH per_email AS (\n  SELECT\n    i.`id`,\n    LOWER(TRIM(i.`from`)) AS sender,\n    COUNT(DISTINCT CASE\n      WHEN t.`to` IS NOT NULL AND TRIM(t.`to`) <> ''\n      THEN LOWER(TRIM(t.`to`))\n    END) AS recipient_count\n  FROM `enron_emailinfo` AS i\n  LEFT JOIN `enron_emailto` AS t ON t.`id` = i.`id`\n  WHERE i.`from` IS NOT NULL AND TRIM(i.`from`) <> ''\n  GROUP BY i.`id`, LOWER(TRIM(i.`from`))\n)\nSELECT sender, ROUND(AVG(recipient_count), 2) AS avg_recipient_count\nFROM per_email\nGROUP BY sender\nHAVING AVG(recipient_count) > 3\nORDER BY avg_recipient_count DESC, sender ASC",
+      "pred_sql": "SELECT enron_eval_enron_emailinfo.`from`, AVG(CAST(email_counts.count_per_email AS DOUBLE)) AS avg_recipients FROM (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo INNER JOIN (SELECT enron_eval_enron_emailto.`id`, COUNT(1) AS count_per_email FROM (SELECT enron_eval_enron_emailto.`id` FROM (SELECT __source.`id` AS `id` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto GROUP BY enron_eval_enron_emailto.`id`) AS email_counts ON enron_eval_enron_emailinfo.`id` = email_counts.`id` WHERE NOT enron_eval_enron_emailinfo.`from` IS NULL AND enron_eval_enron_emailinfo.`from` <> '' GROUP BY enron_eval_enron_emailinfo.`from` HAVING AVG(CAST(email_counts.count_per_email AS DOUBLE)) > 3 ORDER BY avg_recipients DESC",
+      "passed": false,
+      "reason": "行数不一致: gold=152 pred=153",
+      "gold_rows": 152,
+      "pred_rows": 153
+    },
+    {
+      "case_id": "m06",
+      "difficulty": "medium",
+      "question": "名称恰好为sent的文件夹中，不同邮件ID数量占全库不同邮件ID总数的百分比是多少？结果乘以100并保留2位小数，不包括_sent_mail或sent_items。",
+      "gold_sql": "SELECT ROUND(\n  100.0 * COUNT(DISTINCT CASE WHEN `mailbox` = 'sent' THEN `id` END)\n  / NULLIF(COUNT(DISTINCT `id`), 0),\n  2\n) AS sent_percentage\nFROM `enron_email`",
+      "pred_sql": "SELECT ROUND(COUNT(DISTINCT CASE WHEN (enron_eval_enron_email.mailbox = 'sent') THEN enron_eval_enron_email.`id` END) * 100.0 / COUNT(DISTINCT enron_eval_enron_email.`id`), 2) FROM (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.mailbox FROM (SELECT __source.`id` AS `id`, __source.mailbox AS mailbox FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "m07",
+      "difficulty": "medium",
+      "question": "整个邮件库里，哪个邮箱收到的邮件最多？",
+      "gold_sql": "SELECT LOWER(TRIM(`to`)) AS recipient, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_emailto`\nWHERE `to` IS NOT NULL AND TRIM(`to`) <> ''\nGROUP BY LOWER(TRIM(`to`))\nORDER BY email_count DESC, recipient ASC\nLIMIT 1",
+      "pred_sql": "SELECT ranked_emails.`to`, ranked_emails.`count`, ranked_emails.`rank` FROM (SELECT email_to_counts.`to`, email_to_counts.`count`, DENSE_RANK() OVER (ORDER BY email_to_counts.`count` DESC) AS `rank` FROM (SELECT enron_eval_enron_emailto.`to`, COUNT(1) AS `count` FROM (SELECT enron_eval_enron_emailto.`to` FROM (SELECT __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto GROUP BY enron_eval_enron_emailto.`to`) AS email_to_counts) AS ranked_emails WHERE ranked_emails.`rank` = 1",
+      "passed": false,
+      "reason": "列数不一致: gold=2 pred=3",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "m08",
+      "difficulty": "medium",
+      "question": "按原始Date邮件头显示的月份统计2001年每个月的不同邮件数，只列出数据中实际出现的月份；月份输出为01至12，按月份升序排列。",
+      "gold_sql": "WITH parsed AS (\n  SELECT\n    `id`,\n    STR_TO_DATE(\n      REGEXP_SUBSTR(`date`, '^[A-Za-z]{3}, [0-9]{1,2} [A-Za-z]{3} [0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}'),\n      '%a, %e %b %Y %H:%i:%s'\n    ) AS parsed_datetime\n  FROM `enron_emailinfo`\n)\nSELECT DATE_FORMAT(parsed_datetime, '%m') AS month,\n       COUNT(DISTINCT `id`) AS email_count\nFROM parsed\nWHERE YEAR(parsed_datetime) = 2001\nGROUP BY DATE_FORMAT(parsed_datetime, '%m')\nORDER BY month ASC",
+      "pred_sql": "SELECT SUBSTRING(enron_eval_enron_emailinfo.`date`, 6, 2) AS `month`, COUNT(DISTINCT enron_eval_enron_emailinfo.`id`) AS `count` FROM (SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`date` AS `date`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE SUBSTRING(enron_eval_enron_emailinfo.`date`, 1, 4) = '2001' GROUP BY SUBSTRING(enron_eval_enron_emailinfo.`date`, 6, 2) ORDER BY CASE WHEN `month` IS NULL THEN 1 ELSE 0 END, `month` ASC",
+      "passed": false,
+      "reason": "行数不一致: gold=12 pred=0",
+      "gold_rows": 12,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "m09",
+      "difficulty": "medium",
+      "question": "Allen的邮件都放在哪些文件夹？每个文件夹有多少封？",
+      "gold_sql": "SELECT TRIM(`mailbox`) AS mailbox, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_email`\nWHERE `people` = 'allen-p'\n  AND `mailbox` IS NOT NULL AND TRIM(`mailbox`) <> ''\nGROUP BY TRIM(`mailbox`)\nORDER BY email_count DESC, mailbox ASC",
+      "pred_sql": "SELECT enron_eval_enron_email.mailbox, COUNT(1) AS `count` FROM (SELECT enron_eval_enron_source.`id`, enron_eval_enron_source.xorigin FROM (SELECT __source.`id` AS `id`, __source.xorigin AS xorigin FROM enron_eval.enron_source AS __source) AS enron_eval_enron_source) AS enron_eval_enron_source INNER JOIN (SELECT enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo ON enron_eval_enron_source.`id` = enron_eval_enron_emailinfo.`id` INNER JOIN (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.mailbox FROM (SELECT __source.`id` AS `id`, __source.mailbox AS mailbox FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email ON enron_eval_enron_emailinfo.`id` = enron_eval_enron_email.`id` WHERE LOWER(enron_eval_enron_source.xorigin) LIKE LOWER('%allen%') GROUP BY enron_eval_enron_email.mailbox",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 10,
+      "pred_rows": 10
+    },
+    {
+      "case_id": "m10",
+      "difficulty": "medium",
+      "question": "Phillip Allen回复过谁的邮件最多？列出前5名。",
+      "gold_sql": "SELECT TRIM(o.`from`) AS original_sender,\n       COUNT(DISTINCT i.`id`) AS email_count\nFROM `enron_emailinfo` AS i\nJOIN `enron_emailorig` AS o ON o.`id` = i.`id` AND o.`nth` = 1\nWHERE LOWER(TRIM(i.`from`)) = 'phillip.allen@enron.com'\n  AND LOWER(TRIM(i.`subject`)) LIKE 're:%'\n  AND o.`from` IS NOT NULL AND TRIM(o.`from`) <> ''\nGROUP BY TRIM(o.`from`)\nORDER BY email_count DESC, original_sender ASC\nLIMIT 5",
+      "pred_sql": "SELECT ranked_recipients.`to`, ranked_recipients.ranking FROM (SELECT enron_eval_enron_emailto.`to`, COUNT(1) AS `count`, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS ranking FROM (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo INNER JOIN (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto ON enron_eval_enron_emailinfo.`id` = enron_eval_enron_emailto.`id` WHERE LOWER(enron_eval_enron_emailinfo.`from`) LIKE '%phillip.allen%' AND TRIM(enron_eval_enron_emailto.`to`) <> '' GROUP BY enron_eval_enron_emailto.`to`) AS ranked_recipients WHERE ranked_recipients.ranking <= 5",
+      "passed": false,
+      "reason": "行数不一致: gold=4 pred=5",
+      "gold_rows": 4,
+      "pred_rows": 5
+    },
+    {
+      "case_id": "m11",
+      "difficulty": "medium",
+      "question": "哪些邮件的收件人序号范围最大？分别计算每封邮件enron_emailto中的最大nthto和enron_emailxto中的最大nthxto，缺失时按0处理；列出两者最大值较大的前10封邮件，返回邮件ID、主题、最大nthto和最大nthxto，先按两者中的较大值降序、再按邮件ID升序排列。",
+      "gold_sql": "WITH to_seq AS (\n  SELECT `id`, MAX(`nthto`) AS max_nthto\n  FROM `enron_emailto`\n  GROUP BY `id`\n), xto_seq AS (\n  SELECT `id`, MAX(`nthxto`) AS max_nthxto\n  FROM `enron_emailxto`\n  GROUP BY `id`\n)\nSELECT i.`id`, i.`subject`,\n       COALESCE(t.max_nthto, 0) AS max_nthto,\n       COALESCE(x.max_nthxto, 0) AS max_nthxto\nFROM `enron_emailinfo` AS i\nLEFT JOIN to_seq AS t ON t.`id` = i.`id`\nLEFT JOIN xto_seq AS x ON x.`id` = i.`id`\nORDER BY GREATEST(COALESCE(t.max_nthto, 0), COALESCE(x.max_nthxto, 0)) DESC,\n         i.`id` ASC\nLIMIT 10",
+      "pred_sql": "SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.subject, max_nthto, max_nthxto FROM (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.subject, COALESCE(CAST(MAX(enron_eval_enron_emailto.nthto) AS SIGNED), 0) AS max_nthto, COALESCE(CAST(MAX(enron_eval_enron_emailxto.nthxto) AS SIGNED), 0) AS max_nthxto, MAX(enron_eval_enron_emailto.nthto), MAX(enron_eval_enron_emailxto.nthxto) FROM (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.subject FROM (SELECT __source.`id` AS `id`, __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo LEFT OUTER JOIN (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.nthto FROM (SELECT __source.`id` AS `id`, __source.nthto AS nthto FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto ON enron_eval_enron_emailinfo.`id` = enron_eval_enron_emailto.`id` LEFT OUTER JOIN (SELECT enron_eval_enron_emailxto.`id`, enron_eval_enron_emailxto.nthxto FROM (SELECT __source.`id` AS `id`, __source.nthxto AS nthxto FROM enron_eval.enron_emailxto AS __source) AS enron_eval_enron_emailxto) AS enron_eval_enron_emailxto ON enron_eval_enron_emailinfo.`id` = enron_eval_enron_emailxto.`id` GROUP BY enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.subject ORDER BY GREATEST(COALESCE(CAST(MAX(enron_eval_enron_emailto.nthto) AS SIGNED), 0), COALESCE(CAST(MAX(enron_eval_enron_emailxto.nthxto) AS SIGNED), 0)) DESC, CASE WHEN enron_eval_enron_emailinfo.`id` IS NULL THEN 1 ELSE 0 END, enron_eval_enron_emailinfo.`id` ASC) LIMIT 10",
+      "passed": false,
+      "reason": "pred_sql_error: (1248, 'Every derived table must have its own alias')",
+      "gold_rows": 10,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "m12",
+      "difficulty": "medium",
+      "question": "Enron公告邮箱最常把邮件发给哪些地址？列出前5个。",
+      "gold_sql": "SELECT LOWER(TRIM(t.`to`)) AS recipient,\n       COUNT(DISTINCT t.`id`) AS email_count\nFROM `enron_emailinfo` AS i\nJOIN `enron_emailto` AS t ON t.`id` = i.`id`\nWHERE LOWER(TRIM(i.`from`)) = 'enron.announcements@enron.com'\n  AND t.`to` IS NOT NULL AND TRIM(t.`to`) <> ''\nGROUP BY LOWER(TRIM(t.`to`))\nORDER BY email_count DESC, recipient ASC\nLIMIT 5",
+      "pred_sql": "SELECT ranked_to.`to`, ranked_to.`count`, ranked_to.ranking FROM (SELECT e2.`to`, COUNT(1) AS `count`, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS ranking FROM (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS e1 INNER JOIN (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS e2 ON e1.`id` = e2.`id` WHERE LOWER(e1.`from`) LIKE '%announce%' OR LOWER(e1.`from`) LIKE '%news%' OR LOWER(e1.`from`) LIKE 'enron-%' OR LOWER(e1.`from`) LIKE '%bulletin%' AND NOT e1.`from` IS NULL AND NOT e2.`to` IS NULL GROUP BY e2.`to`) AS ranked_to WHERE ranked_to.ranking <= 5",
+      "passed": false,
+      "reason": "列数不一致: gold=2 pred=3",
+      "gold_rows": 5,
+      "pred_rows": 5
+    },
+    {
+      "case_id": "m13",
+      "difficulty": "medium",
+      "question": "每个非空原始源文件名xfilename关联了多少封不同邮件？列出前5个文件名和不同邮件ID数量，先按数量降序、再按文件名升序排列。",
+      "gold_sql": "SELECT TRIM(`xfilename`) AS xfilename,\n       COUNT(DISTINCT `id`) AS email_count\nFROM `enron_source`\nWHERE `xfilename` IS NOT NULL AND TRIM(`xfilename`) <> ''\nGROUP BY TRIM(`xfilename`)\nORDER BY email_count DESC, xfilename ASC\nLIMIT 5",
+      "pred_sql": "SELECT ranked_files.xfilename, ranked_files.email_count, ranked_files.rank_num FROM (SELECT enron_eval_enron_source.xfilename, COUNT(DISTINCT enron_eval_enron_source.`id`) AS email_count, DENSE_RANK() OVER (ORDER BY COUNT(DISTINCT enron_eval_enron_source.`id`) DESC, CASE WHEN enron_eval_enron_source.xfilename IS NULL THEN 1 ELSE 0 END, enron_eval_enron_source.xfilename ASC) AS rank_num FROM (SELECT enron_eval_enron_source.`id`, enron_eval_enron_source.xfilename FROM (SELECT __source.`id` AS `id`, __source.xfilename AS xfilename FROM enron_eval.enron_source AS __source) AS enron_eval_enron_source) AS enron_eval_enron_source WHERE NOT enron_eval_enron_source.xfilename IS NULL GROUP BY enron_eval_enron_source.xfilename) AS ranked_files WHERE ranked_files.rank_num <= 5 ORDER BY CASE WHEN ranked_files.rank_num IS NULL THEN 1 ELSE 0 END, ranked_files.rank_num ASC",
+      "passed": false,
+      "reason": "列数不一致: gold=2 pred=3",
+      "gold_rows": 5,
+      "pred_rows": 5
+    },
+    {
+      "case_id": "m14",
+      "difficulty": "medium",
+      "question": "哪些邮件的标准To收件地址数量与X-To原始收件人显示值数量差异最大？分别统计enron_emailto中的不同规范化to值和enron_emailxto中的不同去空格xto值，缺失按0处理；列出绝对差值最大的10封邮件，返回邮件ID、两个数量、绝对差值，以及enron_emailinfo.to和enron_emailinfo.xto各自的前200个字符，先按绝对差值降序、再按邮件ID升序排列。",
+      "gold_sql": "WITH to_counts AS (\n  SELECT `id`, COUNT(DISTINCT LOWER(TRIM(`to`))) AS to_count\n  FROM `enron_emailto`\n  WHERE `to` IS NOT NULL AND TRIM(`to`) <> ''\n  GROUP BY `id`\n), xto_counts AS (\n  SELECT `id`, COUNT(DISTINCT TRIM(`xto`)) AS xto_count\n  FROM `enron_emailxto`\n  WHERE `xto` IS NOT NULL AND TRIM(`xto`) <> ''\n  GROUP BY `id`\n)\nSELECT\n  i.`id`,\n  COALESCE(t.to_count, 0) AS to_count,\n  COALESCE(x.xto_count, 0) AS xto_count,\n  ABS(COALESCE(t.to_count, 0) - COALESCE(x.xto_count, 0)) AS absolute_gap,\n  LEFT(i.`to`, 200) AS to_preview,\n  LEFT(i.`xto`, 200) AS xto_preview\nFROM `enron_emailinfo` AS i\nLEFT JOIN to_counts AS t ON t.`id` = i.`id`\nLEFT JOIN xto_counts AS x ON x.`id` = i.`id`\nORDER BY absolute_gap DESC, i.`id` ASC\nLIMIT 10",
+      "pred_sql": "SELECT ranked_emails.`id`, ranked_emails.to_count, ranked_emails.xto_count, ranked_emails.abs_diff, ranked_emails.to_truncated, ranked_emails.xto_truncated FROM (SELECT email_info_with_counts.`id`, email_info_with_counts.to_count, email_info_with_counts.xto_count, ABS(email_info_with_counts.to_count - email_info_with_counts.xto_count) AS abs_diff, SUBSTRING(email_info_with_counts.to_full, 1, 200) AS to_truncated, SUBSTRING(email_info_with_counts.xto_full, 1, 200) AS xto_truncated, DENSE_RANK() OVER (ORDER BY ABS(email_info_with_counts.to_count - email_info_with_counts.xto_count) DESC, CASE WHEN email_info_with_counts.`id` IS NULL THEN 1 ELSE 0 END, email_info_with_counts.`id` ASC) AS `rank` FROM (SELECT e.`id`, COALESCE(t.to_count, 0) AS to_count, COALESCE(x.xto_count, 0) AS xto_count, e.`to` AS to_full, e.xto AS xto_full FROM (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.`to`, enron_eval_enron_emailinfo.xto FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to`, __source.xto AS xto FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS e LEFT OUTER JOIN (SELECT enron_eval_enron_emailto.`id`, COUNT(DISTINCT enron_eval_enron_emailto.`to`) AS to_count FROM (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto GROUP BY enron_eval_enron_emailto.`id`) AS t ON e.`id` = t.`id` LEFT OUTER JOIN (SELECT enron_eval_enron_emailxto.`id`, COUNT(DISTINCT TRIM(enron_eval_enron_emailxto.xto)) AS xto_count FROM (SELECT enron_eval_enron_emailxto.`id`, enron_eval_enron_emailxto.xto FROM (SELECT __source.`id` AS `id`, __source.xto AS xto FROM enron_eval.enron_emailxto AS __source) AS enron_eval_enron_emailxto) AS enron_eval_enron_emailxto GROUP BY enron_eval_enron_emailxto.`id`) AS x ON e.`id` = x.`id`) AS email_info_with_counts) AS ranked_emails WHERE ranked_emails.`rank` <= 10",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 10,
+      "pred_rows": 10
+    },
+    {
+      "case_id": "m15",
+      "difficulty": "medium",
+      "question": "哪个有效发件地址的邮件总共涉及最多不同收件地址？对发件地址和收件地址都去除首尾空格并转为小写；返回发件地址和不同收件地址数，按数量降序、发件地址升序排列后只取第1行。",
+      "gold_sql": "SELECT LOWER(TRIM(i.`from`)) AS sender,\n       COUNT(DISTINCT LOWER(TRIM(t.`to`))) AS distinct_recipient_count\nFROM `enron_emailinfo` AS i\nJOIN `enron_emailto` AS t ON t.`id` = i.`id`\nWHERE i.`from` IS NOT NULL AND TRIM(i.`from`) <> ''\n  AND t.`to` IS NOT NULL AND TRIM(t.`to`) <> ''\nGROUP BY LOWER(TRIM(i.`from`))\nORDER BY distinct_recipient_count DESC, sender ASC\nLIMIT 1",
+      "pred_sql": "",
+      "passed": false,
+      "reason": "no_sql",
+      "gold_rows": 0,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "m16",
+      "difficulty": "medium",
+      "question": "哪些人的deleted_items文件夹里有邮件？分别有多少封？",
+      "gold_sql": "SELECT TRIM(`people`) AS people, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_email`\nWHERE `mailbox` = 'deleted_items'\n  AND `people` IS NOT NULL AND TRIM(`people`) <> ''\nGROUP BY TRIM(`people`)\nORDER BY email_count DESC, people ASC",
+      "pred_sql": "SELECT enron_eval_enron_email.people, COUNT(1) AS `count` FROM (SELECT enron_eval_enron_email.mailbox, enron_eval_enron_email.people FROM (SELECT __source.mailbox AS mailbox, __source.people AS people FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email WHERE enron_eval_enron_email.mailbox = 'deleted_items' GROUP BY enron_eval_enron_email.people",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 3,
+      "pred_rows": 3
+    },
+    {
+      "case_id": "m17",
+      "difficulty": "medium",
+      "question": "列出主题去除首尾空格后忽略大小写以“Re:”开头、且存在nth=1历史邮件头的当前邮件；返回当前邮件ID、当前主题，以及nth=1历史邮件头的subject、from、to、xfrom和xto，按当前邮件ID升序排列。历史邮件头字段均来自enron_emailorig。",
+      "gold_sql": "SELECT\n  i.`id`,\n  i.`subject` AS current_subject,\n  o.`subject` AS original_subject,\n  o.`from` AS original_from,\n  o.`to` AS original_to,\n  o.`xfrom` AS original_xfrom,\n  o.`xto` AS original_xto\nFROM `enron_emailinfo` AS i\nJOIN `enron_emailorig` AS o ON o.`id` = i.`id` AND o.`nth` = 1\nWHERE LOWER(TRIM(i.`subject`)) LIKE 're:%'\nORDER BY i.`id` ASC",
+      "pred_sql": "SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.subject, enron_eval_enron_emailorig.subject AS orig_subject, enron_eval_enron_emailorig.`from`, enron_eval_enron_emailorig.`to`, enron_eval_enron_emailorig.xfrom, enron_eval_enron_emailorig.xto FROM (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.subject FROM (SELECT __source.`id` AS `id`, __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo INNER JOIN (SELECT enron_eval_enron_emailorig.`from`, enron_eval_enron_emailorig.`id`, enron_eval_enron_emailorig.nth, enron_eval_enron_emailorig.subject, enron_eval_enron_emailorig.`to`, enron_eval_enron_emailorig.xfrom, enron_eval_enron_emailorig.xto FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id`, __source.nth AS nth, __source.subject AS subject, __source.`to` AS `to`, __source.xfrom AS xfrom, __source.xto AS xto FROM enron_eval.enron_emailorig AS __source) AS enron_eval_enron_emailorig) AS enron_eval_enron_emailorig ON enron_eval_enron_emailinfo.`id` = enron_eval_enron_emailorig.`id` WHERE LOWER(TRIM(enron_eval_enron_emailinfo.subject)) LIKE 're:%' AND enron_eval_enron_emailorig.nth = 1 ORDER BY CASE WHEN enron_eval_enron_emailinfo.`id` IS NULL THEN 1 ELSE 0 END, enron_eval_enron_emailinfo.`id` ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 468,
+      "pred_rows": 468
+    },
+    {
+      "case_id": "m18",
+      "difficulty": "medium",
+      "question": "在原始Date邮件头显示为2001年10月的邮件中，哪些规范化收件地址收到的不同邮件最多？同一封邮件中的同一地址只计一次；列出前5个地址和不同邮件数，先按数量降序、再按地址升序排列。",
+      "gold_sql": "WITH parsed AS (\n  SELECT\n    `id`,\n    STR_TO_DATE(\n      REGEXP_SUBSTR(`date`, '^[A-Za-z]{3}, [0-9]{1,2} [A-Za-z]{3} [0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}'),\n      '%a, %e %b %Y %H:%i:%s'\n    ) AS parsed_datetime\n  FROM `enron_emailinfo`\n)\nSELECT LOWER(TRIM(t.`to`)) AS recipient,\n       COUNT(DISTINCT t.`id`) AS email_count\nFROM parsed AS p\nJOIN `enron_emailto` AS t ON t.`id` = p.`id`\nWHERE YEAR(p.parsed_datetime) = 2001\n  AND MONTH(p.parsed_datetime) = 10\n  AND t.`to` IS NOT NULL AND TRIM(t.`to`) <> ''\nGROUP BY LOWER(TRIM(t.`to`))\nORDER BY email_count DESC, recipient ASC\nLIMIT 5",
+      "pred_sql": "SELECT ranked_addresses.`to`, ranked_addresses.`count` FROM (SELECT enron_eval_enron_emailto.`to`, COUNT(DISTINCT enron_eval_enron_emailinfo.`id`) AS `count`, DENSE_RANK() OVER (ORDER BY COUNT(DISTINCT enron_eval_enron_emailinfo.`id`) DESC, CASE WHEN enron_eval_enron_emailto.`to` IS NULL THEN 1 ELSE 0 END, enron_eval_enron_emailto.`to` ASC) AS `rank` FROM (SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`date` AS `date`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo INNER JOIN (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto ON enron_eval_enron_emailinfo.`id` = enron_eval_enron_emailto.`id` WHERE enron_eval_enron_emailinfo.`date` LIKE '2001-10%' GROUP BY enron_eval_enron_emailto.`to`) AS ranked_addresses WHERE ranked_addresses.`rank` <= 5",
+      "passed": false,
+      "reason": "行数不一致: gold=5 pred=0",
+      "gold_rows": 5,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "m19",
+      "difficulty": "medium",
+      "question": "larry.campbell@enron.com发送的邮件中，有多少封保存在名称恰好为inbox的文件夹？连接enron_email与enron_emailinfo，按不同邮件ID计数。",
+      "gold_sql": "SELECT COUNT(DISTINCT i.`id`) AS email_count\nFROM `enron_emailinfo` AS i\nJOIN `enron_email` AS e ON e.`id` = i.`id`\nWHERE LOWER(TRIM(i.`from`)) = 'larry.campbell@enron.com'\n  AND e.`mailbox` = 'inbox'",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS e1 INNER JOIN (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.mailbox FROM (SELECT __source.`id` AS `id`, __source.mailbox AS mailbox FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS e2 ON e1.`id` = e2.`id` WHERE e1.`from` = 'larry.campbell@enron.com' AND e2.mailbox = 'inbox'",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "m20",
+      "difficulty": "medium",
+      "question": "这个数据集主要来自哪些员工的邮箱？列出邮件最多的前5个来源。",
+      "gold_sql": "SELECT TRIM(`xorigin`) AS xorigin, COUNT(DISTINCT `id`) AS email_count\nFROM `enron_source`\nWHERE `xorigin` IS NOT NULL AND TRIM(`xorigin`) <> ''\nGROUP BY TRIM(`xorigin`)\nORDER BY email_count DESC, xorigin ASC\nLIMIT 5",
+      "pred_sql": "SELECT enron_eval_enron_source.xorigin, COUNT(1) AS mail_count, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS ranking FROM (SELECT enron_eval_enron_source.xorigin FROM (SELECT __source.xorigin AS xorigin FROM enron_eval.enron_source AS __source) AS enron_eval_enron_source) AS enron_eval_enron_source WHERE NOT enron_eval_enron_source.xorigin IS NULL AND enron_eval_enron_source.xorigin <> '' GROUP BY enron_eval_enron_source.xorigin HAVING COUNT(1) > 0 ORDER BY CASE WHEN ranking IS NULL THEN 1 ELSE 0 END, ranking ASC LIMIT 5",
+      "passed": false,
+      "reason": "列数不一致: gold=2 pred=3",
+      "gold_rows": 3,
+      "pred_rows": 3
+    },
+    {
+      "case_id": "h01",
+      "difficulty": "hard",
+      "question": "有多少个邮箱既发过邮件，也收过邮件？",
+      "gold_sql": "WITH senders AS (\n  SELECT DISTINCT LOWER(TRIM(`from`)) AS address\n  FROM `enron_emailinfo`\n  WHERE `from` IS NOT NULL AND TRIM(`from`) <> ''\n), recipients AS (\n  SELECT DISTINCT LOWER(TRIM(`to`)) AS address\n  FROM `enron_emailto`\n  WHERE `to` IS NOT NULL AND TRIM(`to`) <> ''\n)\nSELECT COUNT(*) AS two_way_address_count\nFROM senders AS s\nJOIN recipients AS r ON r.address = s.address",
+      "pred_sql": "SELECT COUNT(1) AS `count(*)` FROM (SELECT DISTINCT enron_eval_enron_emailinfo.`from` AS email FROM (SELECT enron_eval_enron_emailinfo.`from` FROM (SELECT __source.`from` AS `from` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE NOT enron_eval_enron_emailinfo.`from` IS NULL AND enron_eval_enron_emailinfo.`from` <> '') AS from_emails INNER JOIN (SELECT DISTINCT enron_eval_enron_emailto.`to` AS email FROM (SELECT enron_eval_enron_emailto.`to` FROM (SELECT __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto WHERE NOT enron_eval_enron_emailto.`to` IS NULL AND enron_eval_enron_emailto.`to` <> '') AS to_emails ON from_emails.email = to_emails.email",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "h02",
+      "difficulty": "hard",
+      "question": "哪些规范化发件地址发送过邮件、但从未作为规范化标准收件地址出现？列出地址和其发送的不同邮件数，先按发送数降序、再按地址升序排列。",
+      "gold_sql": "WITH sender_counts AS (\n  SELECT LOWER(TRIM(`from`)) AS address,\n         COUNT(DISTINCT `id`) AS sent_email_count\n  FROM `enron_emailinfo`\n  WHERE `from` IS NOT NULL AND TRIM(`from`) <> ''\n  GROUP BY LOWER(TRIM(`from`))\n), recipients AS (\n  SELECT DISTINCT LOWER(TRIM(`to`)) AS address\n  FROM `enron_emailto`\n  WHERE `to` IS NOT NULL AND TRIM(`to`) <> ''\n)\nSELECT s.address, s.sent_email_count\nFROM sender_counts AS s\nLEFT JOIN recipients AS r ON r.address = s.address\nWHERE r.address IS NULL\nORDER BY s.sent_email_count DESC, s.address ASC",
+      "pred_sql": "SELECT enron_eval_enron_emailinfo.xfrom, COUNT(DISTINCT enron_eval_enron_emailinfo.`id`) AS `count` FROM (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.xfrom FROM (SELECT __source.`id` AS `id`, __source.xfrom AS xfrom FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE enron_eval_enron_emailinfo.xfrom IN (SELECT xfrom_only.xfrom FROM (SELECT all_xfrom.xfrom FROM (SELECT DISTINCT enron_eval_enron_emailinfo.xfrom FROM (SELECT enron_eval_enron_emailinfo.xfrom FROM (SELECT __source.xfrom AS xfrom FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE NOT enron_eval_enron_emailinfo.xfrom IS NULL AND enron_eval_enron_emailinfo.xfrom <> '') AS all_xfrom WHERE NOT all_xfrom.xfrom IN (SELECT all_xto.xto FROM (SELECT DISTINCT enron_eval_enron_emailinfo.xto FROM (SELECT enron_eval_enron_emailinfo.xto FROM (SELECT __source.xto AS xto FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE NOT enron_eval_enron_emailinfo.xto IS NULL AND enron_eval_enron_emailinfo.xto <> '' UNION SELECT DISTINCT enron_eval_enron_emailxto.xto FROM (SELECT enron_eval_enron_emailxto.xto FROM (SELECT __source.xto AS xto FROM enron_eval.enron_emailxto AS __source) AS enron_eval_enron_emailxto) AS enron_eval_enron_emailxto WHERE NOT enron_eval_enron_emailxto.xto IS NULL AND enron_eval_enron_emailxto.xto <> '' UNION SELECT DISTINCT enron_eval_enron_emailorig.xto FROM (SELECT enron_eval_enron_emailorig.xto FROM (SELECT __source.xto AS xto FROM enron_eval.enron_emailorig AS __source) AS enron_eval_enron_emailorig) AS enron_eval_enron_emailorig WHERE NOT enron_eval_enron_emailorig.xto IS NULL AND enron_eval_enron_emailorig.xto <> '') AS all_xto)) AS xfrom_only) GROUP BY enron_eval_enron_emailinfo.xfrom ORDER BY `count` DESC, CASE WHEN enron_eval_enron_emailinfo.xfrom IS NULL THEN 1 ELSE 0 END, enron_eval_enron_emailinfo.xfrom ASC",
+      "passed": false,
+      "reason": "行数不一致: gold=515 pred=851",
+      "gold_rows": 515,
+      "pred_rows": 851
+    },
+    {
+      "case_id": "h03",
+      "difficulty": "hard",
+      "question": "哪些邮件主题引发的回复讨论最多？列出前3个。",
+      "gold_sql": "WITH replies AS (\n  SELECT\n    `id`,\n    LOWER(TRIM(REGEXP_REPLACE(\n      TRIM(`subject`),\n      '^(re:[[:space:]]*)+',\n      '', 1, 0, 'i'\n    ))) AS normalized_subject\n  FROM `enron_emailinfo`\n  WHERE LOWER(TRIM(`subject`)) LIKE 're:%'\n)\nSELECT normalized_subject, COUNT(DISTINCT `id`) AS reply_email_count\nFROM replies\nWHERE normalized_subject <> ''\nGROUP BY normalized_subject\nORDER BY reply_email_count DESC, normalized_subject ASC\nLIMIT 3",
+      "pred_sql": "SELECT subject_counts.subject, subject_counts.`count`, subject_counts.`rank` FROM (SELECT enron_eval_enron_emailinfo.subject, COUNT(1) AS `count`, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS `rank` FROM (SELECT enron_eval_enron_emailinfo.subject FROM (SELECT __source.subject AS subject FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo WHERE NOT enron_eval_enron_emailinfo.subject IS NULL AND TRIM(enron_eval_enron_emailinfo.subject) <> '' GROUP BY enron_eval_enron_emailinfo.subject) AS subject_counts WHERE subject_counts.`rank` <= 3",
+      "passed": false,
+      "reason": "列数不一致: gold=2 pred=3",
+      "gold_rows": 3,
+      "pred_rows": 3
+    },
+    {
+      "case_id": "h04",
+      "difficulty": "hard",
+      "question": "对每个非空归档员工目录people，统计其保存邮件中各规范化发件地址发送的不同邮件数；在每个people内部按邮件数降序、发件地址升序编号，列出每个people的前3个发件地址、邮件数和名次，最后按people升序、名次升序排列。",
+      "gold_sql": "WITH sender_counts AS (\n  SELECT\n    TRIM(e.`people`) AS people,\n    LOWER(TRIM(i.`from`)) AS sender,\n    COUNT(DISTINCT i.`id`) AS email_count\n  FROM `enron_email` AS e\n  JOIN `enron_emailinfo` AS i ON i.`id` = e.`id`\n  WHERE e.`people` IS NOT NULL AND TRIM(e.`people`) <> ''\n    AND i.`from` IS NOT NULL AND TRIM(i.`from`) <> ''\n  GROUP BY TRIM(e.`people`), LOWER(TRIM(i.`from`))\n), ranked AS (\n  SELECT\n    people, sender, email_count,\n    ROW_NUMBER() OVER (\n      PARTITION BY people\n      ORDER BY email_count DESC, sender ASC\n    ) AS sender_rank\n  FROM sender_counts\n)\nSELECT people, sender, email_count, sender_rank\nFROM ranked\nWHERE sender_rank <= 3\nORDER BY people ASC, sender_rank ASC",
+      "pred_sql": "SELECT ranked_emails.people, ranked_emails.`from`, ranked_emails.email_count, ranked_emails.`rank` FROM (SELECT email_counts.people, email_counts.`from`, email_counts.email_count, DENSE_RANK() OVER (PARTITION BY email_counts.people ORDER BY email_counts.email_count DESC, CASE WHEN email_counts.`from` IS NULL THEN 1 ELSE 0 END, email_counts.`from` ASC) AS `rank` FROM (SELECT e.people, ei.`from`, COUNT(DISTINCT ei.`id`) AS email_count FROM (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.people FROM (SELECT __source.`id` AS `id`, __source.people AS people FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS e INNER JOIN (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS ei ON e.`id` = ei.`id` WHERE NOT e.people IS NULL AND TRIM(e.people) <> '' AND NOT ei.`from` IS NULL AND TRIM(ei.`from`) <> '' GROUP BY e.people, ei.`from`) AS email_counts) AS ranked_emails WHERE ranked_emails.`rank` <= 3 ORDER BY CASE WHEN ranked_emails.people IS NULL THEN 1 ELSE 0 END, ranked_emails.people ASC, CASE WHEN ranked_emails.`rank` IS NULL THEN 1 ELSE 0 END, ranked_emails.`rank` ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 9,
+      "pred_rows": 9
+    },
+    {
+      "case_id": "h05",
+      "difficulty": "hard",
+      "question": "邮件往来最忙的是哪一天？那天发邮件最多的5个邮箱是谁？",
+      "gold_sql": "WITH parsed AS (\n  SELECT\n    `id`,\n    LOWER(TRIM(`from`)) AS sender,\n    DATE(STR_TO_DATE(\n      REGEXP_SUBSTR(`date`, '^[A-Za-z]{3}, [0-9]{1,2} [A-Za-z]{3} [0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2}'),\n      '%a, %e %b %Y %H:%i:%s'\n    )) AS sent_date\n  FROM `enron_emailinfo`\n), day_counts AS (\n  SELECT sent_date, COUNT(DISTINCT `id`) AS email_count\n  FROM parsed\n  WHERE sent_date IS NOT NULL\n  GROUP BY sent_date\n), busiest_day AS (\n  SELECT sent_date\n  FROM day_counts\n  ORDER BY email_count DESC, sent_date ASC\n  LIMIT 1\n), sender_counts AS (\n  SELECT p.sent_date, p.sender, COUNT(DISTINCT p.`id`) AS email_count\n  FROM parsed AS p\n  JOIN busiest_day AS b ON b.sent_date = p.sent_date\n  WHERE p.sender IS NOT NULL AND p.sender <> ''\n  GROUP BY p.sent_date, p.sender\n)\nSELECT sent_date, sender, email_count\nFROM sender_counts\nORDER BY email_count DESC, sender ASC\nLIMIT 5",
+      "pred_sql": "SELECT sender_rank.`date`, sender_rank.`from`, sender_rank.`rank` FROM (SELECT d.`date`, enron_eval_enron_emailinfo.`from`, COUNT(1) AS send_count, DENSE_RANK() OVER (ORDER BY COUNT(1) DESC) AS `rank` FROM (SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.`from` FROM (SELECT __source.`date` AS `date`, __source.`from` AS `from` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo INNER JOIN (SELECT SUBSTRING(enron_eval_enron_emailinfo.`date`, 1, 10) AS `date`, COUNT(1) AS `count` FROM (SELECT enron_eval_enron_emailinfo.`date`, enron_eval_enron_emailinfo.`from` FROM (SELECT __source.`date` AS `date`, __source.`from` AS `from` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo GROUP BY SUBSTRING(enron_eval_enron_emailinfo.`date`, 1, 10) ORDER BY `count` DESC LIMIT 1) AS d ON SUBSTRING(enron_eval_enron_emailinfo.`date`, 1, 10) = d.`date` GROUP BY d.`date`, enron_eval_enron_emailinfo.`from`, d.`count`) AS sender_rank WHERE sender_rank.`rank` <= 5",
+      "passed": false,
+      "reason": "行数不一致: gold=5 pred=7",
+      "gold_rows": 5,
+      "pred_rows": 7
+    },
+    {
+      "case_id": "h06",
+      "difficulty": "hard",
+      "question": "将每封邮件按规范化发件地址分类：地址以“@enron.com”结尾为internal，其他非空有效地址为external；忽略空发件地址。分别统计两类的不同邮件数及其占有效发件邮件总数的百分比，百分比保留2位小数，按类别升序排列。",
+      "gold_sql": "WITH classified AS (\n  SELECT\n    `id`,\n    CASE\n      WHEN LOWER(TRIM(`from`)) LIKE '%@enron.com' THEN 'internal'\n      ELSE 'external'\n    END AS sender_type\n  FROM `enron_emailinfo`\n  WHERE `from` IS NOT NULL AND TRIM(`from`) <> ''\n), counts AS (\n  SELECT sender_type, COUNT(DISTINCT `id`) AS email_count\n  FROM classified\n  GROUP BY sender_type\n), total AS (\n  SELECT COUNT(DISTINCT `id`) AS total_count\n  FROM classified\n)\nSELECT c.sender_type, c.email_count,\n       ROUND(100.0 * c.email_count / NULLIF(t.total_count, 0), 2) AS percentage\nFROM counts AS c\nCROSS JOIN total AS t\nORDER BY c.sender_type ASC",
+      "pred_sql": "SELECT cc.category, cc.`count`, ROUND(cc.`count` * 100.0 / tc.total, 2) AS percentage FROM (SELECT valid_emails.category, COUNT(1) AS `count` FROM (SELECT enron_eval_enron_emailinfo.`from`, CASE WHEN ((NOT enron_eval_enron_emailinfo.`from` IS NULL AND (TRIM(enron_eval_enron_emailinfo.`from`) <> '')) AND LOWER(TRIM(enron_eval_enron_emailinfo.`from`)) LIKE '%@enron.com') THEN 'internal' WHEN (NOT enron_eval_enron_emailinfo.`from` IS NULL AND (TRIM(enron_eval_enron_emailinfo.`from`) <> '')) THEN 'external' ELSE NULL END AS category FROM (SELECT enron_eval_enron_emailinfo.`from` FROM (SELECT __source.`from` AS `from` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo) AS valid_emails WHERE NOT valid_emails.category IS NULL GROUP BY valid_emails.category) AS cc CROSS JOIN (SELECT COUNT(1) AS total FROM (SELECT enron_eval_enron_emailinfo.`from`, CASE WHEN ((NOT enron_eval_enron_emailinfo.`from` IS NULL AND (TRIM(enron_eval_enron_emailinfo.`from`) <> '')) AND LOWER(TRIM(enron_eval_enron_emailinfo.`from`)) LIKE '%@enron.com') THEN 'internal' WHEN (NOT enron_eval_enron_emailinfo.`from` IS NULL AND (TRIM(enron_eval_enron_emailinfo.`from`) <> '')) THEN 'external' ELSE NULL END AS category FROM (SELECT enron_eval_enron_emailinfo.`from` FROM (SELECT __source.`from` AS `from` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo) AS valid_emails WHERE NOT valid_emails.category IS NULL) AS tc ORDER BY CASE WHEN cc.category IS NULL THEN 1 ELSE 0 END, cc.category ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 2,
+      "pred_rows": 2
+    },
+    {
+      "case_id": "h07",
+      "difficulty": "hard",
+      "question": "仅考虑campbell-l、allen-p和badeer-r三个归档员工目录。对每个people，将其保存邮件中的规范化发件地址与规范化标准收件地址合并为通信地址集合；找出至少出现在其中两个不同people集合中的地址，列出地址和涉及的不同people数量，按people数量降序、地址升序排列。",
+      "gold_sql": "WITH communication_addresses AS (\n  SELECT DISTINCT TRIM(e.`people`) AS people,\n                  LOWER(TRIM(i.`from`)) AS address\n  FROM `enron_email` AS e\n  JOIN `enron_emailinfo` AS i ON i.`id` = e.`id`\n  WHERE e.`people` IN ('campbell-l', 'allen-p', 'badeer-r')\n    AND i.`from` IS NOT NULL AND TRIM(i.`from`) <> ''\n\n  UNION\n\n  SELECT DISTINCT TRIM(e.`people`) AS people,\n                  LOWER(TRIM(t.`to`)) AS address\n  FROM `enron_email` AS e\n  JOIN `enron_emailto` AS t ON t.`id` = e.`id`\n  WHERE e.`people` IN ('campbell-l', 'allen-p', 'badeer-r')\n    AND t.`to` IS NOT NULL AND TRIM(t.`to`) <> ''\n)\nSELECT address, COUNT(DISTINCT people) AS people_count\nFROM communication_addresses\nGROUP BY address\nHAVING COUNT(DISTINCT people) >= 2\nORDER BY people_count DESC, address ASC",
+      "pred_sql": "SELECT address_counts.address, address_counts.people_count FROM (SELECT unique_people_addresses.address, COUNT(DISTINCT unique_people_addresses.people) AS people_count FROM (SELECT DISTINCT people_addresses.people, people_addresses.address FROM (SELECT e.people, LOWER(TRIM(ei.`from`)) AS address FROM (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.people FROM (SELECT __source.`id` AS `id`, __source.people AS people FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS e INNER JOIN (SELECT enron_eval_enron_emailinfo.`from`, enron_eval_enron_emailinfo.`id` FROM (SELECT __source.`from` AS `from`, __source.`id` AS `id` FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS ei ON e.`id` = ei.`id` WHERE e.people IN ('campbell-l', 'allen-p', 'badeer-r') AND NOT ei.`from` IS NULL AND TRIM(ei.`from`) <> '' UNION ALL SELECT e.people, LOWER(TRIM(et.`to`)) AS address FROM (SELECT enron_eval_enron_email.`id`, enron_eval_enron_email.people FROM (SELECT __source.`id` AS `id`, __source.people AS people FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS e INNER JOIN (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS et ON e.`id` = et.`id` WHERE e.people IN ('campbell-l', 'allen-p', 'badeer-r') AND NOT et.`to` IS NULL AND TRIM(et.`to`) <> '') AS people_addresses) AS unique_people_addresses GROUP BY unique_people_addresses.address HAVING COUNT(DISTINCT unique_people_addresses.people) >= 2) AS address_counts ORDER BY address_counts.people_count DESC, CASE WHEN address_counts.address IS NULL THEN 1 ELSE 0 END, address_counts.address ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 474,
+      "pred_rows": 474
+    },
+    {
+      "case_id": "h08",
+      "difficulty": "hard",
+      "question": "Larry Campbell和Phillip Allen都给哪些邮箱发过邮件？分别发了多少封？",
+      "gold_sql": "WITH recipient_counts AS (\n  SELECT\n    LOWER(TRIM(t.`to`)) AS recipient,\n    COUNT(DISTINCT CASE\n      WHEN LOWER(TRIM(i.`from`)) = 'larry.campbell@enron.com' THEN i.`id`\n    END) AS larry_email_count,\n    COUNT(DISTINCT CASE\n      WHEN LOWER(TRIM(i.`from`)) = 'phillip.allen@enron.com' THEN i.`id`\n    END) AS phillip_email_count\n  FROM `enron_emailinfo` AS i\n  JOIN `enron_emailto` AS t ON t.`id` = i.`id`\n  WHERE LOWER(TRIM(i.`from`)) IN (\n    'larry.campbell@enron.com',\n    'phillip.allen@enron.com'\n  )\n    AND t.`to` IS NOT NULL AND TRIM(t.`to`) <> ''\n  GROUP BY LOWER(TRIM(t.`to`))\n)\nSELECT recipient, larry_email_count, phillip_email_count\nFROM recipient_counts\nWHERE larry_email_count > 0 AND phillip_email_count > 0\nORDER BY (larry_email_count + phillip_email_count) DESC, recipient ASC",
+      "pred_sql": "SELECT larry_emails.`to`, larry_emails.larry_count, phillip_emails.phillip_count FROM (SELECT enron_eval_enron_emailto.`to`, COUNT(1) AS larry_count FROM (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto INNER JOIN (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.xfrom FROM (SELECT __source.`id` AS `id`, __source.xfrom AS xfrom FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo ON enron_eval_enron_emailto.`id` = enron_eval_enron_emailinfo.`id` WHERE LOWER(enron_eval_enron_emailinfo.xfrom) = LOWER('Larry Campbell') GROUP BY enron_eval_enron_emailto.`to`) AS larry_emails INNER JOIN (SELECT enron_eval_enron_emailto.`to`, COUNT(1) AS phillip_count FROM (SELECT enron_eval_enron_emailto.`id`, enron_eval_enron_emailto.`to` FROM (SELECT __source.`id` AS `id`, __source.`to` AS `to` FROM enron_eval.enron_emailto AS __source) AS enron_eval_enron_emailto) AS enron_eval_enron_emailto INNER JOIN (SELECT enron_eval_enron_emailinfo.`id`, enron_eval_enron_emailinfo.xfrom FROM (SELECT __source.`id` AS `id`, __source.xfrom AS xfrom FROM enron_eval.enron_emailinfo AS __source) AS enron_eval_enron_emailinfo) AS enron_eval_enron_emailinfo ON enron_eval_enron_emailto.`id` = enron_eval_enron_emailinfo.`id` WHERE LOWER(enron_eval_enron_emailinfo.xfrom) = LOWER('Phillip Allen') GROUP BY enron_eval_enron_emailto.`to`) AS phillip_emails ON larry_emails.`to` = phillip_emails.`to` ORDER BY CASE WHEN larry_emails.`to` IS NULL THEN 1 ELSE 0 END, larry_emails.`to` ASC",
+      "passed": false,
+      "reason": "行数不一致: gold=2 pred=0",
+      "gold_rows": 2,
+      "pred_rows": 0
+    },
+    {
+      "case_id": "h09",
+      "difficulty": "hard",
+      "question": "对enron_emailorig中存在记录的每封当前邮件，按id统计历史邮件头数量。返回这些邮件的平均历史邮件头数量、最大历史邮件头数量，以及历史邮件头数量不少于3的当前邮件数；平均值保留4位小数。",
+      "gold_sql": "WITH per_email AS (\n  SELECT `id`, COUNT(*) AS historical_header_count\n  FROM `enron_emailorig`\n  GROUP BY `id`\n)\nSELECT\n  ROUND(AVG(historical_header_count), 4) AS avg_historical_header_count,\n  MAX(historical_header_count) AS max_historical_header_count,\n  SUM(CASE WHEN historical_header_count >= 3 THEN 1 ELSE 0 END) AS emails_with_at_least_3\nFROM per_email",
+      "pred_sql": "SELECT ROUND(AVG(CAST(grouped.head_count AS DOUBLE)), 4) AS average_history_headers, MAX(grouped.head_count) AS max_history_headers, SUM(CASE WHEN (grouped.head_count >= 3) THEN 1 ELSE 0 END) AS count_with_at_least_3 FROM (SELECT enron_eval_enron_emailorig.`id`, COUNT(1) AS head_count FROM (SELECT enron_eval_enron_emailorig.`id` FROM (SELECT __source.`id` AS `id` FROM enron_eval.enron_emailorig AS __source) AS enron_eval_enron_emailorig) AS enron_eval_enron_emailorig GROUP BY enron_eval_enron_emailorig.`id`) AS grouped",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 1,
+      "pred_rows": 1
+    },
+    {
+      "case_id": "h10",
+      "difficulty": "hard",
+      "question": "每个人邮件最多的文件夹是哪个？并列的也都列出来。",
+      "gold_sql": "WITH folder_counts AS (\n  SELECT\n    TRIM(`people`) AS people,\n    TRIM(`mailbox`) AS mailbox,\n    COUNT(DISTINCT `id`) AS email_count\n  FROM `enron_email`\n  WHERE `people` IS NOT NULL AND TRIM(`people`) <> ''\n    AND `mailbox` IS NOT NULL AND TRIM(`mailbox`) <> ''\n  GROUP BY TRIM(`people`), TRIM(`mailbox`)\n), ranked AS (\n  SELECT\n    people, mailbox, email_count,\n    DENSE_RANK() OVER (\n      PARTITION BY people\n      ORDER BY email_count DESC\n    ) AS folder_rank\n  FROM folder_counts\n)\nSELECT people, mailbox, email_count\nFROM ranked\nWHERE folder_rank = 1\nORDER BY people ASC, mailbox ASC",
+      "pred_sql": "SELECT ranked_mailboxes.people, ranked_mailboxes.mailbox, ranked_mailboxes.mail_count FROM (SELECT mailbox_counts.people, mailbox_counts.mailbox, mailbox_counts.mail_count, DENSE_RANK() OVER (PARTITION BY mailbox_counts.people ORDER BY mailbox_counts.mail_count DESC) AS `rank` FROM (SELECT enron_eval_enron_email.people, enron_eval_enron_email.mailbox, COUNT(1) AS mail_count FROM (SELECT enron_eval_enron_email.mailbox, enron_eval_enron_email.people FROM (SELECT __source.mailbox AS mailbox, __source.people AS people FROM enron_eval.enron_email AS __source) AS enron_eval_enron_email) AS enron_eval_enron_email WHERE NOT enron_eval_enron_email.people IS NULL GROUP BY enron_eval_enron_email.people, enron_eval_enron_email.mailbox) AS mailbox_counts) AS ranked_mailboxes WHERE ranked_mailboxes.`rank` = 1 ORDER BY CASE WHEN ranked_mailboxes.people IS NULL THEN 1 ELSE 0 END, ranked_mailboxes.people ASC, CASE WHEN ranked_mailboxes.mailbox IS NULL THEN 1 ELSE 0 END, ranked_mailboxes.mailbox ASC",
+      "passed": true,
+      "reason": "",
+      "gold_rows": 3,
+      "pred_rows": 3
+    }
+  ],
+  "by_difficulty": {
+    "easy": {
+      "total": 20,
+      "passed": 11
+    },
+    "medium": {
+      "total": 20,
+      "passed": 7
+    },
+    "hard": {
+      "total": 10,
+      "passed": 6
+    }
+  }
+}

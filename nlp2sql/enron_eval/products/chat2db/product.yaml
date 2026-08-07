@@ -1,0 +1,23 @@
+name: Chat2DB
+product_type: commercial_desktop_database_client
+
+source:
+  source_available: false
+  commercial_membership_used: true
+  binary_in_repository: false
+
+deployment:
+  mode: local_desktop_application
+  database: enron_eval
+  credentials_in_repository: false
+
+evaluation:
+  benchmark_id: enron_golden50_v1
+  question_count: 50
+  collection_mode: manual_or_client_export
+  run: results/manual_export
+
+unknown_fields:
+  - exact_product_version
+  - underlying_generation_model
+  - internal_retry_policy

@@ -1,0 +1,26 @@
+benchmark:
+  id: enron_golden50_v1
+  questions: benchmark/questions/user/questions_enron_50_user_mix.txt
+  detailed_spec: benchmark/questions/spec/questions_enron_50_detailed_spec.txt
+  conventions: benchmark/questions/spec/evaluation_conventions.md
+  golden_sql: benchmark/golden/questions_enron_50_golden.sql
+
+database:
+  dialect: mysql
+  minimum_version: "8.0"
+  database: enron_eval
+  read_only: true
+  statement_timeout_seconds: 30
+
+comparison:
+  primary_metric: execution_accuracy
+  compare_sql_text: false
+  normalize_column_names: true
+  normalize_numeric_types: true
+  preserve_row_order_when_query_orders: true
+  ignore_row_order_without_order_by: true
+
+products:
+  - moi
+  - wren
+  - chat2db

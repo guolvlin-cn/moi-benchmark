@@ -1,0 +1,23 @@
+{
+  "id": "enron_golden50_v1",
+  "version": "1.0.0",
+  "created_at": "2026-08-06",
+  "dialect": "mysql8",
+  "question_count": 50,
+  "difficulty": {
+    "easy": 20,
+    "medium": 20,
+    "hard": 10
+  },
+  "prompt_style": {
+    "colloquial": 25,
+    "precise": 25
+  },
+  "questions": {
+    "user": "questions/user/questions_enron_50_user_mix.txt",
+    "detailed_spec": "questions/spec/questions_enron_50_detailed_spec.txt",
+    "evaluation_conventions": "questions/spec/evaluation_conventions.md"
+  },
+  "golden_sql": "golden/questions_enron_50_golden.sql",
+  "field_coverage": "metadata/field_coverage.md"
+}

@@ -1,0 +1,28 @@
+# Local credentials and overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python and editor artifacts
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+
+# Raw source data is not distributed from this benchmark repository
+data/raw/
+data/private/
+datasets/raw/
+*.csv.gz
+
+# Product-internal event streams can be very large and may contain local metadata
+runs/**/raw/
+products/**/results/**/raw/
+
+# Local scratch and generated caches
+.cache/
+tmp/
+work/

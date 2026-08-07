@@ -1,0 +1,39 @@
+schema_version: 1
+benchmark_id: enron_golden50_v1
+snapshot_date: "2026-08-07"
+
+products:
+  - id: moi-local
+    name: MOI
+    role: system_under_test
+    deployment: local
+    source: https://github.com/matrixorigin/matrixflow/tree/dev
+    revision: 75018903911da5712cb0c6763267d42e430fcfcf
+    model: deepseek-v4-flash
+    runs:
+      - baseline_no_semantic
+      - with_semantic
+
+  - id: wren-ai-local
+    name: Wren AI
+    role: product_candidate
+    deployment: local_docker
+    source: https://github.com/Canner/WrenAI
+    revision: 74bf59e1d8400988f5269048cdeed983e77dc20d
+    product_version: 0.29.1
+    model: qwen-plus-2025-12-01
+    run: 2026-08-06_local
+
+  - id: chat2db-membership-desktop
+    name: Chat2DB
+    role: product_candidate
+    deployment: local_desktop
+    source: commercial_software
+    revision: null
+    membership_used: true
+    run: manual_export
+
+notes:
+  - This benchmark compares final product behavior, not only the underlying language models.
+  - Chat2DB version and underlying model remain to be recorded from the client UI.
+  - Credentials, private data, commercial licenses, and complete product source trees are excluded.

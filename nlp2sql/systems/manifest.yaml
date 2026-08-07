@@ -1,7 +1,30 @@
 schema_version: 1
 track: nlp2sql
-snapshot_date: "2026-07-22"
+snapshot_date: "2026-08-07"
 frozen: false
+
+evaluated_systems:
+  - id: moi-local-enron
+    role: system_under_test
+    source: https://github.com/matrixorigin/matrixflow/tree/dev
+    revision: 75018903911da5712cb0c6763267d42e430fcfcf
+    deployment: local
+    dataset: enron_eval_50
+    configurations:
+      - baseline_no_semantic
+      - with_semantic
+  - id: wren-ai-local-enron
+    role: product_candidate
+    source: https://github.com/Canner/WrenAI
+    revision: 74bf59e1d8400988f5269048cdeed983e77dc20d
+    deployment: local_docker
+    dataset: enron_eval_50
+  - id: chat2db-membership-desktop-enron
+    role: product_candidate
+    source: commercial_desktop
+    revision: null
+    deployment: local_desktop
+    dataset: enron_eval_50
 
 planned_systems:
   - id: moi-nlp2sql
@@ -26,4 +49,4 @@ planned_systems:
     role: optional_method_candidate
     revision: null
 
-note: Candidate roles and versions remain unapproved until the NLP2SQL plan review is complete.
+note: Enron Eval 50 的实际参评环境记录在 evaluated_systems；planned_systems 保留后续评测候选项。

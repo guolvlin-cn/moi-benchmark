@@ -1,0 +1,10 @@
+product: chat2db
+enabled: true
+version: "REPLACE_ME"
+model: "REPLACE_ME"
+deployment: local_desktop
+membership_used: true
+connection_profile: "本机私有连接名称，不提交账号密码"
+semantic_rules: null
+collection_mode: manual_or_client_export
+notes: "记录客户端版本、可见模型、Schema刷新状态和是否提供额外语义信息。"

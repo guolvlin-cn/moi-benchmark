@@ -1,0 +1,32 @@
+name: Wren AI
+vendor: Canner
+product_type: locally_deployed_open_source_genbi
+
+source:
+  repository: https://github.com/Canner/WrenAI
+  evaluated_commit: 74bf59e1d8400988f5269048cdeed983e77dc20d
+  vendored_in_this_repository: false
+
+deployment:
+  mode: local_docker
+  application_url: http://localhost:3000
+  api_url: http://localhost:3000/api/v1/generate_sql
+  database: enron_eval
+  language: Simplified Chinese
+  generation_model: qwen-plus-2025-12-01
+  embedding_model: text-embedding-v4
+  credentials_in_repository: false
+
+versions:
+  wren_product: 0.29.1
+  wren_engine: 0.22.0
+  wren_ai_service: 0.29.0
+  ibis_server: 0.22.0
+  wren_ui: 0.32.2
+  wren_bootstrap: 0.1.5
+
+evaluation:
+  benchmark_id: enron_golden50_v1
+  question_count: 50
+  run: results/2026-08-06_local
+  adapter: ../../scripts/adapters/run_wren.py
