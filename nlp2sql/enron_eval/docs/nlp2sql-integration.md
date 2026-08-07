@@ -24,15 +24,17 @@ GitHub 目标仓库：<https://github.com/matrixorigin/moi-benchmark/tree/main/n
 
 不建议同时保留 `nlp2sql/enron/` 和 `nlp2sql/enron_eval/` 两个当前入口，否则读者无法判断哪一个是正式版本。
 
-## nlp2sql顶层建议结构
+## nlp2sql顶层结构
 
 ```text
 nlp2sql/
 ├── README.md                       # Track总览，列出公开和私有两个阶段
-├── NL2SQL评测汇总报告.md            # 跨阶段汇总报告
-├── datasets/                       # Spider mix50公开集历史资产
-├── results/                        # Spider mix50公开集历史结果
-├── scripts/                        # Spider官方评测脚本
+├── spider/                         # Spider mix50公开集完整评测包
+│   ├── README.md
+│   ├── NL2SQL评测汇总报告.md
+│   ├── datasets/
+│   ├── results/
+│   └── scripts/
 ├── enron_eval/                     # 新的私有Enron 50题评测
 ├── plans/
 ├── refs/

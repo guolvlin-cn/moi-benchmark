@@ -152,7 +152,7 @@ MOI 和 Wren 的采集方法分别见：
 
 ## 与公开Spider评测的关系
 
-`nlp2sql/` 顶层既有的 `datasets/`、`results/` 和 `scripts/` 记录 Spider mix50 公开数据集评测，应继续作为历史公开基线保留。
+`nlp2sql/spider/` 集中保存 Spider mix50 公开数据集评测，作为历史公开基线保留。
 
 本目录是新的私有数据集阶段，采用自包含结构，不与 Spider 文件混放。早期 `nlp2sql/enron/` 仅包含旧版 SQLite 方案和未完成结果，合入时应由本目录替代或在 Git 历史中保留，不应同时保留两个当前 Enron 入口。
 

@@ -2,7 +2,7 @@
 
 状态：Spider mix50 公开集横评和 Enron Eval 50 私有集横评均已完成，中文财务数据评测处于规划阶段。
 
-MOI 平台与竞品（Wren AI、Chat2DB）的 NL2SQL 能力对比评测。本 Track 同时保留公开数据集阶段和私有数据集阶段。Spider mix50 的共用材料位于 `datasets/`、`results/` 和 `scripts/`；Enron Eval 50 的完整材料集中在 [`enron_eval/`](enron_eval/README.md)。
+MOI 平台与竞品（Wren AI、Chat2DB）的 NL2SQL 能力对比评测。本 Track 同时保留公开数据集阶段和私有数据集阶段。Spider mix50 的完整材料集中在 [`spider/`](spider/README.md)；Enron Eval 50 的完整材料集中在 [`enron_eval/`](enron_eval/README.md)。
 
 ## 阶段一：Spider mix50 三平台横评（已完成）
 
@@ -202,33 +202,24 @@ MOI（被评测）、Wren AI、Chat2DB；优先使用各产品原生界面，保
 ```
 nlp2sql/
 ├── README.md                      # 本文档
-├── NL2SQL评测汇总报告.md           # 详细评测报告
-├── datasets/
-│   ├── dev_gold_mix50.sql         # Gold SQL 标准答案 (50题)
-│   └── questions_mix50.txt        # 问题清单
-├── results/
-│   ├── moi/
-│   │   ├── pred_mix50_moi.sql     # MOI 预测 SQL
-│   │   └── report_mix50_records.txt
-│   ├── wren/
-│   │   ├── pred_mix50_wren.sql
-│   │   └── report_mix50_wren_records.txt
-│   └── chat2db/
-│       ├── pred_mix50_chat2db.sql
-│       └── report_mix50_chat2db_records.txt
-├── scripts/                       # 评测脚本
-│   └── README.md
+├── spider/                        # Spider mix50公开数据集评测
+│   ├── README.md                  # Spider阶段入口
+│   ├── NL2SQL评测汇总报告.md       # Spider详细评测报告
+│   ├── datasets/                  # 问题与Gold SQL
+│   ├── results/                   # 三产品预测SQL和逐题报告
+│   └── scripts/                   # Spider评测脚本
 ├── enron_eval/                    # Enron私有快照50题正式评测
 │   ├── benchmark/                 # 问题、口径、案例和Golden SQL
 │   ├── database/                  # 建库及字段注释SQL
 │   ├── products/                  # 三款产品配置与原始输出
 │   ├── results/                   # 统一结果与横向对比
 │   └── scripts/                   # 导入、生成和评测脚本
-├── plans/                         # 评测方案
+├── plans/                         # 后续私有业务评测方案
 │   └── drafts/v0.1.md
-└── refs/                          # 参考资料
-    ├── deep-research-report-5.md
-    └── deep-research-report-6.md
+├── refs/                          # 通用NL2SQL参考资料
+│   ├── deep-research-report-5.md
+│   └── deep-research-report-6.md
+└── systems/                       # 跨数据集参评系统清单
 ```
 
 ## 评测原则

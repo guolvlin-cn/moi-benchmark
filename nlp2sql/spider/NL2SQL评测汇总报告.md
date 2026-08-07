@@ -201,8 +201,8 @@ Chat2DB:  SELECT Name, Song_release_year FROM singer ORDER BY Age ASC LIMIT 1
 - **branch**: `nlp2sql-benchmark`
 - **目录结构**:
   ```
-  nlp2sql/
-  ├── README.md                    # 简要结果
+  nlp2sql/spider/
+  ├── README.md                    # Spider评测入口
   ├── NL2SQL评测汇总报告.md         # 本文档
   ├── datasets/
   │   ├── dev_gold_mix50.sql       # Gold SQL (50题)
