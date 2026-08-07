@@ -3,6 +3,7 @@ import base64
 import pytest
 from dify_plugin.entities.model.text_embedding import MultiModalContent, MultiModalContentType
 
+from models.llm.llm import MatrixOriginTaaSLargeLanguageModel
 from models.rerank.rerank import MatrixOriginTaaSRerankModel
 from models.shared import image_data_url, multimodal_content
 from models.text_embedding.text_embedding import MatrixOriginTaaSTextEmbeddingModel
@@ -44,5 +45,6 @@ def test_image_is_translated_to_taas_content_parts() -> None:
 
 
 def test_model_classes_are_concrete() -> None:
+    MatrixOriginTaaSLargeLanguageModel([])
     MatrixOriginTaaSTextEmbeddingModel([])
     MatrixOriginTaaSRerankModel([])

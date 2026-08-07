@@ -65,19 +65,33 @@ type EndpointConfig struct {
 	APIKeyEnv      string `json:"api_key_env"`
 	Dimension      int    `json:"dimension"`
 	TimeoutSeconds int    `json:"timeout_seconds"`
-	// Embedding-only resilience settings. Generation/Judge calls deliberately
-	// keep the benchmark's hard-stop behavior and do not use these settings.
+	// Embedding retry settings. Generation has its own bounded retry/fallback
+	// policy below so a single provider outage does not discard the whole QA run.
 	RetryMaxAttempts    int     `json:"retry_max_attempts,omitempty"`
 	RetryBackoffSeconds float64 `json:"retry_backoff_seconds,omitempty"`
 }
 
 type GenerationConfig struct {
-	Enabled        bool   `json:"enabled"`
-	Provider       string `json:"provider"`
-	BaseURL        string `json:"base_url"`
-	Model          string `json:"model"`
-	APIKeyEnv      string `json:"api_key_env"`
-	TimeoutSeconds int    `json:"timeout_seconds"`
+	Enabled             bool                      `json:"enabled"`
+	Provider            string                    `json:"provider"`
+	BaseURL             string                    `json:"base_url"`
+	Model               string                    `json:"model"`
+	APIKeyEnv           string                    `json:"api_key_env"`
+	TimeoutSeconds      int                       `json:"timeout_seconds"`
+	RetryMaxAttempts    int                       `json:"retry_max_attempts,omitempty"`
+	RetryBackoffSeconds float64                   `json:"retry_backoff_seconds,omitempty"`
+	Fallback            *GenerationFallbackConfig `json:"fallback,omitempty"`
+}
+
+type GenerationFallbackConfig struct {
+	Enabled             bool    `json:"enabled"`
+	Provider            string  `json:"provider"`
+	BaseURL             string  `json:"base_url"`
+	Model               string  `json:"model"`
+	APIKeyEnv           string  `json:"api_key_env"`
+	TimeoutSeconds      int     `json:"timeout_seconds"`
+	RetryMaxAttempts    int     `json:"retry_max_attempts,omitempty"`
+	RetryBackoffSeconds float64 `json:"retry_backoff_seconds,omitempty"`
 }
 
 type SourceDocument struct {
@@ -155,6 +169,12 @@ type ChunkResult struct {
 	BlockUUID       string    `json:"block_uuid,omitempty"`
 }
 
+type chunkLocation struct {
+	PageNumber int
+	SourceURI  string
+	FileName   string
+}
+
 type CaseMetrics struct {
 	SourceRecall          float64            `json:"source_recall"`
 	EvidenceRecall        float64            `json:"evidence_recall"`
@@ -173,6 +193,8 @@ type RunResult struct {
 	RetrievalLatencyMS float64            `json:"retrieval_latency_ms"`
 	StageLatencyMS     map[string]float64 `json:"stage_latency_ms"`
 	GenerationLatency  *float64           `json:"generation_latency_ms,omitempty"`
+	GenerationProvider string             `json:"generation_provider,omitempty"`
+	GenerationModel    string             `json:"generation_model,omitempty"`
 	Routes             []string           `json:"routes"`
 	EmbeddingModel     string             `json:"embedding_model"`
 	Chunks             []ChunkResult      `json:"chunks"`
@@ -273,6 +295,12 @@ func main() {
 		err = askCommand(os.Args[2:])
 	case "check":
 		err = checkCommand(os.Args[2:])
+	case "mmdocir-ingest":
+		err = mmdocirOfficialIngestCommand(os.Args[2:])
+	case "mmdocir-run":
+		err = mmdocirOfficialRunCommand(os.Args[2:])
+	case "mmdocir-qa":
+		err = mmdocirQACommand(os.Args[2:])
 	default:
 		usage()
 		os.Exit(2)
@@ -284,7 +312,7 @@ func main() {
 }
 
 func usage() {
-	fmt.Fprintln(os.Stderr, "usage: local-matrixflow-rag <check|ingest|run|ask|pipeline> [flags]")
+	fmt.Fprintln(os.Stderr, "usage: local-matrixflow-rag <check|ingest|run|ask|pipeline|mmdocir-ingest|mmdocir-run|mmdocir-qa> [flags]")
 }
 
 type commonFlags struct {
@@ -300,14 +328,18 @@ func addCommonFlags(fs *flag.FlagSet, common *commonFlags) {
 func ingestCommand(args []string) error {
 	fs := flag.NewFlagSet("ingest", flag.ContinueOnError)
 	var common commonFlags
-	var source, documents string
+	var source, documents, resumeProgress string
 	var force bool
 	addCommonFlags(fs, &common)
 	fs.StringVar(&source, "source", "data/documents", "document directory")
 	fs.StringVar(&documents, "documents", "", "MatrixFlow parser documents.jsonl; when set, --source is ignored")
 	fs.BoolVar(&force, "force", false, "replace all rows in the benchmark vector table")
+	fs.StringVar(&resumeProgress, "resume-progress", "", "prior ingest-progress.json to resume without re-embedding committed rows")
 	if err := fs.Parse(args); err != nil {
 		return err
+	}
+	if force && strings.TrimSpace(resumeProgress) != "" {
+		return errors.New("--force and --resume-progress cannot be used together")
 	}
 	cfg, err := loadConfig(common.configPath)
 	if err != nil {
@@ -319,9 +351,9 @@ func ingestCommand(args []string) error {
 	}
 	fmt.Printf("run_dir=%s\n", runDir)
 	if strings.TrimSpace(documents) != "" {
-		_, err = ingestParsedDocuments(context.Background(), cfg, documents, runDir, force)
+		_, err = ingestParsedDocuments(context.Background(), cfg, documents, runDir, force, resumeProgress)
 	} else {
-		_, err = ingestCorpus(context.Background(), cfg, source, runDir, force)
+		_, err = ingestCorpus(context.Background(), cfg, source, runDir, force, resumeProgress)
 	}
 	return err
 }
@@ -408,11 +440,11 @@ func pipelineCommand(args []string) error {
 	}
 	fmt.Printf("run_dir=%s\n", runDir)
 	if strings.TrimSpace(documents) != "" {
-		if _, err := ingestParsedDocuments(context.Background(), cfg, documents, runDir, force); err != nil {
+		if _, err := ingestParsedDocuments(context.Background(), cfg, documents, runDir, force, ""); err != nil {
 			return err
 		}
 	} else {
-		if _, err := ingestCorpus(context.Background(), cfg, source, runDir, force); err != nil {
+		if _, err := ingestCorpus(context.Background(), cfg, source, runDir, force, ""); err != nil {
 			return err
 		}
 	}
@@ -508,14 +540,10 @@ func loadConfig(path string) (Config, error) {
 		cfg.SectionSize = 5
 	}
 	// Keep the production insert batch size. Embedding request size is
-	// configurable for the local benchmark: TaaS accepts larger OpenAI-style
-	// batches and using them avoids long runs being classified as high-frequency
-	// traffic by its security gateway. The input-byte limit remains enforced by
+	// configurable because OpenAI-compatible endpoints advertise different
+	// request-count limits. The input-byte limit remains enforced by
 	// splitEmbeddingInputsForLocalRAG.
 	if cfg.EmbeddingBatchSize <= 0 {
-		cfg.EmbeddingBatchSize = 64
-	}
-	if !strings.EqualFold(strings.TrimSpace(cfg.Embedding.Mode), "taas") {
 		cfg.EmbeddingBatchSize = 64
 	}
 	cfg.InsertBatchSize = 50
@@ -562,6 +590,12 @@ func loadConfig(path string) (Config, error) {
 	if cfg.Generation.TimeoutSeconds <= 0 {
 		cfg.Generation.TimeoutSeconds = 120
 	}
+	if cfg.Generation.RetryMaxAttempts <= 0 {
+		cfg.Generation.RetryMaxAttempts = 3
+	}
+	if cfg.Generation.RetryBackoffSeconds <= 0 {
+		cfg.Generation.RetryBackoffSeconds = 5
+	}
 	if strings.EqualFold(cfg.Generation.Provider, "taas") {
 		if cfg.Generation.BaseURL == "" {
 			cfg.Generation.BaseURL = taasAPIBaseURL
@@ -570,10 +604,21 @@ func loadConfig(path string) (Config, error) {
 			cfg.Generation.APIKeyEnv = taasAPIKeyEnvName
 		}
 	}
+	if cfg.Generation.Fallback != nil {
+		if cfg.Generation.Fallback.TimeoutSeconds <= 0 {
+			cfg.Generation.Fallback.TimeoutSeconds = 180
+		}
+		if cfg.Generation.Fallback.RetryMaxAttempts <= 0 {
+			cfg.Generation.Fallback.RetryMaxAttempts = 2
+		}
+		if cfg.Generation.Fallback.RetryBackoffSeconds <= 0 {
+			cfg.Generation.Fallback.RetryBackoffSeconds = 5
+		}
+	}
 	return cfg, nil
 }
 
-func ingestCorpus(ctx context.Context, cfg Config, sourceDir, runDir string, force bool) (*IngestState, error) {
+func ingestCorpus(ctx context.Context, cfg Config, sourceDir, runDir string, force bool, resumeProgress string) (*IngestState, error) {
 	documents, err := loadDocuments(sourceDir)
 	if err != nil {
 		return nil, err
@@ -593,7 +638,7 @@ func ingestCorpus(ctx context.Context, cfg Config, sourceDir, runDir string, for
 			},
 		})
 	}
-	return ingestProductDocuments(ctx, cfg, parsed, runDir, force, documents)
+	return ingestProductDocuments(ctx, cfg, parsed, runDir, force, documents, resumeProgress)
 }
 
 func loadDocuments(root string) ([]SourceDocument, error) {
@@ -862,6 +907,60 @@ func openIngestDB(ctx context.Context, cfg Config, dimension int, rebuild bool) 
 	return db, nil
 }
 
+// openExistingIngestDB opens a partially populated table without running the
+// normal ensure path first. The normal path creates an IVFFLAT index, which is
+// exactly what a resumed bulk ingest must defer until all remaining rows have
+// been written.
+func openExistingIngestDB(ctx context.Context, cfg Config) (*sql.DB, error) {
+	parsed, err := mysqlDriver.ParseDSN(cfg.MatrixOne.DSN)
+	if err != nil {
+		return nil, fmt.Errorf("parse MatrixOne DSN: %w", err)
+	}
+	parsed.DBName = cfg.MatrixOne.Database
+	db, err := sql.Open("mysql", parsed.FormatDSN())
+	if err != nil {
+		return nil, err
+	}
+	if err := db.PingContext(ctx); err != nil {
+		db.Close()
+		return nil, fmt.Errorf("connect resume database: %w", err)
+	}
+
+	var tableCount int
+	if err := db.QueryRowContext(ctx, `SELECT COUNT(*) FROM information_schema.tables
+		WHERE table_schema = DATABASE() AND table_name = ?`, cfg.MatrixOne.VectorTable).Scan(&tableCount); err != nil {
+		db.Close()
+		return nil, fmt.Errorf("check resume vector table: %w", err)
+	}
+	if tableCount != 1 {
+		db.Close()
+		return nil, fmt.Errorf("resume vector table %s.%s does not exist", cfg.MatrixOne.Database, cfg.MatrixOne.VectorTable)
+	}
+
+	var indexName string
+	err = db.QueryRowContext(ctx, `SELECT index_name FROM information_schema.statistics
+		WHERE table_schema = DATABASE() AND table_name = ?
+		  AND column_name = 'embedding' AND LOWER(index_type) = 'ivfflat'
+		LIMIT 1`, cfg.MatrixOne.VectorTable).Scan(&indexName)
+	switch {
+	case errors.Is(err, sql.ErrNoRows):
+		return db, nil
+	case err != nil:
+		db.Close()
+		return nil, fmt.Errorf("check resume vector index: %w", err)
+	}
+	if !identifierPattern.MatchString(indexName) {
+		db.Close()
+		return nil, fmt.Errorf("resume vector index has unsafe name %q", indexName)
+	}
+	statement := "ALTER TABLE `" + cfg.MatrixOne.VectorTable + "` DROP INDEX `" + indexName + "`"
+	if _, err := db.ExecContext(ctx, statement); err != nil {
+		db.Close()
+		return nil, fmt.Errorf("defer existing vector index during resume: %w", err)
+	}
+	return db, nil
+}
+
 func (e matrixOneExecutor) ExecuteSQL(ctx context.Context, _ string, query string) (*knowledge.SQLExecutionResult, error) {
 	rows, err := e.db.QueryContext(ctx, query)
 	if err != nil {
@@ -1017,19 +1116,23 @@ func runDataset(ctx context.Context, cfg Config, datasetPath, runDir string, rep
 					return err
 				}
 				fmt.Printf("attempt=%d/%d id=%s repeat=%d status=failed stage=retrieval\n", attemptNumber, len(cases)*repeats, item.ID, repeat)
-				if isAPIError(searchErr) {
-					flushPartial()
-					return fmt.Errorf("API_ERROR: retrieval for %s: %w", item.ID, searchErr)
-				}
+				// Keep API failures in the initial-attempt denominator and move on
+				// to the next question.  A Qianfan embedding cannot transparently
+				// replace the BGE-M3 vector used by this index, so retrieval stays a
+				// recorded fail rather than mixing vector spaces.
+				flushPartial()
 				continue
 			}
 			result.Routes = response.Routes
 			result.EmbeddingModel = response.EmbeddingModel
 			result.Chunks = normalizeChunkResults(response.Chunks)
+			if err := enrichChunkLocations(ctx, db, cfg.MatrixOne.VectorTable, result.Chunks); err != nil {
+				return fmt.Errorf("load result chunk locations: %w", err)
+			}
 			result.Metrics = scoreCase(item, result.Chunks)
 			if cfg.Generation.Enabled {
 				generationStarted := time.Now()
-				answer, generationErr := generateAnswer(ctx, cfg.Generation, item.Question, result.Chunks)
+				answer, generationProvider, generationModel, generationErr := generateAnswer(ctx, cfg.Generation, item.Question, result.Chunks)
 				latency := float64(time.Since(generationStarted).Microseconds()) / 1000
 				result.GenerationLatency = &latency
 				if generationErr != nil {
@@ -1039,13 +1142,12 @@ func runDataset(ctx context.Context, cfg Config, datasetPath, runDir string, rep
 						return err
 					}
 					fmt.Printf("attempt=%d/%d id=%s repeat=%d status=failed stage=generation\n", attemptNumber, len(cases)*repeats, item.ID, repeat)
-					if isAPIError(generationErr) {
-						flushPartial()
-						return fmt.Errorf("API_ERROR: generation for %s: %w", item.ID, generationErr)
-					}
+					flushPartial()
 					continue
 				} else {
 					result.Answer = answer
+					result.GenerationProvider = generationProvider
+					result.GenerationModel = generationModel
 					score := keywordRecall(answer, item.ExpectedAnswerKeywords)
 					result.Metrics.AnswerKeywordScore = score
 				}
@@ -1133,6 +1235,107 @@ func normalizeChunkResults(hits []knowledge.RAGChunkHit) []ChunkResult {
 	return out
 }
 
+// SearchRAGChunks intentionally projects a compact set of columns and, for
+// compatibility with older vector tables, reads page_number from metadata.
+// The official MMDocIR page table already has the canonical page_number
+// column, but its legacy rows predate the metadata mirror.  Resolve only the
+// returned chunk indexes, rather than scanning the entire table at startup.
+func enrichChunkLocations(ctx context.Context, db *sql.DB, table string, chunks []ChunkResult) error {
+	if db == nil {
+		return errors.New("database is nil")
+	}
+	byFile := make(map[string][]int)
+	for _, chunk := range chunks {
+		if chunk.PageNumber != 0 || chunk.ChunkIndex == nil || strings.TrimSpace(chunk.FileID) == "" {
+			continue
+		}
+		index := *chunk.ChunkIndex
+		seen := false
+		for _, existing := range byFile[chunk.FileID] {
+			if existing == index {
+				seen = true
+				break
+			}
+		}
+		if !seen {
+			byFile[chunk.FileID] = append(byFile[chunk.FileID], index)
+		}
+	}
+	for fileID, indexes := range byFile {
+		placeholders := make([]string, len(indexes))
+		args := make([]any, 0, len(indexes)+1)
+		args = append(args, fileID)
+		for i, index := range indexes {
+			placeholders[i] = "?"
+			args = append(args, index)
+		}
+		query := "SELECT chunk_index, page_number, meta FROM `" + table + "` WHERE level = 'chunk' AND file_id = ? AND chunk_index IN (" + strings.Join(placeholders, ",") + ")"
+		rows, err := db.QueryContext(ctx, query, args...)
+		if err != nil {
+			return err
+		}
+		locations := make(map[int]chunkLocation)
+		for rows.Next() {
+			var chunkIndex int
+			var pageNumber sql.NullInt64
+			var rawMeta []byte
+			if err := rows.Scan(&chunkIndex, &pageNumber, &rawMeta); err != nil {
+				rows.Close()
+				return err
+			}
+			location := chunkLocation{PageNumber: 0}
+			if pageNumber.Valid {
+				location.PageNumber = int(pageNumber.Int64)
+			}
+			var metadata map[string]any
+			if len(rawMeta) > 0 {
+				if err := json.Unmarshal(rawMeta, &metadata); err != nil {
+					rows.Close()
+					return err
+				}
+			}
+			if location.PageNumber == 0 && metadata != nil {
+				if value, ok := metadata["page_number"].(float64); ok {
+					location.PageNumber = int(value)
+				}
+			}
+			if metadata != nil {
+				if value, ok := metadata["file_name"].(string); ok {
+					location.FileName = value
+				}
+				if value, ok := metadata["source_uri"].(string); ok {
+					location.SourceURI = value
+				}
+			}
+			locations[chunkIndex] = location
+		}
+		if err := rows.Err(); err != nil {
+			rows.Close()
+			return err
+		}
+		rows.Close()
+		for index := range chunks {
+			if chunks[index].FileID != fileID || chunks[index].ChunkIndex == nil {
+				continue
+			}
+			location, ok := locations[*chunks[index].ChunkIndex]
+			if !ok {
+				continue
+			}
+			if chunks[index].PageNumber == 0 {
+				chunks[index].PageNumber = location.PageNumber
+			}
+			if chunks[index].FileName == "" {
+				chunks[index].FileName = location.FileName
+			}
+			if chunks[index].SourceURI == "" {
+				chunks[index].SourceURI = location.SourceURI
+			}
+		}
+	}
+	return nil
+}
+
 func scoreCase(item QuestionCase, chunks []ChunkResult) CaseMetrics {
 	metrics := CaseMetrics{RecallAtK: map[string]float64{}}
 	metrics.SourceRecall = sourceRecall(item.RelevantDocuments, chunks)
@@ -1200,7 +1403,33 @@ func reciprocalRank(expected []string, chunks []ChunkResult) float64 {
 	return 0
 }
 
-func generateAnswer(ctx context.Context, cfg GenerationConfig, question string, chunks []ChunkResult) (string, error) {
+func generateAnswer(ctx context.Context, cfg GenerationConfig, question string, chunks []ChunkResult) (string, string, string, error) {
+	answer, err := generateAnswerOnce(ctx, cfg, question, chunks)
+	if err == nil {
+		return answer, cfg.Provider, cfg.Model, nil
+	}
+	if cfg.Fallback != nil && cfg.Fallback.Enabled && isAPIError(err) {
+		fallback := GenerationConfig{
+			Enabled:             true,
+			Provider:            cfg.Fallback.Provider,
+			BaseURL:             cfg.Fallback.BaseURL,
+			Model:               cfg.Fallback.Model,
+			APIKeyEnv:           cfg.Fallback.APIKeyEnv,
+			TimeoutSeconds:      cfg.Fallback.TimeoutSeconds,
+			RetryMaxAttempts:    cfg.Fallback.RetryMaxAttempts,
+			RetryBackoffSeconds: cfg.Fallback.RetryBackoffSeconds,
+		}
+		fmt.Printf("generation_failover from=%s model=%s to=%s model=%s reason=%s\n", cfg.Provider, cfg.Model, fallback.Provider, fallback.Model, truncateErrorBody(err.Error()))
+		fallbackAnswer, fallbackErr := generateAnswerOnce(ctx, fallback, question, chunks)
+		if fallbackErr == nil {
+			return fallbackAnswer, fallback.Provider, fallback.Model, nil
+		}
+		return "", "", "", fmt.Errorf("API_ERROR: primary generation (%s): %v; fallback generation (%s): %v", cfg.Provider, err, fallback.Provider, fallbackErr)
+	}
+	return "", "", "", err
+}
+
+func generateAnswerOnce(ctx context.Context, cfg GenerationConfig, question string, chunks []ChunkResult) (string, error) {
 	if cfg.BaseURL == "" || cfg.Model == "" {
 		return "", errors.New("generation enabled but base_url or model is empty")
 	}
@@ -1216,6 +1445,7 @@ func generateAnswer(ctx context.Context, cfg GenerationConfig, question string, 
 		},
 		"temperature": 0,
 		"stream":      false,
+		"max_tokens":  1024,
 	}
 	var response struct {
 		Choices []struct {
@@ -1228,7 +1458,12 @@ func generateAnswer(ctx context.Context, cfg GenerationConfig, question string, 
 		Timeout:   time.Duration(cfg.TimeoutSeconds) * time.Second,
 		Transport: newHTTPTransport(strings.EqualFold(strings.TrimSpace(cfg.Provider), "taas")),
 	}
-	if err := postOpenAIJSON(ctx, client, cfg.BaseURL, "/chat/completions", cfg.APIKeyEnv, payload, &response); err != nil {
+	policy := requestRetryPolicy{
+		MaxAttempts: cfg.RetryMaxAttempts,
+		BaseDelay:   time.Duration(cfg.RetryBackoffSeconds * float64(time.Second)),
+		MaxDelay:    60 * time.Second,
+	}
+	if err := postOpenAIJSONWithRetry(ctx, client, cfg.BaseURL, "/chat/completions", cfg.APIKeyEnv, payload, &response, policy); err != nil {
 		return "", err
 	}
 	if len(response.Choices) == 0 {

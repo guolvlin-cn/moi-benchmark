@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"context"
+	"database/sql"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -22,15 +23,25 @@ type parsedDocument struct {
 	Metadata map[string]any `json:"metadata"`
 }
 
-func ingestParsedDocuments(ctx context.Context, cfg Config, documentsPath, runDir string, force bool) (*IngestState, error) {
+type ingestProgressCheckpoint struct {
+	Stage            string `json:"stage"`
+	ParsedDocuments  int    `json:"parsed_documents"`
+	ExpandedEntries  int    `json:"expanded_entries"`
+	EmbeddedEntries  int    `json:"embedded_entries"`
+	CommittedEntries int    `json:"committed_entries"`
+	TotalEntries     int    `json:"total_entries"`
+	BatchEnd         int    `json:"batch_end"`
+}
+
+func ingestParsedDocuments(ctx context.Context, cfg Config, documentsPath, runDir string, force bool, resumeProgress string) (*IngestState, error) {
 	documents, err := readParsedDocuments(documentsPath)
 	if err != nil {
 		return nil, err
 	}
-	return ingestProductDocuments(ctx, cfg, documents, runDir, force, nil)
+	return ingestProductDocuments(ctx, cfg, documents, runDir, force, nil, resumeProgress)
 }
 
-func ingestProductDocuments(ctx context.Context, cfg Config, documents []parsedDocument, runDir string, force bool, seedSources []SourceDocument) (*IngestState, error) {
+func ingestProductDocuments(ctx context.Context, cfg Config, documents []parsedDocument, runDir string, force bool, seedSources []SourceDocument, resumeProgress string) (*IngestState, error) {
 	if len(documents) == 0 {
 		return nil, errors.New("parsed documents JSONL is empty")
 	}
@@ -77,32 +88,60 @@ func ingestProductDocuments(ctx context.Context, cfg Config, documents []parsedD
 			sourceByID[fileID] = SourceDocument{FileID: fileID, Path: fileName}
 		}
 	}
-	_ = writeJSON(filepath.Join(runDir, "ingest-progress.json"), map[string]any{
-		"stage":            "prepared",
-		"parsed_documents": len(documents),
-		"expanded_entries": len(expanded),
-		"embedded_entries": 0,
-		"total_entries":    len(productionDocs),
-	})
-
 	indexes, inputs := workitems.CollectEmbeddingInputsForLocalRAG(productionDocs)
 	if len(inputs) == 0 {
 		return nil, errors.New("product index contains no non-empty text entries")
 	}
-	batches := splitEmbeddingInputsForLocalRAG(inputs, cfg.EmbeddingBatchSize)
+	resumeFrom, err := loadIngestResumeProgress(resumeProgress, len(documents), len(expanded), len(inputs))
+	if err != nil {
+		return nil, err
+	}
+	progressStage := "prepared"
+	if resumeFrom > 0 {
+		progressStage = "resumed"
+	}
+	_ = writeJSON(filepath.Join(runDir, "ingest-progress.json"), map[string]any{
+		"stage":             progressStage,
+		"parsed_documents":  len(documents),
+		"expanded_entries":  len(expanded),
+		"embedded_entries":  resumeFrom,
+		"committed_entries": resumeFrom,
+		"total_entries":     len(inputs),
+		"resume_from":       resumeFrom,
+		"resume_progress":   strings.TrimSpace(resumeProgress),
+	})
+	remainingIndexes := indexes[resumeFrom:]
+	remainingInputs := inputs[resumeFrom:]
+	batches := splitEmbeddingInputsForLocalRAG(remainingInputs, cfg.EmbeddingBatchSize)
 
 	// Open the database before paying for the embedding pass.  The vector
 	// index is removed by openIngestDB and rebuilt once at the end; keeping the
 	// connection open also lets us commit each embedding batch immediately,
 	// so a late MatrixOne restart cannot discard an otherwise completed run.
 	dimension := cfg.Embedding.Dimension
-	db, err := openIngestDB(ctx, cfg, dimension, force)
+	var db *sql.DB
+	if resumeFrom > 0 {
+		db, err = openExistingIngestDB(ctx, cfg)
+	} else {
+		db, err = openIngestDB(ctx, cfg, dimension, force)
+	}
 	if err != nil {
 		return nil, err
 	}
 	defer db.Close()
+	if resumeFrom > 0 {
+		var existingRows int
+		statement := "SELECT COUNT(*) FROM `" + cfg.MatrixOne.VectorTable + "`"
+		if err := db.QueryRowContext(ctx, statement).Scan(&existingRows); err != nil {
+			return nil, fmt.Errorf("count resumed vector rows: %w", err)
+		}
+		if existingRows != resumeFrom {
+			return nil, fmt.Errorf("resume row count mismatch: database has %d rows, progress has %d", existingRows, resumeFrom)
+		}
+		fmt.Printf("ingest_resume=%d/%d progress=%s\n", resumeFrom, len(inputs), resumeProgress)
+	}
 	writePolicy := "OVERWRITE"
-	if force {
+	if force || resumeFrom > 0 {
 		// --force has just recreated an empty table, so avoid the production
 		// delete-then-insert transaction for every batch during a full rebuild.
 		writePolicy = "FAIL"
@@ -112,20 +151,29 @@ func ingestProductDocuments(ctx context.Context, cfg Config, documents []parsedD
 	if err != nil {
 		return nil, err
 	}
-	embedded := 0
-	committed := 0
+	embedded := resumeFrom
+	committed := resumeFrom
 	indexed := make([]IndexedChunk, 0, len(inputs))
+	if resumeFrom > 0 {
+		previouslyIndexed, err := indexedChunksForCommittedDocuments(productionDocs, indexes[:resumeFrom])
+		if err != nil {
+			return nil, fmt.Errorf("prepare resumed MatrixFlow metadata: %w", err)
+		}
+		indexed = append(indexed, previouslyIndexed...)
+	}
 	for batchIndex, batch := range batches {
+		globalStart := resumeFrom + batch.Start
+		globalEnd := resumeFrom + batch.End
 		vectors, err := embedder.CreateEmbedding(ctx, cfg.Workspace, cfg.Embedding.Model, batch.Inputs)
 		if err != nil {
-			return nil, fmt.Errorf("embed product index entries %d:%d: %w", batch.Start, batch.End, err)
+			return nil, fmt.Errorf("embed product index entries %d:%d: %w", globalStart, globalEnd, err)
 		}
 		if len(vectors) != len(batch.Inputs) {
 			return nil, fmt.Errorf("embedding count mismatch in batch %d: got %d want %d", batchIndex, len(vectors), len(batch.Inputs))
 		}
 		batchDocs := make([]workitems.Document, 0, len(vectors))
 		for i := range vectors {
-			documentIndex := indexes[batch.Start+i]
+			documentIndex := remainingIndexes[batch.Start+i]
 			document := productionDocs[documentIndex]
 			document.Embedding = vectors[i]
 			document.Metadata = workitems.MarkEmbeddedProvenanceForLocalRAG(document.Metadata)
@@ -157,8 +205,9 @@ func ingestProductDocuments(ctx context.Context, cfg Config, documents []parsedD
 			"embedded_entries":  embedded,
 			"total_entries":     len(inputs),
 			"committed_entries": committed,
-			"batch_start":       batch.Start,
-			"batch_end":         batch.End,
+			"resume_from":       resumeFrom,
+			"batch_start":       globalStart,
+			"batch_end":         globalEnd,
 			"batch_bytes":       batch.Bytes,
 		})
 		fmt.Printf("ingest_batch=%d/%d embedded=%d/%d committed=%d\n", batchIndex+1, len(batches), embedded, len(inputs), committed)
@@ -190,16 +239,15 @@ func ingestProductDocuments(ctx context.Context, cfg Config, documents []parsedD
 		"embedded_entries":  embedded,
 		"committed_entries": committed,
 		"total_entries":     len(inputs),
+		"resume_from":       resumeFrom,
 	})
 	fmt.Printf("ingested parsed_documents=%d index_entries=%d dimension=%d\n", len(documents), len(indexed), dimension)
 	return state, nil
 }
 
 // splitEmbeddingInputsForLocalRAG keeps MatrixFlow's 256 KiB request-byte
-// guard while allowing the local TaaS benchmark to use a larger input count
-// per request. The production worker currently uses 64 inputs, but the
-// OpenAI-compatible TaaS endpoint accepts larger batches and is less likely
-// to trigger its long-run security-gateway rate heuristic when we use them.
+// guard while allowing an OpenAI-compatible endpoint to choose its supported
+// input count. The local BGE-M3 service uses 64; TaaS can use a larger count.
 func splitEmbeddingInputsForLocalRAG(inputs []string, maxCount int) []workitems.LocalRAGEmbeddingBatch {
 	if len(inputs) == 0 {
 		return nil
@@ -227,6 +275,66 @@ func splitEmbeddingInputsForLocalRAG(inputs []string, maxCount int) []workitems.
 		Start: start, End: len(inputs), Bytes: currentBytes, Inputs: inputs[start:],
 	})
 	return batches
+}
+
+func loadIngestResumeProgress(path string, parsedDocuments, expandedEntries, totalEntries int) (int, error) {
+	path = strings.TrimSpace(path)
+	if path == "" {
+		return 0, nil
+	}
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		return 0, fmt.Errorf("read resume progress: %w", err)
+	}
+	var checkpoint ingestProgressCheckpoint
+	if err := json.Unmarshal(raw, &checkpoint); err != nil {
+		return 0, fmt.Errorf("decode resume progress: %w", err)
+	}
+	if checkpoint.Stage == "committed" {
+		return 0, errors.New("resume progress is already committed")
+	}
+	if checkpoint.ParsedDocuments != parsedDocuments {
+		return 0, fmt.Errorf("resume parsed document count changed: got %d want %d", parsedDocuments, checkpoint.ParsedDocuments)
+	}
+	if checkpoint.ExpandedEntries != expandedEntries {
+		return 0, fmt.Errorf("resume expanded entry count changed: got %d want %d", expandedEntries, checkpoint.ExpandedEntries)
+	}
+	if checkpoint.TotalEntries != totalEntries {
+		return 0, fmt.Errorf("resume total entry count changed: got %d want %d", totalEntries, checkpoint.TotalEntries)
+	}
+	if checkpoint.BatchEnd <= 0 || checkpoint.BatchEnd >= totalEntries {
+		return 0, fmt.Errorf("resume batch_end must be between 1 and %d, got %d", totalEntries-1, checkpoint.BatchEnd)
+	}
+	if checkpoint.EmbeddedEntries != checkpoint.BatchEnd || checkpoint.CommittedEntries != checkpoint.BatchEnd {
+		return 0, fmt.Errorf(
+			"resume progress is not at a committed batch boundary: embedded=%d committed=%d batch_end=%d",
+			checkpoint.EmbeddedEntries, checkpoint.CommittedEntries, checkpoint.BatchEnd,
+		)
+	}
+	return checkpoint.BatchEnd, nil
+}
+
+func indexedChunksForCommittedDocuments(productionDocs []workitems.Document, documentIndexes []int) ([]IndexedChunk, error) {
+	const metadataBatchSize = 1024
+	indexed := make([]IndexedChunk, 0, len(documentIndexes))
+	for start := 0; start < len(documentIndexes); start += metadataBatchSize {
+		end := start + metadataBatchSize
+		if end > len(documentIndexes) {
+			end = len(documentIndexes)
+		}
+		batchDocs := make([]workitems.Document, 0, end-start)
+		for _, documentIndex := range documentIndexes[start:end] {
+			document := productionDocs[documentIndex]
+			document.Metadata = workitems.MarkEmbeddedProvenanceForLocalRAG(document.Metadata)
+			batchDocs = append(batchDocs, document)
+		}
+		vectorDocs, err := workitems.PrepareVectorDocumentsForLocalRAG(batchDocs, "", "")
+		if err != nil {
+			return nil, err
+		}
+		indexed = append(indexed, indexedChunksFromVectorDocsAt(vectorDocs, len(indexed))...)
+	}
+	return indexed, nil
 }
 
 func indexedChunksFromVectorDocs(documents []workitems.VectorDoc) []IndexedChunk {

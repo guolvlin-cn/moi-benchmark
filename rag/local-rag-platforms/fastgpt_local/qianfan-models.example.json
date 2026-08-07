@@ -1,0 +1,50 @@
+[
+  {
+    "model": "deepseek-v4-flash",
+    "metadata": {
+      "isCustom": true,
+      "isActive": true,
+      "provider": "OpenAI",
+      "model": "deepseek-v4-flash",
+      "name": "Baidu Qianfan deepseek-v4-flash",
+      "maxContext": 131072,
+      "maxResponse": 8192,
+      "quoteMaxToken": 100000,
+      "maxTemperature": 1,
+      "charsPointsPrice": 0,
+      "censor": false,
+      "vision": false,
+      "toolChoice": true,
+      "functionCall": false,
+      "defaultConfig": {},
+      "fieldMap": {}
+    }
+  },
+  {
+    "model": "qwen3-embedding-8b",
+    "metadata": {
+      "isCustom": true,
+      "isActive": true,
+      "provider": "OpenAI",
+      "model": "qwen3-embedding-8b",
+      "name": "Baidu Qianfan qwen3-embedding-8b",
+      "charsPointsPrice": 0,
+      "defaultToken": 512,
+      "maxToken": 8192
+    }
+  },
+  {
+    "model": "qwen3-reranker-8b",
+    "metadata": {
+      "isCustom": true,
+      "isActive": true,
+      "provider": "OpenAI",
+      "model": "qwen3-reranker-8b",
+      "name": "Baidu Qianfan qwen3-reranker-8b",
+      "charsPointsPrice": 0,
+      "maxToken": 32000,
+      "requestUrl": "https://qianfan.baidubce.com/v2/rerank",
+      "defaultConfig": {}
+    }
+  }
+]
