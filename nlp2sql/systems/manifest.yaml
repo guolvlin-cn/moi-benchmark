@@ -36,9 +36,12 @@ planned_systems:
   - id: chat2db
     role: product_candidate
     revision: null
-  - id: xiyan-gbi
-    role: product_candidate
+  - id: alibaba-cloud-data-agent
+    role: optional_product_candidate
+    source: https://help.aliyun.com/zh/dms/data-agent-for-analytics/
     revision: null
+    deployment: cloud_product_to_be_verified
+    note: 具体产品版本、数据库接入、SQL导出和数据合规边界通过Smoke Test后再纳入正式评测
   - id: vanna
     role: optional_product_candidate
     revision: null

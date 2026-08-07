@@ -7,6 +7,6 @@
 | [v0.1](drafts/v0.1.md) | 私有业务数据通用方案 | 草案 | 规划统一产品评测框架、隐藏测试集、安全与成本口径 |
 | [v0.2](drafts/v0.2.md) | Spider mix50 | 已执行、已复盘 | 公开数据集，SQLite执行评测，三产品横评 |
 | [v0.3](drafts/v0.3.md) | Enron Eval 50 | 已执行、已冻结 | 私有固定快照，MySQL 8执行评测，含MOI语义配置实验 |
-| [v0.4](drafts/v0.4.md) | Enron后续多维评测 | 计划中 | 补齐回答质量、可靠性、P50/P95时延、Token、成本和可运维性 |
+| [v0.4](drafts/v0.4.md) | Enron四项指标增量评测 | 计划中 | Execution Accuracy、SQL Success Rate、P50/P95时延、Repeat Correct Rate；Data Agent为可选扩展 |
 
 后续若改变数据快照、问题集、Golden SQL、产品配置或评分规则，应新增版本，不覆盖已有计划和结果。
