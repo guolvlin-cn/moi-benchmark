@@ -4,84 +4,111 @@
 
 评分范围为 SROIE 100份、VRDU 97份、Kleister-NDA 100份，每个产品共297份文档。
 
-## 1. 实验配置
+## 1. 实验配置与复现信息
 
-本节记录实际 run 产物和运行脚本能够验证的配置。`run config` 未保存的值不会根据当前环境反推，以避免把评测后的配置误写成当时配置。六组实验均对同一数据集使用一套固定业务 Schema，但双方 Schema 描述并非逐字相同，因此本实验属于产品原生配置对比，不是同提示词、同模型对照。
+本节区分三类证据：仓库内 run 产物直接记录的值、与 case/Schema 可对应的历史运行时证据，以及仅由部署记录旁证的值。未持久化的配置不会按当前服务状态反推。六组实验均对同一数据集使用一套固定业务 Schema，但双方的 Schema 描述并非逐字相同，因此这是产品原生配置对比，不是同提示词、同模型对照。
 
-### 1.1 六组实验与输入
+### 1.1 六组实验、输入与执行区间
 
-| 数据集 | 产品 | 提交输入 | 原始数 | 评分数 | 运行时间 | 配置证据 |
+| 数据集 | 产品 | 提交输入 | 原始数 | 评分数 | 最终结果执行区间 | 配置证据 |
 |---|---|---|---|---|---|---|
-| SROIE | MOI | 由 JPG 等尺寸绘制生成的单页 PDF | 100 | 100 | 2026-07-27T17:24:15+08:00 | [config](../../runs/matrixflow-sroie2019-workflow-2b084712/config.json) |
-| SROIE | LandingAI | 原始 JPG | 100 | 100 | 2026-07-24T06:32:34.228404+00:00 | [config](../../runs/landingai-sroie-batch-20260724T063234Z/config.json) |
-| VRDU Registration | MOI | PDF | 100 | 97 | 2026-07-28T12:03:39+08:00 | [config](../../runs/matrixflow-vrdu-registration-schema-fixed/config.json) |
-| VRDU Registration | LandingAI | PDF | 100 | 97 | 2026-07-24T05:58:42.411371+00:00 | [config](../../runs/landingai-vrdu-batch-20260724T055842Z/config.json) |
-| Kleister-NDA | MOI | PDF | 100 | 100 | 2026-07-28T11:36:54+08:00 | [config](../../runs/matrixflow-kleister-nda-schema-fixed/config.json) |
-| Kleister-NDA | LandingAI | PDF | 100 | 100 | 2026-07-24T07:23:22.398227+00:00 | [config](../../runs/landingai-kleister-batch-20260724T072322Z/config.json) |
+| SROIE | MOI | 由 JPG 等尺寸绘制生成的单页 PDF | 100 | 100 | 2026-07-27 15:59:49–17:24:26 +08:00 | [config](../../runs/matrixflow-sroie2019-workflow-2b084712/config.json) |
+| SROIE | LandingAI | 原始 JPG | 100 | 100 | 2026-07-24 06:32:34–06:46:11 UTC | [config](../../runs/landingai-sroie-batch-20260724T063234Z/config.json) |
+| VRDU Registration | MOI | PDF | 100 | 97 | 2026-07-28 11:35:08–12:04:21 +08:00 | [config](../../runs/matrixflow-vrdu-registration-schema-fixed/config.json) |
+| VRDU Registration | LandingAI | PDF | 100 | 97 | 2026-07-24 05:58:42–06:15:00 UTC | [config](../../runs/landingai-vrdu-batch-20260724T055842Z/config.json) |
+| Kleister-NDA | MOI | PDF | 100 | 100 | 2026-07-28 11:36:54–12:21:18 +08:00 | [config](../../runs/matrixflow-kleister-nda-schema-fixed/config.json) |
+| Kleister-NDA | LandingAI | PDF | 100 | 100 | 2026-07-24 07:23:22–07:44:10 UTC | [config](../../runs/landingai-kleister-batch-20260724T072322Z/config.json) |
 
-VRDU 的3个内容安全失败 case 从双方共同评分集合中排除；它们仍保留在原始 run 中用于审计。
+执行区间按各 case 最终状态文件中的时间汇总，不再把 `config.created_at` 当作整批运行时间。MOI SROIE 和 VRDU 的 `events.jsonl` 还保留了此前尝试或重复审计记录；评分脚本只读取每个 case 最终状态和最终输出。VRDU 的3个内容安全失败 case 从双方共同评分集合中排除，但仍保留在原始 run 中。
 
-### 1.2 LandingAI 配置
+### 1.2 数据集快照与预处理
 
-| 配置项 | 实际值 |
+| 数据集 | 固定子集 | 选择规则 | 输入完整性 |
+|---|---|---|---|
+| SROIE2019 | train 中100个完整 case | 对排序后的完整 ID 使用 `random.Random(20260723).sample` | [manifest](../../datasets/SROIE2019/selection_manifest.json) 保存原始 JPG SHA256 |
+| VRDU Registration | 官方 valid 100 | `FARA-lv2-mixed_template-train_10-test_300-valid_100-SD_0.json` 的 valid 列表 | [manifest](../../datasets/VRDU/selection_manifest.json) 保存 PDF SHA256 |
+| Kleister-NDA | 83个 dev-0 + 17个 train | train 补充部分使用 `random.Random(20260723).sample` | [manifest](../../datasets/Kleister-NDA/selection_manifest.json) 保存 PDF SHA256 |
+
+SROIE 为兼容 MOI 输入，由 [convert_sroie_images_to_pdf.py](../../scripts/convert_sroie_images_to_pdf.py) 把每张 JPG 绘制成单页 PDF：页面宽高直接使用原图像素值作为 PDF point，图片铺满页面、不裁剪、保持宽高比并启用页面压缩；LandingAI 仍提交原始 JPG。转换工具的历史 Python/Pillow/ReportLab 版本未写入 run，因此当前复现以转换脚本和已生成 PDF 为准。三个上游数据集的下载版本或上游 Git commit 也未持久化，仓库内 manifest 与逐文件 SHA256 是本次实验的数据快照事实来源。
+
+### 1.3 LandingAI 配置
+
+| 配置项 | 实际值或证据边界 |
 |---|---|
+| 接入方式 | 直接调用 ADE REST API，未使用 LandingAI SDK |
 | API Base URL | `https://api.va.landing.ai/v1/ade` |
-| Parse 模型 | `dpt-2-20260410` |
-| Extract 模型 | `extract-20260314` |
+| Parse 模型 | `dpt-2-20260410`；300/300 case 响应 metadata 一致 |
+| Extract 模型 | `extract-20260314`；300/300 case 响应 metadata 一致 |
+| 模型回退 | 300/300 case 的 `fallback_model_version=null` |
 | 并发数 | 5 |
 | 轮询间隔 | 3.0 秒 |
 | 单次 HTTP 超时 | 120 秒 |
-| 提交重试 | 脚本默认最多5次；指数退避上限30秒并加入随机抖动 |
+| 提交重试 | 最多5次，指数退避上限30秒并加入随机抖动；本次所有 Parse/Extract 均首次提交成功 |
 | 认证 | `Authorization: Bearer <API_KEY>`；密钥不写入 run 产物 |
+| 平台版本边界 | ADE 未在响应中返回独立产品 build；以 `/v1/ade`、运行日期及两个 metadata model version 复现 |
 
 LandingAI 调用链路：
 
 | 阶段 | 方法与 API | 主要参数/产物 |
 |---|---|---|
-| 提交解析 | `POST /parse/jobs` | multipart `document`；`model=dpt-2-20260410` |
+| 提交解析 | `POST /parse/jobs` | multipart `document`；仅显式传 `model=dpt-2-20260410`，其余 Parse 选项使用服务默认值 |
 | 查询解析 | `GET /parse/jobs/{job_id}` | 轮询至完成，保存 Markdown、metadata 和 credits |
 | 提交提取 | `POST /extract/jobs` | multipart `markdown`；`schema`、`model=extract-20260314`、`strict=true` |
-| 查询提取 | `GET /extract/jobs/{job_id}` | 轮询至完成，保存 extraction、metadata 和 credits |
+| 查询提取 | `GET /extract/jobs/{job_id}` | 轮询至完成，保存 extraction、metadata、warnings 和 credits |
 | 下载异步结果 | `GET {output_url}` | 仅在完成响应通过 `output_url` 返回结果时调用 |
 
-三个 LandingAI runner 使用相同模型和运行参数，仅输入文件类型及 Schema 不同。精确 Schema 分别保存在 [SROIE](../../runs/landingai-sroie-batch-20260724T063234Z/schema.json)、[VRDU](../../runs/landingai-vrdu-batch-20260724T055842Z/schema.json) 和 [Kleister-NDA](../../runs/landingai-kleister-batch-20260724T072322Z/schema.json)；字段描述包含 `x-alternativeNames`。
+三个 LandingAI runner 使用相同模型和运行参数，仅输入文件类型及 Schema 不同。没有额外自由文本 prompt；字段 `description` 与 `x-alternativeNames` 构成面向产品的抽取指令。精确 Schema 分别保存在 [SROIE](../../runs/landingai-sroie-batch-20260724T063234Z/schema.json)、[VRDU](../../runs/landingai-vrdu-batch-20260724T055842Z/schema.json) 和 [Kleister-NDA](../../runs/landingai-kleister-batch-20260724T072322Z/schema.json)。
 
-### 1.3 MOI 配置
+### 1.4 MOI 配置
 
 | 配置项 | 实际值或证据边界 |
 |---|---|
-| Backend API | `http://127.0.0.1:18000`（本地部署） |
-| Catalog API | `http://127.0.0.1:18081`（本地部署） |
+| 部署形态 | `LOCAL_DEPLOY_PROFILE=dev` 本地源码部署；runner 通过 Frontend/反向代理 `127.0.0.1:18000` 访问 MOI API，直连 Backend 为 `18050`，Catalog 为 `18081`，OpenXML 为 `18817`，MatrixOne 为 `16001` |
+| MOI 源码版本 | 部署记录显示 `dev@cbada900e9be4f7e47c60efacb42de1e14eca785`；该 commit 未写入 run config，属于部署旁证而非 run 自证 |
 | Workspace ID | `abe9f340-ab88-0d9c-5773-837e70c25c48` |
 | Workflow | `解析信息提取` / `2b084712-3ed2-4034-965b-8e2657693359` |
-| 执行方式 | 逐文件串行；单个 case 失败后默认继续 |
-| 轮询/请求超时 | 脚本默认5秒轮询；HTTP 60秒；上传/下载300秒；单任务3600秒 |
-| Schema 传递 | SROIE 使用工作流存储默认值；VRDU、Kleister-NDA 通过 `values.extract_schema` 显式覆盖 |
-| 提取模型 | 工作流默认值未写入 run config；SROIE 一条运行错误可验证 `qwen3.7-max`，不能据此确认所有成功 case |
-| OCR/VLM 模型 | 工作流存在 `vlm_ocr_model` 默认字段，但其具体值未持久化，报告不作推断 |
+| Workflow version | `9d756d96-5c9f-4b98-965a-66f068d9cadf`；三个 MOI run 的最终 case 产物一致 |
+| 工作流节点 | 文件读取 → `moi:parse` → `moi:llm.extract.structured.advanced` → Catalog 结果保存 |
+| 文档解析 | `parse_tier=standard`，`page_selector=""`（全部页面），`vlm_ocr_model=qwen3-vl-plus` |
+| 结构化提取模型 | `qwen3.7-max` |
+| 执行方式 | runner 逐文件串行；单个 case 失败后继续；工作流执行模式 `one_shot` |
+| 轮询/请求超时 | 5秒轮询；HTTP 60秒；上传/下载300秒；单任务3600秒 |
+| Schema 传递 | SROIE 使用工作流默认值；VRDU、Kleister-NDA 通过 `values.extract_schema` 显式覆盖 |
+| 认证 | Backend Bearer token + `X-Workspace-ID`；Catalog `X-API-Key`；认证值不入库 |
 
-MOI 调用链路：
+模型与解析参数来自归档的历史 MOWL 运行对象：对象中的源文件名、Schema 和本次 case 能对应，因此强于根据当前工作流配置反推；但这些展开后的参数没有写入仓库内 `config.json`，仍应视为历史运行时证据。源码 commit 来自部署记录，证据等级更低。后续 runner 应在运行开始时把 commit、镜像 digest、workflow definition/default values 和展开后的每个 case 参数直接写入 run 目录。
 
-| 阶段 | 方法与 API | 主要参数/产物 |
-|---|---|---|
-| 登录 | `POST /newmoi/login` | 获得 backend access token 和 catalog API key |
-| 读取工作流 | `GET /newmoi/workflow/v2/workflow-apps/2b084712-3ed2-4034-965b-8e2657693359` | 校验工作流默认值和运行时字段 |
-| 上传文件 | `POST /api/v1/workspaces/abe9f340-ab88-0d9c-5773-837e70c25c48/files` | multipart `file`，返回 `file_id` |
-| 创建执行 | `POST /newmoi/workflow/v2/workflow-apps/2b084712-3ed2-4034-965b-8e2657693359/executions` | `values`、`trigger_now=true` |
-| 轮询结果 | `GET /newmoi/workflow/v2/workflow-apps/2b084712-3ed2-4034-965b-8e2657693359/executions/{execution_id}/result` | 等待 completed/failed/cancelled |
-| 下载产物 | `GET /api/v1/workspaces/abe9f340-ab88-0d9c-5773-837e70c25c48/files/{file_id}/download` | 保存包含 parse、Markdown 和 extract JSON 的 ZIP |
-
-MOI 工作流的实际节点链路为文件读取、文档解析、`LLM Advanced Structured Extraction`、结果保存。Backend 使用 Bearer token 与 `X-Workspace-ID`，Catalog 使用 `X-API-Key`；认证值均未写入报告。
-
-### 1.4 Schema 与字段约束
+### 1.5 Schema、提示词与推理参数
 
 | 数据集 | 字段与类型 | 主要约束 |
 |---|---|---|
-| SROIE | `company/date/address/total: string` | 收据商户、交易日期、多行商户地址、最终应付总额 |
-| VRDU | `file_date/foreign_principle_name/registrant_name/registration_num/signer_name/signer_title: string` | 保留 `foreign_principle_name` 的数据集字段拼写；registration number 按文本处理 |
-| Kleister-NDA | `effective_date/jurisdiction/term: string`; `party: array<string>` | 日期归一到 YYYY-MM-DD；term 归一为 `number_unit`；party 可多值 |
+| SROIE | `company/date/address/total: string` | MOI 默认 Schema 仅定义字段和类型；LandingAI 另有字段描述与别名 |
+| VRDU | `file_date/foreign_principle_name/registrant_name/registration_num/signer_name/signer_title: string` | 保留 `foreign_principle_name` 的数据集拼写；registration number 按文本处理 |
+| Kleister-NDA | `effective_date/jurisdiction/term: string`; `party: array<string>` | 日期归一到 YYYY-MM-DD；term 为 `number_unit`；party 可多值 |
 
-MOI 的 VRDU/Kleister Schema 设置 `additionalProperties=false` 且所有字段必填，缺失标量返回空字符串、缺失 party 返回空数组。LandingAI 使用 `strict=true`，并提供字段别名。双方业务字段集合一致，但描述与约束表达不同；这部分配置差异可能影响结果，应与准确率一起解读。
+MOI SROIE 的历史默认 Schema 为：
+
+```json
+{"type":"object","properties":{"company":{"type":"string"},"date":{"type":"string"},"address":{"type":"string"},"total":{"type":"string"}}}
+```
+
+MOI 的 VRDU/Kleister Schema 设置 `additionalProperties=false` 且所有字段必填，缺失标量返回空字符串、缺失 party 返回空数组；完整 Schema 位于各自 [VRDU config](../../runs/matrixflow-vrdu-registration-schema-fixed/config.json) 和 [Kleister config](../../runs/matrixflow-kleister-nda-schema-fixed/config.json)。LandingAI 使用 `strict=true`，并提供字段描述和别名。双方字段集合一致，但指令丰富度不同。
+
+MOI 工作流没有绑定用户自定义 `instruction`，节点输入是解析文档、JSON Schema 和模型。实际 LLM 消息还包含 MOI 内置的 scalar/array/schema-grouping 模板；它们由上述 MOI commit 中的 `extract_prompt_templates.go` 和 `extract_group_extractor.go` 固定，而不是独立的实验 prompt 文件。当时结构化提取配置未被 worker YAML 覆盖，因此使用源码默认值：pipeline enabled、每批最多10个 block/12000 tokens、字段分组3–8、置信度阈值0.6、抽取并发4、thinking disabled、无显式 max tokens。`qwen3.7-max` 运行时覆盖 LLM/VL extraction model 并禁用二次 parser model；temperature、top_p 和 seed 未显式传入，使用供应商默认行为。
+
+### 1.6 运行代码与评分配置
+
+实验 runner、固定数据快照和首次评分结果归档于 benchmark commit `3e7ef53499897193213225719d487aa0bdcbb0ca`。历史 shell 命令没有原样持久化；复现入口为 `run_landingai_{sroie,vrdu,kleister}_batch.py`、`run_matrixflow_{sroie,vrdu,kleister}_extraction.py`，参数以各 run 的 `config.json` 和本节记录为准。所有 Python 命令使用 `/Users/wangyaqi/Documents/cursor_project/.venv`。
+
+评分使用 [evaluate_extraction_benchmark.py](../../scripts/evaluate_extraction_benchmark.py) 的 `scoring_version=1.3`，再由本脚本生成报告。主指标为三个数据集各自 normalized Micro F1 的等权平均。评分规则包括：`null`/空字符串/纯空白统一为空；SROIE 日期和金额按类型归一；VRDU 复用字段类型匹配逻辑；Kleister 采用大写归一的 MultiLabel-F1；`party` 的字符串数组与严格单键 `[{"value": string}]` 表示等价；未知字段不替代目标字段；三个 VRDU 内容安全失败 case 从双方共同集合排除。
+
+复现评分命令：
+
+```bash
+source /Users/wangyaqi/Documents/cursor_project/.venv/bin/activate
+python document-extracting/scripts/evaluate_extraction_benchmark.py
+python document-extracting/scripts/generate_extraction_report.py
+```
 
 ## 2. 总体结论
 
