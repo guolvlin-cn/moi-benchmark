@@ -197,6 +197,8 @@ Zep 官方 Prompt 来源固定为 `getzep/zep` commit
 
 该文件是 Zep 官方仓库公开的 LoCoMo Prompt 实现，但 Zep Research 页面没有提供与 94.7% run 一一对应的 manifest、commit 或逐题产物。因此本文把它称为“Zep 官方仓库公开 Prompt”，不声称已经证明它与官网 94.7% run 的实际 Prompt 字节级一致。
 
+还需要区分 Prompt 来源和模型配置来源：上述 `prompts.py` 本身没有出现 `gpt-5.4`，也没有声明这些 Prompt 是专门为 `gpt-5.4` 设计或与其配套。`gpt-5.4` 来自 Zep [Research 页面](https://www.getzep.com/research/)独立公布的当前 benchmark 配置，其中 Reader 为 `gpt-5.4`、`reasoning=medium`，Judge 为 `gpt-5.4`、chain-of-thought grading。因此，本实验采用的是“Zep 官方仓库公开 Prompt + Zep 官网公布的 GPT-5.4 模型配置”这一组合；现有公开证据不足以证明两者是 Zep 官方明确绑定的同一套配置，也不足以证明固定 commit 中的 Prompt 就是官网 94.7% run 实际使用的版本。
+
 | Prompt | 使用方式 | SHA-256 |
 | --- | --- | --- |
 | Zep context template | 仅作为官方来源冻结；v2 Reader 不直接使用 | `f257da19d7bfa582a44cad7c833388523adf5d4985e0d53009e6e817e3379c07` |
