@@ -1,0 +1,91 @@
+{
+  "by_category": {
+    "multi-hop": {
+      "accuracy": 0.87234,
+      "correct": 246,
+      "total": 282,
+      "wrong_or_missing": 36
+    },
+    "open-domain": {
+      "accuracy": 0.71875,
+      "correct": 69,
+      "total": 96,
+      "wrong_or_missing": 27
+    },
+    "single-hop": {
+      "accuracy": 0.889417,
+      "correct": 748,
+      "total": 841,
+      "wrong_or_missing": 93
+    },
+    "temporal": {
+      "accuracy": 0.906542,
+      "correct": 291,
+      "total": 321,
+      "wrong_or_missing": 30
+    }
+  },
+  "by_top200_evidence_state": {
+    "complete": {
+      "accuracy": 0.949653,
+      "correct": 1094,
+      "total": 1152,
+      "wrong_or_missing": 58
+    },
+    "missing": {
+      "accuracy": 0.481675,
+      "correct": 92,
+      "total": 191,
+      "wrong_or_missing": 99
+    },
+    "no_evidence": {
+      "accuracy": 1.0,
+      "correct": 4,
+      "total": 4,
+      "wrong_or_missing": 0
+    },
+    "partial": {
+      "accuracy": 0.849741,
+      "correct": 164,
+      "total": 193,
+      "wrong_or_missing": 29
+    }
+  },
+  "complete": true,
+  "generated_at": "2026-08-10T11:09:42.743962Z",
+  "operations": {
+    "answerer": {
+      "calls": 1540,
+      "completion_tokens": 1794077,
+      "latency_ms": {
+        "max": 141167.719,
+        "p50": 16077.799,
+        "p95": 35997.641
+      },
+      "prompt_tokens": 26008417,
+      "total_tokens": 27802494
+    },
+    "failed_or_pending_answers": 0,
+    "failed_or_pending_judgments": 0,
+    "judge": {
+      "calls": 1540,
+      "completion_tokens": 323014,
+      "latency_ms": {
+        "max": 125076.498,
+        "p50": 4107.606,
+        "p95": 7700.011
+      },
+      "prompt_tokens": 1146786,
+      "total_tokens": 1469800
+    },
+    "selected_questions": 1540,
+    "successful_answers": 1540,
+    "successful_judgments": 1540
+  },
+  "overall": {
+    "accuracy": 0.879221,
+    "correct": 1354,
+    "total": 1540,
+    "wrong_or_missing": 186
+  }
+}

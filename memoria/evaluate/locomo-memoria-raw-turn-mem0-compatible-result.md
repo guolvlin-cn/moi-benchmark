@@ -237,7 +237,7 @@ Multi-hop 的 Hit@200 为 86.17%，但 Complete Recall@200 只有 35.11%，是�
 
 Prompt 逐字固定自 Mem0 commit
 [`4b61c5d31b9c668a12b4f5e78064248a02c82d2b`](https://github.com/mem0ai/memory-benchmarks/commit/4b61c5d31b9c668a12b4f5e78064248a02c82d2b)
-的 [`benchmarks/locomo/prompts.py`](https://github.com/mem0ai/memory-benchmarks/blob/4b61c5d31b9c668a12b4f5e78064248a02c82d2b/benchmarks/locomo/prompts.py)。本地完整文本保存在 [`mem0_prompts.py`](../benchmark/locomo/mem0_prompts.py)，不在本报告再维护第二份副本，以避免文本漂移。
+的 [`benchmarks/locomo/prompts.py`](https://github.com/mem0ai/memory-benchmarks/blob/4b61c5d31b9c668a12b4f5e78064248a02c82d2b/benchmarks/locomo/prompts.py)。本地完整文本保存在 [`mem0_prompts.py`](../scripts/locomo/mem0_prompts.py)，不在本报告再维护第二份副本，以避免文本漂移。
 
 | Prompt | SHA-256 |
 | --- | --- |
@@ -451,11 +451,25 @@ memoria/runs/locomo-qwen-text-embedding-v4-1024-turn-v1/
 
 运行器与 Prompt 源码：
 
-- [`ingest.py`](../benchmark/locomo/ingest.py)
-- [`retrieve.py`](../benchmark/locomo/retrieve.py)
-- [`evaluate_top200.py`](../benchmark/locomo/evaluate_top200.py)，实验时 SHA-256 `2b0cec88945ca3a038df1342c2f8c5122d72af60a0c6ef376f775a78582b60dd`
-- [`mem0_prompts.py`](../benchmark/locomo/mem0_prompts.py)
-- [`test_evaluate_top200.py`](../benchmark/locomo/test_evaluate_top200.py)
+- [`ingest.py`](../scripts/locomo/ingest.py)
+- [`run_smoke_ingest.sh`](../scripts/locomo/run_smoke_ingest.sh)：固定 `conv-30` 的 369-memory 导入门禁
+- [`run_full_ingest.sh`](../scripts/locomo/run_full_ingest.sh)：10 个 conversation、5,882 条 memory 的正式导入入口
+- [`retrieve.py`](../scripts/locomo/retrieve.py)
+- [`restart_top200_qwen.sh`](../scripts/locomo/restart_top200_qwen.sh)：固定 Qwen embedding 配置并验收 Top-200 API
+- [`evaluate_top200.py`](../scripts/locomo/evaluate_top200.py)，实验时 SHA-256 `2b0cec88945ca3a038df1342c2f8c5122d72af60a0c6ef376f775a78582b60dd`
+- [`run_top200_qa_judge.sh`](../scripts/locomo/run_top200_qa_judge.sh)：本实验 GPT-5 Reader/Judge 正式入口
+- [`mem0_prompts.py`](../scripts/locomo/mem0_prompts.py)
+- [`test_evaluate_top200.py`](../scripts/locomo/test_evaluate_top200.py)
+
+在保留正式 Top-200 retrieval snapshot 的情况下，复现 Reader/Judge 结果只需运行：
+
+```bash
+./memoria/scripts/locomo/run_top200_qa_judge.sh full openai
+```
+
+无需重新导入或重新检索。若要从空数据库重建全链路，应按
+[`README.md`](../scripts/locomo/README.md) 依次应用固定 Memoria 补丁、运行
+smoke ingest、正式 ingest、Top-200 retrieval，再运行上述 QA 入口。
 
 ## 11. 最终验收
 
