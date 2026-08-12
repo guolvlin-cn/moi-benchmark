@@ -1,0 +1,1384 @@
+{
+  "scope": {
+    "tasks": 108,
+    "slots": 216,
+    "posthoc_supplement_slots": 11
+  },
+  "systems": {
+    "astra": {
+      "tasks": 108,
+      "verify": {
+        "pass": 61,
+        "no_pass": 47
+      },
+      "validity": {
+        "valid": 108
+      },
+      "pass_rate_all": 0.5648148148148148,
+      "normal_e2e_success": 61,
+      "timeouts": 0,
+      "failure_categories": {
+        "completed_but_no_pass": 27,
+        "model_request_budget": 20
+      },
+      "time": {
+        "e2e_seconds": {
+          "n": 108,
+          "sum": 123037.60372199994,
+          "mean": 1139.2370715,
+          "median": 609.724692,
+          "p90": 3000.585485
+        },
+        "agent_seconds": {
+          "n": 108,
+          "sum": 117685.75359060027,
+          "mean": 1089.6829036166691,
+          "median": 546.0730953459861,
+          "p90": 2955.5410147351968
+        },
+        "evaluator_seconds": {
+          "n": 108,
+          "sum": 2175.72092860064,
+          "mean": 20.14556415370963,
+          "median": 12.681744636473013,
+          "p90": 38.53250542341266
+        },
+        "orchestration_seconds": {
+          "n": 108,
+          "sum": 3176.129202799087,
+          "mean": 29.408603729621177,
+          "median": 27.958285198988733,
+          "p90": 40.94586854140599
+        }
+      },
+      "tools": {
+        "calls": {
+          "n": 108,
+          "sum": 4345.0,
+          "mean": 40.23148148148148,
+          "median": 31.5,
+          "p90": 75.6
+        },
+        "failures": {
+          "n": 108,
+          "sum": 56.0,
+          "mean": 0.5185185185185185,
+          "median": 0.0,
+          "p90": 2.0
+        },
+        "started_only": {
+          "n": 108,
+          "sum": 7.0,
+          "mean": 0.06481481481481481,
+          "median": 0.0,
+          "p90": 0.0
+        },
+        "top_terminal_tools": [
+          [
+            "local-python-execute",
+            464
+          ],
+          [
+            "terminal-run_command",
+            234
+          ],
+          [
+            "woocommerce-woo_products_list",
+            172
+          ],
+          [
+            "wandb-query_wandb_tool",
+            153
+          ],
+          [
+            "word-add_paragraph",
+            151
+          ],
+          [
+            "local-web_search",
+            123
+          ],
+          [
+            "pdf-tools-read_pdf_pages",
+            115
+          ],
+          [
+            "tool_search",
+            113
+          ],
+          [
+            "github-get_file_contents",
+            99
+          ],
+          [
+            "filesystem-read_file",
+            92
+          ]
+        ]
+      },
+      "requests": {
+        "model_requests_started": {
+          "n": 108,
+          "sum": 5229.0,
+          "mean": 48.416666666666664,
+          "median": 33.5,
+          "p90": 100.0
+        },
+        "model_requests_completed": {
+          "n": 108,
+          "sum": 5229.0,
+          "mean": 48.416666666666664,
+          "median": 33.5,
+          "p90": 100.0
+        },
+        "model_requests_failed": {
+          "n": 108,
+          "sum": 19.0,
+          "mean": 0.17592592592592593,
+          "median": 0.0,
+          "p90": 1.0
+        },
+        "stream_requests": {
+          "n": 108,
+          "sum": 2226.0,
+          "mean": 20.61111111111111,
+          "median": 16.0,
+          "p90": 38.0
+        },
+        "non_stream_requests": {
+          "n": 108,
+          "sum": 3003.0,
+          "mean": 27.805555555555557,
+          "median": 17.5,
+          "p90": 62.0
+        }
+      },
+      "tokens": {
+        "reliable_records": 95,
+        "input": {
+          "n": 95,
+          "sum": 114783243.0,
+          "mean": 1208244.6631578947,
+          "median": 617205.0,
+          "p90": 3383002.200000001
+        },
+        "output": {
+          "n": 95,
+          "sum": 8791196.0,
+          "mean": 92538.9052631579,
+          "median": 40868.0,
+          "p90": 267105.8000000001
+        },
+        "total": {
+          "n": 95,
+          "sum": 123574439.0,
+          "mean": 1300783.5684210525,
+          "median": 649739.0,
+          "p90": 3668098.4000000004
+        },
+        "visible_lower_bound_records": 108,
+        "visible_lower_bound_input": {
+          "n": 108,
+          "sum": 149741746.0,
+          "mean": 1386497.648148148,
+          "median": 714272.5,
+          "p90": 3577346.3999999994
+        },
+        "visible_lower_bound_output": {
+          "n": 108,
+          "sum": 11654317.0,
+          "mean": 107910.3425925926,
+          "median": 50341.0,
+          "p90": 287979.8
+        },
+        "visible_lower_bound_total": {
+          "n": 108,
+          "sum": 161396063.0,
+          "mean": 1494407.9907407407,
+          "median": 756013.5,
+          "p90": 3956085.4
+        },
+        "pass_reliable_records": 56,
+        "pass_input": {
+          "n": 56,
+          "sum": 41163279.0,
+          "mean": 735058.5535714285,
+          "median": 493370.0,
+          "p90": 1674757.5
+        },
+        "pass_output": {
+          "n": 56,
+          "sum": 2841207.0,
+          "mean": 50735.83928571428,
+          "median": 30224.0,
+          "p90": 111112.0
+        },
+        "pass_total": {
+          "n": 56,
+          "sum": 44004486.0,
+          "mean": 785794.3928571428,
+          "median": 518071.0,
+          "p90": 1785869.5
+        },
+        "pass_visible_lower_bound_records": 61,
+        "pass_visible_lower_bound_input": {
+          "n": 61,
+          "sum": 51396001.0,
+          "mean": 842557.393442623,
+          "median": 532577.0,
+          "p90": 2095894.0
+        },
+        "pass_visible_lower_bound_output": {
+          "n": 61,
+          "sum": 3557968.0,
+          "mean": 58327.34426229508,
+          "median": 31315.0,
+          "p90": 125232.0
+        },
+        "pass_visible_lower_bound_total": {
+          "n": 61,
+          "sum": 54953969.0,
+          "mean": 900884.737704918,
+          "median": 554741.0,
+          "p90": 2289951.0
+        }
+      },
+      "posthoc_slots": 6,
+      "request_limit_reached": 23
+    },
+    "hermes": {
+      "tasks": 108,
+      "verify": {
+        "pass": 72,
+        "no_pass": 36
+      },
+      "validity": {
+        "valid": 108
+      },
+      "pass_rate_all": 0.6666666666666666,
+      "normal_e2e_success": 72,
+      "timeouts": 0,
+      "failure_categories": {
+        "completed_but_no_pass": 33,
+        "model_request_budget": 3
+      },
+      "time": {
+        "e2e_seconds": {
+          "n": 108,
+          "sum": 63286.941415999994,
+          "mean": 585.9901982962963,
+          "median": 426.00034700000003,
+          "p90": 1177.9997778999998
+        },
+        "agent_seconds": {
+          "n": 108,
+          "sum": 51139.254284495226,
+          "mean": 473.51161374532614,
+          "median": 312.61601481598336,
+          "p90": 1016.0674632857144
+        },
+        "evaluator_seconds": {
+          "n": 108,
+          "sum": 2172.524199577514,
+          "mean": 20.11596481090291,
+          "median": 11.404215199960163,
+          "p90": 32.76062507417518
+        },
+        "orchestration_seconds": {
+          "n": 108,
+          "sum": 9975.162931927263,
+          "mean": 92.36261974006722,
+          "median": 101.82894992547412,
+          "p90": 142.74642388976946
+        }
+      },
+      "tools": {
+        "calls": {
+          "n": 108,
+          "sum": 4848.0,
+          "mean": 44.888888888888886,
+          "median": 32.5,
+          "p90": 78.6
+        },
+        "failures": {
+          "n": 108,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0
+        },
+        "started_only": {
+          "n": 108,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0
+        },
+        "top_terminal_tools": [
+          [
+            "terminal",
+            754
+          ],
+          [
+            "word-add_paragraph",
+            392
+          ],
+          [
+            "local-python-execute",
+            288
+          ],
+          [
+            "terminal-run_command",
+            232
+          ],
+          [
+            "emails-send_email",
+            129
+          ],
+          [
+            "read_file",
+            119
+          ],
+          [
+            "wandb-query_wandb_tool",
+            107
+          ],
+          [
+            "google-cloud-bigquery_run_query",
+            98
+          ],
+          [
+            "write_file",
+            92
+          ],
+          [
+            "filesystem-directory_tree",
+            79
+          ]
+        ]
+      },
+      "requests": {
+        "model_requests_started": {
+          "n": 108,
+          "sum": 3287.0,
+          "mean": 30.435185185185187,
+          "median": 20.0,
+          "p90": 66.49999999999999
+        },
+        "model_requests_completed": {
+          "n": 108,
+          "sum": 3284.0,
+          "mean": 30.40740740740741,
+          "median": 20.0,
+          "p90": 66.49999999999999
+        },
+        "model_requests_failed": {
+          "n": 108,
+          "sum": 26.0,
+          "mean": 0.24074074074074073,
+          "median": 0.0,
+          "p90": 1.0
+        },
+        "stream_requests": {
+          "n": 108,
+          "sum": 3081.0,
+          "mean": 28.52777777777778,
+          "median": 20.0,
+          "p90": 60.3
+        },
+        "non_stream_requests": {
+          "n": 108,
+          "sum": 206.0,
+          "mean": 1.9074074074074074,
+          "median": 0.0,
+          "p90": 6.0
+        }
+      },
+      "tokens": {
+        "reliable_records": 82,
+        "input": {
+          "n": 82,
+          "sum": 142142325.0,
+          "mean": 1733442.987804878,
+          "median": 1147114.5,
+          "p90": 4380784.500000001
+        },
+        "output": {
+          "n": 82,
+          "sum": 1964613.0,
+          "mean": 23958.69512195122,
+          "median": 19695.5,
+          "p90": 45769.3
+        },
+        "total": {
+          "n": 82,
+          "sum": 144106938.0,
+          "mean": 1757401.6829268292,
+          "median": 1174438.5,
+          "p90": 4418415.1000000015
+        },
+        "visible_lower_bound_records": 108,
+        "visible_lower_bound_input": {
+          "n": 108,
+          "sum": 244960861.0,
+          "mean": 2268156.1203703703,
+          "median": 1339917.0,
+          "p90": 5076701.199999997
+        },
+        "visible_lower_bound_output": {
+          "n": 108,
+          "sum": 3124778.0,
+          "mean": 28933.12962962963,
+          "median": 26007.0,
+          "p90": 57395.7
+        },
+        "visible_lower_bound_total": {
+          "n": 108,
+          "sum": 248085639.0,
+          "mean": 2297089.25,
+          "median": 1364391.5,
+          "p90": 5129470.299999998
+        },
+        "pass_reliable_records": 54,
+        "pass_input": {
+          "n": 54,
+          "sum": 87554219.0,
+          "mean": 1621374.4259259258,
+          "median": 1033021.5,
+          "p90": 4117370.700000001
+        },
+        "pass_output": {
+          "n": 54,
+          "sum": 1139527.0,
+          "mean": 21102.35185185185,
+          "median": 17584.5,
+          "p90": 42127.30000000002
+        },
+        "pass_total": {
+          "n": 54,
+          "sum": 88693746.0,
+          "mean": 1642476.7777777778,
+          "median": 1045430.5,
+          "p90": 4148244.100000001
+        },
+        "pass_visible_lower_bound_records": 72,
+        "pass_visible_lower_bound_input": {
+          "n": 72,
+          "sum": 140705504.0,
+          "mean": 1954243.111111111,
+          "median": 1185249.0,
+          "p90": 4380784.5
+        },
+        "pass_visible_lower_bound_output": {
+          "n": 72,
+          "sum": 1792464.0,
+          "mean": 24895.333333333332,
+          "median": 20744.0,
+          "p90": 47751.799999999996
+        },
+        "pass_visible_lower_bound_total": {
+          "n": 72,
+          "sum": 142497968.0,
+          "mean": 1979138.4444444445,
+          "median": 1207624.5,
+          "p90": 4418415.1
+        }
+      },
+      "posthoc_slots": 5,
+      "request_limit_reached": 3
+    }
+  },
+  "pairs": {
+    "both_pass": 51,
+    "astra_only": 10,
+    "neither": 26,
+    "hermes_only": 21
+  },
+  "pair_tasks": {
+    "both_pass": [
+      {
+        "position": 1,
+        "task_id": "find-alita-paper"
+      },
+      {
+        "position": 2,
+        "task_id": "set-conf-cr-ddl"
+      },
+      {
+        "position": 4,
+        "task_id": "canvas-homework-grader-python"
+      },
+      {
+        "position": 7,
+        "task_id": "price-comparison"
+      },
+      {
+        "position": 9,
+        "task_id": "excel-data-transformation"
+      },
+      {
+        "position": 10,
+        "task_id": "notion-hr"
+      },
+      {
+        "position": 13,
+        "task_id": "git-bug-hunt"
+      },
+      {
+        "position": 15,
+        "task_id": "ab-testing"
+      },
+      {
+        "position": 16,
+        "task_id": "academic-pdf-report"
+      },
+      {
+        "position": 17,
+        "task_id": "academic-warning"
+      },
+      {
+        "position": 19,
+        "task_id": "apply-phd-email"
+      },
+      {
+        "position": 20,
+        "task_id": "canvas-arrange-exam"
+      },
+      {
+        "position": 22,
+        "task_id": "canvas-art-quiz"
+      },
+      {
+        "position": 25,
+        "task_id": "canvas-new-students-notification"
+      },
+      {
+        "position": 26,
+        "task_id": "canvas-submit-late-work"
+      },
+      {
+        "position": 29,
+        "task_id": "courses-ta-hws"
+      },
+      {
+        "position": 33,
+        "task_id": "dietary-health"
+      },
+      {
+        "position": 35,
+        "task_id": "excel-market-research"
+      },
+      {
+        "position": 39,
+        "task_id": "flagged-transactions"
+      },
+      {
+        "position": 40,
+        "task_id": "game-statistics"
+      },
+      {
+        "position": 41,
+        "task_id": "gdp-cr5-analysis"
+      },
+      {
+        "position": 42,
+        "task_id": "git-milestone"
+      },
+      {
+        "position": 43,
+        "task_id": "git-repo"
+      },
+      {
+        "position": 45,
+        "task_id": "huggingface-upload"
+      },
+      {
+        "position": 50,
+        "task_id": "inventory-sync"
+      },
+      {
+        "position": 52,
+        "task_id": "invoice-org"
+      },
+      {
+        "position": 57,
+        "task_id": "k8s-redis-helm-upgrade"
+      },
+      {
+        "position": 58,
+        "task_id": "landing-task-reminder"
+      },
+      {
+        "position": 60,
+        "task_id": "latex-prompt-box"
+      },
+      {
+        "position": 61,
+        "task_id": "live-transactions"
+      },
+      {
+        "position": 62,
+        "task_id": "llm-training-dataset"
+      },
+      {
+        "position": 64,
+        "task_id": "machine-operating"
+      },
+      {
+        "position": 65,
+        "task_id": "meeting-assign"
+      },
+      {
+        "position": 69,
+        "task_id": "nhl-b2b-analysis"
+      },
+      {
+        "position": 70,
+        "task_id": "notion-find-job"
+      },
+      {
+        "position": 71,
+        "task_id": "notion-personal-website"
+      },
+      {
+        "position": 73,
+        "task_id": "nvidia-stock-analysis"
+      },
+      {
+        "position": 76,
+        "task_id": "payable-invoice-checker"
+      },
+      {
+        "position": 77,
+        "task_id": "personal-website-construct"
+      },
+      {
+        "position": 78,
+        "task_id": "ppt-analysis"
+      },
+      {
+        "position": 82,
+        "task_id": "sales-accounting"
+      },
+      {
+        "position": 84,
+        "task_id": "sla-timeout-monitor"
+      },
+      {
+        "position": 86,
+        "task_id": "student-interview"
+      },
+      {
+        "position": 88,
+        "task_id": "sync-todo-to-readme"
+      },
+      {
+        "position": 90,
+        "task_id": "train-ticket-plan"
+      },
+      {
+        "position": 93,
+        "task_id": "trip-adviser"
+      },
+      {
+        "position": 94,
+        "task_id": "trip-itinerary-generator"
+      },
+      {
+        "position": 96,
+        "task_id": "update-material-inventory"
+      },
+      {
+        "position": 101,
+        "task_id": "wandb-shortest-length"
+      },
+      {
+        "position": 102,
+        "task_id": "woocommerce-customer-survey"
+      },
+      {
+        "position": 106,
+        "task_id": "woocommerce-update-cover"
+      }
+    ],
+    "astra_only": [
+      {
+        "position": 3,
+        "task_id": "course-schedule"
+      },
+      {
+        "position": 14,
+        "task_id": "k8s-safety-audit"
+      },
+      {
+        "position": 18,
+        "task_id": "add-bibtex"
+      },
+      {
+        "position": 34,
+        "task_id": "email-paper-homepage"
+      },
+      {
+        "position": 47,
+        "task_id": "imagenet"
+      },
+      {
+        "position": 54,
+        "task_id": "k8s-deployment-cleanup"
+      },
+      {
+        "position": 83,
+        "task_id": "search-ca-school"
+      },
+      {
+        "position": 97,
+        "task_id": "upenn-campus-route"
+      },
+      {
+        "position": 98,
+        "task_id": "verl-dataset"
+      },
+      {
+        "position": 107,
+        "task_id": "yahoo-analysis"
+      }
+    ],
+    "hermes_only": [
+      {
+        "position": 6,
+        "task_id": "notion-movies"
+      },
+      {
+        "position": 12,
+        "task_id": "woocommerce-stock-alert"
+      },
+      {
+        "position": 21,
+        "task_id": "canvas-art-manager"
+      },
+      {
+        "position": 23,
+        "task_id": "canvas-do-quiz"
+      },
+      {
+        "position": 24,
+        "task_id": "canvas-list-test"
+      },
+      {
+        "position": 27,
+        "task_id": "cooking-guidance"
+      },
+      {
+        "position": 30,
+        "task_id": "cvpr-research"
+      },
+      {
+        "position": 31,
+        "task_id": "dataset-license-issue"
+      },
+      {
+        "position": 37,
+        "task_id": "fillout-online-forms"
+      },
+      {
+        "position": 38,
+        "task_id": "filter-low-selling-products"
+      },
+      {
+        "position": 46,
+        "task_id": "identify-all-songs"
+      },
+      {
+        "position": 48,
+        "task_id": "inter-final-performance-analysis"
+      },
+      {
+        "position": 53,
+        "task_id": "ipad-edu-price"
+      },
+      {
+        "position": 55,
+        "task_id": "k8s-mysql"
+      },
+      {
+        "position": 56,
+        "task_id": "k8s-pr-preview-testing"
+      },
+      {
+        "position": 80,
+        "task_id": "profile-update-online"
+      },
+      {
+        "position": 81,
+        "task_id": "reimbursement-form-filler"
+      },
+      {
+        "position": 85,
+        "task_id": "stock-build-position"
+      },
+      {
+        "position": 100,
+        "task_id": "wandb-best-score"
+      },
+      {
+        "position": 103,
+        "task_id": "woocommerce-new-product"
+      },
+      {
+        "position": 104,
+        "task_id": "woocommerce-new-welcome"
+      }
+    ],
+    "neither": [
+      {
+        "position": 5,
+        "task_id": "arrange-workspace"
+      },
+      {
+        "position": 8,
+        "task_id": "quantitative-financial-analysis"
+      },
+      {
+        "position": 11,
+        "task_id": "shopping-helper"
+      },
+      {
+        "position": 28,
+        "task_id": "course-assistant"
+      },
+      {
+        "position": 32,
+        "task_id": "detect-revised-terms"
+      },
+      {
+        "position": 36,
+        "task_id": "experiments-recordings"
+      },
+      {
+        "position": 44,
+        "task_id": "hk-top-conf"
+      },
+      {
+        "position": 49,
+        "task_id": "interview-report"
+      },
+      {
+        "position": 51,
+        "task_id": "investment-decision-analysis"
+      },
+      {
+        "position": 59,
+        "task_id": "language-school"
+      },
+      {
+        "position": 63,
+        "task_id": "logical-datasets-collection"
+      },
+      {
+        "position": 66,
+        "task_id": "merge-hf-datasets"
+      },
+      {
+        "position": 67,
+        "task_id": "mrbeast-analysis"
+      },
+      {
+        "position": 68,
+        "task_id": "music-analysis"
+      },
+      {
+        "position": 72,
+        "task_id": "nvidia-market"
+      },
+      {
+        "position": 74,
+        "task_id": "oil-price"
+      },
+      {
+        "position": 75,
+        "task_id": "paper-checker"
+      },
+      {
+        "position": 79,
+        "task_id": "privacy-desensitization"
+      },
+      {
+        "position": 87,
+        "task_id": "subway-planning"
+      },
+      {
+        "position": 89,
+        "task_id": "task-tracker"
+      },
+      {
+        "position": 91,
+        "task_id": "travel-exchange"
+      },
+      {
+        "position": 92,
+        "task_id": "travel-expense-reimbursement"
+      },
+      {
+        "position": 95,
+        "task_id": "university-course-selection"
+      },
+      {
+        "position": 99,
+        "task_id": "vlm-history-completer"
+      },
+      {
+        "position": 105,
+        "task_id": "woocommerce-product-recall"
+      },
+      {
+        "position": 108,
+        "task_id": "youtube-repo"
+      }
+    ]
+  },
+  "paired_differences_astra_minus_hermes": {
+    "e2e_seconds": {
+      "n": 108,
+      "sum": 59750.66230599997,
+      "mean": 553.2468732037037,
+      "median": 179.3674235,
+      "p90": 1947.4251684
+    },
+    "agent_seconds": {
+      "n": 108,
+      "sum": 66546.49930610505,
+      "mean": 616.171289871343,
+      "median": 222.88115902701975,
+      "p90": 2008.3097522329538
+    },
+    "tool_calls": {
+      "n": 108,
+      "sum": -503.0,
+      "mean": -4.657407407407407,
+      "median": -2.0,
+      "p90": 20.89999999999999
+    },
+    "tool_failures": {
+      "n": 108,
+      "sum": 56.0,
+      "mean": 0.5185185185185185,
+      "median": 0.0,
+      "p90": 2.0
+    }
+  },
+  "overlapping_pass_tokens": {
+    "astra": {
+      "n": 36,
+      "token_input": {
+        "n": 36,
+        "sum": 22160302.0,
+        "mean": 615563.9444444445,
+        "median": 408548.0,
+        "p90": 1038589.0
+      },
+      "token_output": {
+        "n": 36,
+        "sum": 1561635.0,
+        "mean": 43378.75,
+        "median": 26707.5,
+        "p90": 74164.5
+      },
+      "token_total": {
+        "n": 36,
+        "sum": 23721937.0,
+        "mean": 658942.6944444445,
+        "median": 437021.5,
+        "p90": 1101195.0
+      }
+    },
+    "hermes": {
+      "n": 36,
+      "token_input": {
+        "n": 36,
+        "sum": 30853408.0,
+        "mean": 857039.1111111111,
+        "median": 633918.0,
+        "p90": 1956241.5
+      },
+      "token_output": {
+        "n": 36,
+        "sum": 525488.0,
+        "mean": 14596.888888888889,
+        "median": 14359.5,
+        "p90": 25475.5
+      },
+      "token_total": {
+        "n": 36,
+        "sum": 31378896.0,
+        "mean": 871636.0,
+        "median": 645930.0,
+        "p90": 1985115.0
+      }
+    }
+  },
+  "visible_token_lower_bound": {
+    "definition": "sum of all reported provider usage across every effective task; requests with missing usage remain unknown and contribute no inferred tokens",
+    "systems": {
+      "astra": {
+        "records": 108,
+        "reported_completed_requests": 5210,
+        "missing_usage_completed_requests": 19,
+        "input": {
+          "n": 108,
+          "sum": 149741746.0,
+          "mean": 1386497.648148148,
+          "median": 714272.5,
+          "p90": 3577346.3999999994
+        },
+        "output": {
+          "n": 108,
+          "sum": 11654317.0,
+          "mean": 107910.3425925926,
+          "median": 50341.0,
+          "p90": 287979.8
+        },
+        "total": {
+          "n": 108,
+          "sum": 161396063.0,
+          "mean": 1494407.9907407407,
+          "median": 756013.5,
+          "p90": 3956085.4
+        },
+        "pass_records": 61,
+        "pass_input": {
+          "n": 61,
+          "sum": 51396001.0,
+          "mean": 842557.393442623,
+          "median": 532577.0,
+          "p90": 2095894.0
+        },
+        "pass_output": {
+          "n": 61,
+          "sum": 3557968.0,
+          "mean": 58327.34426229508,
+          "median": 31315.0,
+          "p90": 125232.0
+        },
+        "pass_total": {
+          "n": 61,
+          "sum": 54953969.0,
+          "mean": 900884.737704918,
+          "median": 554741.0,
+          "p90": 2289951.0
+        }
+      },
+      "hermes": {
+        "records": 108,
+        "reported_completed_requests": 3256,
+        "missing_usage_completed_requests": 28,
+        "input": {
+          "n": 108,
+          "sum": 244960861.0,
+          "mean": 2268156.1203703703,
+          "median": 1339917.0,
+          "p90": 5076701.199999997
+        },
+        "output": {
+          "n": 108,
+          "sum": 3124778.0,
+          "mean": 28933.12962962963,
+          "median": 26007.0,
+          "p90": 57395.7
+        },
+        "total": {
+          "n": 108,
+          "sum": 248085639.0,
+          "mean": 2297089.25,
+          "median": 1364391.5,
+          "p90": 5129470.299999998
+        },
+        "pass_records": 72,
+        "pass_input": {
+          "n": 72,
+          "sum": 140705504.0,
+          "mean": 1954243.111111111,
+          "median": 1185249.0,
+          "p90": 4380784.5
+        },
+        "pass_output": {
+          "n": 72,
+          "sum": 1792464.0,
+          "mean": 24895.333333333332,
+          "median": 20744.0,
+          "p90": 47751.799999999996
+        },
+        "pass_total": {
+          "n": 72,
+          "sum": 142497968.0,
+          "mean": 1979138.4444444445,
+          "median": 1207624.5,
+          "p90": 4418415.1
+        }
+      }
+    }
+  },
+  "tokens_excluding_astra_internal_nonstream": {
+    "criterion": "Astra stream=false and request_tool_count=0; Hermes complete usage",
+    "systems": {
+      "astra": {
+        "usage_basis": "excluding_stream_false_and_zero_tools",
+        "reliable_records": 100,
+        "pass_reliable_records": 58,
+        "input": {
+          "n": 100,
+          "sum": 120029959.0,
+          "mean": 1200299.59,
+          "median": 621049.0,
+          "p90": 3232601.7
+        },
+        "pass_input": {
+          "n": 58,
+          "sum": 41752246.0,
+          "mean": 719866.3103448276,
+          "median": 494326.0,
+          "p90": 1595752.7000000002
+        },
+        "visible_lower_bound_input": {
+          "n": 108,
+          "sum": 140643034.0,
+          "mean": 1302250.3148148148,
+          "median": 690542.0,
+          "p90": 3297378.6999999997
+        },
+        "pass_visible_lower_bound_input": {
+          "n": 61,
+          "sum": 48786748.0,
+          "mean": 799782.7540983607,
+          "median": 518316.0,
+          "p90": 1988557.0
+        },
+        "output": {
+          "n": 100,
+          "sum": 4532527.0,
+          "mean": 45325.27,
+          "median": 21920.5,
+          "p90": 133687.90000000002
+        },
+        "pass_output": {
+          "n": 58,
+          "sum": 1274928.0,
+          "mean": 21981.51724137931,
+          "median": 16361.0,
+          "p90": 40455.8
+        },
+        "visible_lower_bound_output": {
+          "n": 108,
+          "sum": 5226429.0,
+          "mean": 48392.86111111111,
+          "median": 24957.0,
+          "p90": 134055.69999999998
+        },
+        "pass_visible_lower_bound_output": {
+          "n": 61,
+          "sum": 1508057.0,
+          "mean": 24722.245901639344,
+          "median": 16407.0,
+          "p90": 44165.0
+        },
+        "total": {
+          "n": 100,
+          "sum": 124562486.0,
+          "mean": 1245624.86,
+          "median": 639356.0,
+          "p90": 3333437.5000000005
+        },
+        "pass_total": {
+          "n": 58,
+          "sum": 43027174.0,
+          "mean": 741847.8275862068,
+          "median": 516294.0,
+          "p90": 1631029.0000000002
+        },
+        "visible_lower_bound_total": {
+          "n": 108,
+          "sum": 145869463.0,
+          "mean": 1350643.1759259258,
+          "median": 711461.0,
+          "p90": 3450796.3999999994
+        },
+        "pass_visible_lower_bound_total": {
+          "n": 61,
+          "sum": 50294805.0,
+          "mean": 824505.0,
+          "median": 526790.0,
+          "p90": 2066208.0
+        },
+        "visible_lower_bound_records": 108,
+        "pass_visible_lower_bound_records": 61,
+        "visible_lower_bound_reported_completed_requests": 2219,
+        "visible_lower_bound_missing_usage_completed_requests": 8
+      },
+      "hermes": {
+        "usage_basis": "complete_provider_usage",
+        "reliable_records": 82,
+        "pass_reliable_records": 54,
+        "input": {
+          "n": 82,
+          "sum": 142142325.0,
+          "mean": 1733442.987804878,
+          "median": 1147114.5,
+          "p90": 4380784.500000001
+        },
+        "pass_input": {
+          "n": 54,
+          "sum": 87554219.0,
+          "mean": 1621374.4259259258,
+          "median": 1033021.5,
+          "p90": 4117370.700000001
+        },
+        "visible_lower_bound_input": {
+          "n": 108,
+          "sum": 244960861.0,
+          "mean": 2268156.1203703703,
+          "median": 1339917.0,
+          "p90": 5076701.199999997
+        },
+        "pass_visible_lower_bound_input": {
+          "n": 72,
+          "sum": 140705504.0,
+          "mean": 1954243.111111111,
+          "median": 1185249.0,
+          "p90": 4380784.5
+        },
+        "output": {
+          "n": 82,
+          "sum": 1964613.0,
+          "mean": 23958.69512195122,
+          "median": 19695.5,
+          "p90": 45769.3
+        },
+        "pass_output": {
+          "n": 54,
+          "sum": 1139527.0,
+          "mean": 21102.35185185185,
+          "median": 17584.5,
+          "p90": 42127.30000000002
+        },
+        "visible_lower_bound_output": {
+          "n": 108,
+          "sum": 3124778.0,
+          "mean": 28933.12962962963,
+          "median": 26007.0,
+          "p90": 57395.7
+        },
+        "pass_visible_lower_bound_output": {
+          "n": 72,
+          "sum": 1792464.0,
+          "mean": 24895.333333333332,
+          "median": 20744.0,
+          "p90": 47751.799999999996
+        },
+        "total": {
+          "n": 82,
+          "sum": 144106938.0,
+          "mean": 1757401.6829268292,
+          "median": 1174438.5,
+          "p90": 4418415.1000000015
+        },
+        "pass_total": {
+          "n": 54,
+          "sum": 88693746.0,
+          "mean": 1642476.7777777778,
+          "median": 1045430.5,
+          "p90": 4148244.100000001
+        },
+        "visible_lower_bound_total": {
+          "n": 108,
+          "sum": 248085639.0,
+          "mean": 2297089.25,
+          "median": 1364391.5,
+          "p90": 5129470.299999998
+        },
+        "pass_visible_lower_bound_total": {
+          "n": 72,
+          "sum": 142497968.0,
+          "mean": 1979138.4444444445,
+          "median": 1207624.5,
+          "p90": 4418415.1
+        },
+        "visible_lower_bound_records": 108,
+        "pass_visible_lower_bound_records": 72,
+        "visible_lower_bound_reported_completed_requests": 3256,
+        "visible_lower_bound_missing_usage_completed_requests": 28
+      }
+    },
+    "overlapping_pass_tokens": {
+      "astra": {
+        "n": 38,
+        "input": {
+          "n": 38,
+          "sum": 23802407.0,
+          "mean": 626379.1315789474,
+          "median": 406931.0,
+          "p90": 1067588.1000000006
+        },
+        "output": {
+          "n": 38,
+          "sum": 777355.0,
+          "mean": 20456.71052631579,
+          "median": 14957.5,
+          "p90": 36484.00000000002
+        },
+        "total": {
+          "n": 38,
+          "sum": 24579762.0,
+          "mean": 646835.8421052631,
+          "median": 424424.5,
+          "p90": 1103655.0000000005
+        }
+      },
+      "hermes": {
+        "n": 38,
+        "input": {
+          "n": 38,
+          "sum": 39093099.0,
+          "mean": 1028765.7631578947,
+          "median": 652384.5,
+          "p90": 2224444.0000000005
+        },
+        "output": {
+          "n": 38,
+          "sum": 627233.0,
+          "mean": 16506.13157894737,
+          "median": 14924.0,
+          "p90": 31663.500000000015
+        },
+        "total": {
+          "n": 38,
+          "sum": 39720332.0,
+          "mean": 1045271.8947368421,
+          "median": 667907.0,
+          "p90": 2248358.500000001
+        }
+      }
+    },
+    "astra_exclusion_effect_on_full_reliable_records": {
+      "internal_nonstream_started": 3002,
+      "retained_started": 2227,
+      "same_record_basis": 95,
+      "input": {
+        "full": 114783243.0,
+        "filtered": 107802001.0,
+        "excluded": 6981242.0,
+        "excluded_fraction": 0.06082109040951213
+      },
+      "output": {
+        "full": 8791196.0,
+        "filtered": 3908755.0,
+        "excluded": 4882441.0,
+        "excluded_fraction": 0.5553784718256765
+      },
+      "total": {
+        "full": 123574439.0,
+        "filtered": 111710756.0,
+        "excluded": 11863683.0,
+        "excluded_fraction": 0.0960043443935845
+      }
+    }
+  }
+}
