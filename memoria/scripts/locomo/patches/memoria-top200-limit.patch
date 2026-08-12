@@ -1,0 +1,31 @@
+diff --git a/memoria/crates/memoria-api/src/routes/memory.rs b/memoria/crates/memoria-api/src/routes/memory.rs
+index eb0a0a6..62379e6 100644
+--- a/memoria/crates/memoria-api/src/routes/memory.rs
++++ b/memoria/crates/memoria-api/src/routes/memory.rs
+@@ -12,6 +12,8 @@ use memoria_core::nullable_str_from_row;
+ use memoria_service::ListActiveOptions;
+ 
+ type ApiResult<T> = Result<Json<T>, (StatusCode, String)>;
++const MAX_RETRIEVAL_TOP_K: i64 = 200;
++
+ pub fn api_err(e: impl std::fmt::Display) -> (StatusCode, String) {
+     tracing::error!(error = %e, "internal server error");
+     (StatusCode::INTERNAL_SERVER_ERROR, e.to_string())
+@@ -339,7 +341,7 @@ pub async fn retrieve(
+ ) -> ApiResult<serde_json::Value> {
+     req.validate()
+         .map_err(|err| (StatusCode::UNPROCESSABLE_ENTITY, err))?;
+-    let top_k = req.top_k.clamp(1, 100);
++    let top_k = req.top_k.clamp(1, MAX_RETRIEVAL_TOP_K);
+     let level = memoria_service::ExplainLevel::from_str_or_bool(&req.explain);
+     let retrieve_options = req
+         .retrieve_options()
+@@ -386,7 +388,7 @@ pub async fn search(
+ ) -> ApiResult<serde_json::Value> {
+     req.validate()
+         .map_err(|err| (StatusCode::UNPROCESSABLE_ENTITY, err))?;
+-    let top_k = req.top_k.clamp(1, 100);
++    let top_k = req.top_k.clamp(1, MAX_RETRIEVAL_TOP_K);
+     let level = memoria_service::ExplainLevel::from_str_or_bool(&req.explain);
+     let retrieve_options = req
+         .retrieve_options()

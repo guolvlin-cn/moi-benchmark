@@ -1,0 +1,30 @@
+diff --git a/memoria/crates/memoria-core/src/sensitivity.rs b/memoria/crates/memoria-core/src/sensitivity.rs
+index 926be77..528a4e6 100644
+--- a/memoria/crates/memoria-core/src/sensitivity.rs
++++ b/memoria/crates/memoria-core/src/sensitivity.rs
+@@ -94,8 +94,25 @@ static COMPILED: Lazy<Vec<(&'static Pattern, Regex)>> = Lazy::new(|| {
+         .collect()
+ });
+ 
++// Benchmark harnesses sometimes need byte-for-byte ingestion of synthetic
++// public datasets. Keep the production default enabled, but allow an explicit
++// process-level opt-out for those controlled runs.
++static FILTER_ENABLED: Lazy<bool> = Lazy::new(|| {
++    std::env::var("MEMORIA_SENSITIVITY_FILTER_ENABLED")
++        .map(|value| !matches!(value.trim().to_ascii_lowercase().as_str(), "0" | "false" | "no"))
++        .unwrap_or(true)
++});
++
+ /// Check content for PII/credentials. Returns a `SensitivityResult`.
+ pub fn check_sensitivity(text: &str) -> SensitivityResult {
++    if !*FILTER_ENABLED {
++        return SensitivityResult {
++            blocked: false,
++            redacted_content: None,
++            matched_labels: vec![],
++        };
++    }
++
+     // HIGH tier — any match blocks immediately
+     for (p, re) in COMPILED.iter() {
+         if p.tier == SensitivityTier::High && re.is_match(text) {
