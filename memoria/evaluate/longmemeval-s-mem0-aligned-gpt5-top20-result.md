@@ -58,6 +58,8 @@ LongMemEval-S 共 500 道题，官方基础题型为六类。另有 30 道题的
 | 跨题污染 | 0 |
 | Retrieval snapshot SHA256 | `fe6f179d8cd21cf71a204ebfaf4c62fff7db5ae434a61b69a3c9fdff334a1434` |
 
+**Embedding 选型说明。** 本轮建库沿用上述 Memoria commit 官方 `docker-compose.yml` 的默认配置 `BAAI/bge-m3` / 1024 维；同版本 CLI 初始化向导也将该组合标为 `recommended`。选择它是为了采用 Memoria 当时的默认/推荐配置，并非为了对齐 Mem0。向量写入后，Embedding 模型、维度和索引 schema 已固定；本实验直接复用冻结的 Top-20 检索快照，以保证与其他 LongMemEval Reader/Judge 实验只比较下游模型和 Prompt。若更换 Embedding，需要重新建库并作为独立检索实验报告。
+
 Memoria 返回结果先按照检索排名截取 Top-20，再按照原始 `source_session_date` 从早到晚排序后交给 Reader。这一顺序与 Mem0 LongMemEval runner 的实际执行逻辑一致。实验使用原始会话日期，而不是 2026 年的 Memoria 导入时间，避免干扰相对时间计算。
 
 ### 3.2 Reader 与 Judge

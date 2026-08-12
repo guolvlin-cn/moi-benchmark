@@ -101,6 +101,8 @@ LoCoMo 包含 10 组多会话样本、272 个 session、5,882 条 dialogue turn 
 | 检索完整性 | 500/500，跨题污染 0 |
 | Snapshot SHA-256 | `fe6f179d8cd21cf71a204ebfaf4c62fff7db5ae434a61b69a3c9fdff334a1434` |
 
+**Embedding 选型说明。** LongMemEval-S 建库沿用 Memoria commit `54c9114fd6888e11821edc2ee9acd570c17c5ee3` 官方 Compose 的默认配置 `BAAI/bge-m3` / 1,024 维；同版本 CLI 初始化向导将该组合标为 `recommended`。该选择代表采用 Memoria 当时的默认/推荐配置，不是为了对齐 Mem0 或 Zep。向量、维度和索引 schema 在建库后固定，两个 LongMemEval Reader/Judge 主实验均复用同一冻结检索快照；更换 Embedding 必须重新建库，并应作为独立检索实验而非直接并入当前结果。
+
 Top-20 检索质量（非 Abstention 470 题）：
 
 | Hit@20 | Mean Evidence Recall@20 | Complete Recall@20 | MRR |

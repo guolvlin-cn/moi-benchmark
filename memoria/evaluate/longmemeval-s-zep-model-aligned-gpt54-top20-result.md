@@ -52,6 +52,8 @@ Zep 官网公布的 LongMemEval-S 实验使用 `gpt-5.4` Reader、`gpt-5.4` Judg
 | 跨题污染 | 0 |
 | Retrieval snapshot SHA256 | `fe6f179d8cd21cf71a204ebfaf4c62fff7db5ae434a61b69a3c9fdff334a1434` |
 
+**Embedding 选型说明。** 本轮建库沿用上述 Memoria commit 官方 `docker-compose.yml` 的默认配置 `BAAI/bge-m3` / 1024 维；同版本 CLI 初始化向导也将该组合标为 `recommended`。选择它是为了采用 Memoria 当时的默认/推荐配置，并非为了对齐 Zep。向量写入后，Embedding 模型、维度和索引 schema 已固定；本实验直接复用冻结的 Top-20 检索快照，以保证与其他 LongMemEval Reader/Judge 实验只比较下游模型和 Prompt。若更换 Embedding，需要重新建库并作为独立检索实验报告。
+
 Reader 输入的上下文先按 Memoria 检索排名截取 Top-20，再依据原始 `source_session_date` 从早到晚排序。实验复用冻结快照，因此与先前 Mem0 对标实验使用完全相同的检索结果。
 
 ### 3.2 Reader 与 Judge
