@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "low-confidence-governance-formal-v1.schema.json",
+  "title": "Memoria low-confidence governance formal v1 case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "suite", "case_id", "category", "subtype", "track", "user_id", "description", "initial_memories", "operations", "assertions", "tags"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "suite": {"const": "low-confidence-governance-formal-v1"},
+    "case_id": {"type": "string", "pattern": "^lcg-formal-[0-9]{3}-[a-z0-9-]+$"},
+    "category": {"enum": ["clear_delete", "clear_retain", "tier_comparison", "mixed_batch", "safety_boundary"]},
+    "subtype": {"type": "string", "minLength": 1},
+    "track": {"const": "controlled-direct-store"},
+    "user_id": {"type": "string", "pattern": "^feature-lcg-formal-[0-9]{3}$"},
+    "description": {"type": "string", "minLength": 1},
+    "initial_memories": {"type": "array", "minItems": 1, "maxItems": 5, "items": {"$ref": "#/$defs/memory"}},
+    "operations": {"type": "array", "minItems": 5, "items": {"$ref": "#/$defs/operation"}},
+    "assertions": {"type": "array", "minItems": 6, "items": {"$ref": "#/$defs/assertion"}},
+    "tags": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "$defs": {
+    "memory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alias", "content", "memory_type", "session_id", "subject_id", "trust_tier", "initial_confidence", "age_days", "expected_effective_confidence", "expected_action", "require_pre_retrieval", "extra_metadata"],
+      "properties": {
+        "alias": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "content": {"type": "string", "minLength": 1, "maxLength": 32768},
+        "memory_type": {"enum": ["semantic", "working", "episodic", "profile", "tool_result", "procedural"]},
+        "session_id": {"type": "string", "minLength": 1},
+        "subject_id": {"type": "string", "minLength": 1},
+        "trust_tier": {"enum": ["T1", "T2", "T3", "T4"]},
+        "initial_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "age_days": {"type": "integer", "minimum": 0, "maximum": 3650},
+        "expected_effective_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "expected_action": {"enum": ["delete", "retain"]},
+        "require_pre_retrieval": {"type": "boolean"},
+        "extra_metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["benchmark", "suite", "case_id", "memory_alias", "field"],
+          "properties": {
+            "benchmark": {"const": "memoria-features"},
+            "suite": {"const": "low-confidence-governance-formal-v1"},
+            "case_id": {"type": "string"},
+            "memory_alias": {"type": "string"},
+            "field": {"type": "string"}
+          }
+        }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["op"],
+      "properties": {
+        "op": {"enum": ["capture_state", "retrieve", "governance", "get_memory"]},
+        "operation_alias": {"type": "string"},
+        "state_alias": {"type": "string"},
+        "retrieval_alias": {"type": "string"},
+        "query": {"type": "string"},
+        "top_k": {"type": "integer", "minimum": 1, "maximum": 100},
+        "target_alias": {"type": "string"},
+        "force": {"type": "boolean"},
+        "expected_status": {"type": "integer", "minimum": 100, "maximum": 599}
+      }
+    },
+    "assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["at", "type", "required"],
+      "properties": {
+        "at": {"type": "string"},
+        "type": {"enum": ["exact_active_aliases", "retrieval_contains", "retrieval_excludes", "operation_body_value_equals", "operation_body_is_null", "operation_body_memory_equals", "state_hash_equals", "canary_state_hash_equals"]},
+        "required": {"type": "boolean"},
+        "aliases": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "field": {"type": "string"},
+        "expected": {},
+        "memory_alias": {"type": "string"},
+        "float_tolerance": {"type": "number", "exclusiveMinimum": 0},
+        "from": {"type": "string"}
+      }
+    }
+  }
+}

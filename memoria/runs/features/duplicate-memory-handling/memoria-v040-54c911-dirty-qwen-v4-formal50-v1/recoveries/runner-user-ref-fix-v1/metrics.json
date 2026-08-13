@@ -1,0 +1,53 @@
+{
+  "case_results": [
+    {
+      "case_id": "dmh-formal-047-scope-isolation",
+      "category": "coexistence_scope_isolation",
+      "failed_assertions": [],
+      "passed_assertions": 8,
+      "status": "PASS",
+      "subtype": "branch_isolation",
+      "total_assertions": 8
+    },
+    {
+      "case_id": "dmh-formal-048-scope-isolation",
+      "category": "coexistence_scope_isolation",
+      "failed_assertions": [],
+      "passed_assertions": 8,
+      "status": "PASS",
+      "subtype": "branch_isolation",
+      "total_assertions": 8
+    }
+  ],
+  "category_results": {
+    "coexistence_scope_isolation": {
+      "accuracy": 1.0,
+      "error": 0,
+      "fail": 0,
+      "pass": 2,
+      "total": 2
+    }
+  },
+  "completed_at": "2026-08-13T07:47:52.583094Z",
+  "selection_band_relation_results": {
+    "not_applicable": {
+      "accuracy": 1.0,
+      "pass": 2,
+      "total": 2
+    }
+  },
+  "status_counts": {
+    "PASS": 2
+  },
+  "strict_pass_rate": 1.0,
+  "subtype_results": {
+    "branch_isolation": {
+      "accuracy": 1.0,
+      "error": 0,
+      "fail": 0,
+      "pass": 2,
+      "total": 2
+    }
+  },
+  "total_cases": 2
+}

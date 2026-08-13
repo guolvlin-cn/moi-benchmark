@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "snapshot-rollback-formal-v1.schema.json",
+  "title": "Memoria snapshot and rollback formal case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "suite", "case_id", "category", "track", "user_id",
+    "description", "initial_memories", "operations", "assertions", "tags"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "suite": {"const": "snapshot-rollback-formal-v1"},
+    "case_id": {"type": "string", "pattern": "^sr-formal-[0-9]{3}-[a-z-]+$"},
+    "category": {
+      "enum": [
+        "single_operation", "mixed_operation", "multi_snapshot",
+        "post_rollback_continue", "idempotency", "edge_failure"
+      ]
+    },
+    "track": {"const": "controlled-direct-store"},
+    "user_id": {"type": "string", "pattern": "^feature-sr-formal-[0-9]{3}$"},
+    "description": {"type": "string", "minLength": 1},
+    "initial_memories": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/memory"}
+    },
+    "operations": {
+      "type": "array",
+      "minItems": 4,
+      "items": {"$ref": "#/$defs/operation"}
+    },
+    "assertions": {
+      "type": "array",
+      "minItems": 3,
+      "items": {"$ref": "#/$defs/assertion"}
+    },
+    "tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"},
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "memory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alias", "content", "memory_type", "session_id", "subject_id",
+        "trust_tier", "initial_confidence", "observed_at", "extra_metadata"
+      ],
+      "properties": {
+        "alias": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "content": {"type": "string", "minLength": 1, "maxLength": 32768},
+        "memory_type": {
+          "enum": ["semantic", "working", "episodic", "profile", "tool_result", "procedural"]
+        },
+        "session_id": {"type": "string", "minLength": 1},
+        "subject_id": {"type": "string", "minLength": 1},
+        "trust_tier": {"enum": ["T1", "T2", "T3", "T4"]},
+        "initial_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "extra_metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["benchmark", "suite", "case_id", "memory_alias", "field"],
+          "properties": {
+            "benchmark": {"const": "memoria-features"},
+            "suite": {"const": "snapshot-rollback-formal-v1"},
+            "case_id": {"type": "string"},
+            "memory_alias": {"type": "string"},
+            "field": {"type": "string"}
+          }
+        }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["op"],
+      "properties": {
+        "op": {
+          "enum": [
+            "capture_state", "retrieve", "create_snapshot", "store", "correct",
+            "delete", "rollback", "delete_snapshot"
+          ]
+        },
+        "operation_alias": {"type": "string"},
+        "state_alias": {"type": "string"},
+        "retrieval_alias": {"type": "string"},
+        "query": {"type": "string", "minLength": 1},
+        "top_k": {"type": "integer", "minimum": 1, "maximum": 100},
+        "snapshot_alias": {"type": "string"},
+        "snapshot_name": {"type": "string"},
+        "description": {"type": "string"},
+        "memory": {"$ref": "#/$defs/memory"},
+        "target_alias": {"type": "string"},
+        "result_alias": {"type": "string"},
+        "new_content": {"type": "string", "minLength": 1},
+        "reason": {"type": "string"},
+        "expected_state_from": {"type": "string"},
+        "expected_status": {"type": "integer", "minimum": 100, "maximum": 599},
+        "expected_result_contains": {"type": "string"}
+      }
+    },
+    "assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["at", "type", "required"],
+      "properties": {
+        "at": {"type": "string"},
+        "type": {
+          "enum": [
+            "exact_active_aliases", "active_aliases_include", "inactive_aliases_include",
+            "absent_aliases", "history_chain_equals", "state_hash_differs",
+            "state_hash_equals", "memory_identity_equals", "retrieval_contains",
+            "retrieval_excludes", "retrieval_rank_at_most", "retrieval_order_equals",
+            "operation_status_equals", "operation_body_contains",
+            "snapshot_canonical_name_equals"
+          ]
+        },
+        "required": {"type": "boolean"},
+        "expected": {},
+        "from": {"type": "string"},
+        "memory_alias": {"type": "string"},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "max_rank": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "duplicate-memory-handling-formal-v1.schema.json",
+  "title": "Memoria duplicate and near-duplicate memory handling formal v1 case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "suite", "case_id", "category", "subtype", "track", "users", "description", "operations", "relations", "expected_semantic_state", "tags"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "suite": {"const": "duplicate-memory-handling-formal-v1"},
+    "case_id": {"type": "string", "pattern": "^dmh-formal-[0-9]{3}-[a-z0-9-]+$"},
+    "category": {"enum": ["exact_duplicate_reuse", "semantic_equivalent_handling", "coexistence_scope_isolation"]},
+    "subtype": {"type": "string", "minLength": 1},
+    "track": {"const": "controlled-direct-store"},
+    "users": {
+      "type": "object",
+      "required": ["primary"],
+      "minProperties": 1,
+      "maxProperties": 2,
+      "additionalProperties": {"type": "string", "pattern": "^feature-dmh-formal-[0-9]{3}(-secondary)?$"}
+    },
+    "description": {"type": "string", "minLength": 1},
+    "operations": {"type": "array", "minItems": 4, "items": {"$ref": "#/$defs/operation"}},
+    "relations": {"type": "array", "minItems": 1, "maxItems": 2, "items": {"$ref": "#/$defs/relation"}},
+    "expected_semantic_state": {"$ref": "#/$defs/expected_state"},
+    "tags": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "$defs": {
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["op"],
+      "properties": {
+        "op": {"enum": ["store_memory", "create_branch", "capture_state", "capture_all_scopes", "get_history", "retrieve", "retrieve_all_scopes"]},
+        "operation_alias": {"type": "string"},
+        "memory_alias": {"type": "string", "pattern": "^v[1-3]$"},
+        "user_ref": {"enum": ["primary", "secondary"]},
+        "branch": {"type": "string", "minLength": 1},
+        "content": {"type": "string", "minLength": 1, "maxLength": 32768},
+        "memory_type": {"enum": ["semantic", "working", "episodic", "profile", "tool_result", "procedural"]},
+        "subject_id": {"type": "string", "minLength": 1},
+        "session_id": {"type": "string", "minLength": 1},
+        "trust_tier": {"enum": ["T1", "T2", "T3", "T4"]},
+        "initial_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "extra_metadata": {"type": "object", "additionalProperties": true},
+        "expected_status": {"type": "integer", "minimum": 100, "maximum": 599},
+        "state_alias": {"type": "string"},
+        "target_alias": {"type": "string", "pattern": "^v[1-3]$"},
+        "retrieval_alias": {"type": "string"},
+        "query_alias": {"type": "string", "pattern": "^v[1-3]$"},
+        "top_k": {"type": "integer", "minimum": 1, "maximum": 100}
+      }
+    },
+    "relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from_alias", "to_alias", "semantic_relation", "semantic_expected_action"],
+      "properties": {
+        "from_alias": {"type": "string", "pattern": "^v[1-3]$"},
+        "to_alias": {"type": "string", "pattern": "^v[1-3]$"},
+        "semantic_relation": {"enum": ["exact_duplicate", "semantic_equivalent", "independent", "scope_isolated"]},
+        "semantic_expected_action": {"enum": ["reuse", "supersede", "coexist"]},
+        "selection_measurement": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["embedding_model", "embedding_dimension", "cosine_similarity", "l2_distance", "threshold_l2", "selection_band"],
+          "properties": {
+            "embedding_model": {"const": "text-embedding-v4"},
+            "embedding_dimension": {"const": 1024},
+            "cosine_similarity": {"type": "number", "minimum": -1, "maximum": 1},
+            "l2_distance": {"type": "number", "minimum": 0},
+            "threshold_l2": {"const": 0.3162},
+            "selection_band": {"enum": ["inside_threshold", "near_outside_threshold", "clear_outside_threshold"]}
+          }
+        }
+      }
+    },
+    "expected_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_actions", "active_aliases_by_scope", "history_lengths", "retrieval_contains_by_scope", "retrieval_excludes_by_scope"],
+      "properties": {
+        "semantic_actions": {"type": "array", "minItems": 1, "items": {"enum": ["reuse", "supersede", "coexist"]}},
+        "active_aliases_by_scope": {"$ref": "#/$defs/scoped_aliases"},
+        "history_lengths": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1, "maximum": 3}},
+        "retrieval_contains_by_scope": {"$ref": "#/$defs/scoped_aliases"},
+        "retrieval_excludes_by_scope": {"$ref": "#/$defs/scoped_aliases"}
+      }
+    },
+    "scoped_aliases": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "array", "items": {"type": "string", "pattern": "^v[1-3]$"}, "uniqueItems": true}
+    }
+  }
+}

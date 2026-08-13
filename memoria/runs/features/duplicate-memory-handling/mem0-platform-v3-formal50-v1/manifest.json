@@ -1,0 +1,21 @@
+{
+  "api_generation": "v3-add-only",
+  "case_count": 50,
+  "completed_at": "2026-08-13T09:16:25.703523Z",
+  "dataset": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/memoria/datasets/feature/duplicate-memory-handling/duplicate-memory-handling-formal-v1.jsonl",
+  "dataset_sha256": "b30ae3ac6bbe02a792bafa497afa23bb31d310601e23db5795fb68c66fc39657",
+  "protocol": "infer=true; await each event SUCCEEDED before next write; list after every write",
+  "provider": "Mem0 Platform",
+  "run_id": "platform-v3-formal50-v1",
+  "runner_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runner_sha256": "367d85547a39d2f923a6e83f82cd77f10b9322a32abd0ecc5ed4184f4ec0d2dc",
+  "scope_mapping": {
+    "branch": "run_id",
+    "memory_type": "app_id",
+    "subject_id": "agent_id",
+    "user": "user_id"
+  },
+  "started_at": "2026-08-13T08:59:24.083655Z",
+  "status": "complete",
+  "write_count": 104
+}

@@ -1,0 +1,2163 @@
+{
+  "all_passed": true,
+  "case_results": [
+    {
+      "case_id": "sr-formal-001-single-correct",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 12,
+      "required_passed": 12,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 42.700457852333784,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:09.848260754+00:00",
+            "description": "Formal benchmark snapshot sr_formal_001_s1",
+            "memory_count": 3,
+            "name": "sr_formal_001_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_001_s1' created at Some(2026-08-12T08:13:09.848260754)",
+            "snapshot_name": "mem_snap_11_mem_u_946fc_sr_formal_001_s1",
+            "timestamp": "2026-08-12T08:13:09.848260754+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 95.50504200160503,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_001_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-001"
+    },
+    {
+      "case_id": "sr-formal-002-single-correct",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 12,
+      "required_passed": 12,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 17.850583884865046,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:12.025184963+00:00",
+            "description": "Formal benchmark snapshot sr_formal_002_s1",
+            "memory_count": 3,
+            "name": "sr_formal_002_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_002_s1' created at Some(2026-08-12T08:13:12.025184963)",
+            "snapshot_name": "mem_snap_11_mem_u_f9034_sr_formal_002_s1",
+            "timestamp": "2026-08-12T08:13:12.025184963+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 83.56883283704519,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_002_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-002"
+    },
+    {
+      "case_id": "sr-formal-003-single-correct",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 12,
+      "required_passed": 12,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 26.914707850664854,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:14.088453839+00:00",
+            "description": "Formal benchmark snapshot sr_formal_003_s1",
+            "memory_count": 3,
+            "name": "sr_formal_003_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_003_s1' created at Some(2026-08-12T08:13:14.088453839)",
+            "snapshot_name": "mem_snap_11_mem_u_5af2c_sr_formal_003_s1",
+            "timestamp": "2026-08-12T08:13:14.088453839+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 89.03654105961323,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_003_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-003"
+    },
+    {
+      "case_id": "sr-formal-004-single-correct",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 12,
+      "required_passed": 12,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 19.074541050940752,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:16.027187131+00:00",
+            "description": "Formal benchmark snapshot sr_formal_004_s1",
+            "memory_count": 3,
+            "name": "sr_formal_004_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_004_s1' created at Some(2026-08-12T08:13:16.027187131)",
+            "snapshot_name": "mem_snap_11_mem_u_9e557_sr_formal_004_s1",
+            "timestamp": "2026-08-12T08:13:16.027187131+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 86.22812503017485,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_004_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-004"
+    },
+    {
+      "case_id": "sr-formal-005-single-add",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 25.968292029574513,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:18.129401299+00:00",
+            "description": "Formal benchmark snapshot sr_formal_005_s1",
+            "memory_count": 3,
+            "name": "sr_formal_005_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_005_s1' created at Some(2026-08-12T08:13:18.129401299)",
+            "snapshot_name": "mem_snap_11_mem_u_22857_sr_formal_005_s1",
+            "timestamp": "2026-08-12T08:13:18.129401299+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 83.66149989888072,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_005_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-005"
+    },
+    {
+      "case_id": "sr-formal-006-single-add",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 28.917874908074737,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:20.007371175+00:00",
+            "description": "Formal benchmark snapshot sr_formal_006_s1",
+            "memory_count": 3,
+            "name": "sr_formal_006_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_006_s1' created at Some(2026-08-12T08:13:20.007371175)",
+            "snapshot_name": "mem_snap_11_mem_u_dac80_sr_formal_006_s1",
+            "timestamp": "2026-08-12T08:13:20.007371175+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 83.8457909412682,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_006_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-006"
+    },
+    {
+      "case_id": "sr-formal-007-single-add",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 19.398625008761883,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:22.202374718+00:00",
+            "description": "Formal benchmark snapshot sr_formal_007_s1",
+            "memory_count": 3,
+            "name": "sr_formal_007_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_007_s1' created at Some(2026-08-12T08:13:22.202374718)",
+            "snapshot_name": "mem_snap_11_mem_u_98bf6_sr_formal_007_s1",
+            "timestamp": "2026-08-12T08:13:22.202374718+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 86.01162512786686,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_007_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-007"
+    },
+    {
+      "case_id": "sr-formal-008-single-add",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 22.33416703529656,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:23.841470010+00:00",
+            "description": "Formal benchmark snapshot sr_formal_008_s1",
+            "memory_count": 3,
+            "name": "sr_formal_008_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_008_s1' created at Some(2026-08-12T08:13:23.841470010)",
+            "snapshot_name": "mem_snap_11_mem_u_9b1d3_sr_formal_008_s1",
+            "timestamp": "2026-08-12T08:13:23.841470010+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 84.25275003537536,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_008_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-008"
+    },
+    {
+      "case_id": "sr-formal-009-single-delete",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 28.57249998487532,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:25.474569011+00:00",
+            "description": "Formal benchmark snapshot sr_formal_009_s1",
+            "memory_count": 3,
+            "name": "sr_formal_009_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_009_s1' created at Some(2026-08-12T08:13:25.474569011)",
+            "snapshot_name": "mem_snap_11_mem_u_98898_sr_formal_009_s1",
+            "timestamp": "2026-08-12T08:13:25.474569011+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 76.99062488973141,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_009_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-009"
+    },
+    {
+      "case_id": "sr-formal-010-single-delete",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 29.185417108237743,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:26.843423345+00:00",
+            "description": "Formal benchmark snapshot sr_formal_010_s1",
+            "memory_count": 3,
+            "name": "sr_formal_010_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_010_s1' created at Some(2026-08-12T08:13:26.843423345)",
+            "snapshot_name": "mem_snap_11_mem_u_f82cb_sr_formal_010_s1",
+            "timestamp": "2026-08-12T08:13:26.843423345+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 150.9478751104325,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_010_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-010"
+    },
+    {
+      "case_id": "sr-formal-011-single-delete",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 24.721625028178096,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:28.290361512+00:00",
+            "description": "Formal benchmark snapshot sr_formal_011_s1",
+            "memory_count": 3,
+            "name": "sr_formal_011_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_011_s1' created at Some(2026-08-12T08:13:28.290361512)",
+            "snapshot_name": "mem_snap_11_mem_u_a16d0_sr_formal_011_s1",
+            "timestamp": "2026-08-12T08:13:28.290361512+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 81.74904086627066,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_011_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-011"
+    },
+    {
+      "case_id": "sr-formal-012-single-delete",
+      "category": "single_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 22.256416967138648,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:29.683622707+00:00",
+            "description": "Formal benchmark snapshot sr_formal_012_s1",
+            "memory_count": 3,
+            "name": "sr_formal_012_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_012_s1' created at Some(2026-08-12T08:13:29.683622707)",
+            "snapshot_name": "mem_snap_11_mem_u_e4f63_sr_formal_012_s1",
+            "timestamp": "2026-08-12T08:13:29.683622707+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 75.06358297541738,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_012_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-012"
+    },
+    {
+      "case_id": "sr-formal-013-mixed-add-correct",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.464959114789963,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:31.305654874+00:00",
+            "description": "Formal benchmark snapshot sr_formal_013_s1",
+            "memory_count": 5,
+            "name": "sr_formal_013_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_013_s1' created at Some(2026-08-12T08:13:31.305654874)",
+            "snapshot_name": "mem_snap_11_mem_u_160a6_sr_formal_013_s1",
+            "timestamp": "2026-08-12T08:13:31.305654874+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 71.9828330911696,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_013_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-013"
+    },
+    {
+      "case_id": "sr-formal-014-mixed-add-correct",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 18.433292163535953,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:33.506817542+00:00",
+            "description": "Formal benchmark snapshot sr_formal_014_s1",
+            "memory_count": 5,
+            "name": "sr_formal_014_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_014_s1' created at Some(2026-08-12T08:13:33.506817542)",
+            "snapshot_name": "mem_snap_11_mem_u_0164c_sr_formal_014_s1",
+            "timestamp": "2026-08-12T08:13:33.506817542+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 89.48545786552131,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_014_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-014"
+    },
+    {
+      "case_id": "sr-formal-015-mixed-add-correct",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 19.38608312048018,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:35.591677460+00:00",
+            "description": "Formal benchmark snapshot sr_formal_015_s1",
+            "memory_count": 5,
+            "name": "sr_formal_015_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_015_s1' created at Some(2026-08-12T08:13:35.591677460)",
+            "snapshot_name": "mem_snap_11_mem_u_31ca1_sr_formal_015_s1",
+            "timestamp": "2026-08-12T08:13:35.591677460+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 83.46591680310667,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_015_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-015"
+    },
+    {
+      "case_id": "sr-formal-016-mixed-add-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 20.23099991492927,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:37.616612252+00:00",
+            "description": "Formal benchmark snapshot sr_formal_016_s1",
+            "memory_count": 5,
+            "name": "sr_formal_016_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_016_s1' created at Some(2026-08-12T08:13:37.616612252)",
+            "snapshot_name": "mem_snap_11_mem_u_42f61_sr_formal_016_s1",
+            "timestamp": "2026-08-12T08:13:37.616612252+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 88.79583305679262,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_016_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-016"
+    },
+    {
+      "case_id": "sr-formal-017-mixed-add-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 18.70337501168251,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:39.428669878+00:00",
+            "description": "Formal benchmark snapshot sr_formal_017_s1",
+            "memory_count": 5,
+            "name": "sr_formal_017_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_017_s1' created at Some(2026-08-12T08:13:39.428669878)",
+            "snapshot_name": "mem_snap_11_mem_u_58d97_sr_formal_017_s1",
+            "timestamp": "2026-08-12T08:13:39.428669878+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 79.64050001464784,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_017_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-017"
+    },
+    {
+      "case_id": "sr-formal-018-mixed-add-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.20245816372335,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:41.594565546+00:00",
+            "description": "Formal benchmark snapshot sr_formal_018_s1",
+            "memory_count": 5,
+            "name": "sr_formal_018_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_018_s1' created at Some(2026-08-12T08:13:41.594565546)",
+            "snapshot_name": "mem_snap_11_mem_u_118b5_sr_formal_018_s1",
+            "timestamp": "2026-08-12T08:13:41.594565546+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 75.82775014452636,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_018_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-018"
+    },
+    {
+      "case_id": "sr-formal-019-mixed-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 25.131624890491366,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:43.479673547+00:00",
+            "description": "Formal benchmark snapshot sr_formal_019_s1",
+            "memory_count": 5,
+            "name": "sr_formal_019_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_019_s1' created at Some(2026-08-12T08:13:43.479673547)",
+            "snapshot_name": "mem_snap_11_mem_u_0e32b_sr_formal_019_s1",
+            "timestamp": "2026-08-12T08:13:43.479673547+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 79.1120829526335,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_019_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-019"
+    },
+    {
+      "case_id": "sr-formal-020-mixed-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 20.228999899700284,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:46.369142923+00:00",
+            "description": "Formal benchmark snapshot sr_formal_020_s1",
+            "memory_count": 5,
+            "name": "sr_formal_020_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_020_s1' created at Some(2026-08-12T08:13:46.369142923)",
+            "snapshot_name": "mem_snap_11_mem_u_1b322_sr_formal_020_s1",
+            "timestamp": "2026-08-12T08:13:46.369142923+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 92.10679191164672,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_020_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-020"
+    },
+    {
+      "case_id": "sr-formal-021-mixed-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 20.691125188022852,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:48.202394049+00:00",
+            "description": "Formal benchmark snapshot sr_formal_021_s1",
+            "memory_count": 5,
+            "name": "sr_formal_021_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_021_s1' created at Some(2026-08-12T08:13:48.202394049)",
+            "snapshot_name": "mem_snap_11_mem_u_52614_sr_formal_021_s1",
+            "timestamp": "2026-08-12T08:13:48.202394049+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 85.60141711495817,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_021_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-021"
+    },
+    {
+      "case_id": "sr-formal-022-mixed-add-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 18.46937509253621,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:49.953649967+00:00",
+            "description": "Formal benchmark snapshot sr_formal_022_s1",
+            "memory_count": 5,
+            "name": "sr_formal_022_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_022_s1' created at Some(2026-08-12T08:13:49.953649967)",
+            "snapshot_name": "mem_snap_11_mem_u_15286_sr_formal_022_s1",
+            "timestamp": "2026-08-12T08:13:49.953649967+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 84.10204201936722,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_022_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-022"
+    },
+    {
+      "case_id": "sr-formal-023-mixed-add-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 24.650458013638854,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:52.439729176+00:00",
+            "description": "Formal benchmark snapshot sr_formal_023_s1",
+            "memory_count": 5,
+            "name": "sr_formal_023_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_023_s1' created at Some(2026-08-12T08:13:52.439729176)",
+            "snapshot_name": "mem_snap_11_mem_u_347cb_sr_formal_023_s1",
+            "timestamp": "2026-08-12T08:13:52.439729176+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 79.42820806056261,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_023_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-023"
+    },
+    {
+      "case_id": "sr-formal-024-mixed-add-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 19.9736668728292,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:54.739100719+00:00",
+            "description": "Formal benchmark snapshot sr_formal_024_s1",
+            "memory_count": 5,
+            "name": "sr_formal_024_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_024_s1' created at Some(2026-08-12T08:13:54.739100719)",
+            "snapshot_name": "mem_snap_11_mem_u_27651_sr_formal_024_s1",
+            "timestamp": "2026-08-12T08:13:54.739100719+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 81.62125013768673,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_024_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-024"
+    },
+    {
+      "case_id": "sr-formal-025-mixed-add-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.92045804299414,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:57.664605345+00:00",
+            "description": "Formal benchmark snapshot sr_formal_025_s1",
+            "memory_count": 5,
+            "name": "sr_formal_025_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_025_s1' created at Some(2026-08-12T08:13:57.664605345)",
+            "snapshot_name": "mem_snap_11_mem_u_ae01d_sr_formal_025_s1",
+            "timestamp": "2026-08-12T08:13:57.664605345+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 92.52374991774559,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_025_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-025"
+    },
+    {
+      "case_id": "sr-formal-026-mixed-add-correct-delete",
+      "category": "mixed_operation",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 21.119249984622,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:13:59.983040749+00:00",
+            "description": "Formal benchmark snapshot sr_formal_026_s1",
+            "memory_count": 5,
+            "name": "sr_formal_026_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_026_s1' created at Some(2026-08-12T08:13:59.983040749)",
+            "snapshot_name": "mem_snap_11_mem_u_158e3_sr_formal_026_s1",
+            "timestamp": "2026-08-12T08:13:59.983040749+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 93.50474993698299,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_026_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-026"
+    },
+    {
+      "case_id": "sr-formal-027-multi-snapshot-correct",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 22.98112493008375,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:01.917952291+00:00",
+            "description": "Formal benchmark snapshot sr_formal_027_s1",
+            "memory_count": 3,
+            "name": "sr_formal_027_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_027_s1' created at Some(2026-08-12T08:14:01.917952291)",
+            "snapshot_name": "mem_snap_11_mem_u_015cb_sr_formal_027_s1",
+            "timestamp": "2026-08-12T08:14:01.917952291+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 26.15224989131093,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:02.144857+00:00",
+            "description": "Formal benchmark snapshot sr_formal_027_s2",
+            "memory_count": 3,
+            "name": "sr_formal_027_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_027_s2' created at Some(2026-08-12T08:14:02.144857)",
+            "snapshot_name": "mem_snap_11_mem_u_015cb_sr_formal_027_s2",
+            "timestamp": "2026-08-12T08:14:02.144857+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 86.01395809091628,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_027_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 168.2954579591751,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_027_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-027"
+    },
+    {
+      "case_id": "sr-formal-028-multi-snapshot-correct",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.141833022236824,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:03.994855792+00:00",
+            "description": "Formal benchmark snapshot sr_formal_028_s1",
+            "memory_count": 3,
+            "name": "sr_formal_028_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_028_s1' created at Some(2026-08-12T08:14:03.994855792)",
+            "snapshot_name": "mem_snap_11_mem_u_8a430_sr_formal_028_s1",
+            "timestamp": "2026-08-12T08:14:03.994855792+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 21.471625193953514,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:04.254592043+00:00",
+            "description": "Formal benchmark snapshot sr_formal_028_s2",
+            "memory_count": 3,
+            "name": "sr_formal_028_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_028_s2' created at Some(2026-08-12T08:14:04.254592043)",
+            "snapshot_name": "mem_snap_11_mem_u_8a430_sr_formal_028_s2",
+            "timestamp": "2026-08-12T08:14:04.254592043+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 84.51604191213846,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_028_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 72.0272499602288,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_028_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-028"
+    },
+    {
+      "case_id": "sr-formal-029-multi-snapshot-correct",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 21.934584015980363,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:06.012001877+00:00",
+            "description": "Formal benchmark snapshot sr_formal_029_s1",
+            "memory_count": 3,
+            "name": "sr_formal_029_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_029_s1' created at Some(2026-08-12T08:14:06.012001877)",
+            "snapshot_name": "mem_snap_11_mem_u_d397f_sr_formal_029_s1",
+            "timestamp": "2026-08-12T08:14:06.012001877+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 30.6449169293046,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:06.250869835+00:00",
+            "description": "Formal benchmark snapshot sr_formal_029_s2",
+            "memory_count": 3,
+            "name": "sr_formal_029_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_029_s2' created at Some(2026-08-12T08:14:06.250869835)",
+            "snapshot_name": "mem_snap_11_mem_u_d397f_sr_formal_029_s2",
+            "timestamp": "2026-08-12T08:14:06.250869835+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 110.5225421488285,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_029_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 82.33145903795958,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_029_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-029"
+    },
+    {
+      "case_id": "sr-formal-030-multi-snapshot-add",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 22.459583124145865,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:08.632885170+00:00",
+            "description": "Formal benchmark snapshot sr_formal_030_s1",
+            "memory_count": 3,
+            "name": "sr_formal_030_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_030_s1' created at Some(2026-08-12T08:14:08.632885170)",
+            "snapshot_name": "mem_snap_11_mem_u_a660e_sr_formal_030_s1",
+            "timestamp": "2026-08-12T08:14:08.632885170+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 14.441957930102944,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:08.854139753+00:00",
+            "description": "Formal benchmark snapshot sr_formal_030_s2",
+            "memory_count": 4,
+            "name": "sr_formal_030_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_030_s2' created at Some(2026-08-12T08:14:08.854139753)",
+            "snapshot_name": "mem_snap_11_mem_u_a660e_sr_formal_030_s2",
+            "timestamp": "2026-08-12T08:14:08.854139753+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 119.92091708816588,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_030_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 73.33454093895853,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_030_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-030"
+    },
+    {
+      "case_id": "sr-formal-031-multi-snapshot-add",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.212875006720424,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:10.483152879+00:00",
+            "description": "Formal benchmark snapshot sr_formal_031_s1",
+            "memory_count": 3,
+            "name": "sr_formal_031_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_031_s1' created at Some(2026-08-12T08:14:10.483152879)",
+            "snapshot_name": "mem_snap_11_mem_u_32213_sr_formal_031_s1",
+            "timestamp": "2026-08-12T08:14:10.483152879+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 13.252584030851722,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:10.700142712+00:00",
+            "description": "Formal benchmark snapshot sr_formal_031_s2",
+            "memory_count": 4,
+            "name": "sr_formal_031_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_031_s2' created at Some(2026-08-12T08:14:10.700142712)",
+            "snapshot_name": "mem_snap_11_mem_u_32213_sr_formal_031_s2",
+            "timestamp": "2026-08-12T08:14:10.700142712+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 81.7964170128107,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_031_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 73.92295799218118,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_031_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-031"
+    },
+    {
+      "case_id": "sr-formal-032-multi-snapshot-add",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 17.53191719762981,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:12.386087588+00:00",
+            "description": "Formal benchmark snapshot sr_formal_032_s1",
+            "memory_count": 3,
+            "name": "sr_formal_032_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_032_s1' created at Some(2026-08-12T08:14:12.386087588)",
+            "snapshot_name": "mem_snap_11_mem_u_3cf5d_sr_formal_032_s1",
+            "timestamp": "2026-08-12T08:14:12.386087588+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 13.70362495072186,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:12.543849338+00:00",
+            "description": "Formal benchmark snapshot sr_formal_032_s2",
+            "memory_count": 4,
+            "name": "sr_formal_032_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_032_s2' created at Some(2026-08-12T08:14:12.543849338)",
+            "snapshot_name": "mem_snap_11_mem_u_3cf5d_sr_formal_032_s2",
+            "timestamp": "2026-08-12T08:14:12.543849338+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 78.97050003521144,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_032_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 75.44737518765032,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_032_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-032"
+    },
+    {
+      "case_id": "sr-formal-033-multi-snapshot-delete",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.408500012010336,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:14.320856964+00:00",
+            "description": "Formal benchmark snapshot sr_formal_033_s1",
+            "memory_count": 3,
+            "name": "sr_formal_033_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_033_s1' created at Some(2026-08-12T08:14:14.320856964)",
+            "snapshot_name": "mem_snap_11_mem_u_d7d68_sr_formal_033_s1",
+            "timestamp": "2026-08-12T08:14:14.320856964+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 13.421957846730947,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:14.395213714+00:00",
+            "description": "Formal benchmark snapshot sr_formal_033_s2",
+            "memory_count": 2,
+            "name": "sr_formal_033_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_033_s2' created at Some(2026-08-12T08:14:14.395213714)",
+            "snapshot_name": "mem_snap_11_mem_u_d7d68_sr_formal_033_s2",
+            "timestamp": "2026-08-12T08:14:14.395213714+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 226.84445790946484,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_033_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 77.78154197148979,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_033_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-033"
+    },
+    {
+      "case_id": "sr-formal-034-multi-snapshot-delete",
+      "category": "multi_snapshot",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 17.955875024199486,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:16.277868173+00:00",
+            "description": "Formal benchmark snapshot sr_formal_034_s1",
+            "memory_count": 3,
+            "name": "sr_formal_034_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_034_s1' created at Some(2026-08-12T08:14:16.277868173)",
+            "snapshot_name": "mem_snap_11_mem_u_796c5_sr_formal_034_s1",
+            "timestamp": "2026-08-12T08:14:16.277868173+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 13.65666720084846,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:16.340093507+00:00",
+            "description": "Formal benchmark snapshot sr_formal_034_s2",
+            "memory_count": 2,
+            "name": "sr_formal_034_s2",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_034_s2' created at Some(2026-08-12T08:14:16.340093507)",
+            "snapshot_name": "mem_snap_11_mem_u_796c5_sr_formal_034_s2",
+            "timestamp": "2026-08-12T08:14:16.340093507+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 85.443832911551,
+          "expected_state_from": "state_s2",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_034_s2'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 124.56729216501117,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_034_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-034"
+    },
+    {
+      "case_id": "sr-formal-035-post-rollback-write",
+      "category": "post_rollback_continue",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.53504183702171,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:18.170834132+00:00",
+            "description": "Formal benchmark snapshot sr_formal_035_s1",
+            "memory_count": 3,
+            "name": "sr_formal_035_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_035_s1' created at Some(2026-08-12T08:14:18.170834132)",
+            "snapshot_name": "mem_snap_11_mem_u_02939_sr_formal_035_s1",
+            "timestamp": "2026-08-12T08:14:18.170834132+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 78.47637496888638,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_035_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-035"
+    },
+    {
+      "case_id": "sr-formal-036-post-rollback-write",
+      "category": "post_rollback_continue",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 25.464750127866864,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:19.655862217+00:00",
+            "description": "Formal benchmark snapshot sr_formal_036_s1",
+            "memory_count": 3,
+            "name": "sr_formal_036_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_036_s1' created at Some(2026-08-12T08:14:19.655862217)",
+            "snapshot_name": "mem_snap_11_mem_u_4eef8_sr_formal_036_s1",
+            "timestamp": "2026-08-12T08:14:19.655862217+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 90.64020798541605,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_036_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-036"
+    },
+    {
+      "case_id": "sr-formal-037-post-rollback-write",
+      "category": "post_rollback_continue",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 25.664165848866105,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:21.778070134+00:00",
+            "description": "Formal benchmark snapshot sr_formal_037_s1",
+            "memory_count": 3,
+            "name": "sr_formal_037_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_037_s1' created at Some(2026-08-12T08:14:21.778070134)",
+            "snapshot_name": "mem_snap_11_mem_u_62d81_sr_formal_037_s1",
+            "timestamp": "2026-08-12T08:14:21.778070134+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 83.31412519328296,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_037_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-037"
+    },
+    {
+      "case_id": "sr-formal-038-post-rollback-write",
+      "category": "post_rollback_continue",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 22.232749965041876,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:23.578339052+00:00",
+            "description": "Formal benchmark snapshot sr_formal_038_s1",
+            "memory_count": 3,
+            "name": "sr_formal_038_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_038_s1' created at Some(2026-08-12T08:14:23.578339052)",
+            "snapshot_name": "mem_snap_11_mem_u_f7aa2_sr_formal_038_s1",
+            "timestamp": "2026-08-12T08:14:23.578339052+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 79.36262502335012,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_038_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-038"
+    },
+    {
+      "case_id": "sr-formal-039-post-rollback-write",
+      "category": "post_rollback_continue",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 87.27087499573827,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:25.200294428+00:00",
+            "description": "Formal benchmark snapshot sr_formal_039_s1",
+            "memory_count": 3,
+            "name": "sr_formal_039_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_039_s1' created at Some(2026-08-12T08:14:25.200294428)",
+            "snapshot_name": "mem_snap_11_mem_u_9bdcb_sr_formal_039_s1",
+            "timestamp": "2026-08-12T08:14:25.200294428+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 84.31999990716577,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_039_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-039"
+    },
+    {
+      "case_id": "sr-formal-040-post-rollback-write",
+      "category": "post_rollback_continue",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 9,
+      "required_passed": 9,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 23.73283402994275,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:26.744920595+00:00",
+            "description": "Formal benchmark snapshot sr_formal_040_s1",
+            "memory_count": 3,
+            "name": "sr_formal_040_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_040_s1' created at Some(2026-08-12T08:14:26.744920595)",
+            "snapshot_name": "mem_snap_11_mem_u_5c912_sr_formal_040_s1",
+            "timestamp": "2026-08-12T08:14:26.744920595+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 85.0390421692282,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_040_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-040"
+    },
+    {
+      "case_id": "sr-formal-041-rollback-idempotency",
+      "category": "idempotency",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 38.3881248999387,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:28.375193429+00:00",
+            "description": "Formal benchmark snapshot sr_formal_041_s1",
+            "memory_count": 3,
+            "name": "sr_formal_041_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_041_s1' created at Some(2026-08-12T08:14:28.375193429)",
+            "snapshot_name": "mem_snap_11_mem_u_30e96_sr_formal_041_s1",
+            "timestamp": "2026-08-12T08:14:28.375193429+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 107.99479205161333,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_041_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 84.7711251117289,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_041_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-041"
+    },
+    {
+      "case_id": "sr-formal-042-rollback-idempotency",
+      "category": "idempotency",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 22.949500009417534,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:29.860129165+00:00",
+            "description": "Formal benchmark snapshot sr_formal_042_s1",
+            "memory_count": 3,
+            "name": "sr_formal_042_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_042_s1' created at Some(2026-08-12T08:14:29.860129165)",
+            "snapshot_name": "mem_snap_11_mem_u_2568e_sr_formal_042_s1",
+            "timestamp": "2026-08-12T08:14:29.860129165+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 80.63058299012482,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_042_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 79.65416694059968,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_042_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-042"
+    },
+    {
+      "case_id": "sr-formal-043-rollback-idempotency",
+      "category": "idempotency",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 24.147167103365064,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:31.621108875+00:00",
+            "description": "Formal benchmark snapshot sr_formal_043_s1",
+            "memory_count": 3,
+            "name": "sr_formal_043_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_043_s1' created at Some(2026-08-12T08:14:31.621108875)",
+            "snapshot_name": "mem_snap_11_mem_u_c6b79_sr_formal_043_s1",
+            "timestamp": "2026-08-12T08:14:31.621108875+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 80.21916705183685,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_043_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 80.21045802161098,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_043_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-043"
+    },
+    {
+      "case_id": "sr-formal-044-rollback-idempotency",
+      "category": "idempotency",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 20.749874878674746,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:33.539249084+00:00",
+            "description": "Formal benchmark snapshot sr_formal_044_s1",
+            "memory_count": 3,
+            "name": "sr_formal_044_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_044_s1' created at Some(2026-08-12T08:14:33.539249084)",
+            "snapshot_name": "mem_snap_11_mem_u_cc74d_sr_formal_044_s1",
+            "timestamp": "2026-08-12T08:14:33.539249084+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 82.87708298303187,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_044_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        },
+        {
+          "elapsed_ms": 81.69595804065466,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_044_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-044"
+    },
+    {
+      "case_id": "sr-formal-045-empty-snapshot",
+      "category": "edge_failure",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 7,
+      "required_passed": 7,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 24.3777499999851,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:34.502242168+00:00",
+            "description": "Formal benchmark snapshot sr_formal_045_s1",
+            "memory_count": 0,
+            "name": "sr_formal_045_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_045_s1' created at Some(2026-08-12T08:14:34.502242168)",
+            "snapshot_name": "mem_snap_11_mem_u_24e63_sr_formal_045_s1",
+            "timestamp": "2026-08-12T08:14:34.502242168+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 78.74483289197087,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_045_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-045"
+    },
+    {
+      "case_id": "sr-formal-046-noop-rollback",
+      "category": "edge_failure",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 5,
+      "required_passed": 5,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 31.575707951560616,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:36.039277168+00:00",
+            "description": "Formal benchmark snapshot sr_formal_046_s1",
+            "memory_count": 2,
+            "name": "sr_formal_046_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_046_s1' created at Some(2026-08-12T08:14:36.039277168)",
+            "snapshot_name": "mem_snap_11_mem_u_97dd6_sr_formal_046_s1",
+            "timestamp": "2026-08-12T08:14:36.039277168+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 89.55212496221066,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_046_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-046"
+    },
+    {
+      "case_id": "sr-formal-047-snapshot-name-normalization",
+      "category": "edge_failure",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 5,
+      "required_passed": 5,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 21.542083006352186,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:36.937343044+00:00",
+            "description": "Formal benchmark snapshot formal-name-with-hyphens",
+            "memory_count": 2,
+            "name": "formal_name_with_hyphens",
+            "registered": true,
+            "result": "Snapshot 'formal_name_with_hyphens' created at Some(2026-08-12T08:14:36.937343044)",
+            "snapshot_name": "mem_snap_11_mem_u_4a45a_formal_name_with_hyphens",
+            "timestamp": "2026-08-12T08:14:36.937343044+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 82.69966603256762,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'formal_name_with_hyphens'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-047"
+    },
+    {
+      "case_id": "sr-formal-048-missing-snapshot",
+      "category": "edge_failure",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 5,
+      "required_passed": 5,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 8.704874897375703,
+          "expected_state_from": null,
+          "operation": "rollback",
+          "response": "Memory not found: Snapshot 'snapshot_that_does_not_exist'",
+          "status": 404,
+          "visibility_attempts": 0,
+          "visibility_converged": null
+        }
+      ],
+      "user_id": "feature-sr-formal-048"
+    },
+    {
+      "case_id": "sr-formal-049-deleted-snapshot",
+      "category": "edge_failure",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 6,
+      "required_passed": 6,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 22.960458183661103,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:38.407414545+00:00",
+            "description": "Formal benchmark snapshot sr_formal_049_s1",
+            "memory_count": 2,
+            "name": "sr_formal_049_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_049_s1' created at Some(2026-08-12T08:14:38.407414545)",
+            "snapshot_name": "mem_snap_11_mem_u_b5c05_sr_formal_049_s1",
+            "timestamp": "2026-08-12T08:14:38.407414545+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 9.02033387683332,
+          "operation": "delete_snapshot",
+          "response": "",
+          "status": 204
+        },
+        {
+          "elapsed_ms": 2.9217908158898354,
+          "expected_state_from": null,
+          "operation": "rollback",
+          "response": "Memory not found: Snapshot 'sr_formal_049_s1'",
+          "status": 404,
+          "visibility_attempts": 0,
+          "visibility_converged": null
+        }
+      ],
+      "user_id": "feature-sr-formal-049"
+    },
+    {
+      "case_id": "sr-formal-050-duplicate-snapshot-name",
+      "category": "edge_failure",
+      "diagnostic_assertions": 0,
+      "diagnostic_passed": 0,
+      "required_assertions": 7,
+      "required_passed": 7,
+      "status": "PASS",
+      "timings": [
+        {
+          "elapsed_ms": 119.67645795084536,
+          "operation": "snapshot",
+          "response": {
+            "created_at": "2026-08-12T08:14:39.279341920+00:00",
+            "description": "Formal benchmark snapshot sr_formal_050_s1",
+            "memory_count": 2,
+            "name": "sr_formal_050_s1",
+            "registered": true,
+            "result": "Snapshot 'sr_formal_050_s1' created at Some(2026-08-12T08:14:39.279341920)",
+            "snapshot_name": "mem_snap_11_mem_u_dd6f6_sr_formal_050_s1",
+            "timestamp": "2026-08-12T08:14:39.279341920+00:00"
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 6.5948329865932465,
+          "operation": "snapshot",
+          "response": {
+            "description": "Formal benchmark snapshot sr_formal_050_s1",
+            "name": "sr_formal_050_s1",
+            "result": "Snapshot 'sr_formal_050_s1' already exists."
+          },
+          "status": 201
+        },
+        {
+          "elapsed_ms": 80.73108387179673,
+          "expected_state_from": "baseline",
+          "operation": "rollback",
+          "response": {
+            "result": "Rolled back to snapshot 'sr_formal_050_s1'"
+          },
+          "status": 200,
+          "visibility_attempts": 1,
+          "visibility_converged": true
+        }
+      ],
+      "user_id": "feature-sr-formal-050"
+    }
+  ],
+  "completed_at": "2026-08-12T08:14:39.883025Z",
+  "status_counts": {
+    "ERROR": 0,
+    "FAIL": 0,
+    "PASS": 50
+  },
+  "strict_pass_rate_all_cases": 1.0,
+  "system_error_rate": 0.0,
+  "total_cases": 50
+}
