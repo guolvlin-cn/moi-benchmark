@@ -27,10 +27,10 @@ another model makes the C0 audit fail.
 ## Check the 88-task queue
 
 ```bash
-cd "/Users/chenyuwei/.codex/worktrees/1311/MOI benchmark"
+cd "$(git rev-parse --show-toplevel)"
 
 HARBOR_BIN="$HOME/.local/share/uv/tools/harbor/bin/harbor" \
-MOI_BENCH_DATA_ROOT="/Users/chenyuwei/Documents/MOI benchmark" \
+MOI_BENCH_DATA_ROOT="$PWD" \
   /bin/bash astra/runners/scripts/pi-terminal-bench-all-c0.sh --check
 ```
 
@@ -39,7 +39,7 @@ MOI_BENCH_DATA_ROOT="/Users/chenyuwei/Documents/MOI benchmark" \
 ```bash
 export ZAI_API_KEY='replace-with-your-key'
 export HARBOR_BIN="$HOME/.local/share/uv/tools/harbor/bin/harbor"
-export MOI_BENCH_DATA_ROOT="/Users/chenyuwei/Documents/MOI benchmark"
+export MOI_BENCH_DATA_ROOT="$PWD"
 # Optional when host downloads should use the local mixed/HTTP proxy:
 export PI_TBENCH_CACHE_PROXY_URL="http://127.0.0.1:7892"
 
@@ -52,7 +52,7 @@ results, pass its resource queue with `--retry-queue`:
 ```bash
 /bin/bash astra/runners/scripts/pi-terminal-bench-all-c0.sh \
   --retry-queue \
-  "/Users/chenyuwei/Documents/MOI benchmark/work/pi-c0-all-state/retry-balance-plus-unfinished.queue.tsv"
+  "$MOI_BENCH_DATA_ROOT/work/pi-c0-all-state/retry-balance-plus-unfinished.queue.tsv"
 ```
 
 The generated queue is largest-memory and longest-timeout first, so the first

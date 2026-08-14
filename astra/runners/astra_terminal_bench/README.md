@@ -13,18 +13,20 @@ contention with other local Astra experiments.
 Required environment:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
+
 # Builds for Docker Desktop's active architecture (arm64 on this Mac).
 ./astra/runners/astra_smoke/build-linux.sh
 
 export ASTRA_API_URL=http://host.docker.internal:17001
 export ASTRA_ACCESS_TOKEN='short-lived local Astra access token' # only used when memory=true
-export ASTRA_TBENCH_LINUX_BINARY='/Users/chenyuwei/Documents/MOI benchmark/work/astra-linux-build/target/release/astra'
+export ASTRA_TBENCH_LINUX_BINARY="$PWD/work/astra-linux-build/target/release/astra"
 export ASTRA_TBENCH_MODEL='c5bde5de-9805-48d4-a016-1db6e6018fc4'
 export ASTRA_TBENCH_READ_MEMORY=false
-export PYTHONPATH="/Users/chenyuwei/Documents/MOI benchmark${PYTHONPATH:+:$PYTHONPATH}"
+export PYTHONPATH="$PWD${PYTHONPATH:+:$PYTHONPATH}"
 
 harbor run \
-  --config "/Users/chenyuwei/Documents/MOI benchmark/astra/runners/astra_terminal_bench/s0-four-cases.yaml" \
+  --config "astra/runners/astra_terminal_bench/s0-four-cases.yaml" \
   --yes
 ```
 
@@ -44,7 +46,7 @@ To run C0, keep the same environment and use:
 
 ```bash
 harbor run \
-  --config "/Users/chenyuwei/Documents/MOI benchmark/astra/runners/astra_terminal_bench/c0-four-cases.yaml" \
+  --config "astra/runners/astra_terminal_bench/c0-four-cases.yaml" \
   --yes
 ```
 
@@ -84,10 +86,10 @@ execution time.
 Run all 89 tasks with the same C0 wrapper, defaulting to one trial at a time:
 
 ```bash
-"/Users/chenyuwei/Documents/MOI benchmark/astra/runners/scripts/astra-terminal-bench-all-c0.sh" \
+astra/runners/scripts/astra-terminal-bench-all-c0.sh \
   --check
 
-"/Users/chenyuwei/Documents/MOI benchmark/astra/runners/scripts/astra-terminal-bench-all-c0.sh" \
+astra/runners/scripts/astra-terminal-bench-all-c0.sh \
   --yes
 ```
 
@@ -99,7 +101,7 @@ During a run, follow the newest host-side ledger with:
 
 ```bash
 ledger=$(find \
-  "/Users/chenyuwei/Documents/MOI benchmark/work/astra-c0-lifecycle-jobs" \
+  "$PWD/work/astra-c0-lifecycle-jobs" \
   -name controller.jsonl -print | sort | tail -1)
 tail -f "$ledger"
 ```

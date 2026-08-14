@@ -18,12 +18,12 @@ are not required. Supply the key through the process environment or a private
 env file, never in this repository.
 
 ```bash
-cd "/Users/chenyuwei/Documents/MOI benchmark"
+cd "$(git rev-parse --show-toplevel)"
 
 export GLM_API_KEY='replace-with-your-key'
 
 harbor run \
-  --config "/Users/chenyuwei/Documents/MOI benchmark/astra/runners/hermes_terminal_bench/s0-four-cases.yaml" \
+  --config "astra/runners/hermes_terminal_bench/s0-four-cases.yaml" \
   --yes
 ```
 
@@ -74,12 +74,13 @@ The C0 approval policy is frozen as follows:
 Run the four exploratory cases with:
 
 ```bash
-cd "/Users/chenyuwei/Documents/MOI benchmark"
+cd "$(git rev-parse --show-toplevel)"
 
 export GLM_API_KEY='replace-with-your-key'
+export MOI_BENCH_ROOT="$PWD"
 
 harbor run \
-  --config "/Users/chenyuwei/Documents/MOI benchmark/astra/runners/hermes_terminal_bench/c0-four-cases.yaml" \
+  --config "astra/runners/hermes_terminal_bench/c0-four-cases.yaml" \
   --yes
 ```
 
@@ -94,7 +95,7 @@ a queue file.
 For one task:
 
 ```bash
-cd "/Users/chenyuwei/Documents/MOI benchmark"
+cd "$(git rev-parse --show-toplevel)"
 
 export GLM_API_KEY='replace-with-your-key'
 
@@ -254,7 +255,7 @@ generations.
 Checking the queue does not start Docker, Harbor trials, or model calls:
 
 ```bash
-cd "/Users/chenyuwei/Documents/MOI benchmark"
+cd "$(git rev-parse --show-toplevel)"
 
 /bin/bash astra/runners/scripts/hermes-terminal-bench-all-c0.sh \
   --check
@@ -263,7 +264,7 @@ cd "/Users/chenyuwei/Documents/MOI benchmark"
 Run all currently missing tasks:
 
 ```bash
-cd "/Users/chenyuwei/Documents/MOI benchmark"
+cd "$(git rev-parse --show-toplevel)"
 
 export GLM_API_KEY='replace-with-your-key'
 
@@ -326,7 +327,7 @@ The full wrapper also holds `work/.hermes-c0-all-run.lock`. If an uncatchable
 running and remove exactly that lock with:
 
 ```bash
-rmdir "/Users/chenyuwei/Documents/MOI benchmark/work/.hermes-c0-all-run.lock"
+rmdir "$PWD/work/.hermes-c0-all-run.lock"
 ```
 
 The controller uses each task's upstream agent timeout multiplied by two. For

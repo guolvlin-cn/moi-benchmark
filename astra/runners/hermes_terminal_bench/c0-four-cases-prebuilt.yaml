@@ -1,4 +1,4 @@
-jobs_dir: "/Users/chenyuwei/Documents/MOI benchmark/work/hermes-c0-prebuilt-lifecycle-jobs"
+jobs_dir: "work/hermes-c0-prebuilt-lifecycle-jobs"
 n_concurrent_trials: 1
 timeout_multiplier: 2.0
 agent_timeout_multiplier: 2.25
@@ -6,7 +6,7 @@ environment:
   type: docker
   mounts:
     - type: bind
-      source: "/Users/chenyuwei/Documents/MOI benchmark/astra/runners/hermes_terminal_bench/managed"
+      source: "${MOI_BENCH_ROOT}/astra/runners/hermes_terminal_bench/managed"
       target: /etc/hermes
       read_only: true
 agents:
@@ -22,7 +22,7 @@ agents:
       trigger_timeout_sec: 1800
       poll_interval_sec: 0.5
 datasets:
-  - path: "/Users/chenyuwei/Documents/MOI benchmark/work/terminal-bench-2-1-hermes-prebuilt/tasks"
+  - path: "work/terminal-bench-2-1-hermes-prebuilt/tasks"
     task_names:
       - modernize-scientific-stack
       - overfull-hbox

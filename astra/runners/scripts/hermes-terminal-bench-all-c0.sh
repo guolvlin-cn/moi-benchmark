@@ -27,6 +27,7 @@ EOF
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 workspace_root="$(cd "${script_dir}/../../.." && pwd)"
+export MOI_BENCH_ROOT="${MOI_BENCH_ROOT:-${workspace_root}}"
 runner_root="${workspace_root}/astra/runners/hermes_terminal_bench"
 builder="${runner_root}/prebuilt/build-images.sh"
 summarizer="${runner_root}/prebuilt/summarize_results.py"
