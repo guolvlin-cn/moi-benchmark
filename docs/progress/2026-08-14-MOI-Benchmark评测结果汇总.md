@@ -1,6 +1,6 @@
 # MOI Benchmark 评测结果汇总（2026-08-14）
 
-> 汇报范围：Astra、Memoria、文档解析、信息提取、NL2SQL。五项评测均已完成。ARAG、Morpheus 等其他评测待结果更新后另行补充。
+> 汇报范围：Astra、Memoria、文档解析、信息提取、NL2SQL、RAG。六项评测均已完成。ARAG、Morpheus 等其他评测待结果更新后另行补充。
 
 ## 1. 总览
 
@@ -11,6 +11,7 @@
 | 文档解析 | 王雅琪 | OmniDocBench v1.6 全量 1,651 页、半导体场景私有测试集 50 份文件 | MinerU、PaddleOCR-VL | 公开集 Overall 90.23，高于 MinerU-Pipeline、低于 MinerU-2.5 及新版 PaddleOCR-VL；私有行业集显著领先两项竞品                                                                                                    |
 | 信息提取 | 王雅琪 | SROIE 100、VRDU 97、Kleister-NDA 100，共 297 份文档             | LandingAI ADE        | LandingAI 三数据集平均 F1 领先 5.20pp；MOI 在 VRDU 上差距较小，并体现出更保守的空值处理特征                                                                                                                    |
 | NL2SQL   | 张颖   | Enron 私有集 50 题×3 轮、Spider Mix50 公开集 50 题×1 轮       | Chat2DB、Wren AI     | 统一使用 Qwen3.7；MOI 在 Enron 加入语义配置后，人工严格正确率提升 10pp、口语题提升 20pp；Spider Mix50 中 MOI 执行正确率为 80%、SQL 成功率为 100%，正确率距最高结果 4pp                                         |
+| RAG      | 周乐天      | WikiEval、MMDocIR、DocBench、EnterpriseRAG-Bench、自建Lenovo-bench | Dify、FastGPT、MaxKB | MOI 在关键词覆盖、布局召回和企业检索降噪上表现突出；FastGPT 的高 K 证据召回与答案覆盖更强，Dify 在 DocBench 总体正确率上领先                                                                          |
 
 ## 2. astra
 
@@ -344,12 +345,38 @@ Enron 能观察业务语义、口语表达和三轮稳定性，但属于自建�
 
 两套 SOP 均包含可分发数据或建库脚本、数据库指纹、问题与 Golden SQL、产品运行器、评分程序、结果冻结清单和校验入口。商业产品账号、API Key 和本地部署凭据不进入 Git，复现者需自行准备。
 
-## 7. 汇总结论
+## 7. RAG
+
+本轮将 WikiEval、MMDocIR、DocBench、EnterpriseRAG-Bench 和 Lenovo-bench 的现有实验结果统一纳入 MOI RAG Benchmark v1.0，直接比较 MOI、Dify、FastGPT 与 MaxKB 在文本检索、长文档检索、复杂 PDF 问答、企业多源问答和证据链问答上的表现。
+
+### 7.1 核心结果
+
+| 数据集 / 核心指标 | MOI | Dify | FastGPT | MaxKB | 核心结论 |
+| ----------------- | ---: | ---: | ------: | ----: | -------- |
+| **WikiEval**<br>Source R@1 / Keyword Recall | **100.0%** / **65.19%** | **100.0%** / 59.46% | **100.0%** / 41.39% | 98.0% / 62.37% | 三个平台 Source R@1 并列 100%；MOI 关键词覆盖最高 |
+| **MMDocIR**<br>Page@1 / Page@10 / Layout@10 / QA (/5) | 43.49% / 84.02% / **61.87%** / 3.91 | **53.51%** / 78.00% / 59.98% / **4.02** | 51.46% / 87.72% / 57.39% / 3.95 | 48.95% / **92.56%** / 59.01% / 3.87 | Dify 的首位页面与 QA 最好，MaxKB 的高 K 页面覆盖最高，MOI 的布局召回最高 |
+| **DocBench**<br>Overall / Multimodal / Metadata / Unanswerable | 58.26% / 43.23% / **24.53%** / **85.96%** | **61.32%** / **45.12%** / 20.85% / 79.21% | 54.23% / 40.92% / 22.98% / 84.97% | 59.91% / 42.72% / 22.98% / 80.82% | Dify 的总体和多模态正确率最高；MOI 的 Metadata 与拒答表现最好 |
+| **EnterpriseRAG-Bench**<br>Doc R@10 / Complete@10 / Invalid Extras↓ / Correctness / Completeness | 80.59% / 74.68% / **2.345** / 49.20% / **58.74%** | 88.51% / 78.30% / 5.991 / 55.40% / 57.50% | **89.61%** / **85.53%** / 8.685 / **60.27%** / 57.95% | — | FastGPT 的召回与正确率最高；MOI 的无效文档最少、完整性最高 |
+| **Lenovo-bench**<br>Evidence R@10 / Complete@10 / Response Correctness / Reference Recall | 50.00% / 41.51% / 88.62% / 18.71% | 45.35% / 36.54% / 68.52% / 8.63% | **75.16%** / **62.26%** / 86.11% / **45.32%** | 60.35% / 58.11% / **91.07%** / 3.60% | FastGPT 的证据召回与答案覆盖最高；MaxKB 的已输出 claim 正确率最高，MOI 次之 |
+
+### 7.2 核心结论
+
+1. **MOI 的主要优势**：WikiEval 关键词覆盖最高，MMDocIR 布局召回最高，EnterpriseRAG-Bench 的无效额外文档最少且 Completeness 最高，体现出稳定文本链路、布局定位和低噪声证据组织能力。
+2. **MOI 的主要短板**：EnterpriseRAG-Bench 与 Lenovo-bench 的高 K 证据召回和完整证据集覆盖落后于 FastGPT；Lenovo-bench 的 Reference-claim Recall 偏低，DocBench 总体和多模态正确率仍有提升空间。
+3. **整体判断**：四个平台没有跨五类任务的一致冠军。Dify 在生成质量与 DocBench 上更强，FastGPT 在证据召回和答案覆盖上领先，MaxKB 在部分高 K 页面覆盖和已输出 claim 正确率上突出，MOI 的优势集中在布局检索、低噪声和证据完整性。
+
+详细结果与复现说明：
+
+- [MOI RAG Benchmark v1.0](../../rag/results/MOI_rag_benchmark_v1.0.md)
+- [MOI RAG 四平台五数据集实验复现报告](../../rag/results/MOI_rag_reproduction_guide.md)
+
+## 8. 汇总结论
 
 1. **Astra**：两个 benchmark 的通过率均低于 Hermes/PI，优势是部分任务具有独占通过能力，且可靠 Token 记录的单任务消耗相对较低，尤其是输入token相对最低。主要短板在于长任务规划自检、请求控制和对网络波动的鲁棒性。
 2. **Memoria**：LongMemEval-S 已达到或略高于公开竞品参照，LoCoMo 仍有约 3.6～4.6pp 差距；在 Feature 评测中，快照与回滚、分支/Diff/Merge、低置信记忆治理等 Memoria 特有能力表现稳定，其他竞品目前不具备同构能力；语义等价记忆处理仍有优化空间。
 3. **文档解析**：MOI 在 OmniDocBench 上处于 MinerU-Pipeline 之上、MinerU-2.5 和新版 PaddleOCR-VL 之下；在半导体行业私有集上则显著领先 MinerU Precision 和 PaddleOCR-VL，体现出复杂、多页和跨页文档场景优势。
 4. **信息提取**：LandingAI 目前整体领先；MOI 在 VRDU 监管表单上差距较小，并在 Precision、文档全对率和空值控制上具有局部优势。
 5. **NL2SQL**：统一模型后，MOI 的 Enron 语义配置使人工严格正确率提升 10pp、口语题提升 20pp；Spider Mix50 单轮中 Wren 严格执行正确率为 84%，MOI 与 Chat2DB 为 80%，其中 MOI 和 Chat2DB 均达到 100% SQL 成功率。准确率、稳定性、延时和 Token 应分别报告，不合并为单一总分。
+6. **RAG**：四个平台在五类数据集上没有一致最优者。MOI 的文本链路稳定，在关键词覆盖、布局召回、企业检索降噪和完整性上表现突出；高 K 完整证据集召回、答案覆盖以及 DocBench 总体和多模态正确率仍需加强。
 
-以上四项评测均已完成；本汇总后续仅在其他评测方向产生正式结果后继续补充范围。
+以上六项评测均已完成；本汇总后续仅在其他评测方向产生正式结果后继续补充范围。
