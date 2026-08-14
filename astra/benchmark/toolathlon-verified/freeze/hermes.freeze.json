@@ -1,0 +1,208 @@
+{
+  "dependency_locks": [
+    {
+      "path": "package-lock.json",
+      "sha256": "0e640654c13fe79ed4761b31151d90863e4512ea6725b4f00b327bcf5b71eaf9",
+      "size_bytes": 715613
+    },
+    {
+      "path": "package.json",
+      "sha256": "e53cfd9c14c1a7fa6bea9d9ee35c2a057cdf78ea1700ecb98f11fa710fbc2118",
+      "size_bytes": 1502
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "7fc0552a6bfdd8d58632a9164e3432c868fc4d928170f8c8a545421134c5952f",
+      "size_bytes": 21339
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "456f76d5396df0f543d1035c2d05173cae1882c290ba585cc926a79958b9d7fe",
+      "size_bytes": 661359
+    }
+  ],
+  "frozen_on": "2026-08-06",
+  "product_prompt_sources": [
+    {
+      "path": "agent/agent_init.py",
+      "sha256": "85b7cb13d6e6306e75d5eec46f193433df680425533b7d35ee99e0f7eab9512a",
+      "size_bytes": 111649
+    },
+    {
+      "path": "agent/conversation_loop.py",
+      "sha256": "112da68377b84352d1c86a092758f8042f2d2416f084b87cbcf15e953277bc1b",
+      "size_bytes": 333707
+    },
+    {
+      "path": "agent/prompt_builder.py",
+      "sha256": "d338e874e24eb0b4213c0f81864043b1ef476a151ca7d20e48d687a588ea2b57",
+      "size_bytes": 101647
+    },
+    {
+      "path": "agent/system_prompt.py",
+      "sha256": "261481c471ddee92ced3fe381d63acbbe9136bedb6420f613983225007e2bb9a",
+      "size_bytes": 27244
+    },
+    {
+      "path": "hermes_cli/config.py",
+      "sha256": "172b78ecb923048859ca177d96f5b010b44ec74bb1d13553577ff49bde1a071d",
+      "size_bytes": 427475
+    },
+    {
+      "path": "hermes_cli/gateway.py",
+      "sha256": "ed105fe335d5d46ae94f57a85e68839de3e0a2de76093b01aed039d0d5862d76",
+      "size_bytes": 291249
+    },
+    {
+      "path": "run_agent.py",
+      "sha256": "f0bbbbdfe358f3aebaa2423417531279108ee37c93e8236e15652cae589d7497",
+      "size_bytes": 305181
+    },
+    {
+      "path": "tools/mcp_tool.py",
+      "sha256": "a7328f3f3762ae43f6a9426646b0c28c17ec8663aa391506f48d628035ad5460",
+      "size_bytes": 257416
+    }
+  ],
+  "resolved_internal_defaults": {
+    "adapter_overrides_product_retry_values": false,
+    "app_level_model_max_attempts": 3,
+    "benchmark_effective_approval_mode": "smart",
+    "benchmark_overrides": {
+      "other_task_mcp_tools_allowed": false,
+      "resume": false,
+      "task_gateway": "fresh single-task Gateway process per attempt"
+    },
+    "compression_enabled": true,
+    "compression_threshold": 0.5,
+    "evidence": [
+      {
+        "path": "agent/agent_init.py",
+        "sha256": "85b7cb13d6e6306e75d5eec46f193433df680425533b7d35ee99e0f7eab9512a",
+        "size_bytes": 111649
+      },
+      {
+        "path": "agent/conversation_loop.py",
+        "sha256": "112da68377b84352d1c86a092758f8042f2d2416f084b87cbcf15e953277bc1b",
+        "size_bytes": 333707
+      },
+      {
+        "path": "hermes_cli/config.py",
+        "sha256": "172b78ecb923048859ca177d96f5b010b44ec74bb1d13553577ff49bde1a071d",
+        "size_bytes": 427475
+      },
+      {
+        "path": "tools/mcp_tool.py",
+        "sha256": "a7328f3f3762ae43f6a9426646b0c28c17ec8663aa391506f48d628035ad5460",
+        "size_bytes": 257416
+      }
+    ],
+    "freeze_semantics": "only the source-resolved values enumerated in this object remain product defaults; common isolation, permission/no-resume, and task-scoped Gateway selection are explicit benchmark overrides",
+    "gateway_inactivity_timeout_seconds": 1800,
+    "internal_approval_default": "smart",
+    "max_turns": 90,
+    "mcp_connect_timeout_seconds": 60,
+    "mcp_initial_connect_max_retries": 3,
+    "mcp_reconnect_max_retries": 5,
+    "mcp_tool_timeout_seconds": 300,
+    "openai_sdk_low_level_max_retries": 2
+  },
+  "runtime_artifacts": {
+    "hermes_executable": {
+      "executable": true,
+      "mode": "0o775",
+      "path": "external/hermes-agent/hermes-venv/bin/hermes",
+      "sha256": "16b9840ed1cc44541d758f790d1b6db5afba1f4193ee9d59f1f15871029875fa",
+      "size_bytes": 353
+    },
+    "lock_resolved_environment_manifest": {
+      "path": "astra/work/toolathlon-verified/hermes-environment.json",
+      "sha256": "07e60a361735bd3140e8fdb70272f2304596cfd6e5a65b71f291626f4f94ba24",
+      "size_bytes": 2290
+    },
+    "python": {
+      "elf_byte_order": "little",
+      "elf_machine": "EM_X86_64",
+      "executable": true,
+      "format": "ELF64",
+      "mode": "0o775",
+      "path": "external/hermes-agent/hermes-venv/bin/python",
+      "resolved_path": "/home/vagrant/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/bin/python3.11",
+      "sha256": "c0b74b270ea823c760917e64fbde1945e67ba739d97fa716a48a5b69e6505d62",
+      "size_bytes": 21730776,
+      "symlink_target": "/home/vagrant/.local/share/uv/python/cpython-3.11-linux-x86_64-gnu/bin/python3.11",
+      "target_platform": "linux/amd64"
+    },
+    "python_probe": {
+      "implementation": "CPython",
+      "machine": "x86_64",
+      "system": "Linux",
+      "version": "3.11.15",
+      "version_info": [
+        3,
+        11,
+        15
+      ]
+    },
+    "rendered_runtime_config": {
+      "path": "astra/work/toolathlon-verified/rendered-hermes-runtime.json",
+      "sha256": "4b944c8281b27be99e23b3200a73619a0e300d5c3844016a87ebddf8268a75e7",
+      "size_bytes": 664
+    },
+    "runtime_qualification": "go",
+    "source_commit_and_tree_verified": true,
+    "target_platform": "linux/amd64",
+    "target_python": ">=3.11,<3.14",
+    "uv": {
+      "path": "/home/vagrant/.local/bin/uv",
+      "sha256": "92face6b1f0462ad911857957bd168cd4ae45515e2a2cb3fcc3ecbda3d4d82b1",
+      "version": "uv 0.12.1 (x86_64-unknown-linux-gnu)"
+    }
+  },
+  "schema_version": "toolathlon.system-freeze.v1",
+  "source": {
+    "archive": {
+      "path": "astra/work/toolathlon-verified/freeze-3.3/hermes-agent-f4df260f26c93f15694698869f3ea8e965eea301.tar",
+      "sha256": "392c935a63a7fd931d8861d1b7a6f65a7b7fd9013e8877504eae97799678ff07",
+      "size_bytes": 152709120
+    },
+    "canonical_checkout": "external/hermes-agent",
+    "commit": "f4df260f26c93f15694698869f3ea8e965eea301",
+    "describe": "v2026.7.20-63-gf4df260f2",
+    "detached_head": false,
+    "project_version": "0.19.0",
+    "release_descriptor": "v2026.7.20-63-gf4df260f2",
+    "repository": "https://github.com/NousResearch/hermes-agent.git",
+    "symbolic_ref": "main",
+    "tree": "40f0136a9995a9a1712a3ab28c231a2812748cdf",
+    "working_tree": "clean"
+  },
+  "state_and_startup": {
+    "adapter_command_shape": [
+      "<hermes>",
+      "gateway",
+      "run",
+      "--no-supervise",
+      "--external-supervisor"
+    ],
+    "fresh_gateway_api_key_per_attempt": true,
+    "fresh_gateway_process_per_attempt": true,
+    "fresh_hermes_home_per_run": true,
+    "gateway_api": "foreground Runs API",
+    "hooks": false,
+    "hooks_auto_accept": false,
+    "memory_provider": "",
+    "random_session_id_per_attempt": true,
+    "resume": false,
+    "task_tool_exposure": {
+      "all_current_task_mcp_tools_required": true,
+      "other_task_mcp_tools_allowed": false,
+      "provider_request_tool_names_and_hash_recorded": true,
+      "scope": "current task and attempt only",
+      "source": "that attempt's live Gateway tools/list"
+    },
+    "true_server_user_identity": false,
+    "yolo": false
+  },
+  "system_id": "hermes"
+}

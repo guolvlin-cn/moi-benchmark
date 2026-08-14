@@ -1,0 +1,246 @@
+{
+  "bundle_protocol": {
+    "core_files": [
+      {
+        "path": "scripts/decoupled/container_preprocess.py",
+        "sha256": "29b618f6b09f37afd100ff3852faf8997d90cf4622d7442465411aa0d3c55c49",
+        "size_bytes": 6232
+      },
+      {
+        "path": "scripts/decoupled/container_eval.py",
+        "sha256": "85e7068fff582395fb451700387e9536b67cc36e0d09c0c734d8aa6764c2591c",
+        "size_bytes": 7931
+      },
+      {
+        "path": "scripts/decoupled/container_tool_gateway.py",
+        "sha256": "b6e97168ded1d223cbfc399c68f8a63e28450c4a7bf8cc725555e78c6d9c5277",
+        "size_bytes": 16383
+      },
+      {
+        "path": "scripts/run_single_decoupled.sh",
+        "sha256": "4caa92af9889c4788d353131ee8e2e4c66a3cb960325b252019f2ece6da5c44a",
+        "size_bytes": 39140
+      },
+      {
+        "path": "scripts/containerized/task_artifact_guard.py",
+        "sha256": "ca4c0d328f5ba1f7533801631464fa6c544445ced49448b39e22ce18f84fa5cc",
+        "size_bytes": 33307
+      },
+      {
+        "path": "utils/data_structures/task_config.py",
+        "sha256": "da9f87c487dedddfb049a4d2b7d4b048f143511f2306beedf535dfebcfac7a2e",
+        "size_bytes": 19754
+      },
+      {
+        "path": "utils/evaluation/evaluator.py",
+        "sha256": "7fd166e18d9ea114ddf9dadfc93acf2d55cb4b4f09c64e7ed01702d6a0e66ee7",
+        "size_bytes": 5945
+      },
+      {
+        "path": "utils/evaluation/retry.py",
+        "sha256": "db11e66ec241e1c5d00327b0bf7209c20323c4582c827e62b7a261235c17f69e",
+        "size_bytes": 4519
+      },
+      {
+        "path": "utils/general/helper.py",
+        "sha256": "6a2a34e57c66df1021e95f2a3a4ae6faca394f1d1114cd448afd137d44dde0a7",
+        "size_bytes": 20897
+      },
+      {
+        "path": "utils/status_manager.py",
+        "sha256": "0d6a608c682488b3ee6c61bad279fa206013e5c7ac35ffc6172dac44960ed9df",
+        "size_bytes": 2840
+      }
+    ],
+    "ground_truth_and_evaluator_hidden_from_agent": true,
+    "schema_version": 2,
+    "trusted_resolved_task_config_required": true
+  },
+  "evaluator": {
+    "allow_resume": false,
+    "network_policy": "task-scoped policy must be resolved before runtime qualification",
+    "output_pass_values": [
+      true,
+      false,
+      null
+    ],
+    "random_seed_policy": "no evaluator-wide seed declared by frozen source",
+    "sha256_manifest": {
+      "path": "evaluator-manifest.sha256",
+      "sha256": "0afe377a285dff5cc224578e65f9ff7bb442e21846edb730b05f5cdcdaea0dc6"
+    },
+    "task_evaluator_file_count": 227,
+    "whole_check_retry_default": {
+      "max_attempts": 3,
+      "poll_seconds": 5
+    }
+  },
+  "freeze_state": "source_frozen_runtime_qualification_no_go",
+  "frozen_at": "2026-08-05",
+  "gold_replay": {
+    "reason": "container runtime, application snapshots, and credentials are not configured",
+    "state": "NO_GO"
+  },
+  "schema_version": 1,
+  "section": "3.1",
+  "source": {
+    "archive": {
+      "exists": true,
+      "mode": "0o600",
+      "path": "/home/vagrant/moi-benchmark/astra/work/toolathlon-verified/source/Toolathlon-2aed2468858f15818acafa178518390cc4b0f5cb.tar",
+      "sha256": "a8f4cb71c4da143003796694ef426be88617eb86a1001abc4542d0efe42543fa",
+      "size_bytes": 363837440,
+      "type": "file"
+    },
+    "checkout_path": "/home/vagrant/dataset/Toolathlon",
+    "clean": true,
+    "commit": "2aed2468858f15818acafa178518390cc4b0f5cb",
+    "detached_head": true,
+    "repository": "https://github.com/hkust-nlp/Toolathlon",
+    "tree": "a739a794e514734e320be0010511dceed26704bd"
+  },
+  "tasks": {
+    "count": 108,
+    "file_count": 1812,
+    "ids": [
+      "ab-testing",
+      "academic-pdf-report",
+      "academic-warning",
+      "add-bibtex",
+      "apply-phd-email",
+      "arrange-workspace",
+      "canvas-arrange-exam",
+      "canvas-art-manager",
+      "canvas-art-quiz",
+      "canvas-do-quiz",
+      "canvas-homework-grader-python",
+      "canvas-list-test",
+      "canvas-new-students-notification",
+      "canvas-submit-late-work",
+      "cooking-guidance",
+      "course-assistant",
+      "course-schedule",
+      "courses-ta-hws",
+      "cvpr-research",
+      "dataset-license-issue",
+      "detect-revised-terms",
+      "dietary-health",
+      "email-paper-homepage",
+      "excel-data-transformation",
+      "excel-market-research",
+      "experiments-recordings",
+      "fillout-online-forms",
+      "filter-low-selling-products",
+      "find-alita-paper",
+      "flagged-transactions",
+      "game-statistics",
+      "gdp-cr5-analysis",
+      "git-bug-hunt",
+      "git-milestone",
+      "git-repo",
+      "hk-top-conf",
+      "huggingface-upload",
+      "identify-all-songs",
+      "imagenet",
+      "inter-final-performance-analysis",
+      "interview-report",
+      "inventory-sync",
+      "investment-decision-analysis",
+      "invoice-org",
+      "ipad-edu-price",
+      "k8s-deployment-cleanup",
+      "k8s-mysql",
+      "k8s-pr-preview-testing",
+      "k8s-redis-helm-upgrade",
+      "k8s-safety-audit",
+      "landing-task-reminder",
+      "language-school",
+      "latex-prompt-box",
+      "live-transactions",
+      "llm-training-dataset",
+      "logical-datasets-collection",
+      "machine-operating",
+      "meeting-assign",
+      "merge-hf-datasets",
+      "mrbeast-analysis",
+      "music-analysis",
+      "nhl-b2b-analysis",
+      "notion-find-job",
+      "notion-hr",
+      "notion-movies",
+      "notion-personal-website",
+      "nvidia-market",
+      "nvidia-stock-analysis",
+      "oil-price",
+      "paper-checker",
+      "payable-invoice-checker",
+      "personal-website-construct",
+      "ppt-analysis",
+      "price-comparison",
+      "privacy-desensitization",
+      "profile-update-online",
+      "quantitative-financial-analysis",
+      "reimbursement-form-filler",
+      "sales-accounting",
+      "search-ca-school",
+      "set-conf-cr-ddl",
+      "shopping-helper",
+      "sla-timeout-monitor",
+      "stock-build-position",
+      "student-interview",
+      "subway-planning",
+      "sync-todo-to-readme",
+      "task-tracker",
+      "train-ticket-plan",
+      "travel-exchange",
+      "travel-expense-reimbursement",
+      "trip-adviser",
+      "trip-itinerary-generator",
+      "university-course-selection",
+      "update-material-inventory",
+      "upenn-campus-route",
+      "verl-dataset",
+      "vlm-history-completer",
+      "wandb-best-score",
+      "wandb-shortest-length",
+      "woocommerce-customer-survey",
+      "woocommerce-new-product",
+      "woocommerce-new-welcome",
+      "woocommerce-product-recall",
+      "woocommerce-stock-alert",
+      "woocommerce-update-cover",
+      "yahoo-analysis",
+      "youtube-repo"
+    ],
+    "sha256_manifest": {
+      "path": "task-manifest.sha256",
+      "sha256": "b5faf6db99505bfe57f92f0f6d097d0eccac1dd22cd1ceb71e86169c7e2f9609"
+    },
+    "smoke_count": 14,
+    "smoke_ids_in_order": [
+      "find-alita-paper",
+      "set-conf-cr-ddl",
+      "course-schedule",
+      "canvas-homework-grader-python",
+      "arrange-workspace",
+      "notion-movies",
+      "price-comparison",
+      "quantitative-financial-analysis",
+      "excel-data-transformation",
+      "notion-hr",
+      "shopping-helper",
+      "woocommerce-stock-alert",
+      "git-bug-hunt",
+      "k8s-safety-audit"
+    ],
+    "split": "tasks/finalpool",
+    "task_conflict": {
+      "exists": true,
+      "mode": "0o664",
+      "path": "tasks/finalpool/task_conflict.json",
+      "sha256": "d7f0732ddebd6d775295c8889c0d16202c447476e38041e4e5d1fb312fe4cce1",
+      "size_bytes": 265,
+      "type": "file"
+    }
+  }
+}

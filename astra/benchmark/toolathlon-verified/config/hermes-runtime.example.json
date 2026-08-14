@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/ABSOLUTE/PATH/hermes-venv/bin/hermes"
+  ],
+  "environment_manifest": "/ABSOLUTE/PATH/hermes-environment.json",
+  "environment_manifest_sha256": "REPLACE_WITH_64_HEX_SHA256",
+  "executable_sha256": "REPLACE_WITH_64_HEX_SHA256",
+  "gateway_startup_timeout_seconds": 600,
+  "schema_version": 1,
+  "source_commit": "f4df260f26c93f15694698869f3ea8e965eea301",
+  "source_dir": "/home/vagrant/moi-benchmark/external/hermes-agent",
+  "source_tree": "40f0136a9995a9a1712a3ab28c231a2812748cdf"
+}
+

@@ -13,6 +13,44 @@
 - “可见 token 下界”则汇总全部任务中所有已经明确上报的 usage；缺 usage 的请求保持未知，不推算也不补零。因此它覆盖全部 108 题，但只是实际 token 总量的最低可确认值。
 - “排除 Astra 内部非流式请求”采用可直接从代理日志复核的规则：Astra `model_request.started` 同时满足 `stream=false` 且 `request_tool_count=0`，再按 `model_request_id` 排除其对应 completed usage。Hermes 侧仍统计完整 provider usage。
 
+## 实验产品与配置
+
+| 项目 | Astra | Hermes |
+| --- | --- | --- |
+| 产品版本 | Linux/AMD64 release build；源码 `v0.0.5-4-g844473c68`，commit `844473c68649d8ea43e10b616dc4fbf98e2321e8`；CLI 输出 `astra 0.1.0` | release descriptor `v2026.7.20-63-gf4df260f2`，commit `f4df260f26c93f15694698869f3ea8e965eea301`，project version `0.19.0` |
+| API 模型 ID | `deepseek-v4-flash` | `deepseek-v4-flash` |
+| 模型版本口径 | DeepSeek-V4-Flash-0731 | DeepSeek-V4-Flash-0731 |
+| 模型提供方 | DeepSeek 官方 API，经每次运行独立的本地代理 | 同左 |
+| 推理配置 | Thinking enabled；`reasoning_effort=max` | 同左 |
+| Temperature | 发送 `temperature=0`；DeepSeek Thinking 模式下该参数不生效 | 同左 |
+| 产品原生 max turns | Astra 冻结默认值 `300` | Hermes 冻结默认值 `90` |
+| 外部统一请求预算 | 每题最多 100 次 product model request；允许第 100 次，拒绝第 101 次 | 同左 |
+| 实际最高模型请求数 | 100 | 100 |
+| Agent deadline | 按任务采用 R1/R2/R3/R4：1800/2700/3600/5400 秒 | 同左 |
+| Prompt 口径 | 保留 Astra 原生 system prompt，并输入 Toolathlon 公共 system/task 指令 | 保留 Hermes 原生 system prompt，并输入相同公共指令 |
+| 工具范围 | 保留产品内置工具；提供当前任务的 MCP 工具 | 保留产品内置工具；提供当前任务的 MCP 工具 |
+
+Astra 与 Hermes 的内部“turn”并非同构指标。本实验以运行代理观测到的 `model_request.started` 作为统一请求预算和 step 统计，不把产品原生 max turns 或模型请求数直接解释为用户可见对话回合。
+
+## 基础运行环境
+
+| 环境项 | 配置 |
+| --- | --- |
+| 数据集 | Toolathlon，固定 108 题；Astra/Hermes 每题各有一个正式有效结果 |
+| Host OS | Ubuntu 22.04.5 LTS，Linux `5.15.0-186-generic`，UTC |
+| CPU | Intel Xeon Platinum 8255C @ 2.50 GHz，x86_64，8 vCPU |
+| 内存与 Swap | Linux MemTotal 7.75 GiB（名义配置 8 GiB）；8 GiB swap，swappiness 10，关闭 zram |
+| 虚拟化 | Oracle/Vagrant 虚拟机 |
+| 容器运行时 | rootful Docker Engine 29.1.3，cgroup v2，systemd cgroup driver，overlayfs |
+| 任务镜像 | `lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f` |
+| 单任务资源上限 | 8 CPU、8 GiB RAM、8 GiB swap |
+| Kubernetes 工具 | Kind v0.20.0；kubectl v1.34.1 |
+| 外部应用状态 | 由任务 preprocess 恢复；Canvas、WooCommerce、Poste、MatrixOne 和 Kind 等使用共享部署，并非每题重新部署整套服务 |
+| 网络边界 | 未统一关闭公开互联网出口；任务级 MCP 限于当前任务，但终端、fetch、浏览器或产品内置工具仍可能访问公开网络 |
+| Evaluator | 使用 Toolathlon 每题原生 evaluator，在 Agent 终止后独立执行 |
+
+这里记录的是实验冻结时的环境；实验结束后宿主机内核或服务状态的变化不追溯修改历史运行口径。
+
 ## 任务完成结果
 
 | 指标                                |            Astra |           Hermes |

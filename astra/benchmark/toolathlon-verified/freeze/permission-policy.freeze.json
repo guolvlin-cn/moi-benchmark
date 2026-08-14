@@ -1,0 +1,40 @@
+{
+  "agent_internal_defaults": {
+    "astra": {
+      "permission": "prompt",
+      "retries": "resolved in astra.freeze.json"
+    },
+    "hermes": {
+      "permission": "smart",
+      "retries": "resolved in hermes.freeze.json"
+    }
+  },
+  "common_noninteractive_boundary": {
+    "astra_effective_permission_mode": "auto",
+    "external_side_effect_scope": "only credentials/tenant provisioned for the current task",
+    "hermes_effective_approval_mode": "smart",
+    "shell_string_auto_approval_by_adapter": false,
+    "task_gateway": "one run-local loopback /sse endpoint",
+    "unresolved_or_out_of_scope_approval": "deny",
+    "workspace": "one fresh task workspace; direct file approvals must resolve inside it"
+  },
+  "frozen_on": "2026-08-06",
+  "policy_id": "toolathlon-task-scoped-v1",
+  "rendered_run_policy": {
+    "dynamic_fields": [
+      "task_scope.gateway_url",
+      "task_scope.workspace"
+    ],
+    "hash_must_be_recorded_in": "resolved-config.json",
+    "template": "../config/permission-policy.example.json"
+  },
+  "schema_version": "toolathlon.permission-and-state-freeze.v1",
+  "state": {
+    "adapter_retry_count": 0,
+    "cross_task_memory": false,
+    "fresh_product_home_per_run": true,
+    "fresh_session_id_per_run": true,
+    "resume": false,
+    "whole_run_retry": "only pre-registered external infrastructure-invalid rule"
+  }
+}

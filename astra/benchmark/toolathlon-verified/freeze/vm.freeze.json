@@ -1,0 +1,174 @@
+{
+  "captured_at": "2026-08-05T11:10:07Z",
+  "cgroup": {
+    "host_controllers": [
+      "cpuset",
+      "cpu",
+      "io",
+      "memory",
+      "hugetlb",
+      "pids",
+      "rdma",
+      "misc"
+    ],
+    "task_limit_probe": {
+      "ephemeral_container_removed": true,
+      "image": "lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f",
+      "network": "none",
+      "observed": {
+        "controllers": [
+          "cpuset",
+          "cpu",
+          "io",
+          "memory",
+          "hugetlb",
+          "pids",
+          "rdma",
+          "misc"
+        ],
+        "cpu_max": "800000 100000",
+        "memory_max_bytes": 8589934592,
+        "memory_swap_max_bytes": 8589934592
+      },
+      "requested": {
+        "cpu_count": 8,
+        "memory_max_bytes": 8589934592,
+        "memory_swap_max_bytes": 8589934592
+      }
+    },
+    "version": 2
+  },
+  "disk": {
+    "docker_root": {
+      "available_bytes_at_capture": 131001561088,
+      "filesystem": "ext4",
+      "mountpoint": "/",
+      "path": "/var/lib/docker",
+      "source": "/dev/sda1",
+      "total_bytes": 208097689600
+    },
+    "docker_root_path": "/var/lib/docker",
+    "workspace": {
+      "available_bytes_at_capture": 131001561088,
+      "filesystem": "ext4",
+      "mountpoint": "/",
+      "path": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze",
+      "source": "/dev/sda1",
+      "total_bytes": 208097689600
+    }
+  },
+  "host": {
+    "architecture": "x86_64",
+    "cpu_count": 8,
+    "distribution": "Ubuntu 22.04.5 LTS",
+    "kernel": "5.15.0-186-generic",
+    "memory": {
+      "firmware_evidence": "[    0.129988] Memory: 8084548K/8388152K available (16393K kernel code, 4402K rwdata, 11004K rodata, 3292K init, 18768K bss, 303344K reserved, 0K cma-reserved)",
+      "firmware_reported_bytes": 8589467648,
+      "linux_memtotal_bytes": 8321880064,
+      "plan_nominal_bytes": 8589934592
+    },
+    "virtualization": "oracle"
+  },
+  "oom_evidence_contract": {
+    "classification": {
+      "product_or_adapter_cgroup": "valid/product_resource_exhausted",
+      "shared_task_container_preprocess_gateway_or_evaluator": "infra_invalid/infra_resource_exhausted"
+    },
+    "sources": [
+      "cgroup-v2 memory.events and memory.events.local",
+      "Docker inspect State.OOMKilled and container exit code",
+      "kernel journal for the run monotonic interval",
+      "per-second VM/container/Adapter resource samples"
+    ]
+  },
+  "qualification": "GO",
+  "qualification_checks": {
+    "architecture_linux_amd64": true,
+    "cgroup_cpu_memory_controllers": true,
+    "cgroup_v2": true,
+    "cpu_count_is_8": true,
+    "docker_runtime_frozen": true,
+    "firmware_memory_is_8_gib": true,
+    "ntp_synchronized": true,
+    "rtc_is_utc": true,
+    "swap_allocated_size_is_8_gib": true,
+    "swap_enabled": true,
+    "swap_is_regular_file": true,
+    "swap_persistent": true,
+    "swap_priority_is_minus_2": true,
+    "swappiness_is_10": true,
+    "task_image_runtime_verified": true,
+    "task_memory_max_is_8_gib": true,
+    "task_memory_swap_max_is_8_gib": true,
+    "timezone_is_utc": true,
+    "zram_disabled": true
+  },
+  "randomness": {
+    "known_source_seed_values": [
+      7,
+      42
+    ],
+    "policy": "preserve task-source fixed seeds bound by task-manifest.sha256",
+    "preprocess_seed_override": null,
+    "python_hash_seed": 0
+  },
+  "resource_policy": {
+    "other_build_training_or_benchmark_workloads_during_scored_runs": "forbidden",
+    "sample_interval_seconds": 1,
+    "workers": 1
+  },
+  "schema_version": "toolathlon.vm.freeze.v1",
+  "swap": {
+    "allocated_size_bytes": 8589934592,
+    "cgroup_memory_swap_max_bytes": 8589934592,
+    "enabled": true,
+    "file": {
+      "group": "root",
+      "mode": "0o600",
+      "owner": "root",
+      "path": "/swapfile",
+      "sha256": null,
+      "size_bytes": 8589934592
+    },
+    "path": "/swapfile",
+    "persistent_configuration": [
+      {
+        "group": "root",
+        "mode": "0o644",
+        "owner": "root",
+        "path": "/etc/sysctl.d/99-toolathlon-benchmark.conf",
+        "sha256": "a7b7a3e68e1e38ef859c444a466276ae8859ec1aeba6c3f50faf2bbd37ca0e76",
+        "size_bytes": 19
+      },
+      {
+        "group": "root",
+        "mode": "0o644",
+        "owner": "root",
+        "path": "/etc/modprobe.d/99-toolathlon-disable-zram.conf",
+        "sha256": "4de02dc2c87b35365050545a03a5947b933c0199742137dfd67324795ad3f85b",
+        "size_bytes": 86
+      }
+    ],
+    "persistent_fstab_entry": "/swapfile none swap sw 0 0",
+    "priority": -2,
+    "size_bytes": 8589934592,
+    "type": "file",
+    "usable_size_bytes": 8589930496,
+    "used_bytes_at_capture": 0,
+    "vm_swappiness": 10,
+    "zram_enabled": false
+  },
+  "time": {
+    "kernel_clocksource": "tsc",
+    "monotonic_clock": "CLOCK_MONOTONIC/time.monotonic_ns",
+    "ntp_enabled": true,
+    "ntp_service": "systemd-timesyncd.service",
+    "ntp_service_active": true,
+    "ntp_service_enabled": true,
+    "ntp_synchronized": true,
+    "rtc_in_local_timezone": false,
+    "timezone": "Etc/UTC",
+    "wall_clock": "CLOCK_REALTIME"
+  }
+}

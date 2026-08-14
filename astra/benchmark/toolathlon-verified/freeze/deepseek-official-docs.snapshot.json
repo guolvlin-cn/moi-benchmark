@@ -1,0 +1,56 @@
+{
+  "accessed_on": "2026-08-06",
+  "authority": "DeepSeek official API documentation",
+  "schema_version": "deepseek.official-docs.snapshot.v1",
+  "snapshot_boundary": "semantic facts and retrieval date are frozen; the upstream live pages are not content-addressed by DeepSeek",
+  "sources": [
+    {
+      "facts": {
+        "alias_calling_method_unchanged": true,
+        "current_alias_version": "DeepSeek-V4-Flash-0731",
+        "openai_base_url": "https://api.deepseek.com",
+        "request_model_id": "deepseek-v4-flash"
+      },
+      "url": "https://api-docs.deepseek.com/zh-cn/"
+    },
+    {
+      "facts": {
+        "context_length_tokens": 1000000,
+        "maximum_output_tokens": 384000,
+        "thinking_is_default_mode": true,
+        "thinking_supported": true,
+        "tool_calls_supported": true
+      },
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+    },
+    {
+      "facts": {
+        "ignored_in_thinking_mode": [
+          "temperature",
+          "top_p",
+          "presence_penalty",
+          "frequency_penalty"
+        ],
+        "reasoning_effort_default": "high",
+        "thinking_default": "enabled",
+        "tool_call_history_requires_reasoning_content_replay": true
+      },
+      "url": "https://api-docs.deepseek.com/zh-cn/guides/thinking_mode/"
+    },
+    {
+      "facts": {
+        "concurrency_limit_independent_of_api_key": true,
+        "concurrency_limit_scope": "provider account",
+        "normal_account_user_ids_share_account_concurrency_limit": true,
+        "user_id_isolates": [
+          "content_safety_identity",
+          "KVCache",
+          "scheduling"
+        ],
+        "user_id_max_length": 512,
+        "user_id_pattern": "[a-zA-Z0-9\\-_]+"
+      },
+      "url": "https://api-docs.deepseek.com/zh-cn/quick_start/rate_limit/"
+    }
+  ]
+}

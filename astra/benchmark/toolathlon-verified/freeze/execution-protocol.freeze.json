@@ -1,0 +1,371 @@
+{
+  "agent_model_boundary": {
+    "failed_requests_are_retained_outcomes": true,
+    "generation_override": {
+      "reasoning_effort": "max",
+      "reasoning_effort_wire_behavior": "sent",
+      "source": "benchmark_override",
+      "thinking": "enabled",
+      "thinking_wire_behavior": "sent"
+    },
+    "post_terminal_model_drain_seconds": 120,
+    "post_terminal_model_drain_systems": [
+      "astra",
+      "hermes"
+    ],
+    "post_terminal_model_quiet_seconds": 1,
+    "provider_requests_before_agent": 0,
+    "qualification_successful_model_requests_minimum": 1,
+    "setup_connectivity_probes_during_scored_run": false,
+    "violation_classification": "infra_invalid/adapter_error"
+  },
+  "artifact_gate": {
+    "aggregation_blocks_next_run": false,
+    "aggregation_phase": "M4",
+    "astra_server_declared_tool_count_must_match_terminal_transports": true,
+    "duplicate_product_tool_terminals_normalized_once": true,
+    "native_tool_transport_start_terminal_pairing_required": true,
+    "raw_evidence_blocks_next_run": true,
+    "required_artifacts": [
+      "resolved-config.json",
+      "tool-schema-observed.json",
+      "lifecycle-events.jsonl",
+      "adapter-events.jsonl",
+      "trajectory.jsonl",
+      "tool-calls.jsonl",
+      "model-usage.jsonl",
+      "resource-usage.jsonl",
+      "evaluator/eval_res.json",
+      "evaluator/eval.log",
+      "failure-evidence.json",
+      "run.json",
+      "artifacts.sha256"
+    ],
+    "structured_missing_values_required": true,
+    "system_conditional_required_artifacts": {
+      "astra": [
+        "astra-runtime-mcp-binding.json"
+      ],
+      "hermes": []
+    },
+    "terminal_argument_hash_inherited_from_matching_start": true,
+    "zero_fill_or_inference_for_missing_provider_metrics": false
+  },
+  "authority": {
+    "artifact_contract": {
+      "path": "astra/benchmark/toolathlon-verified/config/run-artifact-contract.json",
+      "sha256": "6ab95206ba0c1043f7ead1c9dcd47b0c71f8e0f371d5be6a36c17ce7791146e2",
+      "size_bytes": 2271
+    },
+    "plan": {
+      "path": "astra/plans/drafts/toolathlon-verified-astra-hermes-evaluation-plan copy.md",
+      "sha256": "699abed018158c97b8f3e5c209fa681d512b6eb414e4b71ac2779778e6712dfd",
+      "size_bytes": 52291
+    },
+    "runtime_budget": {
+      "path": "astra/plans/drafts/toolathlon-trajectories-runtime-budget-addendum.md",
+      "sha256": "85efd2f7b10679e744b9f75bc601c25b6e1e486a6e5f43b696e35a282f9217d5",
+      "size_bytes": 24232
+    }
+  },
+  "formal_phases": {
+    "first_batch": {
+      "m1_reused_effective_slots": 2,
+      "new_effective_slots": 26,
+      "rerun_after_batch": false,
+      "resume_policy": "same batch root; validate and skip complete slots; never overwrite attempt directories",
+      "runner": "astra/benchmark/toolathlon-verified/scripts/run_m2_first_batch.sh",
+      "system_orders": [
+        {
+          "systems": [
+            "astra",
+            "hermes"
+          ],
+          "task_id": "find-alita-paper"
+        },
+        {
+          "systems": [
+            "hermes",
+            "astra"
+          ],
+          "task_id": "set-conf-cr-ddl"
+        },
+        {
+          "systems": [
+            "astra",
+            "hermes"
+          ],
+          "task_id": "course-schedule"
+        },
+        {
+          "systems": [
+            "hermes",
+            "astra"
+          ],
+          "task_id": "canvas-homework-grader-python"
+        },
+        {
+          "systems": [
+            "astra",
+            "hermes"
+          ],
+          "task_id": "arrange-workspace"
+        },
+        {
+          "systems": [
+            "hermes",
+            "astra"
+          ],
+          "task_id": "notion-movies"
+        },
+        {
+          "systems": [
+            "astra",
+            "hermes"
+          ],
+          "task_id": "price-comparison"
+        },
+        {
+          "systems": [
+            "hermes",
+            "astra"
+          ],
+          "task_id": "quantitative-financial-analysis"
+        },
+        {
+          "systems": [
+            "astra",
+            "hermes"
+          ],
+          "task_id": "excel-data-transformation"
+        },
+        {
+          "systems": [
+            "hermes",
+            "astra"
+          ],
+          "task_id": "notion-hr"
+        },
+        {
+          "systems": [
+            "astra",
+            "hermes"
+          ],
+          "task_id": "shopping-helper"
+        },
+        {
+          "systems": [
+            "hermes",
+            "astra"
+          ],
+          "task_id": "woocommerce-stock-alert"
+        },
+        {
+          "systems": [
+            "astra",
+            "hermes"
+          ],
+          "task_id": "git-bug-hunt"
+        },
+        {
+          "systems": [
+            "hermes",
+            "astra"
+          ],
+          "task_id": "k8s-safety-audit"
+        }
+      ],
+      "task_count": 14,
+      "tasks": [
+        "find-alita-paper",
+        "set-conf-cr-ddl",
+        "course-schedule",
+        "canvas-homework-grader-python",
+        "arrange-workspace",
+        "notion-movies",
+        "price-comparison",
+        "quantitative-financial-analysis",
+        "excel-data-transformation",
+        "notion-hr",
+        "shopping-helper",
+        "woocommerce-stock-alert",
+        "git-bug-hunt",
+        "k8s-safety-audit"
+      ],
+      "validator": "astra/benchmark/toolathlon-verified/scripts/validate_m2_first_batch.py",
+      "workers": 1
+    },
+    "remaining_batch": {
+      "new_effective_slots": 188,
+      "requires_m2_status": "GO",
+      "resume_policy": "same batch root; validate and skip complete slots; never overwrite attempt directories",
+      "runner": "astra/benchmark/toolathlon-verified/scripts/run_m3_remaining_batch.sh",
+      "system_order_rule": "alternate_by_remaining_position_astra_first",
+      "task_count": 94,
+      "tasks": [
+        "ab-testing",
+        "academic-pdf-report",
+        "academic-warning",
+        "add-bibtex",
+        "apply-phd-email",
+        "canvas-arrange-exam",
+        "canvas-art-manager",
+        "canvas-art-quiz",
+        "canvas-do-quiz",
+        "canvas-list-test",
+        "canvas-new-students-notification",
+        "canvas-submit-late-work",
+        "cooking-guidance",
+        "course-assistant",
+        "courses-ta-hws",
+        "cvpr-research",
+        "dataset-license-issue",
+        "detect-revised-terms",
+        "dietary-health",
+        "email-paper-homepage",
+        "excel-market-research",
+        "experiments-recordings",
+        "fillout-online-forms",
+        "filter-low-selling-products",
+        "flagged-transactions",
+        "game-statistics",
+        "gdp-cr5-analysis",
+        "git-milestone",
+        "git-repo",
+        "hk-top-conf",
+        "huggingface-upload",
+        "identify-all-songs",
+        "imagenet",
+        "inter-final-performance-analysis",
+        "interview-report",
+        "inventory-sync",
+        "investment-decision-analysis",
+        "invoice-org",
+        "ipad-edu-price",
+        "k8s-deployment-cleanup",
+        "k8s-mysql",
+        "k8s-pr-preview-testing",
+        "k8s-redis-helm-upgrade",
+        "landing-task-reminder",
+        "language-school",
+        "latex-prompt-box",
+        "live-transactions",
+        "llm-training-dataset",
+        "logical-datasets-collection",
+        "machine-operating",
+        "meeting-assign",
+        "merge-hf-datasets",
+        "mrbeast-analysis",
+        "music-analysis",
+        "nhl-b2b-analysis",
+        "notion-find-job",
+        "notion-personal-website",
+        "nvidia-market",
+        "nvidia-stock-analysis",
+        "oil-price",
+        "paper-checker",
+        "payable-invoice-checker",
+        "personal-website-construct",
+        "ppt-analysis",
+        "privacy-desensitization",
+        "profile-update-online",
+        "reimbursement-form-filler",
+        "sales-accounting",
+        "search-ca-school",
+        "sla-timeout-monitor",
+        "stock-build-position",
+        "student-interview",
+        "subway-planning",
+        "sync-todo-to-readme",
+        "task-tracker",
+        "train-ticket-plan",
+        "travel-exchange",
+        "travel-expense-reimbursement",
+        "trip-adviser",
+        "trip-itinerary-generator",
+        "university-course-selection",
+        "update-material-inventory",
+        "upenn-campus-route",
+        "verl-dataset",
+        "vlm-history-completer",
+        "wandb-best-score",
+        "wandb-shortest-length",
+        "woocommerce-customer-survey",
+        "woocommerce-new-product",
+        "woocommerce-new-welcome",
+        "woocommerce-product-recall",
+        "woocommerce-update-cover",
+        "yahoo-analysis",
+        "youtube-repo"
+      ],
+      "validator": "astra/benchmark/toolathlon-verified/scripts/validate_m3_remaining_batch.py",
+      "workers": 1
+    }
+  },
+  "frozen_on": "2026-08-06",
+  "per_run_lifecycle": [
+    "reset",
+    "fresh_task_container",
+    "preprocess",
+    "gateway",
+    "tools_list",
+    "adapter_agent",
+    "evaluator",
+    "complete_metric_artifacts",
+    "cleanup",
+    "final_artifact_hash"
+  ],
+  "qualification": {
+    "count_as_formal_when_artifact_gate_passes": true,
+    "go_requires": [
+      "run_validity=valid",
+      "terminal_status=completed",
+      "evaluator status is pass or no_pass",
+      "at least one successful Agent model request",
+      "zero provider requests before Agent execution"
+    ],
+    "independent_108_task_tools_schema_prescan": false,
+    "independent_gold_evaluator_replay": false,
+    "real_end_to_end_runs": [
+      {
+        "count": 1,
+        "system": "astra"
+      },
+      {
+        "count": 1,
+        "system": "hermes"
+      }
+    ],
+    "single_task": "find-alita-paper"
+  },
+  "retry": {
+    "automatic_replacement_maximum": 1,
+    "never_retry_product_model_timeout_budget_or_evaluator_no_pass": true,
+    "replacement_for_run_id_required": true,
+    "replacement_only_for_infra_invalid": true
+  },
+  "schema_version": "toolathlon.execution-protocol.v0.5",
+  "scope": {
+    "formal_slot_count": 216,
+    "formal_task_count": 108,
+    "runs_per_system_task": 1,
+    "systems": [
+      "astra",
+      "hermes"
+    ],
+    "workers": 1
+  },
+  "tools_list": {
+    "all_current_task_mcp_tools_required": true,
+    "astra_mechanism": "submit the fresh single-task Gateway as a native /chat/stream request_scoped_runtime_mcp binding",
+    "capture": "every_run_after_gateway_ready_before_agent",
+    "complete_current_task_surface_required_in_at_least_one_request": true,
+    "exposure_scope": "current task and attempt only",
+    "hermes_mechanism": "fresh single-task Gateway process",
+    "other_task_mcp_tools_allowed": false,
+    "product_builtin_tools_retained": true,
+    "provider_request_cross_task_mcp_tools_forbidden": true,
+    "provider_request_tool_names_and_hash_required": true,
+    "raw_schema_and_content_hash_required": true
+  }
+}

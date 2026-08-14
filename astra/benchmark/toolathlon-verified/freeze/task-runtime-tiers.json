@@ -1,0 +1,1008 @@
+{
+  "authority": {
+    "document": "astra/plans/drafts/toolathlon-trajectories-runtime-budget-addendum.md",
+    "sha256": "85efd2f7b10679e744b9f75bc601c25b6e1e486a6e5f43b696e35a282f9217d5",
+    "task_universe": {
+      "path": "astra/benchmark/toolathlon-verified/freeze/task-requirements.json",
+      "sha256": "14c409f9e7416e92dfbaf8ae2fc91b2037ffab9a1e36125d66cc45b0cd4bdcb9"
+    },
+    "verification_scope": "document hash plus 108-row/table internal consistency only; trajectory source data was not re-audited by this freeze"
+  },
+  "budget_scope": "agent_execution_only",
+  "frozen_on": "2026-08-06",
+  "max_product_model_requests": 100,
+  "schema_version": "toolathlon.task-runtime-tiers.v1",
+  "slot_ceiling_seconds": {
+    "formal_per_system": 494100,
+    "formal_two_systems": 988200,
+    "smoke_per_system": 65700,
+    "smoke_two_systems": 131400
+  },
+  "tasks": {
+    "ab-testing": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "29.3 min",
+      "historical_median": "6.3 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "15.6 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "academic-pdf-report": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "29.5 min",
+      "historical_median": "4.7 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "10.9 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "academic-warning": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.1 min",
+      "historical_median": "8.0 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "20.4 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "add-bibtex": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "22.6 min",
+      "historical_median": "5.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "13.4 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "apply-phd-email": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "36.9 min",
+      "historical_median": "3.8 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "7.3 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "arrange-workspace": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "38.1 min",
+      "historical_median": "3.7 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "8.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "canvas-arrange-exam": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "38.7 min",
+      "historical_median": "4.4 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "9.0 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "canvas-art-manager": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.1 min",
+      "historical_median": "8.5 min",
+      "historical_missing_or_timeout_records": 4,
+      "historical_p95": "26.6 min",
+      "historical_records_with_duration": 62,
+      "tier": "R4"
+    },
+    "canvas-art-quiz": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "10.4 min",
+      "historical_median": "1.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "4.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "canvas-do-quiz": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "29.9 min",
+      "historical_median": "5.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "12.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "canvas-homework-grader-python": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "35.1 min",
+      "historical_median": "5.2 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "11.8 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "canvas-list-test": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "22.1 min",
+      "historical_median": "5.1 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "13.7 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "canvas-new-students-notification": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "36.4 min",
+      "historical_median": "6.0 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "13.2 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "canvas-submit-late-work": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "33.9 min",
+      "historical_median": "4.4 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "13.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "cooking-guidance": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.0 min",
+      "historical_median": "4.6 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "10.5 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "course-assistant": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "10.7 min",
+      "historical_median": "1.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "4.4 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "course-schedule": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "13.9 min",
+      "historical_median": "4.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "11.8 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "courses-ta-hws": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "35.4 min",
+      "historical_median": "5.7 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "16.8 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "cvpr-research": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "29.1 min",
+      "historical_median": "4.1 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "8.9 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "dataset-license-issue": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "34.2 min",
+      "historical_median": "5.1 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "13.7 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "detect-revised-terms": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "20.4 min",
+      "historical_median": "5.8 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "16.3 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "dietary-health": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "19.6 min",
+      "historical_median": "3.7 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "11.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "email-paper-homepage": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "14.2 min",
+      "historical_median": "4.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "11.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "excel-data-transformation": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "34.2 min",
+      "historical_median": "9.1 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "18.7 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "excel-market-research": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "18.9 min",
+      "historical_median": "4.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "13.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "experiments-recordings": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "28.4 min",
+      "historical_median": "7.8 min",
+      "historical_missing_or_timeout_records": 3,
+      "historical_p95": "23.4 min",
+      "historical_records_with_duration": 63,
+      "tier": "R4"
+    },
+    "fillout-online-forms": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "34.9 min",
+      "historical_median": "5.0 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "11.9 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "filter-low-selling-products": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "30.4 min",
+      "historical_median": "8.3 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "25.6 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "find-alita-paper": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "6.6 min",
+      "historical_median": "1.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "3.9 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "flagged-transactions": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "35.0 min",
+      "historical_median": "7.5 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "17.0 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "game-statistics": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "17.7 min",
+      "historical_median": "2.5 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "7.0 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "gdp-cr5-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "24.5 min",
+      "historical_median": "5.7 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "16.1 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "git-bug-hunt": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "31.0 min",
+      "historical_median": "2.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "6.6 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "git-milestone": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "7.5 min",
+      "historical_median": "0.9 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "2.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "git-repo": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "4.7 min",
+      "historical_median": "1.2 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "2.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "hk-top-conf": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "36.9 min",
+      "historical_median": "7.6 min",
+      "historical_missing_or_timeout_records": 4,
+      "historical_p95": "20.3 min",
+      "historical_records_with_duration": 62,
+      "tier": "R4"
+    },
+    "huggingface-upload": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.0 min",
+      "historical_median": "9.0 min",
+      "historical_missing_or_timeout_records": 4,
+      "historical_p95": "26.3 min",
+      "historical_records_with_duration": 62,
+      "tier": "R4"
+    },
+    "identify-all-songs": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "19.6 min",
+      "historical_median": "3.5 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "14.0 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "imagenet": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "31.4 min",
+      "historical_median": "3.3 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "8.3 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "inter-final-performance-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "33.1 min",
+      "historical_median": "9.9 min",
+      "historical_missing_or_timeout_records": 8,
+      "historical_p95": "27.9 min",
+      "historical_records_with_duration": 58,
+      "tier": "R4"
+    },
+    "interview-report": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "36.8 min",
+      "historical_median": "7.6 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "18.2 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "inventory-sync": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "36.0 min",
+      "historical_median": "7.6 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "22.6 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "investment-decision-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "37.0 min",
+      "historical_median": "6.7 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "17.8 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "invoice-org": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "7.1 min",
+      "historical_median": "2.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "6.2 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "ipad-edu-price": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "31.5 min",
+      "historical_median": "4.2 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "11.1 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "k8s-deployment-cleanup": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "13.9 min",
+      "historical_median": "2.3 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "5.4 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "k8s-mysql": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "16.9 min",
+      "historical_median": "4.6 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "11.9 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "k8s-pr-preview-testing": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "29.4 min",
+      "historical_median": "7.5 min",
+      "historical_missing_or_timeout_records": 3,
+      "historical_p95": "18.3 min",
+      "historical_records_with_duration": 63,
+      "tier": "R4"
+    },
+    "k8s-redis-helm-upgrade": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "27.4 min",
+      "historical_median": "7.5 min",
+      "historical_missing_or_timeout_records": 9,
+      "historical_p95": "20.6 min",
+      "historical_records_with_duration": 57,
+      "tier": "R4"
+    },
+    "k8s-safety-audit": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "36.4 min",
+      "historical_median": "6.4 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "21.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "landing-task-reminder": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "23.7 min",
+      "historical_median": "6.9 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "19.3 min",
+      "historical_records_with_duration": 60,
+      "tier": "R3"
+    },
+    "language-school": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "37.4 min",
+      "historical_median": "9.3 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "24.9 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "latex-prompt-box": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "19.4 min",
+      "historical_median": "5.7 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "18.2 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "live-transactions": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "31.1 min",
+      "historical_median": "5.8 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "19.2 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "llm-training-dataset": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "23.6 min",
+      "historical_median": "3.8 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "11.3 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "logical-datasets-collection": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.1 min",
+      "historical_median": "2.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "6.3 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "machine-operating": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "38.9 min",
+      "historical_median": "6.0 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "15.0 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "meeting-assign": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "22.6 min",
+      "historical_median": "4.0 min",
+      "historical_missing_or_timeout_records": 3,
+      "historical_p95": "15.8 min",
+      "historical_records_with_duration": 63,
+      "tier": "R4"
+    },
+    "merge-hf-datasets": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "24.6 min",
+      "historical_median": "5.1 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "16.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "mrbeast-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "23.7 min",
+      "historical_median": "7.1 min",
+      "historical_missing_or_timeout_records": 6,
+      "historical_p95": "17.4 min",
+      "historical_records_with_duration": 60,
+      "tier": "R4"
+    },
+    "music-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "34.8 min",
+      "historical_median": "12.7 min",
+      "historical_missing_or_timeout_records": 4,
+      "historical_p95": "26.2 min",
+      "historical_records_with_duration": 62,
+      "tier": "R4"
+    },
+    "nhl-b2b-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "37.9 min",
+      "historical_median": "5.3 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "10.7 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "notion-find-job": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "17.6 min",
+      "historical_median": "3.0 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "8.9 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "notion-hr": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "35.2 min",
+      "historical_median": "6.6 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "17.1 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "notion-movies": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "34.9 min",
+      "historical_median": "3.9 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "9.7 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "notion-personal-website": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "13.2 min",
+      "historical_median": "3.5 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "8.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "nvidia-market": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "29.2 min",
+      "historical_median": "9.1 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "22.7 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "nvidia-stock-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "19.1 min",
+      "historical_median": "3.8 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "9.0 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "oil-price": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "37.8 min",
+      "historical_median": "8.5 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "26.0 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "paper-checker": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "34.3 min",
+      "historical_median": "6.3 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "18.9 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "payable-invoice-checker": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "21.0 min",
+      "historical_median": "4.2 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "11.0 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "personal-website-construct": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "26.2 min",
+      "historical_median": "6.5 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "18.5 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "ppt-analysis": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "17.2 min",
+      "historical_median": "2.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "5.8 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "price-comparison": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.1 min",
+      "historical_median": "2.7 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "5.6 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "privacy-desensitization": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "12.0 min",
+      "historical_median": "2.9 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "7.4 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "profile-update-online": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "14.2 min",
+      "historical_median": "4.2 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "10.1 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "quantitative-financial-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "37.6 min",
+      "historical_median": "10.4 min",
+      "historical_missing_or_timeout_records": 4,
+      "historical_p95": "34.5 min",
+      "historical_records_with_duration": 62,
+      "tier": "R4"
+    },
+    "reimbursement-form-filler": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "31.0 min",
+      "historical_median": "5.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "16.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "sales-accounting": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "6.5 min",
+      "historical_median": "1.2 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "3.8 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "search-ca-school": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "26.9 min",
+      "historical_median": "5.8 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "18.4 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "set-conf-cr-ddl": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "4.2 min",
+      "historical_median": "0.9 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "2.6 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "shopping-helper": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "29.1 min",
+      "historical_median": "4.5 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "9.6 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "sla-timeout-monitor": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "34.5 min",
+      "historical_median": "3.9 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "9.5 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "stock-build-position": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "12.3 min",
+      "historical_median": "3.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "8.6 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "student-interview": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "8.3 min",
+      "historical_median": "1.7 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "4.5 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "subway-planning": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "13.0 min",
+      "historical_median": "2.5 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "6.3 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "sync-todo-to-readme": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "33.2 min",
+      "historical_median": "3.7 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "8.3 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "task-tracker": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "29.6 min",
+      "historical_median": "9.3 min",
+      "historical_missing_or_timeout_records": 4,
+      "historical_p95": "21.1 min",
+      "historical_records_with_duration": 62,
+      "tier": "R4"
+    },
+    "train-ticket-plan": {
+      "deadline_seconds": 1800,
+      "historical_maximum": "6.0 min",
+      "historical_median": "2.0 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "4.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R1"
+    },
+    "travel-exchange": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "15.8 min",
+      "historical_median": "3.9 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "9.3 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "travel-expense-reimbursement": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "39.2 min",
+      "historical_median": "10.5 min",
+      "historical_missing_or_timeout_records": 4,
+      "historical_p95": "21.0 min",
+      "historical_records_with_duration": 62,
+      "tier": "R4"
+    },
+    "trip-adviser": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "11.7 min",
+      "historical_median": "2.0 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "5.6 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "trip-itinerary-generator": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "27.4 min",
+      "historical_median": "4.2 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "13.9 min",
+      "historical_records_with_duration": 59,
+      "tier": "R4"
+    },
+    "university-course-selection": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "27.8 min",
+      "historical_median": "5.7 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "14.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "update-material-inventory": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "25.5 min",
+      "historical_median": "5.3 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "18.2 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "upenn-campus-route": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "35.0 min",
+      "historical_median": "3.4 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "6.9 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "verl-dataset": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "31.4 min",
+      "historical_median": "2.7 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "7.9 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "vlm-history-completer": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.1 min",
+      "historical_median": "7.2 min",
+      "historical_missing_or_timeout_records": 2,
+      "historical_p95": "21.1 min",
+      "historical_records_with_duration": 64,
+      "tier": "R4"
+    },
+    "wandb-best-score": {
+      "deadline_seconds": 2700,
+      "historical_maximum": "12.2 min",
+      "historical_median": "2.8 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "8.0 min",
+      "historical_records_with_duration": 66,
+      "tier": "R2"
+    },
+    "wandb-shortest-length": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "25.8 min",
+      "historical_median": "4.1 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "11.6 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "woocommerce-customer-survey": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "33.3 min",
+      "historical_median": "4.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "13.1 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "woocommerce-new-product": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "39.6 min",
+      "historical_median": "5.2 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "24.6 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "woocommerce-new-welcome": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "32.3 min",
+      "historical_median": "5.6 min",
+      "historical_missing_or_timeout_records": 1,
+      "historical_p95": "14.2 min",
+      "historical_records_with_duration": 65,
+      "tier": "R4"
+    },
+    "woocommerce-product-recall": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "35.3 min",
+      "historical_median": "4.6 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "11.8 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "woocommerce-stock-alert": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "30.8 min",
+      "historical_median": "5.0 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "13.3 min",
+      "historical_records_with_duration": 66,
+      "tier": "R4"
+    },
+    "woocommerce-update-cover": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "28.7 min",
+      "historical_median": "3.0 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "8.2 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    },
+    "yahoo-analysis": {
+      "deadline_seconds": 5400,
+      "historical_maximum": "28.6 min",
+      "historical_median": "8.0 min",
+      "historical_missing_or_timeout_records": 8,
+      "historical_p95": "20.8 min",
+      "historical_records_with_duration": 58,
+      "tier": "R4"
+    },
+    "youtube-repo": {
+      "deadline_seconds": 3600,
+      "historical_maximum": "27.9 min",
+      "historical_median": "3.9 min",
+      "historical_missing_or_timeout_records": 0,
+      "historical_p95": "15.7 min",
+      "historical_records_with_duration": 66,
+      "tier": "R3"
+    }
+  },
+  "tier_deadlines_seconds": {
+    "R1": 1800,
+    "R2": 2700,
+    "R3": 3600,
+    "R4": 5400
+  },
+  "tier_task_counts": {
+    "R1": 8,
+    "R2": 15,
+    "R3": 11,
+    "R4": 74
+  },
+  "tool_call_limit": null
+}

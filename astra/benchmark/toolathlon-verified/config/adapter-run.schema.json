@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "adapter_freeze": { "type": "string" },
+    "permission_policy_freeze": { "type": "string" },
+    "run": {
+      "additionalProperties": false,
+      "properties": {
+        "bundle_file": { "type": "string" },
+        "deadline_s": { "enum": [1800, 2700, 3600, 5400] },
+        "experiment_id": { "type": "string" },
+        "gateway_url": { "pattern": "^http://(127\\.0\\.0\\.1|localhost|\\[::1\\]).*/sse/?$", "type": "string" },
+        "max_model_requests": { "const": 100 },
+        "model_freeze": { "type": "string" },
+        "output_dir": { "type": "string" },
+        "permission_policy": { "type": "string" },
+        "run_id": { "type": "string" },
+        "system_id": { "enum": ["astra", "hermes"] },
+        "task_id": { "type": "string" },
+        "task_requirements_manifest": { "type": "string" },
+        "workspace": { "type": "string" }
+      },
+      "required": [
+        "bundle_file",
+        "deadline_s",
+        "experiment_id",
+        "gateway_url",
+        "max_model_requests",
+        "model_freeze",
+        "output_dir",
+        "permission_policy",
+        "run_id",
+        "system_id",
+        "task_id",
+        "task_requirements_manifest",
+        "workspace"
+      ],
+      "type": "object"
+    },
+    "runtime_config": { "type": "string" },
+    "section_3_3_freeze": { "type": "string" },
+    "section_3_3_manifest": { "type": "string" },
+    "section_3_3_manifest_sha256": { "pattern": "^[0-9a-f]{64}$", "type": "string" },
+    "system_freeze": { "type": "string" },
+    "task_runtime_tiers": { "type": "string" }
+  },
+  "required": [
+    "adapter_freeze",
+    "permission_policy_freeze",
+    "run",
+    "runtime_config",
+    "section_3_3_freeze",
+    "section_3_3_manifest",
+    "section_3_3_manifest_sha256",
+    "system_freeze",
+    "task_runtime_tiers"
+  ],
+  "title": "Toolathlon-Verified one-slot Adapter configuration",
+  "type": "object"
+}

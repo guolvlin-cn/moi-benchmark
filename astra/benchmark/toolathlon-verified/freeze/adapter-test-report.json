@@ -1,0 +1,44 @@
+{
+  "command": null,
+  "completed_on": null,
+  "environment": {
+    "network": "loopback-only temporary HTTP/SSE servers",
+    "python": "3.10.12"
+  },
+  "failures": null,
+  "previous_baseline": {
+    "command": "python3 -m unittest discover -s astra/runners/toolathlon_verified/tests -v",
+    "completed_on": "2026-08-06",
+    "failures": 0,
+    "status": "passed",
+    "tests_run": 20
+  },
+  "previous_baseline_tests_run": 20,
+  "scope": [
+    "Astra attempt-scoped registered user, /auth/me verification, private 0600 username/password record, and native request-scoped runtime MCP binding",
+    "Astra /chat/stream request body with native per-user session auto-creation, loopback-only API boundary, transport-only shim, and native SSE evidence normalization",
+    "pre-provisioned Astra model update without API-key connectivity probes",
+    "zero provider requests before Agent execution for Astra and Hermes",
+    "Hermes fresh HERMES_HOME/session/Gateway/API key, disabled external memory provider, and startup/Agent deadline separation",
+    "common Astra/Hermes post-terminal auxiliary-model drain with complete forwarded/completed evidence",
+    "trusted-to-public bundle isolation",
+    "model freeze contract",
+    "common permission boundary",
+    "MCP initialize/tools-list and native name mapping",
+    "DeepSeek request normalization with explicit thinking=enabled/reasoning_effort=max overrides, complete model-visible tool-name/count/hash evidence, distinct provider-key preflight, fingerprints, and forced user_id isolation (expectations updated; not rerun)",
+    "provider credentials stripped from Astra admin/chat and Hermes product environments",
+    "exact 100-request budget",
+    "terminal-only tool event counting, including frozen Astra server tool_call_start/tool_result pairing",
+    "Astra native tool transport start/success-or-failure terminal pairing, duplicate terminal suppression, paired argument hashes, and server-declared call-count completeness",
+    "strict common artifact structure, Astra conditional runtime MCP binding artifact, current-task-only MCP exposure, and complete hash coverage",
+    "M1 live qualification requires at least one successful Agent model request, preserves failed auxiliary-request evidence, and rejects incomplete model terminal evidence",
+    "M2 frozen 14-task order, single-worker mock lifecycle dispatch, safe resume, and one allowlisted infrastructure replacement",
+    "generic 108-task lifecycle reset contract accepts shared applications, rejects frozen task-config drift, and restricts mutable OAuth state to allowlisted token files",
+    "task-container credential layout follows frozen Calendar home paths and task-scoped persistent Notion OAuth requirements without persisting secret values in result artifacts",
+    "M3 frozen 94-task order, positions 15 through 108, single-worker scheduling, and balanced 54/54 overall first-system order",
+    "fail-closed structured missing-value observations"
+  ],
+  "status": "waived_not_rerun_by_user_instruction",
+  "tests_run": 0,
+  "waiver_reason": "User explicitly requested direct refreeze without rerunning tests after the generation-parameter override change."
+}

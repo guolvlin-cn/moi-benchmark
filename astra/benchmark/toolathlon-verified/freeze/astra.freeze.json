@@ -1,0 +1,355 @@
+{
+  "dependency_locks": [
+    {
+      "path": "Cargo.lock",
+      "sha256": "61ea23bca9635b3e1c449fdc84297085d300550c3ff0bd48bb2519e4d2689b63",
+      "size_bytes": 198411
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "02c416f39f5885bbfce9b15400a3df7ed7228b02ae81e72bb8909bc2fb6e0efc",
+      "size_bytes": 4344
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "f5f981c81b5323ba0b76de49ee032ab9c718e0deed18c9ac004e3fad62875ae9",
+      "size_bytes": 556
+    },
+    {
+      "path": "package.json",
+      "sha256": "23d3b10b3a21df9e2069eecf23f52b1e30aa25455c2ef04a8d4f42c40d6fc645",
+      "size_bytes": 55
+    },
+    {
+      "path": "packages/sdk/package-lock.json",
+      "sha256": "3cc4fe5e377cadc17b25b1833a1aacf21426b96df2461023c4fd9d01de8225f9",
+      "size_bytes": 122197
+    },
+    {
+      "path": "packages/sdk/package.json",
+      "sha256": "c195ddff7ac78442375b275321227919f3cf4ea76a05e88ca502ef723343a441",
+      "size_bytes": 1662
+    },
+    {
+      "path": "web/package-lock.json",
+      "sha256": "602b0265012c6401713e529d097a35b8ed7aa0a87136629704ecb12b5c83aff7",
+      "size_bytes": 412378
+    },
+    {
+      "path": "web/package.json",
+      "sha256": "5c4e7b02bfbfb9823150c14cd9f2ae4d90ee3188504994884442d3ca90547bb5",
+      "size_bytes": 2069
+    }
+  ],
+  "frozen_on": "2026-08-06",
+  "product_prompt_sources": [
+    {
+      "path": "crates/astra-cli/src/cli/command_router.rs",
+      "sha256": "9e294cb85a31ed990d70b963558ce5e4686facf359bb4efceea0a504b844a184",
+      "size_bytes": 160064
+    },
+    {
+      "path": "crates/astra-cli/src/manifest_loader.rs",
+      "sha256": "96d3452c70f6bfcf89c9c8b4589a71ea9c183a54de7b6ba42601a147c221b068",
+      "size_bytes": 54224
+    },
+    {
+      "path": "crates/astra-prompts/src/extraction.rs",
+      "sha256": "3a36dd4f5373db70fda18e0c17b3f299efca4ff4f760798c4619d3b2ebb0c30b",
+      "size_bytes": 16859
+    },
+    {
+      "path": "crates/astra-prompts/src/lib.rs",
+      "sha256": "dcef147f7bd56edcc625e08101b264cd1bdb1082dd038ba35ad796e68e171b40",
+      "size_bytes": 217
+    },
+    {
+      "path": "crates/astra-prompts/src/memory_lifecycle.rs",
+      "sha256": "f18b948ba653abf5bea60ee90a6e5b40a5cf353f357ab81ef2960faa94458d3b",
+      "size_bytes": 5867
+    },
+    {
+      "path": "crates/astra-prompts/src/memory_ns.rs",
+      "sha256": "6400b305b9761795e1daf4f4020f9cf734584708944253f43b27c0404bd219e7",
+      "size_bytes": 2256
+    },
+    {
+      "path": "crates/astra-prompts/src/memory_proto.rs",
+      "sha256": "12b5a7bd093b90bf1d50bd75c83156b13bb5d22f8da438d6fe035d998726521f",
+      "size_bytes": 49715
+    },
+    {
+      "path": "crates/astra-prompts/src/memory_types.rs",
+      "sha256": "c3c4cc75e34b00f235d3ba164248d7537ad9bef43a10d39ce2cad4c824eecda0",
+      "size_bytes": 20545
+    },
+    {
+      "path": "crates/astra-prompts/src/skills.rs",
+      "sha256": "c5ccd1b7cc977741279a6fb2cb3e62a477ee4b2810363c975cc7854a53dd7bde",
+      "size_bytes": 5105
+    },
+    {
+      "path": "crates/astra-prompts/src/team_prompts.rs",
+      "sha256": "2cf599d77d4fbab8a0ddc0f5eba35987365fc167f5a9a622e39b42598a662c1b",
+      "size_bytes": 13687
+    },
+    {
+      "path": "crates/runtime/src/prompts/context.rs",
+      "sha256": "4e44c7212d8ac26b4b79edb2cdb334ddbb68d6b9f6bd88b49e5d62716a931df5",
+      "size_bytes": 38558
+    },
+    {
+      "path": "crates/runtime/src/prompts/mod.rs",
+      "sha256": "9b3aed06a88acb7d20d7612b1fbfe2006adb21fead1835df08d9c5347dcc40de",
+      "size_bytes": 12642
+    },
+    {
+      "path": "crates/runtime/src/prompts/system.rs",
+      "sha256": "e4acfcc50f01454162e730e1c19f5eb7b05a1c8338137dd5163bd587f5e3317a",
+      "size_bytes": 168203
+    }
+  ],
+  "resolved_internal_defaults": {
+    "adapter_overrides_product_retry_values": false,
+    "benchmark_effective_permission_mode": "auto",
+    "benchmark_overrides": {
+      "builtin_tools": "retained at the frozen product default",
+      "other_task_mcp_tools_allowed": false,
+      "permission_mode": "auto",
+      "resume": false,
+      "tool_surface": "the frozen Astra server receives one native /chat/stream runtime_profile=request_scoped_runtime_mcp binding for the current-attempt Gateway"
+    },
+    "evidence": [
+      {
+        "path": "crates/astra-cli/src/cli/cli_config/cli_args.rs",
+        "sha256": "656ba9c755a4d50385f424142a1c9407484ddd87d6c01db28dfcbae32d4ed34d",
+        "size_bytes": 45807
+      },
+      {
+        "path": "crates/astra-cli/src/cli/command_router.rs",
+        "sha256": "9e294cb85a31ed990d70b963558ce5e4686facf359bb4efceea0a504b844a184",
+        "size_bytes": 160064
+      },
+      {
+        "path": "crates/astra-cli/src/main.rs",
+        "sha256": "8bc5fb196933292d44e83bdd940de583c6bc123c6a1e91e1fbb79a747f899d20",
+        "size_bytes": 97425
+      },
+      {
+        "path": "crates/astra-config/src/config_overlay.rs",
+        "sha256": "f6f8af976cc6dd90dba534bc8b58af289b03e0ad8616d6f3efb3d4676078e5f2",
+        "size_bytes": 29680
+      },
+      {
+        "path": "crates/astra-config/src/runtime_config.rs",
+        "sha256": "c9fc8fdd4026e85ac7994411921d0def3187038768f40c66aee2a796dfe07d08",
+        "size_bytes": 155107
+      },
+      {
+        "path": "crates/astra-mcp/src/lib.rs",
+        "sha256": "e68ddf0dcb07111a35890d7b8e3e156e55bd2aefa728693b5ccf6770b0def1f4",
+        "size_bytes": 1024
+      },
+      {
+        "path": "crates/astra-mcp/src/manager.rs",
+        "sha256": "9398d7e94a9938f4cd138ba1c4a96c6bd16129e4ce65a5cf926cb6e277009ec0",
+        "size_bytes": 22489
+      },
+      {
+        "path": "crates/astra-mcp/src/tools.rs",
+        "sha256": "2b588275de15dc0dc9d5c75f74298a3dcc4a698a57859dd18b96c82b481742f8",
+        "size_bytes": 8266
+      },
+      {
+        "path": "crates/astra-mcp/src/types.rs",
+        "sha256": "6141db30c4681f7b75e441e0448895913a134cd053c802e0067fb16ad0a8defb",
+        "size_bytes": 3134
+      },
+      {
+        "path": "crates/astra-server-types/src/lib.rs",
+        "sha256": "72a88d81b2b86d3116907626e7f0d13eed97e695375be5c4f5d53c1db28433ce",
+        "size_bytes": 36979
+      },
+      {
+        "path": "crates/core/src/runtime_limits.rs",
+        "sha256": "15f3dcf5d6bb18836cb189343532be4562924f524d921da9696c141c43df2f49",
+        "size_bytes": 13601
+      },
+      {
+        "path": "crates/runtime/src/server/bridge_prep.rs",
+        "sha256": "5df81da91df6a37d967baa933a558a88ce565da671cb7669e9c0ba6fc3b071e6",
+        "size_bytes": 78458
+      },
+      {
+        "path": "crates/runtime/src/server/chat_handlers.rs",
+        "sha256": "ef2ac37be4504da6cd3db627234f62a4c740aa451d5f2bce11d469de49e91e27",
+        "size_bytes": 64792
+      },
+      {
+        "path": "crates/runtime/src/server/run/lifecycle/mod.rs",
+        "sha256": "bfd84231a32c12439524f274e678f53b4aaa1eb5e1c3658906ca75dd1328dcb0",
+        "size_bytes": 366834
+      },
+      {
+        "path": "crates/runtime/src/server/runtime_mcp.rs",
+        "sha256": "dd8e0f96c81606cf8580540ae413aca4552712aec457f61849072be71a5da98e",
+        "size_bytes": 40872
+      },
+      {
+        "path": "crates/runtime/src/server/server_loop_host.rs",
+        "sha256": "955fb629c2fb2232898b5c0b5119d288d3d0c838ec158868043b5be6af908847",
+        "size_bytes": 507902
+      },
+      {
+        "path": "crates/runtime/src/server/session/session_quota.rs",
+        "sha256": "5bcc38d9e38e7b1ae2c884c158266eb19985495d3a32eff7bbf409d039f25bd5",
+        "size_bytes": 1393
+      },
+      {
+        "path": "crates/runtime/src/server/tool_admission.rs",
+        "sha256": "0e4ba4701f59925f1768ee68da8b9bb8a987e8b129b2ea9caa2879b593aa33ae",
+        "size_bytes": 50835
+      },
+      {
+        "path": "crates/runtime/src/server/tool_binding_projection.rs",
+        "sha256": "1027075be70e86643cf788a9d63745defac0f550a6e94187d015c0de7666891c",
+        "size_bytes": 68882
+      },
+      {
+        "path": "crates/runtime/src/turn/llm/client.rs",
+        "sha256": "07bb3b86df54988c36094bef834c4e9494edffb7da6c5a179c0a4dd5cd9f00f5",
+        "size_bytes": 400723
+      },
+      {
+        "path": "crates/services/src/runs.rs",
+        "sha256": "bfb40bb7738c5368591552e6536181ab9979779e32a01ff7581fdddbcfb551e6",
+        "size_bytes": 326760
+      }
+    ],
+    "freeze_semantics": "only the source-resolved values enumerated in this object remain product defaults; common isolation, permission/no-resume, and task-scoped MCP surfacing are explicit benchmark overrides",
+    "internal_permission_default": "prompt",
+    "llm_retry_base_milliseconds": 1000,
+    "llm_total_budget_seconds_per_call": 300,
+    "llm_tpm_max_retries": 5,
+    "llm_transient_max_retries": 3,
+    "max_tool_retries": 2,
+    "max_turn_input_tokens": 200000,
+    "max_turns": 300,
+    "mcp_connect_timeout_seconds": 30,
+    "mcp_connection_initial_delay_milliseconds": 1000,
+    "mcp_connection_max_delay_milliseconds": 30000,
+    "mcp_connection_max_retries": 5,
+    "mcp_tool_timeout_seconds": 120,
+    "tool_retry_base_milliseconds": 500,
+    "turn_timeout_seconds": 300
+  },
+  "runtime_artifacts": {
+    "build_command": "cargo build --release --locked -p astra-cli -p astra-runtime",
+    "cli": {
+      "elf_byte_order": "little",
+      "elf_machine": "EM_X86_64",
+      "executable": true,
+      "format": "ELF64",
+      "mode": "0o775",
+      "path": "astra/work/toolathlon-verified/systems/astra-844473c68649/target/release/astra",
+      "sha256": "80ce54af219ff162e911ca208a83e660bb8acb2e68c2b5f8e7e54afa500a1e5b",
+      "size_bytes": 113920904,
+      "target_platform": "linux/amd64",
+      "version_output": "astra 0.1.0"
+    },
+    "rendered_runtime_config": {
+      "path": "astra/work/toolathlon-verified/rendered-astra-runtime.json",
+      "sha256": "53f30fb3a855dfab8137b571564b440baeaa4d377f172757efb235db18b07632",
+      "size_bytes": 763
+    },
+    "runtime_qualification": "go",
+    "server": {
+      "elf_byte_order": "little",
+      "elf_machine": "EM_X86_64",
+      "executable": true,
+      "format": "ELF64",
+      "mode": "0o775",
+      "path": "astra/work/toolathlon-verified/systems/astra-844473c68649/target/release/astra-server",
+      "sha256": "48a67ff31cf3747ecc0998dbac803d335ccd424d81eb0e55dd08d87cceec74e3",
+      "size_bytes": 74732424,
+      "target_platform": "linux/amd64"
+    },
+    "source_commit_and_tree_verified": true,
+    "target_platform": "linux/amd64"
+  },
+  "schema_version": "toolathlon.system-freeze.v1",
+  "source": {
+    "archive": {
+      "path": "astra/work/toolathlon-verified/freeze-3.3/astra-844473c68649d8ea43e10b616dc4fbf98e2321e8.tar",
+      "sha256": "97aeb8235c89d0e6982e6764121facaee9e480423e4de2703d38791192aa06c0",
+      "size_bytes": 51507200
+    },
+    "canonical_checkout": "astra/work/toolathlon-verified/systems/astra-844473c68649",
+    "commit": "844473c68649d8ea43e10b616dc4fbf98e2321e8",
+    "describe": "v0.0.5-4-g844473c68",
+    "detached_head": true,
+    "excluded_checkout": {
+      "path": "external/astra",
+      "reason": "working tree is dirty and contains local environment examples; it is excluded from all benchmark build and freeze inputs"
+    },
+    "repository": "https://github.com/matrixorigin/astra.git",
+    "symbolic_ref": null,
+    "tree": "bfd88d2fe30ad7a04b2611a42c70d5dc993280bf",
+    "working_tree": "clean"
+  },
+  "state_and_startup": {
+    "active_model_registry": "pre-provisioned deepseek-v4-flash routed to the run-local proxy",
+    "adapter_command_shape": [
+      "<python>",
+      "<astra-api-client>",
+      "--api-url",
+      "<run-local-loopback-url>",
+      "--gateway-url",
+      "<current-attempt-gateway-url>",
+      "--model",
+      "deepseek-v4-flash"
+    ],
+    "adapter_stdin": "exact public system and task prompts as JSON",
+    "agent_loop_owner": "frozen Astra server; transport shim contains no Agent logic",
+    "attempt_identity_mapping": {
+      "original": "a1",
+      "replacement": "a2"
+    },
+    "database_prefix_per_run": false,
+    "fresh_home_per_run": true,
+    "model_fallback_chain": [],
+    "private_identity_record": {
+      "access_and_refresh_tokens_persisted": false,
+      "mode": "0o600",
+      "path": "product-identity.private.json",
+      "publish": false,
+      "username_and_plaintext_password_persisted": true
+    },
+    "product_identity": "new registered Astra user for every attempt",
+    "provider_requests_before_agent_required": 0,
+    "resume": false,
+    "runtime_connectivity_probe": false,
+    "runtime_model_mutation": "update base_url, active and quirks only; model add and api-key update are forbidden",
+    "server_real_provider_credentials": "must be absent; record environment names only",
+    "session_strategy": {
+      "creation": "native_chat_stream_auto_create_under_attempt_user",
+      "observed_session_id_recorded_from_sse": true,
+      "request_session_id": "omitted",
+      "resume": false
+    },
+    "shared_database": true,
+    "shared_frozen_loopback_server": true,
+    "task_tool_exposure": {
+      "all_current_task_mcp_tools_required": true,
+      "binding_artifact": "astra-runtime-mcp-binding.json",
+      "binding_id": "toolathlon",
+      "native_endpoint": "/chat/stream",
+      "other_task_mcp_tools_allowed": false,
+      "provider_request_tool_names_and_hash_recorded": true,
+      "runtime_profile": "request_scoped_runtime_mcp",
+      "scope": "current task and attempt only",
+      "source": "that attempt's live Gateway tools/list"
+    }
+  },
+  "system_id": "astra"
+}

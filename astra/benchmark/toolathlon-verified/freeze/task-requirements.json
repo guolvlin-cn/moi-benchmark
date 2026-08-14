@@ -1,0 +1,1693 @@
+{
+  "local_tools": [
+    "claim_done",
+    "handle_overlong_tool_outputs",
+    "history",
+    "manage_context",
+    "python_execute",
+    "sleep",
+    "web_search"
+  ],
+  "mcp_servers": [
+    "arxiv-latex",
+    "arxiv_local",
+    "canvas",
+    "emails",
+    "excel",
+    "fetch",
+    "filesystem",
+    "git",
+    "github",
+    "google-cloud",
+    "google_calendar",
+    "google_forms",
+    "google_map",
+    "google_sheet",
+    "howtocook",
+    "huggingface",
+    "k8s",
+    "memory",
+    "notion",
+    "pdf-tools",
+    "playwright_with_chunk",
+    "pptx",
+    "rail_12306",
+    "scholarly",
+    "snowflake",
+    "terminal",
+    "wandb",
+    "web_search",
+    "woocommerce",
+    "word",
+    "yahoo-finance",
+    "youtube",
+    "youtube-transcript"
+  ],
+  "schema_version": 1,
+  "source_commit": "2aed2468858f15818acafa178518390cc4b0f5cb",
+  "task_count": 108,
+  "tasks": {
+    "ab-testing": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google-cloud",
+        "filesystem"
+      ],
+      "task_config_sha256": "0aa31c181ad711e85d229afc2a19e644525d8c1810cca098b8b85fad31c9a66a"
+    },
+    "academic-pdf-report": {
+      "local_tools": [
+        "claim_done",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "playwright_with_chunk",
+        "excel",
+        "terminal",
+        "arxiv_local",
+        "pdf-tools",
+        "fetch"
+      ],
+      "task_config_sha256": "ec7a478e00c64bd3559a08fa67b6e6721b6494ef925beb074bcda0c3b416f244"
+    },
+    "academic-warning": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google-cloud",
+        "excel",
+        "filesystem"
+      ],
+      "task_config_sha256": "ea72091ac4f34277ac4560d0e9164a4daf2ed3cad5fc20188b44c6fe15550218"
+    },
+    "add-bibtex": {
+      "local_tools": [
+        "sleep",
+        "claim_done",
+        "manage_context",
+        "history",
+        "web_search",
+        "handle_overlong_tool_outputs"
+      ],
+      "mcp_servers": [
+        "scholarly",
+        "playwright_with_chunk",
+        "filesystem",
+        "terminal",
+        "fetch"
+      ],
+      "task_config_sha256": "afa13cb42fda2e242823d2c24654d2c4fd0281c0b792458199b4dab4a6040804"
+    },
+    "apply-phd-email": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "memory",
+        "emails",
+        "terminal",
+        "pdf-tools"
+      ],
+      "task_config_sha256": "508da28840600cebac3c1a7b52cd078f51b940723011f91c1caa2e81f834518a"
+    },
+    "arrange-workspace": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal",
+        "pdf-tools",
+        "excel"
+      ],
+      "task_config_sha256": "df53a38fb39d3a2ba43f0a7ea73433836929be451a61a8b485c6177ae6a04312"
+    },
+    "canvas-arrange-exam": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "canvas",
+        "emails",
+        "memory",
+        "terminal"
+      ],
+      "task_config_sha256": "4de47aa639ad1e47d587d56fab81b3fdc041322ed6c24ffd0d5b22c5f480dcd9"
+    },
+    "canvas-art-manager": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "canvas",
+        "terminal",
+        "emails"
+      ],
+      "task_config_sha256": "b65554826653028ecbeb7d4a91affc1f59c4091c777a7ccb518618384fa3ce79"
+    },
+    "canvas-art-quiz": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "canvas",
+        "terminal"
+      ],
+      "task_config_sha256": "382e803d074ae1e9fb98da90cb0d893379faf205100fec79bd426f3f78c516a3"
+    },
+    "canvas-do-quiz": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "memory",
+        "canvas"
+      ],
+      "task_config_sha256": "61f9ef05080762e8a2ab2cf728ae6d0d42290b9327a77f9638253c7dcdf16b63"
+    },
+    "canvas-homework-grader-python": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "canvas",
+        "filesystem",
+        "terminal",
+        "emails"
+      ],
+      "task_config_sha256": "c7aad687f62811f41783043c86713fe4537577348b7385b7b37e7dd3660b7c86"
+    },
+    "canvas-list-test": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "canvas",
+        "memory"
+      ],
+      "task_config_sha256": "64da6e8d6d10ae93a6c579954e53ce36549e56bbfe8bb04c9e6acaf22bf9db22"
+    },
+    "canvas-new-students-notification": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal",
+        "canvas"
+      ],
+      "task_config_sha256": "0d9851846df5462388b8bf51c171e7e4f4a44be8d4e9f66ce73323448c1008a1"
+    },
+    "canvas-submit-late-work": {
+      "local_tools": [
+        "python_execute",
+        "manage_context",
+        "handle_overlong_tool_outputs",
+        "history"
+      ],
+      "mcp_servers": [
+        "canvas",
+        "memory",
+        "filesystem",
+        "emails"
+      ],
+      "task_config_sha256": "03954167f15570d19588101a946815054d23ce4b9888725ee39380f5cb12db9f"
+    },
+    "cooking-guidance": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "howtocook"
+      ],
+      "task_config_sha256": "e65e5ba62ce27e9e21c4f07f2b04c5ee4e01ef468db2dc5bb9c9171e83355cb8"
+    },
+    "course-assistant": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "excel",
+        "emails",
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "2ae18fa3ceebf93357c22c7bb6ad7b91e95496a6e7fa29bb7c493711ae7de158"
+    },
+    "course-schedule": {
+      "local_tools": [
+        "claim_done",
+        "web_search",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "memory",
+        "excel",
+        "pdf-tools",
+        "fetch"
+      ],
+      "task_config_sha256": "bbaa4d516d161ac12c783bf11b467ac969c223ac537dd500fccc1d366719d95a"
+    },
+    "courses-ta-hws": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "terminal",
+        "excel",
+        "filesystem"
+      ],
+      "task_config_sha256": "fbd1167c9d9eea9498a508dfe47fc391ad9d727a5a836347d8e92eeeaa170ce5"
+    },
+    "cvpr-research": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "fetch",
+        "playwright_with_chunk"
+      ],
+      "task_config_sha256": "09ceed1d1e369cc8a5d389fd1eae2f7f9771e08438e44f2b88a5816a5ed2afc7"
+    },
+    "dataset-license-issue": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "huggingface",
+        "github",
+        "terminal",
+        "fetch"
+      ],
+      "task_config_sha256": "eaaddf5958f217a9c526f542619baf36ffbbe20dd2edc3e054b6559bd932184d"
+    },
+    "detect-revised-terms": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "pdf-tools"
+      ],
+      "task_config_sha256": "e849c23c41fc7a0c077dc9a84ee0ece40db454b4cf3978cf525778276c9f074f"
+    },
+    "dietary-health": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "howtocook",
+        "excel",
+        "terminal"
+      ],
+      "task_config_sha256": "fe7d58a4829f0d228fa5f8e71db0eebd15b56175c3f4828b6bd78383af0382b3"
+    },
+    "email-paper-homepage": {
+      "local_tools": [
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "emails",
+        "github"
+      ],
+      "task_config_sha256": "8028133760a9d219f1bc9e41c6d913fb21e9e618c8efdb9957732121a22dde89"
+    },
+    "excel-data-transformation": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "excel",
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "158206408da1b8bfac9fff9a50e906a78461485abb6e26e5e3edf5163182d7ca"
+    },
+    "excel-market-research": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "excel",
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "a935db48f543bebba385463db7fafe22912e6a7801a8277a55a110b209952c74"
+    },
+    "experiments-recordings": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "notion",
+        "wandb",
+        "terminal",
+        "filesystem"
+      ],
+      "task_config_sha256": "0fb1e9031b95562d45d05501c21a843d484ac8860d320954425f284b3205ce6f"
+    },
+    "fillout-online-forms": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "playwright_with_chunk",
+        "memory",
+        "filesystem"
+      ],
+      "task_config_sha256": "e78dd11fc52cc4538d4f7b6b516327708ca4d559361b4843bf8959ff071de43c"
+    },
+    "filter-low-selling-products": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "python_execute",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce",
+        "filesystem",
+        "emails"
+      ],
+      "task_config_sha256": "93aee4974754ef6c23bdd2a9a6e9c271d6945fdb48f9baa7cb85a026be5dc75f"
+    },
+    "find-alita-paper": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "arxiv_local",
+        "filesystem",
+        "scholarly"
+      ],
+      "task_config_sha256": "a876b22144e437e44a5442d5fb7520ee48d4f20c24b2504c5ca511e4da8ecfdc"
+    },
+    "flagged-transactions": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google-cloud",
+        "excel",
+        "terminal",
+        "filesystem"
+      ],
+      "task_config_sha256": "3715449d813706fc40a8c1143ccadffdd72fbd819dbbf76c2d8fc4e9f24f0722"
+    },
+    "game-statistics": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google-cloud",
+        "terminal"
+      ],
+      "task_config_sha256": "4e905a36339b0f61a5a7bb9c3ecffdbfeaccab3a5e7d33b027fdbc10b742e41a"
+    },
+    "gdp-cr5-analysis": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google_sheet",
+        "playwright_with_chunk",
+        "fetch"
+      ],
+      "task_config_sha256": "b422b4ae243026c2fe40952d880ec38b5604003c3612829ab16ec56e8c39bbf8"
+    },
+    "git-bug-hunt": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "git",
+        "terminal",
+        "filesystem",
+        "emails"
+      ],
+      "task_config_sha256": "0cb0c36f8e751da44c78c93c6444f354000ddab1d8ba0e0fd6b563cf5fd5210c"
+    },
+    "git-milestone": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal",
+        "fetch"
+      ],
+      "task_config_sha256": "a52a08328473fc6746978b07279108b53e14f146aa20a245bded2ad5a4f59be9"
+    },
+    "git-repo": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "github",
+        "filesystem",
+        "pdf-tools"
+      ],
+      "task_config_sha256": "9a3a6016a98abe7d950e04b47a16e6532523a5850704126bfe9cc1da17f546eb"
+    },
+    "hk-top-conf": {
+      "local_tools": [
+        "claim_done",
+        "manage_context",
+        "history",
+        "python_execute",
+        "web_search",
+        "handle_overlong_tool_outputs"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal",
+        "playwright_with_chunk",
+        "fetch"
+      ],
+      "task_config_sha256": "a35da5657fb647170e1d0f17db0e23a532091b8e1458b3a4071e29e21b8b3e4c"
+    },
+    "huggingface-upload": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal",
+        "huggingface"
+      ],
+      "task_config_sha256": "6bc454c6a7c1eefbf9d32f5912854302481a73e2523cc2114b22668b9332a664"
+    },
+    "identify-all-songs": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "youtube-transcript",
+        "playwright_with_chunk",
+        "fetch"
+      ],
+      "task_config_sha256": "2b48a4951094db86203dc2b8bb5d7db2a3dea75d84f3ce5052e4263431ad3a4c"
+    },
+    "imagenet": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "pdf-tools"
+      ],
+      "task_config_sha256": "2b8b370b8147b71466dfeb2d0da8f12b8194059bdef572bd0678544e6d5578b0"
+    },
+    "inter-final-performance-analysis": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "playwright_with_chunk",
+        "google_sheet",
+        "terminal",
+        "fetch"
+      ],
+      "task_config_sha256": "42b0642b58130778a62b265d22d0e98cc3257b42a72dc05ad4b4dbb351b51d73"
+    },
+    "interview-report": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "word"
+      ],
+      "task_config_sha256": "7995558f2c879d7985a8ef2e727efd35ba26a6d42f99be1df1443806e8ce66e1"
+    },
+    "inventory-sync": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce",
+        "filesystem"
+      ],
+      "task_config_sha256": "ba687f6ca26b4324934c5c9fe69f8021678fb3c583bae7719de41f125da2be97"
+    },
+    "investment-decision-analysis": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "yahoo-finance",
+        "google_sheet",
+        "excel",
+        "filesystem"
+      ],
+      "task_config_sha256": "ac9b3480bcd26f780a023365bfaad9be0a3fa20db6224a83dfa2eca6e1119ea9"
+    },
+    "invoice-org": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "pdf-tools",
+        "filesystem",
+        "yahoo-finance",
+        "excel"
+      ],
+      "task_config_sha256": "90644759cc8e9f4d4238d119e002e287239d1a08e25b8fc081a833d9b322f680"
+    },
+    "ipad-edu-price": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "yahoo-finance",
+        "playwright_with_chunk",
+        "fetch"
+      ],
+      "task_config_sha256": "2e4d9bb1a26666504cb7ed41cddd5db16879e087d072c5b8635ac07bdc7187f9"
+    },
+    "k8s-deployment-cleanup": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "k8s",
+        "emails",
+        "pdf-tools",
+        "filesystem"
+      ],
+      "task_config_sha256": "e857ac7f06c3790067459b9c4bb171684163fabc755b52eab1faa92575e8400f"
+    },
+    "k8s-mysql": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "k8s",
+        "filesystem"
+      ],
+      "task_config_sha256": "be8cfd8452ad5896f10c9629fd6253168a4fecaeb0e0b5aee724c1f1740adc55"
+    },
+    "k8s-pr-preview-testing": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "terminal",
+        "filesystem",
+        "playwright_with_chunk",
+        "k8s"
+      ],
+      "task_config_sha256": "9d9e687a5259828a97af6e328a56ded37b5edf06408f68a4e437c3149c75db76"
+    },
+    "k8s-redis-helm-upgrade": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "k8s",
+        "terminal",
+        "filesystem"
+      ],
+      "task_config_sha256": "8a61d3515e60a303905af1122b90c9eb7c6b0c6e67ed3ffc6ac5ac61bd3f8065"
+    },
+    "k8s-safety-audit": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "k8s",
+        "google_sheet",
+        "filesystem"
+      ],
+      "task_config_sha256": "ee0d0bd4d4b37d4eb11f04b9cec4c70c144c4964e30e7d6831273ded4ef187cd"
+    },
+    "landing-task-reminder": {
+      "local_tools": [
+        "claim_done",
+        "manage_context",
+        "history",
+        "handle_overlong_tool_outputs"
+      ],
+      "mcp_servers": [
+        "emails",
+        "snowflake",
+        "pdf-tools",
+        "filesystem"
+      ],
+      "task_config_sha256": "0c55e9d2b4b297217b2b7f339c65852e5fd2ccb597d6d12b3ccfd7e2a98fa108"
+    },
+    "language-school": {
+      "local_tools": [
+        "claim_done",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "playwright_with_chunk",
+        "excel",
+        "fetch",
+        "terminal"
+      ],
+      "task_config_sha256": "a301eb31b7f1f19ba780e68d6c06365b28f03d34b910c289aaf418fee807b377"
+    },
+    "latex-prompt-box": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "arxiv-latex",
+        "terminal"
+      ],
+      "task_config_sha256": "84a8f84a670197b72610f13260d7870e6207e3db8330258a9411821680ad9976"
+    },
+    "live-transactions": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google-cloud",
+        "filesystem"
+      ],
+      "task_config_sha256": "9dac72af921b6fcb329cbba85e220f4142b156652e2c83e0578c2a38b15f4b14"
+    },
+    "llm-training-dataset": {
+      "local_tools": [
+        "web_search",
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "playwright_with_chunk",
+        "google_sheet",
+        "scholarly",
+        "fetch"
+      ],
+      "task_config_sha256": "036cbb78d18188cc8ad8cdda6d1e88bc65000e099882e4b5074454996a98e0ad"
+    },
+    "logical-datasets-collection": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "scholarly",
+        "arxiv_local",
+        "pdf-tools",
+        "fetch"
+      ],
+      "task_config_sha256": "2d94e0b8112acd815e01f8f56aa0277dd864d264a92c8e35dd337ebf295ca74b"
+    },
+    "machine-operating": {
+      "local_tools": [
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history",
+        "claim_done"
+      ],
+      "mcp_servers": [
+        "google-cloud",
+        "filesystem",
+        "excel"
+      ],
+      "task_config_sha256": "184628553c5a68911bc91c84caf85d0826873841d1921511e055450d9f03b062"
+    },
+    "meeting-assign": {
+      "local_tools": [
+        "claim_done",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "fetch",
+        "emails",
+        "playwright_with_chunk",
+        "filesystem"
+      ],
+      "task_config_sha256": "ec487aad162b708f854d2d17262770d0abbcf94181b38f4a76bdb9e05a30b961"
+    },
+    "merge-hf-datasets": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "sleep",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "huggingface",
+        "terminal",
+        "filesystem"
+      ],
+      "task_config_sha256": "1b9e80fe0f98b2662283d4f2ad13308e0d30a02100fc203c8949d4ad3417640b"
+    },
+    "mrbeast-analysis": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "youtube",
+        "filesystem",
+        "excel",
+        "youtube-transcript"
+      ],
+      "task_config_sha256": "fb0f0982cde2cd70f1da9d3610d20b0e256fe898b577199168c3b2999341ed0d"
+    },
+    "music-analysis": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "excel",
+        "google_sheet",
+        "terminal"
+      ],
+      "task_config_sha256": "8091263e41407822508efb36f114940a68daecd2ab2cc4d521d41df437183cc0"
+    },
+    "nhl-b2b-analysis": {
+      "local_tools": [
+        "python_execute",
+        "manage_context",
+        "history",
+        "claim_done",
+        "handle_overlong_tool_outputs"
+      ],
+      "mcp_servers": [
+        "google_sheet",
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "7519110e0e883be23e22355d8007f198418c6a440b88f9f882fc881263f36c55"
+    },
+    "notion-find-job": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google_map",
+        "notion",
+        "emails",
+        "playwright_with_chunk"
+      ],
+      "task_config_sha256": "b2059dd5a561cd948d6d3cc900f55e24232aeb7b31537b011b8653c5e68eddd2"
+    },
+    "notion-hr": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "emails",
+        "notion",
+        "pdf-tools"
+      ],
+      "task_config_sha256": "cdcb1efb16b54456678e6ca4724fe6c64c4472122ecbc894e05b32422753615f"
+    },
+    "notion-movies": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "playwright_with_chunk",
+        "notion",
+        "fetch"
+      ],
+      "task_config_sha256": "955b5c9fad8d8d34acac4bf849116bb042832af4a5fb2f293303d75036c6c842"
+    },
+    "notion-personal-website": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "word",
+        "notion"
+      ],
+      "task_config_sha256": "f83cbcda813b8063641072ec3cc8fba32d4b6c61536da9ee9bfc26c4e3bf0006"
+    },
+    "nvidia-market": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "yahoo-finance",
+        "filesystem",
+        "terminal",
+        "playwright_with_chunk",
+        "excel",
+        "fetch"
+      ],
+      "task_config_sha256": "28a4996776ed2f56c8ceca3b4dde12132230ae995d1c61fdfbbb8762030d04ce"
+    },
+    "nvidia-stock-analysis": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "yahoo-finance",
+        "filesystem",
+        "terminal",
+        "excel",
+        "web_search",
+        "playwright_with_chunk"
+      ],
+      "task_config_sha256": "4149fdfd693fe490aa91732b2ef0beaefddb5b9b8c4248f98c56309f59eae865"
+    },
+    "oil-price": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "yahoo-finance",
+        "notion",
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "1ef36370841324c48535dd3f0e793687c5e5dd13457f35736d8d29d54505dc3b"
+    },
+    "paper-checker": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "280482d099f085b0f5790213b2a3d63f0ba00864777ffe8501263747b6632efa"
+    },
+    "payable-invoice-checker": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "emails",
+        "pdf-tools",
+        "filesystem",
+        "snowflake"
+      ],
+      "task_config_sha256": "cb86e2ee74595615b542cae930880f504440f9d75e11d5dd9e8b192f501d9960"
+    },
+    "personal-website-construct": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "memory",
+        "github"
+      ],
+      "task_config_sha256": "5931e20a6fe49f779514d41f7fcd003d4412396db0eab7cce0a5c586864bb6c7"
+    },
+    "ppt-analysis": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "pptx",
+        "filesystem",
+        "pdf-tools"
+      ],
+      "task_config_sha256": "07941ea99abf768a4427f68308d0dab09edf9d86864dd5fed75e499f901d64cd"
+    },
+    "price-comparison": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal",
+        "pdf-tools",
+        "google-cloud"
+      ],
+      "task_config_sha256": "494624306b9f5f08ea8dcb82049945caf9000f99589860198a7856bfaea7c2cb"
+    },
+    "privacy-desensitization": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "e7fb0f05cd8c5460ed228c673cf7216d6549784dc90fb1ec7ed90747db4a3d7b"
+    },
+    "profile-update-online": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "playwright_with_chunk",
+        "scholarly",
+        "arxiv_local",
+        "pdf-tools"
+      ],
+      "task_config_sha256": "d8a4e12ae9e3464a7cef91a0b768ea1400c8ad740d7ba89c353bdbff5daccd4b"
+    },
+    "quantitative-financial-analysis": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "yahoo-finance",
+        "google_sheet",
+        "notion",
+        "terminal"
+      ],
+      "task_config_sha256": "2e611564bd4e1eac20d1d0e85e32b500f6fb85480d6d299cbef76c13cfe0b179"
+    },
+    "reimbursement-form-filler": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "excel",
+        "pdf-tools",
+        "terminal"
+      ],
+      "task_config_sha256": "d07c60fc7514d844cf842f5ae8d61fe1a2f03a06087d2363903990ecc09c1c6d"
+    },
+    "sales-accounting": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "memory",
+        "excel",
+        "filesystem"
+      ],
+      "task_config_sha256": "ed7429165eb8ed9ae5cbd7aa1579e174f8ce8a410d6361ea4cc47c4710c220f3"
+    },
+    "search-ca-school": {
+      "local_tools": [
+        "claim_done",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "google_map",
+        "playwright_with_chunk",
+        "fetch"
+      ],
+      "task_config_sha256": "430547067639b1e360b80b713e2409f33c245f875f3997d1f62d5b5d8143400e"
+    },
+    "set-conf-cr-ddl": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "emails",
+        "google_calendar"
+      ],
+      "task_config_sha256": "96f88e6d9b8f9aa499bc4bbc118ade9fa09fe4275f6b68929de375c27e63c9ca"
+    },
+    "shopping-helper": {
+      "local_tools": [
+        "history",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "playwright_with_chunk"
+      ],
+      "task_config_sha256": "eb32d6cf0a2cc2d71b71563c18eae69e23020c7a518d8f4963bb8d005a74cf40"
+    },
+    "sla-timeout-monitor": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "emails",
+        "snowflake",
+        "filesystem",
+        "pdf-tools",
+        "terminal"
+      ],
+      "task_config_sha256": "1af3d0107411839540119e1017d7992fff9969271e2de916c1c3f32241647a70"
+    },
+    "stock-build-position": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "excel",
+        "yahoo-finance",
+        "terminal"
+      ],
+      "task_config_sha256": "e1f268e6f57aaafc5d50bf8137604f5ff637889eebdc92473b878aa5019bc3fb"
+    },
+    "student-interview": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "emails",
+        "google_calendar"
+      ],
+      "task_config_sha256": "78fbcba8f4620c78d9892f98c4919e1ebaa3cb0ad1cf28be127acb3d3dd757c5"
+    },
+    "subway-planning": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google_map",
+        "filesystem",
+        "playwright_with_chunk",
+        "fetch"
+      ],
+      "task_config_sha256": "cd2f21f16dc827c918e42ee9b0115564b06e89c75801333d56ae092ecc42d44a"
+    },
+    "sync-todo-to-readme": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "git",
+        "github"
+      ],
+      "task_config_sha256": "8c514f5fe5f9ea97bb18dd5394cbf6177b46f2a31c4871374d0ac36287817159"
+    },
+    "task-tracker": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "github",
+        "notion"
+      ],
+      "task_config_sha256": "e515691949bd16e1b95a0074954b869de0fd62d420304c1d2f35403328a51c6a"
+    },
+    "train-ticket-plan": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "rail_12306",
+        "terminal",
+        "fetch"
+      ],
+      "task_config_sha256": "3182fa95e16d907e2e8e5d9691ab71c804c3936769de8501c0bffee0bd27d423"
+    },
+    "travel-exchange": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "terminal",
+        "filesystem",
+        "yahoo-finance"
+      ],
+      "task_config_sha256": "0f4705ebaec3d4dbe0177cb2d26571368835514f41057317a2fd2610cb185309"
+    },
+    "travel-expense-reimbursement": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "emails",
+        "snowflake",
+        "pdf-tools",
+        "filesystem"
+      ],
+      "task_config_sha256": "d594f7bff169e0798387958298c5993adfef93fb218d4928b793a5bc41cdda5d"
+    },
+    "trip-adviser": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google_map",
+        "fetch",
+        "filesystem",
+        "playwright_with_chunk"
+      ],
+      "task_config_sha256": "c77be56a7a627f094e8c97b5f9994b48a20fd65499b67ce2b504bdcc543ef9d6"
+    },
+    "trip-itinerary-generator": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "google_map",
+        "playwright_with_chunk"
+      ],
+      "task_config_sha256": "0bb7737cf2bee10f7d7c06334935b98264289abad37932d090afe0d9e7a492b9"
+    },
+    "university-course-selection": {
+      "local_tools": [
+        "python_execute",
+        "manage_context",
+        "history",
+        "claim_done",
+        "handle_overlong_tool_outputs"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "pdf-tools",
+        "terminal",
+        "excel"
+      ],
+      "task_config_sha256": "1d7444894eee2f8840b787ad8d9a64a81951cdbbcad83a00d656db01d0a46f30"
+    },
+    "update-material-inventory": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "google_sheet",
+        "woocommerce"
+      ],
+      "task_config_sha256": "d58665fafe992bc35b9f479e8508a6c5002b9dd970c3d05138f569264dfb9346"
+    },
+    "upenn-campus-route": {
+      "local_tools": [
+        "claim_done",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "filesystem",
+        "terminal",
+        "google_map",
+        "fetch"
+      ],
+      "task_config_sha256": "b002d2f7a9c4bc368e4b80ed2332e564844e2f54574aa0730f8934cda48ceb65"
+    },
+    "verl-dataset": {
+      "local_tools": [
+        "python_execute",
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "huggingface",
+        "filesystem",
+        "fetch"
+      ],
+      "task_config_sha256": "65fb525b95bfc2e4968f63dd65d19a780a7c43606e3a2b6b83aff641c950afe9"
+    },
+    "vlm-history-completer": {
+      "local_tools": [
+        "claim_done",
+        "web_search",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "playwright_with_chunk",
+        "google_sheet",
+        "arxiv_local",
+        "huggingface",
+        "fetch"
+      ],
+      "task_config_sha256": "e38214e369af94514d937deac535c0d23146eded3c92293e40d49b67ae1322dc"
+    },
+    "wandb-best-score": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "wandb",
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "668a9fbcdc50182c43f011ce63fcd51ef7c76b5296f4cfad66c6c4952f049e81"
+    },
+    "wandb-shortest-length": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "wandb",
+        "filesystem",
+        "terminal",
+        "excel"
+      ],
+      "task_config_sha256": "639c6067117b4071e4748ca3c5d5444039cf8290d465952d2222a2df3980f083"
+    },
+    "woocommerce-customer-survey": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce",
+        "emails",
+        "google_forms",
+        "filesystem"
+      ],
+      "task_config_sha256": "6133dd16ab75b0fac8ca9e476abdda79d2e760f5966a111f28828e07e90b42e7"
+    },
+    "woocommerce-new-product": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce",
+        "filesystem",
+        "emails"
+      ],
+      "task_config_sha256": "2b9e4a8c2aa7179c7d74b240f8d27af28db44bb5dec37feedda303f9a5a716d7"
+    },
+    "woocommerce-new-welcome": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce",
+        "filesystem",
+        "terminal",
+        "google-cloud",
+        "emails"
+      ],
+      "task_config_sha256": "fc408e7f87d4d6dd2d0b2bd91cff26c29777590c9b7e8945ce6320c99ae9974d"
+    },
+    "woocommerce-product-recall": {
+      "local_tools": [
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce",
+        "emails",
+        "google_forms",
+        "filesystem"
+      ],
+      "task_config_sha256": "6133dd16ab75b0fac8ca9e476abdda79d2e760f5966a111f28828e07e90b42e7"
+    },
+    "woocommerce-stock-alert": {
+      "local_tools": [
+        "python_execute",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce",
+        "google_sheet",
+        "emails",
+        "filesystem"
+      ],
+      "task_config_sha256": "34b6ac2cfb339904f3e6fea4579020399ed2dbbdead94dcf9ca2bff4b47b70fe"
+    },
+    "woocommerce-update-cover": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "woocommerce"
+      ],
+      "task_config_sha256": "0681b43e1e6e1a934f3e5ec722e7d1d6f257356e6529716d57f22a2cc930b2c3"
+    },
+    "yahoo-analysis": {
+      "local_tools": [
+        "claim_done",
+        "python_execute",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "yahoo-finance",
+        "filesystem",
+        "terminal"
+      ],
+      "task_config_sha256": "39052f2fafbb9890709e2d0439309009bb4eb71ac5f08916f1ae3f9e9995b87d"
+    },
+    "youtube-repo": {
+      "local_tools": [
+        "web_search",
+        "claim_done",
+        "handle_overlong_tool_outputs",
+        "manage_context",
+        "history"
+      ],
+      "mcp_servers": [
+        "youtube",
+        "youtube-transcript",
+        "filesystem",
+        "fetch",
+        "github"
+      ],
+      "task_config_sha256": "0767acfff6fdfbd65c207caae379f38eb794574a2955f8f7c7e5e59a02f567d9"
+    }
+  }
+}

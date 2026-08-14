@@ -1,0 +1,113 @@
+{
+  "credential_isolation": {
+    "artifact_identity": "full sha256 fingerprints only; key values are redacted and scanned",
+    "astra_environment": "TOOLATHLON_DEEPSEEK_ASTRA_API_KEY",
+    "distinct_key_values_required": true,
+    "evaluator_receives_real_provider_keys": false,
+    "hermes_environment": "TOOLATHLON_DEEPSEEK_HERMES_API_KEY",
+    "legacy_shared_deepseek_api_key_forbidden": true,
+    "orchestrator_pair_preflight": "abort before a slot if either key is missing or the values are equal",
+    "products_receive_real_provider_keys": false,
+    "provider_account_relationship": "not inferable from keys; record during credential provisioning",
+    "same_endpoint_and_model_across_keys": true,
+    "selected_key_only_in_model_proxy_config": true,
+    "task_container_receives_real_provider_keys": false
+  },
+  "endpoint": {
+    "api_format": "OpenAI-compatible Chat Completions",
+    "api_version": "provider current; no version path/header exposed by official docs",
+    "base_url": "https://api.deepseek.com",
+    "provider": "deepseek",
+    "routing": "official direct API only; no OpenRouter or product fallback"
+  },
+  "frozen_on": "2026-08-06",
+  "generation": {
+    "frequency_penalty": {
+      "resolved": "provider default",
+      "wire_behavior": "omitted"
+    },
+    "max_output_tokens": {
+      "resolved": "provider default",
+      "wire_behavior": "omitted"
+    },
+    "parallel_tool_calls": {
+      "resolved": "provider default",
+      "wire_behavior": "omitted"
+    },
+    "presence_penalty": {
+      "resolved": "provider default",
+      "wire_behavior": "omitted"
+    },
+    "reasoning_effort": {
+      "provider_default": "high",
+      "source": "benchmark_override",
+      "value": "max",
+      "wire_behavior": "sent"
+    },
+    "stream": "product-native value preserved",
+    "temperature": {
+      "effective": false,
+      "reason": "official docs state temperature is accepted but ignored in Thinking mode",
+      "sent": true,
+      "value": 0
+    },
+    "thinking": {
+      "provider_default": "enabled",
+      "source": "benchmark_override",
+      "value": "enabled",
+      "wire_behavior": "sent",
+      "wire_value": {
+        "type": "enabled"
+      }
+    },
+    "tool_choice": {
+      "resolved": "provider default",
+      "wire_behavior": "omitted"
+    },
+    "top_p": {
+      "resolved": "provider default",
+      "wire_behavior": "omitted"
+    }
+  },
+  "model": {
+    "alias_semantics": "request ID resolves to the provider's current documented 0731 version",
+    "context_length_tokens": 1000000,
+    "documented_version": "DeepSeek-V4-Flash-0731",
+    "maximum_output_tokens": 384000,
+    "request_id": "deepseek-v4-flash",
+    "tool_calls_supported": true
+  },
+  "official_docs_snapshot": {
+    "path": "deepseek-official-docs.snapshot.json",
+    "sha256": "598bcf33f8beae63f60a4ec8b2e7099152d1313e6c633eb1b94b634af39076b6"
+  },
+  "provider_request_identity": {
+    "account_concurrency_scope": "account-level and independent of API key",
+    "cross_system_and_cross_run_user_id_overlap": false,
+    "purpose": "DeepSeek content-safety identity, KVCache, and scheduling isolation",
+    "separate_accounts_required_for_concurrency_quota_isolation": true,
+    "user_id_derivation": "toolathlon-<system_id>-<first24hex(sha256(run_id))>",
+    "user_id_wire_behavior": "proxy removes product values and injects a frozen value"
+  },
+  "request_budget": {
+    "allow_request_number_100": true,
+    "count_product_internal_retries": true,
+    "count_product_planning_reflection_summary_recovery": true,
+    "count_tool_calls": false,
+    "max_product_model_requests": 100,
+    "reject_request_number_101": true,
+    "tool_call_limit": null
+  },
+  "schema_version": "toolathlon.model-freeze.v1",
+  "wire_enforcement": {
+    "local_proxy": "127.0.0.1 per run",
+    "messages_and_tools_preserved": true,
+    "model_is_rewritten": true,
+    "provider_key_visible_to_evaluator": false,
+    "provider_key_visible_to_products": false,
+    "provider_key_visible_to_task_container": false,
+    "reasoning_content_replay": "product responsibility; missing replay or provider 400 is a valid product result",
+    "reasoning_effort_override": "strip product value and send max",
+    "thinking_override": "strip product value and send {type: enabled}"
+  }
+}

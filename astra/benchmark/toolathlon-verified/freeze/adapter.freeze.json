@@ -1,0 +1,329 @@
+{
+  "frozen_on": "2026-08-06",
+  "implementation": {
+    "adapter_retry_count": 0,
+    "event_schema_version": "toolathlon.adapter.events.v1",
+    "files": [
+      {
+        "path": "astra/benchmark/toolathlon-verified/config/adapter-run.schema.json",
+        "sha256": "63a82f44ae1aa654b97982a034fcfed9de0867db55a362505e48081da951df7e",
+        "size_bytes": 2009
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/config/astra-runtime.example.json",
+        "sha256": "12b2d35df1a2c8fd94429784d1673126526edfc3d996f2d11af6e74ed6698c69",
+        "size_bytes": 763
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/config/hermes-runtime.example.json",
+        "sha256": "f79d30eaa4a1376aec6426b98ae77cef06043fc585bfb5cd1276452433d8b580",
+        "size_bytes": 510
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/config/permission-policy.example.json",
+        "sha256": "4721e7898742bbbb1dbd4e25cf5e970fa328e5b0e11931705f72bf2a4c5b8ac2",
+        "size_bytes": 346
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/config/run-artifact-contract.json",
+        "sha256": "6ab95206ba0c1043f7ead1c9dcd47b0c71f8e0f371d5be6a36c17ce7791146e2",
+        "size_bytes": 2271
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/config/run.example.json",
+        "sha256": "0e0dd6c8b716c723141383c8c53fd683f8a3b07de23872f3a569a8233dc2d630",
+        "size_bytes": 1936
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/runtime/capture_live_tool_schemas.py",
+        "sha256": "486e2000bc63f3a1db5023bf21c930f88f220ee99cce38bc736639fa5e2f1e76",
+        "size_bytes": 19594
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/runtime/container_tool_gateway_m1.py",
+        "sha256": "575a65ce57257f256c1b7eadf3aecea6ea218f3ce5af97e889d0dda761faefbb",
+        "size_bytes": 5026
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/check_astra_model_precondition.py",
+        "sha256": "077c7060dc5c85a4aad14ebbfae403d544958d9480b677b15871e5a80ccb6d85",
+        "size_bytes": 1656
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/freeze_m1_credentials.py",
+        "sha256": "56337e65a896958be347adb4d77ad3fcd941924ee78a3971a44e504533e3c798",
+        "size_bytes": 12179
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/freeze_section_3_3.py",
+        "sha256": "d43762698d2f99a665579caf0363311a6f943c88092420c9caa0a0eb0dafaa78",
+        "size_bytes": 60177
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/run_m2_first_batch.sh",
+        "sha256": "092faedda701523af03349c4e651c11d42a3f886cae4fd3af70b6c4926a39416",
+        "size_bytes": 2170
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/run_m3_remaining_batch.sh",
+        "sha256": "4073ad1547ff28b8d0171d9f647d2dda363175af1a713b4ae99c8b4c07f05a8c",
+        "size_bytes": 1923
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/run_minimal_e2e_pair.sh",
+        "sha256": "25cb3d83c4df4c0994bdbb10acee3548f9ba7490b6de599a72df584659dff706",
+        "size_bytes": 2876
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/validate_m2_first_batch.py",
+        "sha256": "fdf8b449ae6381793087d9b635f486b8fd4b133366aa7f7c9261c5213da3b8e6",
+        "size_bytes": 325
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/validate_m3_remaining_batch.py",
+        "sha256": "0f656848ec3e52961a2c25dfd3c4f80b50269d5fd328310228ee4cafd68da5a5",
+        "size_bytes": 325
+      },
+      {
+        "path": "astra/benchmark/toolathlon-verified/scripts/validate_minimal_e2e_pair.py",
+        "sha256": "96e20731fa69ce7f84ba293baedf44ef9c355380f6ce408ea4378f753c4e6955",
+        "size_bytes": 11131
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/README.md",
+        "sha256": "e85b8061716439ce542c6f5e2f05260d553781f69c16850195c84663cb928a02",
+        "size_bytes": 6454
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/__init__.py",
+        "sha256": "08250bbf287766885c47241652626442b4911d7cdb44ee111c3cb39438675da6",
+        "size_bytes": 248
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/adapter_common.py",
+        "sha256": "5200bbffed23da4f867b17059abd6403994ddb5e256f8fccef8939ec95995626",
+        "size_bytes": 4163
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/artifact_contract.py",
+        "sha256": "fa2642af22cf3d895774bceb2f5a248b185484a3638ad8173690ce93da6a4cd2",
+        "size_bytes": 37297
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/astra_adapter.py",
+        "sha256": "81cf719b8588d730f669a95aa01f48fb0b5a72c4e949732d54ac67c65429df4d",
+        "size_bytes": 16325
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/astra_runtime_mcp_client.py",
+        "sha256": "673ab6c6d3ef38b8756869ef6d5af5fe465177e63d4ac1736d5e2a4b1efaae64",
+        "size_bytes": 8591
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/bundle.py",
+        "sha256": "4675f788cf01b593910caeeb1e17dd2246e97a9fa7e7da0310518fc38aaae9c5",
+        "size_bytes": 4350
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/contract.py",
+        "sha256": "3ad9815a22d9411af4d600b9064b2c4e195a887c9a5e7e8cbcfd21c44e43e464",
+        "size_bytes": 11198
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/hermes_adapter.py",
+        "sha256": "3493832f745ec261def41e83c08d97195a3af6fac93db291bf7a66adc4c6ba5d",
+        "size_bytes": 22390
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/lifecycle.py",
+        "sha256": "7d4b16c7ae0ebd3d8bcc806ad145a1e73d4aa57721d3bf7ee5585aa923f32113",
+        "size_bytes": 36953
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/m2_batch.py",
+        "sha256": "ede296fcecb9abf5e80b9c7133a8a9da7833f8b39d59c599ec142c0c6e9369b0",
+        "size_bytes": 46609
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/m2_scheduler_hotfix.py",
+        "sha256": "eca06dd87f5d143130937c67bac8627d871c2433fc53da8291e39b96f327180f",
+        "size_bytes": 17819
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/m3_batch.py",
+        "sha256": "f1ecc8afce2f67dd95487a2ec470535d6ba7b5ac4c6fee5e11ec637faad84669",
+        "size_bytes": 25855
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/m3_scheduler_hotfix.py",
+        "sha256": "cb9aaa91b1dc51978d60b75cee24a04a3aef77a6d9ccef76d492a09b0cd49d92",
+        "size_bytes": 7003
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/mcp_client.py",
+        "sha256": "f1eb2223c31b2d574b5870a6c853ca48f0a8c7aa3d9da7356eb81f2421026d06",
+        "size_bytes": 13150
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/model_proxy.py",
+        "sha256": "801d29942986106997525937e6d9a29239f840d96eb0f44e5359f804f19b5bea",
+        "size_bytes": 35792
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/orchestrator.py",
+        "sha256": "df723dd101ce03237179d03e6dc1fa2ce4571ed849d9ef991f9ede4c828d346f",
+        "size_bytes": 38477
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/permissions.py",
+        "sha256": "0e2ea6e63586232dcd856ec3bea8e11c5dc52fd94bfddeb7a9bb2b7a72723697",
+        "size_bytes": 4082
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/policy_guard/sitecustomize.py",
+        "sha256": "13ab952a32d7ab6e10808f2bad45f7b7771f7d940427bfbb2c051703e47c3c58",
+        "size_bytes": 3137
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/process_control.py",
+        "sha256": "7fee923a02922cf08c0a686fdce0075581e67766a1ead481d2ed08ea72ef2054",
+        "size_bytes": 4449
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/product_identity.py",
+        "sha256": "68a9fd6d1144a6bf640bd36fae20c27c3209a204b2f8d7bc78c7131910d4010e",
+        "size_bytes": 8951
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/resources.py",
+        "sha256": "5050ef6f1112d146c646d0300a87a8ff63fee9b7f39615d04c9f661e08606604",
+        "size_bytes": 8991
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/scripts/environment.py",
+        "sha256": "7c82982fcf64d6f2eb84100f47a0839e2ccafd99e9508ea41a73c1fa0cab0561",
+        "size_bytes": 635
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/__init__.py",
+        "sha256": "fef68d30b4e988b84ee79ec9251c4e950f32422a8c428bec87fe11d9001469d2",
+        "size_bytes": 58
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_adapters.py",
+        "sha256": "6d86724402519ba243ebe3117c14a0e9caea0cbe52336f2f4cdc996ee9c98a64",
+        "size_bytes": 21844
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_artifact_contract.py",
+        "sha256": "172323db851e6eb3fe4b767b1050c0d4f73027dfc358ede017177c715bf3a155",
+        "size_bytes": 15481
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_contract_bundle.py",
+        "sha256": "09884141fed1183e9a4262c8a6a53d829fbf8da7f8a4000968432a0396e9d553",
+        "size_bytes": 7254
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_lifecycle.py",
+        "sha256": "799102bd377a6f7b9ec88ecc7b726de2092f1f7550a00de0e76050fb3063067b",
+        "size_bytes": 5675
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_m2_batch.py",
+        "sha256": "27d4749020dff25ef5f48ad900f4a558adddd12516b60f44ce5cbaa8c72fbd1e",
+        "size_bytes": 5759
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_m3_batch.py",
+        "sha256": "6b145c8e41333fd222942c34ec4b4b29769fb3ea3043d4357e64c9d00f06daca",
+        "size_bytes": 2920
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_mcp_client.py",
+        "sha256": "7a1f97da313ffc453cc144263fd2c32bd79bca6921691d4a8220a836edf7a89d",
+        "size_bytes": 4133
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_model_proxy.py",
+        "sha256": "d4ef4d9a982563a58cd22384d60cd85c91d9ac5f19bc2d3b0de7a83719909363",
+        "size_bytes": 9601
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/tests/test_trajectory.py",
+        "sha256": "0c9946cc43e8601769b838032180c7effccea6c41c38e4e65909aa3036f6f966",
+        "size_bytes": 7440
+      },
+      {
+        "path": "astra/runners/toolathlon_verified/trajectory.py",
+        "sha256": "86ac921f2a118e6b61b3a828afa0dffaea4578f22caa6bb22fa2d8c506ee1f46",
+        "size_bytes": 12344
+      }
+    ],
+    "model_event_schema_version": "toolathlon.model-proxy.events.v1",
+    "python_dependencies": "standard library only",
+    "resource_event_schema_version": "toolathlon.resource-usage.v1"
+  },
+  "interfaces": {
+    "agent_deadline_starts_at_prompt_handoff": true,
+    "all_current_task_mcp_tools_exposed": true,
+    "astra_native_request_scoped_runtime_mcp": true,
+    "astra_server_declared_tool_count_validated": true,
+    "container_application_credential_layout": "frozen Google OAuth files are installed in the Calendar MCP home layout; Notion MCP OAuth state and the frozen OpenAPI patch are mounted only for Notion tasks",
+    "distinct_provider_keys_preflighted": true,
+    "duplicate_product_tool_terminals_normalized_once": true,
+    "evaluator_after_all_agent_terminal_states": true,
+    "four_way_tool_name_mapping": true,
+    "fresh_state_no_resume": true,
+    "generation_override_recorded_per_request": true,
+    "host_application_setup_replay": "qualification and recovery only; not per attempt",
+    "lifecycle_task_scope": "all 108 frozen tasks",
+    "m2_first_batch_workers": 1,
+    "m2_incomplete_or_unclassified_attempt_blocks": true,
+    "m2_m1_formal_slots_reused": 2,
+    "m2_new_effective_slots": 26,
+    "m2_resume_without_overwrite": true,
+    "m3_new_effective_slots": 188,
+    "m3_remaining_batch_workers": 1,
+    "m3_requires_m2_go": true,
+    "m3_resume_without_overwrite": true,
+    "native_tool_transport_events_normalized_and_paired": true,
+    "outer_toolathlon_lifecycle_required": false,
+    "per_attempt_reset": "fresh product identity/home plus fresh task container/workspace; task preprocess restores task-scoped application state",
+    "post_terminal_model_drain_required": true,
+    "provider_keys_stripped_from_products_and_evaluator": true,
+    "provider_request_tool_names_and_hash_validated": true,
+    "provider_user_id_forced_per_system_run": true,
+    "public_bundle_only": true,
+    "raw_mcp_tools_list_captured_before_agent": true,
+    "reasoning_effort_wire_override": "max",
+    "runtime_refreshable_oauth_evidence": "only allowlisted configs/.mcp-auth/*_tokens.json files may rotate; every attempt records before/after SHA-256 values",
+    "scope": "single complete Toolathlon lifecycle",
+    "task_scoped_mcp_tools_only": true,
+    "terminal_argument_hash_inherited_from_matching_start": true,
+    "thinking_wire_override": "enabled"
+  },
+  "live_runtime_qualification": {
+    "blockers": [
+      "Astra and Hermes must each pass one real find-alita-paper lifecycle artifact gate"
+    ],
+    "product_runtime_artifacts": "go",
+    "status": "pending_single_task_e2e"
+  },
+  "revision": {
+    "archive": {
+      "path": "astra/work/toolathlon-verified/freeze-3.3/toolathlon-verified-adapters-v1.tar",
+      "sha256": "7ab719062f6b272eec24768066efcac95860dbcbf64db70c0ed83f00e15c17b6",
+      "size_bytes": 624640
+    },
+    "reason": "benchmark files are an uncommitted worktree addition; exact file hashes and a deterministic archive freeze the implementation without committing unrelated changes",
+    "repository_base_commit": "2cfa2fb75b706fb93b3de0f5865c2953c69aa5b1",
+    "type": "content-addressed snapshot"
+  },
+  "schema_version": "toolathlon.adapter-freeze.v1",
+  "test_report": {
+    "path": "astra/benchmark/toolathlon-verified/freeze/adapter-test-report.json",
+    "sha256": "3b7e173e965d4bffbffdbea3f52ed156499aac9da4d211c83e741d9c1758ef4b",
+    "size_bytes": 3195
+  }
+}

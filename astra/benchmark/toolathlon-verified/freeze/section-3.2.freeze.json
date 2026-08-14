@@ -1,0 +1,259 @@
+{
+  "applications": {
+    "app_state_manifest": {
+      "path": "app-state-manifest.json",
+      "sha256": "02fd007a40213d3c9de3d42ebce6cca9eab1bb1a07516ad97470c5e1774084b2"
+    },
+    "deployment_file_count": 10,
+    "reason": "application services and reset snapshots have not been provisioned or replayed",
+    "runtime_state": "NO_GO",
+    "sha256_manifest": {
+      "path": "deployment-manifest.sha256",
+      "sha256": "3dbbbd45f0b42ebb20b68625b5554dd7b689b52959a62db112bcdadc865e2f72"
+    }
+  },
+  "auxiliary_images": {
+    "declared_references": [
+      "docker.io/lbjay/canvas-docker:latest",
+      "docker.io/analogic/poste.io:2.5.5",
+      "docker.io/library/mysql:8.0",
+      "docker.io/library/wordpress:6.8.2-php8.2-apache",
+      "docker.io/library/mysql:8.4",
+      "docker.io/library/nginx:1.14",
+      "docker.io/library/nginx:1.20-alpine",
+      "docker.io/oliver006/redis_exporter:v1.45.0",
+      "docker.io/library/nginx:1.21-alpine",
+      "docker.io/library/alpine:3.20",
+      "docker.io/library/busybox:1.36",
+      "docker.io/nginxinc/nginx-unprivileged:1.25-alpine",
+      "docker.io/prom/prometheus:v2.52.0",
+      "docker.io/library/python:3.12-alpine",
+      "docker.io/library/redis:7.2",
+      "docker.io/library/nginx:1.25-alpine",
+      "docker.io/bitnamilegacy/redis:7.2.4-debian-12-r9"
+    ],
+    "image_manifest": {
+      "path": "image-manifest.json",
+      "sha256": "0003e9545870748bde986f629efee8aa9381904cd94874340b0370da20e7426f"
+    },
+    "resolved_count": 17,
+    "state": "frozen",
+    "unresolved_count": 0
+  },
+  "container_runtime": {
+    "execution_mode": "rootful_docker",
+    "formal_image_reference": "lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f",
+    "manifest": {
+      "path": "container-runtime-manifest.json",
+      "sha256": "4413041df93831e966207542de1ee6badaca05e31985764f03e535dfece5c749"
+    },
+    "state": "frozen"
+  },
+  "credentials": {
+    "policy": "disposable task accounts only; freeze identifiers/scopes/hashes, never secret values",
+    "required_runtime_files": {
+      "configs/global_configs.py": {
+        "exists": false
+      },
+      "configs/token_key_session.py": {
+        "exists": false
+      },
+      "~/.mcp-auth": {
+        "exists": false
+      }
+    },
+    "secret_values_recorded": false,
+    "state": "NO_GO"
+  },
+  "dependencies": {
+    "records": [
+      {
+        "path": "uv.lock",
+        "sha256": "9896d725eada7cfcab8b4426c47994b46bffb20718bba029aa0bdd34a938f068",
+        "size_bytes": 344456
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "58347b7fc8aec2a3c3ca1e00846380d6c0e1722ad518df4219edab7ce7489ca8",
+        "size_bytes": 4605
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "55e3505b5ebad978fdd51e73c89ca8b21d10f2babfe6ce5d18b29e6c186d9347",
+        "size_bytes": 549022
+      },
+      {
+        "path": "package.json",
+        "sha256": "fb73200d01e86bf5e2f88780396e16e002dd6fa588831d35b246b8bc43c7c86a",
+        "size_bytes": 2181
+      },
+      {
+        "path": "Dockerfile",
+        "sha256": "9b0b460479eed8855c9d9663de9e15d9b59e846513707add68f9dccacecf0552",
+        "size_bytes": 5302
+      },
+      {
+        "path": "local_binary/github-mcp-version.txt",
+        "sha256": "bdf4078e0129b1dcd9a47b0e73240949e51182928e29c5fdc2c59cf0db3d83f8",
+        "size_bytes": 202
+      },
+      {
+        "path": "local_binary/github-mcp-server",
+        "sha256": "c930d5d4d380d82e2e608d9b9eddf84622eb845f730f420b07c848917e51017a",
+        "size_bytes": 18780318
+      }
+    ],
+    "sha256_manifest": {
+      "path": "dependency-manifest.sha256",
+      "sha256": "48f13183b73a88e9e23595f20df386ea5491c8349b2573320b0eff4528fe7247"
+    },
+    "task_image_software_manifest": {
+      "browser_inventory_state": "frozen",
+      "path": "task-image-software-manifest.json",
+      "python_package_count": 26,
+      "sha256": "e0f9621668326fca1bf1dd8b565de3cd2386fe6955bcde0dc50f17fee49d5427",
+      "system_package_count": 378
+    }
+  },
+  "freeze_state": "source_data_images_and_container_runtime_frozen_runtime_qualification_no_go",
+  "frozen_at": "2026-08-05",
+  "mcp_and_tools": {
+    "local_tool_implementation_records": [
+      {
+        "path": "utils/roles/task_agent.py",
+        "sha256": "990e59987caae118c09241f6f5a3efdb6aa22a756467406b2486ea2ccb4cb52f",
+        "size_bytes": 48882
+      },
+      {
+        "path": "utils/aux_tools/basic.py",
+        "sha256": "971429c163eb11fe9fdd39a22f3b7a5cc8439fcf7745901f553f5238ddf1671c",
+        "size_bytes": 1352
+      },
+      {
+        "path": "utils/aux_tools/context_management_tools.py",
+        "sha256": "c8393da34990d9e049db8fe092bc45137259a810d27b9099b9e1fc5aad04c5b9",
+        "size_bytes": 16411
+      },
+      {
+        "path": "utils/aux_tools/history_tools.py",
+        "sha256": "491dcea01570f48d24c0e0f1fc52760869bfb4085c4187798fdb48ab6c36a4d7",
+        "size_bytes": 33010
+      },
+      {
+        "path": "utils/aux_tools/overlong_tool_manager.py",
+        "sha256": "8c39cf8939b67f96787d49b2395097ecc0eda1a5c48e03a0f52e8913aa6c3c4f",
+        "size_bytes": 21699
+      },
+      {
+        "path": "utils/aux_tools/python_interpretor.py",
+        "sha256": "b05311bf353cb06b7a512e63f07410b80da33107a625234f67c93507782aa2d2",
+        "size_bytes": 4207
+      },
+      {
+        "path": "utils/aux_tools/web_search.py",
+        "sha256": "15e89c72ff66ec159bf44f3c7cd0397b3acbed8bd83a4100c79ff7223982ae21",
+        "size_bytes": 12894
+      },
+      {
+        "path": "utils/openai_agents_monkey_patch/tool_name_aliases.py",
+        "sha256": "73d2652caf764e48e5a8832a6cdbc629e6d6d95ada8e33fe4b52a2ea76c0f517",
+        "size_bytes": 3247
+      }
+    ],
+    "mcp_config_file_count": 34,
+    "mcp_config_manifest": {
+      "path": "mcp-config-manifest.sha256",
+      "sha256": "4b172337a00611271183602b1cc77eafc385789462a948715166c7b4e48178ce"
+    },
+    "observed_tool_schema_state": "NO_GO",
+    "reason": "runtime list_tools cannot be captured until the task image, services, and credentials are qualified",
+    "required_local_tools": [
+      "claim_done",
+      "handle_overlong_tool_outputs",
+      "history",
+      "manage_context",
+      "python_execute",
+      "sleep",
+      "web_search"
+    ],
+    "required_mcp_servers": [
+      "arxiv-latex",
+      "arxiv_local",
+      "canvas",
+      "emails",
+      "excel",
+      "fetch",
+      "filesystem",
+      "git",
+      "github",
+      "google-cloud",
+      "google_calendar",
+      "google_forms",
+      "google_map",
+      "google_sheet",
+      "howtocook",
+      "huggingface",
+      "k8s",
+      "memory",
+      "notion",
+      "pdf-tools",
+      "playwright_with_chunk",
+      "pptx",
+      "rail_12306",
+      "scholarly",
+      "snowflake",
+      "terminal",
+      "wandb",
+      "web_search",
+      "woocommerce",
+      "word",
+      "yahoo-finance",
+      "youtube",
+      "youtube-transcript"
+    ],
+    "task_requirements": {
+      "path": "task-requirements.json",
+      "sha256": "14c409f9e7416e92dfbaf8ae2fc91b2037ffab9a1e36125d66cc45b0cd4bdcb9"
+    },
+    "tool_schema_manifest": {
+      "path": "tool-schema-manifest.json",
+      "sha256": "9e700a30755156a171412bbd3b93b6b66f89d39be263e28b8e0cfedaa3be9cb6"
+    }
+  },
+  "network": {
+    "gateway_bind": "127.0.0.1",
+    "reason": "service endpoints and disposable-account tenant identifiers are not configured",
+    "runtime_allowlist_state": "NO_GO",
+    "single_task_gateway": true
+  },
+  "schema_version": 1,
+  "section": "3.2",
+  "task_image": {
+    "docker_runtime_verified": true,
+    "immutable_reference": "docker.io/lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f",
+    "local_oci_archive": {
+      "exists": true,
+      "mode": "0o600",
+      "oci_manifest": {
+        "config_digest": "sha256:23dcd7361a0882686774a8d0c6c5ce7571784b9b640bd121938e86fbe56aa488",
+        "digest": "sha256:ce96a685a29723b4dee125ac3130c98dc508783b230595debed83643a8a7e133",
+        "layer_count": 25,
+        "layer_size_bytes": 2515512456,
+        "media_type": "application/vnd.oci.image.manifest.v1+json",
+        "reference_name": "1016beta",
+        "size_bytes": 4139
+      },
+      "path": "/home/vagrant/moi-benchmark/astra/work/toolathlon-verified/images/toolathlon-task-image_1016beta_linux-amd64.oci.tar",
+      "sha256": "74f3ec444af1ef46564fe2f4e58431f2e136f2481aa101513fa3108bd59bc3de",
+      "size_bytes": 2515553792,
+      "type": "file"
+    },
+    "manifest_digest": "sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f",
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    },
+    "registry_digest_verified": true,
+    "tag_reference": "docker.io/lockon0927/toolathlon-task-image:1016beta"
+  }
+}

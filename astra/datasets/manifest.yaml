@@ -195,6 +195,105 @@ audited_candidates:
     notes:
       - Results before and after the v1.0.1 banking_knowledge grading update are not fully comparable for that domain.
       - The LLM user simulator is a second stochastic agent and a major source of variance.
+  - id: toolathlon-verified
+    role: p1_cross_application_long_horizon_tool_use
+    decision: conditional_include_as_separate_specialist_module
+    source: https://github.com/hkust-nlp/Toolathlon
+    source_revision: 2aed2468858f15818acafa178518390cc4b0f5cb
+    official_version: Toolathlon-Verified
+    release_date: "2026-06-30"
+    task_count: 108
+    task_split: finalpool_only
+    application_count: 32
+    tool_count: 604
+    local_toolkit_count: 7
+    local_tool_count: 16
+    stateful_task_count: 72
+    license_declared: null
+    evaluator: task_specific_deterministic_execution_evaluators_binary_outcome
+    primary_dimensions: [cross_application_tool_use, long_horizon_planning, stateful_execution, artifact_and_state_correctness]
+    excluded_from: [p0_state_control_score, security_score, crash_recovery, exactly_once_side_effects, multi_tenant_isolation]
+    freeze:
+      frozen_at: "2026-08-05"
+      state: m0_qualified_m1_live_pending
+      m0_qualification: GO
+      m1_live_qualification: PENDING
+      plan: astra/plans/drafts/toolathlon-verified-astra-hermes-evaluation-plan copy.md
+      section_3_1_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/section-3.1.freeze.json
+        sha256: 04225767015fa65e120b22a2b68fd105165909c630209bdb27d744a09048532b
+      section_3_2_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/section-3.2.freeze.json
+        sha256: c62c7c5de23f575ab7aa8089991873ac01bd2836d570d04a75a569bca9e44831
+      aggregate_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/sections-3.1-3.2.sha256
+        sha256: a7a3ff6d0387bb172adcb2e2d429a123d7d2c602f89ab24328768453bb16f80c
+      section_3_3_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/section-3.3.sha256
+        sha256: c44f7f82c4bad2378a82801e5a177cf44b9029911bfcdf269cc28870ebd2928c
+      vm_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/vm.freeze.json
+        sha256: 877578868786d5c8b4c65ed33fa1e22226aa1203490bead55dce646a13fbdbb4
+      experiment_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/experiment.freeze.json
+        sha256: d5e40527f95993f1bfcb579190aa259f5d8fb6fc630f56a6d6dc97599a22d951
+      m0_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/m0.sha256
+        sha256: 1f98465d737dc60c8c3ee939de55497721a3dd9eaa0303856ec10822db61881c
+      source_archive:
+        size_bytes: 363837440
+        sha256: a8f4cb71c4da143003796694ef426be88617eb86a1001abc4542d0efe42543fa
+      task_manifest:
+        task_count: 108
+        file_count: 1812
+        sha256: b5faf6db99505bfe57f92f0f6d097d0eccac1dd22cd1ceb71e86169c7e2f9609
+      task_image:
+        immutable_reference: docker.io/lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f
+        platform: linux/amd64
+        local_oci_archive_size_bytes: 2515553792
+        local_oci_archive_sha256: 74f3ec444af1ef46564fe2f4e58431f2e136f2481aa101513fa3108bd59bc3de
+        docker_runtime_verified: true
+      auxiliary_image_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/image-manifest.json
+        resolved_count: 17
+        unresolved_count: 0
+        sha256: 0003e9545870748bde986f629efee8aa9381904cd94874340b0370da20e7426f
+      container_runtime_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/container-runtime-manifest.json
+        sha256: 4413041df93831e966207542de1ee6badaca05e31985764f03e535dfece5c749
+      task_image_software_manifest:
+        path: astra/benchmark/toolathlon-verified/freeze/task-image-software-manifest.json
+        system_package_count: 378
+        python_package_count: 26
+        sha256: e0f9621668326fca1bf1dd8b565de3cd2386fe6955bcde0dc50f17fee49d5427
+      m1_live_requirements:
+        - provision_disposable_accounts_and_freeze_non_secret_identifiers_scopes_and_expiry
+        - provision_application_snapshots_and_pass_reset_replay
+        - capture_and_match_runtime_list_tools_for_all_108_tasks
+        - freeze_gateway_and_external_service_network_allowlist
+        - pass_gold_evaluator_replay
+        - pass_equivalent_astra_and_hermes_adapter_smoke_tests
+    freeze_completed:
+      - Exact repository commit, tree, source archive, 108-task snapshot, evaluator files, preprocess files, and ground-truth files are hashed.
+      - The task image is pre-downloaded as a linux/amd64 OCI archive and verified in Docker by immutable registry digest.
+      - All 17 declared auxiliary image references resolve to immutable linux/amd64 registry digests.
+      - Docker runtime, dependency locks, MCP configuration sources, deployment sources, and local-tool implementations are hashed.
+      - Astra and Hermes product artifacts, runtime environments, model contract, Adapter contract, budgets, permissions, and state policy are content-addressed by section 3.3.
+      - The minimal M0 host and experiment roots are qualified and m0.sha256 verifies all four authority roots.
+    m1_live_blockers:
+      - Provision isolated disposable accounts and freeze non-secret account identifiers, permission scopes, provider/API versions, rate limits, and collection dates.
+      - Provision every application baseline snapshot and prove deterministic reset replay.
+      - Capture runtime list_tools output for every task and verify equivalent Astra/Hermes model-visible schemas and naming maps.
+      - Freeze the task-scoped network allowlist, DNS, proxy, egress IP, TLS behavior, and service endpoint semantics.
+      - Gold-replay evaluators and complete equivalent Astra/Hermes decoupled-agent adapter smoke tests.
+    release_blockers:
+      - Resolve repository/task license and redistribution terms before packaging the benchmark into a released MOI artifact.
+    notes:
+      - Toolathlon-Verified is a live multi-application evaluation environment, not a self-contained offline dataset.
+      - The public trajectory dataset is reference data and is not required to execute the benchmark.
+      - The official result is binary per task; partial completion and failure attribution require separate trajectory and evaluator diagnostics.
+      - The frozen execution plan uses 14 non-scoring smoke tasks and one scored run per system on all 108 tasks; it does not report Pass@3 or Pass³.
+      - Do not send production API keys through the public evaluation service; prefer a self-hosted service or an encrypted tunnel.
 
 pending_candidates: []
 
@@ -208,4 +307,4 @@ excluded_references:
       - Separate Hermes native integration from generic MCP integration effects.
       - Review AGPLv3 obligations before redistribution or hosted modifications.
 
-note: Audited means a first-pass availability and validity review, not benchmark readiness. No candidate may enter a scored run until its freeze blockers are closed and immutable artifacts are recorded.
+note: Audited means a first-pass availability and validity review, not benchmark readiness. Toolathlon-Verified has passed its minimal M0 freeze, but no candidate may enter smoke or scored runs until the benchmark-specific M1 live blockers are closed and their immutable evidence root is recorded.

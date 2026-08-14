@@ -1,0 +1,54 @@
+{
+  "frozen_at": "2026-08-05",
+  "reason": "application services, disposable tenants, and initial database snapshots are not provisioned",
+  "reset_replay": {
+    "state": "NO_GO",
+    "successful_replays": 0
+  },
+  "runtime_snapshots": [],
+  "schema_version": 1,
+  "source_baseline_records": [
+    {
+      "path": "configs/users_data.json",
+      "sha256": "4b7cca96fbaea1c9a8c5e94bd784b4b3f191a134b5bd39660c57cb181c322295",
+      "size_bytes": 227615
+    },
+    {
+      "path": "configs/users_data.csv",
+      "sha256": "3319d187e668d4938645c32b99b54140511cd529a7a168ee10281bc8de2114d0",
+      "size_bytes": 79177
+    },
+    {
+      "path": "configs/ports_config.yaml",
+      "sha256": "feef215e6bdb54c0bdc713de6426243ab5590d28a23b2cf4e9d3dcaa04d1b653",
+      "size_bytes": 11271
+    },
+    {
+      "path": "global_preparation/deploy_containers.sh",
+      "sha256": "4476e9550115bbeacdddcea1946db4f935413d692ebd9ff18837769b69e24d45",
+      "size_bytes": 18079
+    },
+    {
+      "path": "deployment/canvas/scripts/setup.sh",
+      "sha256": "f499a5ebea33212507562260ddabe0b4f9f78fb1ca1f40d6224e8114987fa2d4",
+      "size_bytes": 8764
+    },
+    {
+      "path": "deployment/k8s/scripts/setup.sh",
+      "sha256": "643da7f043f351b74db47e1e14e5d2d9b200986e5e34719d96b5d2d531ef9d13",
+      "size_bytes": 11170
+    },
+    {
+      "path": "deployment/poste/scripts/setup.sh",
+      "sha256": "ec1d81d2894dca2799ec8bfda5819563c8a9d45bb4346b9d7e79b1eb609d0e1e",
+      "size_bytes": 7910
+    },
+    {
+      "path": "deployment/woocommerce/scripts/setup.sh",
+      "sha256": "dcac75a653a9a55dc4082aab5ef9d217393f28c0c0468d8ffe3f00e1148351b1",
+      "size_bytes": 20579
+    }
+  ],
+  "source_commit": "2aed2468858f15818acafa178518390cc4b0f5cb",
+  "state": "NO_GO"
+}

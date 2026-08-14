@@ -1,0 +1,217 @@
+{
+  "schema_version": "toolathlon.posthoc-unavailable-infra-rerun-policy.v1",
+  "policy": "toolathlon.posthoc-unavailable-infra-sensitivity-rerun.v1",
+  "scope": {
+    "automatic_infrastructure_replacement_maximum": 1,
+    "formal_result_mutation": false,
+    "result_use": "posthoc_sensitivity_only",
+    "selected_slot_count": 11,
+    "selection_rule": "effective slot has verify_status=unavailable or run_validity=infra_invalid under counter projection",
+    "workers": 1
+  },
+  "runtime": {
+    "experiment_id": "toolathlon-verified-v0.5-posthoc-rerun-v1",
+    "lifecycle_hotfix_path": "astra/benchmark/toolathlon-verified/scripts/m2_budget_terminal_hotfix.py",
+    "lifecycle_hotfix_sha256": "ca03fdd5774c804fd2296231ae0386236e750ef006b68cd98c8015e3d2653029",
+    "toolathlon_source": "/home/vagrant/dataset/Toolathlon"
+  },
+  "source_inputs": [
+    {
+      "label": "m1_qualification",
+      "root": "m1",
+      "relative_path": "m1-live-qualification.json",
+      "sha256": "7ba27695e9add277acb29b8db0857e5b1f5baa8d5c326a7338985a8fbac40c0d"
+    },
+    {
+      "label": "m2_qualification",
+      "root": "m2",
+      "relative_path": "m2-first-batch-qualification.json",
+      "sha256": "611cfded7579a3a94df5d4866685fa46e9ad946dcd8cdf7502352bd912e6cb92"
+    },
+    {
+      "label": "m3_manifest",
+      "root": "m3",
+      "relative_path": "m3-batch-manifest.json",
+      "sha256": "63ea6ea405a322b4bde8e4648aee6c2696922a0106e9b1a6a0e74d04a223aa20"
+    },
+    {
+      "label": "m3_gate_v2_projection",
+      "root": "m3",
+      "relative_path": "artifact-gate-v2-projection.json",
+      "sha256": "1f0f3196997a45c88a0e5ab96de9b7e852254fa8b1f671934ccfc16f36866f39"
+    }
+  ],
+  "selection_provenance": {
+    "counter_path": "/home/vagrant/moi/analysis/counter.py",
+    "counter_runtime_dependency": false,
+    "counter_sha256": "5daadc9a0d3a52361b941f1b18921a379c0f17a4e90c95a0722e7829f761ad56",
+    "m3_scheduler_events_sha256_at_selection": "73e9d331f686c659e994b2cc231b6631ffd37204b5b3db53ec0d57e83fac8003"
+  },
+  "cases": [
+    {
+      "sequence": 1,
+      "position": 23,
+      "task_id": "canvas-do-quiz",
+      "system_id": "astra",
+      "source_run_id": "m3-20260807T155211Z-23-canvas-do-quiz-astra-a1",
+      "source_run_relative_directory": "runs/astra/canvas-do-quiz/m3-20260807T155211Z-23-canvas-do-quiz-astra-a1",
+      "source_run_json_sha256": "74753de8992e0d8b2b0ca6a2c32f3db4a2ce559f356135ffe545d653ccc5b36d",
+      "source_artifacts_manifest_sha256": "fd6102e5583ca606c4b4d05e58ac3eabce9fd027c509894031526df812a676a1",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "timeout",
+      "source_failure_category": "agent_deadline",
+      "selection_source": "artifact_gate_v2_projection"
+    },
+    {
+      "sequence": 2,
+      "position": 38,
+      "task_id": "filter-low-selling-products",
+      "system_id": "astra",
+      "source_run_id": "m3-20260807T155211Z-38-filter-low-selling-products-astra-a1",
+      "source_run_relative_directory": "runs/astra/filter-low-selling-products/m3-20260807T155211Z-38-filter-low-selling-products-astra-a1",
+      "source_run_json_sha256": "0069a1f025bc34661844022b9541c699f031d837c65e835fb8b6d65045776b3d",
+      "source_artifacts_manifest_sha256": "894ddec3921a2ff081a2e4e687ca0132e4c89092e018c3cd613e3345996bc5c0",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "crashed",
+      "source_failure_category": "product_error",
+      "selection_source": "artifact_gate_v2_projection"
+    },
+    {
+      "sequence": 3,
+      "position": 39,
+      "task_id": "flagged-transactions",
+      "system_id": "astra",
+      "source_run_id": "m3-20260807T155211Z-39-flagged-transactions-astra-a1",
+      "source_run_relative_directory": "runs/astra/flagged-transactions/m3-20260807T155211Z-39-flagged-transactions-astra-a1",
+      "source_run_json_sha256": "1c2ded161929ab3e79231bc81cc6ed0b185c93436089058946dec1170b987c25",
+      "source_artifacts_manifest_sha256": "11d0ecb8aa4ba8612bbe91a2b518afa43bda7ae484d1521dd959d3b747609431",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "crashed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 4,
+      "position": 39,
+      "task_id": "flagged-transactions",
+      "system_id": "hermes",
+      "source_run_id": "m3-20260807T155211Z-39-flagged-transactions-hermes-a1",
+      "source_run_relative_directory": "runs/hermes/flagged-transactions/m3-20260807T155211Z-39-flagged-transactions-hermes-a1",
+      "source_run_json_sha256": "34dab353897698f491d7f50f68f5d3c7ddc9add7005f7fe2a33275ea3c1f1516",
+      "source_artifacts_manifest_sha256": "381a9a7aad23f4765c834aaf00e2ddeb9941b611a8e31334251fbb8b874bdc85",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "failed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 5,
+      "position": 40,
+      "task_id": "game-statistics",
+      "system_id": "hermes",
+      "source_run_id": "m3-20260807T155211Z-40-game-statistics-hermes-a1",
+      "source_run_relative_directory": "runs/hermes/game-statistics/m3-20260807T155211Z-40-game-statistics-hermes-a1",
+      "source_run_json_sha256": "7166264da654b58c9bcc70e64230bc981d7fde6ac8cd66234ce1b41ef0cb1d60",
+      "source_artifacts_manifest_sha256": "69b3baf7bfc73b857f4d17eaa01ca0cc23279eb11ae2a825aa5a6272c52b2773",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "failed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 6,
+      "position": 40,
+      "task_id": "game-statistics",
+      "system_id": "astra",
+      "source_run_id": "m3-20260807T155211Z-40-game-statistics-astra-a1",
+      "source_run_relative_directory": "runs/astra/game-statistics/m3-20260807T155211Z-40-game-statistics-astra-a1",
+      "source_run_json_sha256": "822b986039b8cd12893f138b5efac30219973538b951cd846e8bed53355de0d4",
+      "source_artifacts_manifest_sha256": "f639e13f4613df146f96ad24d62ac9505d5e97965ac986a3a88ce1d01cd203e0",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "crashed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 7,
+      "position": 41,
+      "task_id": "gdp-cr5-analysis",
+      "system_id": "astra",
+      "source_run_id": "m3-20260807T155211Z-41-gdp-cr5-analysis-astra-a1",
+      "source_run_relative_directory": "runs/astra/gdp-cr5-analysis/m3-20260807T155211Z-41-gdp-cr5-analysis-astra-a1",
+      "source_run_json_sha256": "bad077a27222f141ae7ce96bb4929a4ebf3feccefd8f82450d7a71e0d22bb41d",
+      "source_artifacts_manifest_sha256": "94640dde955ed04bde9826adbece9756974e440ce5d6d862ff7cd75d7c9c4381",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "crashed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 8,
+      "position": 41,
+      "task_id": "gdp-cr5-analysis",
+      "system_id": "hermes",
+      "source_run_id": "m3-20260807T155211Z-41-gdp-cr5-analysis-hermes-a1",
+      "source_run_relative_directory": "runs/hermes/gdp-cr5-analysis/m3-20260807T155211Z-41-gdp-cr5-analysis-hermes-a1",
+      "source_run_json_sha256": "bb2627d7b5ebf3412ec37f4d868e45b9f08ad16b12908e6e81c38b38b8bcdae5",
+      "source_artifacts_manifest_sha256": "cf2a291574b61d5afe2ff82af8363307150ed143ac4988b9d66b9f6144bb4a66",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "failed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 9,
+      "position": 67,
+      "task_id": "mrbeast-analysis",
+      "system_id": "astra",
+      "source_run_id": "m3-20260807T155211Z-67-mrbeast-analysis-astra-a1",
+      "source_run_relative_directory": "runs/astra/mrbeast-analysis/m3-20260807T155211Z-67-mrbeast-analysis-astra-a1",
+      "source_run_json_sha256": "342524613cc9dc91f21a870dbdededd11739d309c542c6521bf7b8aaa9a7983d",
+      "source_artifacts_manifest_sha256": "7fc3598dfeb1b6994f5dd9bf2e9477b3204038e07253d32c8ae3f2188693e27f",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "crashed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 10,
+      "position": 67,
+      "task_id": "mrbeast-analysis",
+      "system_id": "hermes",
+      "source_run_id": "m3-20260807T155211Z-67-mrbeast-analysis-hermes-a1",
+      "source_run_relative_directory": "runs/hermes/mrbeast-analysis/m3-20260807T155211Z-67-mrbeast-analysis-hermes-a1",
+      "source_run_json_sha256": "3062e5700365cfa87cd8533795c617525f0aa4fe2580be92af68285364e6a68c",
+      "source_artifacts_manifest_sha256": "3644d021165c4adec68e2c05bc7f05956357b71094a9646baa49902e459a0688",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "valid",
+      "source_terminal_status": "failed",
+      "source_failure_category": "product_error",
+      "selection_source": "latest_valid_run_json"
+    },
+    {
+      "sequence": 11,
+      "position": 68,
+      "task_id": "music-analysis",
+      "system_id": "hermes",
+      "source_run_id": "m3-20260807T155211Z-68-music-analysis-hermes-a2",
+      "source_run_relative_directory": "runs/hermes/music-analysis/m3-20260807T155211Z-68-music-analysis-hermes-a2",
+      "source_run_json_sha256": "51905658f860038eb7959f2a69321dc9c542cbd9e76279b4844c13fda168b828",
+      "source_artifacts_manifest_sha256": "6f172c3a9cf9b306734c2e8a39e4f890b534f998407cec0a939c61bb32a1c425",
+      "source_verify_status": "unavailable",
+      "source_run_validity": "infra_invalid",
+      "source_terminal_status": "crashed",
+      "source_failure_category": "adapter_error",
+      "selection_source": "latest_invalid_run_json"
+    }
+  ]
+}

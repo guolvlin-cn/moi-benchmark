@@ -1,0 +1,2430 @@
+{
+  "scope": {
+    "tasks": 108,
+    "systems": 3,
+    "slots": 324,
+    "evaluated_slots": 320,
+    "pi_unresolved_positions": [
+      38,
+      53,
+      55,
+      72
+    ]
+  },
+  "effective_run_precedence": [
+    "toolathlon-pi-108-v1",
+    "toolathlon-pi-isolated-rerun-v1",
+    "toolathlon-pi-service-and-audit-8-v3"
+  ],
+  "systems": {
+    "astra": {
+      "tasks": 108,
+      "executed": 108,
+      "evaluated": 108,
+      "verify": {
+        "pass": 61,
+        "no_pass": 47
+      },
+      "pass_rate_all_108": 0.5648148148148148,
+      "pass_rate_evaluated": 0.5648148148148148,
+      "failure_categories": {
+        "completed_but_no_pass": 27,
+        "model_request_budget": 20
+      },
+      "time": {
+        "e2e_seconds": {
+          "n": 108,
+          "sum": 123037.60372199994,
+          "mean": 1139.2370715,
+          "median": 609.724692,
+          "p90": 3000.585485
+        },
+        "agent_seconds": {
+          "n": 108,
+          "sum": 117685.75359060027,
+          "mean": 1089.6829036166691,
+          "median": 546.0730953459861,
+          "p90": 2955.5410147351968
+        },
+        "evaluator_seconds": {
+          "n": 108,
+          "sum": 2175.72092860064,
+          "mean": 20.14556415370963,
+          "median": 12.681744636473013,
+          "p90": 38.53250542341266
+        }
+      },
+      "tools": {
+        "calls": {
+          "n": 108,
+          "sum": 4345.0,
+          "mean": 40.23148148148148,
+          "median": 31.5,
+          "p90": 75.6
+        },
+        "failures": {
+          "n": 108,
+          "sum": 56.0,
+          "mean": 0.5185185185185185,
+          "median": 0.0,
+          "p90": 2.0
+        }
+      },
+      "requests": {
+        "model_requests_started": {
+          "n": 108,
+          "sum": 5229.0,
+          "mean": 48.416666666666664,
+          "median": 33.5,
+          "p90": 100.0
+        },
+        "model_requests_completed": {
+          "n": 108,
+          "sum": 5229.0,
+          "mean": 48.416666666666664,
+          "median": 33.5,
+          "p90": 100.0
+        }
+      },
+      "tokens": {
+        "reliable_records": 108,
+        "input_visible": {
+          "n": 108,
+          "sum": 149741746.0,
+          "mean": 1386497.648148148,
+          "median": 714272.5,
+          "p90": 3577346.3999999994
+        },
+        "output_visible": {
+          "n": 108,
+          "sum": 11654317.0,
+          "mean": 107910.3425925926,
+          "median": 50341.0,
+          "p90": 287979.8
+        },
+        "total_visible": {
+          "n": 108,
+          "sum": 161396063.0,
+          "mean": 1494407.9907407407,
+          "median": 756013.5,
+          "p90": 3956085.4
+        },
+        "cache_read_visible": {
+          "n": 0,
+          "sum": 0,
+          "mean": null,
+          "median": null,
+          "p90": null
+        }
+      },
+      "request_limit_reached": 23
+    },
+    "hermes": {
+      "tasks": 108,
+      "executed": 108,
+      "evaluated": 108,
+      "verify": {
+        "pass": 72,
+        "no_pass": 36
+      },
+      "pass_rate_all_108": 0.6666666666666666,
+      "pass_rate_evaluated": 0.6666666666666666,
+      "failure_categories": {
+        "completed_but_no_pass": 33,
+        "model_request_budget": 3
+      },
+      "time": {
+        "e2e_seconds": {
+          "n": 108,
+          "sum": 63286.941415999994,
+          "mean": 585.9901982962963,
+          "median": 426.00034700000003,
+          "p90": 1177.9997778999998
+        },
+        "agent_seconds": {
+          "n": 108,
+          "sum": 51139.254284495226,
+          "mean": 473.51161374532614,
+          "median": 312.61601481598336,
+          "p90": 1016.0674632857144
+        },
+        "evaluator_seconds": {
+          "n": 108,
+          "sum": 2172.524199577514,
+          "mean": 20.11596481090291,
+          "median": 11.404215199960163,
+          "p90": 32.76062507417518
+        }
+      },
+      "tools": {
+        "calls": {
+          "n": 108,
+          "sum": 4848.0,
+          "mean": 44.888888888888886,
+          "median": 32.5,
+          "p90": 78.6
+        },
+        "failures": {
+          "n": 108,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0
+        }
+      },
+      "requests": {
+        "model_requests_started": {
+          "n": 108,
+          "sum": 3287.0,
+          "mean": 30.435185185185187,
+          "median": 20.0,
+          "p90": 66.49999999999999
+        },
+        "model_requests_completed": {
+          "n": 108,
+          "sum": 3284.0,
+          "mean": 30.40740740740741,
+          "median": 20.0,
+          "p90": 66.49999999999999
+        }
+      },
+      "tokens": {
+        "reliable_records": 108,
+        "input_visible": {
+          "n": 108,
+          "sum": 244960861.0,
+          "mean": 2268156.1203703703,
+          "median": 1339917.0,
+          "p90": 5076701.199999997
+        },
+        "output_visible": {
+          "n": 108,
+          "sum": 3124778.0,
+          "mean": 28933.12962962963,
+          "median": 26007.0,
+          "p90": 57395.7
+        },
+        "total_visible": {
+          "n": 108,
+          "sum": 248085639.0,
+          "mean": 2297089.25,
+          "median": 1364391.5,
+          "p90": 5129470.299999998
+        },
+        "cache_read_visible": {
+          "n": 0,
+          "sum": 0,
+          "mean": null,
+          "median": null,
+          "p90": null
+        }
+      },
+      "request_limit_reached": 3
+    },
+    "pi": {
+      "tasks": 108,
+      "executed": 107,
+      "evaluated": 104,
+      "verify": {
+        "pass": 77,
+        "no_pass": 27,
+        "missing": 1,
+        "unavailable": 3
+      },
+      "pass_rate_all_108": 0.7129629629629629,
+      "pass_rate_evaluated": 0.7403846153846154,
+      "failure_categories": {
+        "completed_but_no_pass": 23,
+        "model_request_budget": 2,
+        "agent_deadline": 1,
+        "product_error": 1
+      },
+      "time": {
+        "e2e_seconds": {
+          "n": 107,
+          "sum": 63841.41039400001,
+          "mean": 596.648695271028,
+          "median": 290.020701,
+          "p90": 1343.4303060000004
+        },
+        "agent_seconds": {
+          "n": 107,
+          "sum": 57225.53189860804,
+          "mean": 534.8180551271779,
+          "median": 244.47908091405407,
+          "p90": 1297.394180267398
+        },
+        "evaluator_seconds": {
+          "n": 107,
+          "sum": 2600.2334551455706,
+          "mean": 24.301247244351128,
+          "median": 10.751405709997925,
+          "p90": 34.52373656064739
+        }
+      },
+      "tools": {
+        "calls": {
+          "n": 107,
+          "sum": 4265.0,
+          "mean": 39.85981308411215,
+          "median": 29.0,
+          "p90": 76.0
+        },
+        "failures": {
+          "n": 107,
+          "sum": 247.0,
+          "mean": 2.308411214953271,
+          "median": 0.0,
+          "p90": 7.400000000000006
+        }
+      },
+      "requests": {
+        "model_requests_started": {
+          "n": 107,
+          "sum": 2595.0,
+          "mean": 24.252336448598133,
+          "median": 16.0,
+          "p90": 48.80000000000001
+        },
+        "model_requests_completed": {
+          "n": 107,
+          "sum": 2595.0,
+          "mean": 24.252336448598133,
+          "median": 16.0,
+          "p90": 48.80000000000001
+        }
+      },
+      "tokens": {
+        "reliable_records": 103,
+        "input_visible": {
+          "n": 107,
+          "sum": 237628246.0,
+          "mean": 2220824.728971963,
+          "median": 634570.0,
+          "p90": 5015314.0
+        },
+        "output_visible": {
+          "n": 107,
+          "sum": 2360566.0,
+          "mean": 22061.364485981307,
+          "median": 13730.0,
+          "p90": 46620.40000000001
+        },
+        "total_visible": {
+          "n": 107,
+          "sum": 239988812.0,
+          "mean": 2242886.0934579438,
+          "median": 653387.0,
+          "p90": 5062835.600000001
+        },
+        "cache_read_visible": {
+          "n": 107,
+          "sum": 226238208.0,
+          "mean": 2114375.7757009347,
+          "median": 584576.0,
+          "p90": 4770969.600000001
+        }
+      },
+      "request_limit_reached": 4
+    }
+  },
+  "three_way_outcomes": {
+    "PPP": [
+      {
+        "position": 1,
+        "task_id": "find-alita-paper",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 2,
+        "task_id": "set-conf-cr-ddl",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 4,
+        "task_id": "canvas-homework-grader-python",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 7,
+        "task_id": "price-comparison",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 9,
+        "task_id": "excel-data-transformation",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 10,
+        "task_id": "notion-hr",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 13,
+        "task_id": "git-bug-hunt",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 15,
+        "task_id": "ab-testing",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 16,
+        "task_id": "academic-pdf-report",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 17,
+        "task_id": "academic-warning",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 19,
+        "task_id": "apply-phd-email",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 20,
+        "task_id": "canvas-arrange-exam",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 22,
+        "task_id": "canvas-art-quiz",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 25,
+        "task_id": "canvas-new-students-notification",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 26,
+        "task_id": "canvas-submit-late-work",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 29,
+        "task_id": "courses-ta-hws",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 33,
+        "task_id": "dietary-health",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 35,
+        "task_id": "excel-market-research",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 39,
+        "task_id": "flagged-transactions",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 40,
+        "task_id": "game-statistics",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 41,
+        "task_id": "gdp-cr5-analysis",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 42,
+        "task_id": "git-milestone",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 43,
+        "task_id": "git-repo",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 45,
+        "task_id": "huggingface-upload",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 50,
+        "task_id": "inventory-sync",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 52,
+        "task_id": "invoice-org",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 57,
+        "task_id": "k8s-redis-helm-upgrade",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 58,
+        "task_id": "landing-task-reminder",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 60,
+        "task_id": "latex-prompt-box",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 61,
+        "task_id": "live-transactions",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 62,
+        "task_id": "llm-training-dataset",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 64,
+        "task_id": "machine-operating",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 65,
+        "task_id": "meeting-assign",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 70,
+        "task_id": "notion-find-job",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 71,
+        "task_id": "notion-personal-website",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 73,
+        "task_id": "nvidia-stock-analysis",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 76,
+        "task_id": "payable-invoice-checker",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 78,
+        "task_id": "ppt-analysis",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 82,
+        "task_id": "sales-accounting",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 84,
+        "task_id": "sla-timeout-monitor",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 86,
+        "task_id": "student-interview",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 88,
+        "task_id": "sync-todo-to-readme",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 90,
+        "task_id": "train-ticket-plan",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 93,
+        "task_id": "trip-adviser",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 94,
+        "task_id": "trip-itinerary-generator",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 96,
+        "task_id": "update-material-inventory",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 101,
+        "task_id": "wandb-shortest-length",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 102,
+        "task_id": "woocommerce-customer-survey",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 106,
+        "task_id": "woocommerce-update-cover",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "pass"
+      }
+    ],
+    "PFP": [
+      {
+        "position": 3,
+        "task_id": "course-schedule",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 14,
+        "task_id": "k8s-safety-audit",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 34,
+        "task_id": "email-paper-homepage",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 47,
+        "task_id": "imagenet",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 54,
+        "task_id": "k8s-deployment-cleanup",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 83,
+        "task_id": "search-ca-school",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 97,
+        "task_id": "upenn-campus-route",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 107,
+        "task_id": "yahoo-analysis",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      }
+    ],
+    "FFF": [
+      {
+        "position": 5,
+        "task_id": "arrange-workspace",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 11,
+        "task_id": "shopping-helper",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 28,
+        "task_id": "course-assistant",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 32,
+        "task_id": "detect-revised-terms",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 36,
+        "task_id": "experiments-recordings",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 44,
+        "task_id": "hk-top-conf",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 51,
+        "task_id": "investment-decision-analysis",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 59,
+        "task_id": "language-school",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 66,
+        "task_id": "merge-hf-datasets",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 75,
+        "task_id": "paper-checker",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 79,
+        "task_id": "privacy-desensitization",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 87,
+        "task_id": "subway-planning",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 89,
+        "task_id": "task-tracker",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 91,
+        "task_id": "travel-exchange",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 95,
+        "task_id": "university-course-selection",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 99,
+        "task_id": "vlm-history-completer",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      }
+    ],
+    "FPP": [
+      {
+        "position": 6,
+        "task_id": "notion-movies",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 12,
+        "task_id": "woocommerce-stock-alert",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 21,
+        "task_id": "canvas-art-manager",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 23,
+        "task_id": "canvas-do-quiz",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 27,
+        "task_id": "cooking-guidance",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 31,
+        "task_id": "dataset-license-issue",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 37,
+        "task_id": "fillout-online-forms",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 48,
+        "task_id": "inter-final-performance-analysis",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 80,
+        "task_id": "profile-update-online",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 81,
+        "task_id": "reimbursement-form-filler",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      },
+      {
+        "position": 100,
+        "task_id": "wandb-best-score",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "pass"
+      }
+    ],
+    "FFP": [
+      {
+        "position": 8,
+        "task_id": "quantitative-financial-analysis",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 49,
+        "task_id": "interview-report",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 63,
+        "task_id": "logical-datasets-collection",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 67,
+        "task_id": "mrbeast-analysis",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 68,
+        "task_id": "music-analysis",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 74,
+        "task_id": "oil-price",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 92,
+        "task_id": "travel-expense-reimbursement",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 105,
+        "task_id": "woocommerce-product-recall",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      },
+      {
+        "position": 108,
+        "task_id": "youtube-repo",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "pass"
+      }
+    ],
+    "PFF": [
+      {
+        "position": 18,
+        "task_id": "add-bibtex",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 98,
+        "task_id": "verl-dataset",
+        "astra": "pass",
+        "hermes": "no_pass",
+        "pi": "no_pass"
+      }
+    ],
+    "FPF": [
+      {
+        "position": 24,
+        "task_id": "canvas-list-test",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 30,
+        "task_id": "cvpr-research",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 46,
+        "task_id": "identify-all-songs",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 56,
+        "task_id": "k8s-pr-preview-testing",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 85,
+        "task_id": "stock-build-position",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 103,
+        "task_id": "woocommerce-new-product",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 104,
+        "task_id": "woocommerce-new-welcome",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      }
+    ],
+    "pi_incomplete": [
+      {
+        "position": 38,
+        "task_id": "filter-low-selling-products",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "missing"
+      },
+      {
+        "position": 53,
+        "task_id": "ipad-edu-price",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "unavailable"
+      },
+      {
+        "position": 55,
+        "task_id": "k8s-mysql",
+        "astra": "no_pass",
+        "hermes": "pass",
+        "pi": "unavailable"
+      },
+      {
+        "position": 72,
+        "task_id": "nvidia-market",
+        "astra": "no_pass",
+        "hermes": "no_pass",
+        "pi": "unavailable"
+      }
+    ],
+    "PPF": [
+      {
+        "position": 69,
+        "task_id": "nhl-b2b-analysis",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      },
+      {
+        "position": 77,
+        "task_id": "personal-website-construct",
+        "astra": "pass",
+        "hermes": "pass",
+        "pi": "no_pass"
+      }
+    ]
+  },
+  "pairwise": {
+    "astra_vs_hermes": {
+      "eligible_tasks": 108,
+      "counts": {
+        "both_pass": 51,
+        "astra_only": 10,
+        "neither": 26,
+        "hermes_only": 21
+      },
+      "tasks": {
+        "both_pass": [
+          {
+            "position": 1,
+            "task_id": "find-alita-paper"
+          },
+          {
+            "position": 2,
+            "task_id": "set-conf-cr-ddl"
+          },
+          {
+            "position": 4,
+            "task_id": "canvas-homework-grader-python"
+          },
+          {
+            "position": 7,
+            "task_id": "price-comparison"
+          },
+          {
+            "position": 9,
+            "task_id": "excel-data-transformation"
+          },
+          {
+            "position": 10,
+            "task_id": "notion-hr"
+          },
+          {
+            "position": 13,
+            "task_id": "git-bug-hunt"
+          },
+          {
+            "position": 15,
+            "task_id": "ab-testing"
+          },
+          {
+            "position": 16,
+            "task_id": "academic-pdf-report"
+          },
+          {
+            "position": 17,
+            "task_id": "academic-warning"
+          },
+          {
+            "position": 19,
+            "task_id": "apply-phd-email"
+          },
+          {
+            "position": 20,
+            "task_id": "canvas-arrange-exam"
+          },
+          {
+            "position": 22,
+            "task_id": "canvas-art-quiz"
+          },
+          {
+            "position": 25,
+            "task_id": "canvas-new-students-notification"
+          },
+          {
+            "position": 26,
+            "task_id": "canvas-submit-late-work"
+          },
+          {
+            "position": 29,
+            "task_id": "courses-ta-hws"
+          },
+          {
+            "position": 33,
+            "task_id": "dietary-health"
+          },
+          {
+            "position": 35,
+            "task_id": "excel-market-research"
+          },
+          {
+            "position": 39,
+            "task_id": "flagged-transactions"
+          },
+          {
+            "position": 40,
+            "task_id": "game-statistics"
+          },
+          {
+            "position": 41,
+            "task_id": "gdp-cr5-analysis"
+          },
+          {
+            "position": 42,
+            "task_id": "git-milestone"
+          },
+          {
+            "position": 43,
+            "task_id": "git-repo"
+          },
+          {
+            "position": 45,
+            "task_id": "huggingface-upload"
+          },
+          {
+            "position": 50,
+            "task_id": "inventory-sync"
+          },
+          {
+            "position": 52,
+            "task_id": "invoice-org"
+          },
+          {
+            "position": 57,
+            "task_id": "k8s-redis-helm-upgrade"
+          },
+          {
+            "position": 58,
+            "task_id": "landing-task-reminder"
+          },
+          {
+            "position": 60,
+            "task_id": "latex-prompt-box"
+          },
+          {
+            "position": 61,
+            "task_id": "live-transactions"
+          },
+          {
+            "position": 62,
+            "task_id": "llm-training-dataset"
+          },
+          {
+            "position": 64,
+            "task_id": "machine-operating"
+          },
+          {
+            "position": 65,
+            "task_id": "meeting-assign"
+          },
+          {
+            "position": 69,
+            "task_id": "nhl-b2b-analysis"
+          },
+          {
+            "position": 70,
+            "task_id": "notion-find-job"
+          },
+          {
+            "position": 71,
+            "task_id": "notion-personal-website"
+          },
+          {
+            "position": 73,
+            "task_id": "nvidia-stock-analysis"
+          },
+          {
+            "position": 76,
+            "task_id": "payable-invoice-checker"
+          },
+          {
+            "position": 77,
+            "task_id": "personal-website-construct"
+          },
+          {
+            "position": 78,
+            "task_id": "ppt-analysis"
+          },
+          {
+            "position": 82,
+            "task_id": "sales-accounting"
+          },
+          {
+            "position": 84,
+            "task_id": "sla-timeout-monitor"
+          },
+          {
+            "position": 86,
+            "task_id": "student-interview"
+          },
+          {
+            "position": 88,
+            "task_id": "sync-todo-to-readme"
+          },
+          {
+            "position": 90,
+            "task_id": "train-ticket-plan"
+          },
+          {
+            "position": 93,
+            "task_id": "trip-adviser"
+          },
+          {
+            "position": 94,
+            "task_id": "trip-itinerary-generator"
+          },
+          {
+            "position": 96,
+            "task_id": "update-material-inventory"
+          },
+          {
+            "position": 101,
+            "task_id": "wandb-shortest-length"
+          },
+          {
+            "position": 102,
+            "task_id": "woocommerce-customer-survey"
+          },
+          {
+            "position": 106,
+            "task_id": "woocommerce-update-cover"
+          }
+        ],
+        "astra_only": [
+          {
+            "position": 3,
+            "task_id": "course-schedule"
+          },
+          {
+            "position": 14,
+            "task_id": "k8s-safety-audit"
+          },
+          {
+            "position": 18,
+            "task_id": "add-bibtex"
+          },
+          {
+            "position": 34,
+            "task_id": "email-paper-homepage"
+          },
+          {
+            "position": 47,
+            "task_id": "imagenet"
+          },
+          {
+            "position": 54,
+            "task_id": "k8s-deployment-cleanup"
+          },
+          {
+            "position": 83,
+            "task_id": "search-ca-school"
+          },
+          {
+            "position": 97,
+            "task_id": "upenn-campus-route"
+          },
+          {
+            "position": 98,
+            "task_id": "verl-dataset"
+          },
+          {
+            "position": 107,
+            "task_id": "yahoo-analysis"
+          }
+        ],
+        "hermes_only": [
+          {
+            "position": 6,
+            "task_id": "notion-movies"
+          },
+          {
+            "position": 12,
+            "task_id": "woocommerce-stock-alert"
+          },
+          {
+            "position": 21,
+            "task_id": "canvas-art-manager"
+          },
+          {
+            "position": 23,
+            "task_id": "canvas-do-quiz"
+          },
+          {
+            "position": 24,
+            "task_id": "canvas-list-test"
+          },
+          {
+            "position": 27,
+            "task_id": "cooking-guidance"
+          },
+          {
+            "position": 30,
+            "task_id": "cvpr-research"
+          },
+          {
+            "position": 31,
+            "task_id": "dataset-license-issue"
+          },
+          {
+            "position": 37,
+            "task_id": "fillout-online-forms"
+          },
+          {
+            "position": 38,
+            "task_id": "filter-low-selling-products"
+          },
+          {
+            "position": 46,
+            "task_id": "identify-all-songs"
+          },
+          {
+            "position": 48,
+            "task_id": "inter-final-performance-analysis"
+          },
+          {
+            "position": 53,
+            "task_id": "ipad-edu-price"
+          },
+          {
+            "position": 55,
+            "task_id": "k8s-mysql"
+          },
+          {
+            "position": 56,
+            "task_id": "k8s-pr-preview-testing"
+          },
+          {
+            "position": 80,
+            "task_id": "profile-update-online"
+          },
+          {
+            "position": 81,
+            "task_id": "reimbursement-form-filler"
+          },
+          {
+            "position": 85,
+            "task_id": "stock-build-position"
+          },
+          {
+            "position": 100,
+            "task_id": "wandb-best-score"
+          },
+          {
+            "position": 103,
+            "task_id": "woocommerce-new-product"
+          },
+          {
+            "position": 104,
+            "task_id": "woocommerce-new-welcome"
+          }
+        ],
+        "neither": [
+          {
+            "position": 5,
+            "task_id": "arrange-workspace"
+          },
+          {
+            "position": 8,
+            "task_id": "quantitative-financial-analysis"
+          },
+          {
+            "position": 11,
+            "task_id": "shopping-helper"
+          },
+          {
+            "position": 28,
+            "task_id": "course-assistant"
+          },
+          {
+            "position": 32,
+            "task_id": "detect-revised-terms"
+          },
+          {
+            "position": 36,
+            "task_id": "experiments-recordings"
+          },
+          {
+            "position": 44,
+            "task_id": "hk-top-conf"
+          },
+          {
+            "position": 49,
+            "task_id": "interview-report"
+          },
+          {
+            "position": 51,
+            "task_id": "investment-decision-analysis"
+          },
+          {
+            "position": 59,
+            "task_id": "language-school"
+          },
+          {
+            "position": 63,
+            "task_id": "logical-datasets-collection"
+          },
+          {
+            "position": 66,
+            "task_id": "merge-hf-datasets"
+          },
+          {
+            "position": 67,
+            "task_id": "mrbeast-analysis"
+          },
+          {
+            "position": 68,
+            "task_id": "music-analysis"
+          },
+          {
+            "position": 72,
+            "task_id": "nvidia-market"
+          },
+          {
+            "position": 74,
+            "task_id": "oil-price"
+          },
+          {
+            "position": 75,
+            "task_id": "paper-checker"
+          },
+          {
+            "position": 79,
+            "task_id": "privacy-desensitization"
+          },
+          {
+            "position": 87,
+            "task_id": "subway-planning"
+          },
+          {
+            "position": 89,
+            "task_id": "task-tracker"
+          },
+          {
+            "position": 91,
+            "task_id": "travel-exchange"
+          },
+          {
+            "position": 92,
+            "task_id": "travel-expense-reimbursement"
+          },
+          {
+            "position": 95,
+            "task_id": "university-course-selection"
+          },
+          {
+            "position": 99,
+            "task_id": "vlm-history-completer"
+          },
+          {
+            "position": 105,
+            "task_id": "woocommerce-product-recall"
+          },
+          {
+            "position": 108,
+            "task_id": "youtube-repo"
+          }
+        ]
+      }
+    },
+    "astra_vs_pi": {
+      "eligible_tasks": 104,
+      "counts": {
+        "both_pass": 57,
+        "neither": 23,
+        "pi_only": 20,
+        "astra_only": 4
+      },
+      "tasks": {
+        "both_pass": [
+          {
+            "position": 1,
+            "task_id": "find-alita-paper"
+          },
+          {
+            "position": 2,
+            "task_id": "set-conf-cr-ddl"
+          },
+          {
+            "position": 3,
+            "task_id": "course-schedule"
+          },
+          {
+            "position": 4,
+            "task_id": "canvas-homework-grader-python"
+          },
+          {
+            "position": 7,
+            "task_id": "price-comparison"
+          },
+          {
+            "position": 9,
+            "task_id": "excel-data-transformation"
+          },
+          {
+            "position": 10,
+            "task_id": "notion-hr"
+          },
+          {
+            "position": 13,
+            "task_id": "git-bug-hunt"
+          },
+          {
+            "position": 14,
+            "task_id": "k8s-safety-audit"
+          },
+          {
+            "position": 15,
+            "task_id": "ab-testing"
+          },
+          {
+            "position": 16,
+            "task_id": "academic-pdf-report"
+          },
+          {
+            "position": 17,
+            "task_id": "academic-warning"
+          },
+          {
+            "position": 19,
+            "task_id": "apply-phd-email"
+          },
+          {
+            "position": 20,
+            "task_id": "canvas-arrange-exam"
+          },
+          {
+            "position": 22,
+            "task_id": "canvas-art-quiz"
+          },
+          {
+            "position": 25,
+            "task_id": "canvas-new-students-notification"
+          },
+          {
+            "position": 26,
+            "task_id": "canvas-submit-late-work"
+          },
+          {
+            "position": 29,
+            "task_id": "courses-ta-hws"
+          },
+          {
+            "position": 33,
+            "task_id": "dietary-health"
+          },
+          {
+            "position": 34,
+            "task_id": "email-paper-homepage"
+          },
+          {
+            "position": 35,
+            "task_id": "excel-market-research"
+          },
+          {
+            "position": 39,
+            "task_id": "flagged-transactions"
+          },
+          {
+            "position": 40,
+            "task_id": "game-statistics"
+          },
+          {
+            "position": 41,
+            "task_id": "gdp-cr5-analysis"
+          },
+          {
+            "position": 42,
+            "task_id": "git-milestone"
+          },
+          {
+            "position": 43,
+            "task_id": "git-repo"
+          },
+          {
+            "position": 45,
+            "task_id": "huggingface-upload"
+          },
+          {
+            "position": 47,
+            "task_id": "imagenet"
+          },
+          {
+            "position": 50,
+            "task_id": "inventory-sync"
+          },
+          {
+            "position": 52,
+            "task_id": "invoice-org"
+          },
+          {
+            "position": 54,
+            "task_id": "k8s-deployment-cleanup"
+          },
+          {
+            "position": 57,
+            "task_id": "k8s-redis-helm-upgrade"
+          },
+          {
+            "position": 58,
+            "task_id": "landing-task-reminder"
+          },
+          {
+            "position": 60,
+            "task_id": "latex-prompt-box"
+          },
+          {
+            "position": 61,
+            "task_id": "live-transactions"
+          },
+          {
+            "position": 62,
+            "task_id": "llm-training-dataset"
+          },
+          {
+            "position": 64,
+            "task_id": "machine-operating"
+          },
+          {
+            "position": 65,
+            "task_id": "meeting-assign"
+          },
+          {
+            "position": 70,
+            "task_id": "notion-find-job"
+          },
+          {
+            "position": 71,
+            "task_id": "notion-personal-website"
+          },
+          {
+            "position": 73,
+            "task_id": "nvidia-stock-analysis"
+          },
+          {
+            "position": 76,
+            "task_id": "payable-invoice-checker"
+          },
+          {
+            "position": 78,
+            "task_id": "ppt-analysis"
+          },
+          {
+            "position": 82,
+            "task_id": "sales-accounting"
+          },
+          {
+            "position": 83,
+            "task_id": "search-ca-school"
+          },
+          {
+            "position": 84,
+            "task_id": "sla-timeout-monitor"
+          },
+          {
+            "position": 86,
+            "task_id": "student-interview"
+          },
+          {
+            "position": 88,
+            "task_id": "sync-todo-to-readme"
+          },
+          {
+            "position": 90,
+            "task_id": "train-ticket-plan"
+          },
+          {
+            "position": 93,
+            "task_id": "trip-adviser"
+          },
+          {
+            "position": 94,
+            "task_id": "trip-itinerary-generator"
+          },
+          {
+            "position": 96,
+            "task_id": "update-material-inventory"
+          },
+          {
+            "position": 97,
+            "task_id": "upenn-campus-route"
+          },
+          {
+            "position": 101,
+            "task_id": "wandb-shortest-length"
+          },
+          {
+            "position": 102,
+            "task_id": "woocommerce-customer-survey"
+          },
+          {
+            "position": 106,
+            "task_id": "woocommerce-update-cover"
+          },
+          {
+            "position": 107,
+            "task_id": "yahoo-analysis"
+          }
+        ],
+        "astra_only": [
+          {
+            "position": 18,
+            "task_id": "add-bibtex"
+          },
+          {
+            "position": 69,
+            "task_id": "nhl-b2b-analysis"
+          },
+          {
+            "position": 77,
+            "task_id": "personal-website-construct"
+          },
+          {
+            "position": 98,
+            "task_id": "verl-dataset"
+          }
+        ],
+        "pi_only": [
+          {
+            "position": 6,
+            "task_id": "notion-movies"
+          },
+          {
+            "position": 8,
+            "task_id": "quantitative-financial-analysis"
+          },
+          {
+            "position": 12,
+            "task_id": "woocommerce-stock-alert"
+          },
+          {
+            "position": 21,
+            "task_id": "canvas-art-manager"
+          },
+          {
+            "position": 23,
+            "task_id": "canvas-do-quiz"
+          },
+          {
+            "position": 27,
+            "task_id": "cooking-guidance"
+          },
+          {
+            "position": 31,
+            "task_id": "dataset-license-issue"
+          },
+          {
+            "position": 37,
+            "task_id": "fillout-online-forms"
+          },
+          {
+            "position": 48,
+            "task_id": "inter-final-performance-analysis"
+          },
+          {
+            "position": 49,
+            "task_id": "interview-report"
+          },
+          {
+            "position": 63,
+            "task_id": "logical-datasets-collection"
+          },
+          {
+            "position": 67,
+            "task_id": "mrbeast-analysis"
+          },
+          {
+            "position": 68,
+            "task_id": "music-analysis"
+          },
+          {
+            "position": 74,
+            "task_id": "oil-price"
+          },
+          {
+            "position": 80,
+            "task_id": "profile-update-online"
+          },
+          {
+            "position": 81,
+            "task_id": "reimbursement-form-filler"
+          },
+          {
+            "position": 92,
+            "task_id": "travel-expense-reimbursement"
+          },
+          {
+            "position": 100,
+            "task_id": "wandb-best-score"
+          },
+          {
+            "position": 105,
+            "task_id": "woocommerce-product-recall"
+          },
+          {
+            "position": 108,
+            "task_id": "youtube-repo"
+          }
+        ],
+        "neither": [
+          {
+            "position": 5,
+            "task_id": "arrange-workspace"
+          },
+          {
+            "position": 11,
+            "task_id": "shopping-helper"
+          },
+          {
+            "position": 24,
+            "task_id": "canvas-list-test"
+          },
+          {
+            "position": 28,
+            "task_id": "course-assistant"
+          },
+          {
+            "position": 30,
+            "task_id": "cvpr-research"
+          },
+          {
+            "position": 32,
+            "task_id": "detect-revised-terms"
+          },
+          {
+            "position": 36,
+            "task_id": "experiments-recordings"
+          },
+          {
+            "position": 44,
+            "task_id": "hk-top-conf"
+          },
+          {
+            "position": 46,
+            "task_id": "identify-all-songs"
+          },
+          {
+            "position": 51,
+            "task_id": "investment-decision-analysis"
+          },
+          {
+            "position": 56,
+            "task_id": "k8s-pr-preview-testing"
+          },
+          {
+            "position": 59,
+            "task_id": "language-school"
+          },
+          {
+            "position": 66,
+            "task_id": "merge-hf-datasets"
+          },
+          {
+            "position": 75,
+            "task_id": "paper-checker"
+          },
+          {
+            "position": 79,
+            "task_id": "privacy-desensitization"
+          },
+          {
+            "position": 85,
+            "task_id": "stock-build-position"
+          },
+          {
+            "position": 87,
+            "task_id": "subway-planning"
+          },
+          {
+            "position": 89,
+            "task_id": "task-tracker"
+          },
+          {
+            "position": 91,
+            "task_id": "travel-exchange"
+          },
+          {
+            "position": 95,
+            "task_id": "university-course-selection"
+          },
+          {
+            "position": 99,
+            "task_id": "vlm-history-completer"
+          },
+          {
+            "position": 103,
+            "task_id": "woocommerce-new-product"
+          },
+          {
+            "position": 104,
+            "task_id": "woocommerce-new-welcome"
+          }
+        ]
+      }
+    },
+    "hermes_vs_pi": {
+      "eligible_tasks": 104,
+      "counts": {
+        "both_pass": 60,
+        "pi_only": 17,
+        "neither": 18,
+        "hermes_only": 9
+      },
+      "tasks": {
+        "both_pass": [
+          {
+            "position": 1,
+            "task_id": "find-alita-paper"
+          },
+          {
+            "position": 2,
+            "task_id": "set-conf-cr-ddl"
+          },
+          {
+            "position": 4,
+            "task_id": "canvas-homework-grader-python"
+          },
+          {
+            "position": 6,
+            "task_id": "notion-movies"
+          },
+          {
+            "position": 7,
+            "task_id": "price-comparison"
+          },
+          {
+            "position": 9,
+            "task_id": "excel-data-transformation"
+          },
+          {
+            "position": 10,
+            "task_id": "notion-hr"
+          },
+          {
+            "position": 12,
+            "task_id": "woocommerce-stock-alert"
+          },
+          {
+            "position": 13,
+            "task_id": "git-bug-hunt"
+          },
+          {
+            "position": 15,
+            "task_id": "ab-testing"
+          },
+          {
+            "position": 16,
+            "task_id": "academic-pdf-report"
+          },
+          {
+            "position": 17,
+            "task_id": "academic-warning"
+          },
+          {
+            "position": 19,
+            "task_id": "apply-phd-email"
+          },
+          {
+            "position": 20,
+            "task_id": "canvas-arrange-exam"
+          },
+          {
+            "position": 21,
+            "task_id": "canvas-art-manager"
+          },
+          {
+            "position": 22,
+            "task_id": "canvas-art-quiz"
+          },
+          {
+            "position": 23,
+            "task_id": "canvas-do-quiz"
+          },
+          {
+            "position": 25,
+            "task_id": "canvas-new-students-notification"
+          },
+          {
+            "position": 26,
+            "task_id": "canvas-submit-late-work"
+          },
+          {
+            "position": 27,
+            "task_id": "cooking-guidance"
+          },
+          {
+            "position": 29,
+            "task_id": "courses-ta-hws"
+          },
+          {
+            "position": 31,
+            "task_id": "dataset-license-issue"
+          },
+          {
+            "position": 33,
+            "task_id": "dietary-health"
+          },
+          {
+            "position": 35,
+            "task_id": "excel-market-research"
+          },
+          {
+            "position": 37,
+            "task_id": "fillout-online-forms"
+          },
+          {
+            "position": 39,
+            "task_id": "flagged-transactions"
+          },
+          {
+            "position": 40,
+            "task_id": "game-statistics"
+          },
+          {
+            "position": 41,
+            "task_id": "gdp-cr5-analysis"
+          },
+          {
+            "position": 42,
+            "task_id": "git-milestone"
+          },
+          {
+            "position": 43,
+            "task_id": "git-repo"
+          },
+          {
+            "position": 45,
+            "task_id": "huggingface-upload"
+          },
+          {
+            "position": 48,
+            "task_id": "inter-final-performance-analysis"
+          },
+          {
+            "position": 50,
+            "task_id": "inventory-sync"
+          },
+          {
+            "position": 52,
+            "task_id": "invoice-org"
+          },
+          {
+            "position": 57,
+            "task_id": "k8s-redis-helm-upgrade"
+          },
+          {
+            "position": 58,
+            "task_id": "landing-task-reminder"
+          },
+          {
+            "position": 60,
+            "task_id": "latex-prompt-box"
+          },
+          {
+            "position": 61,
+            "task_id": "live-transactions"
+          },
+          {
+            "position": 62,
+            "task_id": "llm-training-dataset"
+          },
+          {
+            "position": 64,
+            "task_id": "machine-operating"
+          },
+          {
+            "position": 65,
+            "task_id": "meeting-assign"
+          },
+          {
+            "position": 70,
+            "task_id": "notion-find-job"
+          },
+          {
+            "position": 71,
+            "task_id": "notion-personal-website"
+          },
+          {
+            "position": 73,
+            "task_id": "nvidia-stock-analysis"
+          },
+          {
+            "position": 76,
+            "task_id": "payable-invoice-checker"
+          },
+          {
+            "position": 78,
+            "task_id": "ppt-analysis"
+          },
+          {
+            "position": 80,
+            "task_id": "profile-update-online"
+          },
+          {
+            "position": 81,
+            "task_id": "reimbursement-form-filler"
+          },
+          {
+            "position": 82,
+            "task_id": "sales-accounting"
+          },
+          {
+            "position": 84,
+            "task_id": "sla-timeout-monitor"
+          },
+          {
+            "position": 86,
+            "task_id": "student-interview"
+          },
+          {
+            "position": 88,
+            "task_id": "sync-todo-to-readme"
+          },
+          {
+            "position": 90,
+            "task_id": "train-ticket-plan"
+          },
+          {
+            "position": 93,
+            "task_id": "trip-adviser"
+          },
+          {
+            "position": 94,
+            "task_id": "trip-itinerary-generator"
+          },
+          {
+            "position": 96,
+            "task_id": "update-material-inventory"
+          },
+          {
+            "position": 100,
+            "task_id": "wandb-best-score"
+          },
+          {
+            "position": 101,
+            "task_id": "wandb-shortest-length"
+          },
+          {
+            "position": 102,
+            "task_id": "woocommerce-customer-survey"
+          },
+          {
+            "position": 106,
+            "task_id": "woocommerce-update-cover"
+          }
+        ],
+        "hermes_only": [
+          {
+            "position": 24,
+            "task_id": "canvas-list-test"
+          },
+          {
+            "position": 30,
+            "task_id": "cvpr-research"
+          },
+          {
+            "position": 46,
+            "task_id": "identify-all-songs"
+          },
+          {
+            "position": 56,
+            "task_id": "k8s-pr-preview-testing"
+          },
+          {
+            "position": 69,
+            "task_id": "nhl-b2b-analysis"
+          },
+          {
+            "position": 77,
+            "task_id": "personal-website-construct"
+          },
+          {
+            "position": 85,
+            "task_id": "stock-build-position"
+          },
+          {
+            "position": 103,
+            "task_id": "woocommerce-new-product"
+          },
+          {
+            "position": 104,
+            "task_id": "woocommerce-new-welcome"
+          }
+        ],
+        "pi_only": [
+          {
+            "position": 3,
+            "task_id": "course-schedule"
+          },
+          {
+            "position": 8,
+            "task_id": "quantitative-financial-analysis"
+          },
+          {
+            "position": 14,
+            "task_id": "k8s-safety-audit"
+          },
+          {
+            "position": 34,
+            "task_id": "email-paper-homepage"
+          },
+          {
+            "position": 47,
+            "task_id": "imagenet"
+          },
+          {
+            "position": 49,
+            "task_id": "interview-report"
+          },
+          {
+            "position": 54,
+            "task_id": "k8s-deployment-cleanup"
+          },
+          {
+            "position": 63,
+            "task_id": "logical-datasets-collection"
+          },
+          {
+            "position": 67,
+            "task_id": "mrbeast-analysis"
+          },
+          {
+            "position": 68,
+            "task_id": "music-analysis"
+          },
+          {
+            "position": 74,
+            "task_id": "oil-price"
+          },
+          {
+            "position": 83,
+            "task_id": "search-ca-school"
+          },
+          {
+            "position": 92,
+            "task_id": "travel-expense-reimbursement"
+          },
+          {
+            "position": 97,
+            "task_id": "upenn-campus-route"
+          },
+          {
+            "position": 105,
+            "task_id": "woocommerce-product-recall"
+          },
+          {
+            "position": 107,
+            "task_id": "yahoo-analysis"
+          },
+          {
+            "position": 108,
+            "task_id": "youtube-repo"
+          }
+        ],
+        "neither": [
+          {
+            "position": 5,
+            "task_id": "arrange-workspace"
+          },
+          {
+            "position": 11,
+            "task_id": "shopping-helper"
+          },
+          {
+            "position": 18,
+            "task_id": "add-bibtex"
+          },
+          {
+            "position": 28,
+            "task_id": "course-assistant"
+          },
+          {
+            "position": 32,
+            "task_id": "detect-revised-terms"
+          },
+          {
+            "position": 36,
+            "task_id": "experiments-recordings"
+          },
+          {
+            "position": 44,
+            "task_id": "hk-top-conf"
+          },
+          {
+            "position": 51,
+            "task_id": "investment-decision-analysis"
+          },
+          {
+            "position": 59,
+            "task_id": "language-school"
+          },
+          {
+            "position": 66,
+            "task_id": "merge-hf-datasets"
+          },
+          {
+            "position": 75,
+            "task_id": "paper-checker"
+          },
+          {
+            "position": 79,
+            "task_id": "privacy-desensitization"
+          },
+          {
+            "position": 87,
+            "task_id": "subway-planning"
+          },
+          {
+            "position": 89,
+            "task_id": "task-tracker"
+          },
+          {
+            "position": 91,
+            "task_id": "travel-exchange"
+          },
+          {
+            "position": 95,
+            "task_id": "university-course-selection"
+          },
+          {
+            "position": 98,
+            "task_id": "verl-dataset"
+          },
+          {
+            "position": 99,
+            "task_id": "vlm-history-completer"
+          }
+        ]
+      }
+    }
+  }
+}

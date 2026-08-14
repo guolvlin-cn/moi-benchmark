@@ -1,0 +1,247 @@
+{
+  "frozen_at": "2026-08-05",
+  "images": [
+    {
+      "created": "2025-10-16T20:16:25.410696898+08:00",
+      "immutable_reference": "docker.io/lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f",
+      "layer_count": 25,
+      "manifest_digest": "sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/lockon0927/toolathlon-task-image:1016beta",
+      "state": "frozen"
+    },
+    {
+      "created": "2017-11-08T20:13:47.296023383Z",
+      "immutable_reference": "docker.io/lbjay/canvas-docker@sha256:8d6b9efe3c2228008aa85d404a6a3e9acaf0ca7d70aea7374482bf7133a875d8",
+      "layer_count": 31,
+      "manifest_digest": "sha256:8d6b9efe3c2228008aa85d404a6a3e9acaf0ca7d70aea7374482bf7133a875d8",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/lbjay/canvas-docker:latest",
+      "state": "frozen"
+    },
+    {
+      "created": "2025-06-05T20:27:01.19342224+02:00",
+      "immutable_reference": "docker.io/analogic/poste.io@sha256:669424e4f51a92d9c7f57cd4f4a82da44d311d92b2573c1c9409d7ec25208113",
+      "layer_count": 23,
+      "manifest_digest": "sha256:669424e4f51a92d9c7f57cd4f4a82da44d311d92b2573c1c9409d7ec25208113",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/analogic/poste.io:2.5.5",
+      "state": "frozen"
+    },
+    {
+      "created": "2026-05-04T23:01:20.676190479Z",
+      "immutable_reference": "docker.io/library/mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+      "layer_count": 11,
+      "manifest_digest": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/mysql:8.0",
+      "state": "frozen"
+    },
+    {
+      "created": "2025-09-30T17:45:54Z",
+      "immutable_reference": "docker.io/library/wordpress@sha256:9973c15252ea54260c711e1074c96864acabebda379c664e812fa9bfe6fef268",
+      "layer_count": 24,
+      "manifest_digest": "sha256:9973c15252ea54260c711e1074c96864acabebda379c664e812fa9bfe6fef268",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/wordpress:6.8.2-php8.2-apache",
+      "state": "frozen"
+    },
+    {
+      "created": "2026-07-27T22:08:26.634911873Z",
+      "immutable_reference": "docker.io/library/mysql@sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+      "layer_count": 10,
+      "manifest_digest": "sha256:b3b90af2a6552ae30c266fdb7d5dd55f3afb72404bb78d37fe8a23eb857fd3fb",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/mysql:8.4",
+      "state": "frozen"
+    },
+    {
+      "created": "2019-03-26T23:14:52.227945051Z",
+      "immutable_reference": "docker.io/library/nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d",
+      "layer_count": 3,
+      "manifest_digest": "sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/nginx:1.14",
+      "state": "frozen"
+    },
+    {
+      "created": "2022-05-17T22:37:53.699922729Z",
+      "immutable_reference": "docker.io/library/nginx@sha256:016789c9a2d021b2dcb5e1c724c75ab0a57cc4e8cd7aab7bb28e69fec7c8c4fc",
+      "layer_count": 6,
+      "manifest_digest": "sha256:016789c9a2d021b2dcb5e1c724c75ab0a57cc4e8cd7aab7bb28e69fec7c8c4fc",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/nginx:1.20-alpine",
+      "state": "frozen"
+    },
+    {
+      "created": "2022-10-28T02:59:04.712472434Z",
+      "immutable_reference": "docker.io/oliver006/redis_exporter@sha256:b3e847f29ae66fefcaf991e2ccee04b03e57314aab14abadfc87b0eed4453e65",
+      "layer_count": 3,
+      "manifest_digest": "sha256:b3e847f29ae66fefcaf991e2ccee04b03e57314aab14abadfc87b0eed4453e65",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/oliver006/redis_exporter:v1.45.0",
+      "state": "frozen"
+    },
+    {
+      "created": "2022-05-17T22:36:41.590296646Z",
+      "immutable_reference": "docker.io/library/nginx@sha256:a74534e76ee1121d418fa7394ca930eb67440deda413848bc67c68138535b989",
+      "layer_count": 6,
+      "manifest_digest": "sha256:a74534e76ee1121d418fa7394ca930eb67440deda413848bc67c68138535b989",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/nginx:1.21-alpine",
+      "state": "frozen"
+    },
+    {
+      "created": "2026-04-16T23:53:26.803599608Z",
+      "immutable_reference": "docker.io/library/alpine@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc",
+      "layer_count": 1,
+      "manifest_digest": "sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/alpine:3.20",
+      "state": "frozen"
+    },
+    {
+      "created": "2023-05-18T22:34:17Z",
+      "immutable_reference": "docker.io/library/busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+      "layer_count": 1,
+      "manifest_digest": "sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/busybox:1.36",
+      "state": "frozen"
+    },
+    {
+      "created": "2024-05-27T01:17:58.277478795Z",
+      "immutable_reference": "docker.io/nginxinc/nginx-unprivileged@sha256:8265b1df5a89cc1a0a067e472bf47aca7cee52f0561c98a0dff91312dcdd8adb",
+      "layer_count": 9,
+      "manifest_digest": "sha256:8265b1df5a89cc1a0a067e472bf47aca7cee52f0561c98a0dff91312dcdd8adb",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/nginxinc/nginx-unprivileged:1.25-alpine",
+      "state": "frozen"
+    },
+    {
+      "created": "2024-05-08T22:27:36.608646655Z",
+      "immutable_reference": "docker.io/prom/prometheus@sha256:5c435642ca4d8427ca26f4901c11114023004709037880cd7860d5b7176aa731",
+      "layer_count": 12,
+      "manifest_digest": "sha256:5c435642ca4d8427ca26f4901c11114023004709037880cd7860d5b7176aa731",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/prom/prometheus:v2.52.0",
+      "state": "frozen"
+    },
+    {
+      "created": "2026-06-16T00:25:27.486153657Z",
+      "immutable_reference": "docker.io/library/python@sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+      "layer_count": 4,
+      "manifest_digest": "sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/python:3.12-alpine",
+      "state": "frozen"
+    },
+    {
+      "created": "2026-08-05T00:38:36.6618041Z",
+      "immutable_reference": "docker.io/library/redis@sha256:6461ca4ac0c5c9d81d53685c3bf76aa81f464a9de6cf3a97b80a1da8d1bb1de4",
+      "layer_count": 7,
+      "manifest_digest": "sha256:6461ca4ac0c5c9d81d53685c3bf76aa81f464a9de6cf3a97b80a1da8d1bb1de4",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/redis:7.2",
+      "state": "frozen"
+    },
+    {
+      "created": "2024-05-03T19:49:21Z",
+      "immutable_reference": "docker.io/library/nginx@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00",
+      "layer_count": 8,
+      "manifest_digest": "sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/library/nginx:1.25-alpine",
+      "state": "frozen"
+    },
+    {
+      "created": "2024-02-21T13:38:45.971377257Z",
+      "immutable_reference": "docker.io/bitnamilegacy/redis@sha256:c1843bcdb2f413d2aff67adbaf482082673cd40ec602fa9fefad74ec685cb813",
+      "layer_count": 1,
+      "manifest_digest": "sha256:c1843bcdb2f413d2aff67adbaf482082673cd40ec602fa9fefad74ec685cb813",
+      "platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "reference": "docker.io/bitnamilegacy/redis:7.2.4-debian-12-r9",
+      "state": "frozen"
+    }
+  ],
+  "local_task_image_archive": {
+    "exists": true,
+    "mode": "0o600",
+    "oci_manifest": {
+      "config_digest": "sha256:23dcd7361a0882686774a8d0c6c5ce7571784b9b640bd121938e86fbe56aa488",
+      "digest": "sha256:ce96a685a29723b4dee125ac3130c98dc508783b230595debed83643a8a7e133",
+      "layer_count": 25,
+      "layer_size_bytes": 2515512456,
+      "media_type": "application/vnd.oci.image.manifest.v1+json",
+      "reference_name": "1016beta",
+      "size_bytes": 4139
+    },
+    "path": "/home/vagrant/moi-benchmark/astra/work/toolathlon-verified/images/toolathlon-task-image_1016beta_linux-amd64.oci.tar",
+    "sha256": "74f3ec444af1ef46564fe2f4e58431f2e136f2481aa101513fa3108bd59bc3de",
+    "size_bytes": 2515553792,
+    "type": "file"
+  },
+  "platform": {
+    "architecture": "amd64",
+    "os": "linux"
+  },
+  "resolved_count": 18,
+  "schema_version": 1,
+  "source_commit": "2aed2468858f15818acafa178518390cc4b0f5cb",
+  "state": "frozen",
+  "unresolved_count": 0
+}

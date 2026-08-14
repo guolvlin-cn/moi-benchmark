@@ -1,0 +1,63 @@
+{
+  "external_applications": {
+    "reason": "task-scoped preprocess/reset replay requires explicit credential access inside the frozen task image",
+    "state": "PENDING"
+  },
+  "local_applications": {
+    "after_snapshot_sha256": "5bea1347fe7b1162d1ec6f7ad3fb675df8ef67875dcc74e57923752ab8ee074d",
+    "all_ready_after_reset": true,
+    "baseline_semantic_sha256": "e6a910496ccc351f115eb58324b45ae2812345e751b0ea39a19f9912ebe82714",
+    "before_snapshot_sha256": "bc7a75892fa570b6ff035918e09de39dd76294f77aa3b76844c6add1a49cc281",
+    "container_generations_changed": true,
+    "image_ids_stable": true,
+    "port_binding_contract_stable": true,
+    "port_binding_policy": {
+      "fixed": [
+        "canvas",
+        "poste",
+        "woocommerce_db",
+        "woocommerce_web"
+      ],
+      "k8s": "6443/tcp remains loopback-bound; Kind host port is ephemeral per cluster generation"
+    },
+    "raw_port_bindings_stable": false,
+    "reset_method": "targeted frozen setup.sh reprovision; no global prune",
+    "reset_recipes": [
+      {
+        "path": "deployment/canvas/scripts/setup.sh",
+        "sha256": "f499a5ebea33212507562260ddabe0b4f9f78fb1ca1f40d6224e8114987fa2d4",
+        "size_bytes": 8764
+      },
+      {
+        "path": "deployment/poste/scripts/setup.sh",
+        "sha256": "ec1d81d2894dca2799ec8bfda5819563c8a9d45bb4346b9d7e79b1eb609d0e1e",
+        "size_bytes": 7910
+      },
+      {
+        "path": "deployment/woocommerce/scripts/setup.sh",
+        "sha256": "dcac75a653a9a55dc4082aab5ef9d217393f28c0c0468d8ffe3f00e1148351b1",
+        "size_bytes": 20579
+      },
+      {
+        "path": "deployment/k8s/scripts/setup.sh",
+        "sha256": "643da7f043f351b74db47e1e14e5d2d9b200986e5e34719d96b5d2d531ef9d13",
+        "size_bytes": 11170
+      }
+    ],
+    "sentinels_injected": true,
+    "sentinels_removed": true,
+    "services": [
+      "canvas",
+      "k8s",
+      "poste",
+      "woocommerce_db",
+      "woocommerce_web"
+    ],
+    "state": "GO",
+    "successful_replays": 1
+  },
+  "schema_version": "toolathlon.app-state.live.v1",
+  "secret_values_recorded": false,
+  "source_commit": "2aed2468858f15818acafa178518390cc4b0f5cb",
+  "state": "PARTIAL_GO"
+}

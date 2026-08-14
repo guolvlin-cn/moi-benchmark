@@ -1,0 +1,239 @@
+{
+  "benchmark": {
+    "id": "toolathlon-verified",
+    "source_commit": "2aed2468858f15818acafa178518390cc4b0f5cb",
+    "source_tree": "a739a794e514734e320be0010511dceed26704bd",
+    "task_count": 108,
+    "task_manifest_sha256": "b5faf6db99505bfe57f92f0f6d097d0eccac1dd22cd1ceb71e86169c7e2f9609",
+    "task_split": "tasks/finalpool"
+  },
+  "captured_at": "2026-08-07T03:33:42Z",
+  "execution": {
+    "agent_deadline_tiers_seconds": {
+      "R1": 1800,
+      "R2": 2700,
+      "R3": 3600,
+      "R4": 5400
+    },
+    "attempt_identity": {
+      "astra": "new registered product user per attempt; original=a1, replacement=a2",
+      "deepseek_provider_user_id_is_separate": true,
+      "hermes": "fresh HERMES_HOME, random session_id, new Gateway/API key per attempt"
+    },
+    "budget_authority_sha256": "85efd2f7b10679e744b9f75bc601c25b6e1e486a6e5f43b696e35a282f9217d5",
+    "formal_repetitions_per_system_task": 1,
+    "fresh_state_per_system_task": true,
+    "infrastructure_timeouts": {
+      "app_reset_seconds": 3600,
+      "artifact_finalize_seconds": 600,
+      "cleanup_seconds": 1800,
+      "evaluator_seconds": 3600,
+      "gateway_readiness_seconds": 600,
+      "model_proxy_readiness_seconds": 60,
+      "post_terminal_model_drain_seconds": 120,
+      "post_terminal_model_quiet_seconds": 1,
+      "preprocess_seconds": 3600,
+      "product_startup_seconds": 600,
+      "scope": "independent safety guards; none is subtracted from or added to the Agent execution deadline and none converts a product terminal state into infra-invalid"
+    },
+    "max_product_model_requests": 100,
+    "product_resume": false,
+    "python_hash_seed": 0,
+    "scheduler_resume": "same batch root validates and skips complete slots without overwriting attempts",
+    "system_order": "M2 freezes each task order explicitly; M3 alternates by remaining-batch position with Astra first on odd positions; each system runs first on 54 tasks overall",
+    "task_order": "M2 uses the frozen 14-task first-batch order; M3 uses the lexicographically sorted remaining 94 tasks",
+    "tool_call_limit": null,
+    "workers": 1
+  },
+  "failure_and_rerun_policy": {
+    "automatic_replacement_maximum": 1,
+    "evidence_retention": "retain original run, replacement run, reason, mapping, logs, and hashes",
+    "never_rerun_for": [
+      "product failure",
+      "model failure",
+      "agent or model timeout",
+      "model request budget",
+      "evaluator no_pass"
+    ],
+    "one_primary_failure_category": true,
+    "priority_high_to_low": [
+      "infra_resource_exhausted",
+      "environment_error",
+      "evaluator_error",
+      "adapter_error",
+      "product_resource_exhausted",
+      "agent_deadline",
+      "model_request_budget",
+      "llm_request_timeout",
+      "stream_transport_error",
+      "model_error",
+      "tool_error",
+      "product_error",
+      "completed_but_no_pass",
+      "none"
+    ],
+    "replacement_allowed_only_when": "run_validity=infra_invalid and independent evidence places the cause outside both products' experiment fault domain"
+  },
+  "generator": {
+    "path": "astra/benchmark/toolathlon-verified/scripts/freeze_m0.py",
+    "sha256": "bc18226946a09e346cfb16cbb179295e0b74349f29f6a0abbb573fca49fe75b0"
+  },
+  "m0_qualification": {
+    "checks": {
+      "all_image_digests_resolved": true,
+      "astra_runtime_qualified": true,
+      "formal_phase_system_order_is_frozen": true,
+      "formal_phase_task_partition_is_14_plus_94": true,
+      "hermes_runtime_qualified": true,
+      "section_3_1_3_2_checksum_root_valid": true,
+      "section_3_3_checksum_root_valid": true,
+      "section_3_3_runtime_qualified": true,
+      "task_count_is_108": true,
+      "task_image_runtime_verified": true,
+      "toolathlon_source_clean_and_detached": true,
+      "vm_qualified": true
+    },
+    "scope": "immutable benchmark/system/model inputs, resolved execution contract, and qualification-host evidence",
+    "status": "GO"
+  },
+  "m1_live_qualification": {
+    "formal_reuse": "both qualified runs count in the first 14-task formal batch",
+    "not_part_of_m0_freeze": true,
+    "required_before_m2": [
+      "use the frozen application credential fingerprints and two distinct DeepSeek keys",
+      "reference the already-qualified local application baseline and reset replay",
+      "pass one complete find-alita-paper lifecycle with Astra",
+      "reset and pass one complete find-alita-paper lifecycle with Hermes",
+      "pass the strict per-run artifact schema and hash gate for both runs"
+    ],
+    "secret_policy": "DeepSeek keys, Astra admin token, JWT and refresh token are never persisted; Astra attempt username and plaintext product password are the sole exception, stored in run-local product-identity.private.json mode 0600 and forbidden to publish",
+    "status": "PENDING",
+    "waived": [
+      "independent 108-task tools/list Schema prescan",
+      "independent gold/evaluator replay"
+    ]
+  },
+  "minimal_authority_roots": {
+    "section_3_3": {
+      "path": "section-3.3.sha256",
+      "sha256": "05cee7b3e5c815e9b701f34680b2fb4e8577e370a3df6c006caa85af7c33a23f",
+      "size_bytes": 906,
+      "verified_entry_count": 10
+    },
+    "sections_3_1_3_2": {
+      "path": "sections-3.1-3.2.sha256",
+      "sha256": "a7a3ff6d0387bb172adcb2e2d429a123d7d2c602f89ab24328768453bb16f80c",
+      "size_bytes": 1193,
+      "verified_entry_count": 13
+    },
+    "vm": {
+      "path": "vm.freeze.json",
+      "sha256": "877578868786d5c8b4c65ed33fa1e22226aa1203490bead55dce646a13fbdbb4",
+      "size_bytes": 5148
+    }
+  },
+  "model": {
+    "base_url": "https://api.deepseek.com",
+    "credential_contract": {
+      "astra_environment": "TOOLATHLON_DEEPSEEK_ASTRA_API_KEY",
+      "distinct_values_required": true,
+      "hermes_environment": "TOOLATHLON_DEEPSEEK_HERMES_API_KEY",
+      "same_endpoint_and_model": true,
+      "secret_values_or_fingerprints_in_m0": false,
+      "storage": "runtime-only Model Proxy configuration"
+    },
+    "documented_version": "DeepSeek-V4-Flash-0731",
+    "provider": "deepseek",
+    "reasoning_effort": {
+      "provider_default": "high",
+      "source": "benchmark_override",
+      "value": "max",
+      "wire_behavior": "sent"
+    },
+    "request_id": "deepseek-v4-flash",
+    "temperature": {
+      "effective": false,
+      "reason": "official docs state temperature is accepted but ignored in Thinking mode",
+      "sent": true,
+      "value": 0
+    },
+    "thinking": {
+      "provider_default": "enabled",
+      "source": "benchmark_override",
+      "value": "enabled",
+      "wire_behavior": "sent",
+      "wire_value": {
+        "type": "enabled"
+      }
+    }
+  },
+  "result_contract": {
+    "aggregation_deferred_to": "M4",
+    "directory": "runs/<system>/<task_id>/<run_id>/",
+    "enums": {
+      "run_validity": [
+        "valid",
+        "infra_invalid"
+      ],
+      "terminal_status": [
+        "completed",
+        "failed",
+        "max_steps",
+        "timeout",
+        "interrupted",
+        "crashed"
+      ],
+      "timeout_scope": [
+        "none",
+        "preprocess",
+        "gateway",
+        "model",
+        "tool",
+        "agent",
+        "evaluator",
+        "cleanup"
+      ],
+      "verify_status": [
+        "pass",
+        "no_pass",
+        "unavailable"
+      ]
+    },
+    "raw_evidence_blocks_next_run": true,
+    "required_at_finalization": [
+      "resolved-config.json",
+      "lifecycle-events.jsonl",
+      "adapter-events.jsonl",
+      "trajectory.jsonl",
+      "tool-calls.jsonl",
+      "model-usage.jsonl",
+      "resource-usage.jsonl",
+      "evaluator/eval_res.json",
+      "evaluator/eval.log",
+      "failure-evidence.json",
+      "run.json",
+      "artifacts.sha256"
+    ],
+    "tools_list_capture": "per run after Gateway ready; no independent prescan"
+  },
+  "schema_version": "toolathlon.experiment.freeze.v1",
+  "systems": {
+    "astra": {
+      "cli_sha256": "80ce54af219ff162e911ca208a83e660bb8acb2e68c2b5f8e7e54afa500a1e5b",
+      "commit": "844473c68649d8ea43e10b616dc4fbf98e2321e8",
+      "database_prefix_per_run": false,
+      "product_identity": "new registered Astra user for every attempt",
+      "runtime_config_sha256": "53f30fb3a855dfab8137b571564b440baeaa4d377f172757efb235db18b07632",
+      "server_sha256": "48a67ff31cf3747ecc0998dbac803d335ccd424d81eb0e55dd08d87cceec74e3",
+      "tree": "bfd88d2fe30ad7a04b2611a42c70d5dc993280bf"
+    },
+    "hermes": {
+      "commit": "f4df260f26c93f15694698869f3ea8e965eea301",
+      "executable_sha256": "16b9840ed1cc44541d758f790d1b6db5afba1f4193ee9d59f1f15871029875fa",
+      "python": "3.11.15",
+      "runtime_config_sha256": "4b944c8281b27be99e23b3200a73619a0e300d5c3844016a87ebddf8268a75e7",
+      "tree": "40f0136a9995a9a1712a3ab28c231a2812748cdf",
+      "version": "0.19.0"
+    }
+  }
+}

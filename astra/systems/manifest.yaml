@@ -1,22 +1,33 @@
 schema_version: 1
 track: astra
-snapshot_date: "2026-07-22"
+snapshot_date: "2026-08-05"
 frozen: false
 
 local_sources:
   - id: astra
     role: system_under_test
     source: https://github.com/matrixorigin/astra.git
-    revision: 9bf87cbede29bfaa7f12ebec978a71a4c9e7ec84
-    local_path: external/astra
-    working_tree: modified
+    revision: 844473c68649d8ea43e10b616dc4fbf98e2321e8
+    tree: bfd88d2fe30ad7a04b2611a42c70d5dc993280bf
+    release_descriptor: v0.0.5-4-g844473c68
+    local_path: astra/work/toolathlon-verified/systems/astra-844473c68649
+    working_tree: clean
+    detached_head: true
+    benchmark_freeze: astra/benchmark/toolathlon-verified/freeze/astra.freeze.json
+    runner_constraints:
+      - Toolathlon-Verified builds must use this clean detached worktree; external/astra is dirty and excluded from all benchmark build and freeze inputs.
+      - A formal slot requires Linux/amd64 Astra CLI and astra-server artifacts whose SHA-256 values are bound by the runtime config.
+      - Astra uses the frozen shared loopback API server and database, but registers a unique product user for every attempt (original a1, replacement a2); no user identity or session may be reused and the model fallback chain remains empty.
   - id: hermes-agent
     role: comparator_candidate
     source: https://github.com/NousResearch/hermes-agent.git
     revision: f4df260f26c93f15694698869f3ea8e965eea301
+    tree: 40f0136a9995a9a1712a3ab28c231a2812748cdf
     release_descriptor: v2026.7.20-63-gf4df260f2
+    project_version: 0.19.0
     local_path: external/hermes-agent
     working_tree: clean
+    benchmark_freeze: astra/benchmark/toolathlon-verified/freeze/hermes.freeze.json
     runner_constraints:
       - Do not use hermes one-shot mode for approval, permission, or security cases because it enables YOLO and auto-accepts hooks.
       - Distinguish transcript resume and filesystem checkpointing from verified in-flight side-effect recovery.
@@ -53,4 +64,4 @@ pending_sources:
       - Freeze GOOSE_MODE, context strategy, sandbox policy, extensions, and isolated GOOSE_PATH_ROOT per run.
     note: The official release is a candidate pin only. The local shallow clone timed out, so source inspection and adapter smoke tests remain mandatory before any scored run.
 
-note: Candidate roles and versions remain unapproved until the Astra plan review is complete. Goose has a web-verified candidate release but is not locally checked out or benchmark-ready.
+note: This file remains a multi-system workspace snapshot, so global frozen stays false. Toolathlon-Verified section 3.3 qualifies both Astra/Hermes product artifacts and the minimal M0 authority root is GO; live execution remains gated only by the Toolathlon M1 credentials, applications, reset, real Schema, gold replay, and lifecycle checks. Goose has a web-verified candidate release but is not locally checked out or benchmark-ready.

@@ -1,0 +1,17 @@
+{
+  "policy_id": "toolathlon-task-scoped-v1",
+  "products": {
+    "astra": {
+      "permission_mode": "auto"
+    },
+    "hermes": {
+      "approval_mode": "smart"
+    }
+  },
+  "task_scope": {
+    "gateway_url": "http://127.0.0.1:19001/sse",
+    "workspace": "/ABSOLUTE/PATH/TO/FRESH/TASK/WORKSPACE"
+  },
+  "unresolved_approval_action": "deny"
+}
+

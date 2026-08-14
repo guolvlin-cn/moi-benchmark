@@ -1,0 +1,36 @@
+{
+  "evaluator": {
+    "command": [
+      "/ABSOLUTE/PATH/TOOLATHLON/.venv/bin/python",
+      "/ABSOLUTE/PATH/TOOLATHLON/scripts/decoupled/container_eval.py",
+      "--bundle",
+      "{trusted_bundle}",
+      "--output-dir",
+      "{evaluator_dir}"
+    ],
+    "result_file": "{evaluator_dir}/eval_res.json"
+  },
+  "adapter_freeze": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/adapter.freeze.json",
+  "permission_policy_freeze": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/permission-policy.freeze.json",
+  "run": {
+    "bundle_file": "/ABSOLUTE/PATH/trusted-bundle.json",
+    "deadline_s": 5400,
+    "experiment_id": "toolathlon-verified-v1",
+    "gateway_url": "http://127.0.0.1:19001/sse",
+    "max_model_requests": 100,
+    "model_freeze": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/model.freeze.json",
+    "output_dir": "/ABSOLUTE/PATH/TO/FRESH/OUTPUT",
+    "permission_policy": "/ABSOLUTE/PATH/rendered-permission-policy.json",
+    "run_id": "task-system-attempt",
+    "system_id": "astra",
+    "task_id": "arrange-workspace",
+    "task_requirements_manifest": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/task-requirements.json",
+    "workspace": "/ABSOLUTE/PATH/TO/FRESH/TASK/WORKSPACE"
+  },
+  "runtime_config": "/ABSOLUTE/PATH/rendered-astra-runtime.json",
+  "section_3_3_freeze": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/section-3.3.freeze.json",
+  "section_3_3_manifest": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/section-3.3.sha256",
+  "section_3_3_manifest_sha256": "REPLACE_WITH_FROZEN_SECTION_3_3_MANIFEST_SHA256",
+  "system_freeze": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/astra.freeze.json",
+  "task_runtime_tiers": "/home/vagrant/moi-benchmark/astra/benchmark/toolathlon-verified/freeze/task-runtime-tiers.json"
+}

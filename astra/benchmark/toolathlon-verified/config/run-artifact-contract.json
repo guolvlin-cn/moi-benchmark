@@ -1,0 +1,70 @@
+{
+  "schema_version": "toolathlon.run-artifact-contract.v1",
+  "artifact_schema_version": "toolathlon.run-artifacts.v1",
+  "additional_artifacts_allowed": true,
+  "aggregation_blocks_next_run": false,
+  "final_hash_after_cleanup": true,
+  "missing_value_contract": {
+    "missing_reason": "provider_not_reported",
+    "reliability": "missing",
+    "source": "provider_response",
+    "value": null
+  },
+  "private_product_identity_artifact": {
+    "astra_path": "product-identity.private.json",
+    "contains": [
+      "attempt-scoped username",
+      "attempt-scoped plaintext product password"
+    ],
+    "mode": "0o600",
+    "publish": false,
+    "access_or_refresh_tokens_allowed": false,
+    "hermes_produces_file": false
+  },
+  "raw_evidence_blocks_next_run": true,
+  "agent_model_boundary": {
+    "provider_requests_before_agent": 0,
+    "setup_connectivity_probes_allowed": false,
+    "violation_classification": "infra_invalid/adapter_error"
+  },
+  "task_tool_exposure": {
+    "scope": "current task and attempt only",
+    "all_runtime_tools_list_mcp_tools_required": true,
+    "other_task_mcp_tools_allowed": false,
+    "product_builtin_tools_retained": true,
+    "provider_request_tool_names_and_hash_required": true,
+    "provider_request_cross_task_mcp_tools_forbidden": true,
+    "complete_current_task_surface_required_in_at_least_one_request": true,
+    "astra_mechanism": "native /chat/stream request-scoped runtime MCP binding to the fresh task Gateway",
+    "hermes_mechanism": "fresh single-task Gateway process"
+  },
+  "required_artifacts": [
+    "resolved-config.json",
+    "tool-schema-observed.json",
+    "lifecycle-events.jsonl",
+    "adapter-events.jsonl",
+    "trajectory.jsonl",
+    "tool-calls.jsonl",
+    "model-usage.jsonl",
+    "resource-usage.jsonl",
+    "evaluator/eval_res.json",
+    "evaluator/eval.log",
+    "failure-evidence.json",
+    "run.json",
+    "artifacts.sha256"
+  ],
+  "system_conditional_required_artifacts": {
+    "astra": [
+      "astra-runtime-mcp-binding.json"
+    ],
+    "hermes": []
+  },
+  "token_fields": [
+    "input_tokens",
+    "output_tokens",
+    "cache_read_tokens",
+    "cache_write_tokens",
+    "total_tokens"
+  ],
+  "validator": "astra.runners.toolathlon_verified.artifact_contract.validate_run_artifacts"
+}

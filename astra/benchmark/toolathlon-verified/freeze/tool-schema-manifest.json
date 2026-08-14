@@ -1,0 +1,106 @@
+{
+  "expected_task_count": 108,
+  "frozen_at": "2026-08-05",
+  "local_tool_implementation_records": [
+    {
+      "path": "utils/roles/task_agent.py",
+      "sha256": "990e59987caae118c09241f6f5a3efdb6aa22a756467406b2486ea2ccb4cb52f",
+      "size_bytes": 48882
+    },
+    {
+      "path": "utils/aux_tools/basic.py",
+      "sha256": "971429c163eb11fe9fdd39a22f3b7a5cc8439fcf7745901f553f5238ddf1671c",
+      "size_bytes": 1352
+    },
+    {
+      "path": "utils/aux_tools/context_management_tools.py",
+      "sha256": "c8393da34990d9e049db8fe092bc45137259a810d27b9099b9e1fc5aad04c5b9",
+      "size_bytes": 16411
+    },
+    {
+      "path": "utils/aux_tools/history_tools.py",
+      "sha256": "491dcea01570f48d24c0e0f1fc52760869bfb4085c4187798fdb48ab6c36a4d7",
+      "size_bytes": 33010
+    },
+    {
+      "path": "utils/aux_tools/overlong_tool_manager.py",
+      "sha256": "8c39cf8939b67f96787d49b2395097ecc0eda1a5c48e03a0f52e8913aa6c3c4f",
+      "size_bytes": 21699
+    },
+    {
+      "path": "utils/aux_tools/python_interpretor.py",
+      "sha256": "b05311bf353cb06b7a512e63f07410b80da33107a625234f67c93507782aa2d2",
+      "size_bytes": 4207
+    },
+    {
+      "path": "utils/aux_tools/web_search.py",
+      "sha256": "15e89c72ff66ec159bf44f3c7cd0397b3acbed8bd83a4100c79ff7223982ae21",
+      "size_bytes": 12894
+    },
+    {
+      "path": "utils/openai_agents_monkey_patch/tool_name_aliases.py",
+      "sha256": "73d2652caf764e48e5a8832a6cdbc629e6d6d95ada8e33fe4b52a2ea76c0f517",
+      "size_bytes": 3247
+    }
+  ],
+  "observed_task_count": 0,
+  "observed_task_schemas": [],
+  "reason": "runtime list_tools requires qualified services and credentials",
+  "required_local_tools": [
+    "claim_done",
+    "handle_overlong_tool_outputs",
+    "history",
+    "manage_context",
+    "python_execute",
+    "sleep",
+    "web_search"
+  ],
+  "required_mcp_servers": [
+    "arxiv-latex",
+    "arxiv_local",
+    "canvas",
+    "emails",
+    "excel",
+    "fetch",
+    "filesystem",
+    "git",
+    "github",
+    "google-cloud",
+    "google_calendar",
+    "google_forms",
+    "google_map",
+    "google_sheet",
+    "howtocook",
+    "huggingface",
+    "k8s",
+    "memory",
+    "notion",
+    "pdf-tools",
+    "playwright_with_chunk",
+    "pptx",
+    "rail_12306",
+    "scholarly",
+    "snowflake",
+    "terminal",
+    "wandb",
+    "web_search",
+    "woocommerce",
+    "word",
+    "yahoo-finance",
+    "youtube",
+    "youtube-transcript"
+  ],
+  "required_observed_fields": [
+    "gateway_tool_name",
+    "model_visible_tool_name",
+    "canonical_tool_name",
+    "description",
+    "input_schema",
+    "required_fields",
+    "order",
+    "sha256"
+  ],
+  "schema_version": 1,
+  "source_commit": "2aed2468858f15818acafa178518390cc4b0f5cb",
+  "state": "NO_GO"
+}
