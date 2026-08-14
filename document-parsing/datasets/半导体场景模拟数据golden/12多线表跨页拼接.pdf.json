@@ -1,6 +1,6 @@
 {
   "doc_id": "12_cae6a0c1bf",
-  "_generated_at": "2026-07-29T08:00:32+00:00",
+  "_generated_at": "2026-08-14T03:48:39+00:00",
   "header_footer": {
     "expected_headers": [
       {
@@ -8,8 +8,7 @@
         "count": 11
       }
     ],
-    "expected_footers": [],
-    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+    "expected_footers": []
   },
   "table": {
     "expected_table_count": 7,
@@ -66,8 +65,7 @@
         "text": "结语",
         "level": 1
       }
-    ],
-    "_todo": "请检查标题文本和层级是否正确"
+    ]
   },
   "layout": {
     "expected_reading_order": [
@@ -128,8 +126,7 @@
       "  面向未来，半导体产业将继续扮演科技创新引擎的角色。人工智能、5G通信、自动驾驶、物联网等新兴应用对芯片性能提出了更高的要求，也为半导体产业的发展提供了广阔的市场空间。然而，技术挑战、投资门槛和地缘政治风险也在不断增加。只有持续创新、加强合作，才能推动半导体技术不断突破，为人类社会的进步作出更大贡献。",
       "  本文从制程技术、半导体材料、封装技术、设备市场、晶圆制造、存储芯片和EDA工具等多个维度，全面梳理了半导体芯片技术的现状与趋势。希望能够帮助读者建立对半导体产业的系统性认识，为进一步深入研究和实践提供参考。半导体技术的未来充满无限可能，让我们共同期待和见证这一精彩的技术变革。"
     ],
-    "expected_no_split_texts": [],
-    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+    "expected_no_split_texts": []
   },
   "caption": {
     "expected_domain_keywords": [],
@@ -395,5 +392,5 @@
     }
   },
   "_generated_from": "annotation.json",
-  "_reviewed": false
+  "_reviewed": true
 }

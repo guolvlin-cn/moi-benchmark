@@ -1,6 +1,6 @@
 {
   "doc_id": "112_3881eae9f9",
-  "_generated_at": "2026-07-29T07:10:06+00:00",
+  "_generated_at": "2026-08-14T03:48:38+00:00",
   "header_footer": {
     "expected_headers": [
       {
@@ -8,8 +8,7 @@
         "count": 1
       }
     ],
-    "expected_footers": [],
-    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+    "expected_footers": []
   },
   "table": {
     "expected_table_count": 1,
@@ -19,8 +18,7 @@
     "expected_embedded_image_count": 0
   },
   "title": {
-    "expected_titles": [],
-    "_todo": "请检查标题文本和层级是否正确"
+    "expected_titles": []
   },
   "layout": {
     "expected_reading_order": [
@@ -29,8 +27,7 @@
       "  表一 中英文对应",
       "<table><tr><th>No.</th><th>英文单字</th><th>中文批注</th><th>说明</th></tr><tr><td>1.</td><td>data</td><td>数据</td><td>用于分析、计算或建模的原始信息</td></tr><tr><td>2.</td><td>model</td><td>模型</td><td>对现实问题的数学或逻辑抽象</td></tr><tr><td>3.</td><td>signal</td><td>信号</td><td>随时间或空间变化的物理量</td></tr><tr><td>4.</td><td>noise</td><td>噪声</td><td>干扰有效信号的随机成分</td></tr><tr><td>5.</td><td>peak</td><td>峰</td><td>数据或谱线中的局部最大值</td></tr><tr><td>6.</td><td>width</td><td>宽度</td><td>描述峰或分布的展宽程度</td></tr><tr><td>7.</td><td>energy</td><td>能量</td><td>物理系统中的基本量</td></tr><tr><td>8.</td><td>channel</td><td>道址</td><td>能谱中对应的离散编号</td></tr><tr><td>9.</td><td>count</td><td>计数</td><td>探测器记录到的事件数量</td></tr><tr><td>10.</td><td>spectrum</td><td>能谱</td><td>能量分布的统计结果</td></tr><tr><td>11.</td><td>background</td><td>本底</td><td>非目标信号产生的背景计数</td></tr><tr><td>12.</td><td>calibration</td><td>标定</td><td>将测量值映射到真实物理量</td></tr><tr><td>13.</td><td>resolution</td><td>分辨率</td><td>区分相邻峰的能力</td></tr><tr><td>14.</td><td>algorithm</td><td>算法</td><td>解决问题的计算步骤集合</td></tr><tr><td>15.</td><td>iteration</td><td>迭代</td><td>重复执行计算以逼近结果</td></tr><tr><td>16.</td><td>convergence</td><td>收敛</td><td>迭代结果趋于稳定的过程</td></tr><tr><td>17.</td><td>threshold</td><td>阈值</td><td>用于判断或筛选的界限值</td></tr><tr><td>18.</td><td>region</td><td>区域</td><td>数据分析中的选定范围</td></tr><tr><td>19.</td><td>matrix</td><td>矩阵</td><td>用于线性运算的二维数组</td></tr><tr><td>20.</td><td>vector</td><td>向量</td><td>具有方向和大小的数据结构</td></tr><tr><td>21.</td><td>ESD 效应(Electro-Static Discharge)</td><td>静电效应</td><td>静电放电（ESD） 是由于物体之间存在静电电位差，在接触或接近时，电荷瞬间释放并产生电流的现象。</td></tr><tr><td>22.</td><td>estimate</td><td>估计</td><td>对未知量进行近似求值</td></tr><tr><td>23.</td><td>parameter</td><td>参数</td><td>控制模型行为的变量</td></tr><tr><td>24.</td><td>function</td><td>函数</td><td>输入与输出之间的映射关系</td></tr><tr><td>25.</td><td>distribution</td><td>分布</td><td>数据在区间内的统计特性</td></tr><tr><td>26.</td><td>sample</td><td>样本</td><td>从总体中抽取的数据</td></tr><tr><td>27.</td><td>accuracy</td><td>准确度</td><td>结果接近真实值的程度</td></tr><tr><td>28.</td><td>error</td><td>误差</td><td>测量或计算的偏差</td></tr><tr><td>29.</td><td>analysis</td><td>分析</td><td>对数据或现象的系统研究</td></tr></table>"
     ],
-    "expected_no_split_texts": [],
-    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+    "expected_no_split_texts": []
   },
   "caption": {
     "expected_domain_keywords": [],
@@ -73,5 +70,5 @@
     }
   },
   "_generated_from": "annotation.json",
-  "_reviewed": false
+  "_reviewed": true
 }
