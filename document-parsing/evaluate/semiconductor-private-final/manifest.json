@@ -1,0 +1,2180 @@
+{
+  "schema_version": "semiconductor-private-manifest-v1",
+  "dataset": "半导体场景模拟数据",
+  "case_count": 50,
+  "scorer": {
+    "repository": "git@github.com:matrixorigin/moi-parse-bench.git",
+    "commit": "06faf76112c998835f0f9ca174a5f2d311d559f2",
+    "package": "moi-parsing-benchmark",
+    "package_version": "1.0.0"
+  },
+  "moi_config_group_counts": {
+    "vlm=inherit;libreoffice=false;image_fragment=false": 37,
+    "vlm=inherit;libreoffice=true;image_fragment=false": 3,
+    "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false": 9,
+    "vlm=qwen3.5-27b;libreoffice=true;image_fragment=true": 1
+  },
+  "golden_review": {
+    "reviewed": 50,
+    "draft": 0
+  },
+  "report_artifacts": {
+    "evaluate/半导体场景私有数据集评测报告.md": "e2751812a6bc6c51a1b08522b13ab45150935ed7e9eaebc0e656c4f84059d364",
+    "evaluate/idc-4.1.14_半导体场景模拟数据_解析benchmark评分.xlsx": "aca5af3f80e4aa0de068d36d71da5c24684cd2b54844c3bd920dcd1f73d14212",
+    "evaluate/mineru_半导体场景模拟数据_解析benchmark评分.xlsx": "db6bb7b013739d7764463c9a437aba5df223cf730e268819b70860dedf26c8a3",
+    "evaluate/paddleocr-vl_半导体场景模拟数据_解析benchmark评分.xlsx": "a06045caaa344c7ac044590f5c4123072fbfaa2e5598a162f0225e00d408d289",
+    "evaluate/semiconductor-private-final/reproduced-score.json": "924bc724960314cd2acdb12dec72491f8186943c0e7827282f79b3bfc7540313"
+  },
+  "cases": [
+    {
+      "source_file": "datasets/半导体场景模拟数据/0625跨页表合并复现case.docx",
+      "source_sha256": "d39d394f8a32973254ed21ffd45e70b41966930252dfde7dbd0c56932f4329da",
+      "case_id": "be16ef7e1cbf",
+      "format": "docx",
+      "page_count": 10,
+      "golden_file": "datasets/半导体场景模拟数据golden/0625跨页表合并复现case.docx.json",
+      "golden_sha256": "a3c26e02522d3532fb89472f8c692eba879c79cb41fb48e03626088af2ad14ff",
+      "golden_doc_id": "0625-case_d39d394f8a",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/0625跨页表合并复现case.docx--be16ef7e1cbf.zip",
+        "zip_sha256": "e353b17a1b9996a4502813921bcf8c9ef37673e0b0209629b40660f44c0aea25",
+        "parse_member": "0625跨页表合并复现case.docx-019fabc5-ff48-7138-b6c6-f45c013ae3bd/0625跨页表合并复现case.docx_parse.json",
+        "parse_sha256": "bb090843e8cdd80ff0de2af5c3a15cc52657cb219aeb9a548855bd79d36b0f2e",
+        "parser_config_member": "0625跨页表合并复现case.docx-019fabc5-ff48-7138-b6c6-f45c013ae3bd/debug/config/parser_config_20260729_104909_a53978f8.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 10
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/0625跨页表合并复现case.docx--be16ef7e1cbf",
+        "case_tree_sha256": "c9a2b754830793d1c9177d7192b9a644b7e27f7af364a20263c083a9eb95541a",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/0625跨页表合并复现case.docx--be16ef7e1cbf/21261345-ac78-4420-9c27-2073c9278fb5_content_list.json",
+        "content_list_sha256": "d66ba63ee0c807333c086f4ff1b0b682c308630e79c63cc29c6ffb1d0d83b25b",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/0625跨页表合并复现case.docx--be16ef7e1cbf_parse.json",
+        "converted_parsed_sha256": "e8647b3eca4736d7fdebaac4884960a386255e760c407c9fe6bdfd666b906f91"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/0625跨页表合并复现case.docx--be16ef7e1cbf",
+        "case_tree_sha256": "571978f75b65d944048152a9b996eb0334edd95a0ade83ae1bfedd1ef2295670",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/0625跨页表合并复现case.docx--be16ef7e1cbf/result.json",
+        "result_json_sha256": "367b9c9e38c662df6262c96c81ee9e5710e638f03f798b9edb2437e5071440e8",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/0625跨页表合并复现case.docx--be16ef7e1cbf_parse.json",
+        "converted_parsed_sha256": "ac952f1e4f7b661919fd1cf1bd65666e28071ba5dc9926e41d680f31990e96a0"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/08标题识别为页眉.pptx",
+      "source_sha256": "713a323249ea43b988f1066fd083a9f330137daf1ef53c701d65717e20659b5b",
+      "case_id": "7234c9311c55",
+      "format": "pptx",
+      "page_count": 6,
+      "golden_file": "datasets/半导体场景模拟数据golden/08标题识别为页眉.pptx.json",
+      "golden_sha256": "bd22ed2c2527cac2d3e656d0db0bc0ccf7d8afdac8c83ad27573933846d716dd",
+      "golden_doc_id": "08_713a323249",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/08标题识别为页眉.pptx--7234c9311c55.zip",
+        "zip_sha256": "eb4064683e571585bd3af69be188086dd9a0f3d04839c28ba28f7ae260cfce6f",
+        "parse_member": "08标题识别为页眉.pptx-019fabc8-22a6-7da4-acd8-603af3b48523/08标题识别为页眉.pptx_parse.json",
+        "parse_sha256": "590d48bdb3e364bfb634e7ea775aa7d1a566421951dece0df8fbe879304bf87e",
+        "parser_config_member": "08标题识别为页眉.pptx-019fabc8-22a6-7da4-acd8-603af3b48523/debug/config/parser_config_20260729_105203_3ac76876.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 6
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/08标题识别为页眉.pptx--7234c9311c55",
+        "case_tree_sha256": "4cbc82cfb7f9f91cb68eec84f7cba96aa28e6854f36b4efd9b2eaf36be517927",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/08标题识别为页眉.pptx--7234c9311c55/8da1dd51-0319-414d-b02e-be0e61c7c68c_content_list.json",
+        "content_list_sha256": "07af61ac281df81601633eaa1badac1852b4de241bdbe72b44bd71aa1c203025",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/08标题识别为页眉.pptx--7234c9311c55_parse.json",
+        "converted_parsed_sha256": "d6e2ce023c98533807b140123da47e5098517a51eb55a95759aaa974d05f4737"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/08标题识别为页眉.pptx--7234c9311c55",
+        "case_tree_sha256": "ae70c68055e3cd476a141faa5d7a8b21cf405f9647fe9db19b018433f4a7aa23",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/08标题识别为页眉.pptx--7234c9311c55/result.json",
+        "result_json_sha256": "c1d097e9f7c314aa718bbe528d779a5690a8eb06e058b187884b22b9e3110892",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/08标题识别为页眉.pptx--7234c9311c55_parse.json",
+        "converted_parsed_sha256": "20d8ebfd7bda359056f154f4cba87f2e94c2dd0616b4cc613435821f9baabd07"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/08页眉下的图片被识别为表格的一部分.doc",
+      "source_sha256": "5dea22a9172cd8e4776c082aee2cf3a75513e2d40081b03849091bd602d4b0b7",
+      "case_id": "e4e8ed278023",
+      "format": "doc",
+      "page_count": 5,
+      "golden_file": "datasets/半导体场景模拟数据golden/08页眉下的图片被识别为表格的一部分.doc.json",
+      "golden_sha256": "096847ddf5e55c2ca8a8969236912782d07fb805752aa7abfa8c8f794f9f3904",
+      "golden_doc_id": "08_5dea22a917",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/08页眉下的图片被识别为表格的一部分.doc--e4e8ed278023.zip",
+        "zip_sha256": "a48257b0fd1cac8de7a78e62880e1b65f73d0913d6126c15e7b5522f56c8e533",
+        "parse_member": "08页眉下的图片被识别为表格的一部分.doc-019facc8-4064-7f2a-aa3d-44d06a6aab00/08页眉下的图片被识别为表格的一部分.doc_parse.json",
+        "parse_sha256": "4807888b96fb5eac3477ca639b221b0a943dea62b38f2d73c197fa2573157bd8",
+        "parser_config_member": "08页眉下的图片被识别为表格的一部分.doc-019facc8-4064-7f2a-aa3d-44d06a6aab00/debug/config/parser_config_20260729_153054_b8b462ce.yaml",
+        "parser_config_sha256": "7929c89c88058ba31812c8eee55f2dcfb5a6e0c629c791fd1f99cb02b9a9bab9",
+        "config_group": "vlm=inherit;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 5
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/08页眉下的图片被识别为表格的一部分.doc--e4e8ed278023",
+        "case_tree_sha256": "f3fe26b7931adb7361531e82d5984d6ffcde00b935ea1fe4409aaa627e504d74",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/08页眉下的图片被识别为表格的一部分.doc--e4e8ed278023/8b30b24c-1d99-4e50-b99d-43c68e5f5862_content_list.json",
+        "content_list_sha256": "883d5aabe8f6d06b843646c73c93a90e2e1d2bc6308807ef543c52a36a8fd9f6",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/08页眉下的图片被识别为表格的一部分.doc--e4e8ed278023_parse.json",
+        "converted_parsed_sha256": "b720b187dda5aa90064f56cfe992dfcd5ad8810964475a4fd805f3ea0c405499"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/08页眉下的图片被识别为表格的一部分.doc--e4e8ed278023",
+        "case_tree_sha256": "9c43e32b6afad0b3386d9e5f93942524528158092bd3f524eea490ab42c78117",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/08页眉下的图片被识别为表格的一部分.doc--e4e8ed278023/result.json",
+        "result_json_sha256": "a561fd0cc9e750b176f1c633e40d73b2c55e8a739ac80362364cd1d0f93a5905",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/08页眉下的图片被识别为表格的一部分.doc--e4e8ed278023_parse.json",
+        "converted_parsed_sha256": "3bfe250cac77201de7a5783e53acd7e0fa6933e2ab2f47a236ee0979bda0bf53"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/08页眉页脚多识别.pptx",
+      "source_sha256": "f7c25b83c382ef86cb6fb69452c9c3ecf8bca3d3226d6b8b716c714c010823c0",
+      "case_id": "0ded5f710a55",
+      "format": "pptx",
+      "page_count": 4,
+      "golden_file": "datasets/半导体场景模拟数据golden/08页眉页脚多识别.pptx.json",
+      "golden_sha256": "5647e1e0cbf4dc39d2969d644011607ed1d291d6e60d730d31218a5ca2ce3753",
+      "golden_doc_id": "08_f7c25b83c3",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/08页眉页脚多识别.pptx--0ded5f710a55.zip",
+        "zip_sha256": "98bec2fe4aca5ae098b8497f4e620760705d21687d13bafe1aa07824a48bf540",
+        "parse_member": "08页眉页脚多识别.pptx-019fac50-3b79-78aa-b234-85dba9bc5b34/08页眉页脚多识别.pptx_parse.json",
+        "parse_sha256": "1b72e3458db96baa7ebc35fbf0da12ca18a8f277e4def1c686d3f6403425613d",
+        "parser_config_member": "08页眉页脚多识别.pptx-019fac50-3b79-78aa-b234-85dba9bc5b34/debug/config/parser_config_20260729_132024_1865789a.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 4
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/08页眉页脚多识别.pptx--0ded5f710a55",
+        "case_tree_sha256": "7132fa6bd33506a7a3c1e26ea2a33d187e41e552e3f94bbf64addafebd20c027",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/08页眉页脚多识别.pptx--0ded5f710a55/d2d2413c-1225-43e7-b1b6-ebe3e72eed5a_content_list.json",
+        "content_list_sha256": "7b4ebd53f072e53f8aad45fb25f1ea1ad848a2dd67ae19a483aa5e040bb6ea80",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/08页眉页脚多识别.pptx--0ded5f710a55_parse.json",
+        "converted_parsed_sha256": "c82eafe5fb0c81588d6402d259a11224f43fad80544587d2c60675adee9cb005"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/08页眉页脚多识别.pptx--0ded5f710a55",
+        "case_tree_sha256": "304495c34e2f2398d703b5edd6eded59dde0c4c773f072b25c9fd6a7ec3ffd88",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/08页眉页脚多识别.pptx--0ded5f710a55/result.json",
+        "result_json_sha256": "726a42ddc629e54113e81800c3a6243a60aa1e2ac7459f765cb1bff538eab8a4",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/08页眉页脚多识别.pptx--0ded5f710a55_parse.json",
+        "converted_parsed_sha256": "c8eb1cb6d02bc82e1a8e925278b8d3d9bbe04bb9648e0de3a7251cdf05b39908"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/08页面的标题相似度高被当做页眉.pptx",
+      "source_sha256": "389a4aee4c09b63ca98edd351a82f173ca20e4fd2a1b50e0eedf4e68c0dfdb5d",
+      "case_id": "3907ec0c31cf",
+      "format": "pptx",
+      "page_count": 7,
+      "golden_file": "datasets/半导体场景模拟数据golden/08页面的标题相似度高被当做页眉.pptx.json",
+      "golden_sha256": "e36a8f7969485577e32b0bced57b3a1cf05ba118c615573862b73a73ee60894a",
+      "golden_doc_id": "08_389a4aee4c",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/08页面的标题相似度高被当做页眉.pptx--3907ec0c31cf.zip",
+        "zip_sha256": "db1b47425ae0128ad14c3bbf9610a2a111bb0f935563d5b6b261e61727428db4",
+        "parse_member": "08页面的标题相似度高被当做页眉.pptx-019fac51-9b6b-7c29-8614-179d8ddda497/08页面的标题相似度高被当做页眉.pptx_parse.json",
+        "parse_sha256": "1614b1616fd994c2f82cddc0da2064517f27a1ff95e385af393ceca6ebcbd622",
+        "parser_config_member": "08页面的标题相似度高被当做页眉.pptx-019fac51-9b6b-7c29-8614-179d8ddda497/debug/config/parser_config_20260729_132214_2189fa8f.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 7
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/08页面的标题相似度高被当做页眉.pptx--3907ec0c31cf",
+        "case_tree_sha256": "1e4d4e7c35d4e1a18dc32afa36da65ee6df8cd3cc5bb4cc92a844e6e8a061ec3",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/08页面的标题相似度高被当做页眉.pptx--3907ec0c31cf/9a44f9d5-4356-4dff-9604-5a9e17494df6_content_list.json",
+        "content_list_sha256": "9d7758520575793d09ac5451421e59a6319f20ec78bce9671248863d060b1e2b",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/08页面的标题相似度高被当做页眉.pptx--3907ec0c31cf_parse.json",
+        "converted_parsed_sha256": "7dd6df6ddbba884f983a3186422cc432d7c51ad96f2592c195e38e337f00c3c3"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/08页面的标题相似度高被当做页眉.pptx--3907ec0c31cf",
+        "case_tree_sha256": "091b6c9ebb8e0eafa25be4b3824c75ae4550120dc8bd33aa7a37ab2990c6ab28",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/08页面的标题相似度高被当做页眉.pptx--3907ec0c31cf/result.json",
+        "result_json_sha256": "b8e47f712226e6173a5422a2be59473cdeb5ef6b3db465a23d8d65abceec0164",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/08页面的标题相似度高被当做页眉.pptx--3907ec0c31cf_parse.json",
+        "converted_parsed_sha256": "d6b2d7c474880f4c1ac719e32621a3d8d7438aaf87fb4c988a28faca9cf1cd86"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/112跨页表解析两次.docx",
+      "source_sha256": "3881eae9f9ee493b2b1a0de1554c0d16a2660692d13e4b5addfeb94e434a0415",
+      "case_id": "014918d9abd9",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/112跨页表解析两次.docx.json",
+      "golden_sha256": "84abdf541c7a20bcc5b9548e05acf3b25b5269e4056c85935f0cbffdb03d9aa0",
+      "golden_doc_id": "112_3881eae9f9",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/112跨页表解析两次.docx--014918d9abd9.zip",
+        "zip_sha256": "0fa6496f721ff6aaeb376499cd1639f6156f65de666ab282db011a6518aac790",
+        "parse_member": "112跨页表解析两次.docx-019fac53-5d10-7999-a97a-9f8c1da192c7/112跨页表解析两次.docx_parse.json",
+        "parse_sha256": "96422123461cf3970bf941f12d26fb21bbe653cab07abd952ff505cde8e909e3",
+        "parser_config_member": "112跨页表解析两次.docx-019fac53-5d10-7999-a97a-9f8c1da192c7/debug/config/parser_config_20260729_132305_5c0d4009.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/112跨页表解析两次.docx--014918d9abd9",
+        "case_tree_sha256": "6381a8eebe1a04efe2b7e2d9a382b0f28fdc901f0cf0f82e74793934fa0455a8",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/112跨页表解析两次.docx--014918d9abd9/78cf7ee8-3ba9-4404-8dcc-b7a023e6b8cf_content_list.json",
+        "content_list_sha256": "4cfe62d787ddc7fc6be677d825263888f01d31502cc02657346b73ef19eb3a81",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/112跨页表解析两次.docx--014918d9abd9_parse.json",
+        "converted_parsed_sha256": "3415e301989cf8a53c761cd56e33aa884a0ffdd2f2cf4cad37aea18706113fec"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/112跨页表解析两次.docx--014918d9abd9",
+        "case_tree_sha256": "a3c9ef83fac91bc5fad70321d8a54c5c90a05b03e65aadd5aec5302aa43e9461",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/112跨页表解析两次.docx--014918d9abd9/result.json",
+        "result_json_sha256": "92649a0a234c9577eba3506f2d1d8a38de86e354fa6afa3770f17311d268ace1",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/112跨页表解析两次.docx--014918d9abd9_parse.json",
+        "converted_parsed_sha256": "3f43ada1c1357c7c7c2818225521281bcf130587fcb0f1fc55003885846191ca"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/114跨页表识别为两张表_old.docx",
+      "source_sha256": "274e0890432e2065faecdf94580ddc1254d4d67b63cdd8183697784e264de82a",
+      "case_id": "8ec7f5aca322",
+      "format": "docx",
+      "page_count": 2,
+      "golden_file": "datasets/半导体场景模拟数据golden/114跨页表识别为两张表_old.docx.json",
+      "golden_sha256": "31b572c41cf347e78c3c64dbf7dd6b12d5839a23543fada72ffc713ef3d4ea1e",
+      "golden_doc_id": "114-_old_274e089043",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/114跨页表识别为两张表_old.docx--8ec7f5aca322.zip",
+        "zip_sha256": "27f02d0e5a9586cb948e5f4e6f5fe742ec3e592962ba955af3f649e2da418c37",
+        "parse_member": "114跨页表识别为两张表_old.docx-019fac54-5b45-7870-a150-1860b7324218/114跨页表识别为两张表_old.docx_parse.json",
+        "parse_sha256": "79d653ccf945e8534e48070c65c621bec237ebe52600d4bb7a7539fb844d962d",
+        "parser_config_member": "114跨页表识别为两张表_old.docx-019fac54-5b45-7870-a150-1860b7324218/debug/config/parser_config_20260729_132406_2d62dde0.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/114跨页表识别为两张表_old.docx--8ec7f5aca322",
+        "case_tree_sha256": "27aa7b40d4abb4a82b4a3a94697e065d978d61d16805ccd944b43956e0f09d54",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/114跨页表识别为两张表_old.docx--8ec7f5aca322/74c000d7-df91-4933-bc6a-b10c6742db7a_content_list.json",
+        "content_list_sha256": "9459cc27f7392a5951720a6a4508bf90d0474a0474f825e92c08fd42ab886e5b",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/114跨页表识别为两张表_old.docx--8ec7f5aca322_parse.json",
+        "converted_parsed_sha256": "0cbefa303c1471c689efe8e36a76720f55970a1d49902aa8dc0c079578d47c40"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/114跨页表识别为两张表_old.docx--8ec7f5aca322",
+        "case_tree_sha256": "968ed217f40b6d631e02c0ac510f015422b7080bc0c52a318ea364bd56845270",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/114跨页表识别为两张表_old.docx--8ec7f5aca322/result.json",
+        "result_json_sha256": "27056393de40967694670fa76f8f972e61d83d37cfd319e77e51003d64eef7b8",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/114跨页表识别为两张表_old.docx--8ec7f5aca322_parse.json",
+        "converted_parsed_sha256": "ead2153ffb90938ded909e896d60551ac178b7f891957351772a5864967e9a9b"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/115标题在文档中间.pptx",
+      "source_sha256": "f58f4b08cd924c54bcc469299751888667729aec142800ed4164a1364ea1bafa",
+      "case_id": "e04aea954be4",
+      "format": "pptx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/115标题在文档中间.pptx.json",
+      "golden_sha256": "6839453cb36416835780b9fc3ec1ba12d9366df3f3b1443a40403cd0abae9cf9",
+      "golden_doc_id": "115_f58f4b08cd",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/115标题在文档中间.pptx--e04aea954be4.zip",
+        "zip_sha256": "f4ea345b9ca232d63d9b15dc17f69169fc3c7a8a78b9322fa45d1170597c0cfe",
+        "parse_member": "115标题在文档中间.pptx-019fac55-80b1-70f2-8657-4c127604c5cb/115标题在文档中间.pptx_parse.json",
+        "parse_sha256": "20837ac30dd12cc8161bbfbb7d95f48af23fbc29f0196452654ed158ba235eca",
+        "parser_config_member": "115标题在文档中间.pptx-019fac55-80b1-70f2-8657-4c127604c5cb/debug/config/parser_config_20260729_132602_ff548220.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/115标题在文档中间.pptx--e04aea954be4",
+        "case_tree_sha256": "2f18b408765ebc5b002b402d63e6a10d230ef54ddbbba54fa35aedeebb686977",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/115标题在文档中间.pptx--e04aea954be4/46c4f3ec-4bc1-45d6-be56-e5029f871f04_content_list.json",
+        "content_list_sha256": "d3915a54753fded0dbe0db48153365440c65f5ee850ed29b743f4135e7c7ba5b",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/115标题在文档中间.pptx--e04aea954be4_parse.json",
+        "converted_parsed_sha256": "da8ca1bc6edce8b08a44d27f486d33b3fe562e65b18d46bb0324dee804535b9b"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/115标题在文档中间.pptx--e04aea954be4",
+        "case_tree_sha256": "4024a90d0c4a9eee13406975c1b8f00e1949614a0e6951e0663d65c55d5ed189",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/115标题在文档中间.pptx--e04aea954be4/result.json",
+        "result_json_sha256": "7add22319d2ff2e4fdb01823191de8a71440f66ebbc13f2d6a17a9fde966afb5",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/115标题在文档中间.pptx--e04aea954be4_parse.json",
+        "converted_parsed_sha256": "f7cb156d1e48ed16346109aca669cc1cd8e9f9f5e95b4d49e178c6aa8bdbd5dc"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/12多线表跨页拼接.pdf",
+      "source_sha256": "cae6a0c1bf03364d1ccd067d5ecc1d041fbc5de543a5903525db79967e572996",
+      "case_id": "5bd92a999b34",
+      "format": "pdf",
+      "page_count": 11,
+      "golden_file": "datasets/半导体场景模拟数据golden/12多线表跨页拼接.pdf.json",
+      "golden_sha256": "1e05b1b4299ca75e02c835ae8459b4c674bc9bb5b780ad3289dd2e2ac0716929",
+      "golden_doc_id": "12_cae6a0c1bf",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/12多线表跨页拼接.pdf--5bd92a999b34.zip",
+        "zip_sha256": "4a31d6fa063be16d56d7c7cc4f8be1f38499d7f47cf55f64ff9a4e9b918c330d",
+        "parse_member": "12多线表跨页拼接.pdf-019fac56-a602-7192-8c9f-879122e90a79/12多线表跨页拼接.pdf_parse.json",
+        "parse_sha256": "3c6765457e0f30aa34e872d4a7cf9d62110add8404d82e47951c943d5dff0c21",
+        "parser_config_member": "12多线表跨页拼接.pdf-019fac56-a602-7192-8c9f-879122e90a79/debug/config/parser_config_20260729_132658_7b18980b.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 11
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/12多线表跨页拼接.pdf--5bd92a999b34",
+        "case_tree_sha256": "fba51be148abb4062bef5f0ee49a021d2b629c9bca6dbfb195d80f9f7324fb2c",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/12多线表跨页拼接.pdf--5bd92a999b34/32840d32-811a-43c0-9c3a-e3bbeb860f76_content_list.json",
+        "content_list_sha256": "cdc70572be54d019e1fd7144cfa81616861ea42d237bfa9d1276636045575ae4",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/12多线表跨页拼接.pdf--5bd92a999b34_parse.json",
+        "converted_parsed_sha256": "45ce1a62fdde83c84fea6a4bbe6d98923d5e485dd70663aff93596172543faab"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/12多线表跨页拼接.pdf--5bd92a999b34",
+        "case_tree_sha256": "eba14c6d10036a7ba376fdf5f823a38e1f466f530f22c11719541b323b7484cf",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/12多线表跨页拼接.pdf--5bd92a999b34/result.json",
+        "result_json_sha256": "feb132b6389e43fdf2f5e0d94577811def9866451b6cd41cf762e4b07d87a89e",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/12多线表跨页拼接.pdf--5bd92a999b34_parse.json",
+        "converted_parsed_sha256": "03345eee48ae4a7dc0922ab25801203e232deb61158cfdf2303910e483ef7bf5"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/12测试跨页表的拼接.pdf",
+      "source_sha256": "6ec5e722c7f46fe102c41cb904d2cb9bbaf780b0165fb00f755e0eb9cb57558d",
+      "case_id": "47a16cb613a6",
+      "format": "pdf",
+      "page_count": 13,
+      "golden_file": "datasets/半导体场景模拟数据golden/12测试跨页表的拼接.pdf.json",
+      "golden_sha256": "d6a50c9dc5e33a4a7eeb840c20a69f2002bdcf81008031d34bfde64bd6e56bee",
+      "golden_doc_id": "12_6ec5e722c7",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/12测试跨页表的拼接.pdf--47a16cb613a6.zip",
+        "zip_sha256": "aea774e8889e02a32c40f4de442538da95ceb23cdc4c7e08f28bbfd34fdf5998",
+        "parse_member": "12测试跨页表的拼接.pdf-019fac59-178f-77a5-bc94-925901891af3/12测试跨页表的拼接.pdf_parse.json",
+        "parse_sha256": "3c6930a91c5a05842dd502699d8fcd08619fd291d694309004d1d6c23230677f",
+        "parser_config_member": "12测试跨页表的拼接.pdf-019fac59-178f-77a5-bc94-925901891af3/debug/config/parser_config_20260729_132933_213fa2a3.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 13
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/12测试跨页表的拼接.pdf--47a16cb613a6",
+        "case_tree_sha256": "c2352858285cbcdee3cab90b47be66a35925a7d90cbec69b68faaeba648fb2cd",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/12测试跨页表的拼接.pdf--47a16cb613a6/fe540765-5376-4eb6-af6e-aebbfcb22bd4_content_list.json",
+        "content_list_sha256": "f3a2736352bbc56724adbc27da07ba6f66ec5a2bb5460d3c9359fb32368c14a5",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/12测试跨页表的拼接.pdf--47a16cb613a6_parse.json",
+        "converted_parsed_sha256": "2d728170f89a5e80c93cddb95c0e8ffdea61067a8a2e925e4a5445c0b7167051"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/12测试跨页表的拼接.pdf--47a16cb613a6",
+        "case_tree_sha256": "17532cb606c4a3d6e917ae1c0c3e91cbb64b90b78e33df4a34a6dd78bd06418e",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/12测试跨页表的拼接.pdf--47a16cb613a6/result.json",
+        "result_json_sha256": "79b525a9d6b6b9f970fb4d337d61466be457a3592b315cb62bc72c7b1994c13c",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/12测试跨页表的拼接.pdf--47a16cb613a6_parse.json",
+        "converted_parsed_sha256": "3afebc0571678cf8595266845c8c35df32fff3b3922c4632ccfff9a16c6e968d"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/12测试跨页表的拼接_每页有表头.docx",
+      "source_sha256": "fd2ba7ab8d924e10f21eeceae23a3330a5132e8678bbf91ed8533a157c3c7cb1",
+      "case_id": "6b2bf687f300",
+      "format": "docx",
+      "page_count": 5,
+      "golden_file": "datasets/半导体场景模拟数据golden/12测试跨页表的拼接_每页有表头.docx.json",
+      "golden_sha256": "d40035bd0061faa123fce042703d712be29bb719e65da30e06ceb6363ad4aa33",
+      "golden_doc_id": "12-__fd2ba7ab8d",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/12测试跨页表的拼接_每页有表头.docx--6b2bf687f300.zip",
+        "zip_sha256": "b908d02abf698a89c331d701847c5553ab6fdbaaa01866f7f4256158dbf7260f",
+        "parse_member": "12测试跨页表的拼接_每页有表头.docx-019fac5c-25a2-79b4-9972-44d724e0a812/12测试跨页表的拼接_每页有表头.docx_parse.json",
+        "parse_sha256": "38b9c3f9cfb4746e88b626b22f94ef1c0e57de6dd17584b784715e45f4b32690",
+        "parser_config_member": "12测试跨页表的拼接_每页有表头.docx-019fac5c-25a2-79b4-9972-44d724e0a812/debug/config/parser_config_20260729_133255_62d88d80.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 5
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/12测试跨页表的拼接_每页有表头.docx--6b2bf687f300",
+        "case_tree_sha256": "9531980f1ad0706ef3fa483314df4d1a933534f0f4f4e4bda58748af1fb7374b",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/12测试跨页表的拼接_每页有表头.docx--6b2bf687f300/6ca40a03-c56f-4229-90ed-3d1e202c0876_content_list.json",
+        "content_list_sha256": "6fa77e0f423c015c113cff9d460bc12c53de0c34e215eb04ccdb13001431d8fb",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/12测试跨页表的拼接_每页有表头.docx--6b2bf687f300_parse.json",
+        "converted_parsed_sha256": "351893fd79e4c6345a385ded07af4cf3272e50a43a93be687224e98d1833ade1"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/12测试跨页表的拼接_每页有表头.docx--6b2bf687f300",
+        "case_tree_sha256": "8b652ed5df7a24ca37ba5e06d22c226b28377295854a806c16da62574b31e58f",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/12测试跨页表的拼接_每页有表头.docx--6b2bf687f300/result.json",
+        "result_json_sha256": "4335b0eee9b894012524ffff2e24985403a82f549d9014833f1bf3cd0097f20c",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/12测试跨页表的拼接_每页有表头.docx--6b2bf687f300_parse.json",
+        "converted_parsed_sha256": "076c7cc08513c43c55827222805a88ded1868c03e282c84546d7bf435852cd66"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/12表格不合并单元格错乱_居中.pptx",
+      "source_sha256": "f685acd93cd2b25c2b61780917cd1e9bededcadfce7f65f47c85a6a080a0ec6c",
+      "case_id": "7883fda78449",
+      "format": "pptx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/12表格不合并单元格错乱_居中.pptx.json",
+      "golden_sha256": "6436af3ecedc6ad882782dbc329110daf7e6bdb3c8ed2e1ac47781597f83b0f4",
+      "golden_doc_id": "12-__f685acd93c",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/12表格不合并单元格错乱_居中.pptx--7883fda78449.zip",
+        "zip_sha256": "441009d0308c96c9a95e52d959b46c621b60ae2ecb446ab7db2a4a97d6376356",
+        "parse_member": "12表格不合并单元格错乱_居中.pptx-019fac5e-702f-7c8a-ab73-0ab999638e9b/12表格不合并单元格错乱_居中.pptx_parse.json",
+        "parse_sha256": "d7d32a9833125db72d6c47e0dbb25654e78e256ea6dc70d2d893e30c217e34ac",
+        "parser_config_member": "12表格不合并单元格错乱_居中.pptx-019fac5e-702f-7c8a-ab73-0ab999638e9b/debug/config/parser_config_20260729_133545_a2b81bbb.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/12表格不合并单元格错乱_居中.pptx--7883fda78449",
+        "case_tree_sha256": "082fd1ff4c3ef1873734c9422b6c9d0a3b9c25fe5d98894f87cbc55a5f313a53",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/12表格不合并单元格错乱_居中.pptx--7883fda78449/261ece2b-9f7d-4ab1-977d-0fb081407cca_content_list.json",
+        "content_list_sha256": "b10d5a4b72607b8f7797d97cfcc6077b190df6a40e2dbd51dfff22ccf77b14a0",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/12表格不合并单元格错乱_居中.pptx--7883fda78449_parse.json",
+        "converted_parsed_sha256": "494596fdce281461433bcc5565e204331ebb38e790034926d0e276a2a4e1adfa"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/12表格不合并单元格错乱_居中.pptx--7883fda78449",
+        "case_tree_sha256": "7c180abe39c06b60874980030c78d1ce40d6e44d387a4b6f3d467731b404ded1",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/12表格不合并单元格错乱_居中.pptx--7883fda78449/result.json",
+        "result_json_sha256": "76a756118bbc9b65ebc4379a46fee99a569fd084184945820d5fd05bfb40065e",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/12表格不合并单元格错乱_居中.pptx--7883fda78449_parse.json",
+        "converted_parsed_sha256": "2e39d8604e1b468dd18e204db1602dafcf66af241c887618cfaa7d0cd98ba701"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/135标题未识别.docx",
+      "source_sha256": "515a221b4479c3e01e7f9085e730075b9b6cdb98590e87e76f4d82000b8364cd",
+      "case_id": "9e9df3521855",
+      "format": "docx",
+      "page_count": 9,
+      "golden_file": "datasets/半导体场景模拟数据golden/135标题未识别.docx.json",
+      "golden_sha256": "583aaa1fa0d048febf63a61ba66f19cde606315ce8318d1a46a0d360bf7f379c",
+      "golden_doc_id": "135_515a221b44",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/135标题未识别.docx--9e9df3521855.zip",
+        "zip_sha256": "962825a3a755ac0b541ccfae08072c964a361a05e79b7a082fb9fd08afb8a338",
+        "parse_member": "135标题未识别.docx-019fad5f-ba26-7b94-9f39-c41861d11134/135标题未识别.docx_parse.json",
+        "parse_sha256": "b0fa886fd972fa447469019697496f6f81d410c9565ae6289d9f2479aa1783c8",
+        "parser_config_member": "135标题未识别.docx-019fad5f-ba26-7b94-9f39-c41861d11134/debug/config/parser_config_20260729_181716_afee62c4.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 9
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/135标题未识别.docx--9e9df3521855",
+        "case_tree_sha256": "4dbf052d7fc55ed33d7a41326a18f21f4c19299659aede72d9b71d087b8d1f97",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/135标题未识别.docx--9e9df3521855/2170c51a-7ca5-4625-8a85-bf5de84e1454_content_list.json",
+        "content_list_sha256": "b02fa1078dc0dfeb89ddaedbb6ab35484e8c18284ae082682a0fdc4991e94fd3",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/135标题未识别.docx--9e9df3521855_parse.json",
+        "converted_parsed_sha256": "e32737067767ff03389a3595dd423d72d57808e7f21a439058724480da4de3ef"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/135标题未识别.docx--9e9df3521855",
+        "case_tree_sha256": "8b6ee7d3445d2ac0c1e192fc9d82d4bfa502eb8ed8a182446aeefa66bd23555c",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/135标题未识别.docx--9e9df3521855/result.json",
+        "result_json_sha256": "c2c4396d21d7d88e0e886409b8c92cda2db5e8cfbd5af3a771a189dc8cf3006b",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/135标题未识别.docx--9e9df3521855_parse.json",
+        "converted_parsed_sha256": "786efdf8e8e32591454a3c142db28cc14c5e7e1cd03d997cf068fb1878d43493"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/138参考文件标题格式丢失.pdf",
+      "source_sha256": "11abc15a4e3c8b99659924bd044ffef22c94de79ed3ee5bdca9d6c724934da20",
+      "case_id": "3baf43dc55cb",
+      "format": "pdf",
+      "page_count": 3,
+      "golden_file": "datasets/半导体场景模拟数据golden/138参考文件标题格式丢失.pdf.json",
+      "golden_sha256": "c52d80a8f6e4befa44cadc1427ba3f1f7b4c98a4d2952aea59299686d60f098f",
+      "golden_doc_id": "138_11abc15a4e",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/138参考文件标题格式丢失.pdf--3baf43dc55cb.zip",
+        "zip_sha256": "f382c69072ce2f2760249792ca903c26b52091c6972ffc4b310be918e4b74aa1",
+        "parse_member": "138参考文件标题格式丢失.pdf-019fad63-29f8-7c0d-9136-e11702ebd901/138参考文件标题格式丢失.pdf_parse.json",
+        "parse_sha256": "eb87b053afa1b182a97e7927ba3cbdf41554547a647cb076266dcefcc7b19e0c",
+        "parser_config_member": "138参考文件标题格式丢失.pdf-019fad63-29f8-7c0d-9136-e11702ebd901/debug/config/parser_config_20260729_182034_5ac66156.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 3
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/138参考文件标题格式丢失.pdf--3baf43dc55cb",
+        "case_tree_sha256": "379bb01baa6eda00514368eb9e04a7231bde80ef1e1242f795f837d48c787cb1",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/138参考文件标题格式丢失.pdf--3baf43dc55cb/87cb334f-332d-41c2-bbf5-7b254406008d_content_list.json",
+        "content_list_sha256": "6fb8a3ea3827ff6c8545708c8a335d53b9c8a2710035abbeb5101d17d0f35a8b",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/138参考文件标题格式丢失.pdf--3baf43dc55cb_parse.json",
+        "converted_parsed_sha256": "b2a12912bb764367862215a975171974597e54dad94016aaf2f6debb9ce2036b"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/138参考文件标题格式丢失.pdf--3baf43dc55cb",
+        "case_tree_sha256": "3d7eb633aaf39a57f221e682fe9c77a5738d4c1409057816f20b81662f2f4f42",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/138参考文件标题格式丢失.pdf--3baf43dc55cb/result.json",
+        "result_json_sha256": "893eb7760f192079c2cc62ec1d7ef9e1f61678ad16559b1de53f44dd3bb45896",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/138参考文件标题格式丢失.pdf--3baf43dc55cb_parse.json",
+        "converted_parsed_sha256": "cd726abc7c8c05d306385830ae490d77e10a7af463ac7852b613ee635dee7cac"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/145页眉下的图片被识别为表格一部分.docx",
+      "source_sha256": "b2ca7bd18ec980b407d0bbb5d5865e51c16afc411f5e36a75e7edafb44970c1b",
+      "case_id": "2aafe56f9445",
+      "format": "docx",
+      "page_count": 5,
+      "golden_file": "datasets/半导体场景模拟数据golden/145页眉下的图片被识别为表格一部分.docx.json",
+      "golden_sha256": "d58b1607c7a95993a329ae6aa2ed41acf231fa14478f601908311368cc989440",
+      "golden_doc_id": "145_b2ca7bd18e",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/145页眉下的图片被识别为表格一部分.docx--2aafe56f9445.zip",
+        "zip_sha256": "0325cd284b6789664044e2db6dfe33e0585cda453034e7e32b5fd7a47d0024e8",
+        "parse_member": "145页眉下的图片被识别为表格一部分.docx-019fac64-b385-7acd-8777-b89177a726e3/145页眉下的图片被识别为表格一部分.docx_parse.json",
+        "parse_sha256": "4a1de5787ad918c76ca46d30d6115a793bc44ab9d2a4420565a0b26fe6d982a1",
+        "parser_config_member": "145页眉下的图片被识别为表格一部分.docx-019fac64-b385-7acd-8777-b89177a726e3/debug/config/parser_config_20260729_134245_a0ef0e7d.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 6
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/145页眉下的图片被识别为表格一部分.docx--2aafe56f9445",
+        "case_tree_sha256": "6c019084cee0dce0198c9634d58d940aba1f88995ba22ddcb8613518a9d60d94",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/145页眉下的图片被识别为表格一部分.docx--2aafe56f9445/a5fc6061-0687-4142-9467-071a02f7a9d8_content_list.json",
+        "content_list_sha256": "88c36e3f11a4cb80c0e592fb6d734a9ae930c54062c277a8c01ff22b94987efd",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/145页眉下的图片被识别为表格一部分.docx--2aafe56f9445_parse.json",
+        "converted_parsed_sha256": "35bf277cfadedc43689071910a684c94a27a145439645f8440780edb6590a275"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/145页眉下的图片被识别为表格一部分.docx--2aafe56f9445",
+        "case_tree_sha256": "081d3bfcc2d7eb0d6781e0b50478af273951e04cfc00f127e86863933e1a6bf9",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/145页眉下的图片被识别为表格一部分.docx--2aafe56f9445/result.json",
+        "result_json_sha256": "d6d3912dcb0fe614d2fdf8cd8c2ec98d85b9fb2fcd8699b44302bb714a5aafd4",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/145页眉下的图片被识别为表格一部分.docx--2aafe56f9445_parse.json",
+        "converted_parsed_sha256": "4020c196b09a0d65ab73a735cbb90dbf023e036a98ac5e26ec707670c7844721"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/15unmerge合并单元格.docx",
+      "source_sha256": "e872a58a8c62a39953f425801771a14082f90c5df86c5df31cc2d7dd7ac21bb2",
+      "case_id": "e0947abdee8c",
+      "format": "docx",
+      "page_count": 7,
+      "golden_file": "datasets/半导体场景模拟数据golden/15unmerge合并单元格.docx.json",
+      "golden_sha256": "a4a92be54deb26296ed248eb5aa6df7d6e6f94326fb433ca2319d1fdc668fd81",
+      "golden_doc_id": "15unmerge_e872a58a8c",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/15unmerge合并单元格.docx--e0947abdee8c.zip",
+        "zip_sha256": "7fdc705dcd36d893a0c8d571332313374a184d79aeaed4173c96750be77e4e50",
+        "parse_member": "15unmerge合并单元格.docx-019fad65-39e9-7af4-b9f1-b708e05b72d1/15unmerge合并单元格.docx_parse.json",
+        "parse_sha256": "4ad3031e4011c61f4a6ce26d6fdef0622bc1abd52b7c302a9b9f761f4a0a11b6",
+        "parser_config_member": "15unmerge合并单元格.docx-019fad65-39e9-7af4-b9f1-b708e05b72d1/debug/config/parser_config_20260729_182222_6a6111c5.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 7
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/15unmerge合并单元格.docx--e0947abdee8c",
+        "case_tree_sha256": "69dbc0cac5448035f2052918648e7d483b3e8d2981c629b11c1c29b97191e37b",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/15unmerge合并单元格.docx--e0947abdee8c/56f8d33f-a13b-4748-9d68-f041e3255672_content_list.json",
+        "content_list_sha256": "665172371bf9a8bd5f9405dc7e564659f475746479c6da1d1466171206b6b5f3",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/15unmerge合并单元格.docx--e0947abdee8c_parse.json",
+        "converted_parsed_sha256": "bebe167c7e1399ed9d7c31bbf2c7e649399aacb93361417e9584053021c5e506"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/15unmerge合并单元格.docx--e0947abdee8c",
+        "case_tree_sha256": "6810ec7c1dee8022043857179360c33a40064b5745cd85685e34f68c16ea57e0",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/15unmerge合并单元格.docx--e0947abdee8c/result.json",
+        "result_json_sha256": "ba421e6bba2c2dd95e28091a3479c6e20c75e9da5bd2c1b234e09ab09e80bd60",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/15unmerge合并单元格.docx--e0947abdee8c_parse.json",
+        "converted_parsed_sha256": "20fe04ce8103c1b9b3fdc80611990734191c2de27d40db53a548040856bc2ad2"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/162块级公式数错误.pptx",
+      "source_sha256": "e72dc3ea5992a027957ac952aeefc99c2022f1de05c89831bd90186268e9765f",
+      "case_id": "0a5e2a427079",
+      "format": "pptx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/162块级公式数错误.pptx.json",
+      "golden_sha256": "bf3c35b7bcd1b54ed9e1b571c5b3e8444362825672cbf48ee2e598ab90a0cde5",
+      "golden_doc_id": "162_e72dc3ea59",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/162块级公式数错误.pptx--0a5e2a427079.zip",
+        "zip_sha256": "9b300d936eb31c0da195d9d81c837fb4176ce635dd15ff70071540cea7d92793",
+        "parse_member": "162块级公式数错误.pptx-019fad67-22c0-7163-a3b2-01ef92d62bfb/162块级公式数错误.pptx_parse.json",
+        "parse_sha256": "89efbec27124a565c6719ef33490ac510c0dc417c772722ca690e2d2ef3476a6",
+        "parser_config_member": "162块级公式数错误.pptx-019fad67-22c0-7163-a3b2-01ef92d62bfb/debug/config/parser_config_20260729_182420_d6b5b219.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/162块级公式数错误.pptx--0a5e2a427079",
+        "case_tree_sha256": "a9f89fe37a7a585031ff510bb6298780ca75019d82751582d4186488eb0a2ff0",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/162块级公式数错误.pptx--0a5e2a427079/414e22a3-0b33-4406-8763-585b84174727_content_list.json",
+        "content_list_sha256": "d8ea33fe74def545583d7b091a818c46ab88650f38dae8c93606ba9d3dcd38a9",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/162块级公式数错误.pptx--0a5e2a427079_parse.json",
+        "converted_parsed_sha256": "5d4c1fa92e6ea7fced6b39e34e5111d43fb7ce4b6b74c3db5cc237dc38e685cd"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/162块级公式数错误.pptx--0a5e2a427079",
+        "case_tree_sha256": "37d7eea56cf4befdf4c891e92b4f135e4318efd6bebdf84699d8c4263341416f",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/162块级公式数错误.pptx--0a5e2a427079/result.json",
+        "result_json_sha256": "48f479660d6216b173e3736e6aad2579fccc6a54f17b97a0bc01b0e97182d493",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/162块级公式数错误.pptx--0a5e2a427079_parse.json",
+        "converted_parsed_sha256": "9e3d71a00fa9d7ea088a1bf4c422ddfd587275844007459053d93bd2223b1974"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/165流程图表格中流程图识别为文字.docx",
+      "source_sha256": "c1a8b0449229ebcf64d0a95a8a28751c0d32d11fb13fe531c76fe84e104632eb",
+      "case_id": "3f2bdb9c73a5",
+      "format": "docx",
+      "page_count": 5,
+      "golden_file": "datasets/半导体场景模拟数据golden/165流程图表格中流程图识别为文字.docx.json",
+      "golden_sha256": "c0fc736401a6eedecc3c2b141118dee5fc999133db6bad2c631df17eacd31453",
+      "golden_doc_id": "165_c1a8b04492",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/165流程图表格中流程图识别为文字.docx--3f2bdb9c73a5.zip",
+        "zip_sha256": "d8e098291fc48e19b0ea03695b77a1329402f658d14f235981c9493430c754c7",
+        "parse_member": "165流程图表格中流程图识别为文字.docx-019fad67-bf23-7436-9553-3be14a6ff54c/165流程图表格中流程图识别为文字.docx_parse.json",
+        "parse_sha256": "0e5767cd3e9a3509fad22b11ffd0ff01882f3fa4aed0635871a3630d52819ac4",
+        "parser_config_member": "165流程图表格中流程图识别为文字.docx-019fad67-bf23-7436-9553-3be14a6ff54c/debug/config/parser_config_20260729_182503_bb7ffd05.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 5
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/165流程图表格中流程图识别为文字.docx--3f2bdb9c73a5",
+        "case_tree_sha256": "1f99b22eb5a7e7328da5399cdae37fba709b395873d40a67508c14b70ca022f7",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/165流程图表格中流程图识别为文字.docx--3f2bdb9c73a5/becbcaab-d738-4332-a183-a5591bfd1ccb_content_list.json",
+        "content_list_sha256": "12834b429b406e88bf745abc94616911de56adc4917866cdb5364f4d7c6be006",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/165流程图表格中流程图识别为文字.docx--3f2bdb9c73a5_parse.json",
+        "converted_parsed_sha256": "90ff3896b1bd4faa308f4678e621e6092689fcc97b9eaf4b96995f76449cf2c3"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/165流程图表格中流程图识别为文字.docx--3f2bdb9c73a5",
+        "case_tree_sha256": "1efef701a9c0e002122333257fc8cebc7ec6244a1d6ffdd6744c7f5f489e16db",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/165流程图表格中流程图识别为文字.docx--3f2bdb9c73a5/result.json",
+        "result_json_sha256": "d6a3d99d7bdec2c33835ade585c7ded3038dc165e86c0ace129fa1b18d64c64e",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/165流程图表格中流程图识别为文字.docx--3f2bdb9c73a5_parse.json",
+        "converted_parsed_sha256": "f5dbe7fc9348eb9579dbc59add8ed66963763a2bb59f56a0198944edcea365df"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/168删除线问题复现.pdf",
+      "source_sha256": "3b1e2bb2ac1dd988293bcaaa380387cb5642afdfe720e03e3a0016032e87d624",
+      "case_id": "3de2b5b29990",
+      "format": "pdf",
+      "page_count": 3,
+      "golden_file": "datasets/半导体场景模拟数据golden/168删除线问题复现.pdf.json",
+      "golden_sha256": "316839be8137c38b2bd6f8267204e9593098f3c8737dfe39de4556e02f8c18ac",
+      "golden_doc_id": "168_3b1e2bb2ac",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/168删除线问题复现.pdf--3de2b5b29990.zip",
+        "zip_sha256": "f655e8d5a88976c5a698eaf8edaf25c077a3877004d65a96d55a6bce70453ed5",
+        "parse_member": "168删除线问题复现.pdf-019fac6c-42d5-7251-b9ae-50ebe7395206/168删除线问题复现.pdf_parse.json",
+        "parse_sha256": "6b1a33b576137e63d1d49547ef6bccdd344aaa1e9bbe78040e6c7476dba6e0eb",
+        "parser_config_member": "168删除线问题复现.pdf-019fac6c-42d5-7251-b9ae-50ebe7395206/debug/config/parser_config_20260729_135021_16a5e1c9.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 3
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/168删除线问题复现.pdf--3de2b5b29990",
+        "case_tree_sha256": "df167dfa7ef040f8430dfb8c9a29aeb80faa4c662618294bc57d9417b915c9cc",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/168删除线问题复现.pdf--3de2b5b29990/6a436884-714f-4839-9af0-eab197349b2c_content_list.json",
+        "content_list_sha256": "d696dec3279b23a13fb44e4b299d7fbba8d0da095a584fa8a0cd8b89df1f734e",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/168删除线问题复现.pdf--3de2b5b29990_parse.json",
+        "converted_parsed_sha256": "608fc0c35ca7c4680fcba7af60a51da7215205f37e0bea306434f647cb8e77d0"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/168删除线问题复现.pdf--3de2b5b29990",
+        "case_tree_sha256": "ef29cc32bdabed1c5db0ff65388bd04c6d5af340eb263a3d4122d3166585fd74",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/168删除线问题复现.pdf--3de2b5b29990/result.json",
+        "result_json_sha256": "c2f7b2cfe253320c59e23f8c34601d3990081d7662f0a2f1e632b5e8a869444d",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/168删除线问题复现.pdf--3de2b5b29990_parse.json",
+        "converted_parsed_sha256": "a037eebf4527beccd89777f688c35ffcff47cffedb234db4cf921dc386149be6"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/173图片中的公式未识别.pdf",
+      "source_sha256": "25a322df4110234685105061d78ba9bd6bb9e749e64a4aaae3630a80adfbcbc3",
+      "case_id": "7b41c1cff151",
+      "format": "pdf",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/173图片中的公式未识别.pdf.json",
+      "golden_sha256": "9fb31c3839a85742976dc3eed9b985922226434e753cd4072ad68822fc5cd6c4",
+      "golden_doc_id": "173_25a322df41",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/173图片中的公式未识别.pdf--7b41c1cff151.zip",
+        "zip_sha256": "34458248b27329a34cae36726dd03e0bb519f15486af47cf1bf7ba871cda7e4c",
+        "parse_member": "173图片中的公式未识别.pdf-019fac6d-c9d5-728c-9c7c-0af8dc7b0f0d/173图片中的公式未识别.pdf_parse.json",
+        "parse_sha256": "4504bd4a867232a235f16e009871ddcee288ede0dd4998fa2cfa457328fdc9d5",
+        "parser_config_member": "173图片中的公式未识别.pdf-019fac6d-c9d5-728c-9c7c-0af8dc7b0f0d/debug/config/parser_config_20260729_135152_b03f039a.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/173图片中的公式未识别.pdf--7b41c1cff151",
+        "case_tree_sha256": "8f0e057a7b7b6af5f56cbff2e3141b39f49dfadaed89ddba4c27e0bbdefe1f72",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/173图片中的公式未识别.pdf--7b41c1cff151/4340f2e6-002d-485c-857e-b07e80ebcee9_content_list.json",
+        "content_list_sha256": "a6cb545eb9c4e66e08321e0194dbb93dc24dbd200e00a03eeda22194a213b870",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/173图片中的公式未识别.pdf--7b41c1cff151_parse.json",
+        "converted_parsed_sha256": "b5c82ec1c0c028f20acf8ceaf77c6e94b807e336997d339e10d540da6f973ac4"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/173图片中的公式未识别.pdf--7b41c1cff151",
+        "case_tree_sha256": "014f944202444e88f572ef4a2f71d19bb7be28477f42fc27033a099bc4923b14",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/173图片中的公式未识别.pdf--7b41c1cff151/result.json",
+        "result_json_sha256": "d01eba8ab974ab30bfeb501f5964a0184a2187805ee712105dc76306d37c8aa5",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/173图片中的公式未识别.pdf--7b41c1cff151_parse.json",
+        "converted_parsed_sha256": "1e9cf62bddc3b0de384daa5e83b53405a2ec0c1bdf74e07a57670b4404878c03"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/177两行三列表问题手绘多个流程图.docx",
+      "source_sha256": "cc5649b6ddcfb20030e51d3dab9e75cddbb14f3da118d25ec115c291e4501d07",
+      "case_id": "8042e0990aff",
+      "format": "docx",
+      "page_count": 2,
+      "golden_file": "datasets/半导体场景模拟数据golden/177两行三列表问题手绘多个流程图.docx.json",
+      "golden_sha256": "abca0720ee7f08f64e91b872a697e3e7e08c753c76727ddffe27004429772ff4",
+      "golden_doc_id": "177_cc5649b6dd",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/177两行三列表问题手绘多个流程图.docx--8042e0990aff.zip",
+        "zip_sha256": "3a59f52797b4f1cdcb1979012b7cbd3f7ac280721ab9131970af18bef121441f",
+        "parse_member": "177两行三列表问题手绘多个流程图.docx-019fac6e-663f-7b52-bd67-a81dbb8780e4/177两行三列表问题手绘多个流程图.docx_parse.json",
+        "parse_sha256": "22a6ff2703043c09de2ac07734111437810876baa692c6b52bc36bb0682655bd",
+        "parser_config_member": "177两行三列表问题手绘多个流程图.docx-019fac6e-663f-7b52-bd67-a81dbb8780e4/debug/config/parser_config_20260729_135235_0fc5aaca.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/177两行三列表问题手绘多个流程图.docx--8042e0990aff",
+        "case_tree_sha256": "a637a8336a03804937bd12e85af1c6843ddcb4bc4f142303b4f86298de900168",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/177两行三列表问题手绘多个流程图.docx--8042e0990aff/877fbbb1-e354-4eeb-8ff8-8116a6931f6a_content_list.json",
+        "content_list_sha256": "6d99c3ffc26dc864d51ecb1b5bd3ea14c5a6655178bcea6f9b42b51840d23f46",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/177两行三列表问题手绘多个流程图.docx--8042e0990aff_parse.json",
+        "converted_parsed_sha256": "b18dcf8c8e9491cb26c0f40ecc313f81e834505c294958f0afc19b84240bc695"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/177两行三列表问题手绘多个流程图.docx--8042e0990aff",
+        "case_tree_sha256": "8b2e6899832a84f0d3556e6c8987ba1fa5f9693cb23ffcc164b680e53a90f33b",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/177两行三列表问题手绘多个流程图.docx--8042e0990aff/result.json",
+        "result_json_sha256": "f28fac85150d0c5b8b74040ff2fee56af14bb7fbc130ada078ce9e05a4bccabc",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/177两行三列表问题手绘多个流程图.docx--8042e0990aff_parse.json",
+        "converted_parsed_sha256": "fc717022a21be4488062253944eb25ed2d8dc47a25d9de60fa340ae8909a90b2"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/180标题和页眉相似丢失标题.doc",
+      "source_sha256": "f9861997612c92c7a70457a91b46c4955f6f7055923d8e4246fffb2979c6ea13",
+      "case_id": "2f2741f38278",
+      "format": "doc",
+      "page_count": 2,
+      "golden_file": "datasets/半导体场景模拟数据golden/180标题和页眉相似丢失标题.doc.json",
+      "golden_sha256": "c32668f9387b38aa128bd3694b7892836e40f91fcd3373f3e95a83f195b84782",
+      "golden_doc_id": "180_f986199761",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/180标题和页眉相似丢失标题.doc--2f2741f38278.zip",
+        "zip_sha256": "d7429b56d86318b523a0a8c06e0f1287161aaa2e66822750ac85e54ed31c6e82",
+        "parse_member": "180标题和页眉相似丢失标题.doc-019fad69-4629-7728-af05-9782b8670037/180标题和页眉相似丢失标题.doc_parse.json",
+        "parse_sha256": "b1bb02d734812d5eaec67cb453759c501350dd3a9d185e75a880eb2da04bf0bc",
+        "parser_config_member": "180标题和页眉相似丢失标题.doc-019fad69-4629-7728-af05-9782b8670037/debug/config/parser_config_20260729_182638_0dc3d623.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/180标题和页眉相似丢失标题.doc--2f2741f38278",
+        "case_tree_sha256": "1fd0c5a3840b44096d3f935faef51520fec56bdc6e72877dcb538ff53e22ec93",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/180标题和页眉相似丢失标题.doc--2f2741f38278/47165fdf-e5f7-4f48-ab92-f43fb3f88527_content_list.json",
+        "content_list_sha256": "55ebfb66e9674a34fa16a084fc2b9987cbd2bc90452468216d7aa0b80a0d8228",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/180标题和页眉相似丢失标题.doc--2f2741f38278_parse.json",
+        "converted_parsed_sha256": "b1ac27914b2d30f805b6640dfbb873daccc6e179dce3e0a2ad5138a558a131ed"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/180标题和页眉相似丢失标题.doc--2f2741f38278",
+        "case_tree_sha256": "be49b07fde21fc10beaa704b3ea20d52e3ab25dc5df2ba3f280a5b7c72cec9dd",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/180标题和页眉相似丢失标题.doc--2f2741f38278/result.json",
+        "result_json_sha256": "150800f465ccae79601d687c123ed4bdd5e443f4603e1b0bc9c9d4f924269c6d",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/180标题和页眉相似丢失标题.doc--2f2741f38278_parse.json",
+        "converted_parsed_sha256": "930882d7f600ae93c8ca446fc2df2512c610b78a105481930aab96ccc06d49d2"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/183LC-ZXQ1 FAB5表格列错位.docx",
+      "source_sha256": "f836930dd309300ddce831efff801f4f14dd52d2e32e026a08e2ff40bedf294f",
+      "case_id": "599b5aee4c7a",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/183LC-ZXQ1 FAB5表格列错位.docx.json",
+      "golden_sha256": "a9c53753b550c686ac0d15e2a84fc8445511df779f8ef63dd91dc645802ed800",
+      "golden_doc_id": "183LC-ZXQ1-FAB5_f836930dd3",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/183LC-ZXQ1 FAB5表格列错位.docx--599b5aee4c7a.zip",
+        "zip_sha256": "54dac47682626837246c24021d0c9f1a8e25828cb544946a337113249a750707",
+        "parse_member": "183LC-ZXQ1 FAB5表格列错位.docx-019fac70-7608-7f23-84d6-891a9bda3d6c/183LC-ZXQ1 FAB5表格列错位.docx_parse.json",
+        "parse_sha256": "234e727dfadd05807f9e8961922347b7defb84eb89b583e90b572071aeb7d286",
+        "parser_config_member": "183LC-ZXQ1 FAB5表格列错位.docx-019fac70-7608-7f23-84d6-891a9bda3d6c/debug/config/parser_config_20260729_135447_c27a5bd0.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/183LC-ZXQ1 FAB5表格列错位.docx--599b5aee4c7a",
+        "case_tree_sha256": "a1087f76aac5541b48066cb13870b7a66efdbfa6526fe0f95d1e8c223910e39a",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/183LC-ZXQ1 FAB5表格列错位.docx--599b5aee4c7a/2cb3aa6f-c3fc-4240-b8ea-f95d5ff2747a_content_list.json",
+        "content_list_sha256": "5fc15654b378bd37673cfef66f59ff17377094da3708fdcde0cfed36eaeaa539",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/183LC-ZXQ1 FAB5表格列错位.docx--599b5aee4c7a_parse.json",
+        "converted_parsed_sha256": "3f68da5dc590505520570b52b2f756278c4b1b1641149c48b2fef0fd30052d8a"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/183LC-ZXQ1 FAB5表格列错位.docx--599b5aee4c7a",
+        "case_tree_sha256": "f189915cc3a7a2828b625d89bf80b9d0b25847e99d3358d6085bcccf1984acee",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/183LC-ZXQ1 FAB5表格列错位.docx--599b5aee4c7a/result.json",
+        "result_json_sha256": "fa3f368b6af8dae0649571f44867971198e35666459ce16fe1273291346dd5b2",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/183LC-ZXQ1 FAB5表格列错位.docx--599b5aee4c7a_parse.json",
+        "converted_parsed_sha256": "a5704911197afe980a1c3e729f9779ec553db34d0cf51ead2c41d7a231994694"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/197PPT中的截图被拆分.pptx",
+      "source_sha256": "3a6b36348247121715c67a166a234bdafc016b5be102ebbdc68c81a61ecb7448",
+      "case_id": "d234d5a8b12d",
+      "format": "pptx",
+      "page_count": 2,
+      "golden_file": "datasets/半导体场景模拟数据golden/197PPT中的截图被拆分.pptx.json",
+      "golden_sha256": "286a48d31e2224d9db69496b784dcc19404a405664a8263ab47246fe20b78544",
+      "golden_doc_id": "197PPT_3a6b363482",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/197PPT中的截图被拆分.pptx--d234d5a8b12d.zip",
+        "zip_sha256": "c1d93b17256e12c7a395ab19ed055476e6744443d841a212c9ee7ac3895ee953",
+        "parse_member": "197PPT中的截图被拆分.pptx-019fac71-87b6-7bea-ba74-551355710d5e/197PPT中的截图被拆分.pptx_parse.json",
+        "parse_sha256": "ae70a459f1f5bee06b5e3ed48c2b682c9acfb2bf7978562756a0d98f9bc4ddb6",
+        "parser_config_member": "197PPT中的截图被拆分.pptx-019fac71-87b6-7bea-ba74-551355710d5e/debug/config/parser_config_20260729_135645_a6fca099.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/197PPT中的截图被拆分.pptx--d234d5a8b12d",
+        "case_tree_sha256": "1cb68d76e55d18a962175bb24c919054354d4dfe03bcfa9c791fedc108c39c04",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/197PPT中的截图被拆分.pptx--d234d5a8b12d/f5fbe513-7adb-4572-9dfc-06a15a5e6084_content_list.json",
+        "content_list_sha256": "2ba68dda416c80600d8735c72a82e10ba43126079a6b27a4af530954d9ab9b6a",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/197PPT中的截图被拆分.pptx--d234d5a8b12d_parse.json",
+        "converted_parsed_sha256": "65e5cfb002624018410d4c3ad7641de198c2e654f6e565baa25ed14fa265cc85"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/197PPT中的截图被拆分.pptx--d234d5a8b12d",
+        "case_tree_sha256": "375723ef12e6b10e20c65ab9ff16933da49f10d9322f88500369e1a811baa109",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/197PPT中的截图被拆分.pptx--d234d5a8b12d/result.json",
+        "result_json_sha256": "fdd1a9c5b20bbe7ed8d1ffe5fd54d6eab30f16389c88eb1e0530c890d7ec1d71",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/197PPT中的截图被拆分.pptx--d234d5a8b12d_parse.json",
+        "converted_parsed_sha256": "94934ef9d700f3b110445cb263a1be5b5054521f7dc03dde1afbd48eca82031a"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/199行合并单元格被拆分.docx",
+      "source_sha256": "5f6b65dbd2c11efc6588d114cb6b9c8e6ca365779c3279a7f795ff1cd25a69d2",
+      "case_id": "38fccc66a3bd",
+      "format": "docx",
+      "page_count": 8,
+      "golden_file": "datasets/半导体场景模拟数据golden/199行合并单元格被拆分.docx.json",
+      "golden_sha256": "eb89d11d97ae26dbd61d057f87feb4d6cbb074cb5784ebeffb9cc610441cb6ab",
+      "golden_doc_id": "199_5f6b65dbd2",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/199行合并单元格被拆分.docx--38fccc66a3bd.zip",
+        "zip_sha256": "0d6c18f03b1f0c31ff575eda690bf4a82376512ab3d1c710ba7c8abfc663ef91",
+        "parse_member": "199行合并单元格被拆分.docx-019fac72-fb24-7b3e-9575-fbf2416a7dd3/199行合并单元格被拆分.docx_parse.json",
+        "parse_sha256": "9efdd7f920483ac527b1aba9d1fc69579e25d316464037b834db20940761f220",
+        "parser_config_member": "199行合并单元格被拆分.docx-019fac72-fb24-7b3e-9575-fbf2416a7dd3/debug/config/parser_config_20260729_135750_2e6bec3e.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 8
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/199行合并单元格被拆分.docx--38fccc66a3bd",
+        "case_tree_sha256": "a1bcd96ba899a7eae9664c3ac71b3907ee41b19302b5a92458194f1ef50651cd",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/199行合并单元格被拆分.docx--38fccc66a3bd/3df84d98-8a99-4bba-be77-cc063d3d6ef2_content_list.json",
+        "content_list_sha256": "a3c309544fd58459ba8cb64fd656c58dec4eb4d045736dd3e9c09b5a48c6a42a",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/199行合并单元格被拆分.docx--38fccc66a3bd_parse.json",
+        "converted_parsed_sha256": "f2a280887df678b881689791d5bfe4c1f91ee004facc3b962ae8e5a634496d55"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/199行合并单元格被拆分.docx--38fccc66a3bd",
+        "case_tree_sha256": "85d7b04e4be031dabd0091dd092a3fec430e8b8edb324a03f0ec9736335f7c8d",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/199行合并单元格被拆分.docx--38fccc66a3bd/result.json",
+        "result_json_sha256": "239ae5dc53c6e01f79aa41627fa9e42cdcd8a8f82fc094aaa917e89f0608a890",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/199行合并单元格被拆分.docx--38fccc66a3bd_parse.json",
+        "converted_parsed_sha256": "222b8f164b75fc2192344731dfa3de0244d2e2d629388dcc94864f7034e8a08f"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/199行合并单元格被拆分.pdf",
+      "source_sha256": "1a9a8e399b134abc46870345c7ba79ffb3ed98983696b3123010fe741b2dfa94",
+      "case_id": "43300200764b",
+      "format": "pdf",
+      "page_count": 8,
+      "golden_file": "datasets/半导体场景模拟数据golden/199行合并单元格被拆分.pdf.json",
+      "golden_sha256": "3300ba6dfcb4510245f42967d57c9a77eb4a57c2db87a683d412d35592bf1ff6",
+      "golden_doc_id": "199_1a9a8e399b",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/199行合并单元格被拆分.pdf--43300200764b.zip",
+        "zip_sha256": "4dd4efd5d240d04046ae6cb5f113d185b2ae21e535ef927b153d3d268bce70d3",
+        "parse_member": "199行合并单元格被拆分.pdf-019fac76-b8cd-70cb-863c-682928567ba0/199行合并单元格被拆分.pdf_parse.json",
+        "parse_sha256": "854cae48bed41ead63a8031a130d94e36d4ef3dcfd816bf64e33f5df11b714ce",
+        "parser_config_member": "199行合并单元格被拆分.pdf-019fac76-b8cd-70cb-863c-682928567ba0/debug/config/parser_config_20260729_140151_c86d95f0.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 8
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/199行合并单元格被拆分.pdf--43300200764b",
+        "case_tree_sha256": "9405cdc0fe7ee03f026a20776dd6991d9eb07694b73156d45118945bb769f69f",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/199行合并单元格被拆分.pdf--43300200764b/e18525b3-d575-4588-8671-c2336628c827_content_list.json",
+        "content_list_sha256": "83103475aa0a8bb4e80c098ff6e373f44f3d1a32a4874618acac1519952e3f80",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/199行合并单元格被拆分.pdf--43300200764b_parse.json",
+        "converted_parsed_sha256": "7b8b71e21cd2d6ab3b1eadfd11805fe48be166809e33dd464fb2f986c47790c6"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/199行合并单元格被拆分.pdf--43300200764b",
+        "case_tree_sha256": "efae1cf12a61f0b7b510ccd9ce557734b8d5a724cbb02bd946c96c77b1da2068",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/199行合并单元格被拆分.pdf--43300200764b/result.json",
+        "result_json_sha256": "26d26fbf34a96a7dda2abb03883b45e6d892a52d0eb4c64ede3700f20c0a7753",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/199行合并单元格被拆分.pdf--43300200764b_parse.json",
+        "converted_parsed_sha256": "781947205126b83640c2c6837cc2952ae468e950a2196ae26cb337937f57182a"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/213流程图表被识别为一张图片.docx",
+      "source_sha256": "06f657f15d0b3f942d72526556cfd94a01219b185fb4c596efa061e97b8a2c4c",
+      "case_id": "3c38334071dd",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/213流程图表被识别为一张图片.docx.json",
+      "golden_sha256": "e146f8eb161148a0a536ee3a462b4a4e32fd5c46c3fd2377988ccf6c2bfed364",
+      "golden_doc_id": "213_06f657f15d",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/213流程图表被识别为一张图片.docx--3c38334071dd.zip",
+        "zip_sha256": "f93e8608d27f04ba20a004592278bb8fcfc2650b89bd41676830c52dc16f95c4",
+        "parse_member": "213流程图表被识别为一张图片.docx-019fac7a-9dfe-740f-8446-d61fdc2f60b2/213流程图表被识别为一张图片.docx_parse.json",
+        "parse_sha256": "7eb58f9f1f25c7e36eba4750279bf6f4c9b072efb95a16b7c11ccff4a07afec9",
+        "parser_config_member": "213流程图表被识别为一张图片.docx-019fac7a-9dfe-740f-8446-d61fdc2f60b2/debug/config/parser_config_20260729_140551_a24138c2.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/213流程图表被识别为一张图片.docx--3c38334071dd",
+        "case_tree_sha256": "6f5cc666cd9df00f97b1ee6b6c8d1dace4850e51ad844244357734a1af66f5cd",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/213流程图表被识别为一张图片.docx--3c38334071dd/66478470-f666-40e9-993e-0d3dce3c13d8_content_list.json",
+        "content_list_sha256": "8e4c1d806a6ee7ef4a8b236ad2ee9a332d9ff4c027544393243efcdf0428470a",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/213流程图表被识别为一张图片.docx--3c38334071dd_parse.json",
+        "converted_parsed_sha256": "996f9daaa598fe748b9658edc8ec3cfded67e56f627baa400898b18fb73f8423"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/213流程图表被识别为一张图片.docx--3c38334071dd",
+        "case_tree_sha256": "e810bd7ef5cf7dc258ac76dc2914ee2845337c2668c28a8591168957c921e22c",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/213流程图表被识别为一张图片.docx--3c38334071dd/result.json",
+        "result_json_sha256": "3e9d476130995c8984694d8860633fdbc13b8e32ec97f2c8be2d171fc8efc10a",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/213流程图表被识别为一张图片.docx--3c38334071dd_parse.json",
+        "converted_parsed_sha256": "dec5e8c0695bec5eeb12a090f5bf96437bb328db648b65ddd74891192a86c1f5"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/22芯片技术，从硅晶到智能未来.pptx",
+      "source_sha256": "80b4ec1c1bce8d20ff5b4ca1598436ec443198ce7f127a1887064af3791e0031",
+      "case_id": "a5473b5075b2",
+      "format": "pptx",
+      "page_count": 5,
+      "golden_file": "datasets/半导体场景模拟数据golden/22芯片技术，从硅晶到智能未来.pptx.json",
+      "golden_sha256": "90ce98f7c6ef3404f3259b8da80e1f8e37cdaea1b22f6b2d33541eedfcd92332",
+      "golden_doc_id": "22_80b4ec1c1b",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/22芯片技术，从硅晶到智能未来.pptx--a5473b5075b2.zip",
+        "zip_sha256": "57e926d76feabb4c9c387e8d07357cf6a3f6e34a9e83e7ebf349f3102ca5efcf",
+        "parse_member": "22芯片技术，从硅晶到智能未来.pptx-019fac7b-61a1-7f23-b379-325199925c3c/22芯片技术，从硅晶到智能未来.pptx_parse.json",
+        "parse_sha256": "e25e34a7f084c697d785b48ccc36bd2603def868b0e2c244c228f4310cc198ad",
+        "parser_config_member": "22芯片技术，从硅晶到智能未来.pptx-019fac7b-61a1-7f23-b379-325199925c3c/debug/config/parser_config_20260729_140656_676337fa.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 5
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/22芯片技术，从硅晶到智能未来.pptx--a5473b5075b2",
+        "case_tree_sha256": "63dbf586f7c0a9b4cd42fa44adb1071251a8a530a416d89c5597ba6280cc1071",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/22芯片技术，从硅晶到智能未来.pptx--a5473b5075b2/cf80b717-b082-4457-97f1-6895b3cafa7f_content_list.json",
+        "content_list_sha256": "5933227e80d42a4b6d26a41e57754e58759e8d7a75cfb855035c7634ee35f797",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/22芯片技术，从硅晶到智能未来.pptx--a5473b5075b2_parse.json",
+        "converted_parsed_sha256": "019d48371a097a3f4fc14993567f4dbca5134095f75ef5c81edc3dbe450aed10"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/22芯片技术，从硅晶到智能未来.pptx--a5473b5075b2",
+        "case_tree_sha256": "26ae42fb77e16fabe8a2af5e138516389935162b7e804fc7a8e044b23388a97c",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/22芯片技术，从硅晶到智能未来.pptx--a5473b5075b2/result.json",
+        "result_json_sha256": "6b29049617f63894d89d03ac3f4749dc6dbeaba2cb97f44e731e35d281673d7d",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/22芯片技术，从硅晶到智能未来.pptx--a5473b5075b2_parse.json",
+        "converted_parsed_sha256": "e325cbfd7a9305f7c447554e3154d9ec800703d8399396c20e59baa7de8e78ad"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/35测试问题验证.pdf",
+      "source_sha256": "a133e063ce70c98ed468745e0cdd6727db592e1234124ce8127bba2c7f699dbe",
+      "case_id": "4beb15adb319",
+      "format": "pdf",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/35测试问题验证.pdf.json",
+      "golden_sha256": "84b86b0cce15f627497bedd38e3f22592ac3f372f148362af852ef79ef7b6261",
+      "golden_doc_id": "35_a133e063ce",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/35测试问题验证.pdf--4beb15adb319.zip",
+        "zip_sha256": "caa27536ac6df030b9c8e06f8fcfdaa83495678a3234895de1929e45221c6183",
+        "parse_member": "35测试问题验证.pdf-019fac7c-d545-7bbf-a0dc-eb23bc8a63ac/35测试问题验证.pdf_parse.json",
+        "parse_sha256": "514490997dd808d2a98af8e992d9358d05f63f37cb1d9f8b77b6cc5cb3ae8081",
+        "parser_config_member": "35测试问题验证.pdf-019fac7c-d545-7bbf-a0dc-eb23bc8a63ac/debug/config/parser_config_20260729_140817_ac194b46.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/35测试问题验证.pdf--4beb15adb319",
+        "case_tree_sha256": "deaf9e2b4170be466c4d5b7b8bf214e203fc0c19852f6523cdaef5601a766394",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/35测试问题验证.pdf--4beb15adb319/72feb683-8e73-4b59-859b-e10d435420a3_content_list.json",
+        "content_list_sha256": "f2d6f803181b5f3971df7b2ac186e8b59f8cf9ef64220a4dc7686256031fe2c2",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/35测试问题验证.pdf--4beb15adb319_parse.json",
+        "converted_parsed_sha256": "329fad876a31e62b5f83176baa8101beaac96bdd376925699b6064eac262e835"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/35测试问题验证.pdf--4beb15adb319",
+        "case_tree_sha256": "a82c5aa936b1bc7f616c9aedcea47b92c01052249326ac8f1552086f57f72d20",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/35测试问题验证.pdf--4beb15adb319/result.json",
+        "result_json_sha256": "42c639d26a601b55b44863d3e96bd72c0d2eebd18bedec7962469a5a89f9d69f",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/35测试问题验证.pdf--4beb15adb319_parse.json",
+        "converted_parsed_sha256": "3027f95d6e38f58d799aa32a45d0c6d9bd6d31a2c6d7fce0b86e766b3add0ac1"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/35表格内图片偏差V2.doc",
+      "source_sha256": "af5579a205ecabcc6a5bff162beeeabbd215af6f0bafbbe055b415c68500dc18",
+      "case_id": "f90fe3387072",
+      "format": "doc",
+      "page_count": 3,
+      "golden_file": "datasets/半导体场景模拟数据golden/35表格内图片偏差V2.doc.json",
+      "golden_sha256": "a7f345925aaf34350906b868fd64b525c76dbef7647e0f63b7b99f5aa8e1dc95",
+      "golden_doc_id": "35-V2_af5579a205",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/35表格内图片偏差V2.doc--f90fe3387072.zip",
+        "zip_sha256": "8b9e038e26fd60f44be39114427d14f2f42e48639129ad2cab83d2c28d0e10a2",
+        "parse_member": "35表格内图片偏差V2.doc-019faccb-3adc-7bdb-8e31-6e85ceb99123/35表格内图片偏差V2.doc_parse.json",
+        "parse_sha256": "8cdd4c8b490502248b364e58f5819345de844edfbc6efaa9ffe8515627bff27a",
+        "parser_config_member": "35表格内图片偏差V2.doc-019faccb-3adc-7bdb-8e31-6e85ceb99123/debug/config/parser_config_20260729_153403_24bd3b45.yaml",
+        "parser_config_sha256": "7929c89c88058ba31812c8eee55f2dcfb5a6e0c629c791fd1f99cb02b9a9bab9",
+        "config_group": "vlm=inherit;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 3
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/35表格内图片偏差V2.doc--f90fe3387072",
+        "case_tree_sha256": "33f3ecdb14da19958a9248c6ab2cc20199864aaf75bb0615426b26753bc288ac",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/35表格内图片偏差V2.doc--f90fe3387072/975080c2-f503-439a-ae71-6bd76972c882_content_list.json",
+        "content_list_sha256": "808bcdd1db93570831ea67d0fef5e1aa7dead4939ed4486f0234700a8d94add6",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/35表格内图片偏差V2.doc--f90fe3387072_parse.json",
+        "converted_parsed_sha256": "c1412a9580b97fe4e4ddb18f6f987ff4a0d4ee126801b5073dfe1ba972725d34"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/35表格内图片偏差V2.doc--f90fe3387072",
+        "case_tree_sha256": "24734ec9bb4c5e1410f2d146111e8354e25c1e89197b4961816ae9372fcf1dbf",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/35表格内图片偏差V2.doc--f90fe3387072/result.json",
+        "result_json_sha256": "3bf6cf5a6d59ccfb84b11038f459a4c9c40d58457a67aa6b6bcfe26633934074",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/35表格内图片偏差V2.doc--f90fe3387072_parse.json",
+        "converted_parsed_sha256": "2ff4232b40cfa9014586ecd888c93aa3fcc7e0f8f52cb5566725c0348c49d2ef"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/58企业复杂绩效指标与深度战略分析.pdf",
+      "source_sha256": "dd6e34332ebe28f92290d664615f5cb094e5b91657e0f41746e35c8945666382",
+      "case_id": "f27b6409f9e2",
+      "format": "pdf",
+      "page_count": 3,
+      "golden_file": "datasets/半导体场景模拟数据golden/58企业复杂绩效指标与深度战略分析.pdf.json",
+      "golden_sha256": "ec4c003c232294b54dcb1f66dabb63aae459230db2d8f358ca8d426deab385d8",
+      "golden_doc_id": "58_dd6e34332e",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/58企业复杂绩效指标与深度战略分析.pdf--f27b6409f9e2.zip",
+        "zip_sha256": "571b26b67266167934e89fb2a5f40a0814a167422fe929859c2a0f517c58cdba",
+        "parse_member": "58企业复杂绩效指标与深度战略分析.pdf-019fac7f-4755-7bc3-93c8-1445b98b8f92/58企业复杂绩效指标与深度战略分析.pdf_parse.json",
+        "parse_sha256": "6d0d8481f9e6d044347e869b339cdf87dfec94710bf00f95b0388a9b34f62a79",
+        "parser_config_member": "58企业复杂绩效指标与深度战略分析.pdf-019fac7f-4755-7bc3-93c8-1445b98b8f92/debug/config/parser_config_20260729_141103_9ff7b249.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 3
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/58企业复杂绩效指标与深度战略分析.pdf--f27b6409f9e2",
+        "case_tree_sha256": "eda23bb8f4d787acf9821529513763ad7971d718c2df272ac2996bf0bcaf12e1",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/58企业复杂绩效指标与深度战略分析.pdf--f27b6409f9e2/7f11ce78-53bf-4d31-ad04-1a4394f2ddea_content_list.json",
+        "content_list_sha256": "d807b4017d4ca5c0d9b716427c9fe2817351fae6a57ed76734c017a31d5942c6",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/58企业复杂绩效指标与深度战略分析.pdf--f27b6409f9e2_parse.json",
+        "converted_parsed_sha256": "fd1e101c902539c1d20a99698aaf54ccb57d8738167df30713fa678f4af8ad0b"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/58企业复杂绩效指标与深度战略分析.pdf--f27b6409f9e2",
+        "case_tree_sha256": "20408ef2685b120d90905d6476e9a2711dccef9febf903c68509cecb3fa9d3dc",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/58企业复杂绩效指标与深度战略分析.pdf--f27b6409f9e2/result.json",
+        "result_json_sha256": "14c910dbc1e5f9951b09bd40752ea864b5813307a8cbac044ba62296a5eac8c2",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/58企业复杂绩效指标与深度战略分析.pdf--f27b6409f9e2_parse.json",
+        "converted_parsed_sha256": "0af68af640c02f6fe2348e7cec791dae093bdd150f37e410223bd26c663e20f2"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/58多线表_纯白无外框_10页更多case.pptx",
+      "source_sha256": "0a5b21bc9aa800b3fa137280b4690ac6fd31ba01fa9d75ff64aebeb18eff070a",
+      "case_id": "c1179a4a375d",
+      "format": "pptx",
+      "page_count": 10,
+      "golden_file": "datasets/半导体场景模拟数据golden/58多线表_纯白无外框_10页更多case.pptx.json",
+      "golden_sha256": "97bc742862e466368fc34d44569b429f7c58f86e85be0495ed5d3e768ef96bf9",
+      "golden_doc_id": "58-_-_10-case_0a5b21bc9a",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/58多线表_纯白无外框_10页更多case.pptx--c1179a4a375d.zip",
+        "zip_sha256": "1cd65b92d8d7676c17eabf0a7183448996174a6f02131f12367ac8daeed58b59",
+        "parse_member": "58多线表_纯白无外框_10页更多case.pptx-019fac80-3168-78b6-aac1-15a192d6357e/58多线表_纯白无外框_10页更多case.pptx_parse.json",
+        "parse_sha256": "c4352f72980a9f5fe1b192f73969491160566fabbb2bb2cf363d5ac089453fab",
+        "parser_config_member": "58多线表_纯白无外框_10页更多case.pptx-019fac80-3168-78b6-aac1-15a192d6357e/debug/config/parser_config_20260729_141214_67375b2b.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 10
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/58多线表_纯白无外框_10页更多case.pptx--c1179a4a375d",
+        "case_tree_sha256": "fdf59ffe1b5a53bdddac217a763800ad0a4e2eaedab79464aa2d99e82d46173f",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/58多线表_纯白无外框_10页更多case.pptx--c1179a4a375d/4bdb08a3-0e12-4941-b21d-ab8d77828824_content_list.json",
+        "content_list_sha256": "d95ed6fe7d360b3cd1084012f59b3c4c06d45ca300bbcffcc8c73194b4159cec",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/58多线表_纯白无外框_10页更多case.pptx--c1179a4a375d_parse.json",
+        "converted_parsed_sha256": "8852255b09e69dc412689d05226ae7e05761c03802cc0b8dba15043c324c8d68"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/58多线表_纯白无外框_10页更多case.pptx--c1179a4a375d",
+        "case_tree_sha256": "ad0506e6c6a395d25d15b8bfc340e61f5096bd9b2662ea01b52371bf1d68d088",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/58多线表_纯白无外框_10页更多case.pptx--c1179a4a375d/result.json",
+        "result_json_sha256": "c8d2a10c0efa30883eba0a6bb904a480e433989fb471d2573e15d8cdf764523b",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/58多线表_纯白无外框_10页更多case.pptx--c1179a4a375d_parse.json",
+        "converted_parsed_sha256": "e8807766853f9bc8cda483575830d721edfb2c7786c8621b2aee6fed3f71b4d1"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/58多线表上方的文字被识别为表格内内容.pdf",
+      "source_sha256": "e6e56991d3188e1dadf1849f34f0b8aed3d4a5f523739bde9ff2de1b1ebf24e8",
+      "case_id": "a449b57f3a4d",
+      "format": "pdf",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/58多线表上方的文字被识别为表格内内容.pdf.json",
+      "golden_sha256": "426ddb6deadaaa2cbbe99183f4c09391ec8fcf9ab7c3dc3c9f439b76da96a173",
+      "golden_doc_id": "58_e6e56991d3",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/58多线表上方的文字被识别为表格内内容.pdf--a449b57f3a4d.zip",
+        "zip_sha256": "d80c2301354dfa8b0966d223951d4974878643c409168ad721713bbe63c201ee",
+        "parse_member": "58多线表上方的文字被识别为表格内内容.pdf-019fac81-431f-72fd-a46d-07ba2150f2c7/58多线表上方的文字被识别为表格内内容.pdf_parse.json",
+        "parse_sha256": "03c3cd90887f58cb73e1378edae7e035f469a13f5980070930345d77b43c58ae",
+        "parser_config_member": "58多线表上方的文字被识别为表格内内容.pdf-019fac81-431f-72fd-a46d-07ba2150f2c7/debug/config/parser_config_20260729_141306_a097503a.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/58多线表上方的文字被识别为表格内内容.pdf--a449b57f3a4d",
+        "case_tree_sha256": "50d95068e134d29b047298497cf58df20b4010900fd29eda71104578bc3f365b",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/58多线表上方的文字被识别为表格内内容.pdf--a449b57f3a4d/fbb442af-33fd-4696-a7c8-e1032da8a248_content_list.json",
+        "content_list_sha256": "649312af1ca8a03f84c65e8d43e9d4620f7b1b66fbdc37766d16a24fd170ef1c",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/58多线表上方的文字被识别为表格内内容.pdf--a449b57f3a4d_parse.json",
+        "converted_parsed_sha256": "f5dd061c810f8db89e06d1bef5259a131d15bfc31a57b83331ccc8b68fe2b1cf"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/58多线表上方的文字被识别为表格内内容.pdf--a449b57f3a4d",
+        "case_tree_sha256": "4658d68d75ea4528732b79386256ce11f3b3ca9d01e1a6a0752cfe8ce894a29f",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/58多线表上方的文字被识别为表格内内容.pdf--a449b57f3a4d/result.json",
+        "result_json_sha256": "f884cec3807c5b8d9dd882c20479e08f39e681914483141dc5739fc6379823b1",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/58多线表上方的文字被识别为表格内内容.pdf--a449b57f3a4d_parse.json",
+        "converted_parsed_sha256": "4c6532cc47317aeebdf0d76cc2b565c0399d506d91ef16ddb1c97193adde74d2"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/58测试表格变文本.docx",
+      "source_sha256": "c9982e148f57a50de7ecf0f577e5e4289c1b6030534128cf2731fe149624c6a2",
+      "case_id": "7bc0b79f67c4",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/58测试表格变文本.docx.json",
+      "golden_sha256": "d5bbc6205308ef728f2caf3c38a36a2754cdefac68bacf101c225515b770588d",
+      "golden_doc_id": "58_c9982e148f",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/58测试表格变文本.docx--7bc0b79f67c4.zip",
+        "zip_sha256": "b1fd3c9f8aca6ccc2ebd15d94333b2be075c6c58f22c0d9b5992ac851488d070",
+        "parse_member": "58测试表格变文本.docx-019fac81-b866-7897-ade1-db5c699d7768/58测试表格变文本.docx_parse.json",
+        "parse_sha256": "aa1ee99923a81a0ca71637a4aed64dace1798e5c38e8a24abe5e8ecdd3066e6a",
+        "parser_config_member": "58测试表格变文本.docx-019fac81-b866-7897-ade1-db5c699d7768/debug/config/parser_config_20260729_141339_85480db0.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/58测试表格变文本.docx--7bc0b79f67c4",
+        "case_tree_sha256": "d165cae858ee6dfadba62eb4adc43e449e05c01b72e71c57f3a342b6c96e24fd",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/58测试表格变文本.docx--7bc0b79f67c4/9f797534-d19c-429e-b9af-ad803e0e9f83_content_list.json",
+        "content_list_sha256": "e94c4e603b5fc52d104b22a3c19974b4f0ef109ddb0371b96cdee2135fd281a2",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/58测试表格变文本.docx--7bc0b79f67c4_parse.json",
+        "converted_parsed_sha256": "74eecdccc0745a3173f980770f8dfd28c7acdc78dc3345c47363e26096078738"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/58测试表格变文本.docx--7bc0b79f67c4",
+        "case_tree_sha256": "413440005a4b0053eb818f4e0fc1607612b9a3f150e1912aee0e4aa640bfeefa",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/58测试表格变文本.docx--7bc0b79f67c4/result.json",
+        "result_json_sha256": "9fcb4610e6536720ffe6ee50b6a9c708d4c8264e90b35ca6030a1e0d2284486e",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/58测试表格变文本.docx--7bc0b79f67c4_parse.json",
+        "converted_parsed_sha256": "00329706943647556e15f3b2c6dd55ee9ce3c1e1e0aeb22a57f96d4d12bbb691"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/80复杂表格空行保留.doc",
+      "source_sha256": "9462d3edae8aabb97f0c5dc7549d2926f1d0bba46deb1175e3b88eded1c4de1a",
+      "case_id": "7127914cba79",
+      "format": "doc",
+      "page_count": 2,
+      "golden_file": "datasets/半导体场景模拟数据golden/80复杂表格空行保留.doc.json",
+      "golden_sha256": "a03ce1d2a5270514d713c0818866b03486aaa2644c35c112e0f5c5f9bdbd799a",
+      "golden_doc_id": "80_9462d3edae",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/80复杂表格空行保留.doc--7127914cba79.zip",
+        "zip_sha256": "af3a5cbb92840c3db7326619a8cb60ad50b78bea1c7cbc001f5f3864cfc8d870",
+        "parse_member": "80复杂表格空行保留.doc-019faccc-5ffc-7aaa-81dd-0762b2b3acb9/80复杂表格空行保留.doc_parse.json",
+        "parse_sha256": "f3ac06fc9e10d19983d02c228f255c98a92943517750e79b245c998aeb74cde9",
+        "parser_config_member": "80复杂表格空行保留.doc-019faccc-5ffc-7aaa-81dd-0762b2b3acb9/debug/config/parser_config_20260729_153513_a7f9283d.yaml",
+        "parser_config_sha256": "7929c89c88058ba31812c8eee55f2dcfb5a6e0c629c791fd1f99cb02b9a9bab9",
+        "config_group": "vlm=inherit;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/80复杂表格空行保留.doc--7127914cba79",
+        "case_tree_sha256": "36294031d850fd1aaa275030be5e26239f06d8fbefa1465025c47e9395736d66",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/80复杂表格空行保留.doc--7127914cba79/038e858b-d5db-4e87-9dbb-9250eea9850b_content_list.json",
+        "content_list_sha256": "0818d1aba39386eb02ba752359617f34f69f73f6bdf8600e3d412ac7b401c729",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/80复杂表格空行保留.doc--7127914cba79_parse.json",
+        "converted_parsed_sha256": "3a074ba1dcae1a138ae21b814ad1c2ce852c71d942d22ac640c31da0d17bcea1"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/80复杂表格空行保留.doc--7127914cba79",
+        "case_tree_sha256": "5bb940bb9d0717185a52f2406f34a9a7a62d0eb2640498564c7eb1dd631dc61e",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/80复杂表格空行保留.doc--7127914cba79/result.json",
+        "result_json_sha256": "1b8ef0106f35ec2f5473da410f0f3ee0e13c4c0e8f25ca1704e365e0925c3943",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/80复杂表格空行保留.doc--7127914cba79_parse.json",
+        "converted_parsed_sha256": "2881d9dd04b0dbe29f63b55a2e772783a85011ea9a28325f9464181d95886aee"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/80表格多行被识别成多行单元格.docx",
+      "source_sha256": "5a74ba31737e9740f9360000741028299223aa3593894c738a8ca2be3afed28b",
+      "case_id": "4d777006c3f0",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/80表格多行被识别成多行单元格.docx.json",
+      "golden_sha256": "4924c90088d64bec9e94cbfa4b2fd841e7d7dc1775a0da9955c6439d00d4e52b",
+      "golden_doc_id": "80_5a74ba3173",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/80表格多行被识别成多行单元格.docx--4d777006c3f0.zip",
+        "zip_sha256": "bf53a4461b84557283bd014e07a3f88c4f3dc20199f1eaba2da47943580e5f69",
+        "parse_member": "80表格多行被识别成多行单元格.docx-019fac83-5307-7d94-b7a4-a90a5645953b/80表格多行被识别成多行单元格.docx_parse.json",
+        "parse_sha256": "d42e555f77b4b90d6aaa6b44c027f35ef5ed16bf496cf59ebdced9139e5f7183",
+        "parser_config_member": "80表格多行被识别成多行单元格.docx-019fac83-5307-7d94-b7a4-a90a5645953b/debug/config/parser_config_20260729_141522_e34fe9c4.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/80表格多行被识别成多行单元格.docx--4d777006c3f0",
+        "case_tree_sha256": "e8468a09f1d0fbd96ba8c3b618a2abe28808d740d64fa8c316ee6610026d510b",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/80表格多行被识别成多行单元格.docx--4d777006c3f0/c301360b-8e00-47bc-8882-b1111efa2a48_content_list.json",
+        "content_list_sha256": "ad4cd012e47d648013164afaedb7c3d1ecae8028a616756e546d5294fe10a750",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/80表格多行被识别成多行单元格.docx--4d777006c3f0_parse.json",
+        "converted_parsed_sha256": "7ba7881b924be6f8285cea6fe82aa093295e521df6ead1f2ca5f303c53d8f79d"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/80表格多行被识别成多行单元格.docx--4d777006c3f0",
+        "case_tree_sha256": "a4a6e01b23fc8074c9d58e39e29f33021703c40f0bbd536d58018aae43c3da25",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/80表格多行被识别成多行单元格.docx--4d777006c3f0/result.json",
+        "result_json_sha256": "afcbcb494096da6f4745fcff7647c31045aaa2878582343d6796d2f62523775d",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/80表格多行被识别成多行单元格.docx--4d777006c3f0_parse.json",
+        "converted_parsed_sha256": "bd5c77364d1e1dc3da92395b943be1cf5d6d13ea28df0ec5a46a6478868700ef"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/82公式识别线性回归 2.pptx",
+      "source_sha256": "f8a05ad658a3b2e1b19d8ce4441b4f1d4366d088348d8919c87ebd6511df9643",
+      "case_id": "1c25b542c56c",
+      "format": "pptx",
+      "page_count": 2,
+      "golden_file": "datasets/半导体场景模拟数据golden/82公式识别线性回归 2.pptx.json",
+      "golden_sha256": "70f966cc13fe86abf366ed2657d4d643ad214d3b6c40f83b20ce091169383c47",
+      "golden_doc_id": "82-2_f8a05ad658",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/82公式识别线性回归 2.pptx--1c25b542c56c.zip",
+        "zip_sha256": "ddce4589ea868a727f235235ce133917f0b15316e3f006bebedad768046a88e2",
+        "parse_member": "82公式识别线性回归 2.pptx-019fac83-dbda-7a83-ac58-19e22aa56897/82公式识别线性回归 2.pptx_parse.json",
+        "parse_sha256": "fed6bd7020bb830a6e3916d2b974f9d51af7ea6ac3a85aefde2a4c5c044c0702",
+        "parser_config_member": "82公式识别线性回归 2.pptx-019fac83-dbda-7a83-ac58-19e22aa56897/debug/config/parser_config_20260729_141601_6f9a8dbd.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/82公式识别线性回归 2.pptx--1c25b542c56c",
+        "case_tree_sha256": "ee9c0358da653159e68e563f94d74be4cdb45dec279a89baf32bca4243cd7466",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/82公式识别线性回归 2.pptx--1c25b542c56c/f65d3558-95b0-4ad3-b217-fbf686ee3cb9_content_list.json",
+        "content_list_sha256": "f115902484f631d22d56150df853a0dae2e070fcd48d07749a662555c167763c",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/82公式识别线性回归 2.pptx--1c25b542c56c_parse.json",
+        "converted_parsed_sha256": "79fb2e7e8bf3cb9e477ddd069f36c52a0be47865294e49ea4fb5266696df612c"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/82公式识别线性回归 2.pptx--1c25b542c56c",
+        "case_tree_sha256": "72d0a549d34f5d94cec4985317519438c9b13410e97667746c9c93471b2c6b69",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/82公式识别线性回归 2.pptx--1c25b542c56c/result.json",
+        "result_json_sha256": "03a43a1eede685bec21c1d7eb3362e7d85f35050029f921eaec4f3c5f2016eb4",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/82公式识别线性回归 2.pptx--1c25b542c56c_parse.json",
+        "converted_parsed_sha256": "f36e52deeaca539e681b57ec5b633502cc007112ecf11065e44042ef76546102"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/82多行公式单页特殊情况构建.pptx",
+      "source_sha256": "4c6010a653f0261e542bb88dea5659f20e3185a9906489e120641d10b9742fe9",
+      "case_id": "c6194a517e06",
+      "format": "pptx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/82多行公式单页特殊情况构建.pptx.json",
+      "golden_sha256": "93342d0c0f630b4c23326e93644ba455036469c388369f520c18083985ab915d",
+      "golden_doc_id": "82_4c6010a653",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/82多行公式单页特殊情况构建.pptx--c6194a517e06.zip",
+        "zip_sha256": "829b743bbd22ed55f0ebc17eb962782d367dad33177c3869f35a40801198ce72",
+        "parse_member": "82多行公式单页特殊情况构建.pptx-019fac84-9f64-7799-bd8c-a3dcd971501a/82多行公式单页特殊情况构建.pptx_parse.json",
+        "parse_sha256": "a0f682234bc4c4e459b248abba09dc528b2ad2faeac8770ce56acec558f9032e",
+        "parser_config_member": "82多行公式单页特殊情况构建.pptx-019fac84-9f64-7799-bd8c-a3dcd971501a/debug/config/parser_config_20260729_141649_fa61edb0.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/82多行公式单页特殊情况构建.pptx--c6194a517e06",
+        "case_tree_sha256": "30f3e30376f57572c03a5f332bfbe2d9b905f0843a0b2195739c4e1423de128d",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/82多行公式单页特殊情况构建.pptx--c6194a517e06/1ecaed24-a1ca-4630-9da1-f89f3d508cf5_content_list.json",
+        "content_list_sha256": "fc60e2feed5964a549c2bd5514f13e41f22a1a181786374f2d293121c855920c",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/82多行公式单页特殊情况构建.pptx--c6194a517e06_parse.json",
+        "converted_parsed_sha256": "0ef7ea55a94ecdb281f262d99da128e93713720cd406851a881d549654b3b924"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/82多行公式单页特殊情况构建.pptx--c6194a517e06",
+        "case_tree_sha256": "0a799c3e20cab508df1cab18a634bf5f74e644e86b5bc8b651b8fb8fab2a829a",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/82多行公式单页特殊情况构建.pptx--c6194a517e06/result.json",
+        "result_json_sha256": "9b808e255b3062c53e141aaddae82b48f031ee2c2074930fa25b7bc4a094b340",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/82多行公式单页特殊情况构建.pptx--c6194a517e06_parse.json",
+        "converted_parsed_sha256": "4e2655c22e53a0234a8b291adcee9c27a6e8d2859908a4d225773363a849ce41"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/83文字识别错误.docx",
+      "source_sha256": "9a8a0ef637e3a901d44aee00da15a42ef2bb1b3228c63fa0c4485a3d142797ec",
+      "case_id": "4e37b266b997",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/83文字识别错误.docx.json",
+      "golden_sha256": "95563f88a21f0bb5808c5f6a40f7fe563dca61bd6e25bbbf2e907c0cb5509f97",
+      "golden_doc_id": "83_9a8a0ef637",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/83文字识别错误.docx--4e37b266b997.zip",
+        "zip_sha256": "5c46cccbe7bbaaaf07d7992300c50ddd010843cc1648bfef6ead9ff2c01c09ed",
+        "parse_member": "83文字识别错误.docx-019fac85-14be-776a-9e86-99984f668a03/83文字识别错误.docx_parse.json",
+        "parse_sha256": "ea6e7e996136339166c425f75c5396104235c9e12285b815af84f814d89dfbd7",
+        "parser_config_member": "83文字识别错误.docx-019fac85-14be-776a-9e86-99984f668a03/debug/config/parser_config_20260729_141716_25d27fa1.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/83文字识别错误.docx--4e37b266b997",
+        "case_tree_sha256": "ffe56bccf3331277fae6782a6dadc3c0363b38e9f1ed47895a8c29f925e82e6f",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/83文字识别错误.docx--4e37b266b997/b950936b-7477-4e45-b769-e5f294042529_content_list.json",
+        "content_list_sha256": "e0aa6f5fe00cde14424ca5e3e7428a381f1fd408959ccb3d6f0a7907c9571b9f",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/83文字识别错误.docx--4e37b266b997_parse.json",
+        "converted_parsed_sha256": "b9f5e8f711acc19164952ce311a465db471bdc5e2cf879c8386837a0b41bbc17"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/83文字识别错误.docx--4e37b266b997",
+        "case_tree_sha256": "0961e501c7325a53e89d35abf138d23990fe481df89674196d20eb74d14c4903",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/83文字识别错误.docx--4e37b266b997/result.json",
+        "result_json_sha256": "af611c134e7af7e81b85473999f9d3f4ab45c648bc13f0e02570cd63facc16c9",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/83文字识别错误.docx--4e37b266b997_parse.json",
+        "converted_parsed_sha256": "8a9e1c218633e04978bfd7473be2bb2a3dc2eac872e8f0def894c92bf78cd595"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/84&12合并单元格被拆分异常情况.docx",
+      "source_sha256": "faed7c59a22adaef47ea56a090a04e7361cb653fa44b51d2366781f5ce95f79b",
+      "case_id": "7e93e5ce7ad7",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/84&12合并单元格被拆分异常情况.docx.json",
+      "golden_sha256": "5969764ce2fe04750c02ead2c75b80781a3ef10fc4d13a6f16b3af4a354473ad",
+      "golden_doc_id": "84-12_faed7c59a2",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/84&12合并单元格被拆分异常情况.docx--7e93e5ce7ad7.zip",
+        "zip_sha256": "41d386a5fe866d5dcd5c367bbe9eb8cc366b195593164e06d13f49ffe7393319",
+        "parse_member": "84&12合并单元格被拆分异常情况.docx-019fac85-8a0b-7130-a8b3-2a9c21531939/84&12合并单元格被拆分异常情况.docx_parse.json",
+        "parse_sha256": "4a8ce285b359236c1a27d2ba22a07ce3cad27f98638a3a09b05715694c62cf4a",
+        "parser_config_member": "84&12合并单元格被拆分异常情况.docx-019fac85-8a0b-7130-a8b3-2a9c21531939/debug/config/parser_config_20260729_141746_d2364a0d.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/84&12合并单元格被拆分异常情况.docx--7e93e5ce7ad7",
+        "case_tree_sha256": "759b605bb7621adff3a601b778b220f0e98a3a095c888cf3a40a3d97ff2069c8",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/84&12合并单元格被拆分异常情况.docx--7e93e5ce7ad7/1c846112-4f6e-4fd9-b1c4-3c0484a850c9_content_list.json",
+        "content_list_sha256": "524637082b836b34d25ec443e0f65ca042cde6c54a0b79297c97f8e8b947c431",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/84&12合并单元格被拆分异常情况.docx--7e93e5ce7ad7_parse.json",
+        "converted_parsed_sha256": "a4b74f63a7c7e4173cf38143690d78b57608477683cd898c8f62c59e0cc46bbf"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/84&12合并单元格被拆分异常情况.docx--7e93e5ce7ad7",
+        "case_tree_sha256": "ca0e7b5fef1068685d94b391b48d4204f0b4d3a0c9534c0ef5f76c20960b297d",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/84&12合并单元格被拆分异常情况.docx--7e93e5ce7ad7/result.json",
+        "result_json_sha256": "bc02474d7980f979804862d5f8b5792fd71f6631bd510add712d4bf05e719388",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/84&12合并单元格被拆分异常情况.docx--7e93e5ce7ad7_parse.json",
+        "converted_parsed_sha256": "d0f74e650ddc8904440839e8f2d17515d75605d73cf1a7145bcf523f276bc00b"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/86PPT板式识别不好9台.pptx",
+      "source_sha256": "2f0b0d8ef7dc32994be022d7c64ae1430827a71a983b7beb6951f2583f6323f9",
+      "case_id": "6f69d164879d",
+      "format": "pptx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/86PPT板式识别不好9台.pptx.json",
+      "golden_sha256": "06b3f9f23795b90467c29cf2a0e7bf595c63ffba843205a2b3cc382c236f0729",
+      "golden_doc_id": "86PPT-9_2f0b0d8ef7",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/86PPT板式识别不好9台.pptx--6f69d164879d.zip",
+        "zip_sha256": "24e9201f7d552c77691f1df23bf186b3544d2823de8ea107919ffa97796e648b",
+        "parse_member": "86PPT板式识别不好9台.pptx-019fac86-2674-721b-a6b6-081ec7543155/86PPT板式识别不好9台.pptx_parse.json",
+        "parse_sha256": "aa81a0097660df26a7d5debbf915435a65d80cdba801d510536627d31734c451",
+        "parser_config_member": "86PPT板式识别不好9台.pptx-019fac86-2674-721b-a6b6-081ec7543155/debug/config/parser_config_20260729_141907_7b1185bb.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/86PPT板式识别不好9台.pptx--6f69d164879d",
+        "case_tree_sha256": "c013b32b4d71265c8c6058f0e4edbfc9b253301c94e26002cf6534b7b3feb300",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/86PPT板式识别不好9台.pptx--6f69d164879d/e3aba7c3-8125-491a-81ce-c99751b1ee97_content_list.json",
+        "content_list_sha256": "4cb9a42abda71d5ff4556b0be8285c7b0bea03caea2c21ab2a43d4cb0b814466",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/86PPT板式识别不好9台.pptx--6f69d164879d_parse.json",
+        "converted_parsed_sha256": "b6c7ea2e127e2484e074a9338057683847062ba6e5c197200c89bfc0f49b61ef"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/86PPT板式识别不好9台.pptx--6f69d164879d",
+        "case_tree_sha256": "8629b9c3c1b7517281b645460a1a4546304e75401806dc943f8a52db783da2f6",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/86PPT板式识别不好9台.pptx--6f69d164879d/result.json",
+        "result_json_sha256": "3330d194985e3d4212e181531b27e74e61e1e2cebc9650585610d89ccce42dc7",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/86PPT板式识别不好9台.pptx--6f69d164879d_parse.json",
+        "converted_parsed_sha256": "bad5168d33346f19529be89ceeadb60a98cff2e1b58f31d9c931a90a54a9d2ce"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/86版式识别和公式YMS_mock_page14.pptx",
+      "source_sha256": "fd122c7dee521a44031de06afdd362a2a7fd66e93d5f4487cdce4607c29881ad",
+      "case_id": "409c2dbff424",
+      "format": "pptx",
+      "page_count": 4,
+      "golden_file": "datasets/半导体场景模拟数据golden/86版式识别和公式YMS_mock_page14.pptx.json",
+      "golden_sha256": "60a44023ad7467dd1bf00a005f6e748e036df60e2cc0ec4502c319ad99de9cb7",
+      "golden_doc_id": "86-YMS_mock_page14_fd122c7dee",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/86版式识别和公式YMS_mock_page14.pptx--409c2dbff424.zip",
+        "zip_sha256": "f58477a44c9a2abe0785f2a45576d1940e6d8781c92abfc6e459f0bde5e4a4b0",
+        "parse_member": "86版式识别和公式YMS_mock_page14.pptx-019fac87-3846-73a5-95fe-a2c758732802/86版式识别和公式YMS_mock_page14.pptx_parse.json",
+        "parse_sha256": "798d004fae0fffa65f3f0fd5e164aaac3b0b13a4c76ba8a4fe39769b92172526",
+        "parser_config_member": "86版式识别和公式YMS_mock_page14.pptx-019fac87-3846-73a5-95fe-a2c758732802/debug/config/parser_config_20260729_141945_8fb07002.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 4
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/86版式识别和公式YMS_mock_page14.pptx--409c2dbff424",
+        "case_tree_sha256": "72d37cdd2936dc93bfcdd9dbd7f8784e5af7204a51a6c9d6ee8f235ab7a9a707",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/86版式识别和公式YMS_mock_page14.pptx--409c2dbff424/132d80ef-6133-4429-ba00-d37ec618e81b_content_list.json",
+        "content_list_sha256": "be6e280a242c03c42d8228fb4cf3c777ab6f0a3e77817434655529af638b658f",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/86版式识别和公式YMS_mock_page14.pptx--409c2dbff424_parse.json",
+        "converted_parsed_sha256": "81d990f6186892da1f871a8a40fcf53989d018613d9d8023beb512c7f807083e"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/86版式识别和公式YMS_mock_page14.pptx--409c2dbff424",
+        "case_tree_sha256": "a9ab1d90e167fed093faf7dd8cc8edd701ff8d2a8b197215fb0fd0077a2cfc72",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/86版式识别和公式YMS_mock_page14.pptx--409c2dbff424/result.json",
+        "result_json_sha256": "00e29eeab63769e099df3d089f52fc6efe36e99426efcf46b87f457a7139eda3",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/86版式识别和公式YMS_mock_page14.pptx--409c2dbff424_parse.json",
+        "converted_parsed_sha256": "bc5814291c3007fd9e1e56d59ade94fcfc002d40e20489db7c03b38806f57ea7"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/93大的流程图别切成多个小图片.pdf",
+      "source_sha256": "6b36bd45dcc5014d28313aae9c4aa93294d1332c76c0f9b50a66f90f65b91170",
+      "case_id": "a074b020027c",
+      "format": "pdf",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/93大的流程图别切成多个小图片.pdf.json",
+      "golden_sha256": "05ddaf80d4640e5df43c4b6324c6262204c28c21927bd3581cae2f970e35c243",
+      "golden_doc_id": "93_6b36bd45dc",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/93大的流程图别切成多个小图片.pdf--a074b020027c.zip",
+        "zip_sha256": "748e98b4cd59fb196f1f94f0ddcb0a064d6eeeb810c10d55e2de78f47f73d118",
+        "parse_member": "93大的流程图别切成多个小图片.pdf-019fb299-f007-7a77-a571-55eaceaf1142/93大的流程图别切成多个小图片.pdf_parse.json",
+        "parse_sha256": "7ad239b82b5a4897eba4d5c09bc7391286efa211113efe4a178ca8c574e5c7d0",
+        "parser_config_member": "93大的流程图别切成多个小图片.pdf-019fb299-f007-7a77-a571-55eaceaf1142/debug/config/parser_config_20260730_183851_185561d9.yaml",
+        "parser_config_sha256": "2004a33fcd35d67940b7c7c06fe3499c72684f07d61c5f51cce09605dedda05f",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=true",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": true,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/93大的流程图别切成多个小图片.pdf--a074b020027c",
+        "case_tree_sha256": "36ac6a03f9d1cdb5cb8826d9e9ff688aa1128771adc5c702526aecfccb230e59",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/93大的流程图别切成多个小图片.pdf--a074b020027c/e210a658-8c23-451b-aac8-107f07f4b708_content_list.json",
+        "content_list_sha256": "1c84dae994848d4fe3d73932293064c8edbd5a26e48b893e6d08aa15bfe6babb",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/93大的流程图别切成多个小图片.pdf--a074b020027c_parse.json",
+        "converted_parsed_sha256": "af0a0eaec8be77fb72ae61e0b6aac7beee4794e639f0ab09c64d7fb739ee944a"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/93大的流程图别切成多个小图片.pdf--a074b020027c",
+        "case_tree_sha256": "cf35b320233a8b43924764786cf16c86a0d44f4a31a45e275085b52844fbbfd5",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/93大的流程图别切成多个小图片.pdf--a074b020027c/result.json",
+        "result_json_sha256": "5435f98c09f1df50ed37f8ddf3a51b1b61f03241dd0b259103d4dd5ce8c4c364",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/93大的流程图别切成多个小图片.pdf--a074b020027c_parse.json",
+        "converted_parsed_sha256": "9bedd8025c91693e1e774e42b44d86a82d7e4b75c9e0b778f87165f79c9dda82"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/97TagDes带正文识别为标题.docx",
+      "source_sha256": "3770cb523c1e48d6350ee8ff7a80f166d1f0078b2aaa02f771afbf610992a8e1",
+      "case_id": "65e17ed6aaa4",
+      "format": "docx",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/97TagDes带正文识别为标题.docx.json",
+      "golden_sha256": "885aa7f080c3c0b14a31613908e1685f9a3bc31205cbb2ef734cff6b47fd7138",
+      "golden_doc_id": "97TagDes_3770cb523c",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/97TagDes带正文识别为标题.docx--65e17ed6aaa4.zip",
+        "zip_sha256": "211753c31047755c8568cf801c1513b9e5bb2967b9de5d02085af97eda9aa9c2",
+        "parse_member": "97TagDes带正文识别为标题.docx-019fb267-0786-7d2f-8e07-84c4d3130e34/97TagDes带正文识别为标题.docx_parse.json",
+        "parse_sha256": "bcc59591f1d07e67c4b146e8f7bec76088b952081a466a7962cf79f08f9b355b",
+        "parser_config_member": "97TagDes带正文识别为标题.docx-019fb267-0786-7d2f-8e07-84c4d3130e34/debug/config/parser_config_20260730_174322_2b4d27bb.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/97TagDes带正文识别为标题.docx--65e17ed6aaa4",
+        "case_tree_sha256": "fbdb504eefa82628da1865ad3031920066853c2a096eb9b1821479f4dc4da08e",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/97TagDes带正文识别为标题.docx--65e17ed6aaa4/172f4454-7f62-4895-8bb2-b8f06182ad69_content_list.json",
+        "content_list_sha256": "d7168b04b1127abd435e864698926d829eadf85b8d022777f7ae0bb69cd962f7",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/97TagDes带正文识别为标题.docx--65e17ed6aaa4_parse.json",
+        "converted_parsed_sha256": "b2fa90c082e9f9884194542000a49e8ab5bbd32c63ed1d71c94f9ee6fe2c72c6"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/97TagDes带正文识别为标题.docx--65e17ed6aaa4",
+        "case_tree_sha256": "0dd8f52f3d733b7a9a70821c7fdb8ba8045e3b93bb7c378f51c9f87fec95d57c",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/97TagDes带正文识别为标题.docx--65e17ed6aaa4/result.json",
+        "result_json_sha256": "0c976f348f79ed2460499f326e41f48e478552f86999a31dcfb9bf5f6964a366",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/97TagDes带正文识别为标题.docx--65e17ed6aaa4_parse.json",
+        "converted_parsed_sha256": "2c3bddd9214842bfd4355fd81a20e02c1b8e2f92c7a263be4e315caf0f60a4d6"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/97TagDes带正文识别为标题.pdf",
+      "source_sha256": "1251b61763d3915d0ba4668739fb0c19cfe780c87faae7743b3cb0c8061b9838",
+      "case_id": "5d0ade90f390",
+      "format": "pdf",
+      "page_count": 1,
+      "golden_file": "datasets/半导体场景模拟数据golden/97TagDes带正文识别为标题.pdf.json",
+      "golden_sha256": "d018f8cb9fdbf73ba4d6fc280aa2e0985def545735cf05d742de5704b07dbb8a",
+      "golden_doc_id": "97TagDes_1251b61763",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/97TagDes带正文识别为标题.pdf--5d0ade90f390.zip",
+        "zip_sha256": "c6a4f131a3cf84231c26dd835402954c19c865a7ddb3cca779cd110a11df0dcc",
+        "parse_member": "97TagDes带正文识别为标题.pdf-019fac8d-7b8a-73a1-8edb-9ca9701b2bd9/97TagDes带正文识别为标题.pdf_parse.json",
+        "parse_sha256": "ec698acc078cb717a90bdaec14d9bbc51d36dfe3cf8467de42cebcc76bcc0393",
+        "parser_config_member": "97TagDes带正文识别为标题.pdf-019fac8d-7b8a-73a1-8edb-9ca9701b2bd9/debug/config/parser_config_20260729_142634_41fb48e5.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 1
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/97TagDes带正文识别为标题.pdf--5d0ade90f390",
+        "case_tree_sha256": "dcdd96162afba4c43334b60490537f1307bc34935250d6f1cb15baa4ef15c568",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/97TagDes带正文识别为标题.pdf--5d0ade90f390/3dc137ec-8bdc-4d24-9af2-6fc51d952383_content_list.json",
+        "content_list_sha256": "6e79454d43a17bf190e7ad890b2bd9b6256e6e2f416acc274fd0fbb2295afcf5",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/97TagDes带正文识别为标题.pdf--5d0ade90f390_parse.json",
+        "converted_parsed_sha256": "6dc28e52e359cc84baddcf888457e226bb0f8db71ab4fa51061b88632feba1da"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/97TagDes带正文识别为标题.pdf--5d0ade90f390",
+        "case_tree_sha256": "2e686d8d8dd5ef8c2595a2d3251ac5b85bf895aee7cc36471a5d34fda39a7038",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/97TagDes带正文识别为标题.pdf--5d0ade90f390/result.json",
+        "result_json_sha256": "5d79d3ac7d5d4d9c9346d1f0ac359301cce9803f0e6d89d8bba18de724fdcccd",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/97TagDes带正文识别为标题.pdf--5d0ade90f390_parse.json",
+        "converted_parsed_sha256": "d3bdceba2c5cd2029d8627b0b5d6ebc718ab9bda2dae31dccf715924b81ac92f"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/98 3000页页眉页脚误识别为标题.docx",
+      "source_sha256": "775000eed780b929f17c3cb94e3756fed1bb748fb09490af13d3356c8f05043a",
+      "case_id": "41bb2d08b54b",
+      "format": "docx",
+      "page_count": 3,
+      "golden_file": "datasets/半导体场景模拟数据golden/98 3000页页眉页脚误识别为标题.docx.json",
+      "golden_sha256": "56ea1b1b99b2a21fa0eb49e5a6586245f90913b4bcdf3b26a413243b3d02c97c",
+      "golden_doc_id": "98-3000_775000eed7",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/98 3000页页眉页脚误识别为标题.docx--41bb2d08b54b.zip",
+        "zip_sha256": "a1d5ec2b4ef9dcacc1cbec57e748b5eff38f91bb8dfe5ac2b2e3ccde404c07f2",
+        "parse_member": "98 3000页页眉页脚误识别为标题.docx-019fac8e-2bba-790c-a707-f9cc1ffe6dd8/98 3000页页眉页脚误识别为标题.docx_parse.json",
+        "parse_sha256": "89c41dd978461acbee7fed21ce54c5833aaeead7ce68903774c41005b2499ea8",
+        "parser_config_member": "98 3000页页眉页脚误识别为标题.docx-019fac8e-2bba-790c-a707-f9cc1ffe6dd8/debug/config/parser_config_20260729_142724_9d3c362a.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 3
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/98 3000页页眉页脚误识别为标题.docx--41bb2d08b54b",
+        "case_tree_sha256": "3dc1a9e7b3adb6f1b74b3aaf93df20cf106e225517e3000819a273c8657da038",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/98 3000页页眉页脚误识别为标题.docx--41bb2d08b54b/df491531-b728-4e1b-ac38-46fea6b20eb6_content_list.json",
+        "content_list_sha256": "08af8a3802a3c7fddd5babf1c7edf98ef10c6f97a6032da113374f3568a85d33",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/98 3000页页眉页脚误识别为标题.docx--41bb2d08b54b_parse.json",
+        "converted_parsed_sha256": "d906f8f6c2a6bd1a5e79ea1bad41c12ed4122919ed4909001890dce2d8721a40"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/98 3000页页眉页脚误识别为标题.docx--41bb2d08b54b",
+        "case_tree_sha256": "fff71bb463364059eb3dd331183620198a5972f5e9b5a46dc942a4abed48c295",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/98 3000页页眉页脚误识别为标题.docx--41bb2d08b54b/result.json",
+        "result_json_sha256": "e87e91008886aa80185c9763edeedd26db5edb442b719597da663bc8f7f1f5ae",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/98 3000页页眉页脚误识别为标题.docx--41bb2d08b54b_parse.json",
+        "converted_parsed_sha256": "61cb15b89c0c77a150b09c54e4b9f70535536e42c7f4991e1f9d331ba017666f"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/APFP Description Document1-已融合.pdf",
+      "source_sha256": "4a2fab45d97d8e772121db419c21dafa51076eb13d9f82348fd2ed7b8ddc7317",
+      "case_id": "9dffe40361c3",
+      "format": "pdf",
+      "page_count": 13,
+      "golden_file": "datasets/半导体场景模拟数据golden/APFP Description Document1-已融合.pdf.json",
+      "golden_sha256": "f2be4d08325daafa643b035b9dfea30e96a27a352e41075927972285620fbded",
+      "golden_doc_id": "APFP-Description-Document1_4a2fab45d9",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/APFP Description Document1-已融合.pdf--9dffe40361c3.zip",
+        "zip_sha256": "9e38a96698ec6c6689d17852b0f6ffb1fdc1bafb4813b922419a213d5bd0b1ca",
+        "parse_member": "APFP Description Document1-已融合.pdf-019fb268-a22f-7a06-9d05-d35679d730a4/APFP Description Document1-已融合.pdf_parse.json",
+        "parse_sha256": "0aafefdc89779b38e9440fc2331dcd6c295e109d25c69ca6132bb2ac90a89b9d",
+        "parser_config_member": "APFP Description Document1-已融合.pdf-019fb268-a22f-7a06-9d05-d35679d730a4/debug/config/parser_config_20260730_174450_e0471867.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 13
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/APFP Description Document1-已融合.pdf--9dffe40361c3",
+        "case_tree_sha256": "83648d9669403b42e88bb5347aa04b907f777be07d4dbf6686b1cdc8950509fc",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/APFP Description Document1-已融合.pdf--9dffe40361c3/e20ae5af-1525-43da-9e34-e9563a8fa834_content_list.json",
+        "content_list_sha256": "54a3d0fc368d0b85999832f553898731fbad23ea881b99d7a2e3347983093ce8",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/APFP Description Document1-已融合.pdf--9dffe40361c3_parse.json",
+        "converted_parsed_sha256": "632066e5110949ba0f0b8d83731bd45c8d7c139c1f6aafb3d1d519a6c407a47f"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/APFP Description Document1-已融合.pdf--9dffe40361c3",
+        "case_tree_sha256": "6b89f93d30a40615b126546680aa9e150b6488a71110529f45d5720bddf23afb",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/APFP Description Document1-已融合.pdf--9dffe40361c3/result.json",
+        "result_json_sha256": "270f2a792d34c3ff012b26e0874f33f69c83745143810d38fddf21d7dedb6cf8",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/APFP Description Document1-已融合.pdf--9dffe40361c3_parse.json",
+        "converted_parsed_sha256": "fce78c161fccd3d75525ac81fa29989061a330f8b2832e37171908110a8cc2c6"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/中芯国际文档解析项目_鱼骨图.pdf",
+      "source_sha256": "2a42f56ac6f2e76b444f699ef1caadff46a53a25767541a84b89322a4b72dd58",
+      "case_id": "84949e249544",
+      "format": "pdf",
+      "page_count": 6,
+      "golden_file": "datasets/半导体场景模拟数据golden/中芯国际文档解析项目_鱼骨图.pdf.json",
+      "golden_sha256": "d1d0709aa895bdea5fcc3037d8130a609778a194a3659f8a6b3eb42dd0f6d95f",
+      "golden_doc_id": "__2a42f56ac6",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/中芯国际文档解析项目_鱼骨图.pdf--84949e249544.zip",
+        "zip_sha256": "1f525a8d1b9505e6bfd7de4097aca0445bb2987996dcaba34266cc5763012f10",
+        "parse_member": "中芯国际文档解析项目_鱼骨图.pdf-019fac93-bf77-7d1b-b0c9-3823153ca196/中芯国际文档解析项目_鱼骨图.pdf_parse.json",
+        "parse_sha256": "4e472e5c050cb0396b35942ebfc63a6c1b85246cec0579a0f7aac0a9b9dfbce2",
+        "parser_config_member": "中芯国际文档解析项目_鱼骨图.pdf-019fac93-bf77-7d1b-b0c9-3823153ca196/debug/config/parser_config_20260729_143326_5d2134dc.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 6
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/中芯国际文档解析项目_鱼骨图.pdf--84949e249544",
+        "case_tree_sha256": "484f48e392ea4ec6e2ea96a02a1693540f79e1ba4a3b94e1f32c160417973728",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/中芯国际文档解析项目_鱼骨图.pdf--84949e249544/87f0afd8-3057-4193-8377-5cd2755e08e7_content_list.json",
+        "content_list_sha256": "4c5a868cfc889ade98efe3421fe68d226fb66904d5c2d63e7d01715d9408d947",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/中芯国际文档解析项目_鱼骨图.pdf--84949e249544_parse.json",
+        "converted_parsed_sha256": "d1eefe7f6d36aaa8025143ddf4d602e0ea18fae2888bf5b8056c7ee18198d673"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/中芯国际文档解析项目_鱼骨图.pdf--84949e249544",
+        "case_tree_sha256": "3e69f06b70da2e0403a015664d3da95dd58c310202d66f5fb5514126993601e0",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/中芯国际文档解析项目_鱼骨图.pdf--84949e249544/result.json",
+        "result_json_sha256": "3ddb6d74ebec3e98bb4fdfa6799ebcfe0be98985a66148671a108f579b0ccf57",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/中芯国际文档解析项目_鱼骨图.pdf--84949e249544_parse.json",
+        "converted_parsed_sha256": "6d64a030d59d9575ac788ef1e78ee09d570a05f30f76cf65c70ced9f54adba6e"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/基础解析_01.pdf",
+      "source_sha256": "6b76bc058ab95fad7097f7144d7a1dce5cfd4f817946c0b005766cafaf800443",
+      "case_id": "c5eec9324671",
+      "format": "pdf",
+      "page_count": 2,
+      "golden_file": "datasets/半导体场景模拟数据golden/基础解析_01.pdf.json",
+      "golden_sha256": "cc7f9c50fece3eeb38847edfc035396508a06bf376b1f73abf65b39b228df0f3",
+      "golden_doc_id": "_01_6b76bc058a",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/基础解析_01.pdf--c5eec9324671.zip",
+        "zip_sha256": "b987ffa89bfd2fb25d4d77ee2c36b4988184f79ceea4d3f8807a852bfd6576ce",
+        "parse_member": "基础解析_01.pdf-019fac94-bda5-738a-bf3e-97406379eaf6/基础解析_01.pdf_parse.json",
+        "parse_sha256": "2cee1afefe23e1755277af9581b62fc19014f35d4aa9fb94ad9617e0ca264737",
+        "parser_config_member": "基础解析_01.pdf-019fac94-bda5-738a-bf3e-97406379eaf6/debug/config/parser_config_20260729_143426_d6d417b8.yaml",
+        "parser_config_sha256": "7e8518169e3aa66eb92f8646042f4e94418d672a529f83a26a81f5ec34c5d3a2",
+        "config_group": "vlm=inherit;libreoffice=false;image_fragment=false",
+        "selected_config": {
+          "vlm_model": null,
+          "enable_doc_libreoffice_openxml": false,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 2
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/基础解析_01.pdf--c5eec9324671",
+        "case_tree_sha256": "ebd72315a9e7a73a8d61e1dbfb2aade3a79650325ac2e80a0905165c14d19dfb",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/基础解析_01.pdf--c5eec9324671/f0d44121-10f6-4e3f-8124-08b8b4f9b76c_content_list.json",
+        "content_list_sha256": "a3f37698c9260e7a42a6d31e94b21c1db401e0b8af1ef291dde8e159ef93c3c2",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/基础解析_01.pdf--c5eec9324671_parse.json",
+        "converted_parsed_sha256": "05c54781a63b6a00873d7e2f0f3b1acdd58e3eece4ab1d4d482616222df55948"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/基础解析_01.pdf--c5eec9324671",
+        "case_tree_sha256": "7c06e6ed0d273e542e1aa87a740bd19641ffdb566bd8666eff9dae5e87cc9cbb",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/基础解析_01.pdf--c5eec9324671/result.json",
+        "result_json_sha256": "07dc60b45860abf78dd41b5e142777e32ce19d0130abf81593d0c6331044240f",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/基础解析_01.pdf--c5eec9324671_parse.json",
+        "converted_parsed_sha256": "0dfe15d8082cb927b56506dfa29b0f24d71efe12d3a97f670b2edb5c2d5f4d23"
+      }
+    },
+    {
+      "source_file": "datasets/半导体场景模拟数据/跨页表合并QR.pdf",
+      "source_sha256": "a68e360e863df0696b4b82236cebc0ffaa8d3131bffd3fcd331da9549777b8ae",
+      "case_id": "131b5120bd7e",
+      "format": "pdf",
+      "page_count": 9,
+      "golden_file": "datasets/半导体场景模拟数据golden/跨页表合并QR.pdf.json",
+      "golden_sha256": "cd4c88d4da86cc5e4a1bfbea7e4b1d88a4ed3803d0a5a9de42517020491a9f9e",
+      "golden_doc_id": "QR_a68e360e86",
+      "golden_reviewed": true,
+      "moi": {
+        "zip": "runs/半导体场景私有数据集-idc-4.1.14/跨页表合并QR.pdf--131b5120bd7e.zip",
+        "zip_sha256": "5c5357f393593179189134aa7528edb10f3edd5d9756df1e1dfec450eb26eb16",
+        "parse_member": "跨页表合并QR.pdf-019fad6a-6b9e-7a21-8ffa-d358869ac84b/跨页表合并QR.pdf_parse.json",
+        "parse_sha256": "fb50d2c564ee64670bccc310d670e1b6f5093d5c1833c530cf9053568f56384e",
+        "parser_config_member": "跨页表合并QR.pdf-019fad6a-6b9e-7a21-8ffa-d358869ac84b/debug/config/parser_config_20260729_182805_9aff93c6.yaml",
+        "parser_config_sha256": "4102b32336d90f047afb2cbc7ae7f5c347d41b10708da1cbcac6631bff99ad95",
+        "config_group": "vlm=qwen3.5-27b;libreoffice=true;image_fragment=false",
+        "selected_config": {
+          "vlm_model": "qwen3.5-27b",
+          "enable_doc_libreoffice_openxml": true,
+          "enable_image_fragment_merge": false,
+          "enable_header_footer_as_text": false
+        },
+        "parser_page_count": 9
+      },
+      "mineru": {
+        "case_dir": "runs/半导体场景模拟数据-mineru-precision/跨页表合并QR.pdf--131b5120bd7e",
+        "case_tree_sha256": "bec8a026060dd02ee49519e4ce6a6be75c7177c62b5735e16e74fe6f2309e883",
+        "content_list": "runs/半导体场景模拟数据-mineru-precision/跨页表合并QR.pdf--131b5120bd7e/1846d034-1f0e-4777-8a25-a8f4768816a5_content_list.json",
+        "content_list_sha256": "bad972fbd5bf2b4eeb988908e37c02389e869458d4bf706851b04c8f88cb1a12",
+        "converted_parsed": "runs/半导体场景模拟数据-mineru-precision/converted_parsed/跨页表合并QR.pdf--131b5120bd7e_parse.json",
+        "converted_parsed_sha256": "e50e8fd3ae95aa3401cea71e15f0e0af281e636b7c4e832ad88fd335ce40c60b"
+      },
+      "paddleocr_vl": {
+        "case_dir": "runs/半导体场景模拟数据-paddleocr-vl/跨页表合并QR.pdf--131b5120bd7e",
+        "case_tree_sha256": "6cd7daa6480acf382bdd70ae1faf301f502bf1e40421e8fec15ae819754c6f77",
+        "result_json": "runs/半导体场景模拟数据-paddleocr-vl/跨页表合并QR.pdf--131b5120bd7e/result.json",
+        "result_json_sha256": "3457d960544ce6951d4eaf4fe469abba33bdc8f9883f7384798224b0226609b9",
+        "converted_parsed": "runs/半导体场景模拟数据-paddleocr-vl/converted_parsed/跨页表合并QR.pdf--131b5120bd7e_parse.json",
+        "converted_parsed_sha256": "75c739bdcb18ca13caac25865db218636939987a3e76febaae828ed5920ff1a5"
+      }
+    }
+  ]
+}

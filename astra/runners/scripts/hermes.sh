@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd "/Users/chenyuwei/Documents/MOI benchmark"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+workspace_root="$(cd "${script_dir}/../../.." && pwd)"
+cd "${workspace_root}"
 
 if [[ -z "${GLM_API_KEY:-}" ]]; then
   echo "GLM_API_KEY is required; export it or use Harbor with --env-file." >&2
@@ -9,5 +11,5 @@ if [[ -z "${GLM_API_KEY:-}" ]]; then
 fi
 
 harbor run \
-  --config "/Users/chenyuwei/Documents/MOI benchmark/astra/runners/hermes_terminal_bench/s0-four-cases.yaml" \
+  --config "astra/runners/hermes_terminal_bench/s0-four-cases.yaml" \
   --yes

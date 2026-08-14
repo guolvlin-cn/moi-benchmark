@@ -12,6 +12,7 @@ import signal
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 from pathlib import Path
 from typing import Any
@@ -637,6 +638,18 @@ def _validate_registered_root(
     return current, current_supervisor
 
 
+def _copy_filtered_jsonl(source: Any, destination: Any, excluded: set[str]) -> None:
+    for raw_line in source:
+        try:
+            row = json.loads(raw_line)
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            destination.write(raw_line)
+            continue
+        if not isinstance(row, dict) or row.get("type") not in excluded:
+            destination.write(raw_line)
+    destination.flush()
+
+
 def run_child(args: argparse.Namespace) -> int:
     if not args.command:
         raise RuntimeError("missing child command")
@@ -670,6 +683,10 @@ def run_child(args: argparse.Namespace) -> int:
     cleanup_detail: dict[str, Any] | None = None
     cleanup_reason = "normal_exit"
     return_code: int | None = None
+    excluded_stdout_events = frozenset(
+        getattr(args, "exclude_stdout_json_event", ())
+    )
+    output_error: list[BaseException] = []
     with stdin_path.open("rb") as stdin, stdout_path.open(
         "wb"
     ) as stdout, stderr_path.open("wb") as stderr:
@@ -677,11 +694,29 @@ def run_child(args: argparse.Namespace) -> int:
             command,
             cwd=args.cwd,
             stdin=stdin,
-            stdout=stdout,
+            stdout=(subprocess.PIPE if excluded_stdout_events else stdout),
             stderr=stderr,
             start_new_session=True,
             close_fds=True,
         )
+        output_thread: threading.Thread | None = None
+        if excluded_stdout_events:
+            assert child.stdout is not None
+
+            def copy_stdout() -> None:
+                try:
+                    _copy_filtered_jsonl(
+                        child.stdout,
+                        stdout,
+                        set(excluded_stdout_events),
+                    )
+                except BaseException as exc:
+                    output_error.append(exc)
+                finally:
+                    child.stdout.close()
+
+            output_thread = threading.Thread(target=copy_stdout, daemon=True)
+            output_thread.start()
         identity = None
         for _ in range(100):
             try:
@@ -697,6 +732,12 @@ def run_child(args: argparse.Namespace) -> int:
             time.sleep(0.01)
         if identity is None:
             child.wait()
+            if output_thread is not None:
+                output_thread.join()
+            if output_error:
+                raise RuntimeError(
+                    "failed to filter child stdout"
+                ) from output_error[0]
             raise RuntimeError("child exited before an isolated identity was registered")
         _atomic_json(Path(args.identity), identity)
         if not strict_cleanup:
@@ -780,6 +821,10 @@ def run_child(args: argparse.Namespace) -> int:
             finally:
                 for handled_signal, previous in previous_handlers.items():
                     signal.signal(handled_signal, previous)
+        if output_thread is not None:
+            output_thread.join()
+        if output_error:
+            raise RuntimeError("failed to filter child stdout") from output_error[0]
     assert return_code is not None
     summary = {"status": "exited", "return_code": return_code, "identity": identity}
     if strict_cleanup:
@@ -905,6 +950,7 @@ def _parser() -> argparse.ArgumentParser:
     run.add_argument("--cleanup-report")
     run.add_argument("--cleanup-grace-sec", type=float, default=2.0)
     run.add_argument("--strict-cleanup", action="store_true")
+    run.add_argument("--exclude-stdout-json-event", action="append", default=[])
     run.add_argument("command", nargs=argparse.REMAINDER)
     cleanup = subparsers.add_parser("cleanup")
     cleanup.add_argument("--identity", required=True)

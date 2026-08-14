@@ -1,0 +1,31 @@
+save_name: omnidocbench-idc-4.1.14-official-md_quick_match
+[page_match]
+workers: 13
+page_count: 1651
+quick_match_truncated_timeout_sec: 300
+match_timeout_sec: 420
+fallbacks:
+  - page_timeout: count=0
+  - quick_match_timeout: count=2
+    case: docstructbench_enbook-zlib-o.O-17208435.pdf_105.jpg
+    case: docstructbench_enbook-zlib-o.O-17208435.pdf_57.jpg
+[display_formula.CDM]
+workers: 13
+timeout_sec: None
+sample_count: 2352
+timeout_case_count: 0
+error_case_count: 0
+exception_case_count: 3
+  exception_case: exam_paper_en-file-putnam-archive_2008_Solutions_2008s_page_004.png[gt=[16], pred=[10]] reason=OSError: Cannot call rmtree on a symbolic link
+  exception_case: exam_paper_en-file-putnam-archive_2009_Solutions_2009s_page_002.png[gt=[18], pred=[11]] reason=OSError: Cannot call rmtree on a symbolic link
+  exception_case: yanbaopptmerge_abef2a4978ae4d13e931f0392502bd40.pdf_1287.jpg[gt=[12], pred=[7]] reason=OSError: Cannot call rmtree on a symbolic link
+[table.TEDS]
+workers: 13
+timeout_sec: 120.0
+sample_count: 665
+timeout_case_count: 3
+  timeout_case: page-213e6a57-ba81-4afb-8184-2e1cf2a7664d.png[gt=[0], pred=[0]] reason=timeout:120.0
+  timeout_case: page-dca64e05-1ce6-49ee-857a-9b5d05a87357.png[gt=[0], pred=[0]] reason=timeout:120.0
+  timeout_case: page-f3e750d8-8201-4a22-9419-9776798b7a32.png[gt=[0], pred=[0]] reason=timeout:120.0
+error_case_count: 0
+exception_case_count: 0

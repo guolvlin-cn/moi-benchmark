@@ -1,0 +1,18 @@
+{
+  "after": {
+    "memory_count": 0,
+    "snapshot_count": 0,
+    "user_id": "locomo-qwen-v4-smoke-conv-30"
+  },
+  "before": {
+    "memory_count": 369,
+    "snapshot_count": 0,
+    "user_id": "locomo-qwen-v4-smoke-conv-30"
+  },
+  "deleted_at": "2026-08-07T17:57:34.517135Z",
+  "operation": "DELETE /admin/users/:user_id (soft delete active memories)",
+  "response": {
+    "status": "ok",
+    "user_id": "locomo-qwen-v4-smoke-conv-30"
+  }
+}

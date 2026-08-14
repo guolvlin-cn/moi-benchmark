@@ -1,0 +1,117 @@
+{
+  "by_category": {
+    "coexistence_scope_isolation": {
+      "accuracy": 0.625,
+      "fail": 6,
+      "pass": 10,
+      "total": 16
+    },
+    "exact_duplicate_reuse": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 10,
+      "total": 10
+    },
+    "semantic_equivalent_handling": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 24,
+      "total": 24
+    }
+  },
+  "by_subtype": {
+    "branch_isolation": {
+      "accuracy": 0.0,
+      "fail": 2,
+      "pass": 0,
+      "total": 2
+    },
+    "continuous_inside_threshold_chain": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 4,
+      "total": 4
+    },
+    "identical": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 6,
+      "total": 6
+    },
+    "leading_space": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 1,
+      "total": 1
+    },
+    "memory_type_isolation": {
+      "accuracy": 0.0,
+      "fail": 2,
+      "pass": 0,
+      "total": 2
+    },
+    "multiple_edge_spaces": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 1,
+      "total": 1
+    },
+    "same_scope_independent_facts": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 8,
+      "total": 8
+    },
+    "single_clear_outside_threshold": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 4,
+      "total": 4
+    },
+    "single_edge_spaces": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 1,
+      "total": 1
+    },
+    "single_inside_threshold": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 8,
+      "total": 8
+    },
+    "single_near_outside_threshold": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 8,
+      "total": 8
+    },
+    "subject_isolation": {
+      "accuracy": 0.0,
+      "fail": 2,
+      "pass": 0,
+      "total": 2
+    },
+    "trailing_space": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 1,
+      "total": 1
+    },
+    "user_isolation": {
+      "accuracy": 1.0,
+      "fail": 0,
+      "pass": 2,
+      "total": 2
+    }
+  },
+  "overall": {
+    "accuracy": 0.88,
+    "fail": 6,
+    "pass": 44,
+    "total": 50
+  },
+  "scored_at": "2026-08-13T09:27:47.274743Z",
+  "scoring_protocol": "incremental-semantic-state-v1",
+  "semantic_latest_write_changed_state": 1
+}

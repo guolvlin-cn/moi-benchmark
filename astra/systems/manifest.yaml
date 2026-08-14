@@ -20,6 +20,17 @@ local_sources:
     runner_constraints:
       - Do not use hermes one-shot mode for approval, permission, or security cases because it enables YOLO and auto-accepts hooks.
       - Distinguish transcript resume and filesystem checkpointing from verified in-flight side-effect recovery.
+  - id: pi-coding-agent
+    role: comparator_candidate
+    source: https://github.com/earendil-works/pi.git
+    revision: v0.73.1
+    package: "@mariozechner/pi-coding-agent@0.73.1"
+    local_path: null
+    working_tree: not_checked_out
+    runner_constraints:
+      - Use Harbor 0.20.0's frozen Pi product version behind the same C0 process supervisor and no-op controller as Astra and Hermes.
+      - Pass Terminal-Bench instructions through stdin and keep raw Pi JSONL, stderr, saved session, process identity, and zero-live cleanup evidence separate.
+      - Add zai/glm-5.2 through a frozen Pi models.json because Pi 0.73.1 predates that built-in model entry.
   - id: agentops
     role: observability_reference
     source: https://github.com/AgentOps-AI/agentops.git

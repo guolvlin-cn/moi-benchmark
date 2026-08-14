@@ -61,9 +61,9 @@ zero-live cleanup-report hash.
 Audit a completed job tree without rerunning either product:
 
 ```bash
-cd "/Users/chenyuwei/Documents/MOI benchmark"
+cd "$(git rev-parse --show-toplevel)"
 PYTHONPATH="$PWD" python3 -m astra.runners.lifecycle_c0.audit \
-  "/Users/chenyuwei/Documents/MOI benchmark/work/astra-c0-lifecycle-jobs"
+  "work/astra-c0-lifecycle-jobs"
 ```
 
 The audit is read-only by default. Add `--write` only when per-trial

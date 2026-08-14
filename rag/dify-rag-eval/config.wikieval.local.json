@@ -1,0 +1,17 @@
+{
+  "base_url": "http://127.0.0.1:8010/v1",
+  "app_type": "chat",
+  "api_key_env": "DIFY_LOCAL_API_KEY",
+  "user_prefix": "moi-wikieval-dify",
+  "timeout_seconds": 180,
+  "max_retries": 3,
+  "concurrency": 2,
+  "repeats": 1,
+  "top_k": 10,
+  "inputs": {},
+  "workflow": {
+    "query_input": "query",
+    "answer_path": "data.outputs.answer",
+    "contexts_path": "data.outputs.contexts"
+  }
+}

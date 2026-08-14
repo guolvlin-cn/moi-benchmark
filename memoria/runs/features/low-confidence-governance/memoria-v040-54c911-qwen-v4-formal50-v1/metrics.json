@@ -1,0 +1,3185 @@
+{
+  "all_passed": true,
+  "case_results": [
+    {
+      "case_id": "lcg-formal-001-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "class_1",
+          "elapsed_ms": 153.719,
+          "operation": "store"
+        },
+        {
+          "alias": "before_class_1",
+          "elapsed_ms": 246.078,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 37.857,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_class_1",
+          "elapsed_ms": 2.11,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_class_1",
+          "elapsed_ms": 142.181,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-001"
+    },
+    {
+      "case_id": "lcg-formal-002-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "drink_1",
+          "elapsed_ms": 219.571,
+          "operation": "store"
+        },
+        {
+          "alias": "before_drink_1",
+          "elapsed_ms": 215.898,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 40.194,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_drink_1",
+          "elapsed_ms": 2.793,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_drink_1",
+          "elapsed_ms": 141.28,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-002"
+    },
+    {
+      "case_id": "lcg-formal-003-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "hobby_1",
+          "elapsed_ms": 171.78,
+          "operation": "store"
+        },
+        {
+          "alias": "before_hobby_1",
+          "elapsed_ms": 253.044,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 48.984,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_hobby_1",
+          "elapsed_ms": 2.65,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_hobby_1",
+          "elapsed_ms": 187.099,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-003"
+    },
+    {
+      "case_id": "lcg-formal-004-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "meetings_1",
+          "elapsed_ms": 261.132,
+          "operation": "store"
+        },
+        {
+          "alias": "before_meetings_1",
+          "elapsed_ms": 178.475,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 39.382,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_meetings_1",
+          "elapsed_ms": 2.469,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_meetings_1",
+          "elapsed_ms": 181.195,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-004"
+    },
+    {
+      "case_id": "lcg-formal-005-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "backup_1",
+          "elapsed_ms": 195.245,
+          "operation": "store"
+        },
+        {
+          "alias": "before_backup_1",
+          "elapsed_ms": 177.144,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 45.729,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_backup_1",
+          "elapsed_ms": 3.514,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_backup_1",
+          "elapsed_ms": 188.179,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-005"
+    },
+    {
+      "case_id": "lcg-formal-006-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "contact_1",
+          "elapsed_ms": 151.01,
+          "operation": "store"
+        },
+        {
+          "alias": "before_contact_1",
+          "elapsed_ms": 199.279,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 43.719,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_contact_1",
+          "elapsed_ms": 4.052,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_contact_1",
+          "elapsed_ms": 193.785,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-006"
+    },
+    {
+      "case_id": "lcg-formal-007-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "planner_1",
+          "elapsed_ms": 208.59,
+          "operation": "store"
+        },
+        {
+          "alias": "before_planner_1",
+          "elapsed_ms": 175.696,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 39.56,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_planner_1",
+          "elapsed_ms": 9.444,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_planner_1",
+          "elapsed_ms": 174.297,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-007"
+    },
+    {
+      "case_id": "lcg-formal-008-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "retrievable_before_governance",
+      "timings": [
+        {
+          "alias": "route_1",
+          "elapsed_ms": 205.872,
+          "operation": "store"
+        },
+        {
+          "alias": "before_route_1",
+          "elapsed_ms": 192.802,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 39.363,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_route_1",
+          "elapsed_ms": 5.523,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_route_1",
+          "elapsed_ms": 231.858,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-008"
+    },
+    {
+      "case_id": "lcg-formal-009-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 7,
+      "required_passed": 7,
+      "status": "PASS",
+      "subtype": "below_retrieval_floor",
+      "timings": [
+        {
+          "alias": "reading_1",
+          "elapsed_ms": 235.919,
+          "operation": "store"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 34.666,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_reading_1",
+          "elapsed_ms": 5.516,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_reading_1",
+          "elapsed_ms": 145.391,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-009"
+    },
+    {
+      "case_id": "lcg-formal-010-clear-delete",
+      "category": "clear_delete",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 7,
+      "required_passed": 7,
+      "status": "PASS",
+      "subtype": "below_retrieval_floor",
+      "timings": [
+        {
+          "alias": "office_1",
+          "elapsed_ms": 139.337,
+          "operation": "store"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 35.479,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_office_1",
+          "elapsed_ms": 4.501,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_office_1",
+          "elapsed_ms": 213.619,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-010"
+    },
+    {
+      "case_id": "lcg-formal-011-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "keyboard_1",
+          "elapsed_ms": 188.413,
+          "operation": "store"
+        },
+        {
+          "alias": "before_keyboard_1",
+          "elapsed_ms": 181.097,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 38.606,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_keyboard_1",
+          "elapsed_ms": 1.361,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_keyboard_1",
+          "elapsed_ms": 152.38,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-011"
+    },
+    {
+      "case_id": "lcg-formal-012-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "exercise_1",
+          "elapsed_ms": 244.211,
+          "operation": "store"
+        },
+        {
+          "alias": "before_exercise_1",
+          "elapsed_ms": 191.571,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 40.52,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_exercise_1",
+          "elapsed_ms": 1.315,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_exercise_1",
+          "elapsed_ms": 164.447,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-012"
+    },
+    {
+      "case_id": "lcg-formal-013-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "notebook_1",
+          "elapsed_ms": 183.34,
+          "operation": "store"
+        },
+        {
+          "alias": "before_notebook_1",
+          "elapsed_ms": 163.305,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 32.191,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_notebook_1",
+          "elapsed_ms": 2.849,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_notebook_1",
+          "elapsed_ms": 140.822,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-013"
+    },
+    {
+      "case_id": "lcg-formal-014-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "language_1",
+          "elapsed_ms": 172.789,
+          "operation": "store"
+        },
+        {
+          "alias": "before_language_1",
+          "elapsed_ms": 256.584,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 39.778,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_language_1",
+          "elapsed_ms": 1.701,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_language_1",
+          "elapsed_ms": 181.867,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-014"
+    },
+    {
+      "case_id": "lcg-formal-015-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "device_1",
+          "elapsed_ms": 167.096,
+          "operation": "store"
+        },
+        {
+          "alias": "before_device_1",
+          "elapsed_ms": 192.361,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 32.339,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_device_1",
+          "elapsed_ms": 1.312,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_device_1",
+          "elapsed_ms": 212.778,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-015"
+    },
+    {
+      "case_id": "lcg-formal-016-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "commute_1",
+          "elapsed_ms": 179.1,
+          "operation": "store"
+        },
+        {
+          "alias": "before_commute_1",
+          "elapsed_ms": 241.855,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 40.025,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_commute_1",
+          "elapsed_ms": 1.28,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_commute_1",
+          "elapsed_ms": 212.851,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-016"
+    },
+    {
+      "case_id": "lcg-formal-017-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "passport_1",
+          "elapsed_ms": 212.811,
+          "operation": "store"
+        },
+        {
+          "alias": "before_passport_1",
+          "elapsed_ms": 209.256,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 40.044,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_passport_1",
+          "elapsed_ms": 2.463,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_passport_1",
+          "elapsed_ms": 253.734,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-017"
+    },
+    {
+      "case_id": "lcg-formal-018-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "calendar_1",
+          "elapsed_ms": 169.032,
+          "operation": "store"
+        },
+        {
+          "alias": "before_calendar_1",
+          "elapsed_ms": 174.044,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 33.342,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_calendar_1",
+          "elapsed_ms": 3.593,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_calendar_1",
+          "elapsed_ms": 180.885,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-018"
+    },
+    {
+      "case_id": "lcg-formal-019-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "timezone_1",
+          "elapsed_ms": 191.186,
+          "operation": "store"
+        },
+        {
+          "alias": "before_timezone_1",
+          "elapsed_ms": 212.893,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 48.825,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_timezone_1",
+          "elapsed_ms": 1.99,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_timezone_1",
+          "elapsed_ms": 169.892,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-019"
+    },
+    {
+      "case_id": "lcg-formal-020-clear-retain",
+      "category": "clear_retain",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 8,
+      "required_passed": 8,
+      "status": "PASS",
+      "subtype": "well_above_threshold",
+      "timings": [
+        {
+          "alias": "seat_1",
+          "elapsed_ms": 208.884,
+          "operation": "store"
+        },
+        {
+          "alias": "before_seat_1",
+          "elapsed_ms": 210.312,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 40.786,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_seat_1",
+          "elapsed_ms": 1.533,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_seat_1",
+          "elapsed_ms": 163.572,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-020"
+    },
+    {
+      "case_id": "lcg-formal-021-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t1_vs_t4",
+      "timings": [
+        {
+          "alias": "class_1",
+          "elapsed_ms": 150.057,
+          "operation": "store"
+        },
+        {
+          "alias": "route_2",
+          "elapsed_ms": 209.976,
+          "operation": "store"
+        },
+        {
+          "alias": "before_class_1",
+          "elapsed_ms": 196.282,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_route_2",
+          "elapsed_ms": 203.24,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 49.237,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_class_1",
+          "elapsed_ms": 1.798,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_class_1",
+          "elapsed_ms": 187.953,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_route_2",
+          "elapsed_ms": 25.147,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_route_2",
+          "elapsed_ms": 215.905,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-021"
+    },
+    {
+      "case_id": "lcg-formal-022-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t2_vs_t4",
+      "timings": [
+        {
+          "alias": "drink_1",
+          "elapsed_ms": 199.625,
+          "operation": "store"
+        },
+        {
+          "alias": "reading_2",
+          "elapsed_ms": 168.351,
+          "operation": "store"
+        },
+        {
+          "alias": "before_drink_1",
+          "elapsed_ms": 258.153,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_reading_2",
+          "elapsed_ms": 166.514,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 43.395,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_drink_1",
+          "elapsed_ms": 1.912,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_drink_1",
+          "elapsed_ms": 302.202,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_reading_2",
+          "elapsed_ms": 17.521,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_reading_2",
+          "elapsed_ms": 147.88,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-022"
+    },
+    {
+      "case_id": "lcg-formal-023-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t1_vs_t3",
+      "timings": [
+        {
+          "alias": "hobby_1",
+          "elapsed_ms": 202.788,
+          "operation": "store"
+        },
+        {
+          "alias": "office_2",
+          "elapsed_ms": 179.228,
+          "operation": "store"
+        },
+        {
+          "alias": "before_hobby_1",
+          "elapsed_ms": 176.171,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_office_2",
+          "elapsed_ms": 177.828,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 48.279,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_hobby_1",
+          "elapsed_ms": 1.423,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_hobby_1",
+          "elapsed_ms": 173.721,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_office_2",
+          "elapsed_ms": 12.211,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_office_2",
+          "elapsed_ms": 179.133,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-023"
+    },
+    {
+      "case_id": "lcg-formal-024-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t2_vs_t3",
+      "timings": [
+        {
+          "alias": "meetings_1",
+          "elapsed_ms": 207.44,
+          "operation": "store"
+        },
+        {
+          "alias": "keyboard_2",
+          "elapsed_ms": 224.006,
+          "operation": "store"
+        },
+        {
+          "alias": "before_meetings_1",
+          "elapsed_ms": 220.607,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_keyboard_2",
+          "elapsed_ms": 222.486,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 43.722,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_meetings_1",
+          "elapsed_ms": 1.385,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_meetings_1",
+          "elapsed_ms": 182.536,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_keyboard_2",
+          "elapsed_ms": 19.559,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_keyboard_2",
+          "elapsed_ms": 199.888,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-024"
+    },
+    {
+      "case_id": "lcg-formal-025-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t1_vs_t4",
+      "timings": [
+        {
+          "alias": "backup_1",
+          "elapsed_ms": 162.196,
+          "operation": "store"
+        },
+        {
+          "alias": "exercise_2",
+          "elapsed_ms": 215.228,
+          "operation": "store"
+        },
+        {
+          "alias": "before_backup_1",
+          "elapsed_ms": 180.411,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_exercise_2",
+          "elapsed_ms": 173.254,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 47.667,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_backup_1",
+          "elapsed_ms": 1.679,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_backup_1",
+          "elapsed_ms": 206.139,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_exercise_2",
+          "elapsed_ms": 17.746,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_exercise_2",
+          "elapsed_ms": 191.806,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-025"
+    },
+    {
+      "case_id": "lcg-formal-026-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t2_vs_t4",
+      "timings": [
+        {
+          "alias": "contact_1",
+          "elapsed_ms": 191.172,
+          "operation": "store"
+        },
+        {
+          "alias": "notebook_2",
+          "elapsed_ms": 215.372,
+          "operation": "store"
+        },
+        {
+          "alias": "before_contact_1",
+          "elapsed_ms": 183.361,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_notebook_2",
+          "elapsed_ms": 197.45,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 44.069,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_contact_1",
+          "elapsed_ms": 2.335,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_contact_1",
+          "elapsed_ms": 196.261,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_notebook_2",
+          "elapsed_ms": 14.754,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_notebook_2",
+          "elapsed_ms": 226.203,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-026"
+    },
+    {
+      "case_id": "lcg-formal-027-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t1_vs_t3",
+      "timings": [
+        {
+          "alias": "planner_1",
+          "elapsed_ms": 185.33,
+          "operation": "store"
+        },
+        {
+          "alias": "language_2",
+          "elapsed_ms": 193.526,
+          "operation": "store"
+        },
+        {
+          "alias": "before_planner_1",
+          "elapsed_ms": 156.109,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_language_2",
+          "elapsed_ms": 191.27,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 45.924,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_planner_1",
+          "elapsed_ms": 2.06,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_planner_1",
+          "elapsed_ms": 199.836,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_language_2",
+          "elapsed_ms": 13.318,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_language_2",
+          "elapsed_ms": 325.273,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-027"
+    },
+    {
+      "case_id": "lcg-formal-028-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t2_vs_t3",
+      "timings": [
+        {
+          "alias": "route_1",
+          "elapsed_ms": 193.65,
+          "operation": "store"
+        },
+        {
+          "alias": "device_2",
+          "elapsed_ms": 205.706,
+          "operation": "store"
+        },
+        {
+          "alias": "before_route_1",
+          "elapsed_ms": 170.067,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_device_2",
+          "elapsed_ms": 130.521,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 42.172,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_route_1",
+          "elapsed_ms": 2.162,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_route_1",
+          "elapsed_ms": 189.514,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_device_2",
+          "elapsed_ms": 18.692,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_device_2",
+          "elapsed_ms": 215.526,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-028"
+    },
+    {
+      "case_id": "lcg-formal-029-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t1_vs_t4",
+      "timings": [
+        {
+          "alias": "reading_1",
+          "elapsed_ms": 243.993,
+          "operation": "store"
+        },
+        {
+          "alias": "commute_2",
+          "elapsed_ms": 210.764,
+          "operation": "store"
+        },
+        {
+          "alias": "before_reading_1",
+          "elapsed_ms": 167.593,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_commute_2",
+          "elapsed_ms": 193.53,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 41.927,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_reading_1",
+          "elapsed_ms": 1.48,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_reading_1",
+          "elapsed_ms": 184.086,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_commute_2",
+          "elapsed_ms": 24.826,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_commute_2",
+          "elapsed_ms": 199.626,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-029"
+    },
+    {
+      "case_id": "lcg-formal-030-tier-comparison",
+      "category": "tier_comparison",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 11,
+      "required_passed": 11,
+      "status": "PASS",
+      "subtype": "t2_vs_t4",
+      "timings": [
+        {
+          "alias": "office_1",
+          "elapsed_ms": 165.576,
+          "operation": "store"
+        },
+        {
+          "alias": "passport_2",
+          "elapsed_ms": 193.149,
+          "operation": "store"
+        },
+        {
+          "alias": "before_office_1",
+          "elapsed_ms": 191.217,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_passport_2",
+          "elapsed_ms": 297.844,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 50.014,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_office_1",
+          "elapsed_ms": 1.384,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_office_1",
+          "elapsed_ms": 158.39,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_passport_2",
+          "elapsed_ms": 23.275,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_passport_2",
+          "elapsed_ms": 163.255,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-030"
+    },
+    {
+      "case_id": "lcg-formal-031-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "keyboard_1",
+          "elapsed_ms": 167.526,
+          "operation": "store"
+        },
+        {
+          "alias": "calendar_2",
+          "elapsed_ms": 175.477,
+          "operation": "store"
+        },
+        {
+          "alias": "backup_3",
+          "elapsed_ms": 148.192,
+          "operation": "store"
+        },
+        {
+          "alias": "exercise_4",
+          "elapsed_ms": 180.799,
+          "operation": "store"
+        },
+        {
+          "alias": "timezone_5",
+          "elapsed_ms": 213.803,
+          "operation": "store"
+        },
+        {
+          "alias": "before_keyboard_1",
+          "elapsed_ms": 198.269,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_calendar_2",
+          "elapsed_ms": 189.698,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_backup_3",
+          "elapsed_ms": 231.957,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_exercise_4",
+          "elapsed_ms": 180.014,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_timezone_5",
+          "elapsed_ms": 207.384,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 41.373,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_keyboard_1",
+          "elapsed_ms": 17.228,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_keyboard_1",
+          "elapsed_ms": 170.345,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_calendar_2",
+          "elapsed_ms": 13.767,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_calendar_2",
+          "elapsed_ms": 185.45,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_backup_3",
+          "elapsed_ms": 2.782,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_backup_3",
+          "elapsed_ms": 172.013,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_exercise_4",
+          "elapsed_ms": 3.019,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_exercise_4",
+          "elapsed_ms": 169.198,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_timezone_5",
+          "elapsed_ms": 1.984,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_timezone_5",
+          "elapsed_ms": 165.484,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-031"
+    },
+    {
+      "case_id": "lcg-formal-032-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "exercise_1",
+          "elapsed_ms": 188.379,
+          "operation": "store"
+        },
+        {
+          "alias": "timezone_2",
+          "elapsed_ms": 215.238,
+          "operation": "store"
+        },
+        {
+          "alias": "contact_3",
+          "elapsed_ms": 230.694,
+          "operation": "store"
+        },
+        {
+          "alias": "notebook_4",
+          "elapsed_ms": 185.887,
+          "operation": "store"
+        },
+        {
+          "alias": "seat_5",
+          "elapsed_ms": 210.659,
+          "operation": "store"
+        },
+        {
+          "alias": "before_exercise_1",
+          "elapsed_ms": 206.065,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_timezone_2",
+          "elapsed_ms": 178.476,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_contact_3",
+          "elapsed_ms": 170.418,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_notebook_4",
+          "elapsed_ms": 197.702,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_seat_5",
+          "elapsed_ms": 203.196,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 46.933,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_exercise_1",
+          "elapsed_ms": 24.157,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_exercise_1",
+          "elapsed_ms": 197.458,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_timezone_2",
+          "elapsed_ms": 2.885,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_timezone_2",
+          "elapsed_ms": 147.19,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_contact_3",
+          "elapsed_ms": 2.87,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_contact_3",
+          "elapsed_ms": 201.438,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_notebook_4",
+          "elapsed_ms": 3.057,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_notebook_4",
+          "elapsed_ms": 186.341,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_seat_5",
+          "elapsed_ms": 17.582,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_seat_5",
+          "elapsed_ms": 244.207,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-032"
+    },
+    {
+      "case_id": "lcg-formal-033-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "notebook_1",
+          "elapsed_ms": 162.975,
+          "operation": "store"
+        },
+        {
+          "alias": "seat_2",
+          "elapsed_ms": 149.651,
+          "operation": "store"
+        },
+        {
+          "alias": "planner_3",
+          "elapsed_ms": 175.999,
+          "operation": "store"
+        },
+        {
+          "alias": "language_4",
+          "elapsed_ms": 191.571,
+          "operation": "store"
+        },
+        {
+          "alias": "class_5",
+          "elapsed_ms": 220.585,
+          "operation": "store"
+        },
+        {
+          "alias": "before_notebook_1",
+          "elapsed_ms": 172.399,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_seat_2",
+          "elapsed_ms": 172.641,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_planner_3",
+          "elapsed_ms": 193.868,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_language_4",
+          "elapsed_ms": 201.373,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_class_5",
+          "elapsed_ms": 152.798,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 56.118,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_notebook_1",
+          "elapsed_ms": 1.65,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_notebook_1",
+          "elapsed_ms": 178.237,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_seat_2",
+          "elapsed_ms": 3.261,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_seat_2",
+          "elapsed_ms": 209.449,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_planner_3",
+          "elapsed_ms": 2.555,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_planner_3",
+          "elapsed_ms": 195.6,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_language_4",
+          "elapsed_ms": 20.262,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_language_4",
+          "elapsed_ms": 154.537,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_class_5",
+          "elapsed_ms": 16.135,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_class_5",
+          "elapsed_ms": 167.338,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-033"
+    },
+    {
+      "case_id": "lcg-formal-034-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "language_1",
+          "elapsed_ms": 479.399,
+          "operation": "store"
+        },
+        {
+          "alias": "class_2",
+          "elapsed_ms": 161.465,
+          "operation": "store"
+        },
+        {
+          "alias": "route_3",
+          "elapsed_ms": 202.714,
+          "operation": "store"
+        },
+        {
+          "alias": "device_4",
+          "elapsed_ms": 207.669,
+          "operation": "store"
+        },
+        {
+          "alias": "drink_5",
+          "elapsed_ms": 166.082,
+          "operation": "store"
+        },
+        {
+          "alias": "before_language_1",
+          "elapsed_ms": 188.697,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_class_2",
+          "elapsed_ms": 234.536,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_route_3",
+          "elapsed_ms": 164.337,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_device_4",
+          "elapsed_ms": 195.811,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_drink_5",
+          "elapsed_ms": 220.138,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 50.412,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_language_1",
+          "elapsed_ms": 2.703,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_language_1",
+          "elapsed_ms": 195.815,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_class_2",
+          "elapsed_ms": 3.244,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_class_2",
+          "elapsed_ms": 247.131,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_route_3",
+          "elapsed_ms": 30.891,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_route_3",
+          "elapsed_ms": 174.366,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_device_4",
+          "elapsed_ms": 12.969,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_device_4",
+          "elapsed_ms": 213.214,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_drink_5",
+          "elapsed_ms": 2.299,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_drink_5",
+          "elapsed_ms": 201.219,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-034"
+    },
+    {
+      "case_id": "lcg-formal-035-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "device_1",
+          "elapsed_ms": 169.953,
+          "operation": "store"
+        },
+        {
+          "alias": "drink_2",
+          "elapsed_ms": 173.97,
+          "operation": "store"
+        },
+        {
+          "alias": "reading_3",
+          "elapsed_ms": 197.166,
+          "operation": "store"
+        },
+        {
+          "alias": "commute_4",
+          "elapsed_ms": 211.954,
+          "operation": "store"
+        },
+        {
+          "alias": "hobby_5",
+          "elapsed_ms": 185.947,
+          "operation": "store"
+        },
+        {
+          "alias": "before_device_1",
+          "elapsed_ms": 223.402,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_drink_2",
+          "elapsed_ms": 173.985,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_reading_3",
+          "elapsed_ms": 155.964,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_commute_4",
+          "elapsed_ms": 206.888,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_hobby_5",
+          "elapsed_ms": 186.203,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 45.853,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_device_1",
+          "elapsed_ms": 1.847,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_device_1",
+          "elapsed_ms": 158.559,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_drink_2",
+          "elapsed_ms": 23.454,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_drink_2",
+          "elapsed_ms": 165.721,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_reading_3",
+          "elapsed_ms": 15.487,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_reading_3",
+          "elapsed_ms": 240.507,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_commute_4",
+          "elapsed_ms": 3.401,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_commute_4",
+          "elapsed_ms": 200.845,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_hobby_5",
+          "elapsed_ms": 2.517,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_hobby_5",
+          "elapsed_ms": 177.841,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-035"
+    },
+    {
+      "case_id": "lcg-formal-036-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "commute_1",
+          "elapsed_ms": 197.727,
+          "operation": "store"
+        },
+        {
+          "alias": "hobby_2",
+          "elapsed_ms": 191.767,
+          "operation": "store"
+        },
+        {
+          "alias": "office_3",
+          "elapsed_ms": 160.712,
+          "operation": "store"
+        },
+        {
+          "alias": "passport_4",
+          "elapsed_ms": 218.738,
+          "operation": "store"
+        },
+        {
+          "alias": "meetings_5",
+          "elapsed_ms": 210.019,
+          "operation": "store"
+        },
+        {
+          "alias": "before_commute_1",
+          "elapsed_ms": 346.294,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_hobby_2",
+          "elapsed_ms": 239.725,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_office_3",
+          "elapsed_ms": 237.375,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_passport_4",
+          "elapsed_ms": 169.493,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_meetings_5",
+          "elapsed_ms": 209.687,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 50.591,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_commute_1",
+          "elapsed_ms": 26.364,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_commute_1",
+          "elapsed_ms": 160.608,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_hobby_2",
+          "elapsed_ms": 17.762,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_hobby_2",
+          "elapsed_ms": 186.492,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_office_3",
+          "elapsed_ms": 1.636,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_office_3",
+          "elapsed_ms": 215.478,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_passport_4",
+          "elapsed_ms": 3.981,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_passport_4",
+          "elapsed_ms": 175.092,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_meetings_5",
+          "elapsed_ms": 2.431,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_meetings_5",
+          "elapsed_ms": 212.058,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-036"
+    },
+    {
+      "case_id": "lcg-formal-037-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "passport_1",
+          "elapsed_ms": 201.325,
+          "operation": "store"
+        },
+        {
+          "alias": "meetings_2",
+          "elapsed_ms": 222.523,
+          "operation": "store"
+        },
+        {
+          "alias": "keyboard_3",
+          "elapsed_ms": 183.2,
+          "operation": "store"
+        },
+        {
+          "alias": "calendar_4",
+          "elapsed_ms": 208.105,
+          "operation": "store"
+        },
+        {
+          "alias": "backup_5",
+          "elapsed_ms": 143.521,
+          "operation": "store"
+        },
+        {
+          "alias": "before_passport_1",
+          "elapsed_ms": 207.499,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_meetings_2",
+          "elapsed_ms": 250.846,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_keyboard_3",
+          "elapsed_ms": 140.58,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_calendar_4",
+          "elapsed_ms": 245.036,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_backup_5",
+          "elapsed_ms": 236.304,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 50.42,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_passport_1",
+          "elapsed_ms": 20.358,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_passport_1",
+          "elapsed_ms": 206.697,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_meetings_2",
+          "elapsed_ms": 1.507,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_meetings_2",
+          "elapsed_ms": 165.154,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_keyboard_3",
+          "elapsed_ms": 2.259,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_keyboard_3",
+          "elapsed_ms": 252.718,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_calendar_4",
+          "elapsed_ms": 1.973,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_calendar_4",
+          "elapsed_ms": 189.82,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_backup_5",
+          "elapsed_ms": 13.984,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_backup_5",
+          "elapsed_ms": 202.863,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-037"
+    },
+    {
+      "case_id": "lcg-formal-038-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "calendar_1",
+          "elapsed_ms": 169.263,
+          "operation": "store"
+        },
+        {
+          "alias": "backup_2",
+          "elapsed_ms": 204.873,
+          "operation": "store"
+        },
+        {
+          "alias": "exercise_3",
+          "elapsed_ms": 194.834,
+          "operation": "store"
+        },
+        {
+          "alias": "timezone_4",
+          "elapsed_ms": 207.664,
+          "operation": "store"
+        },
+        {
+          "alias": "contact_5",
+          "elapsed_ms": 195.215,
+          "operation": "store"
+        },
+        {
+          "alias": "before_calendar_1",
+          "elapsed_ms": 189.203,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_backup_2",
+          "elapsed_ms": 191.829,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_exercise_3",
+          "elapsed_ms": 172.235,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_timezone_4",
+          "elapsed_ms": 219.532,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_contact_5",
+          "elapsed_ms": 184.058,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 48.822,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_calendar_1",
+          "elapsed_ms": 3.421,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_calendar_1",
+          "elapsed_ms": 171.061,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_backup_2",
+          "elapsed_ms": 3.73,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_backup_2",
+          "elapsed_ms": 193.549,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_exercise_3",
+          "elapsed_ms": 2.199,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_exercise_3",
+          "elapsed_ms": 191.198,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_timezone_4",
+          "elapsed_ms": 41.366,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_timezone_4",
+          "elapsed_ms": 200.292,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_contact_5",
+          "elapsed_ms": 23.487,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_contact_5",
+          "elapsed_ms": 175.667,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-038"
+    },
+    {
+      "case_id": "lcg-formal-039-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "timezone_1",
+          "elapsed_ms": 207.931,
+          "operation": "store"
+        },
+        {
+          "alias": "contact_2",
+          "elapsed_ms": 181.005,
+          "operation": "store"
+        },
+        {
+          "alias": "notebook_3",
+          "elapsed_ms": 169.136,
+          "operation": "store"
+        },
+        {
+          "alias": "seat_4",
+          "elapsed_ms": 187.458,
+          "operation": "store"
+        },
+        {
+          "alias": "planner_5",
+          "elapsed_ms": 183.028,
+          "operation": "store"
+        },
+        {
+          "alias": "before_timezone_1",
+          "elapsed_ms": 200.342,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_contact_2",
+          "elapsed_ms": 265.535,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_notebook_3",
+          "elapsed_ms": 138.332,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_seat_4",
+          "elapsed_ms": 176.634,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_planner_5",
+          "elapsed_ms": 203.464,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 46.074,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_timezone_1",
+          "elapsed_ms": 1.95,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_timezone_1",
+          "elapsed_ms": 165.67,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_contact_2",
+          "elapsed_ms": 5.809,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_contact_2",
+          "elapsed_ms": 182.236,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_notebook_3",
+          "elapsed_ms": 24.394,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_notebook_3",
+          "elapsed_ms": 201.724,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_seat_4",
+          "elapsed_ms": 18.344,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_seat_4",
+          "elapsed_ms": 200.335,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_planner_5",
+          "elapsed_ms": 4.091,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_planner_5",
+          "elapsed_ms": 166.937,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-039"
+    },
+    {
+      "case_id": "lcg-formal-040-mixed-batch",
+      "category": "mixed_batch",
+      "expected_deleted": 2,
+      "expected_retained": 3,
+      "required_assertions": 20,
+      "required_passed": 20,
+      "status": "PASS",
+      "subtype": "two_delete_three_retain",
+      "timings": [
+        {
+          "alias": "seat_1",
+          "elapsed_ms": 203.891,
+          "operation": "store"
+        },
+        {
+          "alias": "planner_2",
+          "elapsed_ms": 182.396,
+          "operation": "store"
+        },
+        {
+          "alias": "language_3",
+          "elapsed_ms": 157.269,
+          "operation": "store"
+        },
+        {
+          "alias": "class_4",
+          "elapsed_ms": 196.704,
+          "operation": "store"
+        },
+        {
+          "alias": "route_5",
+          "elapsed_ms": 179.555,
+          "operation": "store"
+        },
+        {
+          "alias": "before_seat_1",
+          "elapsed_ms": 183.296,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_planner_2",
+          "elapsed_ms": 141.412,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_language_3",
+          "elapsed_ms": 210.038,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_class_4",
+          "elapsed_ms": 210.036,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_route_5",
+          "elapsed_ms": 152.609,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 61.841,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_seat_1",
+          "elapsed_ms": 2.136,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_seat_1",
+          "elapsed_ms": 183.499,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_planner_2",
+          "elapsed_ms": 27.418,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_planner_2",
+          "elapsed_ms": 166.912,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_language_3",
+          "elapsed_ms": 23.157,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_language_3",
+          "elapsed_ms": 175.61,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_class_4",
+          "elapsed_ms": 2.84,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_class_4",
+          "elapsed_ms": 202.474,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_route_5",
+          "elapsed_ms": 2.717,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_route_5",
+          "elapsed_ms": 162.329,
+          "operation": "retrieve"
+        }
+      ],
+      "user_id": "feature-lcg-formal-040"
+    },
+    {
+      "case_id": "lcg-formal-041-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 0,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "subtype": "repeat_after_delete",
+      "timings": [
+        {
+          "alias": "class_1",
+          "elapsed_ms": 364.654,
+          "operation": "store"
+        },
+        {
+          "alias": "before_class_1",
+          "elapsed_ms": 316.426,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 47.424,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_class_1",
+          "elapsed_ms": 11.37,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_class_1",
+          "elapsed_ms": 171.907,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 12.733,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-041"
+    },
+    {
+      "case_id": "lcg-formal-042-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 0,
+      "expected_retained": 1,
+      "required_assertions": 10,
+      "required_passed": 10,
+      "status": "PASS",
+      "subtype": "repeat_without_delete",
+      "timings": [
+        {
+          "alias": "drink_1",
+          "elapsed_ms": 157.423,
+          "operation": "store"
+        },
+        {
+          "alias": "before_drink_1",
+          "elapsed_ms": 157.235,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 35.401,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_drink_1",
+          "elapsed_ms": 1.432,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_drink_1",
+          "elapsed_ms": 195.782,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 16.891,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-042"
+    },
+    {
+      "case_id": "lcg-formal-043-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 12,
+      "required_passed": 12,
+      "status": "PASS",
+      "subtype": "deep_expiry_with_retain",
+      "timings": [
+        {
+          "alias": "hobby_1",
+          "elapsed_ms": 203.767,
+          "operation": "store"
+        },
+        {
+          "alias": "office_2",
+          "elapsed_ms": 191.281,
+          "operation": "store"
+        },
+        {
+          "alias": "before_office_2",
+          "elapsed_ms": 179.184,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 53.618,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_hobby_1",
+          "elapsed_ms": 16.47,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_hobby_1",
+          "elapsed_ms": 156.885,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_office_2",
+          "elapsed_ms": 2.232,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_office_2",
+          "elapsed_ms": 195.912,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 15.564,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-043"
+    },
+    {
+      "case_id": "lcg-formal-044-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "subtype": "near_threshold_pair",
+      "timings": [
+        {
+          "alias": "meetings_1",
+          "elapsed_ms": 244.991,
+          "operation": "store"
+        },
+        {
+          "alias": "keyboard_2",
+          "elapsed_ms": 194.221,
+          "operation": "store"
+        },
+        {
+          "alias": "before_meetings_1",
+          "elapsed_ms": 246.069,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_keyboard_2",
+          "elapsed_ms": 170.783,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 50.852,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_meetings_1",
+          "elapsed_ms": 16.959,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_meetings_1",
+          "elapsed_ms": 197.331,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_keyboard_2",
+          "elapsed_ms": 3.166,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_keyboard_2",
+          "elapsed_ms": 213.185,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 17.132,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-044"
+    },
+    {
+      "case_id": "lcg-formal-045-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "subtype": "same_tier_age_boundary",
+      "timings": [
+        {
+          "alias": "backup_1",
+          "elapsed_ms": 208.507,
+          "operation": "store"
+        },
+        {
+          "alias": "exercise_2",
+          "elapsed_ms": 142.4,
+          "operation": "store"
+        },
+        {
+          "alias": "before_backup_1",
+          "elapsed_ms": 193.694,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_exercise_2",
+          "elapsed_ms": 165.347,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 47.26,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_backup_1",
+          "elapsed_ms": 33.474,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_backup_1",
+          "elapsed_ms": 260.611,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_exercise_2",
+          "elapsed_ms": 1.87,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_exercise_2",
+          "elapsed_ms": 176.083,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 10.934,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-045"
+    },
+    {
+      "case_id": "lcg-formal-046-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "subtype": "t2_age_boundary",
+      "timings": [
+        {
+          "alias": "contact_1",
+          "elapsed_ms": 170.963,
+          "operation": "store"
+        },
+        {
+          "alias": "notebook_2",
+          "elapsed_ms": 266.086,
+          "operation": "store"
+        },
+        {
+          "alias": "before_contact_1",
+          "elapsed_ms": 231.242,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_notebook_2",
+          "elapsed_ms": 220.299,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 43.212,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_contact_1",
+          "elapsed_ms": 22.575,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_contact_1",
+          "elapsed_ms": 148.372,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_notebook_2",
+          "elapsed_ms": 2.034,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_notebook_2",
+          "elapsed_ms": 183.236,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 19.679,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-046"
+    },
+    {
+      "case_id": "lcg-formal-047-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "subtype": "t1_age_boundary",
+      "timings": [
+        {
+          "alias": "planner_1",
+          "elapsed_ms": 186.151,
+          "operation": "store"
+        },
+        {
+          "alias": "language_2",
+          "elapsed_ms": 153.022,
+          "operation": "store"
+        },
+        {
+          "alias": "before_planner_1",
+          "elapsed_ms": 200.577,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_language_2",
+          "elapsed_ms": 218.598,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 43.301,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_planner_1",
+          "elapsed_ms": 22.626,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_planner_1",
+          "elapsed_ms": 205.795,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_language_2",
+          "elapsed_ms": 3.242,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_language_2",
+          "elapsed_ms": 189.269,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 21.351,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-047"
+    },
+    {
+      "case_id": "lcg-formal-048-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 1,
+      "required_assertions": 13,
+      "required_passed": 13,
+      "status": "PASS",
+      "subtype": "confidence_boundary",
+      "timings": [
+        {
+          "alias": "route_1",
+          "elapsed_ms": 212.098,
+          "operation": "store"
+        },
+        {
+          "alias": "device_2",
+          "elapsed_ms": 188.338,
+          "operation": "store"
+        },
+        {
+          "alias": "before_route_1",
+          "elapsed_ms": 217.048,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_device_2",
+          "elapsed_ms": 203.264,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 48.296,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_route_1",
+          "elapsed_ms": 23.961,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_route_1",
+          "elapsed_ms": 160.418,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_device_2",
+          "elapsed_ms": 2.0,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_device_2",
+          "elapsed_ms": 137.499,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 17.089,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-048"
+    },
+    {
+      "case_id": "lcg-formal-049-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 1,
+      "expected_retained": 2,
+      "required_assertions": 16,
+      "required_passed": 16,
+      "status": "PASS",
+      "subtype": "multi_tier_idempotency",
+      "timings": [
+        {
+          "alias": "reading_1",
+          "elapsed_ms": 175.308,
+          "operation": "store"
+        },
+        {
+          "alias": "commute_2",
+          "elapsed_ms": 211.451,
+          "operation": "store"
+        },
+        {
+          "alias": "hobby_3",
+          "elapsed_ms": 197.333,
+          "operation": "store"
+        },
+        {
+          "alias": "before_reading_1",
+          "elapsed_ms": 189.02,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_commute_2",
+          "elapsed_ms": 188.082,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_hobby_3",
+          "elapsed_ms": 203.068,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 41.278,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_reading_1",
+          "elapsed_ms": 32.479,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_reading_1",
+          "elapsed_ms": 139.69,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_commute_2",
+          "elapsed_ms": 2.077,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_commute_2",
+          "elapsed_ms": 201.681,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_hobby_3",
+          "elapsed_ms": 2.32,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_hobby_3",
+          "elapsed_ms": 149.932,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 24.432,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-049"
+    },
+    {
+      "case_id": "lcg-formal-050-safety-boundary",
+      "category": "safety_boundary",
+      "expected_deleted": 2,
+      "expected_retained": 1,
+      "required_assertions": 16,
+      "required_passed": 16,
+      "status": "PASS",
+      "subtype": "multiple_delete_idempotency",
+      "timings": [
+        {
+          "alias": "office_1",
+          "elapsed_ms": 192.322,
+          "operation": "store"
+        },
+        {
+          "alias": "passport_2",
+          "elapsed_ms": 208.255,
+          "operation": "store"
+        },
+        {
+          "alias": "meetings_3",
+          "elapsed_ms": 202.919,
+          "operation": "store"
+        },
+        {
+          "alias": "before_office_1",
+          "elapsed_ms": 241.437,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_passport_2",
+          "elapsed_ms": 217.532,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "before_meetings_3",
+          "elapsed_ms": 218.778,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_1",
+          "elapsed_ms": 49.948,
+          "operation": "governance"
+        },
+        {
+          "alias": "get_after_office_1",
+          "elapsed_ms": 31.444,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_office_1",
+          "elapsed_ms": 159.19,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_passport_2",
+          "elapsed_ms": 26.03,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_passport_2",
+          "elapsed_ms": 207.826,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "get_after_meetings_3",
+          "elapsed_ms": 2.249,
+          "operation": "get_memory"
+        },
+        {
+          "alias": "after_meetings_3",
+          "elapsed_ms": 146.398,
+          "operation": "retrieve"
+        },
+        {
+          "alias": "governance_2",
+          "elapsed_ms": 30.796,
+          "operation": "governance"
+        }
+      ],
+      "user_id": "feature-lcg-formal-050"
+    }
+  ],
+  "category_results": {
+    "clear_delete": {
+      "error": 0,
+      "fail": 0,
+      "pass": 10,
+      "total": 10
+    },
+    "clear_retain": {
+      "error": 0,
+      "fail": 0,
+      "pass": 10,
+      "total": 10
+    },
+    "mixed_batch": {
+      "error": 0,
+      "fail": 0,
+      "pass": 10,
+      "total": 10
+    },
+    "safety_boundary": {
+      "error": 0,
+      "fail": 0,
+      "pass": 10,
+      "total": 10
+    },
+    "tier_comparison": {
+      "error": 0,
+      "fail": 0,
+      "pass": 10,
+      "total": 10
+    }
+  },
+  "completed_at": "2026-08-13T02:43:21.278867Z",
+  "expected_deleted_memories": 50,
+  "expected_retained_memories": 60,
+  "required_assertions": 597,
+  "required_assertions_passed": 597,
+  "status_counts": {
+    "ERROR": 0,
+    "FAIL": 0,
+    "PASS": 50
+  },
+  "strict_pass_rate_all_cases": 1.0,
+  "system_error_rate": 0.0,
+  "total_cases": 50
+}

@@ -3,6 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../../../.." && pwd)"
+export MOI_BENCH_ROOT="${MOI_BENCH_ROOT:-${REPO_ROOT}}"
 DEFAULT_CONFIG="$(cd "${SCRIPT_DIR}/.." && pwd)/c0-four-cases-prebuilt.yaml"
 
 TASKS_ROOT="${HERMES_TBENCH_TASKS_ROOT:-${REPO_ROOT}/work/terminal-bench-2-1/tasks}"

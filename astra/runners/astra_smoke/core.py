@@ -410,6 +410,7 @@ def probe_run_command(
     cleanup_report_path: Optional[str] = None,
     cleanup_grace_sec: float = 2.0,
     strict_cleanup: bool = False,
+    exclude_stdout_json_events: Optional[list[str]] = None,
 ) -> str:
     argv = [
         "python3",
@@ -438,5 +439,7 @@ def probe_run_command(
                 "--strict-cleanup",
             ]
         )
+    for event_type in exclude_stdout_json_events or []:
+        argv.extend(["--exclude-stdout-json-event", event_type])
     argv.extend(["--", *child_argv])
     return shlex.join(argv)

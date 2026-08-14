@@ -59,6 +59,28 @@ ADOPTED_CHILD = {
 
 
 class ProbeTests(unittest.TestCase):
+    def test_jsonl_filter_drops_only_selected_event_types(self):
+        source = io.BytesIO(
+            b'{"type":"session","id":"s1"}\n'
+            b'{"type":"message_update","message":{"large":"payload"}}\n'
+            b'{"type":"message_end","message":{"role":"assistant"}}\n'
+            b'not-json\n'
+        )
+        destination = io.BytesIO()
+
+        probe._copy_filtered_jsonl(
+            source,
+            destination,
+            {"message_update", "tool_execution_update"},
+        )
+
+        self.assertEqual(
+            destination.getvalue(),
+            b'{"type":"session","id":"s1"}\n'
+            b'{"type":"message_end","message":{"role":"assistant"}}\n'
+            b'not-json\n',
+        )
+
     def test_product_terminal_status_preserves_timeout_and_cancel_exit_codes(self):
         self.assertEqual(
             probe._product_terminal_status("normal_exit", 124),

@@ -224,6 +224,7 @@ def process_probe_run_command(
     cleanup_report_path: Optional[str] = None,
     cleanup_grace_sec: float = 2.0,
     strict_cleanup: bool = False,
+    exclude_stdout_json_events: Optional[list[str]] = None,
 ) -> str:
     return probe_run_command(
         probe_path=probe_path,
@@ -237,6 +238,7 @@ def process_probe_run_command(
         cleanup_report_path=cleanup_report_path,
         cleanup_grace_sec=cleanup_grace_sec,
         strict_cleanup=strict_cleanup,
+        exclude_stdout_json_events=exclude_stdout_json_events,
     )
 
 

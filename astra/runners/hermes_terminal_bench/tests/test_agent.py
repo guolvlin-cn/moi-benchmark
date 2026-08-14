@@ -200,6 +200,10 @@ class HermesC0AgentTests(unittest.TestCase):
         }
 
         self.assertTrue(mounts["/etc/hermes"]["read_only"])
+        self.assertEqual(
+            mounts["/etc/hermes"]["source"],
+            "${MOI_BENCH_ROOT}/astra/runners/hermes_terminal_bench/managed",
+        )
         self.assertNotIn("/logs/agent/.env", mounts)
 
     def test_prebuilt_manifest_requires_preinstalled_agent(self) -> None:
@@ -212,8 +216,7 @@ class HermesC0AgentTests(unittest.TestCase):
         self.assertTrue(config["agents"][0]["kwargs"]["preinstalled"])
         self.assertEqual(
             config["datasets"][0]["path"],
-            "/Users/chenyuwei/Documents/MOI benchmark/work/"
-            "terminal-bench-2-1-hermes-prebuilt/tasks",
+            "work/terminal-bench-2-1-hermes-prebuilt/tasks",
         )
         self.assertTrue(
             config["environment"]["mounts"][0]["read_only"]

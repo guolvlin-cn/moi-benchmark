@@ -626,6 +626,164 @@ class C0AuditTests(unittest.TestCase):
                 {"type": "VerifierWarning"},
             )
 
+    def _attach_pi_trajectory(
+        self,
+        result_path: Path,
+        ledger_path: Path,
+        *,
+        failed: bool = False,
+    ) -> Path:
+        agent_dir = result_path.parent / "agent"
+        event_path = agent_dir / "pi.txt"
+        session_path = agent_dir / "pi-sessions" / "session.jsonl"
+        session_path.parent.mkdir(parents=True)
+        session_id = "pi-session-1"
+        if failed:
+            event_path.write_text('{"type":"session"\n', encoding="utf-8")
+            session_path.write_text("", encoding="utf-8")
+            trajectory_status = "failed"
+            trajectory_error = "RuntimeError: invalid Pi JSONL"
+            session_sha256 = None
+            session_entry_count = 0
+            stop_reason = None
+            provider_model_verified = False
+            event_count = 0
+        else:
+            header = {
+                "type": "session",
+                "version": 3,
+                "id": session_id,
+                "cwd": "/app",
+            }
+            events = [
+                header,
+                {"type": "agent_start"},
+                {
+                    "type": "message_end",
+                    "message": {
+                        "role": "assistant",
+                        "provider": "zai",
+                        "model": "glm-5.2",
+                        "stopReason": "stop",
+                    },
+                },
+                {"type": "agent_end", "messages": []},
+            ]
+            event_path.write_text(
+                "\n".join(json.dumps(row) for row in events) + "\n",
+                encoding="utf-8",
+            )
+            session_path.write_text(
+                "\n".join(
+                    json.dumps(row)
+                    for row in [header, {"type": "message"}]
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            trajectory_status = "saved"
+            trajectory_error = None
+            session_sha256 = hashlib.sha256(
+                session_path.read_bytes()
+            ).hexdigest()
+            session_entry_count = 2
+            stop_reason = "stop"
+            provider_model_verified = True
+            event_count = 4
+        trajectory_sha256 = hashlib.sha256(event_path.read_bytes()).hexdigest()
+        result = json.loads(result_path.read_text(encoding="utf-8"))
+        metadata = result["agent_result"]["metadata"]
+        metadata.update(
+            {
+                "pi_version": "0.73.1",
+                "pi_models_sha256": "e" * 64,
+                "pi_trajectory_status": trajectory_status,
+                "pi_trajectory_error": trajectory_error,
+                "pi_trajectory_sha256": trajectory_sha256,
+                "pi_event_count": event_count,
+                "pi_session_id": session_id if not failed else None,
+                "pi_session_sha256": session_sha256,
+                "pi_session_entry_count": session_entry_count,
+                "pi_final_stop_reason": stop_reason,
+                "pi_provider_model_verified": provider_model_verified,
+                "trajectory_capture_blocking": False,
+            }
+        )
+        result_path.write_text(json.dumps(result), encoding="utf-8")
+        rows = [
+            json.loads(line)
+            for line in ledger_path.read_text(encoding="utf-8").splitlines()
+        ]
+        started = rows[0]
+        started.update(
+            {
+                "product": "pi",
+                "product_version": "0.73.1",
+                "model_name": "zai/glm-5.2",
+                "pi_models_sha256": "e" * 64,
+                "trajectory_capture_required": True,
+                "trajectory_capture_mode": "pi_jsonl_and_saved_session",
+                "trajectory_capture_blocking": False,
+            }
+        )
+        completed = rows[-1]
+        completed.update(
+            {
+                "pi_trajectory_status": trajectory_status,
+                "pi_trajectory_error": trajectory_error,
+                "pi_trajectory_sha256": trajectory_sha256,
+                "pi_event_count": event_count,
+                "pi_session_id": session_id if not failed else None,
+                "pi_session_sha256": session_sha256,
+                "pi_session_entry_count": session_entry_count,
+                "pi_final_stop_reason": stop_reason,
+                "pi_provider_model_verified": provider_model_verified,
+                "trajectory_capture_blocking": False,
+            }
+        )
+        ledger_path.write_text(
+            "\n".join(json.dumps(row) for row in rows) + "\n",
+            encoding="utf-8",
+        )
+        return session_path
+
+    def test_audits_pi_trajectory_and_rejects_tampering(self):
+        with tempfile.TemporaryDirectory() as directory:
+            result_path, ledger_path = self._create_trial(
+                Path(directory), "pi-trajectory", trigger_hit=True
+            )
+            session_path = self._attach_pi_trajectory(
+                result_path, ledger_path
+            )
+
+            report = audit_trial(result_path)
+            trajectory = report["product"]["pi_trajectory"]
+            self.assertEqual(trajectory["status"], "saved")
+            self.assertEqual(trajectory["model"], "glm-5.2")
+
+            session_path.write_text("{}\n", encoding="utf-8")
+            with self.assertRaisesRegex(AuditError, "matching saved session"):
+                audit_trial(result_path)
+
+    def test_pi_partial_trajectory_is_nonblocking(self):
+        with tempfile.TemporaryDirectory() as directory:
+            result_path, ledger_path = self._create_trial(
+                Path(directory), "pi-partial", trigger_hit=True
+            )
+            self._attach_pi_trajectory(
+                result_path, ledger_path, failed=True
+            )
+
+            report = audit_trial(result_path)
+
+            self.assertEqual(report["audit_status"], "pass")
+            self.assertEqual(
+                report["product"]["pi_trajectory"]["status"], "failed"
+            )
+            self.assertFalse(
+                report["product"]["pi_trajectory"]["blocking"]
+            )
+
     def test_audits_astra_trajectory_and_rejects_tampering(self):
         with tempfile.TemporaryDirectory() as directory:
             result_path, ledger_path = self._create_trial(

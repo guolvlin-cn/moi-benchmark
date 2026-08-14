@@ -1,6 +1,6 @@
 # MOI OmniDocBench 全量评测分析
 
-更新时间：2026-08-05
+更新时间：2026-08-14
 
 ## 1. 结论
 
@@ -156,7 +156,8 @@ save_ppt_page_as_image: false
 
 ### 3.1 适配规则
 
-适配器只解决 IDC 输出与官方评分输入之间的格式差异：
+适配器 `scripts/adapt_idc_omnidocbench.py` 只解决 IDC 输出与官方评分输入之间的
+格式差异：
 
 - 按最终块顺序保留 `text`、`title`、`table`、`code`；
 - `title.level=1~6` 原样转成对应数量的 Markdown `#`；
@@ -164,6 +165,22 @@ save_ppt_page_as_image: false
 - 只把被重复转义的数字型 `rowspan/colspan` 还原为合法 HTML 属性；
 - 不修改 OCR 内容、公式、表格内容、标题层级或阅读顺序；
 - 不对缺失块、错分块或空预测做人工补全。
+
+最终评分输入位于
+`runs/omnidocbench-idc-4.1.14-vlm-final-1651-official-md/`，其中
+`README.txt` 说明目录用途，`adapter-report.json` 记录 1651 个输入 ZIP 到输出
+Markdown 的映射、逐文件 SHA-256 和适配统计。重新生成命令为：
+
+```bash
+python3 document-parsing/scripts/adapt_idc_omnidocbench.py \
+  --input-dir document-parsing/runs/omnidocbench-idc-4.1.14-vlm-final-1651 \
+  --output-dir document-parsing/runs/omnidocbench-idc-4.1.14-vlm-final-1651-official-md \
+  --golden document-parsing/datasets/omnidocbench/OmniDocBench.json \
+  --overwrite
+```
+
+该命令只在需要从原始解析 ZIP 重新生成评分 Markdown 时使用；直接从仓库归档
+预测复算 90.23 不需要原始 ZIP。
 
 标题层级没有单独的排行榜指标。适配器会保留 Markdown 标题层级，但官方最终
 主指标仍以文本、公式、表格和阅读顺序为核心。页眉页脚和图片也不直接计入
@@ -182,6 +199,7 @@ Overall；但如果正文被错误标成 header/footer，适配时会被过滤�
 | 评分流程 | `pdf_validation.py` / `end2end_eval` |
 | 匹配方式 | `quick_match` |
 | Docker 镜像 | `ghcr.io/zeng-weijun/omnidocbench-eval:repro-ubuntu2204` |
+| Docker 镜像 digest | `sha256:6116ad72172e763b5c43e963d5efebf2093f2362b975f58156ce4f6c9142e617` |
 | 评分配置 | `evaluate/moi-omnidocbench-final/end2end.docker.yaml` |
 | 评分结果 | `evaluate/moi-omnidocbench-final/result/` |
 | 环境快照 | `evaluate/moi-omnidocbench-final/result/omnidocbench-idc-4.1.14-official-md_quick_match_runtime_environment.json` |
@@ -202,26 +220,41 @@ Overall；但如果正文被错误标成 header/footer，适配时会被过滤�
 | Ghostscript | 9.55.0 |
 | 核心 Python 包 | Levenshtein 0.25.1，apted 1.0.3，lxml 4.9.1，numpy 1.24.4，pandas 2.0.3，Pillow 10.4.0，PyYAML 6.0.2，scipy 1.10.1 |
 
-在 `document-parsing` 目录下可用以下命令复现评分。为避免覆盖归档结果，
-复现输出单独写入 `reproduced-result`：
+该镜像由 OmniDocBench 官方中文 README 提供，下载命令为：
 
 ```bash
-cd /Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/document-parsing
-mkdir -p evaluate/moi-omnidocbench-final/reproduced-result
-
-docker run --rm \
-  --entrypoint /opt/miniconda310/envs/omnidocbench_v16_smoke_20260408_py310/bin/python \
-  -v "$PWD/datasets/omnidocbench/OmniDocBench.json:/workspace/gt/OmniDocBench.json:ro" \
-  -v "$PWD/runs/omnidocbench-idc-4.1.14-vlm-final-1651-official-md:/workspace/data_md/omnidocbench-idc-4.1.14-vlm-final-1651-official-md:ro" \
-  -v "$PWD/evaluate/moi-omnidocbench-final/end2end.docker.yaml:/workspace/configs/moi-omnidocbench-final.yaml:ro" \
-  -v "$PWD/evaluate/moi-omnidocbench-final/reproduced-result:/workspace/result" \
-  ghcr.io/zeng-weijun/omnidocbench-eval:repro-ubuntu2204 \
-  pdf_validation.py --config configs/moi-omnidocbench-final.yaml
+docker pull ghcr.io/zeng-weijun/omnidocbench-eval:repro-ubuntu2204
 ```
 
-镜像 tag、本地官方源码 commit、评分配置和容器环境快照均已记录；
-本次归档没有额外保存镜像 digest，因此长期严格复现时还应确认该 tag
-仍指向同一镜像内容。
+官方说明与下载入口见：
+[OmniDocBench README（固定到本次源码 commit）](https://github.com/opendatalab/OmniDocBench/blob/2b161d010d2e3aff77a0edef359ea3a6411d23cd/README_zh-CN.md)。
+镜像版本详情见
+[GitHub Packages](https://github.com/users/zeng-weijun/packages/container/omnidocbench-eval/785717416?tag=repro-ubuntu2204)。
+该版本的镜像构建时间为 `2026-04-08 18:21:23 +08:00`，GitHub Packages
+显示其发布于约 4 个月前；截至本报告更新时间，过去两周没有镜像版本或 tag
+内容更新。本次正式评分发生在该时间范围内并使用同一 tag，因此可以确认本次
+本地评分使用的就是以下 digest 对应版本：
+
+```text
+sha256:6116ad72172e763b5c43e963d5efebf2093f2362b975f58156ce4f6c9142e617
+```
+
+原始评分完成后因镜像体积较大，本地镜像已删除。后续复现脚本使用
+`tag@digest` 固定同一镜像内容，避免未来 tag 更新影响复现。
+
+将官方 Golden 放到约定位置并通过 SHA-256 校验后，在仓库任意目录运行：
+
+```bash
+document-parsing/scripts/reproduce_omnidocbench_final_score.sh
+```
+
+脚本会依次检查 Golden SHA-256、1651 个预测文件、适配清单及逐文件 SHA-256，
+再自动下载/运行固定 digest 的官方镜像；评分输出写入
+`evaluate/moi-omnidocbench-final/reproduced-result/`，完成后自动核对正式五项指标
+及 Overall。只检查输入、不启动 Docker 时可加 `--verify-only`。
+
+Golden 的官方获取入口、目标路径和校验命令见
+`evaluate/moi-omnidocbench-final/GOLDEN.md`。
 
 ## 5. 评分细则
 
@@ -411,9 +444,13 @@ MOI 在本次统一配置下已经取得较高的公式和整体解析分数，�
 4. 图片页在关闭图片 OCR 时形成的内容缺失；
 5. 多栏、模糊和公式密集页面中的局部公式漏识别。
 
-最终原始输出、评分输入、评分配置和完整指标分别位于：
+最终评分输入、评分配置和完整指标分别位于：
 
-- `runs/omnidocbench-idc-4.1.14-vlm-final-1651/`
 - `runs/omnidocbench-idc-4.1.14-vlm-final-1651-official-md/`
-- `evaluate/moi-omnidocbench-final/end2end.yaml`
+- `evaluate/moi-omnidocbench-final/end2end.docker.yaml`
 - `evaluate/moi-omnidocbench-final/result/`
+
+其中正式评分输入、适配清单、评分配置和完整评分结果作为仓库内可复现证据；
+Golden 因数据体积与分发边界不入库，通过
+`evaluate/moi-omnidocbench-final/GOLDEN.md` 获取并校验。7.4 GB 的原始解析 ZIP 不是从
+正式预测复算 90.23 的必要输入，因此不纳入本次最小复现范围。

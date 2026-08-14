@@ -1,0 +1,24 @@
+{
+  "adapted_scope": [
+    "subject_id",
+    "memory_type",
+    "branch"
+  ],
+  "adapted_scope_method": "separate Zep user graph per logical scope; excluded from native-scope headline score",
+  "case_count": 50,
+  "completed_at": "2026-08-13T09:25:11.487246Z",
+  "dataset": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/memoria/datasets/feature/duplicate-memory-handling/duplicate-memory-handling-formal-v1.jsonl",
+  "dataset_sha256": "b30ae3ac6bbe02a792bafa497afa23bb31d310601e23db5795fb68c66fc39657",
+  "native_scope": [
+    "user"
+  ],
+  "protocol": "graph.add text episode; await processed=true before next write in same case; retain episode mentions and all active/invalid edges",
+  "provider": "Zep Cloud",
+  "run_id": "cloud-formal50-v3",
+  "runner_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runner_sha256": "5024956b71befc167141f1bcb50519d9e8edcbf9e167c72c10033fea911973e6",
+  "started_at": "2026-08-13T09:11:30.869251Z",
+  "status": "complete",
+  "workers": 8,
+  "write_count": 104
+}

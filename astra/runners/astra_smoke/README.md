@@ -63,13 +63,15 @@ The C0 and F1 configs are ready as `example-job.yaml` and
 `example-job-f1.yaml`. Export values without writing the token into YAML:
 
 ```bash
+cd "$(git rev-parse --show-toplevel)"
+
 ./astra/runners/astra_smoke/build-linux.sh
 
 export ASTRA_API_URL=http://host.docker.internal:17001
 export ASTRA_ACCESS_TOKEN='replace-with-short-lived-token'
-export ASTRA_SMOKE_LINUX_BINARY='/Users/chenyuwei/Documents/MOI benchmark/work/astra-linux-build/target/release/astra'
+export ASTRA_SMOKE_LINUX_BINARY="$PWD/work/astra-linux-build/target/release/astra"
 export ASTRA_SMOKE_MODEL='replace-with-enabled-model-id'
-export PYTHONPATH="/Users/chenyuwei/Documents/MOI benchmark${PYTHONPATH:+:$PYTHONPATH}"
+export PYTHONPATH="$PWD${PYTHONPATH:+:$PYTHONPATH}"
 
 harbor --version
 harbor run --config astra/runners/astra_smoke/example-job.yaml --print-config
@@ -91,7 +93,7 @@ Audit a completed Harbor job from persisted evidence:
 
 ```bash
 python3 -m astra.runners.astra_smoke.audit \
-  "/Users/chenyuwei/Documents/MOI benchmark/work/astra-smoke-jobs/<job>"
+  "$PWD/work/astra-smoke-jobs/<job>"
 ```
 
 The audit fails unless the controller event order, pinned session, condition

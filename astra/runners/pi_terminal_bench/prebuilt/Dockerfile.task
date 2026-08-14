@@ -1,0 +1,27 @@
+ARG PI_RUNTIME_IMAGE=moi/pi-tbench-runtime:0.73.1
+ARG BASE_IMAGE=ubuntu:24.04
+FROM ${PI_RUNTIME_IMAGE} AS pi_runtime
+
+FROM ${BASE_IMAGE}
+
+ARG BASE_IMAGE
+ARG TASK_NAME
+
+COPY --link --from=pi_runtime /opt/pi-runtime /opt/pi-runtime
+COPY --link --from=pi_runtime \
+    /opt/moi/pi-preinstalled.json \
+    /opt/moi/pi-preinstalled.json
+
+RUN ln -sfn /opt/pi-runtime/bin/node /usr/local/bin/node \
+    && ln -sfn /opt/pi-runtime/bin/npm /usr/local/bin/npm \
+    && ln -sfn /opt/pi-runtime/bin/npx /usr/local/bin/npx \
+    && ln -sfn /opt/pi-runtime/bin/pi /usr/local/bin/pi \
+    && test "$(/usr/local/bin/pi --version 2>&1 | tail -n 1)" = "0.73.1"
+
+ENV PATH="/usr/local/bin:/opt/pi-runtime/bin:${PATH}"
+
+LABEL org.opencontainers.image.title="Pi Terminal-Bench thin task environment"
+LABEL org.opencontainers.image.version="0.73.1"
+LABEL io.moi.pi-tbench.kind="ephemeral-task"
+LABEL io.moi.pi-tbench.task="${TASK_NAME}"
+LABEL io.moi.pi-tbench.base-image="${BASE_IMAGE}"

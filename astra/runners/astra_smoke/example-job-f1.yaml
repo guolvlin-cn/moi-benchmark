@@ -1,4 +1,4 @@
-jobs_dir: "/Users/chenyuwei/Documents/MOI benchmark/work/astra-smoke-jobs"
+jobs_dir: "work/astra-smoke-jobs"
 n_concurrent_trials: 1
 environment:
   type: docker
@@ -16,6 +16,6 @@ agents:
       max_turns: 20
       turn_timeout_sec: 240
 datasets:
-  - path: "/Users/chenyuwei/Documents/MOI benchmark/astra/runners/astra_smoke/tasks"
+  - path: "astra/runners/astra_smoke/tasks"
     task_names:
       - astra-lifecycle-smoke

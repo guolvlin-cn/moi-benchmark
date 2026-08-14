@@ -1,6 +1,6 @@
 {
   "doc_id": "114-_old_274e089043",
-  "_generated_at": "2026-07-29T07:12:21+00:00",
+  "_generated_at": "2026-08-14T03:48:38+00:00",
   "header_footer": {
     "expected_headers": [
       {
@@ -13,8 +13,7 @@
         "text": "第 1 页 共 1 页\nHCF/RF-23-39-V01",
         "count": 1
       }
-    ],
-    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+    ]
   },
   "table": {
     "expected_table_count": 2,
@@ -34,8 +33,7 @@
         "text": "一、工业废气",
         "level": 2
       }
-    ],
-    "_todo": "请检查标题文本和层级是否正确"
+    ]
   },
   "layout": {
     "expected_reading_order": [
@@ -47,8 +45,7 @@
       "“ND”表示检测结果低于检出限。",
       "“/”表示样品的排放浓度未检出时，排放速率无须计算。"
     ],
-    "expected_no_split_texts": [],
-    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+    "expected_no_split_texts": []
   },
   "caption": {
     "expected_domain_keywords": [],
@@ -94,5 +91,5 @@
     }
   },
   "_generated_from": "annotation.json",
-  "_reviewed": false
+  "_reviewed": true
 }

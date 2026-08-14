@@ -1,4 +1,4 @@
-jobs_dir: "/Users/chenyuwei/Documents/MOI benchmark/work/astra-c0-lifecycle-jobs"
+jobs_dir: "work/astra-c0-lifecycle-jobs"
 n_concurrent_trials: 1
 timeout_multiplier: 2.0
 agent_timeout_multiplier: 2.25
@@ -18,7 +18,7 @@ agents:
       trigger_timeout_sec: 1800
       stream_transport_retries: 2
 datasets:
-  - path: "/Users/chenyuwei/Documents/MOI benchmark/work/terminal-bench-2-1/tasks"
+  - path: "work/terminal-bench-2-1/tasks"
     task_names:
       - modernize-scientific-stack
       - overfull-hbox

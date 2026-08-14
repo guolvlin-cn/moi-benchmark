@@ -1,0 +1,23 @@
+n_concurrent_trials: 1
+timeout_multiplier: 2.0
+agent_timeout_multiplier: 2.25
+environment:
+  type: docker
+verifier:
+  import_path: astra.runners.pi_terminal_bench.verifier:TerminalBenchEvidenceVerifier
+  env:
+    # The outer queue can run three Harbor jobs, so this caps aggregate uv
+    # downloads at six while leaving each verifier able to make progress.
+    UV_CONCURRENT_DOWNLOADS: "2"
+agents:
+  - name: astra.runners.pi_terminal_bench.agent:PiTerminalBenchC0Agent
+    model_name: "zai/glm-5.2"
+    env:
+      ZAI_API_KEY: ${ZAI_API_KEY}
+    kwargs:
+      version: "0.73.1"
+      preinstalled: true
+      thinking: high
+      turn_timeout_sec: 24000
+      trigger_timeout_sec: 24000
+      poll_interval_sec: 0.5
