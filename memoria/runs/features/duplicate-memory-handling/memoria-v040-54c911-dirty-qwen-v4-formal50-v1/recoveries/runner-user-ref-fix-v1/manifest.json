@@ -1,0 +1,29 @@
+{
+  "canary_user_id": "feature-dmh-formal-canary",
+  "case_count": 2,
+  "category_counts": {
+    "coexistence_scope_isolation": 2
+  },
+  "completed_at": "2026-08-13T07:47:52.583094Z",
+  "created_at": "2026-08-13T07:47:49.865652Z",
+  "dataset_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/memoria/datasets/feature/duplicate-memory-handling/duplicate-memory-handling-formal-v1.jsonl",
+  "dataset_sha256": "b30ae3ac6bbe02a792bafa497afa23bb31d310601e23db5795fb68c66fc39657",
+  "embedding_dimension": "1024",
+  "embedding_model": "text-embedding-v4",
+  "embedding_provider": "openai",
+  "matrixone_data_dir": "./data-duplicate-memory-handling-formal50-v1/matrixone",
+  "matrixone_image": "matrixorigin/matrixone@sha256:16ef37311b43c6882ed8242bf38b1e281d853d4f4f6163830fe10773c9fe011d",
+  "memoria_commit": "54c9114fd6888e11821edc2ee9acd570c17c5ee3",
+  "memoria_source_diff_sha256": "4386b86b03cca57deadd550e21f3ec55ddf6d10c5207dc96a10c42e28ed14021",
+  "memoria_version": "0.4.0",
+  "near_duplicate_l2_threshold": 0.3162,
+  "protocol": "controlled-direct-store-three-category-v1",
+  "runner_sha256": "e696776cda667fad15b835dcd7e1acc79d6fd0014332e41f15fe91b6226a4e17",
+  "schema_path": "/Users/wangyaqi/Documents/cursor_project/agent评估/moi-benchmark/memoria/datasets/feature/duplicate-memory-handling/duplicate-memory-handling-formal-v1.schema.json",
+  "schema_sha256": "13b647049c83949c79c702320fb457bb8372508132d94b0b32606ad0b06c449c",
+  "status": "complete",
+  "subtype_counts": {
+    "branch_isolation": 2
+  },
+  "suite": "duplicate-memory-handling-formal-v1"
+}

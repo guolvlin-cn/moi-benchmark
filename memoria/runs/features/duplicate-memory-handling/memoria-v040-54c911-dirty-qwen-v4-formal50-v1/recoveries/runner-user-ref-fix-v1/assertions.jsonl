@@ -1,0 +1,16 @@
+{"actual_ids": ["019ffa177b8e7732835448acdffc1868"], "case_id": "dmh-formal-047-scope-isolation", "expected_aliases": ["v2"], "expected_ids": ["019ffa177b8e7732835448acdffc1868"], "passed": true, "scope": "primary:experiment", "type": "active_state"}
+{"actual_ids": ["019ffa177b8e7732835448acdffc1868"], "case_id": "dmh-formal-047-scope-isolation", "contains_aliases": ["v2"], "excludes_aliases": [], "passed": true, "scope": "primary:experiment", "type": "retrieval"}
+{"actual_ids": ["019ffa177ac4740088cde98363b86a89"], "case_id": "dmh-formal-047-scope-isolation", "expected_aliases": ["v1"], "expected_ids": ["019ffa177ac4740088cde98363b86a89"], "passed": true, "scope": "primary:main", "type": "active_state"}
+{"actual_ids": ["019ffa177ac4740088cde98363b86a89"], "case_id": "dmh-formal-047-scope-isolation", "contains_aliases": ["v1"], "excludes_aliases": [], "passed": true, "scope": "primary:main", "type": "retrieval"}
+{"actual": 1, "alias": "v1", "case_id": "dmh-formal-047-scope-isolation", "expected": 1, "passed": true, "type": "history_length"}
+{"actual": 1, "alias": "v2", "case_id": "dmh-formal-047-scope-isolation", "expected": 1, "passed": true, "type": "history_length"}
+{"actual": ["coexist"], "case_id": "dmh-formal-047-scope-isolation", "expected": ["coexist"], "passed": true, "type": "semantic_actions"}
+{"case_id": "dmh-formal-047-scope-isolation", "passed": true, "type": "canary_isolation"}
+{"actual_ids": ["019ffa17800a7212976da78fcef39973"], "case_id": "dmh-formal-048-scope-isolation", "expected_aliases": ["v2"], "expected_ids": ["019ffa17800a7212976da78fcef39973"], "passed": true, "scope": "primary:experiment", "type": "active_state"}
+{"actual_ids": ["019ffa17800a7212976da78fcef39973"], "case_id": "dmh-formal-048-scope-isolation", "contains_aliases": ["v2"], "excludes_aliases": [], "passed": true, "scope": "primary:experiment", "type": "retrieval"}
+{"actual_ids": ["019ffa177f3374a386d091142bbfa62d"], "case_id": "dmh-formal-048-scope-isolation", "expected_aliases": ["v1"], "expected_ids": ["019ffa177f3374a386d091142bbfa62d"], "passed": true, "scope": "primary:main", "type": "active_state"}
+{"actual_ids": ["019ffa177f3374a386d091142bbfa62d"], "case_id": "dmh-formal-048-scope-isolation", "contains_aliases": ["v1"], "excludes_aliases": [], "passed": true, "scope": "primary:main", "type": "retrieval"}
+{"actual": 1, "alias": "v1", "case_id": "dmh-formal-048-scope-isolation", "expected": 1, "passed": true, "type": "history_length"}
+{"actual": 1, "alias": "v2", "case_id": "dmh-formal-048-scope-isolation", "expected": 1, "passed": true, "type": "history_length"}
+{"actual": ["coexist"], "case_id": "dmh-formal-048-scope-isolation", "expected": ["coexist"], "passed": true, "type": "semantic_actions"}
+{"case_id": "dmh-formal-048-scope-isolation", "passed": true, "type": "canary_isolation"}

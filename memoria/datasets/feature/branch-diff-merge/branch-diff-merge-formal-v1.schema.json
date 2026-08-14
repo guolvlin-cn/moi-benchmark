@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "branch-diff-merge-formal-v1.schema.json",
+  "title": "Memoria Branch Diff Merge Formal v1 case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "suite", "case_id", "category", "subtype", "track", "user_id", "description", "initial_memories", "operations", "assertions", "tags"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "suite": {"const": "branch-diff-merge-formal-v1"},
+    "case_id": {"type": "string", "pattern": "^bdm-formal-[0-9]{3}-[a-z0-9-]+$"},
+    "category": {"enum": ["branch_isolation", "diff_correctness", "merge_correctness", "conflict_detection"]},
+    "subtype": {"type": "string", "minLength": 1},
+    "track": {"const": "controlled-direct-store"},
+    "user_id": {"type": "string", "pattern": "^feature-bdm-formal-[0-9]{3}$"},
+    "description": {"type": "string", "minLength": 1},
+    "initial_memories": {"type": "array", "minItems": 1, "maxItems": 6, "items": {"$ref": "#/$defs/memory"}},
+    "operations": {"type": "array", "minItems": 5, "items": {"$ref": "#/$defs/operation"}},
+    "assertions": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/assertion"}},
+    "tags": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "$defs": {
+    "memory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alias", "content", "memory_type", "session_id", "subject_id", "trust_tier", "initial_confidence", "observed_at", "extra_metadata"],
+      "properties": {
+        "alias": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "content": {"type": "string", "minLength": 1, "maxLength": 32768},
+        "memory_type": {"enum": ["semantic", "working", "episodic", "profile", "tool_result", "procedural"]},
+        "session_id": {"type": "string", "minLength": 1},
+        "subject_id": {"type": "string", "minLength": 1},
+        "trust_tier": {"enum": ["T1", "T2", "T3", "T4"]},
+        "initial_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "extra_metadata": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["benchmark", "suite", "case_id", "memory_alias", "field"],
+          "properties": {
+            "benchmark": {"const": "memoria-features"},
+            "suite": {"const": "branch-diff-merge-formal-v1"},
+            "case_id": {"type": "string"},
+            "memory_alias": {"type": "string"},
+            "field": {"type": "string"}
+          }
+        }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["op"],
+      "properties": {
+        "op": {"enum": ["capture_state", "retrieve", "store", "correct", "delete", "create_branch", "checkout_branch", "list_branches", "diff_items", "merge_branch"]},
+        "operation_alias": {"type": "string"},
+        "state_alias": {"type": "string"},
+        "retrieval_alias": {"type": "string"},
+        "query": {"type": "string"},
+        "top_k": {"type": "integer", "minimum": 1, "maximum": 100},
+        "memory": {"$ref": "#/$defs/memory"},
+        "target_alias": {"type": "string"},
+        "result_alias": {"type": "string"},
+        "new_content": {"type": "string", "minLength": 1},
+        "reason": {"type": "string"},
+        "branch_alias": {"type": "string"},
+        "branch_name": {"type": "string"},
+        "from_snapshot": {"type": "string"},
+        "from_timestamp": {"type": "string"},
+        "diff_alias": {"type": "string"},
+        "limit": {"type": "integer", "minimum": 1, "maximum": 500},
+        "strategy": {"const": "append"},
+        "expected_status": {"type": "integer", "minimum": 100, "maximum": 599}
+      }
+    },
+    "assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["at", "type", "required"],
+      "properties": {
+        "at": {"type": "string"},
+        "type": {"enum": ["exact_active_aliases", "state_hash_equals", "state_hash_differs", "retrieval_contains", "retrieval_excludes", "active_branch_equals", "branch_exists", "diff_aliases_equal", "diff_conflict_contents_equal", "operation_status_equals", "operation_body_contains"]},
+        "required": {"type": "boolean"},
+        "expected": {},
+        "from": {"type": "string"},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "branch_alias": {"type": "string"},
+        "field": {"enum": ["added", "updated", "removed", "conflicts", "behind_main"]},
+        "memory_alias": {"type": "string"},
+        "branch_content": {"type": ["string", "null"]},
+        "main_content": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

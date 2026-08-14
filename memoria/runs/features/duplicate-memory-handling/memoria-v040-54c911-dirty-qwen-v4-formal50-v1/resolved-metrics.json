@@ -1,0 +1,40 @@
+{
+  "resolution": {
+    "original_run_status_counts": {"PASS": 34, "FAIL": 14, "ERROR": 2},
+    "recovery_directory": "recoveries/runner-user-ref-fix-v1",
+    "recovered_case_ids": [
+      "dmh-formal-047-scope-isolation",
+      "dmh-formal-048-scope-isolation"
+    ],
+    "reason": "runner incorrectly required user_ref on create_branch; dataset intentionally defaults this operation to primary",
+    "policy": "retain the immutable original run and replace only its two ERROR outcomes with independent missing-only recovery results"
+  },
+  "resolved_status_counts": {"PASS": 36, "FAIL": 14, "ERROR": 0},
+  "strict_pass_rate": 0.72,
+  "category_results": {
+    "exact_duplicate_reuse": {"total": 10, "pass": 8, "fail": 2, "error": 0, "accuracy": 0.8},
+    "semantic_equivalent_handling": {"total": 24, "pass": 12, "fail": 12, "error": 0, "accuracy": 0.5},
+    "coexistence_scope_isolation": {"total": 16, "pass": 16, "fail": 0, "error": 0, "accuracy": 1.0}
+  },
+  "subtype_results": {
+    "identical": {"total": 6, "pass": 6, "accuracy": 1.0},
+    "leading_space": {"total": 1, "pass": 1, "accuracy": 1.0},
+    "trailing_space": {"total": 1, "pass": 1, "accuracy": 1.0},
+    "single_edge_spaces": {"total": 1, "pass": 0, "accuracy": 0.0},
+    "multiple_edge_spaces": {"total": 1, "pass": 0, "accuracy": 0.0},
+    "single_inside_threshold": {"total": 8, "pass": 8, "accuracy": 1.0},
+    "single_near_outside_threshold": {"total": 8, "pass": 0, "accuracy": 0.0},
+    "single_clear_outside_threshold": {"total": 4, "pass": 0, "accuracy": 0.0},
+    "continuous_inside_threshold_chain": {"total": 4, "pass": 4, "accuracy": 1.0},
+    "same_scope_independent_facts": {"total": 8, "pass": 8, "accuracy": 1.0},
+    "subject_isolation": {"total": 2, "pass": 2, "accuracy": 1.0},
+    "memory_type_isolation": {"total": 2, "pass": 2, "accuracy": 1.0},
+    "branch_isolation": {"total": 2, "pass": 2, "accuracy": 1.0},
+    "user_isolation": {"total": 2, "pass": 2, "accuracy": 1.0}
+  },
+  "semantic_relation_results": {
+    "inside_threshold": {"total": 16, "pass": 16, "accuracy": 1.0, "observed_action": "supersede"},
+    "near_outside_threshold": {"total": 8, "pass": 0, "accuracy": 0.0, "observed_action": "coexist"},
+    "clear_outside_threshold": {"total": 4, "pass": 0, "accuracy": 0.0, "observed_action": "coexist"}
+  }
+}
