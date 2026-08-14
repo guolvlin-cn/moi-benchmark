@@ -74,8 +74,8 @@ Each predicate must return the same evidence twice, 500 ms apart. A `no_hit`
 does not suppress the upstream verifier or become an infrastructure exception;
 it sets `lifecycle_gate_passed=false`.
 
-The product gets two times the task's upstream `[agent].timeout_sec` (1200,
-1500, 1800, and 1800 seconds for the four registered tasks). The
+The product gets 2.25 times the task's upstream `[agent].timeout_sec` (1350,
+1687.5, 2025, and 2025 seconds for the four registered tasks). The
 container-local supervisor enforces that deadline and, before returning,
 proves that the registered root and all descendants—including detached
 children adopted by the subreaper—are gone. `agent_timeout_multiplier: 2.25`
@@ -83,19 +83,49 @@ is wrapper overhead for setup, controller polling, zero-live cleanup, terminal
 ledger persistence, and best-effort log collection; it is not extra product
 execution time.
 
-Run all 89 tasks with the same C0 wrapper, defaulting to one trial at a time:
+Run all 89 tasks with the same C0 wrapper, defaulting to one trial at a time.
+For an 8 CPU, 8GB RAM host, keep concurrency at one and give every complete
+reproduction a unique run name:
 
 ```bash
-astra/runners/scripts/astra-terminal-bench-all-c0.sh \
-  --check
+cd "$(git rev-parse --show-toplevel)"
 
-astra/runners/scripts/astra-terminal-bench-all-c0.sh \
-  --yes
+export HARBOR_BIN="$HOME/.local/share/uv/tools/harbor/bin/harbor"
+export MOI_BENCH_DATA_ROOT="$PWD"
+export ASTRA_API_URL="http://host.docker.internal:17001"
+export ASTRA_TBENCH_LINUX_BINARY="$PWD/work/astra-linux-build-amd64/target/release/astra"
+export ASTRA_TBENCH_MODEL="c5bde5de-9805-48d4-a016-1db6e6018fc4"
+export ASTRA_TBENCH_READ_MEMORY="false"
+
+run_name="astra-c0-$(date '+%Y%m%d-%H%M%S')"
+
+/bin/bash astra/runners/scripts/astra-terminal-bench-all-c0.sh \
+  --check \
+  --concurrency 1 \
+  --run-name "$run_name" \
+  --jobs-dir "$MOI_BENCH_DATA_ROOT/work/astra-c0-all-jobs"
+
+caffeinate -dimsu /bin/bash \
+  astra/runners/scripts/astra-terminal-bench-all-c0.sh \
+  --yes \
+  --concurrency 1 \
+  --run-name "$run_name" \
+  --jobs-dir "$MOI_BENCH_DATA_ROOT/work/astra-c0-all-jobs"
 ```
 
-The first command validates the pinned Harbor version, dataset count, model,
-API address, and amd64 Linux Astra ELF, then prints the expanded configuration
-without starting a trial.
+The first command validates Harbor 0.20.0, the frozen Terminal-Bench commit,
+the clean 89-task snapshot, model, API address, and amd64 Linux Astra ELF, then
+prints the expanded configuration without starting a trial. The second command
+always starts all 89 tasks; it is not a pending-queue resume command. Reusing a
+jobs root is safe because Harbor stores each run below its unique run name, but
+reusing the same run name is rejected.
+
+Every started run writes a secret-free reproduction record to
+`work/astra-c0-all-jobs/.reproduction/<run-name>.tsv`. It records the workspace
+and dataset commits, Harbor version, model, binary description, concurrency,
+timeouts, memory-read mode, and final Harbor exit code. It explicitly records
+that lifecycle audit/no-op status is not a score gate; verifier reward remains
+the task-result authority, with infrastructure failures reported separately.
 
 During a run, follow the newest host-side ledger with:
 
