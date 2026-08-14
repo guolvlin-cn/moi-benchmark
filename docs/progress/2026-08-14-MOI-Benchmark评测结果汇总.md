@@ -108,7 +108,7 @@ Feature 评测使用自建测试集，直接验证 Memoria 的状态管理、版
 
 ## 5. 汇总结论
 
-1. **Memoria**：LongMemEval-S 已达到或略高于公开竞品参照，LoCoMo 仍有约 3.6～4.6pp 差距；产品 Feature 中，重复与语义等价记忆处理是最明确的改进方向。
+1. **Memoria**：LongMemEval-S 已达到或略高于公开竞品参照，LoCoMo 仍有约 3.6～4.6pp 差距；在 Feature 评测中，快照与回滚、分支/Diff/Merge、低置信记忆治理等 Memoria 特有能力表现稳定，其他竞品目前不具备同构能力；语义等价记忆处理仍有优化空间。
 2. **文档解析**：MOI 在 OmniDocBench 上处于 MinerU-Pipeline 之上、MinerU-2.5 和新版 PaddleOCR-VL 之下；在半导体行业私有集上则显著领先 MinerU Precision 和 PaddleOCR-VL，体现出复杂、多页和跨页文档场景优势。
 3. **信息提取**：LandingAI 目前整体领先；MOI 在 VRDU 监管表单上差距较小，并在 Precision、文档全对率和空值控制上具有局部优势。
 
