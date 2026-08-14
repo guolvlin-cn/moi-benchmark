@@ -1,6 +1,6 @@
 {
   "doc_id": "115_f58f4b08cd",
-  "_generated_at": "2026-07-29T07:14:41+00:00",
+  "_generated_at": "2026-08-14T03:48:38+00:00",
   "header_footer": {
     "expected_headers": [
       {
@@ -12,8 +12,7 @@
         "count": 1
       }
     ],
-    "expected_footers": [],
-    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+    "expected_footers": []
   },
   "table": {
     "expected_table_count": 0,
@@ -26,8 +25,7 @@
         "text": "常用成本计算方法",
         "level": 1
       }
-    ],
-    "_todo": "请检查标题文本和层级是否正确"
+    ]
   },
   "layout": {
     "expected_reading_order": [
@@ -40,8 +38,7 @@
       "定义：按经营活动中发生的各项作业归集作业成本，后按各项作业成本与成本对象之间的因果关系，将作业成本分摊到成本对象，最终完成成本计算过程的一种计算方式",
       "适用于操作流程简单的传统工作或服务页"
     ],
-    "expected_no_split_texts": [],
-    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+    "expected_no_split_texts": []
   },
   "caption": {
     "expected_domain_keywords": [],
@@ -96,5 +93,5 @@
     }
   },
   "_generated_from": "annotation.json",
-  "_reviewed": false
+  "_reviewed": true
 }

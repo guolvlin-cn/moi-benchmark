@@ -31,6 +31,31 @@ Overall 为 **90.23**。
 已归档预测可以直接复算正式分数，不需要 7.4 GB 原始解析 ZIP。只有重新生成
 预测 Markdown 时才需要原始 ZIP 并运行适配器。
 
+## 半导体场景私有数据集正式结果
+
+私有集包含 50 份 PDF、PPTX、DOCX 和 DOC 问题样本，对比 MOI IDC 4.1.14、
+MinerU Precision 与 PaddleOCR-VL。正式 MOI 文件内维度等权分为 **84.5%**，
+文件内元素数加权分为 **89.4%**；两种口径最后均按 50 个文件等权平均。
+
+- [完整评测报告](evaluate/半导体场景私有数据集评测报告.md)：实验链路、模型与参数、评分细则、分组分析和结论边界；
+- [复现入口](evaluate/semiconductor-private-final/README.md)：评分器版本、命令、目录关系和配置权威来源；
+- [逐文件评分结果](evaluate/semiconductor-private-final/reproduced-score.json)：三套系统的维度明细及两种聚合分；
+- [输入与配置清单](evaluate/semiconductor-private-final/manifest.json)：50 个 case 的 SHA-256、Golden 状态、页数及 MOI 配置组；
+- [一键复算脚本](scripts/reproduce_semiconductor_private_score.sh)：固定评分器 commit 并校验正式总分；
+- [竞品适配入口](scripts/adapt_semiconductor_private_outputs.py)：从 MinerU/Paddle 原始 JSON 重建统一 Parse Blocks。
+
+最小复现链路如下：
+
+```text
+源文件 + Golden + 三套系统正式解析结果
+  -> reproduce_semiconductor_private_score.sh
+  -> 固定 moi-parse-bench commit 的 BenchmarkRunner
+  -> evaluate/semiconductor-private-final/reproduced-score.json
+```
+
+MOI 的实际参数以每个结果 ZIP 内 `parser_config` 及 manifest 为准；当前批跑脚本是
+后来形成的统一配置，不作为本次 4 个历史配置小批次的替代证据。
+
 ## 其他材料
 
 - [评测方案草稿](plans/drafts/v0.1.md)

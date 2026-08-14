@@ -1,6 +1,6 @@
 {
   "doc_id": "0625-case_d39d394f8a",
-  "_generated_at": "2026-07-29T03:21:53+00:00",
+  "_generated_at": "2026-08-14T03:48:38+00:00",
   "header_footer": {
     "expected_headers": [
       {
@@ -13,8 +13,7 @@
         "text": "The information contained herein is exclusive property of SIMC, and shall not be ditributed, reprodujced, or disclosed in whole or in part whithout priorn writtrn permission of SMIC\nAccording to :SMIC Document Control Procedure;Attachment No.: QR-QUSM-02-2001-002;Rev.:3         2026-1-30",
         "count": 1
       }
-    ],
-    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+    ]
   },
   "table": {
     "expected_table_count": 6,
@@ -29,8 +28,7 @@
     "expected_embedded_image_count": 0
   },
   "title": {
-    "expected_titles": [],
-    "_todo": "请检查标题文本和层级是否正确"
+    "expected_titles": []
   },
   "layout": {
     "expected_reading_order": [
@@ -72,8 +70,7 @@
       "从pdf上来看，满足：两个表在相邻页，上表底边超过 $50\\%$ ，下表上边在 $50\\%$ 内，宽度几乎一样，表中间没有文本，页眉页脚已被剔除干净",
       "无其他思路"
     ],
-    "expected_no_split_texts": [],
-    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+    "expected_no_split_texts": []
   },
   "caption": {
     "expected_domain_keywords": [],
@@ -252,5 +249,5 @@
     }
   },
   "_generated_from": "annotation.json",
-  "_reviewed": false
+  "_reviewed": true
 }

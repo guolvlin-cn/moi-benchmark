@@ -1,6 +1,6 @@
 {
   "doc_id": "08_713a323249",
-  "_generated_at": "2026-07-29T06:21:20+00:00",
+  "_generated_at": "2026-08-14T03:48:38+00:00",
   "header_footer": {
     "expected_headers": [
       {
@@ -21,8 +21,7 @@
         "text": "All copyright and IP belong to SMIC For reference only and may not be copied or distributed without written permission from SMIC. SMIC shall not be responsible for any party's reliance on these materials.",
         "count": 5
       }
-    ],
-    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+    ]
   },
   "table": {
     "expected_table_count": 1,
@@ -57,8 +56,7 @@
         "text": "SEASF06B LDD Stage WAT VBG Fail 8_D Report",
         "level": 1
       }
-    ],
-    "_todo": "请检查标题文本和层级是否正确"
+    ]
   },
   "layout": {
     "expected_reading_order": [
@@ -105,8 +103,7 @@
       "4. **CMOS** technology combines complementary MOSFETs to achieve low power consumption and high noise immunity in modern integrated circuits.",
       "5. **Advanced nodes** below 3nm now employ **Gate-All-Around (GAA)** transistors to overcome physical limitations and maintain Moore's Law progression."
     ],
-    "expected_no_split_texts": [],
-    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+    "expected_no_split_texts": []
   },
   "caption": {
     "expected_domain_keywords": [],
@@ -271,5 +268,5 @@
     }
   },
   "_generated_from": "annotation.json",
-  "_reviewed": false
+  "_reviewed": true
 }

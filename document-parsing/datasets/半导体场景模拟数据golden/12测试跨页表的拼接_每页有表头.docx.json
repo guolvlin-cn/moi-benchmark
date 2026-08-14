@@ -1,6 +1,6 @@
 {
   "doc_id": "12-__fd2ba7ab8d",
-  "_generated_at": "2026-07-29T07:28:25+00:00",
+  "_generated_at": "2026-08-14T03:48:39+00:00",
   "header_footer": {
     "expected_headers": [
       {
@@ -8,8 +8,7 @@
         "count": 1
       }
     ],
-    "expected_footers": [],
-    "_todo": "请检查页眉页脚是否完整，删除误识别的项，核实出现次数"
+    "expected_footers": []
   },
   "table": {
     "expected_table_count": 3,
@@ -46,8 +45,7 @@
         "text": "1.2.3.其他模型相关",
         "level": 3
       }
-    ],
-    "_todo": "请检查标题文本和层级是否正确"
+    ]
   },
   "layout": {
     "expected_reading_order": [
@@ -75,8 +73,7 @@
       "case3 三线表",
       "<table><tr><th>Task ID</th><th>Task Description</th><th>Priority</th><th>Assigned Department</th><th>Estimated Hours</th><th>Status</th></tr><tr><td>T-001</td><td>Initial Client Consultation</td><td>High</td><td>Sales</td><td>4</td><td>Completed</td></tr><tr><td>T-002</td><td>Requirement Analysis</td><td>Critical</td><td>Engineering</td><td>12</td><td>In Progress</td></tr><tr><td>T-003</td><td>Market Competitor Audit</td><td>Medium</td><td>Marketing</td><td>8</td><td>Pending</td></tr><tr><td>T-004</td><td>UI Wireframe Design</td><td>High</td><td>Design</td><td>20</td><td>In Progress</td></tr><tr><td>T-005</td><td>Database Schema Setup</td><td>Critical</td><td>Backend</td><td>10</td><td>Completed</td></tr><tr><td>T-006</td><td>API Authentication Layer</td><td>High</td><td>Backend</td><td>16</td><td>In Progress</td></tr><tr><td>T-007</td><td>Frontend Component Library</td><td>Medium</td><td>Frontend</td><td>24</td><td>Pending</td></tr><tr><td>T-008</td><td>User Interview Scripts</td><td>Low</td><td>Research</td><td>6</td><td>Completed</td></tr><tr><td>T-009</td><td>Brand Color Palette Selection</td><td>Medium</td><td>Design</td><td>4</td><td>Completed</td></tr><tr><td>T-010</td><td>Unit Testing Framework</td><td>High</td><td>QA</td><td>14</td><td>In Progress</td></tr><tr><td>T-011</td><td>Cloud Infrastructure Setup</td><td>Critical</td><td>DevOps</td><td>8</td><td>Completed</td></tr><tr><td>T-012</td><td>Social Media Campaign Plan</td><td>Low</td><td>Marketing</td><td>10</td><td>Pending</td></tr><tr><td>T-013</td><td>Security Vulnerability Scan</td><td>Critical</td><td>Cyber Security</td><td>12</td><td>In Progress</td></tr><tr><td>T-014</td><td>Mobile Responsive Testing</td><td>Medium</td><td>QA</td><td>18</td><td>Pending</td></tr><tr><td>T-015</td><td>Legal Terms of Service Draft</td><td>Low</td><td>Legal</td><td>5</td><td>Completed</td></tr><tr><td>T-016</td><td>Payment Gateway Integration</td><td>Critical</td><td>Backend</td><td>30</td><td>In Progress</td></tr><tr><td>T-017</td><td>Localization for EN/ES</td><td>Medium</td><td>Product</td><td>15</td><td>Pending</td></tr><tr><td>T-018</td><td>SEO Keyword Optimization</td><td>Medium</td><td>Marketing</td><td>7</td><td>Completed</td></tr><tr><td>T-019</td><td>Beta Tester Recruitment</td><td>High</td><td>Product</td><td>9</td><td>In Progress</td></tr><tr><td>T-020</td><td>Error Logging Implementation</td><td>Medium</td><td>Backend</td><td>6</td><td>Completed</td></tr><tr><td>T-021</td><td>Weekly Stakeholder Report</td><td>Low</td><td>Admin</td><td>2</td><td>Completed</td></tr><tr><td>T-022</td><td>Performance Bottleneck Audit</td><td>High</td><td>Engineering</td><td>14</td><td>In Progress</td></tr><tr><td>T-023</td><td>Illustration Assets Creation</td><td>Low</td><td>Design</td><td>20</td><td>Pending</td></tr><tr><td>T-024</td><td>Data Migration Script</td><td>Critical</td><td>Data Science</td><td>11</td><td>Completed</td></tr><tr><td>T-025</td><td>Email Notification Template</td><td>Medium</td><td>Frontend</td><td>5</td><td>In Progress</td></tr><tr><td>T-026</td><td>User Onboarding Flow</td><td>High</td><td>Design</td><td>12</td><td>Pending</td></tr><tr><td>T-027</td><td>Help Center Documentation</td><td>Low</td><td>Support</td><td>25</td><td>In Progress</td></tr></table>"
     ],
-    "expected_no_split_texts": [],
-    "_todo_no_split_texts": "需人工填写：不应被拆分的完整文本"
+    "expected_no_split_texts": []
   },
   "caption": {
     "expected_domain_keywords": [],
@@ -169,5 +166,5 @@
     }
   },
   "_generated_from": "annotation.json",
-  "_reviewed": false
+  "_reviewed": true
 }
