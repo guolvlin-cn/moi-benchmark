@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 import sys
 from collections import Counter
 from pathlib import Path
@@ -265,6 +266,25 @@ def format_number(value: Any, digits: int = 2) -> str:
     return f"{numeric:,.{digits}f}"
 
 
+def format_compact(value: Any, digits: int = 2) -> str:
+    numeric = number(value)
+    if numeric is None:
+        return "—"
+    return f"{numeric:,.{digits}f}".rstrip("0").rstrip(".")
+
+
+def format_fixed(value: Any, digits: int) -> str:
+    numeric = number(value)
+    return "—" if numeric is None else f"{numeric:,.{digits}f}"
+
+
+def format_whole(value: Any) -> str:
+    numeric = number(value)
+    if numeric is None:
+        return "—"
+    return f"{int(numeric + 0.5):,}"
+
+
 def format_hours(value: Any) -> str:
     numeric = number(value)
     return "—" if numeric is None else f"{numeric / 3600:,.2f} h"
@@ -278,6 +298,30 @@ def format_minutes(value: Any) -> str:
 def format_seconds(value: Any) -> str:
     numeric = number(value)
     return "—" if numeric is None else f"{numeric:,.2f} s"
+
+
+def format_total_duration(value: Any) -> str:
+    numeric = number(value)
+    if numeric is None:
+        return "—"
+    return format_minutes(numeric) if numeric < 3600 else format_hours(numeric)
+
+
+def format_count_share(value: Any, total: Any) -> str:
+    count = number(value)
+    denominator = number(total)
+    if count is None or not denominator:
+        return "—"
+    percentage = f"{count / denominator:.2%}".replace(".00%", "%")
+    return f"{int(count):,}（{percentage}）"
+
+
+def format_percent_floor(value: Any, total: Any) -> str:
+    numerator = number(value)
+    denominator = number(total)
+    if numerator is None or not denominator:
+        return "—"
+    return f"{math.floor(numerator / denominator * 10000) / 100:.2f}%"
 
 
 def format_tools(items: list[list[Any]] | list[tuple[str, int]], limit: int = 5) -> str:
@@ -408,35 +452,19 @@ def comparison_markdown(summary: dict[str, Any]) -> str:
         ("e2e_seconds", "端到端", format_hours, format_minutes),
         ("agent_seconds", "Agent 执行", format_hours, format_minutes),
         ("evaluator_seconds", "Evaluator", format_minutes, format_seconds),
-        ("orchestration_seconds", "Orchestration/收尾", format_hours, format_seconds),
+        ("orchestration_seconds", "Orchestration/收尾", format_total_duration, format_seconds),
     ):
         for name in ("astra", "hermes", "pi"):
             item = systems[name]["time"][key]
             time_rows.append(
                 f"| {label} | {display_names[name]} | {item['n']} | {total_formatter(item['sum'])} | {value_formatter(item['mean'])} | {value_formatter(item['median'])} | {value_formatter(item['p90'])} |"
             )
-    tool_rows = "\n".join(
-        f"| {display_names[name]} | {systems[name]['tools']['calls']['n']} | {format_number(systems[name]['tools']['calls']['sum'])} | {format_number(systems[name]['tools']['calls']['mean'])} | {format_number(systems[name]['tools']['calls']['median'])} | {format_number(systems[name]['tools']['calls']['p90'])} | {format_number(systems[name]['tools']['failures']['sum'])} |"
-        for name in ("astra", "hermes", "pi")
-    )
-    request_rows = "\n".join(
-        f"| {display_names[name]} | {format_number(systems[name]['requests']['model_requests_started']['sum'])} | {format_number(systems[name]['requests']['model_requests_completed']['sum'])} | {format_number(systems[name]['requests']['model_requests_failed']['sum'])} | {format_number(systems[name]['requests']['model_requests_started']['mean'])} | {format_number(systems[name]['requests']['model_requests_started']['median'])} | {format_number(systems[name]['requests']['model_requests_started']['p90'])} | {systems[name]['request_limit_reached']} |"
-        for name in ("astra", "hermes", "pi")
-    )
-    request_shape_rows = "\n".join(
-        f"| {display_names[name]} | {format_number(systems[name]['requests']['stream_requests']['sum'])} | {format_number(systems[name]['requests']['non_stream_requests']['sum'])} |"
-        for name in ("astra", "hermes", "pi")
-    )
-    reliable_token_rows = "\n".join(
-        f"| {display_names[name]} | {systems[name]['tokens']['reliable_records']} / {systems[name]['executed']} | {format_number(systems[name]['tokens']['reliable_input']['sum'])} | {format_number(systems[name]['tokens']['reliable_output']['sum'])} | {format_number(systems[name]['tokens']['reliable_total']['sum'])} | {format_number(systems[name]['tokens']['reliable_total']['median'])} |"
-        for name in ("astra", "hermes", "pi")
-    )
     visible_token_rows = "\n".join(
-        f"| {display_names[name]} | {systems[name]['tokens']['total_visible']['n']} | {systems[name]['tokens']['reported_completed_requests']} / {systems[name]['tokens']['missing_usage_completed_requests']} | {format_number(systems[name]['tokens']['input_visible']['sum'])} | {format_number(systems[name]['tokens']['output_visible']['sum'])} | {format_number(systems[name]['tokens']['total_visible']['sum'])} | {format_number(systems[name]['tokens']['total_visible']['median'])} |"
+        f"| {display_names[name]} | {systems[name]['tokens']['total_visible']['n']} | {systems[name]['tokens']['reported_completed_requests']:,} / {systems[name]['tokens']['missing_usage_completed_requests']:,} | {format_whole(systems[name]['tokens']['input_visible']['sum'])} | {format_whole(systems[name]['tokens']['output_visible']['sum'])} | {format_whole(systems[name]['tokens']['total_visible']['sum'])} | {format_whole(systems[name]['tokens']['total_visible']['median'])} |"
         for name in ("astra", "hermes", "pi")
     )
     pass_token_rows = "\n".join(
-        f"| {display_names[name]} | {systems[name]['tokens']['pass_reliable_records']} / {systems[name]['verify'].get('pass', 0)} | {format_number(systems[name]['tokens']['pass_reliable_total']['sum'])} | {format_number(systems[name]['tokens']['pass_reliable_total']['mean'])} | {format_number(systems[name]['tokens']['pass_reliable_total']['median'])} |"
+        f"| {display_names[name]} | {systems[name]['tokens']['pass_reliable_records']} / {systems[name]['verify'].get('pass', 0)} | {format_whole(systems[name]['tokens']['pass_reliable_total']['sum'])} | {format_whole(systems[name]['tokens']['pass_reliable_total']['mean'])} | {format_whole(systems[name]['tokens']['pass_reliable_total']['median'])} |"
         for name in ("astra", "hermes", "pi")
     )
     pair_rows = []
@@ -458,49 +486,7 @@ def comparison_markdown(summary: dict[str, Any]) -> str:
 - Astra/Hermes 沿用既有 108 题正式投影；Pi 使用隔离与服务修复后的最终覆盖结果。
 - Astra、Hermes 均有 108 个明确 evaluator 结果；Pi 有 104 个明确结果，另有 3 个 `unavailable` 和 1 个 `incomplete`。三方组合不会把这四题算作 Pi 失败。
 - 通过与否只以 evaluator 为准。时间、工具调用、模型请求和 token 都是产品整体运行时口径，不是同构 agent loop，效率指标只能描述观测足迹。
-
-## 实验产品与配置
-
-| 项目 | Astra | Hermes | Pi |
-| --- | --- | --- | --- |
-| 产品版本 | Linux/AMD64 release build；源码 `v0.0.5-4-g844473c68`，commit `844473c68649d8ea43e10b616dc4fbf98e2321e8`；CLI 输出 `astra 0.1.0` | release descriptor `v2026.7.20-63-gf4df260f2`，commit `f4df260f26c93f15694698869f3ea8e965eea301`，project version `0.19.0` | `0.73.1` Linux x64 binary |
-| API 模型 ID | `deepseek-v4-flash` | `deepseek-v4-flash` | `deepseek-v4-flash` |
-| 模型版本口径 | DeepSeek-V4-Flash-0731 | DeepSeek-V4-Flash-0731 | DeepSeek-V4-Flash-0731 |
-| 模型提供方 | DeepSeek 官方 API，经每次运行独立的本地代理 | 同左 | 同左 |
-| 推理配置 | Thinking enabled；`reasoning_effort=max` | 同左 | 同左 |
-| Temperature | 发送 `temperature=0`；DeepSeek Thinking 模式下该参数不生效 | 同左 | 同左 |
-| 产品原生 max turns | Astra 冻结默认值 `300` | Hermes 冻结默认值 `90` | 未显式设置 |
-| 外部统一请求预算 | 每题最多 100 次 product model request；允许第 100 次，拒绝第 101 次 | 同左 | 同左 |
-| 实际最高模型请求数 | 100 | 100 | 100 |
-| 触及 100 请求上限 | 23 / 108 | 3 / 108 | 4 / 107 个有完整运行 artifact 的任务 |
-| Agent deadline | 按任务采用 R1/R2/R3/R4：1800/2700/3600/5400 秒 | 同左 | 同左 |
-| Prompt 口径 | 保留 Astra 原生 system prompt，并输入 Toolathlon 公共 system/task 指令 | 保留 Hermes 原生 system prompt，并输入相同公共指令 | 保留 Pi 原生 system prompt，通过 append 方式输入相同公共指令 |
-| 工具范围 | 保留产品内置工具；提供当前任务的 MCP 工具 | 保留产品内置工具；提供当前任务的 MCP 工具 | 保留产品内置工具；提供当前任务的 MCP 工具 |
-
-三种产品的“turn”不是同构指标：Astra 会产生内部规划、反思和非流式请求，Hermes 主要使用携带工具 schema 的流式主循环，Pi 还包含其原生压缩与生命周期行为。因此，本实验以运行代理观测到的 `model_request.started` 作为统一请求预算和 step 统计，不把产品原生 max turns 或模型请求数直接解释为用户可见对话回合。
-
-## 基础运行环境
-
-| 环境项 | 配置 |
-| --- | --- |
-| 数据集 | Toolathlon，固定 108 题；严格三方比较采用 Pi 也有明确 evaluator 判定的 104 题 |
-| Host OS | Ubuntu 22.04.5 LTS，Linux `5.15.0-186-generic`，UTC |
-| CPU | Intel Xeon Platinum 8255C @ 2.50 GHz，x86_64，8 vCPU |
-| 内存与 Swap | Linux MemTotal 7.75 GiB（名义配置 8 GiB）；8 GiB swap，swappiness 10，关闭 zram |
-| 虚拟化 | Oracle/Vagrant 虚拟机 |
-| 容器运行时 | rootful Docker Engine 29.1.3，cgroup v2，systemd cgroup driver，overlayfs |
-| 任务镜像 | `lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f` |
-| 单任务资源上限 | 8 CPU、8 GiB RAM、8 GiB swap |
-| Kubernetes 工具 | Kind v0.20.0；kubectl v1.34.1 |
-| 外部应用状态 | 由任务 preprocess 恢复；Canvas、WooCommerce、Poste、MatrixOne 和 Kind 等使用共享部署，并非每题重新部署整套服务 |
-| 网络边界 | 未统一关闭公开互联网出口；任务级 MCP 限于当前任务，但终端、fetch、浏览器或产品内置工具仍可能访问公开网络 |
-| Evaluator | 使用 Toolathlon 每题原生 evaluator，在 Agent 终止后独立执行 |
-
-这里记录的是实验冻结时的环境；实验结束后宿主机内核或服务状态的变化不追溯修改历史运行口径。三种产品的内部 turn 定义不同，因此报告统一使用代理观测到的 `model_request.started`，不把它重述为可直接比较的 Agent 回合数。
-
-## Pi 最终结果不是单一运行批次
-
-Pi 的 effective result 按“基础批次 → 隔离重跑 → 最终服务/审计重跑”的顺序覆盖，同一题以后层完成且 artifact gate 通过的结果为准：
+- Pi 最终结果不是单一运行批次：Pi 的 effective result 按“基础批次 → 隔离重跑 → 最终服务/审计重跑”的顺序覆盖，同一题以后层完成且 artifact gate 通过的结果为准：
 
 | 最终来源 | 采用题数 | 说明 |
 | --- | ---: | --- |
@@ -512,7 +498,45 @@ Pi 的 effective result 按“基础批次 → 隔离重跑 → 最终服务/审
 
 四个没有明确 Pi evaluator 判定的 slot 仍保留原状态：第 38 题无完整 `run.json`；第 53、55、72 题 evaluator 返回 `pass: null`。它们不进入 104 题三方胜负配对，也不被补记为 `no_pass`。
 
-## 总体结果
+## 实验产品与配置
+
+| 项目 | Astra | Hermes | Pi |
+| --- | --- | --- | --- |
+| 产品版本 | Linux/AMD64 release build；源码`v0.0.5-4-g844473c68`，commit `844473c68649d8ea43e10b616dc4fbf98e2321e8`；CLI 输出 `astra 0.1.0` | release descriptor`v2026.7.20-63-gf4df260f2`，commit `f4df260f26c93f15694698869f3ea8e965eea301`，project version `0.19.0` | `0.73.1` Linux x64 binary； |
+| API 模型 ID | `deepseek-v4-flash` | `deepseek-v4-flash` | `deepseek-v4-flash` |
+| 模型版本口径 | DeepSeek-V4-Flash-0731 | DeepSeek-V4-Flash-0731 | DeepSeek-V4-Flash-0731 |
+| 模型提供方 | DeepSeek 官方 API，经每次运行独立的本地代理 | 同左 | 同左 |
+| 推理配置 | Thinking enabled；`reasoning_effort=max` | 同左 | 同左 |
+| Temperature | 发送`temperature=0`；DeepSeek Thinking 模式下该参数不生效 | 同左 | 同左 |
+| 产品原生 max turns | Astra 冻结默认值`300` | Hermes 冻结默认值`90` | 未显式设置 |
+| 外部统一请求预算 | 每题最多 100 次 product model request；允许第 100 次，拒绝第 101 次 | 同左 | 同左 |
+| 实际最高模型请求数 | 100 | 100 | 100 |
+| Agent deadline | 按任务采用 R1/R2/R3/R4：1800/2700/3600/5400 秒 | 同左 | 同左 |
+| Prompt 口径 | 保留 Astra 原生 system prompt，并输入 Toolathlon 公共 system/task 指令 | 保留 Hermes 原生 system prompt，并输入相同公共指令 | 保留 Pi 原生 system prompt，通过 append 方式输入相同公共指令 |
+| 工具范围 | 保留产品内置工具；提供当前任务 的 MCP 工具 | 保留产品内置工具；提供当前任务 的 MCP 工具 | 保留产品内置工具；提供当前任务 的 MCP 工具 |
+
+三种产品的“turn”不是同构指标：Astra 会产生内部规划、反思和非流式请求，Hermes 主要使用携带工具 schema 的流式主循环，Pi 还包含其原生压缩与生命周期行为。因此，本实验以运行代理观测到的 `model_request.started` 作为统一请求预算和 step 统计，不把产品原生 max turns 或模型请求数直接解释为用户可见对话回合。
+
+## 基础运行环境
+
+| 环境项 | 配置 |
+| --- | --- |
+| 数据集 | Toolathlon，固定 108 题；严格三方比较采用 Pi 也有明确 evaluator 判定的 104 题 |
+| Host OS | Ubuntu 22.04.5 LTS，Linux`5.15.0-186-generic`，UTC |
+| CPU | Intel Xeon Platinum 8255C @ 2.50 GHz，x86_64，8 vCPU |
+| 内存与 Swap | Linux MemTotal 7.75 GiB（名义配置 8 GiB）；8 GiB swap，swappiness 10，关闭 zram |
+| 虚拟化 | Oracle/Vagrant 虚拟机 |
+| 容器运行时 | rootful Docker Engine 29.1.3，cgroup v2，systemd cgroup driver，overlayfs |
+| 任务镜像 | `lockon0927/toolathlon-task-image@sha256:4d04fe4e0a6fdb4946f51bb05120cb44a0eef980231c11252f93b62897afcb9f` |
+| 单任务资源上限 | 8 CPU、8 GiB RAM、8 GiB swap |
+| Kubernetes 工具 | Kind v0.20.0；kubectl v1.34.1 |
+| 外部应用状态 | 由任务 preprocess 恢复；Canvas、WooCommerce、Poste、MatrixOne 和 Kind 等使用共享部署，并非每题重新部署整套服务 |
+| 网络边界 | 未统一关闭公开互联网出口；任务级 MCP 限于当前任务，但终端、fetch、浏览器或产品内置工具仍可能访问公开网络 |
+| Evaluator | 使用 Toolathlon 每题原生 evaluator，在 Agent 终止后独立执行 |
+
+这里记录的是实验冻结时的环境；实验结束后宿主机内核或服务状态的变化不追溯修改历史运行口径。三种产品的内部 turn 定义不同，因此报告统一使用代理观测到的 `model_request.started`，不把它重述为可直接比较的 Agent 回合数
+
+## 任务完成结果
 
 | 产品 | pass | no-pass | 未完成 | 按 108 题通过率 | 已测评题通过率 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -520,7 +544,7 @@ Pi 的 effective result 按“基础批次 → 隔离重跑 → 最终服务/审
 | Hermes | {systems['hermes']['verify'].get('pass', 0)} | {systems['hermes']['verify'].get('no_pass', 0)} | 0 | {systems['hermes']['pass_rate_all_108']:.2%} | {systems['hermes']['pass_rate_evaluated']:.2%} |
 | Pi 0.73.1 | {systems['pi']['verify'].get('pass', 0)} | {systems['pi']['verify'].get('no_pass', 0)} | {systems['pi']['verify'].get('missing', 0) + systems['pi']['verify'].get('unavailable', 0)} | {systems['pi']['pass_rate_all_108']:.2%} | {systems['pi']['pass_rate_evaluated']:.2%} |
 
-## 三方逐题组合
+### 三方逐题组合
 
 `P/F` 顺序固定为 Astra/Hermes/Pi。
 
@@ -530,7 +554,7 @@ Pi 的 effective result 按“基础批次 → 隔离重跑 → 最终服务/审
 
 最有区分度的是仅单一产品通过的任务。Pi 在 Astra 和 Hermes 都失败时通过 {len(pi_only)} 题：{task_names(pi_only)}。反向地，Astra 和 Hermes 都通过但 Pi 未通过 {len(pi_loses)} 题：{task_names(pi_loses)}。
 
-## 两两配对
+### 两两配对
 
 | 配对 | 可比较题数 | 双方通过 | 仅左侧通过 | 仅右侧通过 | 双方未通过 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -540,25 +564,7 @@ Pi 与另外两者的配对只覆盖 104 个有明确 Pi evaluator 判定的题�
 
 在共同可比较的 104 题上，Pi 相对 Astra 是 20 个 Pi-only 对 4 个 Astra-only，净胜 16 题；相对 Hermes 是 17 个 Pi-only 对 9 个 Hermes-only，净胜 8 题。这是固定 benchmark 上的逐题描述，不是从更大总体抽样得到的显著性结论。
 
-## Pi 改变共同失败结果的任务
-
-Pi 把 Astra/Hermes 共同失败的 26 题中的 9 题转为 pass。下表中的“原共同失败点”来自既有 Astra/Hermes evaluator 原因报告；Pi 列只陈述最终 evaluator 已通过，不反推其内部心理过程。
-
-| 题号 | 任务 | Astra/Hermes 原共同失败点 | Pi 最终结果 |
-| ---: | --- | --- | --- |
-| 8 | quantitative-financial-analysis | 两者表格均为 164×7，而基准要求 168×7 | pass |
-| 49 | interview-report | 两者输出都未满足 `Name: Anna Taylor` 等精确内容要求 | pass |
-| 63 | logical-datasets-collection | Astra 的 LaTeX 不匹配，Hermes 未生成 `datasets.tex` | pass |
-| 67 | mrbeast-analysis | 两者视频时长字段均与基准不一致 | pass |
-| 68 | music-analysis | Astra 未生成工作簿，Hermes 的连续上榜周数错误 | pass |
-| 74 | oil-price | Astra 交易数不足，Hermes 多项回测指标错误 | pass |
-| 92 | travel-expense-reimbursement | 两者都把 `EXP2024015` 的 FLAG 写错 | pass |
-| 105 | woocommerce-product-recall | 两者都缺 Google Form/召回邮件表单链接 | pass |
-| 108 | youtube-repo | Astra 缺文件，Hermes 缺两个仓库链接 | pass |
-
-反向差异只有两题：第 69 题 Pi 以 `product_error` 终止，evaluator 未找到名为 `NHL-B2B-Analysis` 的 Google Sheet；第 77 题 Pi 虽正常结束，但远端 `about.md` 缺少 `PhD candidate`，而 Astra/Hermes 均通过。这两题表明 Pi 的总体领先并不构成能力包含关系。
-
-## No-pass 终态结构
+## No-pass 原因
 
 | 产品 | 完成但 evaluator 未通过 | 模型请求预算 | 产品执行错误 |
 | --- | ---: | ---: | ---: |
@@ -574,13 +580,18 @@ Astra、Hermes 均统计 108 个正式结果；Pi 统计 107 个有完整 `run.j
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 {chr(10).join(time_rows)}
 
-Pi 的端到端和 Agent 时间中位数最低，但 Pi 的 P90 端到端时间高于 Hermes，说明其长尾任务仍然明显。上述时间包含通过与未通过任务，不能解释为“完成同样成功结果所需时间”。`orchestration` 包含准备、adapter 收尾及 post-terminal model drain，并非纯环境准备时间。
+Pi 的端到端和 Agent 时间中位数最低，分别为 4.83 和 4.07 分钟；Hermes 分别为 7.10 和 5.21 分钟，Astra 为 10.16 和 9.10 分钟。但 Pi 的 P90 端到端时间高于 Hermes，说明 Pi 的长尾任务仍然明显。上述时间包含通过与未通过任务，不能解释为“完成同样成功结果所需时间”。`orchestration` 是端到端减去 Agent 和 evaluator 后的剩余时间，包含准备、adapter 收尾及 post-terminal model drain，并非纯环境准备时间。
 
 ## 工具调用
 
-| 产品 | 有工具计数的运行 | 工具调用总数 | 单运行平均 | 单运行中位数 | 单运行 P90 | 失败工具事件总数 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-{tool_rows}
+| 指标 | Astra | Hermes | Pi |
+| --- | ---: | ---: | ---: |
+| 有工具计数的运行 | {systems['astra']['tools']['calls']['n']} | {systems['hermes']['tools']['calls']['n']} | {systems['pi']['tools']['calls']['n']} |
+| 工具调用总数 | {format_compact(systems['astra']['tools']['calls']['sum'])} | {format_compact(systems['hermes']['tools']['calls']['sum'])} | {format_compact(systems['pi']['tools']['calls']['sum'])} |
+| 单运行平均 | {format_compact(systems['astra']['tools']['calls']['mean'])} | {format_compact(systems['hermes']['tools']['calls']['mean'])} | {format_compact(systems['pi']['tools']['calls']['mean'])} |
+| 单运行中位数 | {format_compact(systems['astra']['tools']['calls']['median'])} | {format_compact(systems['hermes']['tools']['calls']['median'])} | {format_compact(systems['pi']['tools']['calls']['median'])} |
+| 单运行 P90 | {format_fixed(systems['astra']['tools']['calls']['p90'], 1)} | {format_fixed(systems['hermes']['tools']['calls']['p90'], 1)} | {format_fixed(systems['pi']['tools']['calls']['p90'], 1)} |
+| 失败工具事件总数 | {format_compact(systems['astra']['tools']['failures']['sum'])} | {format_compact(systems['hermes']['tools']['failures']['sum'])} | {format_compact(systems['pi']['tools']['failures']['sum'])} |
 
 常见终态工具：
 
@@ -588,37 +599,51 @@ Pi 的端到端和 Agent 时间中位数最低，但 Pi 的 P90 端到端时间�
 - Hermes：{format_tools(systems['hermes']['tools']['top_terminal_tools'])}。
 - Pi：{format_tools(systems['pi']['tools']['top_terminal_tools'])}。
 
-三者的工具工作负担中位数接近，但工具名称和封装并不等价。Hermes adapter 没有把本批 effective run 的工具终态归类为 `failed`，因此失败事件 0 不表示所有工具在语义上成功；Pi 的失败事件也可能包含重试后恢复的调用。
+三者的工具工作负担中位数接近，但工具名称和封装并不等价。Hermes 的 `terminal`、Pi 的 `bash`、任务 MCP 的 `terminal-run_command` 是不同传输层；Hermes adapter 没有把本批 effective run 的工具终态归类为 `failed`，因此失败事件 0 不表示所有工具在语义上成功。Pi 的 247 个失败事件也可能包含重试后恢复的调用，不能直接等同于任务失败。
 
 ## 模型请求
 
-| 产品 | started | completed event | provider 失败 | started 平均 | started 中位数 | started P90 | 触及 100 上限 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-{request_rows}
+| 指标 | Astra | Hermes | Pi |
+| --- | ---: | ---: | ---: |
+| 统计运行数 | {systems['astra']['executed']} | {systems['hermes']['executed']} | {systems['pi']['executed']} |
+| 模型请求 started | {format_compact(systems['astra']['requests']['model_requests_started']['sum'])} | {format_compact(systems['hermes']['requests']['model_requests_started']['sum'])} | {format_compact(systems['pi']['requests']['model_requests_started']['sum'])} |
+| 模型请求 completed event | {format_compact(systems['astra']['requests']['model_requests_completed']['sum'])} | {format_compact(systems['hermes']['requests']['model_requests_completed']['sum'])} | {format_compact(systems['pi']['requests']['model_requests_completed']['sum'])} |
+| provider 失败请求 | {format_compact(systems['astra']['requests']['model_requests_failed']['sum'])} | {format_compact(systems['hermes']['requests']['model_requests_failed']['sum'])} | {format_compact(systems['pi']['requests']['model_requests_failed']['sum'])} |
+| 单运行 started 平均 | {format_compact(systems['astra']['requests']['model_requests_started']['mean'])} | {format_compact(systems['hermes']['requests']['model_requests_started']['mean'])} | {format_compact(systems['pi']['requests']['model_requests_started']['mean'])} |
+| 单运行 started 中位数 | {format_compact(systems['astra']['requests']['model_requests_started']['median'])} | {format_compact(systems['hermes']['requests']['model_requests_started']['median'])} | {format_compact(systems['pi']['requests']['model_requests_started']['median'])} |
+| 单运行 started P90 | {format_compact(systems['astra']['requests']['model_requests_started']['p90'])} | {format_compact(systems['hermes']['requests']['model_requests_started']['p90'])} | {format_compact(systems['pi']['requests']['model_requests_started']['p90'])} |
+| 触及 100 请求上限 | {systems['astra']['request_limit_reached']} | {systems['hermes']['request_limit_reached']} | {systems['pi']['request_limit_reached']} |
+| 因请求预算 no-pass | {systems['astra']['failure_categories'].get('model_request_budget', 0)} | {systems['hermes']['failure_categories'].get('model_request_budget', 0)} | {systems['pi']['failure_categories'].get('model_request_budget', 0)} |
+| 流式请求 | {format_count_share(systems['astra']['requests']['stream_requests']['sum'], systems['astra']['requests']['model_requests_started']['sum'])} | {format_count_share(systems['hermes']['requests']['stream_requests']['sum'], systems['hermes']['requests']['model_requests_started']['sum'])} | {format_count_share(systems['pi']['requests']['stream_requests']['sum'], systems['pi']['requests']['model_requests_started']['sum'])} |
+| 非流式请求 | {format_count_share(systems['astra']['requests']['non_stream_requests']['sum'], systems['astra']['requests']['model_requests_started']['sum'])} | {format_count_share(systems['hermes']['requests']['non_stream_requests']['sum'], systems['hermes']['requests']['model_requests_started']['sum'])} | {format_count_share(systems['pi']['requests']['non_stream_requests']['sum'], systems['pi']['requests']['model_requests_started']['sum'])} |
 
-| 产品 | 流式请求 | 非流式请求 |
-| --- | ---: | ---: |
-{request_shape_rows}
-
-Pi 的模型请求总量和中位数最低，但请求数不是用户可见 turn：Astra 的统计包含大量内部无工具非流式请求，Hermes 和 Pi 更接近携带工具 schema 的流式主循环。Pi 触及上限的 4 个运行中，2 个形成 `no_pass`，另有第 55、72 题的 evaluator 返回 `pass: null`。
+Pi 的模型请求总量和中位数最低；Astra 总请求数分别比 Hermes 和 Pi 高 59.08% 和 101.50%。但请求数不是用户可见 turn：Astra 的统计包含大量内部无工具非流式请求，Hermes 和 Pi 更接近携带工具 schema 的流式主循环。Pi 触及上限的 4 个运行中，2 个形成 `no_pass`，另有第 55、72 题的 evaluator 返回 `pass: null`；因此“触及上限”和“因预算 no-pass”不是同一计数。
 
 ## Token 数据
 
 ### 保守可靠记录
 
-| 产品 | 完整 provider usage | 输入 token | 输出 token | total token | 单运行 total 中位数 |
-| --- | ---: | ---: | ---: | ---: | ---: |
-{reliable_token_rows}
+若一个 effective run 的 completed response 存在缺失 usage，该运行不进入本表：
 
-总量覆盖的运行数不同，不能把总量差直接解释为成本或效率差异。Pi 的 input 中包含 provider 单独报告的 cache-read token；Astra 和 Hermes 的请求结构及缓存计量边界也不同。
+| 指标 | Astra | Hermes | Pi |
+| --- | ---: | ---: | ---: |
+| 有完整 provider usage 的运行 | {systems['astra']['tokens']['reliable_records']} / {systems['astra']['executed']} | {systems['hermes']['tokens']['reliable_records']} / {systems['hermes']['executed']} | {systems['pi']['tokens']['reliable_records']} / {systems['pi']['executed']} |
+| 输入 token 总量 | {format_whole(systems['astra']['tokens']['reliable_input']['sum'])} | {format_whole(systems['hermes']['tokens']['reliable_input']['sum'])} | {format_whole(systems['pi']['tokens']['reliable_input']['sum'])} |
+| 输出 token 总量 | {format_whole(systems['astra']['tokens']['reliable_output']['sum'])} | {format_whole(systems['hermes']['tokens']['reliable_output']['sum'])} | {format_whole(systems['pi']['tokens']['reliable_output']['sum'])} |
+| total token 总量 | {format_whole(systems['astra']['tokens']['reliable_total']['sum'])} | {format_whole(systems['hermes']['tokens']['reliable_total']['sum'])} | {format_whole(systems['pi']['tokens']['reliable_total']['sum'])} |
+| 单运行 total 中位数 | {format_whole(systems['astra']['tokens']['reliable_total']['median'])} | {format_whole(systems['hermes']['tokens']['reliable_total']['median'])} | {format_whole(systems['pi']['tokens']['reliable_total']['median'])} |
+
+总量覆盖的运行数不同，不能把总量差直接解释为成本或效率差异。Pi 的可靠覆盖率最高，但其 input 中包含 provider 单独报告的 cache-read token；Astra 和 Hermes 的产品请求结构及缓存计量边界也不同。
 
 ### 全部可见 token 下界
+
+下界口径保留每个完整运行中已经明确上报的 usage；缺失 usage 的 completed request 保持未知，不补零：
 
 | 产品 | 运行数 | 已上报 / 缺 usage 的 completed 请求 | 输入 token 下界 | 输出 token 下界 | total token 下界 | 单运行 total 中位数 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 {visible_token_rows}
 
-Pi 可见 cache-read token 为 {format_number(systems['pi']['tokens']['cache_read_visible']['sum'])}，已经包含在 input/total 中，不能再次相加。Astra 完整架构包含内部非流式请求；双产品报告另提供排除这些请求的辅助口径。本表保留各产品完整代理可见足迹，不使用不对称过滤结果排序。
+Pi 可见 cache-read token 为 {format_whole(systems['pi']['tokens']['cache_read_visible']['sum'])}，占其可见 input 的 {format_percent_floor(systems['pi']['tokens']['cache_read_visible']['sum'], systems['pi']['tokens']['input_visible']['sum'])}，且已经包含在 input/total 中，不能再次相加。Astra 完整架构包含内部非流式请求；双产品报告另提供“排除 Astra `stream=false && request_tool_count=0` 请求”的辅助口径。本三产品表保留各产品完整代理可见足迹，不使用不对称过滤结果给产品排序。
 
 ### Pass 任务的可靠 Token
 
@@ -626,18 +651,18 @@ Pi 可见 cache-read token 为 {format_number(systems['pi']['tokens']['cache_rea
 | --- | ---: | ---: | ---: | ---: |
 {pass_token_rows}
 
-三者通过的任务集合不同，不能据此计算单位成功成本。严格 token 对比还需要限制到三者共同 pass、三侧 usage 都完整的同一任务集合，并处理工具 schema、缓存和内部请求边界差异。
+该表中三者通过的任务集合不同，不能据此计算单位成功成本。严格 token 对比还需要限制到三者共同 pass、三侧 usage 都完整的同一任务集合，并同时处理工具 schema、缓存和内部请求边界差异。
 
 ## 综合结论
 
-1. **结果质量：Pi 当前已确认通过数最高，但覆盖尚不完整。** Pi 已确认 77 pass，高于 Hermes 的 72 和 Astra 的 61；第 38、53、55、72 题没有明确 Pi evaluator 判定，不能把当前结果表述为完整的 108 题最终排名。
-2. **逐题结果不是包含关系。** 在 104 个三方可比较任务中，Pi 相对 Astra 净胜 16 题、相对 Hermes 净胜 8 题；Pi 独过 9 题，但也有 2 题由 Astra/Hermes 共同通过而 Pi 未通过。
-3. **Astra 的请求预算消耗最突出。** Astra 有 23 题触及 100 请求上限，其中 20 题因预算 no-pass；Hermes 分别为 3 和 3，Pi 为 4 和 2。
-4. **Pi 的典型运行更短，但存在长尾。** Pi Agent 时间中位数最低，其端到端 P90 高于 Hermes，不能仅用中位数概括所有任务。
-5. **工具调用总量接近。** 三者工具调用中位数接近；失败工具事件的采集和分类方式不同，不能直接作为产品可靠性排名。
-6. **Token 只能描述架构足迹。** 三者工具 schema、缓存计量、上下文组织和内部请求不同，不能将差异直接表述为模型 token 效率或成本优势。
-7. **Pi 的 effective result 混合了三个批次。** 环境修复和权限边界必须作为解释结果的一部分。
-8. **能力归因必须以可观察证据为限。** 优势案例可归因到 evaluator 验证的产物完整性、步骤执行和终态自检，不能直接推断未观测的“推理能力”。
+1. **结果质量：Pi 当前已确认通过数最高，但覆盖尚不完整。** Pi 已确认 77 pass，高于 Hermes 的 72 和 Astra 的 61；按全部 108 题是 71.30%，按 104 个明确结果是 74.04%。第 38、53、55、72 题没有明确 Pi evaluator 判定，不能把当前结果表述为完整的 108 题最终排名。
+2. **逐题结果不是包含关系。** 在104个三方可比较任务中，Pi 相对 Astra 净胜16题、相对 Hermes 净胜8题；Pi 独过9题，但也有2题由 Astra/Hermes 共同通过而 Pi 未通过。产品主循环、自检和工具执行策略都会改变结果。
+3. **Astra 的请求预算消耗最突出。** Astra 有23题触及100请求上限，其中20题因预算 no-pass；Hermes分别为3和3，Pi为4和2。Astra模型请求中位数33.5，也高于Hermes的20和Pi的16。
+4. **Pi 的典型运行更短，但存在长尾。** Pi Agent 时间中位数4.07分钟，为三者最低；其端到端 P90 为22.39分钟，高于Hermes的19.63分钟。不能仅用中位数概括所有任务。
+5. **工具调用总量接近。** 三者单运行工具调用中位数为31.5、32.5和29。失败工具事件的采集和分类方式不同，不能直接作为产品可靠性排名。
+6. **Token 只能描述架构足迹。** Pi和Astra的可靠记录 total 中位数接近，Hermes更高；但三者的工具 schema、缓存计量、上下文组织和内部请求不同，不能将差异直接表述为模型 token 效率或成本优势。
+7. **Pi 的 effective result 混合了三个批次。** 路径审计命中题已由增强隔离重跑替换，服务异常题采用最终服务重跑；其余初始结果继续保留。环境修复和权限边界必须作为解释结果的一部分。
+8. **能力归因必须以可观察证据为限。** Pi 的优势案例可归因到 evaluator 验证的产物完整性、步骤执行和终态自检，但不能从轨迹结果直接推断未观测的“推理能力”。
 
 ## 附件
 
@@ -652,7 +677,11 @@ Pi 可见 cache-read token 为 {format_number(systems['pi']['tokens']['cache_rea
 def main() -> None:
     pi = pi_rows()
     ah = load_astra_hermes_rows()
-    all_rows = ah + pi
+    system_order = {"astra": 0, "hermes": 1, "pi": 2}
+    all_rows = sorted(
+        ah + pi,
+        key=lambda row: (int(row["position"]), system_order[str(row["system"])]),
+    )
     groups, task_rows = outcome_groups(all_rows)
 
     systems = {}
