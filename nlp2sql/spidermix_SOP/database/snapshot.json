@@ -1,0 +1,42 @@
+{
+  "snapshot_id": "spider_mix50_mysql_20260813",
+  "source_of_truth": "local_mysql",
+  "mysql_version": "9.6.0",
+  "databases": {
+    "pets_1": {
+      "question_count": 17,
+      "tables": {
+        "Student": {"rows": 34, "mysql_checksum": 3102135354, "csv_sha256": "fe9c9796bfef601842a110264ad00ab70e2d10c72a0b6092b52c701fa6c37703"},
+        "Pets": {"rows": 3, "mysql_checksum": 2522406892, "csv_sha256": "d5817be00c474486e9efc63c990fafd00a806acd1aa837c5092c51c5fdf3dfe3"},
+        "Has_Pet": {"rows": 3, "mysql_checksum": 1548979124, "csv_sha256": "e925630f7dfccd170ae1ccab98bf56923cdfa75d706e805810efbf4a99b34717"}
+      }
+    },
+    "concert_singer": {
+      "question_count": 17,
+      "tables": {
+        "stadium": {"rows": 9, "mysql_checksum": 2148822996, "csv_sha256": "cec5d712f35ef3459c3d2506e559644f59bd95d6f1b60c38d61f20944aaa689d"},
+        "singer": {"rows": 6, "mysql_checksum": 2428394583, "csv_sha256": "e07aab516ecf8fd6fde42f20d1e2666bc323b7e21f24a74ab2501915ebfa145d"},
+        "concert": {"rows": 6, "mysql_checksum": 4092332171, "csv_sha256": "ce2cdaf7df062d2f54f1d3e42ef703bab8b89a4a50f248721abd1b56b1213a47"},
+        "singer_in_concert": {"rows": 10, "mysql_checksum": 2363076281, "csv_sha256": "b5389bcf5fd4bd7fa7f2e40903f364ec1c38ee299ed3c0bdb911521aa43f429d"}
+      }
+    },
+    "car_1": {
+      "question_count": 16,
+      "tables": {
+        "continents": {"rows": 5, "mysql_checksum": 1801187115, "csv_sha256": "9c38cd699a2bf8cccc7a5e13a049eebb46be8ff2fad808146e83626aeed093d0"},
+        "countries": {"rows": 15, "mysql_checksum": 3423294698, "csv_sha256": "d581304f1fce6f934c2d6c76638a6e34bc487115a5a72773838e3f7b6f9fa09c"},
+        "car_makers": {"rows": 22, "mysql_checksum": 1985205663, "csv_sha256": "4b8213e688e74e7f3b09d15207a2b8dbc47d80597a4fb4fa1e7ab8eb13422d26"},
+        "model_list": {"rows": 35, "mysql_checksum": 1494736970, "csv_sha256": "d7fdd82117dc23eb5e3792a0ff73efc2a23c6a4355f8db318b3975848bf828f4"},
+        "car_names": {"rows": 406, "mysql_checksum": 866435071, "csv_sha256": "6c0bc4c6595d1293030c87d9d7ad9ae2973131735ce9a5852e8b5af0fd9ad516"},
+        "cars_data": {"rows": 406, "mysql_checksum": 3230205705, "csv_sha256": "bd4363b56ef0d8397edb4950058c1b65afcd21b4fe07ffec4dd858648fd2b0d6"}
+      }
+    }
+  },
+  "normalizations": [
+    {
+      "file": "car_1/model_list.csv",
+      "removed_row": "14,10,hi",
+      "reason": "The live MySQL snapshot excludes this orphan row because car_makers.Id=10 does not exist."
+    }
+  ]
+}

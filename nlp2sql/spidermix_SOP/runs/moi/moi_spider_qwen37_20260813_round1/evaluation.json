@@ -1,0 +1,3158 @@
+{
+  "benchmark_id": "spider_mix50",
+  "product": "moi",
+  "model": "qwen3.7-plus-2026-05-26",
+  "run_id": "moi_spider_qwen37_20260813_round1",
+  "comparison": {
+    "gold_engine": "mysql_9.6",
+    "prediction_engine": "matrixone",
+    "prediction_result_scope": "selected_native_results_fallback_native_results",
+    "rule": "Spider-style denotation equivalence; rows ordered only when Golden SQL has ORDER BY; column permutation allowed; bag semantics preserved"
+  },
+  "metrics": {
+    "execution_accuracy": {
+      "numerator": 40,
+      "denominator": 50,
+      "rate": 0.8,
+      "percent": 80.0
+    },
+    "sql_success_rate": {
+      "numerator": 50,
+      "denominator": 50,
+      "rate": 1.0,
+      "percent": 100.0
+    },
+    "execution_accuracy_by_difficulty": {
+      "easy": {
+        "numerator": 26,
+        "denominator": 30,
+        "rate": 0.8667,
+        "percent": 86.67
+      },
+      "medium": {
+        "numerator": 10,
+        "denominator": 15,
+        "rate": 0.6667,
+        "percent": 66.67
+      },
+      "hard": {
+        "numerator": 4,
+        "denominator": 5,
+        "rate": 0.8,
+        "percent": 80.0
+      }
+    },
+    "execution_accuracy_by_database": {
+      "car_1": {
+        "numerator": 12,
+        "denominator": 16,
+        "rate": 0.75,
+        "percent": 75.0
+      },
+      "concert_singer": {
+        "numerator": 12,
+        "denominator": 17,
+        "rate": 0.7059,
+        "percent": 70.59
+      },
+      "pets_1": {
+        "numerator": 16,
+        "denominator": 17,
+        "rate": 0.9412,
+        "percent": 94.12
+      }
+    },
+    "end_to_end_latency_ms": {
+      "observed": 50,
+      "mean": 17512.3,
+      "min": 10551.0,
+      "max": 54118.0,
+      "p50": 16108.0,
+      "p95": 29166.1
+    },
+    "token_usage": {
+      "observed": 50,
+      "total": 2084012,
+      "mean_per_question": 41680.24
+    },
+    "repeat_correct_rate": {
+      "available": false,
+      "reason": "Only one 50-question round was run; three repeats are required"
+    }
+  },
+  "failure_reason_counts": {
+    "column_count_mismatch": 7,
+    "ordered_value_mismatch": 1,
+    "unordered_value_mismatch": 2
+  },
+  "records": [
+    {
+      "case_id": "mix50_001",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "What type of pet is the youngest animal, and how much does it weigh?",
+      "gold_sql": "SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1",
+      "generated_sql": "SELECT PetType, weight FROM pets ORDER BY pet_age ASC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "pettype",
+        "weight"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "dog",
+          "9.30"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_b41c7484c4bf452eb1582476",
+          "sql": "SELECT PetType, weight FROM pets ORDER BY pet_age ASC LIMIT 1",
+          "columns": [
+            "PetType",
+            "weight"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "dog",
+              "9.30"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 10551,
+      "sql_execution_ms_matrixone": 65.394,
+      "prompt_tokens": 38554,
+      "completion_tokens": 310,
+      "total_tokens": 38864,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 146,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_002",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?",
+      "gold_sql": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'",
+      "generated_sql": "SELECT Name, Country FROM singer WHERE Song_Name LIKE '%Hey%'",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "name",
+        "country"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "Justin Brown",
+          "France"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_004d6838fc68456abb99ddb1",
+          "sql": "SELECT Name, Country FROM singer WHERE Song_Name LIKE '%Hey%'",
+          "columns": [
+            "Name",
+            "Country"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "Justin Brown",
+              "France"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 13873,
+      "sql_execution_ms_matrixone": 56.61,
+      "prompt_tokens": 39345,
+      "completion_tokens": 466,
+      "total_tokens": 39811,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 264,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_003",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "how many cars were produced in 1980?",
+      "gold_sql": "SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980",
+      "generated_sql": "SELECT COUNT(*) AS car_count FROM cars_data WHERE Year = 1980",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          29
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_9c235d6b0cce4b51a7cc4179",
+          "sql": "SELECT COUNT(*) AS car_count FROM cars_data WHERE Year = 1980",
+          "columns": [
+            "car_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              29
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 12228,
+      "sql_execution_ms_matrixone": 48.493,
+      "prompt_tokens": 37946,
+      "completion_tokens": 347,
+      "total_tokens": 38293,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 173,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_004",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What is the average, minimum, and maximum age for all French singers?",
+      "gold_sql": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",
+      "generated_sql": "SELECT AVG(Age) AS average_age, MIN(Age) AS minimum_age, MAX(Age) AS maximum_age FROM singer WHERE Country = 'France'",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "avg(age)",
+        "min(age)",
+        "max(age)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "34.5000",
+          25,
+          43
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_b627554953364230baa18670",
+          "sql": "SELECT AVG(Age) AS average_age, MIN(Age) AS minimum_age, MAX(Age) AS maximum_age FROM singer WHERE Country = 'France'",
+          "columns": [
+            "average_age",
+            "minimum_age",
+            "maximum_age"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              34.5,
+              25,
+              43
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 14432,
+      "sql_execution_ms_matrixone": 44.908,
+      "prompt_tokens": 37885,
+      "completion_tokens": 557,
+      "total_tokens": 38442,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 284,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_005",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "How many different types of pet are there?",
+      "gold_sql": "SELECT count(DISTINCT pettype) FROM pets",
+      "generated_sql": "SELECT COUNT(DISTINCT PetType) AS num_pet_types FROM pets",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(DISTINCT pettype)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          2
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_527c607b54494ce18c451f8a",
+          "sql": "SELECT COUNT(DISTINCT PetType) AS num_pet_types FROM pets",
+          "columns": [
+            "num_pet_types"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              2
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 16241,
+      "sql_execution_ms_matrixone": 49.225,
+      "prompt_tokens": 37445,
+      "completion_tokens": 566,
+      "total_tokens": 38011,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 382,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_006",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980 ?",
+      "gold_sql": "select max(mpg) from cars_data where cylinders  =  8 or year  <  1980",
+      "generated_sql": "SELECT MAX(MPG) FROM cars_data WHERE Cylinders = 8 OR Year < 1980",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "max(mpg)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "43.10"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_c30348f6151b4b95a1743bf4",
+          "sql": "SELECT MAX(MPG) FROM cars_data WHERE Cylinders = 8 OR Year < 1980",
+          "columns": [
+            "MAX(MPG)"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "43.10"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 19659,
+      "sql_execution_ms_matrixone": 69.244,
+      "prompt_tokens": 38042,
+      "completion_tokens": 612,
+      "total_tokens": 38654,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 421,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_007",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "Find the number of pets whose weight is heavier than 10.",
+      "gold_sql": "SELECT count(*) FROM pets WHERE weight  >  10",
+      "generated_sql": "SELECT COUNT(*) AS pet_count FROM pets WHERE weight > 10",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          2
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_3c3e7febadd54ee2bf8317b3",
+          "sql": "SELECT COUNT(*) AS pet_count FROM pets WHERE weight > 10",
+          "columns": [
+            "pet_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              2
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 13063,
+      "sql_execution_ms_matrixone": 41.783,
+      "prompt_tokens": 37506,
+      "completion_tokens": 373,
+      "total_tokens": 37879,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 208,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_008",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "What is the horsepower of the car with the largest accelerate?",
+      "gold_sql": "SELECT T1.horsepower FROM CARS_DATA AS T1 ORDER BY T1.accelerate DESC LIMIT 1",
+      "generated_sql": "SELECT Horsepower FROM cars_data ORDER BY Accelerate DESC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "horsepower"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          71
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_08135eb0c4694dd187f3ffdc",
+          "sql": "SELECT Horsepower FROM cars_data ORDER BY Accelerate DESC LIMIT 1",
+          "columns": [
+            "Horsepower"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              71
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 11466,
+      "sql_execution_ms_matrixone": 49.384,
+      "prompt_tokens": 37932,
+      "completion_tokens": 303,
+      "total_tokens": 38235,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 135,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_009",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What is the name and capacity for the stadium with highest average attendance?",
+      "gold_sql": "SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1",
+      "generated_sql": "SELECT Name, Capacity FROM stadium ORDER BY Average DESC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "name",
+        "capacity"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "Stark's Park",
+          10104
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_4b3ecfbc353d443d8db39d90",
+          "sql": "SELECT Name, Capacity FROM stadium ORDER BY Average DESC LIMIT 1",
+          "columns": [
+            "Name",
+            "Capacity"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "Stark's Park",
+              10104
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 19342,
+      "sql_execution_ms_matrixone": 50.691,
+      "prompt_tokens": 39321,
+      "completion_tokens": 419,
+      "total_tokens": 39740,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 226,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_010",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What is the average, minimum, and maximum age of all singers from France?",
+      "gold_sql": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",
+      "generated_sql": "SELECT AVG(Age) AS average_age, MIN(Age) AS minimum_age, MAX(Age) AS maximum_age FROM singer WHERE Country = 'France'",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "avg(age)",
+        "min(age)",
+        "max(age)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "34.5000",
+          25,
+          43
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_493c35ee08dc4aa78524bfb7",
+          "sql": "SELECT AVG(Age) AS average_age, MIN(Age) AS minimum_age, MAX(Age) AS maximum_age FROM singer WHERE Country = 'France'",
+          "columns": [
+            "average_age",
+            "minimum_age",
+            "maximum_age"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              34.5,
+              25,
+              43
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 18377,
+      "sql_execution_ms_matrixone": 42.066,
+      "prompt_tokens": 37881,
+      "completion_tokens": 389,
+      "total_tokens": 38270,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 172,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_011",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "Find the weight of the youngest dog.",
+      "gold_sql": "SELECT weight FROM pets ORDER BY pet_age LIMIT 1",
+      "generated_sql": "SELECT weight FROM pets WHERE PetType = 'dog' ORDER BY pet_age ASC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "weight"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "9.30"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_01a5e149a712469ca5ccb556",
+          "sql": "SELECT weight FROM pets WHERE PetType = 'dog' ORDER BY pet_age ASC LIMIT 1",
+          "columns": [
+            "weight"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "9.30"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 11011,
+      "sql_execution_ms_matrixone": 35.868,
+      "prompt_tokens": 38528,
+      "completion_tokens": 383,
+      "total_tokens": 38911,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 227,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_012",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "In 1980, how many cars were made?",
+      "gold_sql": "SELECT count(*) FROM CARS_DATA WHERE YEAR  =  1980",
+      "generated_sql": "SELECT COUNT(*) AS car_count FROM cars_data WHERE Year = 1980",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          29
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 2,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_ca214527ce4a411abb7f38e5",
+          "sql": "SELECT COUNT(*) AS car_count FROM cars_data WHERE Year = 1980",
+          "columns": [
+            "car_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              29
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 16863,
+      "sql_execution_ms_matrixone": 34.641,
+      "prompt_tokens": 39920,
+      "completion_tokens": 440,
+      "total_tokens": 40360,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 244,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_013",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "Find the number of distinct type of pets.",
+      "gold_sql": "SELECT count(DISTINCT pettype) FROM pets",
+      "generated_sql": "SELECT COUNT(DISTINCT PetType) AS distinct_pet_types FROM pets",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(DISTINCT pettype)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          2
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_b18fcbd8a1664df890306e7d",
+          "sql": "SELECT COUNT(DISTINCT PetType) AS distinct_pet_types FROM pets",
+          "columns": [
+            "distinct_pet_types"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              2
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 17057,
+      "sql_execution_ms_matrixone": 47.239,
+      "prompt_tokens": 37486,
+      "completion_tokens": 290,
+      "total_tokens": 37776,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 122,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_014",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?",
+      "gold_sql": "select distinct year from cars_data where weight between 3000 and 4000",
+      "generated_sql": "SELECT Year FROM cars_data WHERE Weight < 4000 INTERSECT SELECT Year FROM cars_data WHERE Weight > 3000",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "year"
+      ],
+      "gold_row_count": 13,
+      "gold_sample": [
+        [
+          1970
+        ],
+        [
+          1971
+        ],
+        [
+          1972
+        ],
+        [
+          1973
+        ],
+        [
+          1974
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_858f206a1db242a0883e3333",
+          "sql": "SELECT Year FROM cars_data WHERE Weight < 4000 INTERSECT SELECT Year FROM cars_data WHERE Weight > 3000",
+          "columns": [
+            "Year"
+          ],
+          "row_count": 13,
+          "sample": [
+            [
+              1970
+            ],
+            [
+              1971
+            ],
+            [
+              1972
+            ],
+            [
+              1973
+            ],
+            [
+              1974
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 18931,
+      "sql_execution_ms_matrixone": 65.012,
+      "prompt_tokens": 38232,
+      "completion_tokens": 803,
+      "total_tokens": 39035,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 463,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_015",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What are  the different countries with singers above age 20?",
+      "gold_sql": "SELECT DISTINCT country FROM singer WHERE age  >  20",
+      "generated_sql": "SELECT DISTINCT Country FROM singer WHERE Age > 20 ORDER BY Country",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "country"
+      ],
+      "gold_row_count": 3,
+      "gold_sample": [
+        [
+          "Netherlands"
+        ],
+        [
+          "United States"
+        ],
+        [
+          "France"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_4f0ae37ad7b74926947c9592",
+          "sql": "SELECT DISTINCT Country FROM singer WHERE Age > 20 ORDER BY Country",
+          "columns": [
+            "Country"
+          ],
+          "row_count": 3,
+          "sample": [
+            [
+              "France"
+            ],
+            [
+              "Netherlands"
+            ],
+            [
+              "United States"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 10743,
+      "sql_execution_ms_matrixone": 39.867,
+      "prompt_tokens": 37799,
+      "completion_tokens": 379,
+      "total_tokens": 38178,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 189,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_016",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "What is the id and weight of every pet who is older than 1?",
+      "gold_sql": "SELECT petid ,  weight FROM pets WHERE pet_age  >  1",
+      "generated_sql": "SELECT PetID, weight FROM pets WHERE pet_age > 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "petid",
+        "weight"
+      ],
+      "gold_row_count": 2,
+      "gold_sample": [
+        [
+          2001,
+          "12.00"
+        ],
+        [
+          2002,
+          "13.40"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_3654f5f964ac461596d14a80",
+          "sql": "SELECT PetID, weight FROM pets WHERE pet_age > 1",
+          "columns": [
+            "PetID",
+            "weight"
+          ],
+          "row_count": 2,
+          "sample": [
+            [
+              2001,
+              "12.00"
+            ],
+            [
+              2002,
+              "13.40"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 11074,
+      "sql_execution_ms_matrixone": 40.567,
+      "prompt_tokens": 37576,
+      "completion_tokens": 364,
+      "total_tokens": 37940,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 148,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_017",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What is the average and maximum capacities for all stadiums ?",
+      "gold_sql": "select avg(capacity) ,  max(capacity) from stadium",
+      "generated_sql": "SELECT AVG(Capacity) AS Average_Capacity, MAX(Capacity) AS Maximum_Capacity FROM stadium",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "avg(capacity)",
+        "max(capacity)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "10621.6667",
+          52500
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_503c5cf1463446f0a4f04a99",
+          "sql": "SELECT AVG(Capacity) AS Average_Capacity, MAX(Capacity) AS Maximum_Capacity FROM stadium",
+          "columns": [
+            "Average_Capacity",
+            "Maximum_Capacity"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              10621.666666666666,
+              52500
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 16898,
+      "sql_execution_ms_matrixone": 51.459,
+      "prompt_tokens": 37853,
+      "completion_tokens": 457,
+      "total_tokens": 38310,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 204,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_018",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "What is the number of cars with a horsepower greater than 150?",
+      "gold_sql": "SELECT count(*) FROM CARS_DATA WHERE horsepower  >  150",
+      "generated_sql": "SELECT COUNT(*) AS car_count FROM cars_data WHERE Horsepower > 150",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          49
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_cf0bfaf23ae14f589c979d78",
+          "sql": "SELECT COUNT(*) AS car_count FROM cars_data WHERE Horsepower > 150",
+          "columns": [
+            "car_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              49
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 11028,
+      "sql_execution_ms_matrixone": 53.949,
+      "prompt_tokens": 39500,
+      "completion_tokens": 355,
+      "total_tokens": 39855,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 199,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_019",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "How many pets have a greater weight than 10?",
+      "gold_sql": "SELECT count(*) FROM pets WHERE weight  >  10",
+      "generated_sql": "SELECT COUNT(*) AS pet_count FROM pets WHERE weight > 10",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          2
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_4aeb245123f94030bf85c208",
+          "sql": "SELECT COUNT(*) AS pet_count FROM pets WHERE weight > 10",
+          "columns": [
+            "pet_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              2
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 14815,
+      "sql_execution_ms_matrixone": 59.215,
+      "prompt_tokens": 27870,
+      "completion_tokens": 234,
+      "total_tokens": 28104,
+      "cached_tokens": 25344,
+      "reasoning_tokens": 137,
+      "llm_call_count": 3,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_020",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "What is the number of cars with more than 4 cylinders?",
+      "gold_sql": "SELECT count(*) FROM CARS_DATA WHERE Cylinders  >  4",
+      "generated_sql": "SELECT COUNT(*) AS num_cars FROM cars_data WHERE Cylinders > 4",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          195
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_9c92bea288c440f5b7ca03b7",
+          "sql": "SELECT COUNT(*) AS num_cars FROM cars_data WHERE Cylinders > 4",
+          "columns": [
+            "num_cars"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              195
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 11104,
+      "sql_execution_ms_matrixone": 44.244,
+      "prompt_tokens": 39504,
+      "completion_tokens": 326,
+      "total_tokens": 39830,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 169,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_021",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What is the name and capacity for the stadium with the highest average attendance?",
+      "gold_sql": "SELECT name ,  capacity FROM stadium ORDER BY average DESC LIMIT 1",
+      "generated_sql": "SELECT Name, Capacity FROM stadium ORDER BY Average DESC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "name",
+        "capacity"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "Stark's Park",
+          10104
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_775d87c31387457eae868081",
+          "sql": "SELECT Name, Capacity FROM stadium ORDER BY Average DESC LIMIT 1",
+          "columns": [
+            "Name",
+            "Capacity"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "Stark's Park",
+              10104
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 13372,
+      "sql_execution_ms_matrixone": 55.472,
+      "prompt_tokens": 39333,
+      "completion_tokens": 435,
+      "total_tokens": 39768,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 240,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_022",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "what is the name and nation of the singer who have a song having 'Hey' in its name?",
+      "gold_sql": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'",
+      "generated_sql": "SELECT Name, Country FROM singer WHERE Song_Name LIKE '%Hey%'",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "name",
+        "country"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "Justin Brown",
+          "France"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_0758a24855cb46e5a5860b7b",
+          "sql": "SELECT Name, Country FROM singer WHERE Song_Name LIKE '%Hey%'",
+          "columns": [
+            "Name",
+            "Country"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "Justin Brown",
+              "France"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 12339,
+      "sql_execution_ms_matrixone": 96.386,
+      "prompt_tokens": 39255,
+      "completion_tokens": 366,
+      "total_tokens": 39621,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 202,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_023",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "What is the number of continents?",
+      "gold_sql": "SELECT count(*) FROM CONTINENTS",
+      "generated_sql": "SELECT COUNT(*) AS num_continents FROM continents",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          5
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_980dd482e38f4d14bd2cde10",
+          "sql": "SELECT COUNT(*) AS num_continents FROM continents",
+          "columns": [
+            "num_continents"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              5
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 17149,
+      "sql_execution_ms_matrixone": 47.719,
+      "prompt_tokens": 27766,
+      "completion_tokens": 194,
+      "total_tokens": 27960,
+      "cached_tokens": 25344,
+      "reasoning_tokens": 106,
+      "llm_call_count": 3,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_024",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "Find the type and weight of the youngest pet.",
+      "gold_sql": "SELECT pettype ,  weight FROM pets ORDER BY pet_age LIMIT 1",
+      "generated_sql": "SELECT PetType, weight FROM pets ORDER BY pet_age ASC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "pettype",
+        "weight"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "dog",
+          "9.30"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_d2faee88f4ab462d97c438eb",
+          "sql": "SELECT PetType, weight FROM pets ORDER BY pet_age ASC LIMIT 1",
+          "columns": [
+            "PetType",
+            "weight"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "dog",
+              "9.30"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 20826,
+      "sql_execution_ms_matrixone": 51.083,
+      "prompt_tokens": 37502,
+      "completion_tokens": 335,
+      "total_tokens": 37837,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 165,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_025",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "How much does the youngest dog weigh?",
+      "gold_sql": "SELECT weight FROM pets ORDER BY pet_age LIMIT 1",
+      "generated_sql": "SELECT weight FROM pets WHERE PetType = 'dog' ORDER BY pet_age ASC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "weight"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "9.30"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_a57432afafd240d6aa15262a",
+          "sql": "SELECT weight FROM pets WHERE PetType = 'dog' ORDER BY pet_age ASC LIMIT 1",
+          "columns": [
+            "weight"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "9.30"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 13889,
+      "sql_execution_ms_matrixone": 79.89,
+      "prompt_tokens": 37500,
+      "completion_tokens": 397,
+      "total_tokens": 37897,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 223,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_026",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "Show the name and the release year of the song by the youngest singer.",
+      "gold_sql": "SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1",
+      "generated_sql": "SELECT Name, Song_release_year FROM singer ORDER BY Age ASC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "ordered_value_mismatch",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "song_name",
+        "song_release_year"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "Love",
+          2016
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_b26f1a35f7f64233a2a5b39b",
+          "sql": "SELECT Name, Song_release_year FROM singer ORDER BY Age ASC LIMIT 1",
+          "columns": [
+            "Name",
+            "Song_release_year"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "Tribal King",
+              2016
+            ]
+          ],
+          "passed": false,
+          "reason": "ordered_value_mismatch"
+        }
+      ],
+      "latency_ms": 15212,
+      "sql_execution_ms_matrixone": 31.826,
+      "prompt_tokens": 39253,
+      "completion_tokens": 447,
+      "total_tokens": 39700,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 284,
+      "llm_call_count": 4
+    },
+    {
+      "case_id": "mix50_027",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "What is the minimum weight of the car with 8 cylinders produced in 1974 ?",
+      "gold_sql": "select min(weight) from cars_data where cylinders  =  8 and year  =  1974",
+      "generated_sql": "SELECT MIN(Weight) AS MinWeight FROM cars_data WHERE Cylinders = 8 AND Year = 74",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "unordered_value_mismatch",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "min(weight)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          4141
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_3a5d5125c17246f5a33cd567",
+          "sql": "SELECT MIN(Weight) AS MinWeight FROM cars_data WHERE Cylinders = 8 AND Year = 74",
+          "columns": [
+            "MinWeight"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              null
+            ]
+          ],
+          "passed": false,
+          "reason": "unordered_value_mismatch"
+        }
+      ],
+      "latency_ms": 23317,
+      "sql_execution_ms_matrixone": 332.747,
+      "prompt_tokens": 19072,
+      "completion_tokens": 165,
+      "total_tokens": 19237,
+      "cached_tokens": 16896,
+      "reasoning_tokens": 93,
+      "llm_call_count": 3
+    },
+    {
+      "case_id": "mix50_028",
+      "difficulty": "easy",
+      "database": "pets_1",
+      "question": "Find the id and weight of all pets whose age is older than 1.",
+      "gold_sql": "SELECT petid ,  weight FROM pets WHERE pet_age  >  1",
+      "generated_sql": "SELECT PetID, weight FROM pets WHERE pet_age > 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "petid",
+        "weight"
+      ],
+      "gold_row_count": 2,
+      "gold_sample": [
+        [
+          2001,
+          "12.00"
+        ],
+        [
+          2002,
+          "13.40"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_8d545944d3eb439e91618215",
+          "sql": "SELECT PetID, weight FROM pets WHERE pet_age > 1",
+          "columns": [
+            "PetID",
+            "weight"
+          ],
+          "row_count": 2,
+          "sample": [
+            [
+              2001,
+              "12.00"
+            ],
+            [
+              2002,
+              "13.40"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 15975,
+      "sql_execution_ms_matrixone": 68.178,
+      "prompt_tokens": 37576,
+      "completion_tokens": 443,
+      "total_tokens": 38019,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 205,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_029",
+      "difficulty": "easy",
+      "database": "concert_singer",
+      "question": "What is the maximum capacity and the average of all stadiums ?",
+      "gold_sql": "select max(capacity), average from stadium",
+      "generated_sql": "SELECT MAX(Capacity) AS Max_Capacity, AVG(Capacity) AS Avg_Capacity FROM stadium",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "unordered_value_mismatch",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "max(capacity)",
+        "average"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          52500,
+          2106
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_e3a5e4ed31324417a649ca72",
+          "sql": "SELECT MAX(Capacity) AS Max_Capacity, AVG(Capacity) AS Avg_Capacity FROM stadium",
+          "columns": [
+            "Max_Capacity",
+            "Avg_Capacity"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              52500,
+              10621.666666666666
+            ]
+          ],
+          "passed": false,
+          "reason": "unordered_value_mismatch"
+        }
+      ],
+      "latency_ms": 21073,
+      "sql_execution_ms_matrixone": 55.97,
+      "prompt_tokens": 28080,
+      "completion_tokens": 348,
+      "total_tokens": 28428,
+      "cached_tokens": 25344,
+      "reasoning_tokens": 164,
+      "llm_call_count": 3
+    },
+    {
+      "case_id": "mix50_030",
+      "difficulty": "easy",
+      "database": "car_1",
+      "question": "How many continents are there?",
+      "gold_sql": "SELECT count(*) FROM CONTINENTS",
+      "generated_sql": "SELECT cm.FullName, COUNT(ml.ModelId) AS model_count\nFROM car_makers cm\nJOIN model_list ml ON cm.Id = ml.Maker\nGROUP BY cm.Id, cm.FullName\nORDER BY model_count DESC\nLIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "column_count_mismatch: gold=1 pred=2",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          5
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 3,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_ef765072d43f48cbbc910ffd",
+          "sql": "SELECT cm.FullName, COUNT(ml.ModelId) AS model_count\nFROM car_makers cm\nJOIN model_list ml ON cm.Id = ml.Maker\nGROUP BY cm.Id, cm.FullName\nORDER BY model_count DESC\nLIMIT 1",
+          "columns": [
+            "FullName",
+            "model_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "General Motors",
+              5
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=1 pred=2"
+        }
+      ],
+      "latency_ms": 33942,
+      "sql_execution_ms_matrixone": 36.992,
+      "prompt_tokens": 91578,
+      "completion_tokens": 1158,
+      "total_tokens": 92736,
+      "cached_tokens": 80384,
+      "reasoning_tokens": 654,
+      "llm_call_count": 9
+    },
+    {
+      "case_id": "mix50_031",
+      "difficulty": "medium",
+      "database": "pets_1",
+      "question": "Find the id of the pet owned by student whose last name is ‘Smith’.",
+      "gold_sql": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'",
+      "generated_sql": "SELECT T2.PetID FROM student AS T1 JOIN has_pet AS T2 ON T1.StuID = T2.StuID WHERE T1.LName = 'Smith'",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "petid"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          2001
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_f19090afb09b40f4aa4383fa",
+          "sql": "SELECT T2.PetID FROM student AS T1 JOIN has_pet AS T2 ON T1.StuID = T2.StuID WHERE T1.LName = 'Smith'",
+          "columns": [
+            "PetID"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              2001
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 12590,
+      "sql_execution_ms_matrixone": 35.798,
+      "prompt_tokens": 38769,
+      "completion_tokens": 492,
+      "total_tokens": 39261,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 288,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_032",
+      "difficulty": "medium",
+      "database": "car_1",
+      "question": "How many car makers are there in france?",
+      "gold_sql": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france'",
+      "generated_sql": "SELECT COUNT(*) AS car_maker_count\nFROM car_makers cm\nJOIN countries c ON cm.Country = c.CountryId\nWHERE c.CountryName = 'france'",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          3
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 3,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_1676a4df5e3445618cb78bb6",
+          "sql": "SELECT COUNT(*) AS car_maker_count\nFROM car_makers cm\nJOIN countries c ON cm.Country = c.CountryId\nWHERE c.CountryName = 'france'",
+          "columns": [
+            "car_maker_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              3
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 18814,
+      "sql_execution_ms_matrixone": 33.889,
+      "prompt_tokens": 58178,
+      "completion_tokens": 718,
+      "total_tokens": 58896,
+      "cached_tokens": 50688,
+      "reasoning_tokens": 374,
+      "llm_call_count": 6,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_033",
+      "difficulty": "medium",
+      "database": "concert_singer",
+      "question": "Which year has most number of concerts?",
+      "gold_sql": "SELECT YEAR FROM concert GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1",
+      "generated_sql": "SELECT Year, COUNT(*) AS concert_count FROM concert GROUP BY Year ORDER BY concert_count DESC LIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "column_count_mismatch: gold=1 pred=2",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "YEAR"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          2014
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_3952f7c6351b4ecfa9e1ade4",
+          "sql": "SELECT Year, COUNT(*) AS concert_count FROM concert GROUP BY Year ORDER BY concert_count DESC LIMIT 1",
+          "columns": [
+            "Year",
+            "concert_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              2014,
+              3
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=1 pred=2"
+        }
+      ],
+      "latency_ms": 10945,
+      "sql_execution_ms_matrixone": 56.559,
+      "prompt_tokens": 39224,
+      "completion_tokens": 348,
+      "total_tokens": 39572,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 183,
+      "llm_call_count": 4
+    },
+    {
+      "case_id": "mix50_034",
+      "difficulty": "medium",
+      "database": "pets_1",
+      "question": "Find the average and maximum age for each type of pet.",
+      "gold_sql": "SELECT avg(pet_age) ,  max(pet_age) ,  pettype FROM pets GROUP BY pettype",
+      "generated_sql": "SELECT PetType, AVG(pet_age) AS avg_age, MAX(pet_age) AS max_age FROM pets GROUP BY PetType",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "avg(pet_age)",
+        "max(pet_age)",
+        "pettype"
+      ],
+      "gold_row_count": 2,
+      "gold_sample": [
+        [
+          "3.0000",
+          3,
+          "cat"
+        ],
+        [
+          "1.5000",
+          2,
+          "dog"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_beafbc0a31544f21ba3ccd24",
+          "sql": "SELECT PetType, AVG(pet_age) AS avg_age, MAX(pet_age) AS max_age FROM pets GROUP BY PetType",
+          "columns": [
+            "PetType",
+            "avg_age",
+            "max_age"
+          ],
+          "row_count": 2,
+          "sample": [
+            [
+              "cat",
+              3,
+              3
+            ],
+            [
+              "dog",
+              1.5,
+              2
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 18077,
+      "sql_execution_ms_matrixone": 47.713,
+      "prompt_tokens": 27905,
+      "completion_tokens": 393,
+      "total_tokens": 28298,
+      "cached_tokens": 25344,
+      "reasoning_tokens": 173,
+      "llm_call_count": 3,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_035",
+      "difficulty": "medium",
+      "database": "car_1",
+      "question": "How many car models are produced in the usa?",
+      "gold_sql": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa'",
+      "generated_sql": "SELECT COUNT(*) AS model_count\nFROM model_list ml\nJOIN car_makers cm ON ml.Maker = cm.Id\nWHERE cm.Country = 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          13
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 2,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_4b612b45542e44c385e0ddbd",
+          "sql": "SELECT COUNT(*) AS model_count\nFROM model_list ml\nJOIN car_makers cm ON ml.Maker = cm.Id\nWHERE cm.Country = 1",
+          "columns": [
+            "model_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              13
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 22160,
+      "sql_execution_ms_matrixone": 52.651,
+      "prompt_tokens": 61078,
+      "completion_tokens": 836,
+      "total_tokens": 61914,
+      "cached_tokens": 50688,
+      "reasoning_tokens": 550,
+      "llm_call_count": 6,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_036",
+      "difficulty": "medium",
+      "database": "concert_singer",
+      "question": "Show all countries and the number of singers in each country.",
+      "gold_sql": "SELECT country ,  count(*) FROM singer GROUP BY country",
+      "generated_sql": "SELECT Country, COUNT(*) AS Num_Singers\nFROM singer\nGROUP BY Country\nORDER BY Num_Singers DESC",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "country",
+        "count(*)"
+      ],
+      "gold_row_count": 3,
+      "gold_sample": [
+        [
+          "Netherlands",
+          1
+        ],
+        [
+          "United States",
+          1
+        ],
+        [
+          "France",
+          4
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_9f81aa9547394e2cbbe77034",
+          "sql": "SELECT Country, COUNT(*) AS Num_Singers\nFROM singer\nGROUP BY Country\nORDER BY Num_Singers DESC",
+          "columns": [
+            "Country",
+            "Num_Singers"
+          ],
+          "row_count": 3,
+          "sample": [
+            [
+              "France",
+              4
+            ],
+            [
+              "Netherlands",
+              1
+            ],
+            [
+              "United States",
+              1
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 13886,
+      "sql_execution_ms_matrixone": 39.673,
+      "prompt_tokens": 39277,
+      "completion_tokens": 435,
+      "total_tokens": 39712,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 197,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_037",
+      "difficulty": "medium",
+      "database": "concert_singer",
+      "question": "Show the stadium name and capacity with most number of concerts in year 2014 or after.",
+      "gold_sql": "SELECT T2.name ,  T2.capacity FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  >=  2014 GROUP BY T2.stadium_id ORDER BY count(*) DESC LIMIT 1",
+      "generated_sql": "SELECT T2.Name, T2.Capacity, COUNT(*) AS concert_count\nFROM concert AS T1\nJOIN stadium AS T2 ON T1.Stadium_ID = T2.Stadium_ID\nWHERE T1.Year >= 2014\nGROUP BY T2.Stadium_ID, T2.Name, T2.Capacity\nORDER BY concert_count DESC\nLIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "column_count_mismatch: gold=2 pred=3",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "name",
+        "capacity"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "Somerset Park",
+          11998
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 2,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_21f8ddd5739841c1ae1799ae",
+          "sql": "SELECT T2.Name, T2.Capacity, COUNT(*) AS concert_count\nFROM concert AS T1\nJOIN stadium AS T2 ON T1.Stadium_ID = T2.Stadium_ID\nWHERE T1.Year >= 2014\nGROUP BY T2.Stadium_ID, T2.Name, T2.Capacity\nORDER BY concert_count DESC\nLIMIT 1",
+          "columns": [
+            "Name",
+            "Capacity",
+            "concert_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "Somerset Park",
+              11998,
+              2
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=2 pred=3"
+        }
+      ],
+      "latency_ms": 30472,
+      "sql_execution_ms_matrixone": 2140.331,
+      "prompt_tokens": 61239,
+      "completion_tokens": 999,
+      "total_tokens": 62238,
+      "cached_tokens": 52864,
+      "reasoning_tokens": 492,
+      "llm_call_count": 6
+    },
+    {
+      "case_id": "mix50_038",
+      "difficulty": "medium",
+      "database": "pets_1",
+      "question": "Find the maximum weight for each type of pet. List the maximum weight and pet type.",
+      "gold_sql": "SELECT max(weight) ,  petType FROM pets GROUP BY petType",
+      "generated_sql": "SELECT PetType, MAX(weight) AS max_weight FROM pets GROUP BY PetType",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "max(weight)",
+        "petType"
+      ],
+      "gold_row_count": 2,
+      "gold_sample": [
+        [
+          "12.00",
+          "cat"
+        ],
+        [
+          "13.40",
+          "dog"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_ae2008be2c724724b24eb54c",
+          "sql": "SELECT PetType, MAX(weight) AS max_weight FROM pets GROUP BY PetType",
+          "columns": [
+            "PetType",
+            "max_weight"
+          ],
+          "row_count": 2,
+          "sample": [
+            [
+              "cat",
+              "12.00"
+            ],
+            [
+              "dog",
+              "13.40"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 20908,
+      "sql_execution_ms_matrixone": 42.444,
+      "prompt_tokens": 37566,
+      "completion_tokens": 375,
+      "total_tokens": 37941,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 136,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_039",
+      "difficulty": "medium",
+      "database": "car_1",
+      "question": "What is the largest amount of horsepower for the models with 3 cylinders and what make is it?",
+      "gold_sql": "SELECT T2.horsepower ,  T1.Make FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T2.cylinders  =  3 ORDER BY T2.horsepower DESC LIMIT 1",
+      "generated_sql": "SELECT cd.Horsepower, cm.Maker, cn.Make\nFROM cars_data cd\nJOIN car_names cn ON cd.Id = cn.MakeId\nJOIN model_list ml ON cn.Model = ml.Model\nJOIN car_makers cm ON ml.Maker = cm.Id\nWHERE cd.Cylinders = 3\nORDER BY cd.Horsepower DESC\nLIMIT 5",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "column_count_mismatch: gold=2 pred=3",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "horsepower",
+        "Make"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          110,
+          "mazda rx-4"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_4e2f46a10f164c15a63e8def",
+          "sql": "SELECT cd.Horsepower, cm.Maker, cn.Make\nFROM cars_data cd\nJOIN car_names cn ON cd.Id = cn.MakeId\nJOIN model_list ml ON cn.Model = ml.Model\nJOIN car_makers cm ON ml.Maker = cm.Id\nWHERE cd.Cylinders = 3\nORDER BY cd.Horsepower DESC\nLIMIT 5",
+          "columns": [
+            "Horsepower",
+            "Maker",
+            "Make"
+          ],
+          "row_count": 4,
+          "sample": [
+            [
+              110,
+              "mazda",
+              "mazda rx-4"
+            ],
+            [
+              100,
+              "mazda",
+              "mazda rx-7 gs"
+            ],
+            [
+              97,
+              "mazda",
+              "mazda rx2 coupe"
+            ],
+            [
+              90,
+              "mazda",
+              "mazda rx3"
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=2 pred=3"
+        }
+      ],
+      "latency_ms": 27570,
+      "sql_execution_ms_matrixone": 56.596,
+      "prompt_tokens": 40128,
+      "completion_tokens": 1196,
+      "total_tokens": 41324,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 942,
+      "llm_call_count": 4
+    },
+    {
+      "case_id": "mix50_040",
+      "difficulty": "medium",
+      "database": "car_1",
+      "question": "What is the number of car models that are produced by each maker and what is the id and full name of each maker?",
+      "gold_sql": "SELECT Count(*) ,  T2.FullName ,  T2.id FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id GROUP BY T2.id",
+      "generated_sql": "SELECT cm.Id, cm.FullName, COUNT(ml.ModelId) AS ModelCount\nFROM car_makers cm\nLEFT JOIN model_list ml ON cm.Id = ml.Maker\nGROUP BY cm.Id, cm.FullName\nORDER BY cm.Id",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "Count(*)",
+        "FullName",
+        "id"
+      ],
+      "gold_row_count": 22,
+      "gold_sample": [
+        [
+          1,
+          "American Motor Company",
+          1
+        ],
+        [
+          2,
+          "Volkswagen",
+          2
+        ],
+        [
+          1,
+          "BMW",
+          3
+        ],
+        [
+          5,
+          "General Motors",
+          4
+        ],
+        [
+          3,
+          "Ford Motor Company",
+          5
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_f8905aada6634b9bb46b13ee",
+          "sql": "SELECT cm.Id, cm.FullName, COUNT(ml.ModelId) AS ModelCount\nFROM car_makers cm\nLEFT JOIN model_list ml ON cm.Id = ml.Maker\nGROUP BY cm.Id, cm.FullName\nORDER BY cm.Id",
+          "columns": [
+            "Id",
+            "FullName",
+            "ModelCount"
+          ],
+          "row_count": 22,
+          "sample": [
+            [
+              1,
+              "American Motor Company",
+              1
+            ],
+            [
+              2,
+              "Volkswagen",
+              2
+            ],
+            [
+              3,
+              "BMW",
+              1
+            ],
+            [
+              4,
+              "General Motors",
+              5
+            ],
+            [
+              5,
+              "Ford Motor Company",
+              3
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 19651,
+      "sql_execution_ms_matrixone": 42.38,
+      "prompt_tokens": 40078,
+      "completion_tokens": 787,
+      "total_tokens": 40865,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 246,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_041",
+      "difficulty": "medium",
+      "database": "pets_1",
+      "question": "Find number of pets owned by students who are older than 20.",
+      "gold_sql": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.age  >  20",
+      "generated_sql": "SELECT T2.StuID, T2.Age, T2.Fname, T2.LName, COUNT(T1.PetID) AS pet_count\nFROM student AS T2\nLEFT JOIN has_pet AS T1 ON T2.StuID = T1.StuID\nWHERE T2.Age > 20\nGROUP BY T2.StuID, T2.Age, T2.Fname, T2.LName",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "count(*)"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          0
+        ]
+      ],
+      "selected_result_count": 2,
+      "native_result_count": 2,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_937080d2751949d79ff135a7",
+          "sql": "SELECT COUNT(T1.PetID) AS num_pets\nFROM has_pet AS T1\nJOIN student AS T2 ON T1.StuID = T2.StuID\nWHERE T2.Age > 20",
+          "columns": [
+            "num_pets"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              0
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 22215,
+      "sql_execution_ms_matrixone": 186.87,
+      "prompt_tokens": 49588,
+      "completion_tokens": 954,
+      "total_tokens": 50542,
+      "cached_tokens": 42240,
+      "reasoning_tokens": 544,
+      "llm_call_count": 5,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_042",
+      "difficulty": "medium",
+      "database": "concert_singer",
+      "question": "Show the name and theme for all concerts and the number of singers in each concert.",
+      "gold_sql": "SELECT T2.concert_name ,  T2.theme ,  count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id  =  T2.concert_id GROUP BY T2.concert_id",
+      "generated_sql": "SELECT \n  T1.concert_Name, \n  T1.Theme, \n  COUNT(T2.Singer_ID) AS num_singers\nFROM concert AS T1\nJOIN singer_in_concert AS T2\n  ON T1.concert_ID = T2.concert_ID\nGROUP BY T1.concert_ID, T1.concert_Name, T1.Theme",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "concert_name",
+        "theme",
+        "count(*)"
+      ],
+      "gold_row_count": 6,
+      "gold_sample": [
+        [
+          "Auditions",
+          "Free choice",
+          3
+        ],
+        [
+          "Super bootcamp",
+          "Free choice 2",
+          2
+        ],
+        [
+          "Home Visits",
+          "Bleeding Love",
+          1
+        ],
+        [
+          "Week 1",
+          "Wide Awake",
+          1
+        ],
+        [
+          "Week 1",
+          "Happy Tonight",
+          2
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_9e875e66a38e434ba435b529",
+          "sql": "SELECT \n  T1.concert_Name, \n  T1.Theme, \n  COUNT(T2.Singer_ID) AS num_singers\nFROM concert AS T1\nJOIN singer_in_concert AS T2\n  ON T1.concert_ID = T2.concert_ID\nGROUP BY T1.concert_ID, T1.concert_Name, T1.Theme",
+          "columns": [
+            "concert_Name",
+            "Theme",
+            "num_singers"
+          ],
+          "row_count": 6,
+          "sample": [
+            [
+              "Auditions",
+              "Free choice",
+              3
+            ],
+            [
+              "Super bootcamp",
+              "Free choice 2",
+              2
+            ],
+            [
+              "Home Visits",
+              "Bleeding Love",
+              1
+            ],
+            [
+              "Week 1",
+              "Wide Awake",
+              1
+            ],
+            [
+              "Week 1",
+              "Happy Tonight",
+              2
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 15563,
+      "sql_execution_ms_matrixone": 43.204,
+      "prompt_tokens": 38494,
+      "completion_tokens": 576,
+      "total_tokens": 39070,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 181,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_043",
+      "difficulty": "medium",
+      "database": "concert_singer",
+      "question": "What is the name and capacity of the stadium with the most concerts after 2013 ?",
+      "gold_sql": "select t2.name ,  t2.capacity from concert as t1 join stadium as t2 on t1.stadium_id  =  t2.stadium_id where t1.year  >  2013 group by t2.stadium_id order by count(*) desc limit 1",
+      "generated_sql": "SELECT s.Name, s.Capacity, COUNT(c.concert_ID) AS concert_count\nFROM stadium s\nJOIN concert c ON s.Stadium_ID = c.Stadium_ID\nWHERE c.Year > 2013\nGROUP BY s.Stadium_ID, s.Name, s.Capacity\nORDER BY concert_count DESC\nLIMIT 1",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "column_count_mismatch: gold=2 pred=3",
+      "ordered_comparison": true,
+      "gold_columns": [
+        "name",
+        "capacity"
+      ],
+      "gold_row_count": 1,
+      "gold_sample": [
+        [
+          "Somerset Park",
+          11998
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_df5e7841c42b4245979703d7",
+          "sql": "SELECT s.Name, s.Capacity, COUNT(c.concert_ID) AS concert_count\nFROM stadium s\nJOIN concert c ON s.Stadium_ID = c.Stadium_ID\nWHERE c.Year > 2013\nGROUP BY s.Stadium_ID, s.Name, s.Capacity\nORDER BY concert_count DESC\nLIMIT 1",
+          "columns": [
+            "Name",
+            "Capacity",
+            "concert_count"
+          ],
+          "row_count": 1,
+          "sample": [
+            [
+              "Somerset Park",
+              11998,
+              2
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=2 pred=3"
+        }
+      ],
+      "latency_ms": 13964,
+      "sql_execution_ms_matrixone": 31.827,
+      "prompt_tokens": 39662,
+      "completion_tokens": 563,
+      "total_tokens": 40225,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 300,
+      "llm_call_count": 4
+    },
+    {
+      "case_id": "mix50_044",
+      "difficulty": "medium",
+      "database": "car_1",
+      "question": "Which countries in europe have at least 3 car manufacturers?",
+      "gold_sql": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3",
+      "generated_sql": "SELECT c.CountryName, COUNT(cm.Id) AS ManufacturerCount\nFROM car_makers cm\nJOIN countries c ON cm.Country = c.CountryId\nJOIN continents co ON c.Continent = co.ContId\nWHERE co.Continent = 'europe'\nGROUP BY c.CountryName\nHAVING COUNT(cm.Id) >= 3",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "column_count_mismatch: gold=1 pred=2",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "CountryName"
+      ],
+      "gold_row_count": 2,
+      "gold_sample": [
+        [
+          "germany"
+        ],
+        [
+          "france"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_24f84306f8974f7a8b2563e9",
+          "sql": "SELECT c.CountryName, COUNT(cm.Id) AS ManufacturerCount\nFROM car_makers cm\nJOIN countries c ON cm.Country = c.CountryId\nJOIN continents co ON c.Continent = co.ContId\nWHERE co.Continent = 'europe'\nGROUP BY c.CountryName\nHAVING COUNT(cm.Id) >= 3",
+          "columns": [
+            "CountryName",
+            "ManufacturerCount"
+          ],
+          "row_count": 2,
+          "sample": [
+            [
+              "germany",
+              4
+            ],
+            [
+              "france",
+              3
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=1 pred=2"
+        }
+      ],
+      "latency_ms": 12392,
+      "sql_execution_ms_matrixone": 46.519,
+      "prompt_tokens": 38537,
+      "completion_tokens": 436,
+      "total_tokens": 38973,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 169,
+      "llm_call_count": 4
+    },
+    {
+      "case_id": "mix50_045",
+      "difficulty": "medium",
+      "database": "pets_1",
+      "question": "What are the different first names and ages of the students who do have pets?",
+      "gold_sql": "SELECT DISTINCT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid",
+      "generated_sql": "SELECT DISTINCT T1.Fname, T1.Age FROM student AS T1 JOIN has_pet AS T2 ON T1.StuID = T2.StuID",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "fname",
+        "age"
+      ],
+      "gold_row_count": 2,
+      "gold_sample": [
+        [
+          "Linda",
+          18
+        ],
+        [
+          "Tracy",
+          19
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_b24ac6fe22e74ca1979ecf6f",
+          "sql": "SELECT DISTINCT T1.Fname, T1.Age FROM student AS T1 JOIN has_pet AS T2 ON T1.StuID = T2.StuID",
+          "columns": [
+            "Fname",
+            "Age"
+          ],
+          "row_count": 2,
+          "sample": [
+            [
+              "Linda",
+              18
+            ],
+            [
+              "Tracy",
+              19
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 13058,
+      "sql_execution_ms_matrixone": 42.458,
+      "prompt_tokens": 38769,
+      "completion_tokens": 462,
+      "total_tokens": 39231,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 231,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_046",
+      "difficulty": "hard",
+      "database": "pets_1",
+      "question": "What are the ids of the students who do not own cats as pets?",
+      "gold_sql": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'",
+      "generated_sql": "SELECT StuID \nFROM student \nWHERE StuID NOT IN (\n    SELECT T1.StuID \n    FROM has_pet AS T1 \n    JOIN pets AS T2 ON T1.PetID = T2.PetID \n    WHERE T2.PetType = 'cat'\n)\nORDER BY StuID",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "stuid"
+      ],
+      "gold_row_count": 33,
+      "gold_sample": [
+        [
+          1002
+        ],
+        [
+          1003
+        ],
+        [
+          1004
+        ],
+        [
+          1005
+        ],
+        [
+          1006
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_d76f50f503b944cd8496b97d",
+          "sql": "SELECT StuID \nFROM student \nWHERE StuID NOT IN (\n    SELECT T1.StuID \n    FROM has_pet AS T1 \n    JOIN pets AS T2 ON T1.PetID = T2.PetID \n    WHERE T2.PetType = 'cat'\n)\nORDER BY StuID",
+          "columns": [
+            "StuID"
+          ],
+          "row_count": 33,
+          "sample": [
+            [
+              1002
+            ],
+            [
+              1003
+            ],
+            [
+              1004
+            ],
+            [
+              1005
+            ],
+            [
+              1006
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 18370,
+      "sql_execution_ms_matrixone": 53.498,
+      "prompt_tokens": 39237,
+      "completion_tokens": 778,
+      "total_tokens": 40015,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 259,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_047",
+      "difficulty": "hard",
+      "database": "concert_singer",
+      "question": "Show the stadium names without any concert.",
+      "gold_sql": "SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)",
+      "generated_sql": "SELECT T1.Name FROM stadium AS T1 LEFT JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.concert_ID IS NULL",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "name"
+      ],
+      "gold_row_count": 4,
+      "gold_sample": [
+        [
+          "Bayview Stadium"
+        ],
+        [
+          "Hampden Park"
+        ],
+        [
+          "Forthbank Stadium"
+        ],
+        [
+          "Gayfield Park"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_d93a02bd9e864e988cb1711a",
+          "sql": "SELECT T1.Name FROM stadium AS T1 LEFT JOIN concert AS T2 ON T1.Stadium_ID = T2.Stadium_ID WHERE T2.concert_ID IS NULL",
+          "columns": [
+            "Name"
+          ],
+          "row_count": 4,
+          "sample": [
+            [
+              "Bayview Stadium"
+            ],
+            [
+              "Hampden Park"
+            ],
+            [
+              "Forthbank Stadium"
+            ],
+            [
+              "Gayfield Park"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 13307,
+      "sql_execution_ms_matrixone": 37.194,
+      "prompt_tokens": 39375,
+      "completion_tokens": 489,
+      "total_tokens": 39864,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 301,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_048",
+      "difficulty": "hard",
+      "database": "car_1",
+      "question": "Find the make and production time of the cars that were produced in the earliest year?",
+      "gold_sql": "SELECT T2.Make ,  T1.Year FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T1.Year  =  (SELECT min(YEAR) FROM CARS_DATA)",
+      "generated_sql": "SELECT cn.Make, cd.Year\nFROM cars_data cd\nJOIN car_names cn ON cd.Id = cn.MakeId\nWHERE cd.Year = (SELECT MIN(Year) FROM cars_data)",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "Make",
+        "Year"
+      ],
+      "gold_row_count": 35,
+      "gold_sample": [
+        [
+          "chevrolet chevelle malibu",
+          1970
+        ],
+        [
+          "buick skylark 320",
+          1970
+        ],
+        [
+          "plymouth satellite",
+          1970
+        ],
+        [
+          "amc rebel sst",
+          1970
+        ],
+        [
+          "ford torino",
+          1970
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_c8b9c4548aba451c9d562542",
+          "sql": "SELECT cn.Make, cd.Year\nFROM cars_data cd\nJOIN car_names cn ON cd.Id = cn.MakeId\nWHERE cd.Year = (SELECT MIN(Year) FROM cars_data)",
+          "columns": [
+            "Make",
+            "Year"
+          ],
+          "row_count": 35,
+          "sample": [
+            [
+              "chevrolet chevelle malibu",
+              1970
+            ],
+            [
+              "buick skylark 320",
+              1970
+            ],
+            [
+              "plymouth satellite",
+              1970
+            ],
+            [
+              "amc rebel sst",
+              1970
+            ],
+            [
+              "ford torino",
+              1970
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 24565,
+      "sql_execution_ms_matrixone": 37.478,
+      "prompt_tokens": 40067,
+      "completion_tokens": 1123,
+      "total_tokens": 41190,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 299,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_049",
+      "difficulty": "hard",
+      "database": "concert_singer",
+      "question": "What are the names of all stadiums that did not have a concert in 2014?",
+      "gold_sql": "SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014",
+      "generated_sql": "SELECT s.Name\nFROM stadium s\nWHERE s.Stadium_ID NOT IN (\n    SELECT c.Stadium_ID\n    FROM concert c\n    WHERE c.Year = 2014\n)",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": true,
+      "reason": "",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "name"
+      ],
+      "gold_row_count": 6,
+      "gold_sample": [
+        [
+          "Bayview Stadium"
+        ],
+        [
+          "Hampden Park"
+        ],
+        [
+          "Forthbank Stadium"
+        ],
+        [
+          "Gayfield Park"
+        ],
+        [
+          "Recreation Park"
+        ]
+      ],
+      "selected_result_count": 1,
+      "native_result_count": 1,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_2c9966b867cf49029b8c94b2",
+          "sql": "SELECT s.Name\nFROM stadium s\nWHERE s.Stadium_ID NOT IN (\n    SELECT c.Stadium_ID\n    FROM concert c\n    WHERE c.Year = 2014\n)",
+          "columns": [
+            "Name"
+          ],
+          "row_count": 6,
+          "sample": [
+            [
+              "Bayview Stadium"
+            ],
+            [
+              "Hampden Park"
+            ],
+            [
+              "Forthbank Stadium"
+            ],
+            [
+              "Gayfield Park"
+            ],
+            [
+              "Recreation Park"
+            ]
+          ],
+          "passed": true,
+          "reason": ""
+        }
+      ],
+      "latency_ms": 17140,
+      "sql_execution_ms_matrixone": 51.384,
+      "prompt_tokens": 39561,
+      "completion_tokens": 628,
+      "total_tokens": 40189,
+      "cached_tokens": 33792,
+      "reasoning_tokens": 324,
+      "llm_call_count": 4,
+      "matched_candidate_index": 0
+    },
+    {
+      "case_id": "mix50_050",
+      "difficulty": "hard",
+      "database": "pets_1",
+      "question": "Find the first name of students who have both cat and dog pets .",
+      "gold_sql": "select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'cat' intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'dog'",
+      "generated_sql": "SELECT * FROM pets",
+      "generation_status": "ok",
+      "sql_success": true,
+      "execution_correct": false,
+      "reason": "column_count_mismatch: gold=1 pred=8",
+      "ordered_comparison": false,
+      "gold_columns": [
+        "fname"
+      ],
+      "gold_row_count": 0,
+      "gold_sample": [],
+      "selected_result_count": 3,
+      "native_result_count": 6,
+      "candidate_results": [
+        {
+          "index": 0,
+          "artifact_id": "sql_result_call_5892f90031b147d9b453fc69",
+          "sql": "SELECT * FROM student",
+          "columns": [
+            "stuid",
+            "lname",
+            "fname",
+            "age",
+            "sex",
+            "major",
+            "advisor",
+            "city_code"
+          ],
+          "row_count": 34,
+          "sample": [
+            [
+              1001,
+              "Smith",
+              "Linda",
+              18,
+              "F",
+              600,
+              1121,
+              "BAL"
+            ],
+            [
+              1002,
+              "Kim",
+              "Tracy",
+              19,
+              "F",
+              600,
+              7712,
+              "HKG"
+            ],
+            [
+              1003,
+              "Jones",
+              "Shiela",
+              21,
+              "F",
+              600,
+              7792,
+              "WAS"
+            ],
+            [
+              1004,
+              "Kumar",
+              "Dinesh",
+              20,
+              "M",
+              600,
+              8423,
+              "CHI"
+            ],
+            [
+              1005,
+              "Gompers",
+              "Paul",
+              26,
+              "M",
+              600,
+              1121,
+              "YYZ"
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=1 pred=8"
+        },
+        {
+          "index": 1,
+          "artifact_id": "sql_result_call_5a6a75e69dce4cceb84e4acd",
+          "sql": "SELECT * FROM has_pet",
+          "columns": [
+            "stuid",
+            "petid"
+          ],
+          "row_count": 3,
+          "sample": [
+            [
+              1001,
+              2001
+            ],
+            [
+              1002,
+              2002
+            ],
+            [
+              1002,
+              2003
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=1 pred=2"
+        },
+        {
+          "index": 2,
+          "artifact_id": "sql_result_call_ddd2774e5f554a24a2aa94e7",
+          "sql": "SELECT * FROM pets",
+          "columns": [
+            "petid",
+            "pettype",
+            "pet_age",
+            "weight"
+          ],
+          "row_count": 3,
+          "sample": [
+            [
+              2001,
+              "cat",
+              3,
+              "12.00"
+            ],
+            [
+              2002,
+              "dog",
+              2,
+              "13.40"
+            ],
+            [
+              2003,
+              "dog",
+              1,
+              "9.30"
+            ]
+          ],
+          "passed": false,
+          "reason": "column_count_mismatch: gold=1 pred=4"
+        }
+      ],
+      "latency_ms": 54118,
+      "sql_execution_ms_matrixone": 363.96,
+      "prompt_tokens": 97602,
+      "completion_tokens": 1389,
+      "total_tokens": 98991,
+      "cached_tokens": 82560,
+      "reasoning_tokens": 734,
+      "llm_call_count": 9
+    }
+  ]
+}

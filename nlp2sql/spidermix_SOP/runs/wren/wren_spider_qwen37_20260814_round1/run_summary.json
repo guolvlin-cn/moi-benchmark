@@ -1,0 +1,20 @@
+{
+  "expected_attempts": 50,
+  "recorded_attempts": 50,
+  "sql_generated": 49,
+  "failed": 1,
+  "average_latency_ms": 46188,
+  "p50_latency_ms": 40436,
+  "p95_latency_ms": 87296,
+  "min_latency_ms": 18231,
+  "max_latency_ms": 181041,
+  "token_collection": "unavailable",
+  "failed_attempts": [
+    {
+      "question_id": "mix50_046",
+      "repeat_index": 1,
+      "status": "generation_error",
+      "error": "Timeout waiting for SQL generation"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "request": {
+    "agent_code": "explore",
+    "jsonrpc": "2.0",
+    "id": "req_explore_20004_1786631950862_57f527",
+    "method": "message/stream",
+    "params": {
+      "message": {
+        "kind": "message",
+        "role": "user",
+        "messageId": "msg_user_1786631950862_57f527",
+        "taskId": "explore_20004_1786631950862_57f527",
+        "contextId": "explore_session_20004",
+        "parts": [
+          {
+            "kind": "text",
+            "text": "What type of pet is the youngest animal, and how much does it weigh?"
+          }
+        ],
+        "metadata": {
+          "matrixflow_client": "moi-frontend",
+          "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+          "session_id": "20004",
+          "scope": {
+            "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+            "session_id": "20004",
+            "scope_metadata": {
+              "semantic_model_ids": "10002",
+              "semantic_model_names": "spider"
+            },
+            "tables": [
+              "car_makers",
+              "car_names",
+              "cars_data",
+              "concert",
+              "continents",
+              "countries",
+              "has_pet",
+              "model_list",
+              "pets",
+              "singer",
+              "singer_in_concert",
+              "stadium",
+              "student"
+            ]
+          },
+          "scope_metadata": {
+            "semantic_model_ids": "10002",
+            "semantic_model_names": "spider"
+          },
+          "semantic_model_ids": [
+            10002
+          ],
+          "tables": [
+            "car_makers",
+            "car_names",
+            "cars_data",
+            "concert",
+            "continents",
+            "countries",
+            "has_pet",
+            "model_list",
+            "pets",
+            "singer",
+            "singer_in_concert",
+            "stadium",
+            "student"
+          ],
+          "llm_backend_id": -10013
+        }
+      },
+      "model": "qwen3.7-plus-2026-05-26",
+      "metadata": {
+        "matrixflow_client": "moi-frontend",
+        "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+        "session_id": "20004",
+        "scope": {
+          "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+          "session_id": "20004",
+          "scope_metadata": {
+            "semantic_model_ids": "10002",
+            "semantic_model_names": "spider"
+          },
+          "tables": [
+            "car_makers",
+            "car_names",
+            "cars_data",
+            "concert",
+            "continents",
+            "countries",
+            "has_pet",
+            "model_list",
+            "pets",
+            "singer",
+            "singer_in_concert",
+            "stadium",
+            "student"
+          ]
+        },
+        "scope_metadata": {
+          "semantic_model_ids": "10002",
+          "semantic_model_names": "spider"
+        },
+        "semantic_model_ids": [
+          10002
+        ],
+        "tables": [
+          "car_makers",
+          "car_names",
+          "cars_data",
+          "concert",
+          "continents",
+          "countries",
+          "has_pet",
+          "model_list",
+          "pets",
+          "singer",
+          "singer_in_concert",
+          "stadium",
+          "student"
+        ],
+        "llm_backend_id": -10013
+      },
+      "llm_backend_id": -10013
+    }
+  },
+  "events": [
+    {
+      "jsonrpc": "2.0",
+      "id": "req_explore_20004_1786631950862_57f527",
+      "error": {
+        "code": -32602,
+        "message": "The agent runtime request is invalid.",
+        "data": {
+          "domain": "moi-core.agent_runtime",
+          "meta": {
+            "cause": "resolve semantic model tables: selected tables span multiple databases (car_1, concert_singer, pets_1)"
+          },
+          "reason": "INVALID_PARAMS"
+        }
+      }
+    }
+  ],
+  "sse_lines": [
+    ": heartbeat",
+    "",
+    "event: message",
+    "data: {\"jsonrpc\":\"2.0\",\"id\":\"req_explore_20004_1786631950862_57f527\",\"error\":{\"code\":-32602,\"message\":\"The agent runtime request is invalid.\",\"data\":{\"domain\":\"moi-core.agent_runtime\",\"meta\":{\"cause\":\"resolve semantic model tables: selected tables span multiple databases (car_1, concert_singer, pets_1)\"},\"reason\":\"INVALID_PARAMS\"}}}",
+    ""
+  ],
+  "task_id": "explore_20004_1786631950862_57f527",
+  "context_id": "explore_session_20004",
+  "question_id": "mix50_001",
+  "question": "What type of pet is the youngest animal, and how much does it weigh?",
+  "repeat_index": 1,
+  "session_id": 20004
+}

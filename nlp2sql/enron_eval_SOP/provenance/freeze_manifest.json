@@ -1,0 +1,47 @@
+{
+  "freeze_id": "enron_qwen37_reference_20260813",
+  "frozen_at": "2026-08-13",
+  "timezone": "Asia/Shanghai",
+  "source_git_commit": "71c1d9cbd8fe91d2f5afbd4c106d373bbac39a2e",
+  "source_git_branch": "codex/enron-eval",
+  "benchmark_id": "enron_golden50_v1",
+  "model": "qwen3.7-plus-2026-05-26",
+  "question_count": 50,
+  "repeats": 3,
+  "expected_records_per_result_set": 150,
+  "human_review_included": false,
+  "result_sets": [
+    {
+      "name": "chat2db",
+      "run_id": "chat2db_qwen37_20260813_3x",
+      "evaluation_file": "reference_results/qwen37/chat2db/evaluation.json",
+      "execution_accuracy": "77/150",
+      "sql_success": "150/150",
+      "repeat_correct": "21/50"
+    },
+    {
+      "name": "wren_rerun",
+      "run_id": "wren_qwen37_20260812_rerun_r3",
+      "evaluation_file": "reference_results/qwen37/wren/evaluation.json",
+      "execution_accuracy": "49/150",
+      "sql_success": "114/150",
+      "repeat_correct": "12/50"
+    },
+    {
+      "name": "moi_no_semantic",
+      "run_id": "moi_qwen37_no_semantic_20260811_r3",
+      "evaluation_file": "reference_results/qwen37/moi_no_semantic/evaluation_native.json",
+      "execution_accuracy": "85/150",
+      "sql_success": "150/150",
+      "repeat_correct": "26/50"
+    },
+    {
+      "name": "moi_with_semantic",
+      "run_id": "moi_qwen37_semantic_v2_20260812_r3",
+      "evaluation_file": "reference_results/qwen37/moi_with_semantic/evaluation_native.json",
+      "execution_accuracy": "99/150",
+      "sql_success": "146/150",
+      "repeat_correct": "29/50"
+    }
+  ]
+}

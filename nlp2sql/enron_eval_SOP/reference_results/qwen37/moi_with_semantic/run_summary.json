@@ -1,0 +1,36 @@
+{
+  "expected_attempts": 150,
+  "recorded_attempts": 150,
+  "native_execution_successes": 146,
+  "failed": 4,
+  "average_latency_ms": 56761,
+  "min_latency_ms": 8743,
+  "max_latency_ms": 920443,
+  "total_tokens": 8613748,
+  "failed_attempts": [
+    {
+      "question_id": "e12_2001_email_count",
+      "repeat_index": 1,
+      "status": "generation_error",
+      "error": "query_sql: query sql: query_sql count: catalog knowledge sql executor: query failed: Error 20301 (HY000): invalid input: column date does not exist"
+    },
+    {
+      "question_id": "m17_reply_orig_header_details",
+      "repeat_index": 2,
+      "status": "generation_error",
+      "error": "MOI attempt exceeded the 300-second total time limit"
+    },
+    {
+      "question_id": "h02_sender_no_receiver",
+      "repeat_index": 2,
+      "status": "generation_error",
+      "error": "MOI attempt exceeded the 300-second total time limit"
+    },
+    {
+      "question_id": "e03_empty_subject",
+      "repeat_index": 3,
+      "status": "generation_error",
+      "error": "MOI attempt exceeded the 300-second total time limit"
+    }
+  ]
+}

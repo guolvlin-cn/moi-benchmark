@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "run_id": "moi_qwen37_semantic_v2_20260812_r3",
+  "product": "moi",
+  "variant": "with_semantic_v2",
+  "scoring": {
+    "full": 1,
+    "partial": 0.5,
+    "incorrect": 0
+  },
+  "attempts": 150,
+  "questions": 50,
+  "review_scope": {
+    "automatic_correct_not_reviewed": 99,
+    "automatic_failures_reviewed": 51,
+    "reviewed_full": 31,
+    "reviewed_partial": 4,
+    "reviewed_incorrect": 16,
+    "pending": 0
+  },
+  "scores": {
+    "automatic_execution_accuracy": {
+      "numerator": 99,
+      "denominator": 150,
+      "percent": 66.0
+    },
+    "human_adjusted_weighted_correctness": {
+      "numerator": 132.0,
+      "denominator": 150,
+      "percent": 88.0
+    },
+    "human_adjusted_strict_correctness": {
+      "numerator": 130,
+      "denominator": 150,
+      "percent": 86.67
+    },
+    "human_adjusted_repeat_correct_rate": {
+      "numerator": 38,
+      "denominator": 50,
+      "percent": 76.0
+    },
+    "sql_success_rate_unchanged": {
+      "numerator": 146,
+      "denominator": 150,
+      "percent": 97.33
+    }
+  },
+  "by_round": {
+    "1": {
+      "weighted": {"numerator": 44.0, "denominator": 50, "percent": 88.0},
+      "strict": {"numerator": 43, "denominator": 50, "percent": 86.0}
+    },
+    "2": {
+      "weighted": {"numerator": 42.0, "denominator": 50, "percent": 84.0},
+      "strict": {"numerator": 41, "denominator": 50, "percent": 82.0}
+    },
+    "3": {
+      "weighted": {"numerator": 46.0, "denominator": 50, "percent": 92.0},
+      "strict": {"numerator": 46, "denominator": 50, "percent": 92.0}
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "weighted": {"numerator": 56.0, "denominator": 60, "percent": 93.33},
+      "strict": {"numerator": 55, "denominator": 60, "percent": 91.67}
+    },
+    "medium": {
+      "weighted": {"numerator": 52.0, "denominator": 60, "percent": 86.67},
+      "strict": {"numerator": 51, "denominator": 60, "percent": 85.0}
+    },
+    "hard": {
+      "weighted": {"numerator": 24.0, "denominator": 30, "percent": 80.0},
+      "strict": {"numerator": 24, "denominator": 30, "percent": 80.0}
+    }
+  },
+  "questions_not_strictly_correct_all_three_rounds": {
+    "e03": [1, 1, 0],
+    "e11": [0.5, 0.5, 1],
+    "e12": [0, 0, 1],
+    "m07": [0, 1, 1],
+    "m10": [0, 0, 0],
+    "m13": [0.5, 0.5, 1],
+    "m17": [1, 0, 1],
+    "m20": [0, 0, 1],
+    "h02": [1, 0, 1],
+    "h03": [1, 1, 0],
+    "h05": [1, 0, 1],
+    "h08": [0, 0, 0]
+  },
+  "source_files": {
+    "automatic_evaluation": "evaluation_native.json",
+    "annotations": "human_review_annotations.json"
+  }
+}

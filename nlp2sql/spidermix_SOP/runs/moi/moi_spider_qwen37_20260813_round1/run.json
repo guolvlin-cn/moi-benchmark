@@ -1,0 +1,35 @@
+{
+  "run_id": "moi_spider_qwen37_20260813_round1",
+  "product": "moi",
+  "product_version": "local",
+  "model": "qwen3.7-plus-2026-05-26",
+  "model_backend_id": -10013,
+  "benchmark_id": "spider_mix50_v1",
+  "database_snapshot": "spider_mix50_mysql_20260813",
+  "semantic_rules": null,
+  "knowledge_base": {
+    "id": 10002,
+    "name": "spider"
+  },
+  "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+  "questions_file": "benchmark/questions/questions_mix50.tsv",
+  "started_at": "2026-08-13T22:41:21+08:00",
+  "case_databases_file": "benchmark/questions/case_databases.tsv",
+  "finished_at": "2026-08-13T22:58:20+08:00",
+  "question_count": 50,
+  "repeats": 1,
+  "expected_attempts": 50,
+  "native_execution_engine": "matrixone",
+  "protocol": "one isolated fixed-knowledge MOI session per question and repeat",
+  "notes": "Spider public benchmark run without extra semantic rules.",
+  "recorded_attempts": 50,
+  "native_execution_successes": 50,
+  "audited_replacements": [
+    {
+      "question_id": "mix50_023",
+      "repeat_index": 1,
+      "reason": "transient_http_502_service_unavailable",
+      "audit_dir": "runs/moi/moi_spider_qwen37_20260813_round1/audit/replaced_mix50_023_r1"
+    }
+  ]
+}

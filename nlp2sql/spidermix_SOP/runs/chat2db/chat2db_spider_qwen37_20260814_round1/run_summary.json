@@ -1,0 +1,38 @@
+{
+  "run_id": "chat2db_spider_qwen37_20260814_round1",
+  "product": "chat2db",
+  "model": "qwen3.7-plus-2026-05-26",
+  "attempts": 50,
+  "metrics": {
+    "execution_accuracy": {
+      "numerator": 35,
+      "denominator": 50,
+      "percent": 70.0
+    },
+    "sql_success_rate": {
+      "numerator": 46,
+      "denominator": 50,
+      "percent": 92.0
+    },
+    "end_to_end_latency_ms": {
+      "p50": 17237.0,
+      "p95": 28700.3,
+      "mean": 18518.7,
+      "min": 6284.0,
+      "max": 40640.0
+    },
+    "tokens": {
+      "prompt_total": 1097860,
+      "completion_total": 37655,
+      "total": 1135515,
+      "mean_per_question": 22710.3,
+      "cached_total": 673536
+    }
+  },
+  "empty_sql_cases": [
+    "mix50_023",
+    "mix50_030",
+    "mix50_032",
+    "mix50_044"
+  ]
+}

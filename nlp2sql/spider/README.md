@@ -1,6 +1,6 @@
 # Spider Mix50 NL2SQL评测
 
-本目录集中保存基于 Spider dev 数据集构建的 mix50 公开基准，避免与 `enron_eval/` 私有数据集评测混放。
+本目录保存基于 Spider dev 数据集构建的早期 Mix50 公开基准和历史结果。统一使用Qwen3.7、采用规范化三库快照的新版复现入口位于并列目录 [`../spidermix_SOP/`](../spidermix_SOP/README.md)；本目录不再作为新版运行入口，也不会被新版结果覆盖。
 
 对应执行方案见：[评测计划v0.2](../plans/drafts/v0.2.md)。
 

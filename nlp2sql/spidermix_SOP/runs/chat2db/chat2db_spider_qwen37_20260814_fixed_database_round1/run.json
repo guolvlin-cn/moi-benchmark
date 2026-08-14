@@ -1,0 +1,30 @@
+{
+  "run_id": "chat2db_spider_qwen37_20260814_fixed_database_round1",
+  "product": "chat2db",
+  "benchmark_id": "spider_mix50",
+  "database_context": "per_question_fixed_database",
+  "databases": [
+    "car_1",
+    "concert_singer",
+    "pets_1"
+  ],
+  "model": "qwen3.7-plus-2026-05-26",
+  "repeats": 1,
+  "collection_mode": "merged_validated_per_database_runs",
+  "source_runs": [
+    "chat2db_spider_qwen37_20260814_per_database_round1",
+    "chat2db_spider_qwen37_20260814_concert_singer_round1",
+    "chat2db_spider_qwen37_20260814_pets_1_round1"
+  ],
+  "completed_at": "2026-08-14T15:48:26.510385+08:00",
+  "record_count": 50,
+  "generated_sql_count": 50,
+  "status_counts": {
+    "ok": 50
+  },
+  "latency_ms": {
+    "p50": 11230.0,
+    "p95": 19838.3
+  },
+  "token_total": 757422
+}

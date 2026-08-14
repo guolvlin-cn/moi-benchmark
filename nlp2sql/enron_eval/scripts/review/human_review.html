@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enron NL2SQL 人工审核</title>
+  <style>
+    :root { --bg:#f4f6f8; --panel:#fff; --ink:#16202a; --muted:#66717f; --line:#dce2e8; --blue:#2457d6; --green:#087f5b; --amber:#b25b00; --red:#c92a2a; --nav:#101923; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--bg); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    button, select, textarea { font:inherit; }
+    .app { min-height:100vh; display:grid; grid-template-columns:290px minmax(0,1fr); }
+    aside { background:var(--nav); color:#eef3f8; padding:22px 16px; height:100vh; position:sticky; top:0; overflow:auto; }
+    h1 { margin:0; font-size:19px; }
+    .subtitle { margin:4px 0 18px; color:#9fb0c2; font-size:12px; }
+    .progress { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin-bottom:16px; }
+    .metric { padding:10px; border:1px solid #2b3948; border-radius:10px; background:#172433; }
+    .metric b { display:block; font-size:18px; }
+    .metric span { color:#aebccc; font-size:11px; }
+    .filters { display:flex; gap:7px; margin-bottom:12px; }
+    select { min-width:0; width:100%; padding:8px; border-radius:8px; border:1px solid #33465a; background:#172433; color:#eef3f8; }
+    #caseList { display:flex; flex-direction:column; gap:5px; }
+    .case-link { width:100%; text-align:left; border:1px solid transparent; border-radius:8px; padding:9px 10px; color:#d8e1ea; background:transparent; cursor:pointer; }
+    .case-link:hover, .case-link.active { background:#1c2b3a; border-color:#35506a; }
+    .case-link .top { display:flex; justify-content:space-between; gap:8px; }
+    .case-link small { color:#90a2b5; }
+    .dot { width:8px; height:8px; display:inline-block; border-radius:50%; background:#6c7784; margin-right:6px; }
+    .dot.done { background:#38c793; }
+    main { padding:24px; min-width:0; }
+    .empty { padding:60px; text-align:center; color:var(--muted); }
+    .header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:14px; }
+    .eyebrow { color:var(--blue); font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.05em; }
+    h2 { margin:3px 0 4px; font-size:24px; }
+    .question { margin:0; font-size:16px; max-width:1000px; }
+    .nav-buttons { display:flex; gap:8px; flex:none; }
+    .nav-buttons button { border:1px solid var(--line); background:white; border-radius:8px; padding:8px 12px; cursor:pointer; }
+    .reference { background:#edf3ff; border:1px solid #cad9ff; border-radius:12px; padding:14px; margin-bottom:14px; }
+    .section-title { display:flex; justify-content:space-between; align-items:center; font-weight:700; margin-bottom:7px; }
+    details summary { cursor:pointer; color:var(--blue); }
+    .answer { margin-top:8px; padding:10px; white-space:pre-wrap; max-height:220px; overflow:auto; border:1px solid var(--line); border-radius:8px; background:#f8fafc; font-size:12px; }
+    pre { margin:8px 0 0; padding:11px; white-space:pre-wrap; word-break:break-word; background:#111820; color:#e7edf4; border-radius:8px; max-height:240px; overflow:auto; font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .result-meta { color:var(--muted); font-size:12px; margin:6px 0; }
+    .table-wrap { overflow:auto; max-height:225px; border:1px solid var(--line); border-radius:8px; background:white; }
+    table { border-collapse:collapse; width:100%; font-size:12px; }
+    th, td { padding:7px 8px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+    th { position:sticky; top:0; background:#f7f9fb; }
+    .attempts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .attempt { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:13px; min-width:0; }
+    .attempt.auto-pass { opacity:.72; }
+    .badge { display:inline-block; border-radius:99px; padding:2px 8px; font-size:11px; font-weight:700; }
+    .badge.pass { color:var(--green); background:#dff7ee; }
+    .badge.fail { color:var(--red); background:#ffe5e5; }
+    .reason { min-height:42px; margin:8px 0; color:var(--red); font-size:12px; }
+    .review { border-top:1px solid var(--line); margin-top:12px; padding-top:12px; }
+    .verdicts { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+    .verdict { border:1px solid var(--line); background:#fff; border-radius:7px; padding:7px 4px; cursor:pointer; }
+    .verdict.selected[data-value="full"] { border-color:var(--green); color:var(--green); background:#e9fbf5; }
+    .verdict.selected[data-value="partial"] { border-color:var(--amber); color:var(--amber); background:#fff5e6; }
+    .verdict.selected[data-value="incorrect"] { border-color:var(--red); color:var(--red); background:#fff0f0; }
+    textarea { width:100%; min-height:62px; resize:vertical; margin-top:8px; padding:8px; border:1px solid var(--line); border-radius:7px; }
+    .error-type { width:100%; margin-top:8px; padding:8px; border:1px solid var(--line); border-radius:7px; background:#fff; color:var(--ink); }
+    .spec { margin-top:10px; padding:10px; border-left:3px solid var(--blue); background:#fff; white-space:pre-wrap; }
+    .save-state { position:fixed; right:20px; bottom:18px; padding:8px 13px; border-radius:99px; background:#16202a; color:#fff; box-shadow:0 5px 20px #0003; }
+    @media (max-width:1100px) { .attempts { grid-template-columns:1fr; } .app { grid-template-columns:250px minmax(0,1fr); } }
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <h1>人工语义审核</h1>
+    <p class="subtitle" id="reviewTitle">仅审核自动判错题 · 三轮并排</p>
+    <div class="progress">
+      <div class="metric"><b id="reviewedCount">0</b><span>已标注题次</span></div>
+      <div class="metric"><b id="pendingCount">0</b><span>待标注题次</span></div>
+    </div>
+    <div class="filters">
+      <select id="productFilter" aria-label="产品筛选"><option value="all">全部产品</option></select>
+      <select id="statusFilter" aria-label="审核状态"><option value="all">全部状态</option><option value="pending">未完成</option><option value="done">已完成</option></select>
+    </div>
+    <div id="caseList"></div>
+  </aside>
+  <main id="content"><div class="empty">正在载入审核数据…</div></main>
+</div>
+<div class="save-state" id="saveState">已保存</div>
+<script>
+  const state = { data:null, groups:[], current:null, annotations:{}, saveTimer:null };
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const keyFor = (group, attempt) => `${group.product}:${group.case_key}:r${attempt.repeat_index}`;
+  const annotation = key => state.annotations[key] || {verdict:'pending',error_type:'',note:''};
+  const failedAttempts = group => group.attempts.filter(item => !item.auto_correct);
+  const groupDone = group => failedAttempts(group).every(item => annotation(keyFor(group,item)).verdict !== 'pending');
+  const fmtMs = value => value == null ? '—' : `${(value/1000).toFixed(2)} 秒`;
+  const errorTypes = [
+    ['', '选择错误原因（可选）'],
+    ['ambiguous_question_or_golden', '问题或Golden存在歧义'],
+    ['case_or_collation', '大小写或排序规则差异'],
+    ['extra_or_missing_columns', '结果列多了或少了'],
+    ['wrong_table_or_column', '表或字段选择错误'],
+    ['where_filter', 'WHERE过滤条件错误'],
+    ['join_logic', 'JOIN关系错误'],
+    ['aggregation_or_grouping', '聚合或分组错误'],
+    ['order_or_limit', 'ORDER BY或LIMIT错误'],
+    ['date_handling', '日期处理错误'],
+    ['sql_dialect', 'SQL方言兼容问题'],
+    ['no_sql', '未生成SQL'],
+    ['other', '其他']
+  ];
+
+  function table(columns, rows) {
+    if (!rows || !rows.length) return '<div class="result-meta">没有可展示的结果样例</div>';
+    const width = Math.max(columns?.length || 0, rows[0]?.length || 0);
+    const heads = Array.from({length:width}, (_,i) => columns?.[i] ?? `列 ${i+1}`);
+    return `<div class="table-wrap"><table><thead><tr>${heads.map(v=>`<th>${esc(v)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  }
+
+  function filteredGroups() {
+    const product = document.querySelector('#productFilter').value;
+    const status = document.querySelector('#statusFilter').value;
+    return state.groups.filter(group => (product==='all'||group.product===product) && (status==='all'||(status==='done')===groupDone(group)));
+  }
+
+  function updateProgress() {
+    const failed = state.groups.flatMap(group => failedAttempts(group).map(item => keyFor(group,item)));
+    const reviewed = failed.filter(key => annotation(key).verdict !== 'pending').length;
+    document.querySelector('#reviewedCount').textContent = reviewed;
+    document.querySelector('#pendingCount').textContent = failed.length - reviewed;
+  }
+
+  function renderList() {
+    const groups = filteredGroups();
+    document.querySelector('#caseList').innerHTML = groups.map(group => `<button class="case-link ${group.key===state.current?'active':''}" data-key="${esc(group.key)}"><div class="top"><span><i class="dot ${groupDone(group)?'done':''}"></i>${esc(group.case_key)} · ${esc(group.product.toUpperCase())}</span><small>${esc(group.difficulty)}</small></div><small>${failedAttempts(group).length} 个失败题次</small></button>`).join('') || '<p class="subtitle">没有符合条件的题目</p>';
+    document.querySelectorAll('.case-link').forEach(button => button.onclick = () => { state.current=button.dataset.key; render(); });
+  }
+
+  function renderCandidates(item) {
+    if (!item.candidates?.length) return '<div class="result-meta">本轮没有生成可展示的SQL或结果。</div>';
+    return item.candidates.map((candidate,index) => `<details open><summary>${item.candidates.length>1?`本轮结果 ${index+1}`:'生成SQL'}${candidate.combined?'（分页合并）':''}${candidate.exact_match?' · 与Golden一致':''}</summary><pre>${esc(candidate.sql || '未生成SQL')}</pre><div class="result-meta">列：${esc((candidate.columns||[]).join(', ')||'—')} · 行数：${esc(candidate.row_count ?? '—')}${candidate.reason?` · ${esc(candidate.reason)}`:''}</div>${table(candidate.columns,candidate.sample)}</details>`).join('');
+  }
+
+  function renderAttempt(group, item) {
+    const key = keyFor(group,item), mark = annotation(key);
+    const controls = item.auto_correct ? '<div class="result-meta">自动评分正确，本轮不进入人工审核。</div>' : `<div class="verdicts">${[['full','完全正确'],['partial','部分正确'],['incorrect','错误']].map(([value,label])=>`<button class="verdict ${mark.verdict===value?'selected':''}" data-key="${esc(key)}" data-value="${value}">${label}</button>`).join('')}</div><select class="error-type" data-error-type="${esc(key)}">${errorTypes.map(([value,label])=>`<option value="${esc(value)}" ${mark.error_type===value?'selected':''}>${esc(label)}</option>`).join('')}</select><textarea data-note="${esc(key)}" placeholder="记录判断依据，例如：核心结果正确，但缺少日期列">${esc(mark.note)}</textarea>`;
+    const finalAnswer = item.final_answer ? `<details open><summary>产品最终回答</summary><div class="answer">${esc(item.final_answer)}</div></details>` : '';
+    return `<section class="attempt ${item.auto_correct?'auto-pass':''}"><div class="section-title"><span>第 ${item.repeat_index} 轮</span><span class="badge ${item.auto_correct?'pass':'fail'}">${item.auto_correct?'自动正确':'自动判错'}</span></div><div class="result-meta">SQL：${item.sql_success?'执行成功':'未成功'} · 时延 ${fmtMs(item.latency_ms)}${item.total_tokens==null?'':` · Token ${item.total_tokens}`}</div><div class="reason">${esc(item.reason || '—')}</div>${finalAnswer}${renderCandidates(item)}<div class="review">${controls}</div></section>`;
+  }
+
+  function renderContent() {
+    const group = state.groups.find(item => item.key===state.current);
+    if (!group) { document.querySelector('#content').innerHTML='<div class="empty">请选择左侧题目开始审核</div>'; return; }
+    document.querySelector('#content').innerHTML = `<header class="header"><div><div class="eyebrow">${esc(group.product)} · ${esc(group.difficulty)} · ${esc(group.case_key)}</div><h2>${esc(group.case_id)}</h2><p class="question">${esc(group.question)}</p></div><div class="nav-buttons"><button id="prev">上一题</button><button id="next">下一题</button></div></header><section class="reference"><div class="section-title"><span>统一题意与Golden参考</span><span>列：${esc(group.gold_columns.join(', ')||'—')} · 行数：${esc(group.gold_row_count ?? '—')}</span></div><div class="spec"><b>详细评测口径</b>\n${esc(group.detailed_spec || '—')}</div><details><summary>查看Golden SQL</summary><pre>${esc(group.gold_sql)}</pre></details><details><summary>查看全局统一评测口径</summary><div class="answer">${esc(state.data.evaluation_conventions || '')}</div></details>${table(group.gold_columns,group.gold_sample)}</section><div class="attempts">${group.attempts.map(item=>renderAttempt(group,item)).join('')}</div>`;
+    document.querySelectorAll('.verdict').forEach(button => button.onclick = () => { const old=annotation(button.dataset.key); state.annotations[button.dataset.key]={...old,verdict:button.dataset.value}; scheduleSave(); render(); });
+    document.querySelectorAll('textarea[data-note]').forEach(area => area.oninput = () => { const old=annotation(area.dataset.note); state.annotations[area.dataset.note]={...old,note:area.value}; scheduleSave(); });
+    document.querySelectorAll('select[data-error-type]').forEach(select => select.onchange = () => { const old=annotation(select.dataset.errorType); state.annotations[select.dataset.errorType]={...old,error_type:select.value}; scheduleSave(); });
+    const visible=filteredGroups(), index=visible.findIndex(item=>item.key===group.key);
+    document.querySelector('#prev').onclick=()=>navigate(visible,index-1);
+    document.querySelector('#next').onclick=()=>navigate(visible,index+1);
+  }
+
+  function navigate(groups,index) { if(groups[index]) { state.current=groups[index].key; render(); window.scrollTo({top:0,behavior:'smooth'}); } }
+  function render() { renderList(); renderContent(); updateProgress(); }
+  function scheduleSave() { document.querySelector('#saveState').textContent='保存中…'; clearTimeout(state.saveTimer); state.saveTimer=setTimeout(save,350); }
+  async function save() { const response=await fetch('/api/annotations',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({annotations:state.annotations})}); document.querySelector('#saveState').textContent=response.ok?'已保存':'保存失败'; updateProgress(); renderList(); }
+  async function start() { const response=await fetch('/api/review-data'); state.data=await response.json(); state.groups=state.data.groups; state.annotations=state.data.annotations||{}; document.querySelector('#reviewTitle').textContent=state.data.review_title || '仅审核自动判错题 · 三轮并排'; const productSelect=document.querySelector('#productFilter'); Object.keys(state.data.products||{}).forEach(product=>productSelect.insertAdjacentHTML('beforeend',`<option value="${esc(product)}">${esc(product.toUpperCase())}</option>`)); state.current=state.groups[0]?.key; ['productFilter','statusFilter'].forEach(id=>document.querySelector(`#${id}`).onchange=()=>{ const groups=filteredGroups(); if(!groups.some(g=>g.key===state.current)) state.current=groups[0]?.key; render(); }); render(); }
+  start().catch(error => document.querySelector('#content').innerHTML=`<div class="empty">载入失败：${esc(error.message)}</div>`);
+</script>
+</body>
+</html>

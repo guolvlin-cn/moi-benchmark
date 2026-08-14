@@ -1,0 +1,18 @@
+{
+  "expected_attempts": 1,
+  "recorded_attempts": 1,
+  "native_execution_successes": 0,
+  "failed": 1,
+  "average_latency_ms": 1074,
+  "min_latency_ms": 1074,
+  "max_latency_ms": 1074,
+  "total_tokens": 0,
+  "failed_attempts": [
+    {
+      "question_id": "e01_sender_count",
+      "repeat_index": 1,
+      "status": "generation_error",
+      "error": "catalog responses call: load workspace llm config failed: load taas chat models: taas models cache is not ready: last refresh failed: request taas models: Get \"https://api-taas.moi.matrixorigin.cn/v1/models\": dial tcp: lookup api-taas.moi.matrixorigin.cn: no such host"
+    }
+  ]
+}

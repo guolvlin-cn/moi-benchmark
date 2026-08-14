@@ -1,0 +1,898 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-13T09:53:06.409157+00:00",
+  "review_scope": "automatic_failures_only",
+  "source_runs": {
+    "chat2db": {
+      "run_id": "chat2db_qwen37_20260813_3x",
+      "evaluation": "reference_results/qwen37/chat2db/evaluation.json",
+      "evaluation_sha256": "d92d61d823ab4fe07d22b7f4a0d2073d32a787d03e773bb8226b96f05c44f02e",
+      "predictions": "reference_results/qwen37/chat2db/predictions.jsonl",
+      "predictions_sha256": "9cc49277cca5e31d72c97b21263408bdf8fe729983349b86563455d75a3a6554"
+    },
+    "wren": {
+      "run_id": "wren_qwen37_20260812_rerun_r3",
+      "evaluation": "reference_results/qwen37/wren/evaluation.json",
+      "evaluation_sha256": "51fba0ec4eb6545171c0f243f0cc2f1974132a4d97f164313435a2b7ea9546a7",
+      "predictions": "reference_results/qwen37/wren/predictions.jsonl",
+      "predictions_sha256": "b3603f490f00c72135dd69923be750ef82d21c8bc109db83674009c0360c6b4b"
+    }
+  },
+  "scoring": {
+    "full": 1,
+    "partial": 0.5,
+    "incorrect": 0
+  },
+  "annotations": {
+    "chat2db:e03:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e03:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e03:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e04:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e04:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e04:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e05:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e05:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e10:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e10:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e10:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e11:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e11:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e11:r3": {
+      "verdict": "partial",
+      "error_type": "extra_or_missing_columns",
+      "note": ""
+    },
+    "chat2db:e12:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e13:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e13:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e13:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e14:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e14:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e16:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e16:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:e16:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m01:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m01:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m01:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m03:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m05:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m05:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m05:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m06:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m06:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m02:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": "收件地址收到phillip.allen@enron.com 不是Phillip Allen最常给哪些邮箱发邮件？"
+    },
+    "chat2db:m02:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": "收件地址收到phillip.allen@enron.com 不是Phillip Allen最常给哪些邮箱发邮件？"
+    },
+    "chat2db:m09:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m10:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m10:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m07:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m07:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m07:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m11:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m11:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m11:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m17:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m18:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m18:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m18:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m19:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m19:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m19:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m20:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m20:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:m20:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h02:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h02:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h02:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h03:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h03:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h03:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h04:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h04:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h05:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h05:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h05:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h07:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h07:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h07:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h08:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h08:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h08:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h10:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h10:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "chat2db:h10:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e04:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e04:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e04:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e05:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e05:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e05:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e06:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e06:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e06:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e09:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e09:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e09:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e11:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e11:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e11:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e12:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e12:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e13:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e13:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e13:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e18:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e19:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e19:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e14:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e14:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e14:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h10:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h10:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h10:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h08:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h08:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h08:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h07:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h06:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h05:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h05:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h05:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h04:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h03:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h03:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h03:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h02:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:h02:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m20:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e19:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e20:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e20:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:e20:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m01:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m17:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m17:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m18:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m18:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m15:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m15:r2": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m15:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m14:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m14:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m14:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m13:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m11:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m11:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m08:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m08:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m08:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m07:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m07:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m07:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m06:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m06:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m05:r1": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m05:r2": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m05:r3": {
+      "verdict": "incorrect",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m04:r1": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m04:r3": {
+      "verdict": "full",
+      "error_type": "",
+      "note": ""
+    },
+    "wren:m01:r1": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "错误使用enron_source.xorigin/xfolder统计数据来源目录；题目要求enron_email.people/mailbox中的归档员工目录及邮件量。"
+    },
+    "wren:m01:r2": {
+      "verdict": "incorrect",
+      "error_type": "aggregation_or_grouping",
+      "note": "虽选中people和mailbox，但直接返回10401封邮件及nnn，没有按people、mailbox分组统计不同邮件数。"
+    },
+    "wren:m02:r1": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "使用xfrom精确匹配Phillip Allen，但实际显示值为Phillip K Allen，导致0行；统一口径应按标准发件地址from=phillip.allen@enron.com统计。"
+    },
+    "wren:m02:r2": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "使用xfrom精确匹配Phillip Allen，导致0行；应使用标准发件地址from=phillip.allen@enron.com。"
+    },
+    "wren:m02:r3": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "使用xfrom精确匹配Phillip Allen，导致0行；应使用标准发件地址from=phillip.allen@enron.com。"
+    },
+    "wren:m03:r1": {
+      "verdict": "incorrect",
+      "error_type": "no_sql",
+      "note": "生成超时，未交付SQL。"
+    },
+    "wren:m03:r2": {
+      "verdict": "partial",
+      "error_type": "extra_or_missing_columns",
+      "note": "Top 5发件地址及顺序正确，但第二列错误返回rank=1至5，没有返回题目要求的不同邮件数109、73、36、25、24。"
+    },
+    "wren:m03:r3": {
+      "verdict": "partial",
+      "error_type": "extra_or_missing_columns",
+      "note": "发件地址、邮件数和顺序均与Golden一致，但额外返回辅助列rank。"
+    },
+    "wren:m09:r1": {
+      "verdict": "incorrect",
+      "error_type": "where_filter",
+      "note": "将归档员工目录过滤为people='Allen'，实际目录标识是allen-p，因此返回0行。"
+    },
+    "wren:m09:r2": {
+      "verdict": "incorrect",
+      "error_type": "where_filter",
+      "note": "将归档员工目录过滤为people='Allen'，实际目录标识是allen-p，因此返回0行。"
+    },
+    "wren:m09:r3": {
+      "verdict": "incorrect",
+      "error_type": "where_filter",
+      "note": "将归档员工目录过滤为people='Allen'，实际目录标识是allen-p，因此返回0行。"
+    },
+    "wren:m10:r1": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "统计当前邮件enron_emailto.to收件人，而题目要求enron_emailorig中nth=1历史邮件头的from，即被回复的上一封邮件发件人。"
+    },
+    "wren:m10:r2": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "统计当前邮件收件人且用xfrom识别Phillip，未使用enron_emailorig.nth=1的历史from，语义对象错误。"
+    },
+    "wren:m10:r3": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "统计当前邮件info.to而不是enron_emailorig中nth=1历史邮件头的from，未回答“回复过谁”。"
+    },
+    "wren:m11:r3": {
+      "verdict": "partial",
+      "error_type": "extra_or_missing_columns",
+      "note": "10行核心结果、顺序、max_nthto和max_nthxto均与Golden一致，但额外返回辅助列rank。"
+    },
+    "wren:m12:r1": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "把“Enron公告邮箱”误解为mailbox='announcements'文件夹；应筛选enron_emailinfo.from=enron.announcements@enron.com，因此当前结果为0行。"
+    },
+    "wren:m12:r2": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "把公告邮箱映射为enron_email.mailbox='announcements'，没有按标准发件地址筛选，返回0行。"
+    },
+    "wren:m12:r3": {
+      "verdict": "incorrect",
+      "error_type": "wrong_table_or_column",
+      "note": "使用mailbox LIKE '%announce%'查归档文件夹，而题目要求发件地址enron.announcements@enron.com，返回0行。"
+    },
+    "wren:m13:r2": {
+      "verdict": "partial",
+      "error_type": "extra_or_missing_columns",
+      "note": "Top 5文件名、不同邮件数和顺序均与Golden一致，但额外返回辅助列rank。"
+    },
+    "wren:m13:r3": {
+      "verdict": "partial",
+      "error_type": "extra_or_missing_columns",
+      "note": "Top 5文件名、不同邮件数和顺序均与Golden一致，但额外返回辅助列rank。"
+    },
+    "wren:m18:r2": {
+      "verdict": "incorrect",
+      "error_type": "date_handling",
+      "note": "对RFC格式原始Date字符串直接使用TIMESTAMP(date)比较，MySQL不能按该格式正确解析，导致0行；应按原始邮件头格式解析或按Oct 2001模式筛选。"
+    },
+    "wren:m20:r2": {
+      "verdict": "partial",
+      "error_type": "where_filter",
+      "note": "三个有效来源员工及邮件数均正确，但没有过滤空xorigin，额外返回空来源1封，同时多出rank列。"
+    },
+    "wren:m20:r3": {
+      "verdict": "partial",
+      "error_type": "where_filter",
+      "note": "三个有效来源员工及邮件数均正确，但没有过滤空xorigin，额外返回空来源1封，同时多出rank列。"
+    },
+    "wren:h01:r1": {
+      "verdict": "incorrect",
+      "error_type": "sql_dialect",
+      "note": "EXISTS子查询中的派生表缺少别名，MySQL报Every derived table must have its own alias，无法执行。"
+    },
+    "wren:h01:r2": {
+      "verdict": "incorrect",
+      "error_type": "sql_dialect",
+      "note": "EXISTS子查询中的派生表缺少别名，MySQL语法错误，未得到结果。"
+    },
+    "wren:h01:r3": {
+      "verdict": "incorrect",
+      "error_type": "sql_dialect",
+      "note": "EXISTS子查询中的派生表缺少别名，MySQL语法错误，未得到结果。"
+    }
+  }
+}

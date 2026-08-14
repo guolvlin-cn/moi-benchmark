@@ -1,0 +1,112 @@
+{
+  "question_id": "mix50_023",
+  "question": "What is the number of continents?",
+  "repeat_index": 1,
+  "generated_sql": "SELECT COUNT(*) AS num_continents FROM continents",
+  "status": "ok",
+  "native_execution_engine": "matrixone",
+  "native_execution_success": true,
+  "native_query_results": [
+    {
+      "artifact_id": "sql_result_call_980dd482e38f4d14bd2cde10",
+      "sql": "SELECT COUNT(*) AS num_continents FROM continents",
+      "columns": [
+        "num_continents"
+      ],
+      "rows": [
+        [
+          5
+        ]
+      ],
+      "row_count": 1,
+      "total_count": 1,
+      "max_rows": 200,
+      "database": "car_1",
+      "tables": [
+        "continents"
+      ],
+      "execution_ms": 47.718875
+    }
+  ],
+  "selected_source_ids": [
+    "sql_result_call_980dd482e38f4d14bd2cde10"
+  ],
+  "selected_native_results": [
+    {
+      "artifact_id": "sql_result_call_980dd482e38f4d14bd2cde10",
+      "sql": "SELECT COUNT(*) AS num_continents FROM continents",
+      "columns": [
+        "num_continents"
+      ],
+      "rows": [
+        [
+          5
+        ]
+      ],
+      "row_count": 1,
+      "total_count": 1,
+      "max_rows": 200,
+      "database": "car_1",
+      "tables": [
+        "continents"
+      ],
+      "execution_ms": 47.718875
+    }
+  ],
+  "latency_ms": 17149,
+  "sql_execution_ms": 47.719,
+  "prompt_tokens": 27766,
+  "completion_tokens": 194,
+  "total_tokens": 27960,
+  "cached_tokens": 25344,
+  "reasoning_tokens": 106,
+  "llm_call_count": 3,
+  "error": null,
+  "raw_answer": "Based on the database, there are **5** continents.",
+  "metadata": {
+    "session_id": 20055,
+    "task_id": "explore_20055_1786633219069_0e49ea",
+    "context_id": "explore_session_20055",
+    "knowledge_id": 10002,
+    "target_database": "car_1",
+    "model": "qwen3.7-plus-2026-05-26",
+    "model_backend_id": -10013,
+    "new_session": true,
+    "llm_calls": [
+      {
+        "call_id": "task-f6a5d04c-c9d2-5432-acbe-c0342b63cdc5_llm_1",
+        "model": "qwen3.7-plus-2026-05-26",
+        "status": "completed",
+        "input_tokens": 9104,
+        "output_tokens": 71,
+        "cached_tokens": 8448,
+        "reasoning_tokens": 36,
+        "duration_ms": 2985,
+        "ttft_ms": 2934
+      },
+      {
+        "call_id": "task-f6a5d04c-c9d2-5432-acbe-c0342b63cdc5_llm_2",
+        "model": "qwen3.7-plus-2026-05-26",
+        "status": "completed",
+        "input_tokens": 9248,
+        "output_tokens": 85,
+        "cached_tokens": 8448,
+        "reasoning_tokens": 47,
+        "duration_ms": 2558,
+        "ttft_ms": 2506
+      },
+      {
+        "call_id": "task-f6a5d04c-c9d2-5432-acbe-c0342b63cdc5_llm_3",
+        "model": "qwen3.7-plus-2026-05-26",
+        "status": "completed",
+        "input_tokens": 9414,
+        "output_tokens": 38,
+        "cached_tokens": 8448,
+        "reasoning_tokens": 23,
+        "duration_ms": 1640,
+        "ttft_ms": 1411
+      }
+    ]
+  },
+  "completed_at": "2026-08-13T23:00:36+08:00"
+}

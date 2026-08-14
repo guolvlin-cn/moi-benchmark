@@ -1,0 +1,20 @@
+{
+  "validation": "passed",
+  "checks": {
+    "records": 50,
+    "unique_questions": 50,
+    "native_execution_successes": 50,
+    "with_selected_native_results": 50,
+    "with_generated_sql": 50,
+    "with_token_usage": 50,
+    "total_tokens": 2084012,
+    "mean_tokens": 41680.24,
+    "latency_mean_ms": 17512.3,
+    "latency_p50_ms": 16108.0,
+    "latency_p95_ms": 29166.1,
+    "latency_min_ms": 10551,
+    "latency_max_ms": 54118,
+    "failed": [],
+    "replacement_audit": "runs/moi/moi_spider_qwen37_20260813_round1/audit/replaced_mix50_023_r1"
+  }
+}

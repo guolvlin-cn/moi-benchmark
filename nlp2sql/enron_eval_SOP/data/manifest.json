@@ -1,0 +1,160 @@
+{
+  "dataset_id": "enron_eval_v1",
+  "format": "CSV with UTF-8 text, comma delimiter, RFC 4180 quoting and one header row",
+  "null_import_rule": "literal \\N is imported as SQL NULL; an empty CSV field remains an empty SQL string",
+  "canonical_row_fingerprint": "SHA256 of the byte concatenation of sorted per-row SHA256 digests; each row is UTF-8 JSON using manifest column order, compact separators, integers converted to JSON numbers and import-null values converted to JSON null",
+  "files": {
+    "enron_email.csv": {
+      "table": "enron_email",
+      "bytes": 327994,
+      "sha256": "68b4e4cf0a2fba16fd495fe1dcfd9bb729f78403a13495f1f99ff6ca0c37bfdf",
+      "rows": 10401,
+      "columns": [
+        "id",
+        "people",
+        "mailbox",
+        "nnn"
+      ],
+      "integer_columns": [
+        "id",
+        "nnn"
+      ],
+      "null_counts": {
+        "id": 0,
+        "people": 0,
+        "mailbox": 0,
+        "nnn": 0
+      },
+      "canonical_row_fingerprint_sha256": "e4d91047cabf8ea27a08a94b9336f9b2c811e681190020757729e3999dcd8e91"
+    },
+    "enron_emailinfo.csv": {
+      "table": "enron_emailinfo",
+      "bytes": 21347068,
+      "sha256": "e8e013c19cf664bd809e17439a1dd866a128da55cf3a13423ec914fb3eb76597",
+      "rows": 10401,
+      "columns": [
+        "id",
+        "messageid",
+        "date",
+        "subject",
+        "from",
+        "to",
+        "xfrom",
+        "xto",
+        "body"
+      ],
+      "integer_columns": [
+        "id"
+      ],
+      "null_counts": {
+        "id": 0,
+        "messageid": 0,
+        "date": 0,
+        "subject": 1091,
+        "from": 0,
+        "to": 548,
+        "xfrom": 1,
+        "xto": 142,
+        "body": 0
+      },
+      "canonical_row_fingerprint_sha256": "4de5100439d2b09149bf8601f9b9ab86048fae78324c3738a46cf390abab461d"
+    },
+    "enron_emailorig.csv": {
+      "table": "enron_emailorig",
+      "bytes": 148832,
+      "sha256": "35c88e73002a2f4eba2a67ec526e893b71f4fe243fc03872011acc8c1c4bc093",
+      "rows": 1161,
+      "columns": [
+        "id",
+        "nth",
+        "subject",
+        "from",
+        "to",
+        "xfrom",
+        "xto"
+      ],
+      "integer_columns": [
+        "id",
+        "nth"
+      ],
+      "null_counts": {
+        "id": 0,
+        "nth": 0,
+        "subject": 0,
+        "from": 0,
+        "to": 0,
+        "xfrom": 0,
+        "xto": 0
+      },
+      "canonical_row_fingerprint_sha256": "fafb36ff4264d41b7835620f3bfdc9fb8520909b8832431ba690f770c5f1fc61"
+    },
+    "enron_emailto.csv": {
+      "table": "enron_emailto",
+      "bytes": 2198279,
+      "sha256": "d5e3fab6971b2d43ae32208887ced5a2b1d7a189f72ef6628ddf8f6da903d606",
+      "rows": 71670,
+      "columns": [
+        "id",
+        "nthto",
+        "to"
+      ],
+      "integer_columns": [
+        "id",
+        "nthto"
+      ],
+      "null_counts": {
+        "id": 0,
+        "nthto": 0,
+        "to": 0
+      },
+      "canonical_row_fingerprint_sha256": "d81598762c05fb2db06f1f3e4793bf976f9a0826636c5a03ddc927a914163cce"
+    },
+    "enron_emailxto.csv": {
+      "table": "enron_emailxto",
+      "bytes": 2788105,
+      "sha256": "ab07cfa5108b54893e3e3aa07e3db988a03d4caa486b62df5118addcedbb55df",
+      "rows": 72349,
+      "columns": [
+        "id",
+        "nthxto",
+        "xto"
+      ],
+      "integer_columns": [
+        "id",
+        "nthxto"
+      ],
+      "null_counts": {
+        "id": 0,
+        "nthxto": 0,
+        "xto": 0
+      },
+      "canonical_row_fingerprint_sha256": "6ec7450b173aa8434404d59a0b06483a327a5375353b2b3325fd224a37c3a66b"
+    },
+    "enron_source.csv": {
+      "table": "enron_source",
+      "bytes": 1499392,
+      "sha256": "9fda921c98a4e132b22dc9af01e81f6c52ff4a781daec3d470eef236c767cd53",
+      "rows": 10401,
+      "columns": [
+        "id",
+        "source_file_id",
+        "source_name",
+        "xfilename",
+        "xfolder",
+        "xorigin"
+      ],
+      "integer_columns": [
+        "id"
+      ],
+      "null_counts": {
+        "id": 0,
+        "source_file_id": 0,
+        "source_name": 0,
+        "xfilename": 0,
+        "xfolder": 0,
+        "xorigin": 0
+      },
+      "canonical_row_fingerprint_sha256": "c19ccad152bbcaef1e6668c0a54a8c47c25c51f3c0e4bc142ec0c088e597cea2"
+    }
+  }
+}

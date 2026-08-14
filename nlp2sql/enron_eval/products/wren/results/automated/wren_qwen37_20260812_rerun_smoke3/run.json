@@ -1,0 +1,12 @@
+{
+  "run_id": "wren_qwen37_20260812_rerun_smoke3",
+  "product": "wren",
+  "model": "qwen3.7-plus-2026-05-26",
+  "benchmark_id": "enron_golden50_v1",
+  "database": "enron_eval",
+  "semantic_rules": "native_semantic_model_only",
+  "repeats": 1,
+  "endpoint": "http://localhost:3000/api/v1/generate_sql",
+  "started_at": "2026-08-12T07:20:05.975566+00:00",
+  "token_collection": "api_response_if_available_otherwise_null"
+}

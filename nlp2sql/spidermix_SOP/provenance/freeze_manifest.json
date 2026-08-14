@@ -1,0 +1,28 @@
+{
+  "freeze_id": "spidermix_qwen37_round1_20260814",
+  "benchmark_id": "spider_mix50_v1",
+  "model": "qwen3.7-plus-2026-05-26",
+  "database_snapshot": "spider_mix50_mysql_20260813",
+  "question_count": 50,
+  "repeats": 1,
+  "runs": {
+    "moi": {
+      "run_id": "moi_spider_qwen37_20260813_round1",
+      "directory": "runs/moi/moi_spider_qwen37_20260813_round1",
+      "execution_accuracy": [40, 50],
+      "sql_success_rate": [50, 50]
+    },
+    "wren": {
+      "run_id": "wren_spider_qwen37_20260814_round1",
+      "directory": "runs/wren/wren_spider_qwen37_20260814_round1",
+      "execution_accuracy": [42, 50],
+      "sql_success_rate": [48, 50]
+    },
+    "chat2db": {
+      "run_id": "chat2db_spider_qwen37_20260814_fixed_database_round1",
+      "directory": "runs/chat2db/chat2db_spider_qwen37_20260814_fixed_database_round1",
+      "execution_accuracy": [40, 50],
+      "sql_success_rate": [50, 50]
+    }
+  }
+}

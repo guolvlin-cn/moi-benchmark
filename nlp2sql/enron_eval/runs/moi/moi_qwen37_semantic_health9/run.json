@@ -1,0 +1,26 @@
+{
+  "run_id": "moi_qwen37_semantic_health9",
+  "product": "moi",
+  "product_version": "local",
+  "model": "qwen3.7-plus-2026-05-26",
+  "model_backend_id": -10013,
+  "benchmark_id": "enron_golden50_v1",
+  "database_snapshot": "expected_counts_v1",
+  "semantic_rules": "products/moi/semantic/moi_email_qa_semantic_config_v2.json",
+  "knowledge_base": {
+    "id": 2,
+    "name": "邮件问答"
+  },
+  "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+  "questions_file": "/Users/zhang/Documents/Codex/2026-08-05/wo/moi-benchmark/nlp2sql/enron_eval/benchmark/questions/user/questions_enron_50_user_mix.txt",
+  "started_at": "2026-08-12T11:18:06+08:00",
+  "finished_at": "2026-08-12T11:18:20+08:00",
+  "question_count": 1,
+  "repeats": 1,
+  "expected_attempts": 1,
+  "native_execution_engine": "matrixone",
+  "protocol": "one isolated fixed-knowledge MOI session per question and repeat",
+  "notes": "Run with configured semantic information.",
+  "recorded_attempts": 1,
+  "native_execution_successes": 1
+}

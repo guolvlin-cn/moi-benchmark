@@ -1,0 +1,18 @@
+{
+  "expected_attempts": 1,
+  "recorded_attempts": 1,
+  "native_execution_successes": 0,
+  "failed": 1,
+  "average_latency_ms": 591,
+  "min_latency_ms": 591,
+  "max_latency_ms": 591,
+  "total_tokens": 0,
+  "failed_attempts": [
+    {
+      "question_id": "e01_sender_count",
+      "repeat_index": 1,
+      "status": "generation_error",
+      "error": "catalog responses call: no available llm backend or endpoint: workspace_id=405e1cb4-6097-4cbd-770f-9fd14ad58184 model=qwen3.7-plus-2026-05-26 backend_id=10013"
+    }
+  ]
+}

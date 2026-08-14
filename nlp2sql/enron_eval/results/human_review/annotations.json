@@ -1,0 +1,663 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-11T10:11:48.539396+00:00",
+  "scoring": {
+    "full": 1,
+    "partial": 0.5,
+    "incorrect": 0
+  },
+  "annotations": {
+    "wren:e05:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e05:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e05:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "moi:e05:r3": {
+      "verdict": "partial",
+      "note": "题目存在身份范围歧义，题目应该改为phillip.allen@enron.com一共发了多少封邮件？moi混合了from和xfrom from 是解析后的实际发件邮箱 xfrom是邮件原始头里的发件人显示信息"
+    },
+    "moi:e05:r1": {
+      "verdict": "partial",
+      "note": "题目存在身份范围歧义，题目应该改为phillip.allen@enron.com一共发了多少封邮件？moi混合了from和xfrom from 是解析后的实际发件邮箱 xfrom是邮件原始头里的发件人显示信息"
+    },
+    "moi:e05:r2": {
+      "verdict": "partial",
+      "note": "题目存在身份范围歧义，题目应该改为phillip.allen@enron.com一共发了多少封邮件？moi混合了from和xfrom from 是解析后的实际发件邮箱 xfrom是邮件原始头里的发件人显示信息"
+    },
+    "moi:e08:r1": {
+      "verdict": "partial",
+      "note": "'%California%'表现为大小写敏感"
+    },
+    "moi:e08:r2": {
+      "verdict": "partial",
+      "note": "'%California%'表现为大小写敏感"
+    },
+    "moi:e10:r1": {
+      "verdict": "full",
+      "note": "返回的63个文件夹与Golden完全相同，仅因MatrixOne与MySQL默认字符串排序规则不同，\n下划线开头的_sent_mail位置不同。SQL已经正确使用ORDER BY ASC，判为完全正确。"
+    },
+    "moi:e10:r2": {
+      "verdict": "full",
+      "note": "返回的63个文件夹与Golden完全相同，仅因MatrixOne与MySQL默认字符串排序规则不同，\n下划线开头的_sent_mail位置不同。SQL已经正确使用ORDER BY ASC，判为完全正确。"
+    },
+    "moi:e10:r3": {
+      "verdict": "full",
+      "note": "返回的63个文件夹与Golden完全相同，仅因MatrixOne与MySQL默认字符串排序规则不同，\n下划线开头的_sent_mail位置不同。SQL已经正确使用ORDER BY ASC，判为完全正确。"
+    },
+    "moi:e11:r1": {
+      "verdict": "incorrect",
+      "note": "date为邮件头字符串，直接ORDER BY date按照星期文本排序，\n没有按真实日期时间排序，导致最近10封邮件结果错误。\n另外使用xfrom而非规范发件邮箱from。\nGolden额外返回id不是主要判错原因。"
+    },
+    "moi:e11:r2": {
+      "verdict": "incorrect",
+      "note": "date为邮件头字符串，直接ORDER BY date按照星期文本排序，\n没有按真实日期时间排序，导致最近10封邮件结果错误。\n另外使用xfrom而非规范发件邮箱from。\nGolden额外返回id不是主要判错原因。"
+    },
+    "moi:e11:r3": {
+      "verdict": "incorrect",
+      "note": "date为邮件头字符串，直接ORDER BY date按照星期文本排序，\n没有按真实日期时间排序，导致最近10封邮件结果错误。\n另外使用xfrom而非规范发件邮箱from。\nGolden额外返回id不是主要判错原因。"
+    },
+    "moi:e13:r2": {
+      "verdict": "incorrect",
+      "note": "题目要求统计整个enron_emailorig表，但SQL错误限定id=154，\n且该ID没有历史邮件头记录，得到NULL而非整表的0、0，判为错误。"
+    },
+    "moi:e14:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:e14:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:e14:r3": {
+      "verdict": "full",
+      "note": "最终答案正确使用enron_email.people识别出3个邮件目录。\nenron_source.xorigin查询属于Agent探索过程，未用于最终结论；\n额外返回各目录邮件数量不影响回答正确性。"
+    },
+    "moi:e16:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:e16:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:e16:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m01:r1": {
+      "verdict": "partial",
+      "note": "因为数据全部正确但员工排序不符合预期。"
+    },
+    "moi:m01:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "moi:m01:r3": {
+      "verdict": "full",
+      "note": "完全正确，因为最终答案综合第二条SQL后确实以campbell-l开始，并且员工内部文件夹也按数量降序。"
+    },
+    "moi:m02:r1": {
+      "verdict": "incorrect",
+      "note": "people表示邮件归档目录所有者，不表示邮件实际发件人。\n问题要求Phillip Allen发出的邮件，应过滤\nenron_emailinfo.from='phillip.allen@enron.com'。\n当前SQL统计了Allen目录内全部邮件的收件人，导致数量和排名错误。"
+    },
+    "moi:m02:r3": {
+      "verdict": "incorrect",
+      "note": "people表示邮件归档目录所有者，不表示邮件实际发件人。\n问题要求Phillip Allen发出的邮件，应过滤\nenron_emailinfo.from='phillip.allen@enron.com'。\n当前SQL统计了Allen目录内全部邮件的收件人，导致数量和排名错误。"
+    },
+    "moi:m04:r2": {
+      "verdict": "partial",
+      "note": "表、字段和COUNT(DISTINCT xfolder)聚合逻辑正确，但未对xorigin进行大小写归一化。\nMatrixOne将CAMPBELL-L和Campbell-L分成两个员工，分别统计为45和35；\n评测口径将其视为同一员工，合并后应为Campbell-L、80个文件夹。\n因此判为部分正确。"
+    },
+    "moi:m04:r1": {
+      "verdict": "partial",
+      "note": "表、字段和COUNT(DISTINCT xfolder)聚合逻辑正确，但未对xorigin进行大小写归一化。\nMatrixOne将CAMPBELL-L和Campbell-L分成两个员工，分别统计为45和35；\n评测口径将其视为同一员工，合并后应为Campbell-L、80个文件夹。\n因此判为部分正确。"
+    },
+    "moi:m04:r3": {
+      "verdict": "partial",
+      "note": "表、字段和COUNT(DISTINCT xfolder)聚合逻辑正确，但未对xorigin进行大小写归一化。\nMatrixOne将CAMPBELL-L和Campbell-L分成两个员工，分别统计为45和35；\n评测口径将其视为同一员工，合并后应为Campbell-L、80个文件夹。\n因此判为部分正确。"
+    },
+    "moi:m05:r2": {
+      "verdict": "incorrect",
+      "note": "错误地将enron_email.people邮件目录所有者作为发件人。\n题目要求按实际发件地址统计，应使用enron_emailinfo.from。\n最终只得到campbell-l和badeer-r两名目录所有者，与问题不符。"
+    },
+    "moi:m05:r1": {
+      "verdict": "partial",
+      "note": "使用了正确的发件地址from，平均值计算方向基本正确；\n但INNER JOIN排除了没有收件人的邮件，分母不是该发件人的全部邮件，\n且收件人按记录行计数而非不同规范化地址，导致平均值偏高并多返回1位发件人。\n判为部分正确。"
+    },
+    "moi:m05:r3": {
+      "verdict": "partial",
+      "note": "使用了正确的发件地址from，平均值计算方向基本正确；\n但INNER JOIN排除了没有收件人的邮件，分母不是该发件人的全部邮件，\n且收件人按记录行计数而非不同规范化地址，导致平均值偏高并多返回1位发件人。\n判为部分正确。"
+    },
+    "moi:m06:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m06:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m06:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m07:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m07:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m07:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m10:r1": {
+      "verdict": "incorrect",
+      "note": "使用enron_emailorig.from和nth=1的方向正确，但错误地用people='allen-p'\n代替实际发件地址过滤，并额外排除了包含Allen的历史发件人，\n导致Golden中的主要结果被删除；还使用HAVING>=3代替LIMIT 5。判为错误。"
+    },
+    "moi:m10:r2": {
+      "verdict": "incorrect",
+      "note": "错误地统计当前回复邮件的enron_emailto.to收件人，\n题目要求使用enron_emailorig中nth=1历史邮件头的from，\n用于识别被回复的历史邮件发件人。查询关系错误，判为错误。"
+    },
+    "moi:m10:r3": {
+      "verdict": "incorrect",
+      "note": "记录到的SQL只确认了Allen的目录标识，无法产生最终回答中的联系人和次数。\n最终答案使用当前邮件第一收件人作为回复对象，未按题意查询\nenron_emailorig中nth=1历史邮件头的from。结果缺少SQL支持，判为错误。"
+    },
+    "moi:m11:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m11:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m12:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "moi:m13:r1": {
+      "verdict": "partial",
+      "note": "表、字段、COUNT(DISTINCT id)、Top 5和排序逻辑均正确，\n但未对xfilename进行大小写归一化。\n数据中LCAMPBEL (Non-Privileged).pst有1100封，\n小写变体lcampbel (Non-Privileged).pst另有158封；\nGolden将两者视为同一文件并合并为1258封。\nMOI在MatrixOne中区分大小写，只统计到1100封，因此判为部分正确。"
+    },
+    "moi:m13:r2": {
+      "verdict": "partial",
+      "note": "表、字段、COUNT(DISTINCT id)、Top 5和排序逻辑均正确，\n但未对xfilename进行大小写归一化。\n数据中LCAMPBEL (Non-Privileged).pst有1100封，\n小写变体lcampbel (Non-Privileged).pst另有158封；\nGolden将两者视为同一文件并合并为1258封。\nMOI在MatrixOne中区分大小写，只统计到1100封，因此判为部分正确。"
+    },
+    "moi:m13:r3": {
+      "verdict": "partial",
+      "note": "表、字段、COUNT(DISTINCT id)、Top 5和排序逻辑均正确，\n但未对xfilename进行大小写归一化。\n数据中LCAMPBEL (Non-Privileged).pst有1100封，\n小写变体lcampbel (Non-Privileged).pst另有158封；\nGolden将两者视为同一文件并合并为1258封。\nMOI在MatrixOne中区分大小写，只统计到1100封，因此判为部分正确。"
+    },
+    "moi:m20:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:m20:r1": {
+      "verdict": "partial",
+      "note": "使用enron_email.people邮件目录所有者代替enron_source.xorigin来源员工标识。\n虽然得到的3名员工和排序基本一致，但Campbell统计为6490，\n包含了1封xorigin为空、按题意应排除的邮件；Golden为6489。\n字段语义和数量存在偏差，判为部分正确。"
+    },
+    "moi:m20:r3": {
+      "verdict": "partial",
+      "note": "使用enron_email.people邮件目录所有者代替enron_source.xorigin来源员工标识。\n虽然得到的3名员工和排序基本一致，但Campbell统计为6490，\n包含了1封xorigin为空、按题意应排除的邮件；Golden为6489。\n字段语义和数量存在偏差，判为部分正确。"
+    },
+    "moi:h03:r2": {
+      "verdict": "incorrect",
+      "note": "未限定主题必须以Re:开头，将普通邮件和转发邮件一并统计；\n得到的是重复出现次数最多的主题，而不是回复邮件最多的主题。\n自动通知类邮件被误判为讨论线程，结果与题意不符，判为错误。"
+    },
+    "moi:h03:r3": {
+      "verdict": "incorrect",
+      "note": "将相同主题的全部邮件数减1直接视为回复数，但相同主题可能来自独立的自动通知，\n不能证明存在回复关系；同时未限定Re:回复邮件，也未完整处理连续Re:和大小写。\n因此将Datek自动报告误判为185封回复，判为错误。"
+    },
+    "moi:h03:r1": {
+      "verdict": "partial",
+      "note": "正确筛选了Re:开头的回复邮件，Top 3主题也基本一致；\n但只用SUBSTRING删除一个Re:前缀，未移除连续多个Re:，\n且未统一主题大小写，导致The Stage的大小写和多层回复变体被拆分，\n统计为16而非Golden的22。判为部分正确。"
+    },
+    "moi:h02:r2": {
+      "verdict": "full",
+      "note": "返回的515个地址及其发送邮件数与Golden完全一致，\n仅在发送数均为1的地址中，因MySQL与MatrixOne对数字和@符号的默认排序权重不同，\n从第307行开始出现顺序差异。SQL已正确按发送数降序、地址升序排列，\n属于跨数据库排序规则差异，判为完全正确。"
+    },
+    "moi:h02:r1": {
+      "verdict": "full",
+      "note": "返回的515个地址及其发送邮件数与Golden完全一致，\n仅在发送数均为1的地址中，因MySQL与MatrixOne对数字和@符号的默认排序权重不同，\n从第307行开始出现顺序差异。SQL已正确按发送数降序、地址升序排列，\n属于跨数据库排序规则差异，判为完全正确。"
+    },
+    "moi:h02:r3": {
+      "verdict": "full",
+      "note": "返回的515个地址及其发送邮件数与Golden完全一致，\n仅在发送数均为1的地址中，因MySQL与MatrixOne对数字和@符号的默认排序权重不同，\n从第307行开始出现顺序差异。SQL已正确按发送数降序、地址升序排列，\n属于跨数据库排序规则差异，判为完全正确。"
+    },
+    "moi:h05:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "moi:h05:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:h05:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:h06:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:h06:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:h06:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "moi:h08:r1": {
+      "verdict": "partial",
+      "note": "原问题中的“都给哪些邮箱”存在交集查询与分别查询两种合理解释。Golden 按共同收件邮箱解释，但 MOI 第一轮按分别列出两人的收件邮箱解释。第一轮属于合理但未命中 Golden 口径，可判部分正确；第二、三轮还存在表字段或发件人范围错误，判为错误。后续应将问题明确改为“同时收到过两人邮件的邮箱”。"
+    },
+    "moi:h07:r1": {
+      "verdict": "full",
+      "note": "返回的474个规范化地址及people_count与Golden完全一致，\n仅因MySQL与MatrixOne对点号“.”和下划线“_”的默认排序权重不同，\n从第184行开始出现并列地址顺序差异。\nSQL已正确统一地址大小写并按people_count降序、地址升序排列，\n属于跨数据库排序规则差异，判为完全正确。"
+    },
+    "moi:h07:r2": {
+      "verdict": "full",
+      "note": "返回的474个规范化地址及people_count与Golden完全一致，\n仅因MySQL与MatrixOne对点号“.”和下划线“_”的默认排序权重不同，\n从第184行开始出现并列地址顺序差异。\nSQL已正确统一地址大小写并按people_count降序、地址升序排列，\n属于跨数据库排序规则差异，判为完全正确。"
+    },
+    "moi:h07:r3": {
+      "verdict": "full",
+      "note": "返回的474个规范化地址及people_count与Golden完全一致，\n仅因MySQL与MatrixOne对点号“.”和下划线“_”的默认排序权重不同，\n从第184行开始出现并列地址顺序差异。\nSQL已正确统一地址大小写并按people_count降序、地址升序排列，\n属于跨数据库排序规则差异，判为完全正确。"
+    },
+    "wren:e01:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e03:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e04:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e04:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e04:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e06:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:e06:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e06:r1": {
+      "verdict": "partial",
+      "note": ""
+    },
+    "moi:h08:r3": {
+      "verdict": "incorrect",
+      "note": "用 people + sent文件夹 代替标准发件地址 from，统计口径改变了。\n同一邮件可能在 Enron 邮件目录中存在归档、副本等情况，文件夹口径和实际发件人口径并不等价。\n更明显的是，Larry 的标准地址查询中，william.kendrick@enron.com 是150封、john.shafer@enron.com 是148封；第三轮却把 Larry 的最高收件人写成一批只有4封的地址，显然与它自己查到的数据都不一致。"
+    },
+    "moi:h08:r2": {
+      "verdict": "incorrect",
+      "note": "最终只停留在“准备执行”的说明，实际输出的 SQL 查询的是 people × from 分布，没有得到两个人分别发给哪些收件邮箱及数量。判 0。"
+    },
+    "wren:e09:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:e09:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e09:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:e11:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e11:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e11:r2": {
+      "verdict": "incorrect",
+      "note": "也是顺序判断的问题"
+    },
+    "wren:e13:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e13:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e14:r2": {
+      "verdict": "full",
+      "note": "内容正确 顺序不一样"
+    },
+    "wren:e14:r1": {
+      "verdict": "full",
+      "note": "内容正确 顺序不一样"
+    },
+    "wren:e14:r3": {
+      "verdict": "full",
+      "note": "内容正确 顺序不一样"
+    },
+    "wren:e19:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:e19:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e19:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e20:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e20:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:e20:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m01:r1": {
+      "verdict": "incorrect",
+      "note": "Wren三轮均将“员工邮件文件夹”映射为enron_source.xorigin和xfolder，统计的是数据来源员工对应的原始Lotus Notes文件夹路径；评测口径要求使用enron_email.people和mailbox统计标准化邮件目录。预测为116行，Golden为80行，且预测未统一员工大小写、未过滤空值，因此判为错误。原题存在轻微字段歧义，后续可明确写成“按邮件目录所属员工people和标准化文件夹mailbox统计”。"
+    },
+    "wren:m01:r2": {
+      "verdict": "incorrect",
+      "note": "Wren三轮均将“员工邮件文件夹”映射为enron_source.xorigin和xfolder，统计的是数据来源员工对应的原始Lotus Notes文件夹路径；评测口径要求使用enron_email.people和mailbox统计标准化邮件目录。预测为116行，Golden为80行，且预测未统一员工大小写、未过滤空值，因此判为错误。原题存在轻微字段歧义，后续可明确写成“按邮件目录所属员工people和标准化文件夹mailbox统计”。"
+    },
+    "wren:m01:r3": {
+      "verdict": "incorrect",
+      "note": "Wren三轮均将“员工邮件文件夹”映射为enron_source.xorigin和xfolder，统计的是数据来源员工对应的原始Lotus Notes文件夹路径；评测口径要求使用enron_email.people和mailbox统计标准化邮件目录。预测为116行，Golden为80行，且预测未统一员工大小写、未过滤空值，因此判为错误。原题存在轻微字段歧义，后续可明确写成“按邮件目录所属员工people和标准化文件夹mailbox统计”。"
+    },
+    "wren:m02:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m02:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m02:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m03:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m03:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m03:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m04:r2": {
+      "verdict": "partial",
+      "note": ""
+    },
+    "wren:m04:r3": {
+      "verdict": "partial",
+      "note": ""
+    },
+    "wren:m05:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m05:r3": {
+      "verdict": "partial",
+      "note": ""
+    },
+    "wren:m05:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m07:r1": {
+      "verdict": "partial",
+      "note": ""
+    },
+    "wren:m07:r3": {
+      "verdict": "partial",
+      "note": ""
+    },
+    "wren:m07:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m08:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m08:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m08:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m09:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m09:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m09:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m10:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m10:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m10:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m11:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m11:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m11:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m12:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m12:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m12:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m13:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m13:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m13:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m14:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m14:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m14:r1": {
+      "verdict": "partial",
+      "note": "第一轮SQL可安全执行，核心前10行与Golden完全一致。但使用DENSE_RANK() <= 10取前10个差值排名，因并列共返回31行，而题目要求严格返回10封邮件；同时额外返回rnk列，地址规范化口径也不完全一致。判部分正确，0.5分。"
+    },
+    "wren:m15:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m15:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m15:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m17:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m18:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m18:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m18:r2": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m19:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m20:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:m20:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:m20:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:h01:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h01:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h01:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h02:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h03:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h03:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h03:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h04:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h04:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h05:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h05:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h05:r3": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:h06:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h07:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h07:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h08:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h08:r3": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h08:r1": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h10:r2": {
+      "verdict": "incorrect",
+      "note": ""
+    },
+    "wren:h10:r1": {
+      "verdict": "full",
+      "note": ""
+    },
+    "wren:h10:r3": {
+      "verdict": "full",
+      "note": ""
+    }
+  }
+}

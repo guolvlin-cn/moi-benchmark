@@ -1,0 +1,27 @@
+{
+  "run_id": "moi_spider_qwen37_20260813_round1_rerun_mix50_023",
+  "product": "moi",
+  "product_version": "local",
+  "model": "qwen3.7-plus-2026-05-26",
+  "model_backend_id": -10013,
+  "benchmark_id": "spider_mix50_v1",
+  "database_snapshot": "spider_mix50_mysql_20260813",
+  "semantic_rules": null,
+  "knowledge_base": {
+    "id": 10002,
+    "name": "spider"
+  },
+  "workspace_id": "405e1cb4-6097-4cbd-770f-9fd14ad58184",
+  "questions_file": "/Users/zhang/Documents/Codex/2026-08-05/wo/moi-benchmark/nlp2sql/spider/spider_eval_SOP/benchmark/questions/rerun_mix50_023.tsv",
+  "started_at": "2026-08-13T23:00:18+08:00",
+  "case_databases_file": "/Users/zhang/Documents/Codex/2026-08-05/wo/moi-benchmark/nlp2sql/spider/spider_eval_SOP/benchmark/questions/rerun_mix50_023_database.tsv",
+  "finished_at": "2026-08-13T23:00:36+08:00",
+  "question_count": 1,
+  "repeats": 1,
+  "expected_attempts": 1,
+  "native_execution_engine": "matrixone",
+  "protocol": "one isolated fixed-knowledge MOI session per question and repeat",
+  "notes": "Spider public benchmark run without extra semantic rules.",
+  "recorded_attempts": 1,
+  "native_execution_successes": 1
+}

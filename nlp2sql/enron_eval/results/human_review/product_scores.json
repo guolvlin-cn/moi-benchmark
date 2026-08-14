@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-11T10:17:06.654790+00:00",
+  "annotations_updated_at": "2026-08-11T10:11:48.539396+00:00",
+  "scoring": {
+    "full": 1,
+    "partial": 0.5,
+    "incorrect": 0
+  },
+  "products": {
+    "moi": {
+      "run_id": "moi_qwen37_no_semantic_20260811_r3",
+      "attempts": 150,
+      "questions": 50,
+      "verdict_counts": {
+        "automatic_full": 85,
+        "full": 30,
+        "partial": 18,
+        "incorrect": 17
+      },
+      "automatic_execution_accuracy": {
+        "numerator": 85,
+        "denominator": 150,
+        "rate": 0.5667,
+        "percent": 56.67
+      },
+      "human_adjusted_weighted_correctness": {
+        "numerator": 124.0,
+        "denominator": 150,
+        "percent": 82.67
+      },
+      "human_adjusted_strict_correctness": {
+        "numerator": 115,
+        "denominator": 150,
+        "percent": 76.67
+      },
+      "human_adjusted_repeat_correct_rate": {
+        "numerator": 35,
+        "denominator": 50,
+        "percent": 70.0
+      },
+      "human_verified_sql_success_rate": {
+        "numerator": 150,
+        "denominator": 150,
+        "percent": 100.0
+      },
+      "by_round": {
+        "1": {
+          "weighted_correctness": {
+            "numerator": 42.5,
+            "denominator": 50,
+            "percent": 85.0
+          },
+          "strict_correctness": {
+            "numerator": 38,
+            "denominator": 50,
+            "percent": 76.0
+          }
+        },
+        "2": {
+          "weighted_correctness": {
+            "numerator": 39.0,
+            "denominator": 50,
+            "percent": 78.0
+          },
+          "strict_correctness": {
+            "numerator": 37,
+            "denominator": 50,
+            "percent": 74.0
+          }
+        },
+        "3": {
+          "weighted_correctness": {
+            "numerator": 42.5,
+            "denominator": 50,
+            "percent": 85.0
+          },
+          "strict_correctness": {
+            "numerator": 40,
+            "denominator": 50,
+            "percent": 80.0
+          }
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "weighted_correctness": {
+            "numerator": 53.5,
+            "denominator": 60,
+            "percent": 89.17
+          },
+          "strict_correctness": {
+            "numerator": 51,
+            "denominator": 60,
+            "percent": 85.0
+          }
+        },
+        "medium": {
+          "weighted_correctness": {
+            "numerator": 46.5,
+            "denominator": 60,
+            "percent": 77.5
+          },
+          "strict_correctness": {
+            "numerator": 41,
+            "denominator": 60,
+            "percent": 68.33
+          }
+        },
+        "hard": {
+          "weighted_correctness": {
+            "numerator": 24.0,
+            "denominator": 30,
+            "percent": 80.0
+          },
+          "strict_correctness": {
+            "numerator": 23,
+            "denominator": 30,
+            "percent": 76.67
+          }
+        }
+      },
+      "operational_metrics_unchanged": {
+        "sql_success_rate": {
+          "numerator": 150,
+          "denominator": 150,
+          "rate": 1.0,
+          "percent": 100.0
+        },
+        "end_to_end_latency_ms": {
+          "observed": 150,
+          "mean": 46165.993,
+          "p50": 25755.5,
+          "p95": 116897.05
+        },
+        "token_usage": {
+          "observed": 150,
+          "prompt_total": 9161964,
+          "completion_total": 329926,
+          "total": 9491890,
+          "mean_per_attempt": 63279.267,
+          "p50_per_attempt": 55056.5,
+          "p95_per_attempt": 124658.5
+        }
+      }
+    },
+    "wren": {
+      "run_id": "wren_qwen37_20260810_r3",
+      "attempts": 150,
+      "questions": 50,
+      "verdict_counts": {
+        "automatic_full": 52,
+        "full": 21,
+        "partial": 7,
+        "incorrect": 70
+      },
+      "automatic_execution_accuracy": {
+        "numerator": 52,
+        "denominator": 150,
+        "rate": 0.3467,
+        "percent": 34.67
+      },
+      "human_adjusted_weighted_correctness": {
+        "numerator": 76.5,
+        "denominator": 150,
+        "percent": 51.0
+      },
+      "human_adjusted_strict_correctness": {
+        "numerator": 73,
+        "denominator": 150,
+        "percent": 48.67
+      },
+      "human_adjusted_repeat_correct_rate": {
+        "numerator": 14,
+        "denominator": 50,
+        "percent": 28.0
+      },
+      "human_verified_sql_success_rate": {
+        "numerator": 100,
+        "denominator": 150,
+        "percent": 66.67
+      },
+      "by_round": {
+        "1": {
+          "weighted_correctness": {
+            "numerator": 30.5,
+            "denominator": 50,
+            "percent": 61.0
+          },
+          "strict_correctness": {
+            "numerator": 29,
+            "denominator": 50,
+            "percent": 58.0
+          }
+        },
+        "2": {
+          "weighted_correctness": {
+            "numerator": 21.5,
+            "denominator": 50,
+            "percent": 43.0
+          },
+          "strict_correctness": {
+            "numerator": 21,
+            "denominator": 50,
+            "percent": 42.0
+          }
+        },
+        "3": {
+          "weighted_correctness": {
+            "numerator": 24.5,
+            "denominator": 50,
+            "percent": 49.0
+          },
+          "strict_correctness": {
+            "numerator": 23,
+            "denominator": 50,
+            "percent": 46.0
+          }
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "weighted_correctness": {
+            "numerator": 39.5,
+            "denominator": 60,
+            "percent": 65.83
+          },
+          "strict_correctness": {
+            "numerator": 39,
+            "denominator": 60,
+            "percent": 65.0
+          }
+        },
+        "medium": {
+          "weighted_correctness": {
+            "numerator": 25.0,
+            "denominator": 60,
+            "percent": 41.67
+          },
+          "strict_correctness": {
+            "numerator": 22,
+            "denominator": 60,
+            "percent": 36.67
+          }
+        },
+        "hard": {
+          "weighted_correctness": {
+            "numerator": 12.0,
+            "denominator": 30,
+            "percent": 40.0
+          },
+          "strict_correctness": {
+            "numerator": 12,
+            "denominator": 30,
+            "percent": 40.0
+          }
+        }
+      },
+      "operational_metrics_unchanged": {
+        "sql_success_rate": {
+          "numerator": 99,
+          "denominator": 150,
+          "rate": 0.66,
+          "percent": 66.0
+        },
+        "end_to_end_latency_ms": {
+          "observed": 150,
+          "mean": 97074.687,
+          "p50": 81541.5,
+          "p95": 180528.7
+        },
+        "token_usage": {
+          "observed": 0,
+          "prompt_total": 0,
+          "completion_total": 0,
+          "total": 0,
+          "mean_per_attempt": null
+        }
+      }
+    }
+  }
+}

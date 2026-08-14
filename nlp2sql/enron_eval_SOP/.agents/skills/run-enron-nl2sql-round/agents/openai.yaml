@@ -1,0 +1,4 @@
+interface:
+  display_name: "运行 Enron NL2SQL 单轮评测"
+  short_description: "为Chat2DB、Wren和MOI运行并验证Enron单轮50题评测"
+  default_prompt: "Use $run-enron-nl2sql-round to run one validated 50-question Enron NL2SQL round for a selected product."

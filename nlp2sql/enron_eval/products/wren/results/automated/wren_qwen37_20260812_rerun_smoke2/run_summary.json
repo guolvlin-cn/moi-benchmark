@@ -1,0 +1,17 @@
+{
+  "expected_attempts": 1,
+  "recorded_attempts": 1,
+  "sql_generated": 0,
+  "failed": 1,
+  "average_latency_ms": 107911,
+  "min_latency_ms": 107911,
+  "max_latency_ms": 107911,
+  "token_collection": "unavailable",
+  "failed_attempts": [
+    {
+      "question_id": "e01_sender_count",
+      "repeat_index": 1,
+      "status": "generation_error"
+    }
+  ]
+}

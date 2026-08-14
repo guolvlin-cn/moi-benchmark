@@ -15,7 +15,8 @@
 - 工作区：`local_project`
 - 知识库：`邮件问答`，知识库 ID 为 `2`
 - 数据库：`enron_eval`
-- SQL 生成模型：`deepseek-v4-flash`
+- 历史批次SQL生成模型：`deepseek-v4-flash`
+- 新版统一模型：`qwen3.7-plus-2026-05-26`
 
 这里的 commit 是 Git 对某一次源码快照生成的唯一编号。`dev` 分支会随着后续开发不断变化，而 commit `75018903911da5712cb0c6763267d42e430fcfcf` 永远指向本次评测所依据的源码版本，因此可以用于版本追踪和复现。
 
@@ -94,19 +95,28 @@ export MOI_EMAIL='your-local-account@example.com'
 export MOI_PASSWORD='your-local-password'
 
 python3 scripts/adapters/run_moi.py \
-  --output-root products/moi/results \
-  --run-id your_run_id \
-  --semantic-rules your_semantic_config_label
+  --knowledge-name '邮件问答-baseline-qwen37' \
+  --model 'qwen3.7-plus-2026-05-26' \
+  --repeats 3 \
+  --output-root products/moi/results/automated \
+  --run-id moi_qwen37_no_semantic_r3
 ```
 
-运行脚本会为每道题创建独立的固定知识库会话，防止不同题目之间发生上下文污染，并记录：
+无语义基线不传入 `--semantic-rules`。有语义批次必须使用不同知识库和运行ID，并通过该参数记录实际语义配置标签。
+
+运行脚本会为每道题的每次重复创建独立的固定知识库会话，防止题目和重复轮次之间发生上下文污染，并记录：
 
 - 用户问题；
-- MOI 生成的 SQL；
+- MOI生成及实际执行的SQL；
+- MatrixOne原生查询列、结果行、行数、截断信息和执行耗时；
+- 最终回答实际引用的一个或多个SQL结果集；
 - 自然语言回答；
-- 生成状态和错误；
+- 原生执行状态和错误；
 - 端到端耗时；
+- 每次模型调用以及汇总后的输入、输出、缓存和推理Token；
 - 会话、任务、模型和知识库信息。
+
+一道问题可能由MOI执行多条SQL后组合答案，因此脚本同时保存 `native_query_results` 和 `selected_native_results`，不能只根据最后一条SQL判断原生结果。完整A2A事件保存在每个运行目录的 `raw/` 中并由Git忽略。
 
 完整 A2A 原始事件适合在本机排查问题，但文件很大，也可能包含本地环境元数据，因此不放入面向 GitHub 的精简评测目录。
 

@@ -1,0 +1,13 @@
+{
+  "dataset_id": "enron_eval_v1",
+  "engine": "mysql",
+  "minimum_version": "8.0",
+  "tables": {
+    "enron_email": {"rows": 10401, "schema_sha256": "1179d3b3fdca9af85b3cda540d031c6052b8c6904632bccc50f85f29869d376e", "canonical_row_fingerprint_sha256": "e4d91047cabf8ea27a08a94b9336f9b2c811e681190020757729e3999dcd8e91"},
+    "enron_emailinfo": {"rows": 10401, "schema_sha256": "3dbc914a84f2a1f6f18b86d838a62745a7c2a939dde9c0720db8a613cf3bf56d", "canonical_row_fingerprint_sha256": "4de5100439d2b09149bf8601f9b9ab86048fae78324c3738a46cf390abab461d"},
+    "enron_emailorig": {"rows": 1161, "schema_sha256": "1b23f44b21342cec3a49bbb2cb3a0577d5386717bf267a2fd4e37723b14f7435", "canonical_row_fingerprint_sha256": "fafb36ff4264d41b7835620f3bfdc9fb8520909b8832431ba690f770c5f1fc61"},
+    "enron_emailto": {"rows": 71670, "schema_sha256": "b5409a48ad3ddf2d72f27d8aa883eaa53915ce06ff398f440232495c7cd1d3e0", "canonical_row_fingerprint_sha256": "d81598762c05fb2db06f1f3e4793bf976f9a0826636c5a03ddc927a914163cce"},
+    "enron_emailxto": {"rows": 72349, "schema_sha256": "43cecfa758ad90dcfda4177d3c5b9ca7ce290a0e6f1b58178efdc304d1b11672", "canonical_row_fingerprint_sha256": "6ec7450b173aa8434404d59a0b06483a327a5375353b2b3325fd224a37c3a66b"},
+    "enron_source": {"rows": 10401, "schema_sha256": "db2c46de0b9849dd310e41dd666b2a75d71690e5acd7d1893c3ae4163dc4373d", "canonical_row_fingerprint_sha256": "c19ccad152bbcaef1e6668c0a54a8c47c25c51f3c0e4bc142ec0c088e597cea2"}
+  }
+}

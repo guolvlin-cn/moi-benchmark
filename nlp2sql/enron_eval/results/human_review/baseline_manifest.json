@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-08-11",
+  "description": "MOI与Wren人工复核前的原始运行和严格自动评测基线。人工标注不得覆盖这些文件。",
+  "model": "qwen3.7-plus-2026-05-26",
+  "runs": {
+    "moi": {
+      "run_id": "moi_qwen37_no_semantic_20260811_r3",
+      "semantic_configuration": "none",
+      "predictions": {
+        "path": "products/moi/results/automated/moi_qwen37_no_semantic_20260811_r3/predictions.jsonl",
+        "sha256": "ceaeca55dd4bf26cae812efc326bbdd2644f7873e53b547a9269d83722e1b9e6"
+      },
+      "evaluation": {
+        "path": "products/moi/results/automated/moi_qwen37_no_semantic_20260811_r3/evaluation_native.json",
+        "sha256": "757ef645221547c058e35d29dc59f47de60d56fa5d3aef97dd2923e23cb49c85",
+        "execution_accuracy": "85/150",
+        "sql_success_rate": "150/150",
+        "repeat_correct_rate": "26/50"
+      }
+    },
+    "wren": {
+      "run_id": "wren_qwen37_20260810_r3",
+      "semantic_configuration": "none",
+      "predictions": {
+        "path": "products/wren/results/automated/wren_qwen37_20260810_r3/predictions.jsonl",
+        "sha256": "8bdfa3d4289fabd2e97032ba00e1d632ff220cc00e9f24235d1a7a23e2aed8f6"
+      },
+      "evaluation": {
+        "path": "products/wren/results/automated/wren_qwen37_20260810_r3/evaluation.json",
+        "sha256": "0d812f4cdd0ec8986135beda78208e1ae5e7a191d6a6c7fdf26d98dd496678ba",
+        "execution_accuracy": "52/150",
+        "sql_success_rate": "99/150",
+        "repeat_correct_rate": "12/50"
+      }
+    }
+  }
+}

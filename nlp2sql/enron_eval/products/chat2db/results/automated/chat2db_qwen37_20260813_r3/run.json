@@ -1,0 +1,18 @@
+{
+  "run_id": "chat2db_qwen37_20260813_r3",
+  "product": "chat2db",
+  "product_version": "5.3.0",
+  "benchmark_id": "enron_golden50_v1",
+  "database": "enron_eval",
+  "repeats": 1,
+  "repeat_start": 3,
+  "repeat_end": 3,
+  "collection_mode": "macos_ui_plus_application_log",
+  "started_at": "2026-08-13T13:49:13.470316+08:00",
+  "predictions_file": "products/chat2db/results/automated/chat2db_qwen37_20260813_r3/predictions.jsonl",
+  "record_count": 50,
+  "model": "qwen3.7-plus-2026-05-26",
+  "data_source_id": 201564,
+  "last_updated_at": "2026-08-13T14:19:19.013635+08:00",
+  "completed_at": "2026-08-13T14:19:20.014488+08:00"
+}

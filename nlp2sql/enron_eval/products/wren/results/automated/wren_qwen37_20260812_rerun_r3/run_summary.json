@@ -1,0 +1,167 @@
+{
+  "expected_attempts": 150,
+  "recorded_attempts": 150,
+  "sql_generated": 119,
+  "failed": 31,
+  "average_latency_ms": 102291,
+  "min_latency_ms": 17189,
+  "max_latency_ms": 181038,
+  "token_collection": "unavailable",
+  "failed_attempts": [
+    {
+      "question_id": "e04_reply_emails",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e11_latest_emails",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e19_top_xfrom",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m03_california_senders",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m08_2001_monthly_trend",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m11_recipient_sequence_extremes",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m13_source_file_stats",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m18_october_2001_recipients",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m20_top_source_origins",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "h02_sender_no_receiver",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "h06_internal_vs_external",
+      "repeat_index": 1,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e04_reply_emails",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e06_top10_mailboxes",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e18_senders_more_than_100",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e19_top_xfrom",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m07_most_common_recipient",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m08_2001_monthly_trend",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m11_recipient_sequence_extremes",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m14_recipient_representation_gap",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m17_reply_orig_header_details",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "h02_sender_no_receiver",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "h05_busiest_day_senders",
+      "repeat_index": 2,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e04_reply_emails",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e11_latest_emails",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "e20_campbell_source_sequence",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m08_2001_monthly_trend",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m17_reply_orig_header_details",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "m18_october_2001_recipients",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "h04_top_senders_per_owner",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "h07_sender_receiver_overlap_people",
+      "repeat_index": 3,
+      "status": "generation_error"
+    },
+    {
+      "question_id": "h10_top_folder_per_person",
+      "repeat_index": 3,
+      "status": "generation_error"
+    }
+  ]
+}
