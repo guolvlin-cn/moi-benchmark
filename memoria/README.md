@@ -110,5 +110,4 @@ datasets/feature/ 中的固定 case 与 JSON Schema
 - API Key、数据库凭据和其他运行时秘密不得提交；
 - Smoke 只用于验证链路能否运行，不作为正式结果，也不进入报告分数。
 
-评测方案入口：[plans/drafts/v0.1.md](plans/drafts/v0.1.md)。公开数据集实验计划与
-阶段记录见 [plans/public-dataset-experiments.md](plans/public-dataset-experiments.md)。
+评测方案入口：[plans/drafts/v0.1.md](plans/drafts/v0.1.md)。
