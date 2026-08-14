@@ -108,10 +108,15 @@ class CoreTests(unittest.TestCase):
             cleanup_report_path="/tmp/run/cleanup.json",
             cleanup_grace_sec=2,
             strict_cleanup=True,
+            exclude_stdout_json_events=["message_update"],
         )
         self.assertIn("--deadline-sec 1200", command)
         self.assertIn("--cleanup-report /tmp/run/cleanup.json", command)
         self.assertIn("--strict-cleanup", command)
+        self.assertIn(
+            "--exclude-stdout-json-event message_update",
+            command,
+        )
 
     def test_cleanup_report_requires_zero_live_fault_free_terminal_status(self):
         report = {

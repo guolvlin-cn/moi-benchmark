@@ -16,6 +16,10 @@ from astra.runners.hermes_terminal_bench.gateway_driver import (
 from astra.runners.astra_terminal_bench.trajectory_export import (
     validate_trajectory_bundle,
 )
+from astra.runners.pi_terminal_bench.events import (
+    validate_event_stream as validate_pi_event_stream,
+    validate_session as validate_pi_session,
+)
 
 from .core import LifecycleControllerError, parse_process_cleanup_report
 
@@ -1037,6 +1041,151 @@ def _validate_hermes_managed_policy(
     }
 
 
+def _validate_pi_trajectory(
+    result_path: Path,
+    metadata: dict[str, Any],
+    started: dict[str, Any],
+    completed: dict[str, Any],
+) -> dict[str, Any] | None:
+    if started.get("product") != "pi":
+        return None
+    if (
+        started.get("product_version") != "0.73.1"
+        or started.get("model_name") != "zai/glm-5.2"
+        or metadata.get("pi_version") != "0.73.1"
+    ):
+        raise AuditError("Pi version/model is outside the frozen cohort")
+    if (
+        started.get("trajectory_capture_required") is not True
+        or started.get("trajectory_capture_mode")
+        != "pi_jsonl_and_saved_session"
+        or started.get("trajectory_capture_blocking") is not False
+    ):
+        raise AuditError("Pi trajectory capture is not armed correctly")
+    models_sha256 = _same(
+        "pi_models_sha256",
+        [metadata.get("pi_models_sha256"), started.get("pi_models_sha256")],
+    )
+    _require_sha256(models_sha256, "pi_models_sha256")
+    trajectory_status = _same(
+        "pi_trajectory_status",
+        [
+            metadata.get("pi_trajectory_status"),
+            completed.get("pi_trajectory_status"),
+        ],
+    )
+    trajectory_sha256 = _same(
+        "pi_trajectory_sha256",
+        [
+            metadata.get("pi_trajectory_sha256"),
+            completed.get("pi_trajectory_sha256"),
+        ],
+    )
+    session_id = _same(
+        "pi_session_id",
+        [metadata.get("pi_session_id"), completed.get("pi_session_id")],
+    )
+    session_sha256 = _same(
+        "pi_session_sha256",
+        [
+            metadata.get("pi_session_sha256"),
+            completed.get("pi_session_sha256"),
+        ],
+    )
+    provider_model_verified = _same(
+        "pi_provider_model_verified",
+        [
+            metadata.get("pi_provider_model_verified"),
+            completed.get("pi_provider_model_verified"),
+        ],
+    )
+    event_path = result_path.parent / "agent" / "pi.txt"
+    if trajectory_status == "failed":
+        capture_error = _same(
+            "pi_trajectory_error",
+            [
+                metadata.get("pi_trajectory_error"),
+                completed.get("pi_trajectory_error"),
+            ],
+        )
+        if not isinstance(capture_error, str) or not capture_error:
+            raise AuditError("failed Pi trajectory capture has no error")
+        trajectory_sha256 = _require_sha256(
+            trajectory_sha256, "pi_trajectory_sha256"
+        )
+        try:
+            event_bytes = event_path.read_bytes()
+        except OSError as exc:
+            raise AuditError(f"cannot validate Pi raw event stream: {exc}") from exc
+        if hashlib.sha256(event_bytes).hexdigest() != trajectory_sha256:
+            raise AuditError("Pi raw event stream SHA-256 does not match the ledger")
+        if provider_model_verified is not False:
+            raise AuditError("failed Pi trajectory incorrectly verifies provider/model")
+        return {
+            "path": str(event_path),
+            "status": "failed",
+            "sha256": trajectory_sha256,
+            "error": capture_error,
+            "blocking": False,
+        }
+    if trajectory_status != "saved" or provider_model_verified is not True:
+        raise AuditError("Pi trajectory/provider/model verification failed")
+    trajectory_sha256 = _require_sha256(
+        trajectory_sha256, "pi_trajectory_sha256"
+    )
+    session_sha256 = _require_sha256(session_sha256, "pi_session_sha256")
+    if not isinstance(session_id, str) or not session_id:
+        raise AuditError("Pi trajectory has no session identity")
+
+    try:
+        event_summary = validate_pi_event_stream(
+            event_path,
+            expected_provider="zai",
+            expected_model="glm-5.2",
+        )
+    except (OSError, RuntimeError) as exc:
+        raise AuditError(f"invalid Pi event stream: {exc}") from exc
+    if (
+        event_summary["sha256"] != trajectory_sha256
+        or event_summary["session_id"] != session_id
+        or event_summary["event_count"] != metadata.get("pi_event_count")
+        or event_summary["stop_reason"]
+        != metadata.get("pi_final_stop_reason")
+    ):
+        raise AuditError("Pi event stream evidence is internally inconsistent")
+
+    matching_sessions: list[dict[str, Any]] = []
+    session_root = result_path.parent / "agent" / "pi-sessions"
+    for path in sorted(session_root.rglob("*.jsonl")):
+        try:
+            matching_sessions.append(
+                validate_pi_session(path, session_id=session_id)
+            )
+        except (OSError, RuntimeError):
+            continue
+    if len(matching_sessions) != 1:
+        raise AuditError("Pi must preserve exactly one matching saved session")
+    session_summary = matching_sessions[0]
+    if (
+        session_summary["sha256"] != session_sha256
+        or session_summary["entry_count"]
+        != metadata.get("pi_session_entry_count")
+    ):
+        raise AuditError("Pi saved session evidence is internally inconsistent")
+    return {
+        "path": str(event_path),
+        "status": trajectory_status,
+        "sha256": trajectory_sha256,
+        "event_count": event_summary["event_count"],
+        "session_id": session_id,
+        "session_sha256": session_sha256,
+        "stop_reason": event_summary["stop_reason"],
+        "provider": event_summary["provider"],
+        "model": event_summary["model"],
+        "blocking": False,
+    }
+
+
 def audit_trial(result_path: Path) -> dict[str, Any]:
     """Audit one persisted Harbor C0 trial without executing the product."""
 
@@ -1162,6 +1311,12 @@ def audit_trial(result_path: Path) -> dict[str, Any]:
         started,
         completed,
         product_terminal_status,
+    )
+    pi_trajectory = _validate_pi_trajectory(
+        result_path,
+        metadata,
+        started,
+        completed,
     )
 
     preflights = _events(rows, "product_preflight")
@@ -1373,6 +1528,7 @@ def audit_trial(result_path: Path) -> dict[str, Any]:
             "cleanup_report": str(cleanup_report_path),
             "trajectory": astra_trajectory,
             "managed_policy": managed_policy,
+            "pi_trajectory": pi_trajectory,
         },
         "trigger": {
             "status": trigger_status,
