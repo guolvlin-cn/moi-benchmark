@@ -1,0 +1,130 @@
+{
+  "dataset": "EnterpriseRAG-Bench",
+  "score_pass": {
+    "mode": "reaggregate_recovered_results_and_existing_judgements",
+    "judge_invocations": 0,
+    "scored_at": "2026-08-17T03:14:08.143111+00:00"
+  },
+  "headline": {
+    "scope": "CURRENT_CORPUS_ADAPTED representative 722-document slice; not the official ~511,962-document corpus",
+    "questions": 500,
+    "availability_policy": "API/infrastructure retries are merged into the original question result and are not counted as MOI failures",
+    "initial_success": 500,
+    "initial_availability": 1.0,
+    "raw_transport_initial_success": 417,
+    "raw_transport_initial_availability": 0.834,
+    "api_retry_merged_n": 83,
+    "api_retry_failure_breakdown": {
+      "timeout": 9,
+      "database_connection": 2,
+      "request_context_canceled": 1,
+      "provider_resource_frozen": 71
+    },
+    "recovered_success": 500,
+    "recovered_availability": 1.0,
+    "retry_recovered_n": 83,
+    "judge_valid_n": 500,
+    "judge_failed_n": 0,
+    "correctness": 0.492,
+    "completeness": 0.5873725330225331,
+    "dataset_aggregate_adapted": 0.47297763347763355,
+    "strict_info_not_found_success": 0.85,
+    "strict_info_not_found_pass": 17,
+    "strict_info_not_found_total": 20,
+    "unsupported_completion_rate": 0.518,
+    "tdas": null,
+    "tdas_reason": "N/A: required claim-to-citation binding was not scored",
+    "retrieval": {
+      "doc_recall_at_10": 0.8059219858156031,
+      "doc_recall_valid_n": 470,
+      "complete_evidence_set_recall_at_10": 0.7468085106382979,
+      "invalid_extra_docs_mean": 2.34468085106383,
+      "retrieval_latency_ms": {
+        "p50": 6067.276,
+        "p95": 80425.444
+      },
+      "e2e_latency_ms": {
+        "p50": 20211.15,
+        "p95": 94454.56199999999
+      },
+      "doc_recall_at_10_by_type": {
+        "basic": 0.88,
+        "semantic": 0.704,
+        "intra_document_reasoning": 1.0,
+        "project_related": 0.6156944444444443,
+        "constrained": 0.9333333333333333,
+        "conflicting_info": 0.775,
+        "completeness": 0.43277777777777776,
+        "miscellaneous": 1.0
+      }
+    },
+    "judge_contract": "project-adapted EnterpriseRAG answer_facts binary coverage; Qianfan deepseek-v4-flash"
+  },
+  "recomputed_checks": {
+    "questions": 500,
+    "initial_query_ok_n": 417,
+    "recovered_query_ok_n": 500,
+    "judge_valid_n": 500,
+    "correctness": 0.492,
+    "completeness": 0.587372533022533,
+    "unsupported_completion_rate": 0.518
+  },
+  "source_initial_metrics": {
+    "retrieval": {
+      "attempts": 500,
+      "successful_attempts": 417,
+      "initial_availability": 0.834,
+      "error_count": 83,
+      "retrieval_latency_ms": {
+        "mean": 16449.264780000005,
+        "p50": 4788.171,
+        "p95": 78364.29
+      },
+      "source_recall_at_1": 0.6541966426858516,
+      "nDCG_at_1": 0.7458033573141487,
+      "source_recall_at_3": 0.7463029576338926,
+      "nDCG_at_3": 1.297939951981468,
+      "source_recall_at_5": 0.7829403144151348,
+      "nDCG_at_5": 1.6487131211664885,
+      "source_recall_at_10": 0.8092059685584868,
+      "nDCG_at_10": 2.1640156724018342,
+      "source_recall": 0.887756461497469,
+      "evidence_recall": 0.0,
+      "reciprocal_rank": 0.7869732691529071,
+      "answer_keyword_recall": 0.0
+    },
+    "latency_ms": {
+      "mean": 16449.264780000005,
+      "p50": 4788.171,
+      "p95": 78364.29
+    },
+    "judge": null,
+    "na_reason": "N/A: official dataset judge/scorer is unavailable in the local checkout",
+    "doc_recall_at_10": 0.8092059685584868,
+    "doc_recall_valid_n": 417,
+    "complete_evidence_set_recall_at_10": 0.7577937649880095,
+    "invalid_extra_docs": 2.3333333333333335,
+    "answer_lexical_f1": 0.3602676256716621,
+    "answer_lexical_f1_valid_n": 417,
+    "availability": 0.834,
+    "failed_n": 83,
+    "strict_unanswerable_success": null,
+    "strict_unanswerable_valid_n": 0,
+    "question_type_slices": {
+      "basic": 0.88,
+      "semantic": 0.704,
+      "intra_document_reasoning": 1.0,
+      "project_related": 0.6159356725146198,
+      "constrained": 0.9375,
+      "conflicting_info": 0.7333333333333333,
+      "completeness": 0.5111111111111111
+    }
+  },
+  "validation": {
+    "question_count": true,
+    "recovered_judge_count": true,
+    "correctness_matches_source": true,
+    "completeness_matches_source": true,
+    "initial_availability_matches_source": true
+  }
+}

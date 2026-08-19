@@ -1,0 +1,257 @@
+{
+  "dataset": "MMDocIR",
+  "score_pass": {
+    "mode": "reaggregate_retrieval_and_existing_qa_artifacts",
+    "judge_invocations": 0,
+    "scored_at": "2026-08-17T03:14:03.289554+00:00"
+  },
+  "recomputed": {
+    "page_retrieval": {
+      "fraction_at_1": {
+        "mean": 0.43490148773622844,
+        "valid_n": 1658
+      },
+      "fraction_at_3": {
+        "mean": 0.6585243264977885,
+        "valid_n": 1658
+      },
+      "fraction_at_5": {
+        "mean": 0.7392742259750704,
+        "valid_n": 1658
+      },
+      "fraction_at_10": {
+        "mean": 0.8401789304382791,
+        "valid_n": 1658
+      }
+    },
+    "page_mrr": {
+      "mean": 0.6207790031975798,
+      "valid_n": 1658
+    },
+    "layout_retrieval": {
+      "recall_at_1": {
+        "mean": 0.2801930383636575,
+        "valid_n": 1658
+      },
+      "recall_at_5": {
+        "mean": 0.5269772544543249,
+        "valid_n": 1658
+      },
+      "recall_at_10": {
+        "mean": 0.6186623377290165,
+        "valid_n": 1658
+      }
+    },
+    "qa": {
+      "questions": 1658,
+      "query_ok": 1658,
+      "answer_non_empty_rate": 0.9620024125452352,
+      "answer_contains_gold_rate": 0.47225572979493363,
+      "mean_token_f1": 0.11468844017530347,
+      "mean_page_recall_at_k": {
+        "1": 0.4223361479694411,
+        "3": 0.6338459991958183,
+        "5": 0.7071270607157218,
+        "10": 0.7963007639726578
+      }
+    }
+  },
+  "reported_adapted_qa": {
+    "answer_correctness_5": 3.91,
+    "faithfulness": 0.7398,
+    "source": "tables.md and results/MOI_rag_benchmark_v1.0.md; no per-question judge file was present"
+  },
+  "source_metrics": {
+    "page": {
+      "granularity": "page",
+      "protocol": "MMDocIR document-local dense retrieval (adapted to MOI/BGE-M3)",
+      "embedding_model": "bge-m3",
+      "attempts": 1658,
+      "successful_attempts": 1658,
+      "failed_attempts": 0,
+      "recall_at_k": {
+        "1": 0.43490148773622833,
+        "3": 0.6585243264977886,
+        "5": 0.7392742259750704
+      },
+      "macro_domain_recall_at_k": {
+        "1": 0.4363366521222263,
+        "3": 0.6638477620928942,
+        "5": 0.74037798442901
+      },
+      "by_domain_recall_at_k": {
+        "Academic paper": {
+          "1": 0.4601113967437875,
+          "3": 0.7065552699228792,
+          "5": 0.825535561268209
+        },
+        "Administration/Industry file": {
+          "1": 0.29970238095238094,
+          "3": 0.5886904761904762,
+          "5": 0.7053571428571429
+        },
+        "Brochure": {
+          "1": 0.38925438596491224,
+          "3": 0.5241228070175438,
+          "5": 0.6140350877192983
+        },
+        "Financial report": {
+          "1": 0.3333333333333333,
+          "3": 0.5079941860465116,
+          "5": 0.5843023255813954
+        },
+        "Government": {
+          "1": 0.5007507507507508,
+          "3": 0.7680180180180181,
+          "5": 0.8490990990990991
+        },
+        "Guidebook": {
+          "1": 0.4539130434782609,
+          "3": 0.7614492753623189,
+          "5": 0.8020289855072466
+        },
+        "Laws": {
+          "1": 0.4962121212121212,
+          "3": 0.7878787878787878,
+          "5": 0.8409090909090909
+        },
+        "News": {
+          "1": 0.45255474452554745,
+          "3": 0.5985401459854015,
+          "5": 0.656934306569343
+        },
+        "Research report / Introduction": {
+          "1": 0.49003436426116836,
+          "3": 0.7279209621993129,
+          "5": 0.7919243986254296
+        },
+        "Tutorial/Workshop": {
+          "1": 0.4875000000000001,
+          "3": 0.6673076923076924,
+          "5": 0.7336538461538462
+        }
+      },
+      "latency_p50_ms": 272.339,
+      "latency_p95_ms": 360.977
+    },
+    "layout": {
+      "granularity": "layout",
+      "protocol": "MMDocIR document-local dense retrieval (adapted to MOI/BGE-M3)",
+      "embedding_model": "bge-m3",
+      "attempts": 1658,
+      "successful_attempts": 1658,
+      "failed_attempts": 0,
+      "recall_at_k": {
+        "1": 0.2801930383636575,
+        "10": 0.6186623377290162,
+        "5": 0.5269772544543248
+      },
+      "macro_domain_recall_at_k": {
+        "1": 0.2730192967540167,
+        "10": 0.5997439177710693,
+        "5": 0.5131242592440186
+      },
+      "by_domain_recall_at_k": {
+        "Academic paper": {
+          "1": 0.3011283411711581,
+          "10": 0.7221420477047782,
+          "5": 0.6129705457124718
+        },
+        "Administration/Industry file": {
+          "1": 0.15645861653222154,
+          "10": 0.3973771333066632,
+          "5": 0.31521532421337245
+        },
+        "Brochure": {
+          "1": 0.105637376281665,
+          "10": 0.3912617760943326,
+          "5": 0.35162775311150263
+        },
+        "Financial report": {
+          "1": 0.24153868484155952,
+          "10": 0.5289320202674098,
+          "5": 0.43990545491000566
+        },
+        "Government": {
+          "1": 0.46994309633846976,
+          "10": 0.844269564768687,
+          "5": 0.7697217206019079
+        },
+        "Guidebook": {
+          "1": 0.14300434958002675,
+          "10": 0.5616931863270496,
+          "5": 0.4149354045520638
+        },
+        "Laws": {
+          "1": 0.5073182897005638,
+          "10": 0.7922876606444883,
+          "5": 0.7211715425557379
+        },
+        "News": {
+          "1": 0.38197077738424645,
+          "10": 0.6413821576181876,
+          "5": 0.6230733114071144
+        },
+        "Research report / Introduction": {
+          "1": 0.17360433590444624,
+          "10": 0.4871729715521532,
+          "5": 0.3786054694679761
+        },
+        "Tutorial/Workshop": {
+          "1": 0.24958909980580982,
+          "10": 0.6309206594269428,
+          "5": 0.5040160659080338
+        }
+      },
+      "latency_p50_ms": 284.884,
+      "latency_p95_ms": 407.208
+    },
+    "qa": {
+      "schema": "mmdocir-moi-qa-ledger-v2",
+      "attempts": 1658,
+      "successful_attempts": 1658,
+      "failed_attempts": 0,
+      "denominator": {
+        "planned_n": 1658,
+        "terminal_n": 1658,
+        "valid_n": 1658,
+        "failed_n": 0
+      },
+      "answer_non_empty_count": 1595,
+      "answer_non_empty_rate": 0.9620024125452352,
+      "answer_exact_match_normalized_count": 11,
+      "answer_exact_match_normalized_rate": 0.0066344993968636915,
+      "answer_contains_gold_count": 783,
+      "answer_contains_gold_rate": 0.47225572979493363,
+      "mean_token_f1": 0.11468844017530368,
+      "mean_token_f1_success_only": 0.11468844017530368,
+      "mean_page_recall_at_k": {
+        "1": 0.422336147969441,
+        "3": 0.6338459991958183,
+        "5": 0.7071270607157218,
+        "10": 0.7963007639726579
+      },
+      "generation_route_counts": {
+        "multimodal": 943,
+        "text": 715
+      },
+      "generation_model_counts": {
+        "qwen3.5-35b-a3b": 943,
+        "deepseek-v4-flash": 715
+      },
+      "failure_error_counts": {},
+      "results_source": "/Users/muuushroom/gitrepos/moi-benchmark/rag/runs/stage1/mmdocir-qa/20260813-230700-mmdocir-qwen35-recovery-full-1658/20260813-230828.003/results.jsonl",
+      "ledger_source": "/Users/muuushroom/gitrepos/moi-benchmark/rag/runs/stage1/mmdocir-qa/20260813-230700-mmdocir-qwen35-recovery-full-1658/qa-ledger.jsonl"
+    }
+  },
+  "validation": {
+    "page_rows": true,
+    "layout_rows": true,
+    "qa_rows": true,
+    "qa_summary_attempts_match": true,
+    "page_fraction_at_10_recomputed": {
+      "mean": 0.8401789304382791,
+      "valid_n": 1658
+    }
+  }
+}

@@ -1,9 +1,10 @@
 # MaxKB local（v2.10.4-lts）
 
 本方案只在 Dify 停止后运行 MaxKB；MOI 的 `moi-openxml-parser` 与
-`matrixone` 必须保持运行。MaxKB 服务留在本机 Colima，LLM/Embedding
-仅通过 MatrixOrigin TaaS 出网，因此部署类型是 `LOCAL_VARIANT`，不是
-fully offline。
+`matrixone` 必须保持运行。MaxKB 服务留在本机 Colima；当前竞品评估链路使用
+百度千帆 V2 `qwen3-embedding-8b`（4096 维）embedding 与
+`deepseek-v4-flash` chat，因此部署类型是 `LOCAL_VARIANT`，不是 fully offline。
+历史 MaaS/TaaS smoke 证据仍保留在本目录说明中，但不再作为当前评估的向量空间。
 
 ## 已核对的不变量
 
@@ -58,14 +59,14 @@ docker run -d \
    密码管理器或 `.local-services/maxkb_local/runtime.env`，不要写入日志。
 2. 在“模型 → 全部模型 → OpenAI → 添加模型”分别创建两个记录：
    - 大语言模型：基础模型填 `TAAS_CHAT_MODEL`；API URL 填
-     `https://api-taas.moi.matrixorigin.cn/v1`；API Key 填 `TAAS_API_KEY`。
+     `https://token.moi.matrixorigin.cn/v1`；API Key 填 `TAAS_API_KEY`。
    - 向量模型：基础模型填 `TAAS_EMBEDDING_MODEL`（当前 TaaS `/models`
    返回的 endpoint ID 为 `bge-m3`）；同一 API URL/API Key；Dimensions
      留空（TaaS 不接受自定义 `dimensions`）。
 3. 两个记录都要通过 MaxKB 的保存时连通性验证。不要把 TaaS key 放入
    智能体提示词、API discovery artifact 或 shell history。
 
-千帆作为独立备用 Provider 时，再创建两个 OpenAI 记录，不覆盖 TaaS：
+千帆作为当前评估 Provider 时，再创建两个 OpenAI 记录，不覆盖历史 TaaS/MaaS：
 
 - LLM：API URL `https://qianfan.baidubce.com/v2`，模型
   `deepseek-v4-flash`；
@@ -75,12 +76,40 @@ docker run -d \
 - 使用新的知识库重新向量化，禁止切换原 TaaS 知识库的 Embedding。
 - 三个模型名先作为候选接入点 ID，最终以千帆 `/v2/models` 返回为准。
 
-可从脱敏模板准备仅本机配置：
+### Qianfan embedding 注册与发现
+
+MaxKB v2.10.4 的通用 OpenAI embedding 表单只提供 1536/1024/768/512，
+不能用表单默认值注册 Qianfan 的 4096 维模型。注册请求必须满足：
+
+```text
+provider         = model_openai_provider
+model_type       = EMBEDDING
+model_name       = qwen3-embedding-8b
+model_params_form = []
+credential.api_base = https://qianfan.baidubce.com/v2
+```
+
+用 MaxKB admin token 执行一次（会先直连 Qianfan `/v2/embeddings` 验证返回
+长度为 4096，再按模型名幂等发现或创建记录）：
+
+```bash
+set -a; source .env; \
+source .local-services/maxkb_local/runtime.env; set +a
+local-rag-platforms/maxkb_local/maxkb-local.sh qianfan-embedding register --execute
+local-rag-platforms/maxkb_local/maxkb-local.sh qianfan-embedding verify
+```
+
+命令输出和 `--output` 产物只包含 model ID、模型元数据和向量维度，不包含
+API key。若设置 `MAXKB_EMBEDDING_MODEL_ID`，verify 会严格验证这个 ID；不设置
+时按 `model_type + provider + model_name` 唯一发现。发现到的 ID 必须作为知识库
+创建请求的 `embedding_model_id`，不能只填模型名称。
+
+可从脱敏模板准备仅本机的非敏感运行配置；API key 不写入该文件：
 
 ```bash
 install -m 600 local-rag-platforms/maxkb_local/runtime.env.example \
   .local-services/maxkb_local/runtime.env
-# 手工编辑后：set -a; source .local-services/maxkb_local/runtime.env; set +a
+# 手工编辑非敏感参数后：set -a; source .env; source .local-services/maxkb_local/runtime.env; set +a
 ```
 
 ## 三文档 smoke 初始化
@@ -163,3 +192,54 @@ local-rag-platforms/maxkb_local/maxkb-local.sh resume
 ```
 
 不要删除 `.local-services/maxkb_local/data`。
+
+## 单文档完整链路 runner
+
+`full-chain` 使用唯一 sentinel Markdown，依次执行 split、document batch create、
+等待 embedding 状态 `2 = SUCCESS`、admin `hit_test`、创建并发布普通 SIMPLE
+应用、创建应用 key，以及公开 OpenAI-compatible QA。默认要求回答包含 sentinel
+且 `usage.total_tokens > 0`，否则 generative RAG 验收失败。公开 direct retrieval
+没有稳定接口，仍明确记为 `unsupported`；诊断检索只使用 admin `hit_test`。
+
+当前 Qianfan 链路可让 runner 自动发现模型 ID；也可以显式提供已验证的 ID。
+知识库只绑定一个 embedding model，严禁中途切换向量空间：
+
+```bash
+export MAXKB_EMBEDDING_PROVIDER=qianfan
+export MAXKB_EMBEDDING_MODEL_NAME=qwen3-embedding-8b
+export MAXKB_EMBEDDING_DIMENSION=4096
+export MAXKB_EMBEDDING_MODEL_ID=<optional-validated-qianfan-model-id>
+export MAXKB_CHAT_MODEL_ID=<configured-chat-model-id>
+export MAXKB_CHAT_PROVIDER='Baidu Qianfan deepseek-v4-flash'
+local-rag-platforms/maxkb_local/maxkb-local.sh full-chain
+```
+
+`MAXKB_CHAT_MODEL_ID` 仍应设置为通过保存验证的 `deepseek-v4-flash` 记录。
+full-chain 会先写入 `qianfan-embedding-verification.json`，再用同一个
+`embedding_model_id` 创建知识库，并在 application request 中绑定该知识库；
+manifest 会记录 provider、model ID、4096 维和 dataset/app binding。若只需保留检索链路的 partial 证据，可显式设置
+`MAXKB_DIRECT_RETURN=1`；此模式会把文档设为 direct-return，并在 manifest 中
+标为 `partial`，绝不宣称 generative RAG 成功。
+
+每次运行的脱敏 raw request/response、HTTP 状态、manifest、错误状态和逐文件
+SHA-256 会写入 `.local-services/maxkb_local/logs/full-chain-<UTC>/`；application
+key 只写入 mode 0600 的 `secrets/`。聚焦测试：
+
+```bash
+local-rag-platforms/tests/maxkb/test-full-chain.sh
+```
+
+### 2026-08-10 历史 provider 结果
+
+- MaaS `bge-m3` 以空 `model_params_form` 保存验证成功；新知识库只使用这一种
+  向量空间，sentinel 文档 embedding 状态为 `nnn2`，admin `hit_test` 命中成功。
+- 有效 Qianfan 配置来自仓库根 `.env` 的 `QIANFAN_API_KEY`。密钥只在进程和
+  mode 0600 的 secrets 请求中使用；直连 `/v2/chat/completions` HTTP 200，MaxKB
+  `deepseek-v4-flash` 保存验证为 `SUCCESS`。
+- 普通 SIMPLE app 必须在 `model_setting.prompt` 中包含 `{data}` 与
+  `{question}`。缺少占位符时 search step 虽命中 sentinel，段落却不会进入模型
+  message；这是此前 usage 非零但回答称无知识的根因。
+- 修复 prompt、重新发布后，公开 OpenAI-compatible QA HTTP 200，
+  `usage.total_tokens=267`，回答精确包含 `MAXKB-SENTINEL-ORCHID-7419` 与
+  `ORCHID-7419`。完整脱敏证据位于
+  `.local-services/maxkb_local/logs/maxkb-full-chain-live/`。

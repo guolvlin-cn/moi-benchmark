@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-08-05",
+  "recorded_at": "2026-08-10",
   "host": {
     "os": "macOS",
     "host_arch": "arm64",
@@ -35,10 +35,12 @@
       "deployment_image_note": "The checked-in v4.15 PgVector compose currently references v4.15.4 images while the source checkout is v4.15.6.",
       "platform_policy": "native_then_emulated",
       "resolved_source_commit": "3db33e93b78e75b37c93f7a6e3d0fafeafbfd256",
-      "status": "BLOCKED_LOCAL",
-      "execution_result": "partial_smoke_native_timeout_2026_08_06",
-      "smoke_artifact": ".local-services/fastgpt_local/logs/smoke-partial-20260806-114747/smoke-result.json",
-      "blocked_reason": "NATIVE_QA_TIMEOUT_NO_RESPONSE_SINCE_2026-08-06T03:44:03Z"
+      "status": "LOCAL_VARIANT",
+      "execution_result": "qianfan_pdf_full_chain_success_2026_08_10",
+      "smoke_artifact": ".local-services/fastgpt_local/logs/acceptance-qianfan-20260810-165918/manifest.json",
+      "provider": "Baidu Qianfan V2",
+      "embedding_model": "qwen3-embedding-8b",
+      "chat_model": "deepseek-v4-flash"
     },
     "ragflow_local": {
       "repo": "https://github.com/infiniflow/ragflow.git",
@@ -62,7 +64,11 @@
       "platform_policy": "native_then_emulated",
       "resolved_source_commit": "fd6141e662582e88a41edbb7f6f89f4539e3e5dd",
       "status": "LOCAL_VARIANT",
-      "execution_result": "partial_ingest_native_partial_retrieval_unsupported_2026_08_06"
+      "execution_result": "maas_embedding_qianfan_chat_full_chain_success_2026_08_10",
+      "smoke_artifact": ".local-services/maxkb_local/logs/maxkb-full-chain-live/manifest.json",
+      "embedding_model": "ModelArts MaaS bge-m3",
+      "chat_model": "Baidu Qianfan V2 deepseek-v4-flash",
+      "direct_retrieval": "UNSUPPORTED_API"
     }
   }
 }

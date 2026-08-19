@@ -2,6 +2,7 @@
   {
     "model": "deepseek-v4-flash",
     "metadata": {
+      "type": "llm",
       "isCustom": true,
       "isActive": true,
       "provider": "OpenAI",
@@ -23,6 +24,7 @@
   {
     "model": "qwen3-embedding-8b",
     "metadata": {
+      "type": "embedding",
       "isCustom": true,
       "isActive": true,
       "provider": "OpenAI",
@@ -30,12 +32,14 @@
       "name": "Baidu Qianfan qwen3-embedding-8b",
       "charsPointsPrice": 0,
       "defaultToken": 512,
-      "maxToken": 8192
+      "maxToken": 8192,
+      "weight": 100
     }
   },
   {
     "model": "qwen3-reranker-8b",
     "metadata": {
+      "type": "rerank",
       "isCustom": true,
       "isActive": true,
       "provider": "OpenAI",
@@ -43,7 +47,6 @@
       "name": "Baidu Qianfan qwen3-reranker-8b",
       "charsPointsPrice": 0,
       "maxToken": 32000,
-      "requestUrl": "https://qianfan.baidubce.com/v2/rerank",
       "defaultConfig": {}
     }
   }

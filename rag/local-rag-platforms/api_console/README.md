@@ -12,14 +12,14 @@ Security properties:
 - never returns stored secret values to the browser;
 - accepts mutations only with the per-process console token embedded in the
   same-origin page;
-- writes runtime env files atomically with mode `0600`;
+- writes the repository-root `.env` atomically with mode `0600`;
 - keeps action logs under ignored `.local-services/api-console/`;
 - disables RAGFlow start while its local resource gate is blocked.
 
 The MOI card controls its existing `matrixone` and `moi-openxml-parser`
-containers. Its only editable secret is `TAAS_API_KEY` in
-`prototypes/local-matrixflow-rag/.env`; model IDs and provider URLs remain in
-the benchmark's versioned JSON configuration.
+containers. All cards read and write their API keys/app IDs/chat IDs through
+the repository-root `.env`; model IDs and provider URLs remain non-secret
+configuration fields.
 
 All five cards also expose optional Baidu Qianfan V2 fields. Saving those
 fields stores credentials only; each vendor UI/adapter must still register and

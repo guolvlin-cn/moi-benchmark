@@ -1,9 +1,10 @@
 # External model providers for local RAG platforms
 
 The local services remain self-hosted, while model requests may use multiple
-external providers. Provider credentials are platform-local and must never be
-committed. TaaS remains configured; Baidu Qianfan V2 is added as an independent
-fallback, not as a transparent retry behind the same model ID.
+external providers. All provider credentials are centralized in the repository
+root `.env`; platform runtime files contain only non-secret deployment values.
+TaaS remains configured; Baidu Qianfan V2 is added as an independent fallback,
+not as a transparent retry behind the same model ID.
 
 ## Baidu Qianfan V2
 
@@ -11,7 +12,6 @@ Shared OpenAI-compatible values:
 
 ```dotenv
 QIANFAN_BASE_URL=https://qianfan.baidubce.com/v2
-QIANFAN_API_KEY=<local-secret>
 QIANFAN_LLM_MODEL=deepseek-v4-flash
 QIANFAN_EMBEDDING_MODEL=qwen3-embedding-8b
 QIANFAN_EMBEDDING_DIMENSION=4096
@@ -19,10 +19,10 @@ QIANFAN_RERANKER_MODEL=qwen3-reranker-8b
 QIANFAN_APPID=
 ```
 
-Copy `qianfan.env.example` into the ignored runtime configuration for each
-platform. The API key is a Qianfan ModelBuilder V2 API Key, not a BCE AK/SK
-pair. The user-supplied API guide describes general BCE AK/SK request signing;
-Qianfan's OpenAI-compatible inference path uses a Bearer API Key instead.
+Set `QIANFAN_API_KEY` once in the repository-root `.env`. The API key is a
+Qianfan ModelBuilder V2 API Key, not a BCE AK/SK pair. The user-supplied API
+guide describes general BCE AK/SK request signing; Qianfan's
+OpenAI-compatible inference path uses a Bearer API Key instead.
 
 `QIANFAN_APPID` is optional and is not a secret. It identifies a Qianfan
 application for usage/billing attribution and for API keys restricted to a
@@ -32,11 +32,29 @@ The three requested model strings are candidate endpoint IDs. Confirm them
 against `GET /v2/models` for the actual account before marking the provider
 ready. Qianfan rerank uses `POST /v2/rerank` rather than an OpenAI Chat path.
 
+## DeepSeek official
+
+The official DeepSeek API is OpenAI-compatible. Keep its credentials in the
+ignored provider file `.local-services/providers/deepseek-official.env`:
+
+```dotenv
+DEEPSEEK_PROVIDER=deepseek-official
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_API_KEY=<local-secret>
+DEEPSEEK_LLM_MODEL=deepseek-v4-flash
+```
+
+For the local MatrixFlow runner, use
+`moi-prototypes/local-matrixflow-rag/config.deepseek-official.example.json`.
+This provider is generation-only in the current setup; keep the MaaS
+`bge-m3` embedding configuration and use a separate vector table when
+ingesting a new corpus.
+
 Probe credentials before changing a platform:
 
 ```bash
 set -a
-source .local-services/providers/qianfan.env
+source .env
 set +a
 python3 local-rag-platforms/providers/qianfan_probe.py --execute
 ```

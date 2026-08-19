@@ -1,0 +1,37 @@
+{
+  "dataset": "wikieval",
+  "sources": [
+    {
+      "path": "runs/stage1/ragas-wikieval-moi/20260807-160000-wikieval/moi-run/20260807-161313.375/results.jsonl",
+      "rows": 50,
+      "unique_ids": 50,
+      "status_counts": {
+        "ok": 50
+      }
+    },
+    {
+      "path": "runs/stage1/ragas-wikieval-moi/20260807-160000-wikieval/artifacts/questions.jsonl",
+      "rows": 50,
+      "unique_ids": 50,
+      "status_counts": {
+        "": 50
+      }
+    },
+    {
+      "path": "runs/stage1/ragas-wikieval-moi/20260807-160000-wikieval/artifacts/ragas/scores.jsonl",
+      "rows": 50,
+      "unique_ids": 50,
+      "status_counts": {
+        "ok": 50
+      }
+    },
+    {
+      "path": "runs/stage1/ragas-wikieval-moi/20260807-160000-wikieval/artifacts/metrics.json",
+      "kind": "source_metrics"
+    },
+    {
+      "path": "runs/stage1/ragas-wikieval-moi/20260807-160000-wikieval/artifacts/ragas/summary.json",
+      "kind": "source_judge_summary"
+    }
+  ]
+}

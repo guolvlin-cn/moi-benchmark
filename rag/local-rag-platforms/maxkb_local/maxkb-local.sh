@@ -3,6 +3,12 @@ set -euo pipefail
 
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 REPO_ROOT=$(CDPATH= cd -- "$SCRIPT_DIR/../.." && pwd)
+if [[ -f "$REPO_ROOT/.env" ]]; then
+  set -a
+  # Central local credential entry point; values are never echoed.
+  . "$REPO_ROOT/.env"
+  set +a
+fi
 DATA_DIR="$REPO_ROOT/.local-services/maxkb_local/data"
 LOG_DIR="$REPO_ROOT/.local-services/maxkb_local/logs"
 IMAGE_TAG="1panel/maxkb:v2.10.4-lts"
@@ -35,8 +41,8 @@ assert_start_safe() {
   local running_names all_names
   running_names=$(docker ps --format '{{.Names}}')
   all_names=$(docker ps -a --format '{{.Names}}')
-  if grep -Eq '^moi_dify_local-' <<<"$running_names"; then
-    die "Dify is still running; stop its Compose project before MaxKB"
+  if grep -Eq '^moi_dify_local-' <<<"$running_names" && [[ "${MAXKB_ALLOW_DIFY_CONCURRENT:-0}" != "1" ]]; then
+    die "Dify is still running; set MAXKB_ALLOW_DIFY_CONCURRENT=1 for the validated concurrent deployment"
   fi
   grep -Fxq 'moi-openxml-parser' <<<"$running_names" || die "moi-openxml-parser is not running"
   grep -Fxq 'matrixone' <<<"$running_names" || die "matrixone is not running"
@@ -60,6 +66,8 @@ start_maxkb() {
     --restart unless-stopped \
     --platform linux/arm64 \
     --pull never \
+    --shm-size=512m \
+    -e MAXKB_LOCAL_MODEL_HOST_WORKER=4 \
     -p 127.0.0.1:8090:8080 \
     -v "$DATA_DIR:/opt/maxkb" \
     "$IMAGE_REF"
@@ -69,8 +77,8 @@ resume_maxkb() {
   verify_image
   local running_names container_image container_status
   running_names=$(docker ps --format '{{.Names}}')
-  if grep -Eq '^moi_dify_local-' <<<"$running_names"; then
-    die "Dify is still running; stop its Compose project before MaxKB"
+  if grep -Eq '^moi_dify_local-' <<<"$running_names" && [[ "${MAXKB_ALLOW_DIFY_CONCURRENT:-0}" != "1" ]]; then
+    die "Dify is still running; set MAXKB_ALLOW_DIFY_CONCURRENT=1 for the validated concurrent deployment"
   fi
   grep -Fxq 'moi-openxml-parser' <<<"$running_names" || die "moi-openxml-parser is not running"
   grep -Fxq 'matrixone' <<<"$running_names" || die "matrixone is not running"
@@ -147,7 +155,7 @@ run_smoke() {
   curl -fsS --max-time 10 "${MAXKB_BASE_URL:-http://127.0.0.1:8090}/admin/" >/dev/null || \
     die "MaxKB admin UI is not reachable"
   cd "$REPO_ROOT"
-  PYTHONPATH="$REPO_ROOT/dify-rag-eval/src${PYTHONPATH:+:$PYTHONPATH}" \
+  PYTHONPATH="$REPO_ROOT/local-rag-platforms/dify-rag-eval/src${PYTHONPATH:+:$PYTHONPATH}" \
   python3 -m dify_rag_eval local-smoke \
     --system maxkb_local \
     --api-key-env MAXKB_API_KEY \
@@ -156,15 +164,52 @@ run_smoke() {
     --output "$LOG_DIR/smoke"
 }
 
+run_full_chain() {
+  exec "$SCRIPT_DIR/full-chain.sh"
+}
+
+run_qianfan_embedding() {
+  exec python3 "$SCRIPT_DIR/maxkb_qianfan_embedding.py" "$@"
+}
+
+start_or_resume_maxkb() {
+  local existing status base_url attempt
+  existing=$(docker inspect --format '{{.State.Status}}' "$CONTAINER_NAME" 2>/dev/null || true)
+  if [[ -n "$existing" ]]; then
+    if [[ "$existing" == "running" ]]; then
+      printf '%s is already running\n' "$CONTAINER_NAME"
+    else
+      resume_maxkb
+    fi
+  else
+    start_maxkb
+  fi
+
+  if [[ "${COMPETITOR_EMBEDDING_PROVIDER:-}" == "qianfan" ]]; then
+    base_url=${MAXKB_BASE_URL:-http://127.0.0.1:8090}
+    status=""
+    for attempt in $(seq 1 90); do
+      status=$(curl -sS --max-time 5 -o /dev/null -w '%{http_code}' "$base_url/admin/" || true)
+      [[ "$status" == "200" ]] && break
+      sleep 2
+    done
+    [[ "$status" == "200" ]] || die "MaxKB did not become ready for Qianfan embedding registration"
+    python3 "$SCRIPT_DIR/maxkb_refresh_admin_token.py"
+    python3 "$SCRIPT_DIR/maxkb_qianfan_embedding.py" --execute register
+  fi
+}
+
 case "${1:-}" in
   verify-image) verify_image ;;
-  start) start_maxkb ;;
+  start) start_or_resume_maxkb ;;
   resume) resume_maxkb ;;
   stop) stop_maxkb ;;
   discover) discover_api ;;
   smoke) run_smoke ;;
+  full-chain) run_full_chain ;;
+  qianfan-embedding) shift; run_qianfan_embedding "$@" ;;
   *)
-    printf 'usage: %s {verify-image|start|resume|stop|discover|smoke}\n' "$0" >&2
+    printf 'usage: %s {verify-image|start|resume|stop|discover|smoke|full-chain|qianfan-embedding}\n' "$0" >&2
     exit 2
     ;;
 esac

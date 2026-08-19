@@ -7,13 +7,14 @@ Pinned source: Dify Community Edition `1.16.1` from
 ## Prepare and start
 
 ```bash
-python3 local-rag-platforms/prepare_local_services.py prepare dify_local
+python3 local-rag-platforms/scripts/deployment/prepare_local_services.py prepare dify_local
 cd .local-services/dify_local/source/dify/docker
 cp .env.example .env
 ```
 
-Set the external provider values in this runtime-only `.env` as required by
-the pinned release. The planned host port `8000` was already occupied by an
+Set Dify's container/deployment values in this runtime-only `.env` as required
+by the pinned release. API keys and app IDs belong in the repository-root
+`.env`. The planned host port `8000` was already occupied by an
 unrelated uvicorn process, so this run uses `8010` using the release’s
 `EXPOSE_NGINX_PORT` setting, then initialize the local instance at
 <http://127.0.0.1:8010/install>.
@@ -35,7 +36,7 @@ paths:
 
 ```dotenv
 DIFY_API_BASE_URL=http://127.0.0.1:8010/v1
-DIFY_LOCAL_DATASET_API_KEY=<local-dataset-key>
+# DIFY_LOCAL_DATASET_API_KEY and DIFY_LOCAL_API_KEY are in the root .env.
 DIFY_LOCAL_API_KEY=<local-app-key>
 DIFY_LOCAL_DATASET_ID=<local-dataset-id>
 DIFY_EMBEDDING_MODEL=bge-m3
@@ -95,5 +96,5 @@ stacks are stopped. After startup, record the source commit, compose image
 list, image architecture, and repo digests:
 
 ```bash
-python3 local-rag-platforms/prepare_local_services.py record dify_local
+python3 local-rag-platforms/scripts/deployment/prepare_local_services.py record dify_local
 ```

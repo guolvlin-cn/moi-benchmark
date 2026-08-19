@@ -8,9 +8,17 @@ import json
 import math
 import os
 import sys
+from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+
+
+PLATFORM_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = PLATFORM_ROOT.parent
+if str(PLATFORM_ROOT) not in sys.path:
+    sys.path.insert(0, str(PLATFORM_ROOT))
+from env import inject_central_env  # noqa: E402
 
 
 DEFAULT_BASE_URL = "https://qianfan.baidubce.com/v2"
@@ -102,6 +110,7 @@ def validate_rerank(payload: dict[str, Any]) -> int:
 
 
 def main() -> int:
+    inject_central_env()
     parser = argparse.ArgumentParser()
     parser.add_argument("--execute", action="store_true", help="send one embedding and one chat request")
     parser.add_argument("--timeout", type=float, default=60)

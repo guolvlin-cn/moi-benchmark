@@ -1,0 +1,56 @@
+{
+  "matrixone": {
+    "dsn": "root:111@tcp(127.0.0.1:6001)/",
+    "database": "moi_stage1_mmdocir_official",
+    "vector_table": "pages_bge_m3_vlm"
+  },
+  "workspace_id": "local-rag-benchmark",
+  "matrixflow_root": "../../../../matrixflow",
+  "chunk_size": 512,
+  "chunk_overlap": 50,
+  "section_size": 5,
+  "embedding_batch_size": 32,
+  "insert_batch_size": 50,
+  "embedding": {
+    "mode": "maas",
+    "base_url": "https://api.modelarts-maas.com/v1",
+    "model": "bge-m3",
+    "api_key_env": "MAAS_API_KEY",
+    "dimension": 1024,
+    "timeout_seconds": 600,
+    "retry_max_attempts": 6,
+    "retry_backoff_seconds": 5
+  },
+  "generation": {
+    "enabled": true,
+    "provider": "qianfan",
+    "base_url": "https://qianfan.baidubce.com/v2",
+    "model": "deepseek-v4-flash",
+    "api_key_env": "QIANFAN_API_KEY",
+    "timeout_seconds": 180,
+    "retry_max_attempts": 6,
+    "retry_backoff_seconds": 5,
+    "text": {
+      "enabled": true,
+      "provider": "qianfan",
+      "base_url": "https://qianfan.baidubce.com/v2",
+      "model": "deepseek-v4-flash",
+      "api_key_env": "QIANFAN_API_KEY",
+      "timeout_seconds": 180,
+      "retry_max_attempts": 6,
+      "retry_backoff_seconds": 5,
+      "include_page_images": false
+    },
+    "multimodal": {
+      "enabled": true,
+      "provider": "qianfan",
+      "base_url": "https://qianfan.baidubce.com/v2",
+      "model": "qwen3.5-35b-a3b",
+      "api_key_env": "QIANFAN_API_KEY",
+      "timeout_seconds": 180,
+      "retry_max_attempts": 6,
+      "retry_backoff_seconds": 5,
+      "include_page_images": false
+    }
+  }
+}

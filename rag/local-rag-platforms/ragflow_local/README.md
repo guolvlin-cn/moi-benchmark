@@ -8,7 +8,7 @@ manifest before attempting to pull it.
 ## Architecture gate
 
 ```bash
-python3 local-rag-platforms/prepare_local_services.py prepare ragflow_local
+python3 local-rag-platforms/scripts/deployment/prepare_local_services.py prepare ragflow_local
 docker buildx imagetools inspect infiniflow/ragflow:v0.26.4
 ```
 

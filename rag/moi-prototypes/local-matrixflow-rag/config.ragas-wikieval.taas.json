@@ -1,0 +1,34 @@
+{
+  "matrixone": {
+    "dsn": "root:111@tcp(127.0.0.1:6001)/",
+    "database": "moi_stage1_ragas_wikieval",
+    "vector_table": "embedding_results"
+  },
+  "workspace_id": "moi-stage1-ragas-wikieval",
+  "matrixflow_root": "../../../../matrixflow",
+  "chunk_size": 512,
+  "chunk_overlap": 50,
+  "section_size": 5,
+  "embedding_batch_size": 64,
+  "insert_batch_size": 50,
+  "embedding": {
+    "mode": "taas",
+    "base_url": "https://token.moi.matrixorigin.cn/v1",
+    "model": "bge-m3",
+    "api_key_env": "TAAS_API_KEY",
+    "dimension": 1024,
+    "timeout_seconds": 120,
+    "retry_max_attempts": 4,
+    "retry_backoff_seconds": 5
+  },
+  "generation": {
+    "enabled": true,
+    "provider": "taas",
+    "base_url": "https://token.moi.matrixorigin.cn/v1",
+    "model": "qwen3.6-flash",
+    "api_key_env": "TAAS_API_KEY",
+    "timeout_seconds": 120,
+    "retry_max_attempts": 3,
+    "retry_backoff_seconds": 5
+  }
+}
