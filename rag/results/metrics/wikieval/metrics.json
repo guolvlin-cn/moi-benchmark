@@ -1,0 +1,86 @@
+{
+  "dataset": "WikiEval",
+  "score_pass": {
+    "mode": "reaggregate_existing_artifacts",
+    "judge_invocations": 0,
+    "scored_at": "2026-08-17T03:14:02.066336+00:00"
+  },
+  "headline": {
+    "attempts": 50,
+    "success_rate": 1.0,
+    "source_recall_at_1": 1.0,
+    "source_recall_at_3": 1.0,
+    "source_recall_at_5": 1.0,
+    "source_recall_at_10": 1.0,
+    "mrr": 1.0,
+    "evidence_substring_recall": 0.02,
+    "answer_non_empty_rate": 1.0,
+    "reference_keyword_recall": 0.6518892342799676,
+    "reference_substring_rate": 0.0,
+    "reference_normalized_overlap": 0.6859585922152679,
+    "latency_ms_p50": 1553.548,
+    "latency_ms_p95": 4458.3391999999985,
+    "protocol": "wikieval-to-moi-v1"
+  },
+  "ragas_summary_source": {
+    "rows": 50,
+    "metrics": {
+      "faithfulness": {
+        "scored_rows": 49,
+        "mean": 0.9636573841359204,
+        "p50": 1.0,
+        "min": 0.6666666666666666,
+        "max": 1.0
+      },
+      "answer_relevancy": {
+        "scored_rows": 50,
+        "mean": 0.9309116483487123,
+        "p50": 0.9550840067830583,
+        "min": 0.659407624254487,
+        "max": 0.9999990745453253
+      },
+      "context_precision": {
+        "scored_rows": 43,
+        "mean": 0.740613432231636,
+        "p50": 0.8083900226641886,
+        "min": 0.10989010988461538,
+        "max": 0.999999999975
+      },
+      "context_recall": {
+        "scored_rows": 50,
+        "mean": 0.9926984126984126,
+        "p50": 1.0,
+        "min": 0.8571428571428571,
+        "max": 1.0
+      }
+    }
+  },
+  "recomputed_checks": {
+    "questions": 50,
+    "query_ok": 50,
+    "answer_non_empty_n": 50,
+    "judge_valid_n": 50,
+    "ragas": {
+      "faithfulness": {
+        "mean": 0.9636573841359204,
+        "valid_n": 49
+      },
+      "answer_relevancy": {
+        "mean": 0.9309116483487123,
+        "valid_n": 50
+      },
+      "context_precision": {
+        "mean": 0.740613432231636,
+        "valid_n": 43
+      },
+      "context_recall": {
+        "mean": 0.9926984126984126,
+        "valid_n": 50
+      }
+    }
+  },
+  "validation": {
+    "question_count_matches_source": true,
+    "ragas_counts_match_source": true
+  }
+}

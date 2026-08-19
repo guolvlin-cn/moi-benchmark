@@ -1,0 +1,75 @@
+{
+  "dataset": "docbench",
+  "sources": [
+    {
+      "path": "runs/current-corpus-eval/20260813-232055-docbench-missing196/docbench-full-1102/datasets/docbench/combined-results.jsonl",
+      "rows": 1102,
+      "unique_ids": 1102,
+      "status_counts": {
+        "ok": 1060,
+        "failed": 42
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval/20260813-232055-docbench-missing196/docbench-full-1102/datasets/docbench/judgements.jsonl",
+      "rows": 1060,
+      "unique_ids": 1060,
+      "status_counts": {
+        "ok": 769,
+        "failed": 291
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval-reruns-docbench/20260817-000134.440/datasets/docbench/combined-results.jsonl",
+      "rows": 333,
+      "unique_ids": 333,
+      "status_counts": {
+        "failed": 73,
+        "ok": 260
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval-reruns-docbench/20260817-000134.440/datasets/docbench/judgements.jsonl",
+      "rows": 260,
+      "unique_ids": 260,
+      "status_counts": {
+        "ok": 260
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval-reruns-docbench/20260817-011206.565/datasets/docbench/combined-results.jsonl",
+      "rows": 73,
+      "unique_ids": 73,
+      "status_counts": {
+        "failed": 4,
+        "ok": 69
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval-reruns-docbench/20260817-011206.565/datasets/docbench/judgements.jsonl",
+      "rows": 69,
+      "unique_ids": 69,
+      "status_counts": {
+        "ok": 69
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval-reruns-docbench/20260817-021923.527/datasets/docbench/combined-results.jsonl",
+      "rows": 4,
+      "unique_ids": 4,
+      "status_counts": {
+        "failed": 4
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval-reruns-docbench/20260817-021923.527/datasets/docbench/judgements.jsonl",
+      "rows": 0,
+      "unique_ids": 0,
+      "status_counts": {}
+    },
+    {
+      "path": "runs/current-corpus-eval-reruns-docbench/failed-case-recovery-20260817/summary.json",
+      "kind": "recovery_summary"
+    }
+  ]
+}

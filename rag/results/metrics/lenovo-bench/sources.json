@@ -1,0 +1,41 @@
+{
+  "dataset": "lenovo-bench",
+  "sources": [
+    {
+      "path": "runs/lenovo-bench/20260812-233500/evaluation-fastgpt-contract/results.jsonl",
+      "rows": 60,
+      "unique_ids": 60,
+      "status_counts": {
+        "success": 60
+      }
+    },
+    {
+      "path": "runs/lenovo-bench/20260812-233500/evaluation-fastgpt-contract/judgements.jsonl",
+      "rows": 68,
+      "unique_ids": 60,
+      "status_counts": {
+        "": 68
+      }
+    },
+    {
+      "path": "runs/lenovo-bench/20260812-233500/evaluation-fastgpt-contract/metrics.json",
+      "kind": "formal_unified_metrics"
+    },
+    {
+      "path": "runs/lenovo-bench/20260812-233500/evaluation/metrics.json",
+      "kind": "project_self_metrics"
+    },
+    {
+      "path": "runs/lenovo-bench/20260812-233500/qa/20260812-235334.713/results.jsonl",
+      "kind": "initial_split_results"
+    },
+    {
+      "path": "runs/lenovo-bench/20260812-233500/qa-text-resume/20260813-000322.852/results.jsonl",
+      "kind": "initial_split_results"
+    },
+    {
+      "path": "runs/lenovo-bench/20260812-233500/qa-visual/20260813-001353.230/results.jsonl",
+      "kind": "initial_split_results"
+    }
+  ]
+}

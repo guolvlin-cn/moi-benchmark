@@ -1,0 +1,55 @@
+{
+  "dataset": "enterpriserag-bench",
+  "sources": [
+    {
+      "path": "runs/current-corpus-eval/20260812-121828.079/datasets/enterpriserag-bench/combined-results.jsonl",
+      "rows": 500,
+      "unique_ids": 500,
+      "status_counts": {
+        "ok": 417,
+        "failed": 83
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval/20260812-121828.079/datasets/enterpriserag-bench/qa-ledger.jsonl",
+      "rows": 500,
+      "unique_ids": 500,
+      "status_counts": {
+        "ok": 417,
+        "failed": 83
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval/20260812-121828.079/datasets/enterpriserag-bench/recovered-evaluation/recovered-results.jsonl",
+      "rows": 500,
+      "unique_ids": 500,
+      "status_counts": {
+        "ok": 500
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval/20260812-121828.079/datasets/enterpriserag-bench/recovered-evaluation/qa-ledger.jsonl",
+      "rows": 500,
+      "unique_ids": 500,
+      "status_counts": {
+        "": 500
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval/20260812-121828.079/datasets/enterpriserag-bench/recovered-evaluation/judgements.jsonl",
+      "rows": 586,
+      "unique_ids": 500,
+      "status_counts": {
+        "": 586
+      }
+    },
+    {
+      "path": "runs/current-corpus-eval/20260812-121828.079/datasets/enterpriserag-bench/metrics.json",
+      "kind": "source_metrics"
+    },
+    {
+      "path": "runs/current-corpus-eval/20260812-121828.079/datasets/enterpriserag-bench/recovered-evaluation/metrics.json",
+      "kind": "source_metrics"
+    }
+  ]
+}

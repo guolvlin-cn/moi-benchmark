@@ -1,0 +1,57 @@
+{
+  "dataset": "mmdocir",
+  "sources": [
+    {
+      "path": "runs/stage1/mmdocir/20260806-161153-full-1658/page/eval/20260806-221922.385/attempts.jsonl",
+      "rows": 1658,
+      "unique_ids": 1658,
+      "status_counts": {
+        "ok": 1658
+      }
+    },
+    {
+      "path": "runs/stage1/mmdocir/20260806-161153-full-1658/layout/eval/20260806-222713.393/attempts.jsonl",
+      "rows": 1658,
+      "unique_ids": 1658,
+      "status_counts": {
+        "ok": 1658
+      }
+    },
+    {
+      "path": "runs/stage1/mmdocir-qa/20260813-230700-mmdocir-qwen35-recovery-full-1658/20260813-230828.003/results.jsonl",
+      "rows": 1658,
+      "unique_ids": 1658,
+      "status_counts": {
+        "ok": 1658
+      }
+    },
+    {
+      "path": "runs/stage1/mmdocir-qa/20260813-230700-mmdocir-qwen35-recovery-full-1658/qa-ledger.jsonl",
+      "rows": 1658,
+      "unique_ids": 1658,
+      "status_counts": {
+        "ok": 1658
+      }
+    },
+    {
+      "path": "runs/stage1/mmdocir/20260806-161153-full-1658/artifacts/prepared/questions.jsonl",
+      "rows": 1658,
+      "unique_ids": 1658,
+      "status_counts": {
+        "": 1658
+      }
+    },
+    {
+      "path": "runs/stage1/mmdocir/20260806-161153-full-1658/page/eval/20260806-221922.385/metrics.json",
+      "kind": "source_metrics"
+    },
+    {
+      "path": "runs/stage1/mmdocir/20260806-161153-full-1658/layout/eval/20260806-222713.393/metrics.json",
+      "kind": "source_metrics"
+    },
+    {
+      "path": "runs/stage1/mmdocir-qa/20260813-230700-mmdocir-qwen35-recovery-full-1658/qa-summary.json",
+      "kind": "source_metrics"
+    }
+  ]
+}
