@@ -7,7 +7,7 @@
 所有命令默认从本目录执行：
 
 ```bash
-cd /Users/muuushroom/gitrepos/moi-benchmark/rag
+cd rag
 ```
 
 准备本机环境变量：
@@ -75,3 +75,26 @@ uv run --with pytest pytest local-rag-platforms/tests -q
 ## 结果与审计
 
 Benchmark 的原始响应、失败题、恢复轮次和 Judge 输入都应保留在对应 run 中。最终汇总只引用已冻结的 canonical 文件，并同时报告成功数、失败数、有效 Judge分母和协议边界。需要调整指标或结果时，优先修改生成脚本和 manifest，再重新生成汇总。
+
+本轮将 WikiEval、MMDocIR、DocBench、EnterpriseRAG-Bench 和 Lenovo-bench 的现有实验结果统一纳入 MOI RAG Benchmark v1.0，直接比较 MOI、Dify、FastGPT 与 MaxKB 在文本检索、长文档检索、复杂 PDF 问答、企业多源问答和证据链问答上的表现。
+
+## 当前核心结果
+
+| 数据集 / 核心指标 | MOI | Dify | FastGPT | MaxKB | 核心结论 |
+| ----------------- | ---: | ---: | ------: | ----: | -------- |
+| **WikiEval**<br>Source R@1 / Keyword Recall | **100.0%** / **65.19%** | **100.0%** / 59.46% | **100.0%** / 41.39% | 98.0% / 62.37% | 三个平台 Source R@1 并列 100%；MOI 关键词覆盖最高 |
+| **MMDocIR**<br>Page@1 / Page@10 / Layout@10 / QA (/5) | 43.49% / 84.02% / **61.87%** / 3.91 | **53.51%** / 78.00% / 59.98% / **4.02** | 51.46% / 87.72% / 57.39% / 3.95 | 48.95% / **92.56%** / 59.01% / 3.87 | Dify 的首位页面与 QA 最好，MaxKB 的高 K 页面覆盖最高，MOI 的布局召回最高 |
+| **DocBench**<br>Overall / Multimodal / Metadata / Unanswerable | 58.26% / 43.23% / **24.53%** / **85.96%** | **61.32%** / **45.12%** / 20.85% / 79.21% | 54.23% / 40.92% / 22.98% / 84.97% | 59.91% / 42.72% / 22.98% / 80.82% | Dify 的总体和多模态正确率最高；MOI 的 Metadata 与拒答表现最好 |
+| **EnterpriseRAG-Bench**<br>Doc R@10 / Complete@10 / Invalid Extras↓ / Correctness / Completeness | 80.59% / 74.68% / **2.345** / 49.20% / **58.74%** | 88.51% / 78.30% / 5.991 / 55.40% / 57.50% | **89.61%** / **85.53%** / 8.685 / **60.27%** / 57.95% | — | FastGPT 的召回与正确率最高；MOI 的无效文档最少、完整性最高 |
+| **Lenovo-bench**<br>Evidence R@10 / Complete@10 / Response Correctness / Reference Recall | 50.00% / 41.51% / 88.62% / 18.71% | 45.35% / 36.54% / 68.52% / 8.63% | **75.16%** / **62.26%** / 86.11% / **45.32%** | 60.35% / 58.11% / **91.07%** / 3.60% | FastGPT 的证据召回与答案覆盖最高；MaxKB 的已输出 claim 正确率最高，MOI 次之 |
+
+## 核心结论
+
+1. **MOI 的主要优势**：WikiEval 关键词覆盖最高，MMDocIR 布局召回最高，EnterpriseRAG-Bench 的无效额外文档最少且 Completeness 最高，体现出稳定文本链路、布局定位和低噪声证据组织能力。
+2. **MOI 的主要短板**：EnterpriseRAG-Bench 与 Lenovo-bench 的高 K 证据召回和完整证据集覆盖落后于 FastGPT；Lenovo-bench 的 Reference-claim Recall 偏低，DocBench 总体和多模态正确率仍有提升空间。
+3. **整体判断**：四个平台没有跨五类任务的一致冠军。Dify 在生成质量与 DocBench 上更强，FastGPT 在证据召回和答案覆盖上领先，MaxKB 在部分高 K 页面覆盖和已输出 claim 正确率上突出，MOI 的优势集中在布局检索、低噪声和证据完整性。
+
+详细结果与复现说明：
+
+- [MOI RAG Benchmark v1.0](results/MOI_rag_benchmark_v1.0.md)
+- [MOI RAG 四平台五数据集实验复现报告](results/MOI_rag_reproduction_guide.md)
