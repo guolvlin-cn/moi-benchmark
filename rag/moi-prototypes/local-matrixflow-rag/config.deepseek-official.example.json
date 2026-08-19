@@ -1,0 +1,36 @@
+{
+  "matrixone": {
+    "dsn": "root:111@tcp(127.0.0.1:6001)/",
+    "database": "matrixflow_rag_benchmark_deepseek_official",
+    "vector_table": "embedding_results_bge_m3"
+  },
+  "workspace_id": "local-rag-benchmark-deepseek-official",
+  "matrixflow_root": "../../../../matrixflow",
+  "chunk_size": 512,
+  "chunk_overlap": 64,
+  "section_size": 5,
+  "embedding_batch_size": 32,
+  "insert_batch_size": 50,
+  "embedding": {
+    "mode": "maas",
+    "base_url": "https://api.modelarts-maas.com/v1",
+    "model": "bge-m3",
+    "api_key_env": "MAAS_API_KEY",
+    "dimension": 1024,
+    "timeout_seconds": 600,
+    "retry_max_attempts": 5,
+    "retry_backoff_seconds": 5
+  },
+  "generation": {
+    "enabled": true,
+    "provider": "deepseek-official",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-flash",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "timeout_seconds": 300,
+    "retry_max_attempts": 5,
+    "retry_backoff_seconds": 10,
+    "thinking": "disabled",
+    "include_page_images": false
+  }
+}
