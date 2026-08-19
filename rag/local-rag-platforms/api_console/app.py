@@ -9,6 +9,7 @@ import secrets
 import subprocess
 import tempfile
 import time
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Optional
@@ -20,7 +21,12 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 
-ROOT = Path(__file__).resolve().parents[2]
+PLATFORM_ROOT = Path(__file__).resolve().parents[1]
+ROOT = PLATFORM_ROOT.parent
+if str(PLATFORM_ROOT) not in sys.path:
+    sys.path.insert(0, str(PLATFORM_ROOT))
+from env import load_central_env  # noqa: E402
+
 RUNTIME = ROOT / ".local-services/api-console"
 INDEX = Path(__file__).with_name("index.html")
 CONSOLE_TOKEN = secrets.token_urlsafe(32)
@@ -63,7 +69,7 @@ PLATFORMS: dict[str, Platform] = {
         accent="#cf525c",
         base_url="http://127.0.0.1:8080",
         health_url="http://127.0.0.1:8080/healthz",
-        config_file=ROOT / "prototypes/local-matrixflow-rag/.env",
+        config_file=ROOT / ".env",
         fields=(
             Field(
                 "TAAS_API_KEY",
@@ -71,6 +77,12 @@ PLATFORMS: dict[str, Platform] = {
                 secret=True,
                 hint="用于 MatrixFlow embedding 与可选生成；模型与 Base URL 固定在 benchmark JSON 配置中。",
             ),
+            Field("MAAS_BASE_URL", "Huawei MaaS Base URL", default="https://api.modelarts-maas.com/v1"),
+            Field("MAAS_API_KEY", "Huawei MaaS API Key", secret=True),
+            Field("MAAS_LLM_MODEL", "Huawei MaaS LLM", default="qwen3-30b-a3b"),
+            Field("MAAS_VL_MODEL", "Huawei MaaS VLM", default="qwen2.5-vl-72b"),
+            Field("MAAS_EMBEDDING_MODEL", "Huawei MaaS Embedding", default="bge-m3", hint="1024 维，与当前 bge-m3 表兼容。"),
+            Field("MAAS_RERANKER_MODEL", "Huawei MaaS Reranker", default="bge-reranker-v2-m3"),
             Field("QIANFAN_BASE_URL", "Qianfan Base URL", default="https://qianfan.baidubce.com/v2"),
             Field("QIANFAN_API_KEY", "Qianfan API Key", secret=True),
             Field("QIANFAN_LLM_MODEL", "Qianfan LLM", default="deepseek-v4-flash"),
@@ -94,13 +106,19 @@ PLATFORMS: dict[str, Platform] = {
         accent="#3f7cff",
         base_url="http://127.0.0.1:8010/v1",
         health_url="http://127.0.0.1:8010/console/api/setup",
-        config_file=ROOT / ".local-services/dify_local/credentials.env",
+        config_file=ROOT / ".env",
         fields=(
             Field("DIFY_API_BASE_URL", "API Base URL", default="http://127.0.0.1:8010/v1"),
             Field("DIFY_LOCAL_DATASET_API_KEY", "Dataset API Key", secret=True),
             Field("DIFY_LOCAL_API_KEY", "App API Key", secret=True),
             Field("DIFY_LOCAL_APP_ID", "App ID"),
             Field("DIFY_LOCAL_DATASET_ID", "Dataset ID", hint="正式评估时必须与 App 使用同一 44 文档 corpus"),
+            Field("MAAS_BASE_URL", "Huawei MaaS Base URL", default="https://api.modelarts-maas.com/v1"),
+            Field("MAAS_API_KEY", "Huawei MaaS API Key", secret=True),
+            Field("MAAS_LLM_MODEL", "Huawei MaaS LLM", default="qwen3-30b-a3b"),
+            Field("MAAS_EMBEDDING_MODEL", "Huawei MaaS Embedding", default="bge-m3"),
+            Field("MAAS_RERANKER_MODEL", "Huawei MaaS Reranker", default="bge-reranker-v2-m3"),
+            Field("DIFY_MAAS_EMBEDDING_PROVIDER", "Dify Huawei MaaS Provider", default="matrixorigin/matrixorigin_taas/huawei_maas"),
             Field("QIANFAN_BASE_URL", "Qianfan Base URL", default="https://qianfan.baidubce.com/v2"),
             Field("QIANFAN_API_KEY", "Qianfan API Key", secret=True, hint="保存后仍需在本地 Dify OpenAI-compatible provider 中注册模型。"),
             Field("QIANFAN_LLM_MODEL", "Qianfan LLM", default="deepseek-v4-flash"),
@@ -122,7 +140,7 @@ PLATFORMS: dict[str, Platform] = {
         accent="#e27a3f",
         base_url="http://127.0.0.1:3000",
         health_url="http://127.0.0.1:3000",
-        config_file=ROOT / ".local-services/fastgpt_local/fastgpt.env",
+        config_file=ROOT / ".env",
         fields=(
             Field("FASTGPT_BASE_URL", "API Base URL", default="http://127.0.0.1:3000"),
             Field("FASTGPT_API_KEY", "API Key", secret=True),
@@ -131,6 +149,11 @@ PLATFORMS: dict[str, Platform] = {
             Field("TAAS_API_KEY", "TaaS API Key", secret=True),
             Field("TAAS_LLM_MODEL", "LLM Model", default="deepseek-v4-flash"),
             Field("TAAS_EMBEDDING_MODEL", "Embedding Model", default="bge-m3"),
+            Field("MAAS_BASE_URL", "Huawei MaaS Base URL", default="https://api.modelarts-maas.com/v1"),
+            Field("MAAS_API_KEY", "Huawei MaaS API Key", secret=True),
+            Field("MAAS_LLM_MODEL", "Huawei MaaS LLM", default="qwen3-30b-a3b"),
+            Field("MAAS_EMBEDDING_MODEL", "Huawei MaaS Embedding", default="bge-m3"),
+            Field("MAAS_RERANKER_MODEL", "Huawei MaaS Reranker", default="bge-reranker-v2-m3"),
             Field("QIANFAN_BASE_URL", "Qianfan Base URL", default="https://qianfan.baidubce.com/v2"),
             Field("QIANFAN_API_KEY", "Qianfan API Key", secret=True),
             Field("QIANFAN_LLM_MODEL", "Qianfan LLM", default="deepseek-v4-flash"),
@@ -158,7 +181,7 @@ PLATFORMS: dict[str, Platform] = {
         accent="#a765d5",
         base_url="http://127.0.0.1:8090",
         health_url="http://127.0.0.1:8090/admin/",
-        config_file=ROOT / ".local-services/maxkb_local/runtime.env",
+        config_file=ROOT / ".env",
         fields=(
             Field("MAXKB_BASE_URL", "Admin Base URL", default="http://127.0.0.1:8090"),
             Field("MAXKB_APP_ID", "Application ID"),
@@ -166,6 +189,11 @@ PLATFORMS: dict[str, Platform] = {
             Field("MAXKB_OPENAI_BASE_URL", "OpenAI-compatible Base URL"),
             Field("MAXKB_OPENAI_PATH", "Chat Path", default="/chat/completions"),
             Field("MAXKB_MODEL", "Model", default="default"),
+            Field("MAAS_BASE_URL", "Huawei MaaS Base URL", default="https://api.modelarts-maas.com/v1"),
+            Field("MAAS_API_KEY", "Huawei MaaS API Key", secret=True),
+            Field("MAAS_CHAT_MODEL", "Huawei MaaS LLM", default="qwen3-30b-a3b"),
+            Field("MAAS_EMBEDDING_MODEL", "Huawei MaaS Embedding", default="bge-m3"),
+            Field("MAAS_RERANKER_MODEL", "Huawei MaaS Reranker", default="bge-reranker-v2-m3"),
             Field("QIANFAN_BASE_URL", "Qianfan Base URL", default="https://qianfan.baidubce.com/v2"),
             Field("QIANFAN_API_KEY", "Qianfan API Key", secret=True),
             Field("QIANFAN_CHAT_MODEL", "Qianfan LLM", default="deepseek-v4-flash"),
@@ -187,7 +215,7 @@ PLATFORMS: dict[str, Platform] = {
         accent="#2b9f86",
         base_url="http://127.0.0.1:9380",
         health_url="http://127.0.0.1:9380",
-        config_file=ROOT / ".local-services/ragflow_local/credentials.env",
+        config_file=ROOT / ".env",
         fields=(
             Field("RAGFLOW_API_BASE_URL", "API Base URL", default="http://127.0.0.1:9380"),
             Field("RAGFLOW_API_KEY", "API Key", secret=True),
@@ -196,6 +224,11 @@ PLATFORMS: dict[str, Platform] = {
             Field("TAAS_API_KEY", "TaaS API Key", secret=True),
             Field("TAAS_LLM_MODEL", "LLM Model", default="deepseek-v4-flash"),
             Field("TAAS_EMBEDDING_MODEL", "Embedding Model", default="bge-m3"),
+            Field("MAAS_BASE_URL", "Huawei MaaS Base URL", default="https://api.modelarts-maas.com/v1"),
+            Field("MAAS_API_KEY", "Huawei MaaS API Key", secret=True),
+            Field("MAAS_CHAT_MODEL", "Huawei MaaS LLM", default="qwen3-30b-a3b"),
+            Field("MAAS_EMBEDDING_MODEL", "Huawei MaaS Embedding", default="bge-m3"),
+            Field("MAAS_RERANKER_MODEL", "Huawei MaaS Reranker", default="bge-reranker-v2-m3"),
             Field("QIANFAN_BASE_URL", "Qianfan Base URL", default="https://qianfan.baidubce.com/v2"),
             Field("QIANFAN_API_KEY", "Qianfan API Key", secret=True),
             Field("QIANFAN_CHAT_MODEL", "Qianfan LLM", default="deepseek-v4-flash"),
@@ -436,7 +469,15 @@ def service_action(system_id: str, request: ActionRequest, x_console_token: Opti
 
     if not cwd.exists():
         raise HTTPException(409, f"runtime directory is missing: {display_path(cwd)}")
-    result = subprocess.run(command, cwd=cwd, text=True, capture_output=True, check=False, timeout=180)
+    result = subprocess.run(
+        command,
+        cwd=cwd,
+        env=load_central_env(),
+        text=True,
+        capture_output=True,
+        check=False,
+        timeout=180,
+    )
     RUNTIME.mkdir(parents=True, exist_ok=True)
     log = RUNTIME / "actions.jsonl"
     record = {

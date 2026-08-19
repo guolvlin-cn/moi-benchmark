@@ -7,7 +7,7 @@
   },
   "model_provider": {
     "kind": "AI Proxy OpenAI channel",
-    "base_url": "https://api-taas.moi.matrixorigin.cn/v1",
+    "base_url": "https://token.moi.matrixorigin.cn/v1",
     "authentication": "Authorization: Bearer ${TAAS_API_KEY}",
     "language_model": "qwen3.6-flash",
     "embedding_model": "bge-m3",
@@ -27,7 +27,7 @@
       "payload": {
         "type": 1,
         "name": "MatrixOrigin TaaS",
-        "base_url": "https://api-taas.moi.matrixorigin.cn/v1",
+        "base_url": "https://token.moi.matrixorigin.cn/v1",
         "models": ["qwen3.6-flash", "bge-m3"],
         "model_mapping": {},
         "key": "${TAAS_API_KEY}",
@@ -56,6 +56,23 @@
       "fastgpt_v4.15.6": "projects/app/src/web/core/ai/channel.ts and pages/api/core/ai/model/test.ts",
       "fastgpt_v4.15.4_image": "compiled UI/API routes preserve create/list/model-test contracts",
       "aiproxy_v0.6.5": "official image Swagger at revision aebeb5ec60415093db37c49dfda3fb6aa7ffd01e"
+    },
+    "qianfan_v2": {
+      "channel_type": 49,
+      "channel_type_name": "ChannelTypeQianfan",
+      "legacy_baidu_v2_type": 13,
+      "legacy_baidu_v2_key_format": "ak|sk",
+      "optional_payload_mapping": "QIANFAN_APPID -> configs.appid",
+      "embedding": {
+        "model": "qwen3-embedding-8b",
+        "upstream_dimension": 4096,
+        "fastgpt_vector_dimension_limit": 1536,
+        "effective_dimension": 1536,
+        "dimension_behavior": "FastGPT v4.15.x truncates wider vectors before vector-store insertion"
+      },
+      "repair_existing": "PUT /api/channel/{id} refreshes type/base_url/models/configs/key for the unique same-name Qianfan channel",
+      "authoritative_model_test": "/api/core/ai/model/test?model={model}&channelId={channelId}",
+      "saved_channel_test_note": "/api/channel/{id}/test is aggregate AIProxy diagnostics and has no FastGPT metadata.type"
     }
   },
   "api": [
@@ -64,8 +81,16 @@
       "method": "POST",
       "path": "/api/core/dataset/create",
       "content_type": "application/json",
-      "required": ["type", "name", "intro"],
+      "required": ["type", "name", "intro", "vectorModel", "agentModel"],
       "response_data": "dataset id"
+    },
+    {
+      "operation": "create_isolated_app",
+      "method": "POST",
+      "path": "/api/core/app/create",
+      "content_type": "application/json",
+      "required": ["name", "type", "modules", "edges"],
+      "qianfan_invariant": "app datasetSearchNode references only the dataset created in the same smoke run"
     },
     {
       "operation": "upload_local_file",

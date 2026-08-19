@@ -1,0 +1,46 @@
+{
+  "targets": {
+    "moi": {
+      "base_url": "http://127.0.0.1:8000",
+      "api_key_env": "MOI_API_KEY",
+      "auth": {
+        "header": "moi-key",
+        "scheme": "raw"
+      },
+      "empty_workflow": {
+        "supported": true,
+        "path": "/your/deployment/empty-workflow",
+        "method": "POST",
+        "protocol": "json",
+        "body": {
+          "input": "benchmark noop"
+        },
+        "note": "Replace with the no-op workflow endpoint exposed by this MOI deployment."
+      }
+    },
+    "dify": {
+      "base_url": "http://127.0.0.1:8010/v1",
+      "api_key_env": "DIFY_API_KEY",
+      "empty_workflow": {
+        "path": "/workflows/run",
+        "protocol": "json",
+        "body": {
+          "inputs": {},
+          "response_mode": "blocking",
+          "user": "{{uuid}}"
+        },
+        "note": "Use a Dify API key bound to a no-op workflow."
+      }
+    },
+    "fastgpt": {
+      "base_url": "http://127.0.0.1:3000",
+      "api_key_env": "FASTGPT_API_KEY",
+      "required_env": ["FASTGPT_APP_ID"]
+    },
+    "maxkb": {
+      "base_url": "http://127.0.0.1:8090",
+      "api_key_env": "MAXKB_API_KEY",
+      "required_env": ["MAXKB_APPLICATION_ID"]
+    }
+  }
+}

@@ -8,6 +8,7 @@ import hashlib
 import json
 import mimetypes
 import os
+import re
 import subprocess
 import sys
 import time
@@ -19,21 +20,49 @@ from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 
-ROOT = Path(__file__).resolve().parents[2]
+PLATFORM_ROOT = Path(__file__).resolve().parents[1]
+ROOT = PLATFORM_ROOT.parent
+if str(PLATFORM_ROOT) not in sys.path:
+    sys.path.insert(0, str(PLATFORM_ROOT))
+from env import inject_central_env  # noqa: E402
+
 RUNTIME = ROOT / ".local-services/fastgpt_local"
 COMPOSE = RUNTIME / "compose/docker-compose.pg.yml"
 SOURCE_LOCK = RUNTIME / "compose/source-lock.json"
 CONTRACTS = Path(__file__).with_name("contracts.json")
 EXPECTED_TAG = "v4.15.6"
 EXPECTED_COMMIT = "3db33e93b78e75b37c93f7a6e3d0fafeafbfd256"
+DEFAULT_PROVIDER = "taas"
+# FastGPT's pinned vector-store schemas are VECTOR(1536)/HALFVEC(1536).  The
+# upstream embedding dimension is recorded separately so a successful API
+# call cannot be mistaken for a full-width 4096-dimensional index.
+FASTGPT_VECTOR_DIMENSION_LIMIT = 1536
+
+
+def native_search_limit() -> int:
+    """Return a bounded native-app search limit for external LLM context."""
+    try:
+        return max(1, int(os.getenv("FASTGPT_NATIVE_SEARCH_LIMIT", "10")))
+    except ValueError:
+        return 10
 
 PROVIDER_PROFILES = {
+    "maas": {
+        "env_prefix": "MAAS",
+        "channel_name": "Huawei Cloud MaaS",
+        "base_url": "https://api.modelarts-maas.com/v1",
+        "llm_model": "deepseek-v4-flash",
+        "embedding_model": "bge-m3",
+        "reranker_model": "bge-reranker-v2-m3",
+        "channel_type": 1,
+    },
     "taas": {
         "env_prefix": "TAAS",
         "channel_name": "MatrixOrigin TaaS",
-        "base_url": "https://api-taas.moi.matrixorigin.cn/v1",
+        "base_url": "https://token.moi.matrixorigin.cn/v1",
         "llm_model": "qwen3.6-flash",
         "embedding_model": "bge-m3",
+        "channel_type": 1,
     },
     "qianfan": {
         "env_prefix": "QIANFAN",
@@ -41,7 +70,11 @@ PROVIDER_PROFILES = {
         "base_url": "https://qianfan.baidubce.com/v2",
         "llm_model": "deepseek-v4-flash",
         "embedding_model": "qwen3-embedding-8b",
+        "embedding_dimension": 4096,
         "reranker_model": "qwen3-reranker-8b",
+        # AIProxy v0.6.5 model.ChannelType: ChannelTypeQianfan = 49.
+        # ChannelTypeBaiduV2 = 13 is the legacy ak|sk adapter, not Qianfan V2 API keys.
+        "channel_type": 49,
     },
 }
 
@@ -107,12 +140,15 @@ def preflight() -> int:
             warnings.append(f"expected existing {service} service is not running")
 
     env = {
+        "MAAS_API_KEY": bool(os.getenv("MAAS_API_KEY")),
         "TAAS_API_KEY": bool(os.getenv("TAAS_API_KEY")),
         "FASTGPT_API_KEY": bool(os.getenv("FASTGPT_API_KEY")),
         "FASTGPT_APP_ID": bool(os.getenv("FASTGPT_APP_ID")),
     }
     if not env["TAAS_API_KEY"]:
         warnings.append("TAAS_API_KEY is not loaded; configure the AI Proxy channel later in the local UI")
+    if not env["MAAS_API_KEY"]:
+        warnings.append("MAAS_API_KEY is not loaded; Huawei MaaS channel setup remains unavailable")
     if not env["FASTGPT_API_KEY"] or not env["FASTGPT_APP_ID"]:
         warnings.append("FastGPT local API key/app id are not loaded; API smoke remains blocked")
 
@@ -124,10 +160,18 @@ def preflight() -> int:
         "image_platforms": manifests,
         "running": {"fastgpt": fastgpt_running, "existing_services": expected_existing},
         "taas": {
-            "base_url": os.getenv("TAAS_BASE_URL", "https://api-taas.moi.matrixorigin.cn/v1"),
+            "base_url": os.getenv("TAAS_BASE_URL", "https://token.moi.matrixorigin.cn/v1"),
             "llm_model": os.getenv("TAAS_LLM_MODEL", "qwen3.6-flash"),
             "embedding_model": os.getenv("TAAS_EMBEDDING_MODEL", "bge-m3"),
             "api_key_loaded": env["TAAS_API_KEY"],
+            "model_egress": "external",
+        },
+        "maas": {
+            "base_url": os.getenv("MAAS_BASE_URL", "https://api.modelarts-maas.com/v1"),
+            "llm_model": os.getenv("MAAS_LLM_MODEL", "deepseek-v4-flash"),
+            "embedding_model": os.getenv("MAAS_EMBEDDING_MODEL", "bge-m3"),
+            "reranker_model": os.getenv("MAAS_RERANKER_MODEL", "bge-reranker-v2-m3"),
+            "api_key_loaded": env["MAAS_API_KEY"],
             "model_egress": "external",
         },
         "local_credentials": {"api_key_loaded": env["FASTGPT_API_KEY"], "app_id_loaded": env["FASTGPT_APP_ID"]},
@@ -138,7 +182,17 @@ def preflight() -> int:
     return 0 if not failures else 1
 
 
-def api_request(base_url: str, path: str, api_key: str, *, body: Any = None, multipart: tuple[Path, dict[str, Any]] | None = None) -> Any:
+def api_request(
+    base_url: str,
+    path: str,
+    api_key: str,
+    *,
+    body: Any = None,
+    multipart: tuple[Path, dict[str, Any]] | None = None,
+    timeout: float | None = None,
+    method: str = "POST",
+) -> Any:
+    timeout = timeout if timeout is not None else float(os.getenv("FASTGPT_HTTP_TIMEOUT_SECONDS", "60"))
     headers = {"Authorization": f"Bearer {api_key}"}
     payload: bytes | None = None
     if multipart:
@@ -156,9 +210,9 @@ def api_request(base_url: str, path: str, api_key: str, *, body: Any = None, mul
     elif body is not None:
         payload = json.dumps(body).encode()
         headers["Content-Type"] = "application/json"
-    request = Request(f"{base_url.rstrip('/')}{path}", data=payload, headers=headers, method="POST")
+    request = Request(f"{base_url.rstrip('/')}{path}", data=payload, headers=headers, method=method)
     try:
-        with urlopen(request, timeout=60) as response:
+        with urlopen(request, timeout=timeout) as response:
             result = json.loads(response.read().decode())
     except HTTPError as exc:
         detail = exc.read().decode(errors="replace")[:1000]
@@ -166,7 +220,7 @@ def api_request(base_url: str, path: str, api_key: str, *, body: Any = None, mul
     except URLError as exc:
         raise ContractError(f"{path} is unreachable: {exc.reason}") from exc
     except TimeoutError as exc:
-        raise ContractError(f"{path} timed out after 60s") from exc
+        raise ContractError(f"{path} timed out after {timeout:g}s") from exc
     if isinstance(result, dict) and result.get("code") not in (None, 200):
         raise ContractError(f"{path} returned API code {result.get('code')}: {result.get('message')}")
     return result.get("data", result) if isinstance(result, dict) else result
@@ -190,6 +244,15 @@ def redact(value: Any) -> Any:
     return value
 
 
+def redact_error_message(message: str) -> str:
+    """Keep actionable failures while removing loaded credentials and bearer tokens."""
+    redacted = re.sub(r"(?i)(bearer\s+)[^\s,;]+", r"\1<redacted>", message)
+    for name, secret in os.environ.items():
+        if secret and any(marker in name.upper() for marker in ("KEY", "TOKEN", "SECRET", "PASSWORD")):
+            redacted = redacted.replace(secret, "<redacted>")
+    return redacted[:2000]
+
+
 def write_smoke_result(output_dir: Path, result: dict[str, Any]) -> Path:
     output_dir.mkdir(parents=True, exist_ok=False)
     output = output_dir / "smoke-result.json"
@@ -200,6 +263,229 @@ def write_smoke_result(output_dir: Path, result: dict[str, Any]) -> Path:
         encoding="utf-8",
     )
     return output
+
+
+def validate_provider_test_results(output: dict[str, Any], *, allow_empty: bool = False) -> None:
+    """Reject AIProxy's HTTP-success envelope when model probes failed."""
+    test_results = output.get("test", [])
+    if not test_results:
+        if allow_empty:
+            return
+        raise ContractError("provider model test returned no model results")
+    failed_models = [
+        item.get("data", {}).get("model", "unknown")
+        for item in test_results
+        if item.get("data", {}).get("success") is not True
+    ]
+    if failed_models:
+        raise ContractError(f"provider model test failed for: {', '.join(failed_models)}")
+
+
+def embedding_spec(provider_name: str, env: dict[str, str]) -> dict[str, Any]:
+    """Return the selected upstream embedding and FastGPT's effective width.
+
+    FastGPT v4.15.x does not expose an embedding-dimension field in its model
+    preset schema.  Its vector stores are fixed at 1536 dimensions and the
+    embedding client truncates wider responses.  Keeping this conversion in a
+    small, testable contract prevents the Qianfan 4096-dimensional model from
+    being silently represented as an unqualified native 4096 index.
+    """
+    if provider_name not in PROVIDER_PROFILES:
+        raise ContractError(f"unknown provider: {provider_name}")
+    profile = PROVIDER_PROFILES[provider_name]
+    prefix = profile["env_prefix"]
+    model = env.get(f"{prefix}_EMBEDDING_MODEL", profile["embedding_model"]).strip()
+    if not model:
+        raise ContractError(f"{prefix}_EMBEDDING_MODEL must not be empty")
+
+    configured = env.get(f"{prefix}_EMBEDDING_DIMENSION", "").strip()
+    default_dimension = profile.get("embedding_dimension")
+    raw_dimension = configured or (str(default_dimension) if default_dimension else "")
+    source_dimension: int | None = None
+    if raw_dimension:
+        try:
+            source_dimension = int(raw_dimension)
+        except ValueError as exc:
+            raise ContractError(f"{prefix}_EMBEDDING_DIMENSION must be an integer") from exc
+        if source_dimension <= 0:
+            raise ContractError(f"{prefix}_EMBEDDING_DIMENSION must be positive")
+
+    effective_dimension = (
+        min(source_dimension, FASTGPT_VECTOR_DIMENSION_LIMIT)
+        if source_dimension is not None
+        else None
+    )
+    return {
+        "provider": provider_name,
+        "model": model,
+        "source_dimension": source_dimension,
+        "fastgpt_dimension_limit": FASTGPT_VECTOR_DIMENSION_LIMIT,
+        "effective_dimension": effective_dimension,
+        "dimension_action": (
+            "truncate_to_fastgpt_1536"
+            if source_dimension is not None and source_dimension > FASTGPT_VECTOR_DIMENSION_LIMIT
+            else "native_or_provider_defined"
+        ),
+    }
+
+
+def build_channel_payload(provider_name: str, env: dict[str, str], *, api_key: str) -> dict[str, Any]:
+    """Build a provider-specific AIProxy payload without inheriting TaaS adapter semantics."""
+    contract = load_json(CONTRACTS)["provider_channel_api"]
+    profile = PROVIDER_PROFILES[provider_name]
+    prefix = profile["env_prefix"]
+    reranker_model = env.get(f"{prefix}_RERANKER_MODEL", profile.get("reranker_model", "")).strip()
+    embedding = embedding_spec(provider_name, env)
+    models = [
+        env.get(f"{prefix}_LLM_MODEL", profile["llm_model"]),
+        embedding["model"],
+    ]
+    if reranker_model:
+        models.append(reranker_model)
+
+    payload = dict(contract["create"]["payload"])
+    payload.update({
+        "type": profile["channel_type"],
+        "name": env.get(f"{prefix}_CHANNEL_NAME", profile["channel_name"]),
+        "base_url": env.get(f"{prefix}_BASE_URL", profile["base_url"]).rstrip("/"),
+        "models": models,
+        "key": api_key,
+    })
+    if provider_name == "qianfan":
+        appid = env.get("QIANFAN_APPID", "").strip()
+        if appid:
+            # Qianfan's adaptor loads Config{AppID json:"appid"} from ChannelConfigs.
+            payload["configs"] = {"appid": appid}
+    return payload
+
+
+def build_dataset_payload(
+    *, provider_name: str, dataset_name: str, env: dict[str, str]
+) -> dict[str, Any]:
+    """Build the dataset request used by the local smoke and API contract."""
+    profile = PROVIDER_PROFILES[provider_name]
+    prefix = profile["env_prefix"]
+    embedding = embedding_spec(provider_name, env)
+    return {
+        "parentId": None,
+        "type": "dataset",
+        "name": dataset_name,
+        "intro": "MOI local RAG FastGPT smoke",
+        "avatar": "",
+        "vectorModel": embedding["model"],
+        "agentModel": env.get(f"{prefix}_LLM_MODEL", profile["llm_model"]),
+    }
+
+
+def _app_input(key: str, value_type: str, value: Any, render_type: str = "hidden") -> dict[str, Any]:
+    return {
+        "key": key,
+        "label": "",
+        "valueType": value_type,
+        "renderTypeList": [render_type],
+        "value": value,
+    }
+
+
+def build_isolated_app_payload(
+    *,
+    provider_name: str,
+    dataset_id: str,
+    dataset_name: str,
+    llm_model: str | None = None,
+    embedding_model: str | None = None,
+) -> dict[str, Any]:
+    """Create a minimal v4.15.x simple RAG app bound to exactly one new dataset."""
+    profile = PROVIDER_PROFILES[provider_name]
+    prefix = profile["env_prefix"]
+    llm_model = (llm_model or os.getenv(f"{prefix}_LLM_MODEL", profile["llm_model"])).strip()
+    embedding_model = (embedding_model or embedding_spec(provider_name, dict(os.environ))["model"]).strip()
+    start_id = "workflowStartNodeId"
+    dataset_node_id = "isolatedDatasetSearch"
+    chat_node_id = "isolatedAiChat"
+    selected_dataset = [{
+        "datasetId": dataset_id,
+        "avatar": "",
+        "name": dataset_name,
+        "vectorModel": {"model": embedding_model},
+    }]
+    modules = [
+        {
+            "nodeId": "userGuide",
+            "name": "System configuration",
+            "flowNodeType": "userGuide",
+            "inputs": [],
+            "outputs": [],
+        },
+        {
+            "nodeId": start_id,
+            "name": "Workflow start",
+            "flowNodeType": "workflowStart",
+            "inputs": [_app_input("userChatInput", "string", None, "textarea")],
+            "outputs": [
+                {"id": "userChatInput", "key": "userChatInput", "type": "static", "valueType": "string"},
+                {"id": "userFiles", "key": "userFiles", "type": "static", "valueType": "arrayString"},
+            ],
+        },
+        {
+            "nodeId": dataset_node_id,
+            "name": "Dataset search",
+            "flowNodeType": "datasetSearchNode",
+            "version": "4.9.2",
+            "showStatus": True,
+            "inputs": [
+                _app_input("datasets", "selectDataset", selected_dataset, "selectDataset"),
+                _app_input("similarity", "number", 0),
+                _app_input("limit", "number", native_search_limit()),
+                _app_input("searchMode", "string", "embedding"),
+                _app_input("embeddingWeight", "number", 0.5),
+                _app_input("usingReRank", "boolean", False),
+                _app_input("rerankModel", "string", ""),
+                _app_input("rerankWeight", "number", 0.5),
+                _app_input("datasetSearchUsingExtensionQuery", "boolean", False),
+                _app_input("datasetSearchExtensionModel", "string", ""),
+                _app_input("datasetSearchExtensionBg", "string", ""),
+                _app_input("authTmbId", "boolean", False),
+                _app_input("datasetSearchInput", "arrayString", [[start_id, "userChatInput"]], "reference"),
+            ],
+            "outputs": [
+                {"id": "quoteQA", "key": "quoteQA", "type": "static", "valueType": "datasetQuote"}
+            ],
+        },
+        {
+            "nodeId": chat_node_id,
+            "name": "AI chat",
+            "flowNodeType": "chatNode",
+            "version": "4.9.7",
+            "showStatus": True,
+            "inputs": [
+                _app_input("model", "string", llm_model, "settingLLMModel"),
+                _app_input("isResponseAnswerText", "boolean", True),
+                _app_input("aiChatQuoteRole", "string", "system"),
+                _app_input("quoteTemplate", "string", ""),
+                _app_input("quotePrompt", "string", ""),
+                _app_input("systemPrompt", "string", "Answer using the supplied knowledge. If it is insufficient, say so.", "textarea"),
+                _app_input("maxContext", "chatHistory", 6, "numberInput"),
+                _app_input("userChatInput", "string", [start_id, "userChatInput"], "reference"),
+                _app_input("quoteQA", "datasetQuote", [dataset_node_id, "quoteQA"], "settingDatasetQuotePrompt"),
+            ],
+            "outputs": [
+                {"id": "history", "key": "history", "type": "static", "valueType": "chatHistory"},
+                {"id": "answerText", "key": "answerText", "type": "static", "valueType": "string"},
+            ],
+        },
+    ]
+    return {
+        "name": f"moi-fastgpt-{provider_name}-isolated-{time.strftime('%Y%m%d-%H%M%S')}",
+        "intro": f"Isolated {provider_name} full-chain smoke app",
+        "type": "simple",
+        "modules": modules,
+        "edges": [
+            {"source": start_id, "target": dataset_node_id, "sourceHandle": f"{start_id}-source-right", "targetHandle": f"{dataset_node_id}-target-left"},
+            {"source": dataset_node_id, "target": chat_node_id, "sourceHandle": f"{dataset_node_id}-source-right", "targetHandle": f"{chat_node_id}-target-left"},
+        ],
+        "chatConfig": {},
+    }
 
 
 def provider(args: argparse.Namespace) -> int:
@@ -235,21 +521,14 @@ def provider(args: argparse.Namespace) -> int:
     if not admin_key:
         raise ContractError("fastgpt-aiproxy has no ADMIN_KEY")
 
-    create = dict(contract["create"]["payload"])
-    reranker_model = os.getenv(f"{prefix}_RERANKER_MODEL", profile.get("reranker_model", "")).strip()
-    models = [
-        os.getenv(f"{prefix}_LLM_MODEL", profile["llm_model"]),
-        os.getenv(f"{prefix}_EMBEDDING_MODEL", profile["embedding_model"]),
-    ]
-    if reranker_model:
-        models.append(reranker_model)
-    create.update({
-        "name": os.getenv(f"{prefix}_CHANNEL_NAME", profile["channel_name"]),
-        "base_url": os.getenv(f"{prefix}_BASE_URL", profile["base_url"]).rstrip("/"),
-        "models": models,
-        "key": provider_key,
+    create = build_channel_payload(args.provider, dict(os.environ), api_key=provider_key)
+    request_input = json.dumps({
+        "adminKey": admin_key,
+        "channel": create,
+        # Repair the previously-created generic OpenAI channel and refresh its key.
+        # Other providers retain the conservative no-overwrite behavior.
+        "repairExisting": args.provider == "qianfan",
     })
-    request_input = json.dumps({"adminKey": admin_key, "channel": create})
     node_program = r"""
 const fs = require('fs');
 const input = JSON.parse(fs.readFileSync(0, 'utf8'));
@@ -281,6 +560,13 @@ async function request(path, options = {}) {
     created = true;
     channels = await request('/api/channels/all');
     matches = channels.filter((item) => item.name === input.channel.name);
+  } else if (input.repairExisting) {
+    await request(`/api/channel/${matches[0].id}`, {
+      method: 'PUT',
+      body: JSON.stringify(input.channel)
+    });
+    channels = await request('/api/channels/all');
+    matches = channels.filter((item) => item.name === input.channel.name);
   }
   if (matches.length !== 1) throw new Error('created channel was not returned by /api/channels/all');
   const channel = matches[0];
@@ -294,6 +580,7 @@ async function request(path, options = {}) {
   const test = await request(`/api/channel/${channel.id}/test?return_success=true&success_body=false&stream=false`);
   process.stdout.write(JSON.stringify({
     created,
+    updated: !created && input.repairExisting,
     channel: { id: channel.id, name: channel.name, type: channel.type, base_url: channel.base_url, models: channel.models },
     test
   }));
@@ -313,6 +600,13 @@ async function request(path, options = {}) {
         output = json.loads(result.stdout)
     except json.JSONDecodeError as exc:
         raise ContractError("provider verifier returned invalid JSON") from exc
+    allow_empty_saved_test = args.provider == "qianfan"
+    validate_provider_test_results(output, allow_empty=allow_empty_saved_test)
+    output["saved_test_status"] = (
+        "empty_non_authoritative_use_fastgpt_type_aware_tests"
+        if allow_empty_saved_test and not output.get("test")
+        else "passed"
+    )
     print(json.dumps(redact(output), ensure_ascii=False, indent=2))
     return 0
 
@@ -324,10 +618,16 @@ def smoke(args: argparse.Namespace) -> int:
         return 0
 
     base_url = validate_local_url(os.getenv("FASTGPT_BASE_URL", "http://127.0.0.1:3000"))
+    provider_name = os.getenv("FASTGPT_MODEL_PROVIDER", DEFAULT_PROVIDER).strip().lower()
+    if provider_name not in PROVIDER_PROFILES:
+        raise ContractError(f"FASTGPT_MODEL_PROVIDER must be one of {sorted(PROVIDER_PROFILES)}")
+    embedding = embedding_spec(provider_name, dict(os.environ))
     api_key = os.getenv("FASTGPT_API_KEY", "").strip()
     app_id = os.getenv("FASTGPT_APP_ID", "").strip()
-    if not api_key or not app_id:
-        raise ContractError("FASTGPT_API_KEY and FASTGPT_APP_ID are required for --execute")
+    if not api_key:
+        raise ContractError("FASTGPT_API_KEY is required for --execute")
+    if provider_name != "qianfan" and not app_id:
+        raise ContractError("FASTGPT_APP_ID is required for non-Qianfan smoke execution")
     source_dir = (ROOT / os.getenv("FASTGPT_SMOKE_SOURCE_DIR", "local-rag-platforms/fixtures/smoke")).resolve()
     if not source_dir.is_dir():
         raise ContractError(f"smoke source directory does not exist: {source_dir}")
@@ -346,25 +646,65 @@ def smoke(args: argparse.Namespace) -> int:
         "retrieval_status": "error",
         "blocked_reason": None,
         "artifacts": [str((output_dir / "smoke-result.json").relative_to(ROOT))],
-        "details": {"runtime_image": "ghcr.io/labring/fastgpt:v4.15.4"},
+        "details": {
+            "runtime_image": "ghcr.io/labring/fastgpt:v4.15.4",
+            "embedding": embedding,
+        },
     }
     stage = "service"
     dataset_id: str | None = None
     try:
-        dataset = api_request(base_url, "/api/core/dataset/create", api_key, body={
-            "parentId": None,
-            "type": "dataset",
-            "name": f"moi-fastgpt-smoke-{time.strftime('%Y%m%d-%H%M%S')}",
-            "intro": "MOI local RAG FastGPT smoke",
-            "avatar": "",
-            "vectorModel": os.getenv("TAAS_EMBEDDING_MODEL", "bge-m3"),
-            "agentModel": os.getenv("TAAS_LLM_MODEL", "qwen3.6-flash"),
-        })
+        dataset_name = f"moi-fastgpt-{provider_name}-smoke-{time.strftime('%Y%m%d-%H%M%S')}"
+        dataset = api_request(
+            base_url,
+            "/api/core/dataset/create",
+            api_key,
+            body=build_dataset_payload(
+                provider_name=provider_name,
+                dataset_name=dataset_name,
+                env=dict(os.environ),
+            ),
+        )
         dataset_id = dataset if isinstance(dataset, str) else dataset.get("datasetId") or dataset.get("id")
         if not dataset_id:
             raise ContractError("create dataset response did not contain a dataset id")
         result["service_status"] = "ready"
         result["details"]["dataset_id"] = dataset_id
+
+        if provider_name == "qianfan":
+            dataset_detail = api_request(
+                base_url,
+                f"/api/core/dataset/detail?id={dataset_id}",
+                api_key,
+                method="GET",
+            )
+            actual_vector_model = dataset_detail.get("vectorModel", {})
+            actual_vector_model = (
+                actual_vector_model.get("model")
+                if isinstance(actual_vector_model, dict)
+                else actual_vector_model
+            )
+            expected_vector_model = embedding["model"]
+            if actual_vector_model != expected_vector_model:
+                raise ContractError(
+                    "new Qianfan dataset vector model mismatch before upload: "
+                    f"expected {expected_vector_model}, got {actual_vector_model}"
+                )
+            result["details"]["dataset_vector_model"] = actual_vector_model
+            created_app = api_request(
+                base_url,
+                "/api/core/app/create",
+                api_key,
+                body=build_isolated_app_payload(
+                    provider_name=provider_name,
+                    dataset_id=dataset_id,
+                    dataset_name=dataset_name,
+                ),
+            )
+            app_id = created_app if isinstance(created_app, str) else created_app.get("appId") or created_app.get("id")
+            if not app_id:
+                raise ContractError("create isolated Qianfan app response did not contain an app id")
+        result["details"]["app_id"] = app_id
 
         stage = "ingest"
         uploads = []
@@ -380,10 +720,14 @@ def smoke(args: argparse.Namespace) -> int:
                 "qaPrompt": "",
                 "metadata": {"benchmark": "moi-local-rag"},
             }))
-            uploads.append({"file": path.name, "collectionId": response.get("collectionId") if isinstance(response, dict) else None})
+            collection_id = response.get("collectionId") if isinstance(response, dict) else None
+            if not collection_id:
+                raise ContractError(f"upload response for {path.name} did not contain a collection id")
+            uploads.append({"file": path.name, "collectionId": str(collection_id)})
         if not uploads:
             raise ContractError("no supported smoke documents were found")
 
+        expected_collection_ids = {item["collectionId"] for item in uploads}
         wait_seconds = int(os.getenv("FASTGPT_SMOKE_WAIT_SECONDS", "300"))
         deadline = time.monotonic() + wait_seconds
         collections: list[dict[str, Any]] = []
@@ -392,16 +736,30 @@ def smoke(args: argparse.Namespace) -> int:
                 "offset": 0, "pageSize": 30, "datasetId": dataset_id, "parentId": None, "searchText": ""
             })
             collections = listing.get("list", []) if isinstance(listing, dict) else []
-            if collections and all(
+            collections_by_id = {
+                str(collection_id): item
+                for item in collections
+                if (collection_id := item.get("_id") or item.get("id") or item.get("collectionId"))
+            }
+            uploaded_collections = [
+                collections_by_id[collection_id]
+                for collection_id in expected_collection_ids
+                if collection_id in collections_by_id
+            ]
+            if any(
+                item.get("hasError", False) or item.get("finalErrorAmount", 0)
+                for item in uploaded_collections
+            ):
+                raise ContractError("one or more uploaded FastGPT collections failed indexing")
+            if expected_collection_ids.issubset(collections_by_id) and all(
                 item.get("trainingAmount", 0) == 0
                 and item.get("activeTrainingAmount", 0) == 0
                 and item.get("finalErrorAmount", 0) == 0
                 and not item.get("hasError", False)
-                for item in collections
+                for item in uploaded_collections
             ):
+                collections = uploaded_collections
                 break
-            if any(item.get("hasError", False) or item.get("finalErrorAmount", 0) for item in collections):
-                raise ContractError("one or more FastGPT collections failed indexing")
             time.sleep(2)
         else:
             raise ContractError(f"collection indexing did not finish within {wait_seconds}s")
@@ -422,29 +780,52 @@ def smoke(args: argparse.Namespace) -> int:
         hits = retrieval.get("list", []) if isinstance(retrieval, dict) else []
         if not hits:
             raise ContractError("direct retrieval returned no hits")
+        sentinel = os.getenv("FASTGPT_SMOKE_SENTINEL", "").strip()
+        if sentinel and sentinel not in json.dumps(hits, ensure_ascii=False):
+            raise ContractError("direct retrieval did not contain the required sentinel")
         result["retrieval_status"] = "success"
         result["details"].update({"retrieval_hit_count": len(hits), "retrieval": retrieval})
 
         stage = "native"
         question = os.getenv("FASTGPT_SMOKE_QUESTION", "What facts are stated in the local smoke documents?")
-        native = api_request(base_url, "/api/v1/chat/completions", api_key, body={
+        native_request = {
             "appId": app_id,
             "chatId": str(uuid.uuid4()),
             "stream": False,
             "detail": True,
             "messages": [{"role": "user", "content": question}],
-        })
+        }
+        native = api_request(
+            base_url,
+            "/api/v1/chat/completions",
+            api_key,
+            body=native_request,
+            timeout=float(os.getenv("FASTGPT_NATIVE_TIMEOUT_SECONDS", "60")),
+        )
         choices = native.get("choices", []) if isinstance(native, dict) else []
         answer = choices[0].get("message", {}).get("content", "") if choices else ""
         if not answer.strip():
             raise ContractError("native QA returned no answer")
+        if sentinel and sentinel not in answer:
+            raise ContractError("native QA answer did not contain the required sentinel")
+        if sentinel:
+            response_steps = native.get("responseData", []) if isinstance(native, dict) else []
+            quote_context = [
+                quote
+                for step in response_steps
+                for quote in step.get("quoteList", [])
+                if isinstance(step, dict)
+            ]
+            if sentinel not in json.dumps(quote_context, ensure_ascii=False):
+                raise ContractError("native QA responseData did not quote the sentinel knowledge")
         result["native_status"] = "success"
-        result["details"]["native"] = native
+        result["details"].update({"native_request": native_request, "native_response": native})
     except ContractError as exc:
         failure_kind = "timeout" if "timed out" in str(exc).lower() else "request_error"
         result["blocked_reason"] = f"{stage.upper()}_SMOKE_{failure_kind.upper()}"
         result["details"]["failed_stage"] = stage
         result["details"]["failure_kind"] = failure_kind
+        result["details"]["failure_message"] = redact_error_message(str(exc))
 
     output = write_smoke_result(output_dir, result)
     success = all(result[key] in {"ready", "success"} for key in (
@@ -459,16 +840,20 @@ def smoke(args: argparse.Namespace) -> int:
     return 0 if success else 1
 
 
-def main() -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("preflight", help="read-only source/compose/ARM64/runtime check")
     smoke_parser = subparsers.add_parser("smoke", help="print the contract, or execute it explicitly")
     smoke_parser.add_argument("--execute", action="store_true", help="create a local dataset and run smoke APIs")
     provider_parser = subparsers.add_parser("provider", help="print or execute AIProxy channel create/list/test")
-    provider_parser.add_argument("--provider", choices=sorted(PROVIDER_PROFILES), default="taas")
+    provider_parser.add_argument("--provider", choices=sorted(PROVIDER_PROFILES), default=DEFAULT_PROVIDER)
     provider_parser.add_argument("--execute", action="store_true", help="create or validate the selected provider channel")
-    args = parser.parse_args()
+    return parser
+
+
+def main() -> int:
+    args = build_parser().parse_args()
     try:
         if args.command == "preflight":
             return preflight()
@@ -481,4 +866,5 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    inject_central_env()
     raise SystemExit(main())

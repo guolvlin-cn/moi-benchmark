@@ -1,0 +1,301 @@
+{
+  "schema": "competitor-eval-platform-contracts-v1",
+  "package_schema": "competitor-eval-ready-v1",
+  "description": "Frozen local contracts used by competitor_eval_runner.py. Product failures and unsupported capabilities remain terminal ledger rows.",
+  "benchmark_scope": {
+    "evaluation_order": [
+      "WikiEval",
+      "MMDocIR",
+      "MMDocRAG",
+      "DocBench",
+      "MultiHop-RAG",
+      "EnterpriseRAG-Bench",
+      "FAB-Bench"
+    ],
+    "excluded_datasets": ["OmniDocBench", "Lenovo-bench"],
+    "denominator_source": "currently available local frozen package files",
+    "paper_full_corpus_required": false,
+    "availability_policy": "READY or READY_ADAPTED when the supplied local manifest, documents, questions, and Gold are internally usable; paper-declared files absent from the local package are metadata/protocol limitations, not a preflight blocker."
+  },
+  "defaults": {
+    "provider_policy": "no_taas",
+    "model_egress": "external",
+    "resource_isolation": "fresh dataset or knowledge base plus a fresh bound native application for every resource in a new run",
+    "configured_resource_reuse": "disabled unless --reuse-configured-resource or COMPETITOR_EVAL_REUSE_CONFIGURED_RESOURCE=1; same-run resume uses resource-map",
+    "historical_app_fallback": "forbidden",
+    "qianfan_base_url": "https://qianfan.baidubce.com/v2",
+    "qianfan_llm_model": "deepseek-v4-flash",
+    "qianfan_image_llm_model": "qwen3.5-35b-a3b",
+    "maas_base_url": "https://api.modelarts-maas.com/v1",
+    "maas_embedding_model": "bge-m3",
+    "maas_embedding_dimension": 1024,
+    "reranker": "disabled",
+    "top_k": [1, 3, 5, 10],
+    "repeats": 1,
+    "timeout_seconds": {
+      "service_readiness": 30,
+      "provider_probe": 60,
+      "ingest_upload": 120,
+      "index_wait": 900,
+      "retrieval": 120,
+      "qa": 180
+    }
+  },
+  "package": {
+    "required_schema": "competitor-eval-ready-v1",
+    "required_fields": ["schema/package_schema/schema_version", "dataset/dataset_id", "corpus.jsonl or documents", "questions.jsonl or questions"],
+    "artifact_layout": {
+      "documents": "The assigned ready-v1 form uses artifacts.corpus.jsonl. Each JSONL row contains doc_id, title, optional inline content, text_path, optional binary_path, media_type, scope_id, sha256, and metadata.ingest_role. Inline content is authoritative for candidate_text/image-description rows; a shared source JSONL is never uploaded once per candidate, and a copied documents/ directory is not required.",
+      "questions": "questions.jsonl rows are keyed by question_id and may contain question, reference_answer, scope_doc_ids, gold_doc_ids, and gold_evidence.",
+      "gold": "gold.jsonl is optional when question rows carry Gold; when present it is joined by question_id and contributes reference_answer, gold_doc_ids, and gold_evidence."
+    },
+    "scope": {
+      "allowed": ["global", "document_local"],
+      "global": "One isolated platform resource contains all supported documents.",
+      "document_local": "One isolated platform resource is created per scope_id. scope_doc_ids may name a scope_id or candidate doc_id and must resolve to exactly one scope group; all candidate IDs remain available for Gold scoring."
+    },
+    "ingest_representation": {
+      "candidate_markdown": "Materialize one deterministic UTF-8 Markdown artifact per scope with competitor-eval-candidate JSON markers carrying doc_id plus available page/layout/quote locators, followed by inline candidate content.",
+      "source_document": "Upload each unique original source document path once per scope. A missing source is terminal UNSUPPORTED, not a package-load blocker.",
+      "mixed_role_rule": "A condition with both source_document and candidate_text rows must explicitly declare ingest_representation; the runner never silently mixes native source and controlled candidate text."
+    },
+    "document_record": {
+      "id": "stable document identifier",
+      "path": "path relative to package root, or an inline content record",
+      "media": "text|markdown|pdf|docx|pptx|xlsx|image|table|audio|other"
+    },
+    "question_record": {
+      "id": "stable question identifier",
+      "question": "query text (query is accepted as an alias)",
+      "document_id": "document identifier for document_local (document_ids is also accepted)",
+      "answer": "gold answer (gold_answer and expected_answer are accepted aliases)",
+      "media": "optional required input media list",
+      "images": "optional image paths for multimodal QA"
+    },
+    "unsupported_policy": "Do not remove a document or question. Emit a terminal UNSUPPORTED row with reason and preserve it in every planned denominator."
+  },
+  "systems": {
+    "dify_local": {
+      "base_url_env": "DIFY_API_BASE_URL",
+      "base_url_default": "http://127.0.0.1:8010/v1",
+      "env_files": [
+        ".env"
+      ],
+      "service_readiness": {
+        "method": "GET",
+        "path": "/console/api/setup",
+        "root_base": true
+      },
+      "auth": {
+        "dataset_key_aliases": ["DIFY_LOCAL_DATASET_API_KEY", "DIFY_DATASET_API_KEY"],
+        "console_admin_aliases": ["DIFY_LOCAL_ADMIN_EMAIL", "DIFY_LOCAL_ADMIN_PASSWORD"],
+        "historical_native_key_aliases_forbidden": ["DIFY_LOCAL_API_KEY", "DIFY_API_KEY"],
+        "historical_native_app_id_aliases_forbidden": ["DIFY_LOCAL_APP_ID", "DIFY_APP_ID"],
+        "configured_dataset_id_aliases_explicit_opt_in_only": ["DIFY_LOCAL_DATASET_ID", "DIFY_DATASET_ID"]
+      },
+      "scope_modes": ["global", "document_local"],
+      "operations": {
+        "create_dataset": {
+          "method": "POST",
+          "path": "/datasets",
+          "required": ["name", "indexing_technique", "permission", "embedding_model", "embedding_model_provider"]
+        },
+        "upload_document": {
+          "method": "POST",
+          "path": "/datasets/{dataset_id}/document/create-by-file",
+          "content_type": "multipart/form-data",
+          "required": ["file", "data"]
+        },
+        "readiness": {
+          "method": "GET",
+          "path": "/datasets/{dataset_id}/documents",
+          "ready_statuses": ["completed", "indexed", "ready", "available"]
+        },
+        "retrieval": {
+          "method": "POST",
+          "path": "/datasets/{dataset_id}/retrieve",
+          "required": ["query", "retrieval_model"],
+          "contract": "public_direct_retrieval"
+        },
+        "native_qa": {
+          "method": "POST",
+          "path": "/chat-messages",
+          "required": ["inputs", "query", "response_mode", "conversation_id", "user"],
+          "contract": "native_chat"
+        },
+        "create_bound_native_app": {
+          "transport": "authenticated Dify console cookie session",
+          "create": {"method": "POST", "path": "/console/api/apps", "mode": "chat"},
+          "bind": {"method": "POST", "path": "/console/api/apps/{app_id}/model-config", "dataset_id": "new resource dataset_id"},
+          "create_key": {"method": "POST", "path": "/console/api/apps/{app_id}/api-keys"},
+          "failure_policy": "Native QA is BLOCKED or UNSUPPORTED; never fall back to DIFY_LOCAL_APP_ID."
+        }
+      },
+      "media": {
+        "ingest": ["text", "markdown", "pdf", "docx", "pptx", "xlsx"],
+        "retrieval": ["text", "markdown", "pdf", "docx", "pptx", "xlsx"],
+        "native_qa": ["text", "markdown", "pdf", "docx", "pptx", "xlsx"],
+        "image_note": "The runner freezes the Qianfan vision model for image conditions, but this Dify chat contract does not accept an image message; image-input QA is terminal UNSUPPORTED unless a future contract is added.",
+        "ingest_representation_note": "candidate_markdown and native source-document file upload are implemented; original PDFs are uploaded once per scope."
+      }
+    },
+    "fastgpt_local": {
+      "base_url_env": "FASTGPT_BASE_URL",
+      "base_url_default": "http://127.0.0.1:3000",
+      "env_files": [
+        ".env"
+      ],
+      "service_readiness": {
+        "method": "GET",
+        "path": "/"
+      },
+      "auth": {
+        "api_key_aliases": ["FASTGPT_API_KEY"],
+        "historical_app_id_aliases_forbidden": ["FASTGPT_APP_ID"],
+        "configured_dataset_id_aliases_explicit_opt_in_only": ["FASTGPT_DATASET_ID"]
+      },
+      "scope_modes": ["global", "document_local"],
+      "operations": {
+        "create_dataset": {
+          "method": "POST",
+          "path": "/api/core/dataset/create",
+          "required": ["parentId", "type", "name", "intro", "vectorModel", "agentModel"]
+        },
+        "create_collection": {
+          "method": "POST",
+          "path": "/api/core/dataset/collection/create",
+          "required": ["datasetId", "parentId", "name", "type"]
+        },
+        "push_data": {
+          "method": "POST",
+          "path": "/api/core/dataset/data/pushData",
+          "required": ["collectionId", "trainingType", "data"]
+        },
+        "readiness": {
+          "method": "POST",
+          "path": "/api/core/dataset/collection/listV2",
+          "ready_condition": "all expected collections have trainingAmount=0, activeTrainingAmount=0, finalErrorAmount=0, and no hasError"
+        },
+        "retrieval": {
+          "method": "POST",
+          "path": "/api/core/dataset/searchTest",
+          "required": ["datasetId", "text", "limit", "searchMode"],
+          "contract": "public_direct_retrieval"
+        },
+        "native_qa": {
+          "method": "POST",
+          "path": "/api/v1/chat/completions",
+          "required": ["appId", "chatId", "stream", "detail", "messages"],
+          "contract": "native_chat"
+        },
+        "create_bound_native_app": {
+          "create": {"method": "POST", "path": "/api/core/app/create", "payload": "build_isolated_app_payload bound to the new dataset_id"},
+          "create_key": {"method": "POST", "path": "/api/support/openapi/create"},
+          "failure_policy": "Native QA is BLOCKED or UNSUPPORTED; never fall back to FASTGPT_APP_ID or the account key for QA."
+        }
+      },
+      "media": {
+        "ingest": ["text", "markdown", "pdf", "docx", "pptx", "xlsx"],
+        "retrieval": ["text", "markdown", "pdf", "docx", "pptx", "xlsx"],
+        "native_qa": ["text", "markdown", "pdf", "docx", "pptx", "xlsx", "image"],
+        "image_note": "Image input is sent only through the OpenAI-compatible message content contract and is never inferred from an answer.",
+        "ingest_representation_note": "candidate_markdown and text-like source documents use collection/pushData. Native source-PDF ingestion is terminal UNSUPPORTED because this frozen contract has no binary upload operation."
+      }
+    },
+    "maxkb_local": {
+      "admin_base_url_env": "MAXKB_ADMIN_BASE_URL",
+      "admin_base_url_default": "http://127.0.0.1:8090/admin/api",
+      "public_base_url_env": "MAXKB_OPENAI_BASE_URL",
+      "public_base_url_default": "http://127.0.0.1:8090/chat/api",
+      "env_files": [
+        ".env"
+      ],
+      "service_readiness": {
+        "method": "GET",
+        "path": "/admin/",
+        "root_base": true
+      },
+      "auth": {
+        "admin_key_aliases": ["MAXKB_ADMIN_TOKEN"],
+        "admin_key_file_default": ".local-services/maxkb_local/secrets/admin.token",
+        "historical_application_key_aliases_forbidden": ["MAXKB_APP_KEY", "MAXKB_APPLICATION_KEY"],
+        "historical_application_id_aliases_forbidden": ["MAXKB_APPLICATION_ID", "MAXKB_APP_ID"],
+        "configured_knowledge_id_aliases_explicit_opt_in_only": ["MAXKB_KNOWLEDGE_ID"]
+      },
+      "scope_modes": ["global", "document_local"],
+      "operations": {
+        "discover_embedding_model": {
+          "method": "GET",
+          "path": "/workspace/default/model",
+          "contract": "admin_read_only"
+        },
+        "create_knowledge": {
+          "method": "POST",
+          "path": "/workspace/default/knowledge/base",
+          "required": ["name", "folder_id", "desc", "embedding_model_id"]
+        },
+        "batch_create_document": {
+          "method": "PUT",
+          "path": "/workspace/default/knowledge/{knowledge_id}/document/batch_create",
+          "required": ["name", "paragraphs"]
+        },
+        "readiness": {
+          "method": "GET",
+          "path": "/workspace/default/knowledge/{knowledge_id}/document/{document_id}",
+          "ready_status_suffix": "2",
+          "failed_status_suffix": "3"
+        },
+        "retrieval": {
+          "method": "POST",
+          "path": "/workspace/default/knowledge/{knowledge_id}/hit_test",
+          "required": ["query_text", "top_number", "search_mode"],
+          "contract": "diagnostic_admin_contract",
+          "public_equivalent": "unsupported",
+          "rule": "Never label an admin hit_test response public_direct_retrieval. Keep the diagnostic response and mark the public retrieval metric UNSUPPORTED."
+        },
+        "native_qa": {
+          "method": "POST",
+          "path": "/chat/completions",
+          "required": ["model", "stream", "messages"],
+          "contract": "public_openai_compatible",
+          "path_resolution": "public root /chat/api plus the resource-map application_id: /{application_id}/chat/completions; any historical application segment in MAXKB_OPENAI_BASE_URL is stripped"
+        },
+        "create_bound_native_app": {
+          "create": {"method": "POST", "path": "/workspace/default/application", "knowledge_id_list": "exactly the resource knowledge_id"},
+          "publish": {"method": "PUT", "path": "/workspace/default/application/{application_id}/publish"},
+          "create_key": {"method": "POST", "path": "/workspace/default/application/{application_id}/application_key"},
+          "failure_policy": "Native QA is BLOCKED or UNSUPPORTED; never fall back to MAXKB_APPLICATION_ID or MAXKB_APP_KEY."
+        }
+      },
+      "media": {
+        "ingest": ["text", "markdown", "pdf", "docx", "pptx", "xlsx"],
+        "retrieval": ["text", "markdown", "pdf", "docx", "pptx", "xlsx"],
+        "native_qa": ["text", "markdown", "pdf", "docx", "pptx", "xlsx", "image"],
+        "image_note": "Image input is allowed only for the configured OpenAI-compatible native QA endpoint; admin hit_test remains diagnostic text retrieval.",
+        "ingest_representation_note": "candidate_markdown and text-like source documents use paragraph batch_create. Native source-PDF ingestion is terminal UNSUPPORTED; PDF bytes are never decoded as UTF-8 paragraphs."
+      }
+    }
+  },
+  "failure_taxonomy": {
+    "SUCCESS": "A terminal response was received and contained a stage result.",
+    "EMPTY": "A terminal HTTP/API response was received but no hit or answer was returned.",
+    "TIMEOUT": "The request or bounded readiness wait timed out; keep it in the planned denominator.",
+    "FAILED": "A product, transport, provider, or validation error occurred; keep it in the planned denominator.",
+    "BLOCKED": "A required local credential or ready resource is missing; keep it in the planned denominator.",
+    "UNSUPPORTED": "The package media or platform contract cannot perform this operation; keep the question in the terminal ledger.",
+    "INTERRUPTED": "The process stopped before a terminal response; resume from resource-map and terminal-ledger."
+  },
+  "artifact_policy": {
+    "start_record": "start-record.json",
+    "start_record_hash": "start-record.json.sha256",
+    "initial_ledger": "initial-ledger.jsonl",
+    "initial_ledger_hash": "initial-ledger.jsonl.sha256",
+    "terminal_ledger": "terminal-ledger.jsonl",
+    "terminal_ledger_hash": "terminal-ledger.jsonl.sha256",
+    "resource_map": "resource-map.json",
+    "app_secret_directory": "secrets/ (contains an internal .gitignore; secret files are mode 0600)",
+    "app_secret_reference": "resource-map stores app_id, native_app.bound_resource_id, and app_key_secret_path only; it never stores the key value",
+    "raw_http_directory": "http/",
+    "raw_http_policy": "Every ArtifactHTTP request/response is recursively redacted and gets a SHA-256 sidecar."
+  }
+}
